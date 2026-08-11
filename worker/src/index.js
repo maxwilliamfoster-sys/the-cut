@@ -20,18 +20,29 @@ const PAGES = "https://maxwilliamfoster-sys.github.io/the-cut";
 const GROQ = "https://api.groq.com/openai/v1/chat/completions";
 const MODEL = "llama-3.1-8b-instant";
 
-const RATE_LIMIT = 30;          // talk requests
+const RATE_LIMIT = 40;          // talk requests
 const RATE_WINDOW = 3600;       // per hour, per IP
 const MAX_LINE = 180;
+
+// The site key travels in a public page, so it is a speed bump, not a lock. These are the
+// controls that actually bound the damage: browsers refuse a cross-origin fetch that is not
+// allowed here, and the per-IP limit caps what any single caller can spend of the token
+// budget even if they skip the browser entirely.
+const ALLOWED_ORIGINS = [
+  "https://maxwilliamfoster-sys.github.io",
+  "http://localhost:8777",
+];
 
 // Same register and the same hard line as the simulation's own prompt: this output is
 // written into the city's memory and shown on a public page.
 const GUARD =
   /\b(?:how to (?:make|cook|synthesi[sz]e|manufacture|build)|recipe for|ingredients?:|step\s*\d\s*[:.]|pseudoephedrine|anhydrous ammonia|red phosphorus|methylamine|firing pin|drill out the|suppressor|track\s*2|cvv|bin list|skimmer)\b/i;
 
-function cors(res) {
+function cors(res, origin) {
   const h = new Headers(res.headers);
-  h.set("Access-Control-Allow-Origin", "*");
+  h.set("Access-Control-Allow-Origin",
+        ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0]);
+  h.set("Vary", "Origin");
   h.set("Access-Control-Allow-Headers", "Content-Type, X-Player-Key");
   h.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   return new Response(res.body, { status: res.status, headers: h });
@@ -178,9 +189,11 @@ async function drain(req, env) {
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
-    if (req.method === "OPTIONS") return cors(new Response(null, { status: 204 }));
-    if (url.pathname === "/talk" && req.method === "POST") return cors(await talk(req, env));
-    if (url.pathname === "/drain") return drain(req, env);
-    return cors(json({ ok: "the cut — dialogue proxy" }));
+    const origin = req.headers.get("Origin") || "";
+    if (req.method === "OPTIONS") return cors(new Response(null, { status: 204 }), origin);
+    if (url.pathname === "/talk" && req.method === "POST")
+      return cors(await talk(req, env), origin);
+    if (url.pathname === "/drain") return drain(req, env);   // server-to-server, no CORS
+    return cors(json({ ok: "the cut — dialogue proxy" }), origin);
   },
 };
