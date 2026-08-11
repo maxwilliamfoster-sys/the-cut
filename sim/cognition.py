@@ -36,7 +36,13 @@ RULES
   twice. Dramatic events are rare and earned by what came before.
 - Let people refuse, deflect, lie and hold grudges. Characters who agree with each other
   are boring and wrong. If two people have low affinity, it should show.
-- Speech is optional and only to somebody listed as present with them.
+- TALK TO EACH OTHER. If anyone is listed as being with them, they should usually say
+  something to one of those people. Two people in a room speak; that is what rooms are for.
+  Most of the people who have company should have a `to` and a `says` this beat. Silence is
+  for somebody marked ALONE, or for two people whose not-speaking is itself the point.
+- Speech can only be aimed at somebody listed as with them. Never at an absent person.
+- Where two people are together, it is good for them to answer each other — one addresses
+  the other, and the other replies to them in the same beat.
 - Vary the interior voice. Do not begin thoughts with "I have to" or "I need to" - most
   people are not narrating their own resolve. Let some thoughts be petty, funny, evasive,
   or about something else entirely.
@@ -60,8 +66,8 @@ Return JSON only, exactly this shape, one entry per person, using their exact id
   "id": "dez",
   "action": "third person, present tense, MAX 10 WORDS",
   "thought": "first person, MAX 16 WORDS",
-  "to": "id of someone present, or null",
-  "says": "one line, MAX 16 WORDS, only if `to` is set",
+  "to": "id of someone listed as WITH them — set this whenever they have company",
+  "says": "what they say out loud, MAX 16 WORDS, required whenever `to` is set",
   "mood": {"stress": 5},
   "feels_about": {"malik": {"shift": -6, "opinion": "MAX 10 WORDS"}},
   "memory": {"what": "one sentence, MAX 18 WORDS", "importance": 6}
@@ -119,7 +125,12 @@ def _people_block(agents, groups, beat, chosen):
     lines = []
     for aid in chosen:
         a = agents[aid]
-        here = [agents[o]["name"] for o in groups.get(a["at"], []) if o != aid]
+        # Companions are listed WITH THEIR IDS. Previously this was names only, so when the
+        # schema asked for `to` as an id the model had no way to supply one — the id of
+        # somebody standing in the room never appeared anywhere in the prompt unless they
+        # happened to be selected too. Dialogue collapsed to almost nothing and looked like
+        # reticence; it was a missing identifier.
+        here = [f'[{o}] {agents[o]["name"]}' for o in groups.get(a["at"], []) if o != aid]
         loc = city.LOCATIONS[a["at"]]["name"]
         m = a["mood"]
 
@@ -224,6 +235,14 @@ def _apply(agents, data, groups, beat, day, records, chosen):
         # home two districts away. Only accept speech aimed at someone actually here.
         to, says = row.get("to"), row.get("says")
         present = set(groups.get(a["at"], []))
+        # It still answers with a name every so often. Resolve it rather than dropping the
+        # line — a rejected line is indistinguishable from a silent character.
+        if to and to not in agents:
+            want = str(to).strip().lower()
+            to = next((o for o in present
+                       if agents[o]["name"].lower() == want
+                       or agents[o]["name"].split()[-1].lower() == want
+                       or agents[o]["name"].split()[0].lower() == want), to)
         a["speech"] = ({"to": to, "text": str(says)[:220]}
                        if says and to in agents and to != aid and to in present else None)
 

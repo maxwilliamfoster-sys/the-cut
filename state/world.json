@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 37,
-  "last_beat_at": "2026-08-11T20:03:47Z",
+  "beat": 43,
+  "last_beat_at": "2026-08-11T20:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "rain",
   "heat": {
-    "riverside": 26,
+    "riverside": 20,
     "delmar": 27,
-    "terraces": 5,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,65 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "cass",
+        "booker"
+      ],
+      "text": "Somebody tells Cass Deveaux that Booker Lyle has been seen talking to police."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "marisol",
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello does Marisol Vasquez a favour that costs them something real."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
     {
       "id": "cold_case",
       "heat": {},
@@ -330,75 +389,15 @@
         "femi"
       ],
       "text": "Femi Adeyemi does Rey Vasquez a favour that costs them something real."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Something pays out for Dot Feeney. More than expected, which is its own problem."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "marisol",
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan does Marisol Vasquez a favour that costs them something real."
     }
   ],
   "player_queue": [],
-  "last_gazette_day": 8,
+  "last_gazette_day": 10,
   "llm_budget": {
-    "day": 9,
+    "day": 10,
     "spent": {
-      "llama-3.1-8b-instant": 7024
+      "llama-3.1-8b-instant": 18725,
+      "llama-3.3-70b-versatile": 849
     }
   }
 }

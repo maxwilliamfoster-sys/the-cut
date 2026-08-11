@@ -199,6 +199,24 @@ else:
     chars = len(cognition.SYSTEM) + len(prompt)
     reply = llm.fit_max_tokens(llm.FAST, chars)
     total = chars // 4 + reply
+    # Dialogue collapsed to roughly one line per city-day because companions were listed by
+    # NAME while the schema asked for `to` as an id — the id of somebody standing in the
+    # same room never appeared in the prompt unless they happened to be selected too. It
+    # read as characters being reticent; it was a missing identifier.
+    w7, a7 = copy.deepcopy(w), copy.deepcopy(a)
+    for _ in range(3):
+        tick.run_beat(w7, a7)
+    g7 = tick.colocation(a7)
+    crowd = max(g7.values(), key=len)
+    chosen7 = list(dict.fromkeys(crowd + cognition.select(w7, a7, g7, [], None, w7["beat"])))
+    p7 = cognition.build_prompt(w7, a7, g7, [], None, w7["beat"], 0, "evening", chosen7)
+    companions = [o for o in crowd[1:]]
+    check("companions are named in the prompt with their ids",
+          len(crowd) < 2 or all(f"[{o}]" in p7 for o in companions),
+          f"missing ids for {[o for o in companions if f'[{o}]' not in p7]}")
+    check("the prompt tells them to talk to each other",
+          "TALK TO EACH OTHER" in cognition.SYSTEM)
+
     check("cognition request fits Groq's per-minute reservation",
           total <= llm.TPM[llm.FAST],
           f"prompt ~{chars//4} + reply {reply} = {total} > {llm.TPM[llm.FAST]}")
