@@ -45,6 +45,12 @@ remainder_start = clock.advance(start, 7)
 check("sub-beat remainder carries to the next run",
       clock.beats_owed(remainder_start) == 0)
 
+# A marker in the future makes beats_owed return 0 for as long as the drift lasts, so the
+# city freezes with no error anywhere. Caught in production after `--owe` testing left it
+# two hours ahead; tick.py now detects the drift and pulls the marker back.
+check("a future last_beat_at owes nothing (so it must be detected, not ignored)",
+      clock.beats_owed(clock.iso(clock.now_utc() + timedelta(hours=2))) == 0)
+
 check("split() leaves a short backlog fully narrated", clock.split(6) == (0, 6))
 check("split() caps cognition on a long outage",
       clock.split(200) == (200 - clock.MAX_COGNITION_BEATS, clock.MAX_COGNITION_BEATS),

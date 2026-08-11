@@ -218,6 +218,8 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true", help="simulate but write nothing")
     ap.add_argument("--no-llm", action="store_true", help="deterministic only, no cognition")
     ap.add_argument("--no-pacing", action="store_true", help="skip the inter-beat TPM pause")
+    ap.add_argument("--resync", action="store_true",
+                    help="pull last_beat_at back to now (undo --owe testing)")
     args = ap.parse_args(argv)
 
     if args.bootstrap:
@@ -231,6 +233,18 @@ def main(argv=None):
         print("No state/world.json — run with --bootstrap first.", file=sys.stderr)
         return 1
     agents = state.load_agents()
+
+    # `--owe N` advances last_beat_at by N beats regardless of real time, so local testing
+    # leaves the marker in the future — and beats_owed then returns 0 forever, freezing the
+    # city until the wall clock catches up. It froze for two hours once, silently, which is
+    # the worst way for this to fail. Detect it and pull the marker back.
+    drift = (clock.parse(world["last_beat_at"]) - clock.now_utc()).total_seconds()
+    if args.resync or drift > clock.BEAT_SECONDS:
+        world["last_beat_at"] = clock.iso(clock.now_utc())
+        print(f"[clock] last_beat_at was {drift/60:.0f} min ahead of now — resynced.")
+        if args.resync:
+            state.save_world(world)
+            return 0
 
     owed = args.owe if args.owe is not None else clock.beats_owed(world["last_beat_at"])
     if owed <= 0:
