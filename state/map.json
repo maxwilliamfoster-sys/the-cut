@@ -1,0 +1,339 @@
+{
+  "tile": 16,
+  "w": 64,
+  "h": 44,
+  "grid": [
+    "..,,........................................................,,..",
+    "..,,........................................................,,..",
+    "..,,........................................................,,..",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "..,,........................................................,,..",
+    "..,,.############....#########.....#########....fffffffffff.,,..",
+    "..,,.#ffffffffff#....#fffffff#.....#fffffff#....fffffffffff.,,..",
+    "..,,.#ffffffffff#....#fffffff#.....#fffffff#....fffffffffff.,,..",
+    "..,,.#ffffffffff#....#fffffff#.....#fffffff#....fffffffffff.,,..",
+    "..,,.#ffffffffff#....#fffffff#.....#fffffff#....fffffffffff.,,..",
+    "..,,.######D#####....####D####.....####D####....fffffffffff.,,..",
+    "..,,........................................................,,..",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "..,,........................................................,,..",
+    "..,,.#########....#########....##########....##########.....,,..",
+    "..,,.#fffffff#....#fffffff#....#ffffffff#....#ffffffff#.....,,..",
+    "..,,.#fffffff#....#fffffff#....#ffffffff#....#ffffffff#.....,,..",
+    "..,,.#fffffff#....#fffffff#....#ffffffff#....#ffffffff#.....,,..",
+    "..,,.#fffffff#....#fffffff#....#ffffffff#....#ffffffff#.....,,..",
+    "..,,.####D####....####D####....#####D####....#####D####.....,,..",
+    "..,,........................................................,,..",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "..,,........................................................,,..",
+    "..,,.##########....##########....#########....ffffffffffff..,,..",
+    "..,,.#ffffffff#....#ffffffff#....#fffffff#....ffffffffffff..,,..",
+    "..,,.#ffffffff#....#ffffffff#....#fffffff#....ffffffffffff..,,..",
+    "..,,.#ffffffff#....#ffffffff#....#fffffff#....ffffffffffff..,,..",
+    "..,,.#ffffffff#....#ffffffff#....#fffffff#....ffffffffffff..,,..",
+    "..,,.#####D####....#####D####....####D####....ffffffffffff..,,..",
+    "..,,........................................................,,..",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "..,,.#####D#####....#####D####....#####D####....fffffffffff.,,..",
+    "..,,.#fffffffff#....#ffffffff#....#ffffffff#....fffffffffff.,,..",
+    "..,,.#fffffffff#....#ffffffff#....#ffffffff#....fffffffffff.,,..",
+    "..,,.#fffffffff#....#ffffffff#....#ffffffff#....fffffffffff.,,..",
+    "..,,.#fffffffff#....#ffffffff#....#ffffffff#....fffffffffff.,,..",
+    "..,,.###########....##########....##########....fffffffffff.,,..",
+    "..,,........................................................,,..",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+  ],
+  "districts": {
+    "riverside": {
+      "name": "Riverside",
+      "y": [
+        0,
+        12
+      ]
+    },
+    "delmar": {
+      "name": "Delmar Row",
+      "y": [
+        13,
+        22
+      ]
+    },
+    "terraces": {
+      "name": "The Terraces",
+      "y": [
+        23,
+        32
+      ]
+    },
+    "civic": {
+      "name": "Civic End",
+      "y": [
+        33,
+        43
+      ]
+    }
+  },
+  "locations": {
+    "warehouse": {
+      "id": "warehouse",
+      "name": "Pier 9 Warehouse",
+      "district": "riverside",
+      "rect": [
+        5,
+        6,
+        12,
+        6
+      ],
+      "kind": "industrial",
+      "anchor": [
+        11,
+        10
+      ]
+    },
+    "laundromat": {
+      "id": "laundromat",
+      "name": "Spin Cycle Laundromat",
+      "district": "riverside",
+      "rect": [
+        21,
+        6,
+        9,
+        6
+      ],
+      "kind": "business",
+      "anchor": [
+        25,
+        10
+      ]
+    },
+    "harborbar": {
+      "id": "harborbar",
+      "name": "The Harbor Bar",
+      "district": "riverside",
+      "rect": [
+        35,
+        6,
+        9,
+        6
+      ],
+      "kind": "social",
+      "anchor": [
+        39,
+        10
+      ]
+    },
+    "docks": {
+      "id": "docks",
+      "name": "Kessler Docks",
+      "district": "riverside",
+      "rect": [
+        48,
+        6,
+        11,
+        6
+      ],
+      "kind": "industrial",
+      "anchor": [
+        53,
+        9
+      ]
+    },
+    "cornerstore": {
+      "id": "cornerstore",
+      "name": "Calloway's Corner",
+      "district": "delmar",
+      "rect": [
+        5,
+        16,
+        9,
+        6
+      ],
+      "kind": "business",
+      "anchor": [
+        9,
+        20
+      ]
+    },
+    "barbershop": {
+      "id": "barbershop",
+      "name": "Tee's Barbershop",
+      "district": "delmar",
+      "rect": [
+        18,
+        16,
+        9,
+        6
+      ],
+      "kind": "social",
+      "anchor": [
+        22,
+        20
+      ]
+    },
+    "diner": {
+      "id": "diner",
+      "name": "The Blue Spoon",
+      "district": "delmar",
+      "rect": [
+        31,
+        16,
+        10,
+        6
+      ],
+      "kind": "social",
+      "anchor": [
+        36,
+        20
+      ]
+    },
+    "pawnshop": {
+      "id": "pawnshop",
+      "name": "Lyle Pawn & Loan",
+      "district": "delmar",
+      "rect": [
+        45,
+        16,
+        10,
+        6
+      ],
+      "kind": "business",
+      "anchor": [
+        50,
+        20
+      ]
+    },
+    "terrace_a": {
+      "id": "terrace_a",
+      "name": "Terrace Block A",
+      "district": "terraces",
+      "rect": [
+        5,
+        26,
+        10,
+        6
+      ],
+      "kind": "home",
+      "anchor": [
+        10,
+        30
+      ]
+    },
+    "terrace_b": {
+      "id": "terrace_b",
+      "name": "Terrace Block B",
+      "district": "terraces",
+      "rect": [
+        19,
+        26,
+        10,
+        6
+      ],
+      "kind": "home",
+      "anchor": [
+        24,
+        30
+      ]
+    },
+    "vasquez": {
+      "id": "vasquez",
+      "name": "The Vasquez House",
+      "district": "terraces",
+      "rect": [
+        33,
+        26,
+        9,
+        6
+      ],
+      "kind": "home",
+      "anchor": [
+        37,
+        30
+      ]
+    },
+    "lot": {
+      "id": "lot",
+      "name": "The Vacant Lot",
+      "district": "terraces",
+      "rect": [
+        46,
+        26,
+        12,
+        6
+      ],
+      "kind": "outdoor",
+      "anchor": [
+        52,
+        29
+      ]
+    },
+    "precinct": {
+      "id": "precinct",
+      "name": "9th Precinct",
+      "district": "civic",
+      "rect": [
+        5,
+        35,
+        11,
+        6
+      ],
+      "kind": "civic",
+      "anchor": [
+        10,
+        36
+      ]
+    },
+    "clinic": {
+      "id": "clinic",
+      "name": "Halloway Clinic",
+      "district": "civic",
+      "rect": [
+        20,
+        35,
+        10,
+        6
+      ],
+      "kind": "civic",
+      "anchor": [
+        25,
+        36
+      ]
+    },
+    "autoshop": {
+      "id": "autoshop",
+      "name": "Vasquez Auto Body",
+      "district": "civic",
+      "rect": [
+        34,
+        35,
+        10,
+        6
+      ],
+      "kind": "business",
+      "anchor": [
+        39,
+        36
+      ]
+    },
+    "underpass": {
+      "id": "underpass",
+      "name": "The Underpass",
+      "district": "civic",
+      "rect": [
+        48,
+        35,
+        11,
+        6
+      ],
+      "kind": "outdoor",
+      "anchor": [
+        53,
+        38
+      ]
+    }
+  }
+}

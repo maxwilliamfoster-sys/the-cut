@@ -1,0 +1,53 @@
+name: tick
+
+on:
+  schedule:
+    # Every 15 real minutes == one beat == six city-hours == a quarter of a city day.
+    # GitHub delays scheduled runs by 5-30 minutes under load and sometimes drops them
+    # entirely. That is fine here: sim/tick.py derives how many beats it owes from the
+    # real elapsed time since the last one, so a late run simply pays several beats at
+    # once and the city's clock never drifts away from the wall clock.
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+# Two overlapping runs would both read the same state and one would clobber the other.
+# Queue instead of cancelling — a beat that is waiting still needs to be paid.
+concurrency:
+  group: the-cut-tick
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Advance the city
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python -m sim.tick
+
+      - name: Commit the new state
+        run: |
+          git config user.name  "the-cut[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if git diff --staged --quiet; then
+            echo "Nothing owed — no state change to commit."
+            exit 0
+          fi
+          BEAT=$(python -c "import json;print(json.load(open('state/world.json'))['beat'])")
+          DAY=$(python -c "import json;print(json.load(open('state/world.json'))['beat']//4)")
+          git commit -m "beat ${BEAT} (day ${DAY}) [skip ci]"
+          # Another run may have landed while this one was thinking; rebase rather than
+          # force so no beat is ever silently discarded.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE CUT — a city that keeps going without you</title>
+<style>
+  :root{
+    --bg:#0d0f14; --panel:#151922; --line:#252b38; --ink:#c9d3e3; --dim:#6b7689;
+    --hot:#e05c4a; --cool:#4a9ee0; --gold:#e0b44a; --good:#5fb87a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--bg); color:var(--ink); overflow:hidden;
+    font:12px/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    display:flex; flex-direction:column;
+  }
+  header{
+    display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+    padding:8px 14px; border-bottom:1px solid var(--line); background:var(--panel);
+  }
+  header h1{font-size:15px; letter-spacing:3px; font-weight:700}
+  header .sub{color:var(--dim)}
+  header .badge{
+    margin-left:auto; display:flex; gap:6px; align-items:center; color:var(--dim);
+  }
+  #dot{width:7px;height:7px;border-radius:50%;background:var(--good);
+       box-shadow:0 0 8px var(--good); animation:pulse 2.4s infinite}
+  @keyframes pulse{50%{opacity:.25}}
+
+  main{flex:1; display:flex; min-height:0}
+  #stage{flex:1; position:relative; min-width:0; background:#080a0e; overflow:hidden}
+  canvas{position:absolute; left:0; top:0; image-rendering:pixelated;
+         image-rendering:crisp-edges; cursor:crosshair}
+
+  aside{
+    width:310px; flex-shrink:0; border-left:1px solid var(--line); background:var(--panel);
+    overflow-y:auto; padding:12px;
+  }
+  aside::-webkit-scrollbar{width:8px}
+  aside::-webkit-scrollbar-thumb{background:var(--line)}
+
+  .sec{margin-bottom:16px}
+  .sec h2{
+    font-size:10px; letter-spacing:2px; color:var(--dim); font-weight:600;
+    padding-bottom:5px; margin-bottom:8px; border-bottom:1px solid var(--line);
+  }
+  .row{display:flex; justify-content:space-between; gap:8px; padding:1px 0}
+  .row span:last-child{color:var(--dim)}
+
+  .bar{height:5px; background:#0d1017; border-radius:3px; overflow:hidden; margin:3px 0 7px}
+  .bar i{display:block; height:100%; transition:width .5s}
+
+  .event{
+    border-left:2px solid var(--gold); padding:6px 9px; background:#1b1f2a;
+    color:#e6dcc4; font-style:italic;
+  }
+  .quiet{border-left-color:var(--line); color:var(--dim); font-style:normal}
+
+  .who{
+    display:flex; align-items:center; gap:8px; padding:4px 6px; border-radius:3px;
+    cursor:pointer; border:1px solid transparent;
+  }
+  .who:hover{background:#1b202b}
+  .who.on{background:#1e2533; border-color:var(--line)}
+  .who canvas{position:static; width:20px; height:28px}
+  .who .n{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .who .w{color:var(--dim); font-size:10px}
+
+  .thought{color:#9aa8bf; font-style:italic; padding:6px 0}
+  .memo{padding:5px 0; border-bottom:1px dashed var(--line); color:#a8b4c8}
+  .memo b{color:var(--gold); font-weight:400}
+  .rel{display:flex; justify-content:space-between; gap:6px; padding:3px 0}
+  .rel .o{color:var(--dim); font-size:10px; flex:1; text-align:right}
+
+  footer{
+    border-top:1px solid var(--line); background:var(--panel); padding:6px 14px;
+    color:var(--dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .err{color:var(--hot); padding:10px}
+  .hint{color:var(--dim); font-size:10px; padding-top:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>THE CUT</h1>
+  <span class="sub" id="when">—</span>
+  <span class="sub" id="weather"></span>
+  <span class="badge"><span id="dot"></span><span id="live">connecting</span></span>
+</header>
+
+<main>
+  <div id="stage"><canvas id="cv"></canvas></div>
+  <aside>
+    <div class="sec">
+      <h2>THE BLOCK</h2>
+      <div id="latest" class="event quiet">Nothing yet.</div>
+    </div>
+    <div class="sec">
+      <h2>POLICE ATTENTION</h2>
+      <div id="heat"></div>
+    </div>
+    <div class="sec">
+      <h2>WHO OWES WHO</h2>
+      <div id="debts"></div>
+    </div>
+    <div class="sec">
+      <h2>TWELVE PEOPLE</h2>
+      <div id="cast"></div>
+      <div class="hint">Click anyone — on the map or here.</div>
+    </div>
+    <div class="sec" id="mindsec" style="display:none">
+      <h2 id="mindname">—</h2>
+      <div id="mind"></div>
+    </div>
+  </aside>
+</main>
+
+<footer id="ticker">Loading the city…</footer>
+
+<script>
+'use strict';
+
+// ── palettes ────────────────────────────────────────────────────────────────
+// Authored rather than hashed from the id: twelve people need to be tellable apart at
+// 14 pixels tall, and a hash cheerfully hands two of them the same brown coat.
+const SKIN = {a:'#8d5524', b:'#c68642', c:'#e0ac69', d:'#f1c27d', e:'#5c3317'};
+const P = {
+  dez:    {sk:SKIN.a, hair:'#1a1a1a', top:'#2f4858', leg:'#1e232b'},
+  malik:  {sk:SKIN.b, hair:'#2b1d16', top:'#c8452f', leg:'#243040'},
+  ruiz:   {sk:SKIN.c, hair:'#3b2418', top:'#38506b', leg:'#20252e'},
+  kohl:   {sk:SKIN.d, hair:'#a8762f', top:'#2a3b57', leg:'#20252e'},
+  ivy:    {sk:SKIN.a, hair:'#d8d8d8', top:'#6b4a7a', leg:'#33383f'},
+  tee:    {sk:SKIN.e, hair:'#141414', top:'#e0b44a', leg:'#2c3138'},
+  simone: {sk:SKIN.a, hair:'#241a14', top:'#3f8f7a', leg:'#2a2f36'},
+  rey:    {sk:SKIN.b, hair:'#3a2a1c', top:'#5b6a4a', leg:'#3a3125'},
+  nadia:  {sk:SKIN.c, hair:'#1d1410', top:'#b8546e', leg:'#2b3a52'},
+  booker: {sk:SKIN.e, hair:'#5a5a5a', top:'#7a5c34', leg:'#2e2a24'},
+  junie:  {sk:SKIN.d, hair:'#c26b3a', top:'#d9d2c4', leg:'#3c4450'},
+  cass:   {sk:SKIN.d, hair:'#8a8578', top:'#20242b', leg:'#20242b'},
+};
+const FALLBACK = {sk:SKIN.c, hair:'#333', top:'#888', leg:'#444'};
+
+const TILECOL = {
+  '.':'#39404e',   // pavement
+  ',':'#22262e',   // road
+  '#':'#4a4038',   // wall
+  'f':'#5a5348',   // interior floor
+  'D':'#c8a04a',   // door
+  '~':'#1b3a4a',
+};
+
+// ── state ───────────────────────────────────────────────────────────────────
+let MAP=null, WORLD=null, AGENTS=null, LOG=[];
+let selected=null, bg=null, T=16, lastFetch=0, beatStartMs=0;
+const anim = {};                 // per-agent render state
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+ctx.imageSmoothingEnabled = false;
+
+const BEAT_MS = 15*60*1000;
+const WALK_TPS = 3.5;            // tiles per second while walking a path
+
+const $ = id => document.getElementById(id);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const esc = s => String(s??'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+
+// ── loading ─────────────────────────────────────────────────────────────────
+async function jget(path){
+  const r = await fetch(path + '?t=' + Date.now(), {cache:'no-store'});
+  if(!r.ok) throw new Error(path + ' ' + r.status);
+  return r.json();
+}
+
+async function load(first){
+  try{
+    if(first) MAP = await jget('state/map.json');
+    const [w,a] = await Promise.all([jget('state/world.json'), jget('state/agents.json')]);
+    const newBeat = !WORLD || w.beat !== WORLD.beat;
+    WORLD = w; AGENTS = a;
+
+    try{
+      const day = Math.floor(w.beat/4), wk = String(Math.floor(day/7)).padStart(3,'0');
+      const txt = await (await fetch(`state/log-w${wk}.jsonl?t=${Date.now()}`,{cache:'no-store'})).text();
+      LOG = txt.trim().split('\n').filter(Boolean).map(JSON.parse);
+    }catch(e){ LOG = []; }
+
+    if(first){ T = MAP.tile; buildBackground(); fitCanvas(); }
+    if(newBeat) onNewBeat();
+    paintPanel();
+    draw();
+    $('live').textContent = 'live';
+    $('dot').style.background = 'var(--good)';
+    lastFetch = Date.now();
+  }catch(e){
+    $('live').textContent = 'offline';
+    $('dot').style.background = 'var(--hot)';
+    if(first) document.getElementById('stage').innerHTML =
+      `<div class="err">Could not load the city.<br><br>${esc(e.message)}<br><br>`+
+      `Serve this folder over HTTP — <code>py -m http.server</code> — rather than opening the file directly.</div>`;
+  }
+}
+
+// ── static map, drawn once ──────────────────────────────────────────────────
+function buildBackground(){
+  bg = document.createElement('canvas');
+  bg.width = MAP.w*T; bg.height = MAP.h*T;
+  const g = bg.getContext('2d');
+  g.imageSmoothingEnabled = false;
+
+  for(let y=0;y<MAP.h;y++){
+    const row = MAP.grid[y];
+    for(let x=0;x<MAP.w;x++){
+      const c = row[x];
+      g.fillStyle = TILECOL[c] || '#000';
+      g.fillRect(x*T,y*T,T,T);
+
+      // A flat fill at this scale reads as graph paper, so every tile type gets one
+      // cheap detail pass. This is the whole difference between "tilemap" and "place".
+      if(c==='.'){
+        g.fillStyle='rgba(255,255,255,.035)';
+        g.fillRect(x*T,y*T,T,1); g.fillRect(x*T,y*T,1,T);
+        if((x*7+y*13)%11===0){ g.fillStyle='rgba(0,0,0,.18)'; g.fillRect(x*T+3,y*T+5,3,2); }
+      } else if(c===','){
+        g.fillStyle='rgba(0,0,0,.25)'; g.fillRect(x*T,y*T,T,2);
+      } else if(c==='#'){
+        g.fillStyle='rgba(0,0,0,.28)';
+        g.fillRect(x*T,y*T+T-3,T,3); g.fillRect(x*T+T-3,y*T,3,T);
+        g.fillStyle='rgba(255,255,255,.06)'; g.fillRect(x*T,y*T,T,2);
+      } else if(c==='f'){
+        g.fillStyle='rgba(0,0,0,.10)';
+        if((x+y)%2===0) g.fillRect(x*T,y*T,T,T);
+      } else if(c==='D'){
+        g.fillStyle='rgba(0,0,0,.35)'; g.fillRect(x*T+2,y*T+2,T-4,T-2);
+        g.fillStyle='#e8c874'; g.fillRect(x*T+T-6,y*T+T/2,2,2);
+      }
+    }
+  }
+
+  // Windows punched along the outside of each building, and a name plate.
+  for(const id in MAP.locations){
+    const L = MAP.locations[id], [x,y,w,h] = L.rect;
+    if(L.kind !== 'outdoor' && L.kind !== 'industrial'){
+      for(let wx=x+2; wx<x+w-2; wx+=3){
+        g.fillStyle = '#0e1218'; g.fillRect(wx*T+2, y*T+4, T-6, T-8);
+        g.fillStyle = 'rgba(224,180,74,.30)'; g.fillRect(wx*T+3, y*T+5, T-8, T-10);
+      }
+    }
+    g.font = '9px ui-monospace,monospace';
+    g.textAlign = 'center';
+    g.fillStyle = 'rgba(0,0,0,.65)';
+    g.fillRect((x+w/2)*T - L.name.length*2.7 - 4, (y+h)*T+1, L.name.length*5.4+8, 11);
+    g.fillStyle = '#9aa8bf';
+    g.fillText(L.name, (x+w/2)*T, (y+h)*T+10);
+  }
+}
+
+// ── sprites ─────────────────────────────────────────────────────────────────
+// 10x14 chunky figures drawn with fillRect. No asset pack, no loading, no licence file,
+// and the palette is guaranteed to stay consistent across every frame and every reload.
+function drawPerson(g, px, py, id, frame, facing, scale){
+  const p = P[id] || FALLBACK, s = scale || 1;
+  const R = (x,y,w,h,c)=>{ g.fillStyle=c; g.fillRect(px+x*s, py+y*s, w*s, h*s); };
+
+  R(2,13,6,1,'rgba(0,0,0,.30)');                       // shadow
+  const step = frame % 2;
+  R(3, 10, 2, 3, p.leg);                               // legs
+  R(5, 10, 2, 3, p.leg);
+  if(step){ R(3,12,2,1,'rgba(0,0,0,.35)'); } else { R(5,12,2,1,'rgba(0,0,0,.35)'); }
+  R(2, 5, 6, 5, p.top);                                // torso
+  R(1, 6, 1, 3, p.top); R(8, 6, 1, 3, p.top);          // arms
+  R(2, 1, 6, 5, p.sk);                                 // head
+  R(2, 0, 6, 2, p.hair);                               // hair
+  if(facing === 'W'){ R(1,1,1,4,p.hair); } else if(facing === 'E'){ R(8,1,1,4,p.hair); }
+  if(facing !== 'N'){                                  // eyes, hidden when facing away
+    R(3, 3, 1, 1, '#11141a'); R(6, 3, 1, 1, '#11141a');
+  }
+}
+
+function castThumb(id){
+  const c = document.createElement('canvas');
+  c.width=10; c.height=14;
+  const g=c.getContext('2d'); g.imageSmoothingEnabled=false;
+  drawPerson(g,0,0,id,0,'S',1);
+  return c;
+}
+
+// ── animation ───────────────────────────────────────────────────────────────
+function onNewBeat(){
+  beatStartMs = Date.now();
+  // If the tab was opened mid-beat, skip the walk forward by however much of it has
+  // already happened in the real world, so nobody teleports or re-walks a path they
+  // finished twelve minutes ago.
+  const elapsed = (Date.now() - Date.parse(WORLD.last_beat_at));
+  for(const id in AGENTS){
+    const a = AGENTS[id];
+    const path = (a.path && a.path.length > 1) ? a.path : [a.pos];
+    anim[id] = {
+      path, t: clamp(elapsed/1000, 0, 1e6), facing:'S',
+      wander:[0,0], nextWander: Math.random()*4000,
+    };
+  }
+  renderTicker();
+}
+
+function agentRenderPos(id, nowMs){
+  const st = anim[id];
+  if(!st) return {x:AGENTS[id].pos[0], y:AGENTS[id].pos[1], moving:false, facing:'S'};
+
+  const dur = (st.path.length-1) / WALK_TPS;
+  const t = (nowMs - beatStartMs)/1000 + st.t;
+
+  if(t < dur && st.path.length > 1){
+    const f = (t/dur) * (st.path.length-1);
+    const i = Math.floor(f), frac = f-i;
+    const a = st.path[Math.min(i, st.path.length-1)];
+    const b = st.path[Math.min(i+1, st.path.length-1)];
+    const dx = b[0]-a[0], dy = b[1]-a[1];
+    let facing = st.facing;
+    if(dx>0) facing='E'; else if(dx<0) facing='W';
+    else if(dy>0) facing='S'; else if(dy<0) facing='N';
+    st.facing = facing;
+    return {x:a[0]+dx*frac, y:a[1]+dy*frac, moving:true, facing};
+  }
+
+  // Arrived: drift a little so a stationary crowd still looks inhabited.
+  if(nowMs > st.nextWander){
+    st.nextWander = nowMs + 2500 + Math.random()*5000;
+    const p = AGENTS[id].pos;
+    const nx = p[0] + (Math.random()*2-1), ny = p[1] + (Math.random()*2-1);
+    if(walkableAt(Math.round(nx), Math.round(ny))) st.wander = [nx-p[0], ny-p[1]];
+  }
+  const p = AGENTS[id].pos;
+  const w = st.wander;
+  const bob = Math.sin(nowMs/600 + id.length) * 0.04;
+  return {x:p[0]+w[0]*0.5, y:p[1]+w[1]*0.5+bob, moving:false, facing:st.facing};
+}
+
+function walkableAt(x,y){
+  if(!MAP || y<0 || y>=MAP.h || x<0 || x>=MAP.w) return false;
+  return '.,fD'.includes(MAP.grid[y][x]);
+}
+
+// ── camera + draw ───────────────────────────────────────────────────────────
+let view = {s:1, ox:0, oy:0};
+
+function fitCanvas(){
+  const st = document.getElementById('stage');
+  const cw = st.clientWidth, ch = st.clientHeight;
+  cv.width = cw; cv.height = ch;
+  ctx.imageSmoothingEnabled = false;
+  // Fit the whole city rather than forcing scale >= 1 — clamping to 1 clipped ~27px off
+  // every edge on a typical pane, which quietly hid the docks and the underpass.
+  const s = Math.min(cw/(MAP.w*T), ch/(MAP.h*T));
+  view.s = s;
+  view.ox = (cw - MAP.w*T*s)/2;
+  view.oy = (ch - MAP.h*T*s)/2;
+}
+window.addEventListener('resize', ()=>{ if(MAP) fitCanvas(); });
+// A tab that loads while hidden (background tab, collapsed pane) reports clientWidth 0,
+// which leaves a 0x0 canvas that a window resize alone may never fix. Observing the stage
+// means the map appears the moment the element actually has a size.
+new ResizeObserver(()=>{ if(MAP){ fitCanvas(); draw(); } }).observe(document.getElementById('stage'));
+
+function frame(){ requestAnimationFrame(frame); draw(); }
+
+// Split out from the rAF loop so a paint can be forced. A tab opened in the background
+// gets no rAF callbacks at all until it is focused, which previously meant an empty canvas
+// on arrival; load() now paints one frame directly so the city is there the moment you look.
+function draw(){
+  if(!MAP || !bg || !AGENTS || !cv.width) return;
+  const now = Date.now();
+
+  ctx.fillStyle = '#080a0e';
+  ctx.fillRect(0,0,cv.width,cv.height);
+  ctx.save();
+  ctx.translate(view.ox, view.oy);
+  ctx.scale(view.s, view.s);
+  ctx.drawImage(bg, 0, 0);
+
+  // Night wash — the city visibly changes shift, which sells "time is passing" more
+  // cheaply than any clock in the corner.
+  const block = ['morning','afternoon','evening','night'][WORLD.beat % 4];
+  const wash = {morning:null, afternoon:null,
+                evening:'rgba(40,30,80,.28)', night:'rgba(8,10,30,.52)'}[block];
+  if(wash){ ctx.fillStyle = wash; ctx.fillRect(0,0,MAP.w*T,MAP.h*T); }
+
+  // Everyone at a location shares its single anchor tile, so four housemates would draw
+  // at exactly the same pixel and read as one person. Fan co-located characters onto a
+  // small ellipse around the shared tile — sorted by id so the arrangement is stable
+  // frame to frame and nobody jitters between positions.
+  const R = {};
+  for(const id in AGENTS) R[id] = agentRenderPos(id, now);
+  const cluster = {};
+  for(const id in R){
+    const k = Math.round(R[id].x) + ',' + Math.round(R[id].y);
+    (cluster[k] = cluster[k] || []).push(id);
+  }
+  for(const k in cluster){
+    const g = cluster[k];
+    if(g.length < 2) continue;
+    g.sort();
+    g.forEach((id, i) => {
+      const ang = (i / g.length) * Math.PI * 2;
+      R[id].x += Math.cos(ang) * 0.55;
+      R[id].y += Math.sin(ang) * 0.38;
+    });
+  }
+
+  const order = Object.keys(R).sort((a,b)=>R[a].y - R[b].y);
+  for(const id of order){
+    const r = R[id];
+    const px = r.x*T + 3, py = r.y*T + 1;
+    const frameN = r.moving ? Math.floor(now/140)%2 : 0;
+
+    if(selected===id){
+      ctx.fillStyle='rgba(224,180,74,.16)';
+      ctx.beginPath(); ctx.arc(px+5, py+8, 13, 0, 7); ctx.fill();
+      ctx.strokeStyle='#e0b44a'; ctx.lineWidth=1;
+      ctx.strokeRect(px-2.5, py-2.5, 15, 19);
+    }
+    drawPerson(ctx, px, py, id, frameN, r.facing, 1);
+
+    if(view.s >= 1.35 || selected===id){
+      ctx.font='7px ui-monospace,monospace'; ctx.textAlign='center';
+      ctx.fillStyle = selected===id ? '#e0b44a' : 'rgba(201,211,227,.62)';
+      ctx.fillText(AGENTS[id].name.split(' ').slice(-1)[0], px+5, py-4);
+    }
+  }
+  ctx.restore();
+}
+requestAnimationFrame(frame);
+
+// ── picking ─────────────────────────────────────────────────────────────────
+cv.addEventListener('click', e=>{
+  if(!AGENTS) return;
+  const r = cv.getBoundingClientRect();
+  const mx = (e.clientX - r.left - view.ox)/view.s/T;
+  const my = (e.clientY - r.top  - view.oy)/view.s/T;
+  let best=null, bd=2.2;
+  for(const id in AGENTS){
+    const p = agentRenderPos(id, Date.now());
+    const d = Math.hypot(p.x+0.5-mx, p.y+0.5-my);
+    if(d<bd){ bd=d; best=id; }
+  }
+  select(best);
+});
+
+function select(id){ selected = id; paintPanel(); }
+
+// ── panel ───────────────────────────────────────────────────────────────────
+function bar(v, color){
+  return `<div class="bar"><i style="width:${clamp(v,0,100)}%;background:${color}"></i></div>`;
+}
+
+function paintPanel(){
+  if(!WORLD || !AGENTS) return;
+  const day = Math.floor(WORLD.beat/4);
+  const block = ['morning','afternoon','evening','night'][WORLD.beat%4];
+  $('when').textContent = `Day ${day} · ${block}`;
+  $('weather').textContent = `· ${WORLD.weather}`;
+
+  const ev = (WORLD.events && WORLD.events[0]) ? WORLD.events[0].text : null;
+  const L = $('latest');
+  L.textContent = ev || 'A quiet stretch. Nothing anybody would write down.';
+  L.className = ev ? 'event' : 'event quiet';
+
+  $('heat').innerHTML = Object.entries(WORLD.heat).map(([d,v])=>{
+    const nm = (MAP.districts[d]||{}).name || d;
+    return `<div class="row"><span>${esc(nm)}</span><span>${v}</span></div>` +
+           bar(v, v>60?'var(--hot)':v>30?'var(--gold)':'var(--cool)');
+  }).join('');
+
+  const open = (WORLD.debts||[]).filter(d=>!d.settled);
+  $('debts').innerHTML = open.length ? open.map(d=>{
+    const from = (AGENTS[d.from]||{}).name || d.from;
+    const to   = (AGENTS[d.to]||{}).name || d.to;
+    const over = day - d.due_day;
+    const tag  = over>=0 ? `<span style="color:var(--hot)">${over}d over</span>`
+                         : `<span>due day ${d.due_day}</span>`;
+    const amt  = d.kind==='money' ? '$'+d.amount.toLocaleString()
+               : d.kind==='favour' ? 'a favour' : 'a package';
+    return `<div class="row"><span>${esc(from)} → ${esc(to)}</span>${tag}</div>
+            <div class="row"><span class="w" style="color:var(--dim)">${esc(amt)}</span></div>`;
+  }).join('') : '<div style="color:var(--dim)">Everyone is square. For now.</div>';
+
+  const cast = $('cast');
+  cast.innerHTML = '';
+  for(const id of Object.keys(AGENTS)){
+    const a = AGENTS[id];
+    const el = document.createElement('div');
+    el.className = 'who' + (selected===id?' on':'');
+    el.onclick = ()=>select(id);
+    el.appendChild(castThumb(id));
+    const loc = (MAP.locations[a.at]||{}).name || a.at;
+    el.insertAdjacentHTML('beforeend',
+      `<div class="n">${esc(a.name)}<div class="w">${esc(loc)}</div></div>`);
+    cast.appendChild(el);
+  }
+
+  paintMind();
+}
+
+function paintMind(){
+  const sec = $('mindsec');
+  if(!selected || !AGENTS[selected]){ sec.style.display='none'; return; }
+  sec.style.display='';
+  const a = AGENTS[selected];
+  $('mindname').textContent = a.name.toUpperCase();
+
+  const rels = Object.entries(a.relationships||{})
+    .filter(([k])=>AGENTS[k])
+    .sort((x,y)=>Math.abs(y[1].affinity)-Math.abs(x[1].affinity))
+    .slice(0,5);
+
+  const mems = (a.memories||[]).slice(-6).reverse();
+
+  $('mind').innerHTML = `
+    <div style="color:var(--dim);padding-bottom:6px">${esc(a.age)} · ${esc(a.role)}</div>
+
+    <div class="row"><span>energy</span><span>${a.mood.energy}</span></div>${bar(a.mood.energy,'var(--good)')}
+    <div class="row"><span>happiness</span><span>${a.mood.happiness}</span></div>${bar(a.mood.happiness,'var(--gold)')}
+    <div class="row"><span>stress</span><span>${a.mood.stress}</span></div>${bar(a.mood.stress,'var(--hot)')}
+    <div class="row"><span>needs company</span><span>${a.mood.social_need}</span></div>${bar(a.mood.social_need,'var(--cool)')}
+    <div class="row"><span>fear</span><span>${a.mood.fear}</span></div>${bar(a.mood.fear,'#9a5fd0')}
+
+    <div style="padding:8px 0 2px;color:var(--dim)">RIGHT NOW</div>
+    <div>${esc(a.action||'—')}</div>
+    ${a.thought ? `<div class="thought">“${esc(a.thought)}”</div>` : ''}
+    ${a.speech ? `<div class="thought">to ${esc((AGENTS[a.speech.to]||{}).name||a.speech.to)}:
+        “${esc(a.speech.text)}”</div>` : ''}
+
+    <div style="padding:10px 0 2px;color:var(--dim)">WANTS</div>
+    <div>${esc(a.ambition)}</div>
+    <div style="padding:8px 0 2px;color:var(--dim)">DREADS</div>
+    <div>${esc(a.private_fear)}</div>
+
+    <div style="padding:10px 0 2px;color:var(--dim)">THINKS OF</div>
+    ${rels.map(([k,v])=>{
+      const c = v.affinity>25?'var(--good)':v.affinity<-25?'var(--hot)':'var(--dim)';
+      return `<div class="rel"><span style="color:${c}">${esc(AGENTS[k].name.split(' ').slice(-1)[0])}</span>
+              <span class="o">${esc(v.opinion)}</span></div>`;
+    }).join('')}
+
+    <div style="padding:10px 0 2px;color:var(--dim)">REMEMBERS</div>
+    ${mems.length ? mems.map(m=>
+      `<div class="memo"><b>d${m.day}</b> ${esc(m.what)}</div>`).join('')
+      : '<div style="color:var(--dim)">Nothing worth keeping yet.</div>'}
+  `;
+}
+
+function renderTicker(){
+  const recent = LOG.filter(r=>r.event).slice(-6).reverse();
+  $('ticker').textContent = recent.length
+    ? recent.map(r=>`d${r.day} ${r.block}: ${r.event}`).join('   ·   ')
+    : `The city has been running since ${WORLD ? WORLD.started_at : '—'}.`;
+}
+
+// ── go ──────────────────────────────────────────────────────────────────────
+load(true);
+setInterval(()=>load(false), 60*1000);
+document.addEventListener('visibilitychange', ()=>{
+  if(!document.hidden && Date.now()-lastFetch > 20000) load(false);
+});
+</script>
+</body>
+</html>

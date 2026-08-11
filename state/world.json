@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "seed": "the-cut-001",
+  "beat": 0,
+  "last_beat_at": "2026-08-11T11:25:19Z",
+  "started_at": "2026-08-11T11:25:19Z",
+  "weather": "clear",
+  "heat": {
+    "riverside": 5,
+    "delmar": 5,
+    "terraces": 5,
+    "civic": 5
+  },
+  "turf": {
+    "riverside": "crew",
+    "civic": "police",
+    "delmar": "block",
+    "terraces": "grey"
+  },
+  "factions": {
+    "crew": {
+      "name": "The Laundromat Crew",
+      "members": [
+        "dez",
+        "malik"
+      ],
+      "turf": [
+        "riverside"
+      ]
+    },
+    "police": {
+      "name": "9th Precinct",
+      "members": [
+        "ruiz",
+        "kohl"
+      ],
+      "turf": [
+        "civic"
+      ]
+    },
+    "block": {
+      "name": "The Block",
+      "members": [
+        "ivy",
+        "tee",
+        "simone",
+        "junie",
+        "nadia"
+      ],
+      "turf": [
+        "delmar"
+      ]
+    },
+    "grey": {
+      "name": "The Grey Economy",
+      "members": [
+        "rey",
+        "booker"
+      ],
+      "turf": [
+        "terraces"
+      ]
+    },
+    "outside": {
+      "name": "Outside Interest",
+      "members": [
+        "cass"
+      ],
+      "turf": []
+    }
+  },
+  "debts": [
+    {
+      "from": "kohl",
+      "to": "booker",
+      "kind": "money",
+      "amount": 4200,
+      "due_day": 3,
+      "note": "gambling markers Booker bought up quietly",
+      "id": "debt0",
+      "settled": false
+    },
+    {
+      "from": "rey",
+      "to": "dez",
+      "kind": "money",
+      "amount": 9000,
+      "due_day": 5,
+      "note": "fronted him the shop's back rent last winter",
+      "id": "debt1",
+      "settled": false
+    },
+    {
+      "from": "malik",
+      "to": "dez",
+      "kind": "product",
+      "amount": 1,
+      "due_day": 2,
+      "note": "a package that came back light and has never been explained",
+      "id": "debt2",
+      "settled": false
+    },
+    {
+      "from": "junie",
+      "to": "simone",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 9,
+      "note": "an unpayable one, which is the kind that lasts",
+      "id": "debt3",
+      "settled": false
+    }
+  ],
+  "events": [],
+  "player_queue": [],
+  "last_gazette_day": -1
+}
