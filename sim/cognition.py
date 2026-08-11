@@ -75,9 +75,49 @@ that actually changed. Omit `feels_about` and `memory` entirely unless something
 on a normal beat most people have neither."""
 
 
-def _people_block(agents, groups, beat):
+# The whole cast will not fit in one call. Groq reserves prompt + reply against a 6,000
+# token per-minute ceiling; thirty people costs roughly 8,000 and would also double the
+# daily spend. So attention is rationed, and this decides who gets it.
+COGNITION_SLOTS = 11
+
+
+def select(world, agents, groups, pressures, event, beat, limit=COGNITION_SLOTS):
+    """Who actually gets thought about this beat.
+
+    Everybody already has an activity, so an unselected character is not idle — they are
+    just not being narrated. Scoring favours the people the story is currently happening
+    to, with a rotation term so nobody goes unheard for long.
+    """
+    overdue = {p["from_id"] for p in pressures if p.get("from_id")}
+    touched = set((event or {}).get("targets") or [])
+    spoken_to = {q["agent"] for q in (world.get("player_queue") or [])}
+
+    scored = []
+    for aid, a in agents.items():
+        s = 0.0
+        if a.get("principal"):
+            s += 6
+        if aid in touched:
+            s += 9                                   # the event happened to them
+        if aid in spoken_to:
+            s += 12                                  # the player spoke to them
+        if aid in overdue:
+            s += 5
+        here = len(groups.get(a["at"], []))
+        s += min(here - 1, 3) * 2.0                  # people in a room together make scenes
+        s += min(a["mood"]["stress"], 100) / 40.0
+        s += min(a["mood"]["fear"], 100) / 50.0
+        # Rotation: the longer since anyone paid attention, the louder they get.
+        s += min((beat - a.get("last_thought_beat", -20)) * 0.45, 9)
+        scored.append((s, aid))
+
+    scored.sort(key=lambda t: (-t[0], t[1]))
+    return [aid for _, aid in scored[:limit]]
+
+
+def _people_block(agents, groups, beat, chosen):
     lines = []
-    for aid in sorted(agents):
+    for aid in chosen:
         a = agents[aid]
         here = [agents[o]["name"] for o in groups.get(a["at"], []) if o != aid]
         loc = city.LOCATIONS[a["at"]]["name"]
@@ -108,15 +148,16 @@ def _people_block(agents, groups, beat):
             f'[{aid}] {a["name"]}, {a["age"]}, {a["role"]}\n'
             f'  is: {"; ".join(a["traits"][:3])}\n'
             f'  wants: {a["ambition"]}\n'
-            f'  at: {loc}{(" with " + ", ".join(here)) if here else " (ALONE)"}\n'
+            f'  at: {loc}, currently {a.get("activity", "here")}'
+            f'{(" — with " + ", ".join(here)) if here else " (ALONE)"}\n'
             f'  feels: {", ".join(feels) if feels else "steady"}\n'
-            f'  thinks: {rel_s}\n'
+            f'  thinks: {rel_s or "no strong views on anyone"}\n'
             f'  remembers: {mem_s}'
         )
     return "\n".join(lines)
 
 
-def build_prompt(world, agents, groups, pressures, event, beat, day, block):
+def build_prompt(world, agents, groups, pressures, event, beat, day, block, chosen):
     heat = ", ".join(f'{city.DISTRICTS[d]["name"]} {v}' for d, v in world["heat"].items())
     debts = "; ".join(
         f'{p["from"]} owes {p["to"]} '
@@ -137,21 +178,22 @@ def build_prompt(world, agents, groups, pressures, event, beat, day, block):
         f"Overdue - {debts}.\n"
         f"Just happened - {event['text'] if event else 'nothing anybody would write down'}"
         f"{stranger}\n\n"
-        f"PEOPLE\n{_people_block(agents, groups, beat)}\n\n"
-        f"Return JSON for all {len(agents)} people."
+        f"PEOPLE\n{_people_block(agents, groups, beat, chosen)}\n\n"
+        f"Return JSON for all {len(chosen)} people."
     )
 
 
-def _apply(agents, data, groups, beat, day, records):
+def _apply(agents, data, groups, beat, day, records, chosen):
     """Apply whatever came back. A malformed entry is skipped rather than failing the beat —
     losing one person's turn is survivable; losing the whole city's is not."""
     applied, seen = 0, set()
     for row in (data or {}).get("people", []):
         aid = (row or {}).get("id")
         a = agents.get(aid)
-        if not a or aid in seen:
+        if not a or aid in seen or aid not in chosen:
             continue
         seen.add(aid)
+        a["last_thought_beat"] = beat
 
         a["action"] = str(row.get("action") or a["action"])[:120]
         a["thought"] = str(row.get("thought") or "")[:220]
@@ -191,15 +233,15 @@ def _apply(agents, data, groups, beat, day, records):
         })
         applied += 1
 
-    # The model quietly drops someone from the batch now and then. Without this they keep
-    # last beat's action forever — on the very first beat that meant a character stuck
-    # visibly on the bootstrap string "starting the day".
-    for aid, a in agents.items():
+    # The model quietly drops someone from the batch now and then. They keep the activity
+    # the deterministic layer already gave them — so a dropped character is doing the
+    # washing up, not standing blankly — but they still get logged and still count as
+    # having had their turn, or the rotation would keep re-picking them forever.
+    for aid in chosen:
         if aid in seen:
             continue
-        a["action"] = f"at {city.LOCATIONS[a['at']]['name']}"
-        a["thought"] = ""
-        a["speech"] = None
+        a = agents[aid]
+        a["last_thought_beat"] = beat
         records.append({"beat": beat, "day": day, "kind": "act", "who": aid,
                         "name": a["name"], "at": a["at"], "action": a["action"],
                         "thought": "", "speech": None, "omitted": True})
@@ -213,7 +255,8 @@ def make_cognition(budget, verbose=True):
     def cognition(world, agents, groups, pressures, event, beat, day, block):
         records = []
         budget.ensure_day(day)
-        prompt = build_prompt(world, agents, groups, pressures, event, beat, day, block)
+        chosen = select(world, agents, groups, pressures, event, beat)
+        prompt = build_prompt(world, agents, groups, pressures, event, beat, day, block, chosen)
 
         # ~4 chars a token, plus room for the reply. If the day's allowance cannot cover
         # it, fall through to a quiet beat rather than half-applying a truncated response.
@@ -255,9 +298,10 @@ def make_cognition(budget, verbose=True):
             print(f"[cognition] beat {beat}: unparseable response ({len(text)} chars)")
             return records
 
-        n = _apply(agents, data, groups, beat, day, records)
+        n = _apply(agents, data, groups, beat, day, records, chosen)
         if verbose:
-            print(f"[cognition] beat {beat}: {n}/{len(agents)} people, {used} tokens "
+            print(f"[cognition] beat {beat}: {n}/{len(chosen)} narrated "
+                  f"(of {len(agents)} living), {used} tokens "
                   f"({budget.remaining(llm.FAST)} left today)")
         return records
 

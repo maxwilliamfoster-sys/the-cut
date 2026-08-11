@@ -246,12 +246,74 @@ const FALLBACK = {sk:SKIN.c, hair:'#333', top:'#888', leg:'#444'};
 P.__player = {sk:SKIN.d, hair:'#2a2622', top:'#2f7fb8', leg:'#232a33'};
 
 const TILECOL = {
-  '.':'#39404e',   // pavement
-  ',':'#22262e',   // road
-  '#':'#4a4038',   // wall
+  '.':'#4a505c',   // pavement
+  ',':'#26292f',   // road
+  ':':'#26292f',   // road with centre line
+  '=':'#2c3037',   // crossing
+  'g':'#3d4a3a',   // grass
+  '#':'#4a4038',   // wall (overridden per building style)
   'f':'#5a5348',   // interior floor
   'D':'#c8a04a',   // door
   '~':'#1b3a4a',
+};
+
+// Every building drew in the same brown, so a street of six shops read as one repeated
+// asset. Each style changes wall, trim, window and roof together — shared palette, clearly
+// different buildings.
+const STYLE = {
+  brick:      {wall:'#6d3a30', trim:'#8a4a3c', win:'#242a34', roof:'#48261f', tex:'brick'},
+  brownstone: {wall:'#7a5a3c', trim:'#95704c', win:'#282730', roof:'#4f3826', tex:'brick'},
+  concrete:   {wall:'#666c73', trim:'#828890', win:'#29303a', roof:'#494e55', tex:'panel'},
+  clapboard:  {wall:'#7f8a76', trim:'#9aa691', win:'#2a2e36', roof:'#5a4736', tex:'plank'},
+  metal:      {wall:'#565c65', trim:'#6f7883', win:'#20242a', roof:'#3c4147', tex:'ribs'},
+  stone:      {wall:'#87826f', trim:'#a09a86', win:'#282a2e', roof:'#5c584c', tex:'block'},
+  shopfront:  {wall:'#5c4759', trim:'#7b6076', win:'#1d2731', roof:'#3d2f3e', tex:'panel',
+               awning:true},
+  none:       {wall:'#4a4038', trim:'#5a5048', win:'#2a2a2a', roof:'#3a332c', tex:'panel'},
+};
+
+const AWNING = ['#b4483c','#3c7a6a','#c08a3a','#4a6aa8','#8a5aa8','#c26a4a'];
+
+const PROP = {
+  bed:     (g,x,y)=>{ g.fillStyle='#6a5a72'; g.fillRect(x+1,y+2,14,12);
+                      g.fillStyle='#d8d4cc'; g.fillRect(x+2,y+3,12,4);
+                      g.fillStyle='#4a3f52'; g.fillRect(x+1,y+12,14,2); },
+  sofa:    (g,x,y)=>{ g.fillStyle='#4f6a5c'; g.fillRect(x+1,y+4,14,9);
+                      g.fillStyle='#5f7d6c'; g.fillRect(x+2,y+6,12,5);
+                      g.fillStyle='#3e564a'; g.fillRect(x+1,y+11,14,2); },
+  tv:      (g,x,y)=>{ g.fillStyle='#1a1d22'; g.fillRect(x+2,y+4,12,9);
+                      g.fillStyle='#7fc4e0'; g.fillRect(x+3,y+5,10,6);
+                      g.fillStyle='#0f1216'; g.fillRect(x+6,y+13,4,2); },
+  table:   (g,x,y)=>{ g.fillStyle='#7a5636'; g.fillRect(x+2,y+4,12,8);
+                      g.fillStyle='#8f6743'; g.fillRect(x+3,y+5,10,3); },
+  chair:   (g,x,y)=>{ g.fillStyle='#6b4c30'; g.fillRect(x+5,y+5,6,7);
+                      g.fillStyle='#7d5b3a'; g.fillRect(x+5,y+4,6,2); },
+  sink:    (g,x,y)=>{ g.fillStyle='#8f969c'; g.fillRect(x+2,y+4,12,8);
+                      g.fillStyle='#5d6a74'; g.fillRect(x+4,y+6,8,4); },
+  counter: (g,x,y)=>{ g.fillStyle='#6a4f38'; g.fillRect(x,y+4,16,8);
+                      g.fillStyle='#8a6a4c'; g.fillRect(x,y+4,16,2); },
+  till:    (g,x,y)=>{ g.fillStyle='#3a3f46'; g.fillRect(x+3,y+4,10,8);
+                      g.fillStyle='#c8b46a'; g.fillRect(x+5,y+6,6,3); },
+  shelf:   (g,x,y)=>{ g.fillStyle='#5a4632'; g.fillRect(x+1,y+2,14,12);
+                      g.fillStyle='#8a7a5a'; for(let i=0;i<3;i++) g.fillRect(x+2,y+4+i*4,12,2); },
+  desk:    (g,x,y)=>{ g.fillStyle='#5d5044'; g.fillRect(x+1,y+4,14,9);
+                      g.fillStyle='#2a2e34'; g.fillRect(x+9,y+5,5,4); },
+  crate:   (g,x,y)=>{ g.fillStyle='#79572f'; g.fillRect(x+2,y+3,12,11);
+                      g.fillStyle='#94703f'; g.fillRect(x+2,y+7,12,2); g.fillRect(x+7,y+3,2,11); },
+  machine: (g,x,y)=>{ g.fillStyle='#4c525a'; g.fillRect(x+1,y+2,14,12);
+                      g.fillStyle='#c0703a'; g.fillRect(x+3,y+4,4,4);
+                      g.fillStyle='#2d3238'; g.fillRect(x+8,y+5,5,7); },
+  bench:   (g,x,y)=>{ g.fillStyle='#6d5334'; g.fillRect(x,y+6,16,4);
+                      g.fillStyle='#4e3b25'; g.fillRect(x+1,y+10,2,3); g.fillRect(x+13,y+10,2,3); },
+  bin:     (g,x,y)=>{ g.fillStyle='#3c4750'; g.fillRect(x+4,y+4,8,10);
+                      g.fillStyle='#55636e'; g.fillRect(x+3,y+3,10,2); },
+  tree:    (g,x,y)=>{ g.fillStyle='#4a3524'; g.fillRect(x+7,y+9,2,6);
+                      g.fillStyle='#3f6b3a'; g.beginPath(); g.arc(x+8,y+7,6,0,7); g.fill();
+                      g.fillStyle='#4d7f45'; g.beginPath(); g.arc(x+6,y+6,3,0,7); g.fill(); },
+  plant:   (g,x,y)=>{ g.fillStyle='#7a5236'; g.fillRect(x+5,y+10,6,4);
+                      g.fillStyle='#4d7f45'; g.beginPath(); g.arc(x+8,y+7,4,0,7); g.fill(); },
+  rug:     (g,x,y)=>{ g.fillStyle='#7a4448'; g.fillRect(x,y+2,16,12);
+                      g.fillStyle='#96595c'; g.fillRect(x+2,y+4,12,8); },
 };
 
 // ── state ───────────────────────────────────────────────────────────────────
@@ -316,49 +378,127 @@ function buildBackground(){
   const g = bg.getContext('2d');
   g.imageSmoothingEnabled = false;
 
+  // Which building (if any) owns each tile, so walls can be painted in that building's
+  // own style rather than one shared brown.
+  const owner = {};
+  for(const id in MAP.locations){
+    const [bx,by,bw,bh] = MAP.locations[id].rect;
+    for(let y=by;y<by+bh;y++) for(let x=bx;x<bx+bw;x++) owner[x+','+y] = id;
+  }
+
   for(let y=0;y<MAP.h;y++){
     const row = MAP.grid[y];
     for(let x=0;x<MAP.w;x++){
       const c = row[x];
-      g.fillStyle = TILECOL[c] || '#000';
+      const L = MAP.locations[owner[x+','+y]];
+      const S = L ? (STYLE[L.style] || STYLE.none) : STYLE.none;
+
+      g.fillStyle = (c==='#') ? S.wall : (TILECOL[c] || '#000');
       g.fillRect(x*T,y*T,T,T);
 
       // A flat fill at this scale reads as graph paper, so every tile type gets one
       // cheap detail pass. This is the whole difference between "tilemap" and "place".
-      if(c==='.'){
-        g.fillStyle='rgba(255,255,255,.035)';
-        g.fillRect(x*T,y*T,T,1); g.fillRect(x*T,y*T,1,T);
-        if((x*7+y*13)%11===0){ g.fillStyle='rgba(0,0,0,.18)'; g.fillRect(x*T+3,y*T+5,3,2); }
-      } else if(c===','){
-        g.fillStyle='rgba(0,0,0,.25)'; g.fillRect(x*T,y*T,T,2);
+      if(c==='.'){                                   // pavement: slabs, occasional stain
+        g.fillStyle='rgba(0,0,0,.18)';  g.fillRect(x*T,y*T,T,1); g.fillRect(x*T,y*T,1,T);
+        g.fillStyle='rgba(255,255,255,.05)'; g.fillRect(x*T+1,y*T+1,T-2,1);
+        if((x*7+y*13)%17===0){ g.fillStyle='rgba(0,0,0,.13)'; g.fillRect(x*T+4,y*T+6,5,3); }
+      } else if(c===','){                            // asphalt: subtle grain
+        if((x*5+y*11)%7===0){ g.fillStyle='rgba(255,255,255,.028)'; g.fillRect(x*T+3,y*T+4,6,3); }
+      } else if(c===':'){                            // dashed centre line
+        g.fillStyle='#c9b46a';
+        g.fillRect(x*T+T/2-1, y*T+2, 2, T-4);
+      } else if(c==='='){                            // zebra crossing
+        g.fillStyle='#c8ccd2';
+        for(let i=1;i<T;i+=6) g.fillRect(x*T+i, y*T+2, 3, T-4);
+      } else if(c==='~'){                            // water: slow chop
+        g.fillStyle='rgba(255,255,255,.06)';
+        if((x*3+y*5)%4===0) g.fillRect(x*T+2,y*T+5,7,1);
+        if((x*7+y*3)%6===0) g.fillRect(x*T+8,y*T+11,5,1);
+        g.fillStyle='rgba(0,0,0,.12)'; g.fillRect(x*T,y*T+T-2,T,2);
+      } else if(c==='g'){                            // grass: tufts
+        if((x*3+y*7)%5===0){ g.fillStyle='rgba(140,180,120,.16)'; g.fillRect(x*T+5,y*T+6,3,4); }
+        if((x*11+y*5)%9===0){ g.fillStyle='rgba(90,120,80,.25)'; g.fillRect(x*T+9,y*T+9,3,3); }
       } else if(c==='#'){
-        g.fillStyle='rgba(0,0,0,.28)';
+        g.fillStyle='rgba(0,0,0,.30)';
         g.fillRect(x*T,y*T+T-3,T,3); g.fillRect(x*T+T-3,y*T,3,T);
-        g.fillStyle='rgba(255,255,255,.06)'; g.fillRect(x*T,y*T,T,2);
+        g.fillStyle = S.trim; g.fillRect(x*T,y*T,T,2);
+        if(S.tex==='brick'){
+          g.fillStyle='rgba(0,0,0,.16)';
+          for(let r=0;r<T;r+=5){ g.fillRect(x*T,y*T+r,T,1);
+            g.fillRect(x*T + ((r/5)%2?4:11), y*T+r, 1, 5); }
+        } else if(S.tex==='plank'){
+          g.fillStyle='rgba(0,0,0,.14)';
+          for(let r=0;r<T;r+=4) g.fillRect(x*T,y*T+r,T,1);
+        } else if(S.tex==='ribs'){
+          g.fillStyle='rgba(0,0,0,.18)';
+          for(let cx=0;cx<T;cx+=4) g.fillRect(x*T+cx,y*T,1,T);
+        } else if(S.tex==='block'){
+          g.fillStyle='rgba(0,0,0,.14)';
+          for(let r=0;r<T;r+=8){ g.fillRect(x*T,y*T+r,T,1); }
+          g.fillRect(x*T+8,y*T,1,T);
+        } else {
+          g.fillStyle='rgba(0,0,0,.10)'; g.fillRect(x*T,y*T+8,T,1);
+        }
       } else if(c==='f'){
-        g.fillStyle='rgba(0,0,0,.10)';
+        const warm = L && (L.kind==='home' || L.kind==='social');
+        g.fillStyle = warm ? 'rgba(150,110,70,.16)' : 'rgba(0,0,0,.10)';
         if((x+y)%2===0) g.fillRect(x*T,y*T,T,T);
       } else if(c==='D'){
-        g.fillStyle='rgba(0,0,0,.35)'; g.fillRect(x*T+2,y*T+2,T-4,T-2);
+        g.fillStyle='rgba(0,0,0,.40)'; g.fillRect(x*T+2,y*T+1,T-4,T-1);
         g.fillStyle='#e8c874'; g.fillRect(x*T+T-6,y*T+T/2,2,2);
       }
     }
   }
 
-  // Windows punched along the outside of each building, and a name plate.
+  // Per-building dressing: windows on the street face, awnings on shopfronts, a roof lip,
+  // then the furniture, then a name plate.
+  let awn = 0;
   for(const id in MAP.locations){
     const L = MAP.locations[id], [x,y,w,h] = L.rect;
-    if(L.kind !== 'outdoor' && L.kind !== 'industrial'){
-      for(let wx=x+2; wx<x+w-2; wx+=3){
-        g.fillStyle = '#0e1218'; g.fillRect(wx*T+2, y*T+4, T-6, T-8);
-        g.fillStyle = 'rgba(224,180,74,.30)'; g.fillRect(wx*T+3, y*T+5, T-8, T-10);
+    const S = STYLE[L.style] || STYLE.none;
+    if(L.kind === 'outdoor'){ /* open sites get no facade */ }
+    else {
+      const front = (y+h-1)*T;                    // south wall faces the street
+      if(S.awning){
+        const col = AWNING[awn++ % AWNING.length];
+        for(let wx=x+1; wx<x+w-1; wx++){
+          g.fillStyle = ((wx-x)%2 ? col : '#e8e2d6');
+          g.fillRect(wx*T, front-4, T, 5);
+        }
+        g.fillStyle='rgba(0,0,0,.30)'; g.fillRect((x+1)*T, front+1, (w-2)*T, 2);
+        // big glass either side of the door
+        for(let wx=x+1; wx<x+w-1; wx++){
+          if(Math.abs(wx - (x+Math.floor(w/2))) < 1) continue;
+          g.fillStyle=S.win; g.fillRect(wx*T+1, front+3, T-2, 8);
+          g.fillStyle='rgba(200,220,240,.16)'; g.fillRect(wx*T+2, front+4, T-4, 3);
+        }
+      } else {
+        for(let wx=x+2; wx<x+w-2; wx+=3){
+          if(Math.abs(wx - (x+Math.floor(w/2))) < 1) continue;
+          g.fillStyle=S.win;  g.fillRect(wx*T+3, front+3, T-6, 9);
+          g.fillStyle=S.trim; g.fillRect(wx*T+2, front+2, T-4, 1);
+          g.fillStyle='rgba(224,180,74,.22)'; g.fillRect(wx*T+4, front+4, T-8, 4);
+        }
       }
+      // upper-floor windows along the back wall, and a roof lip
+      for(let wx=x+2; wx<x+w-2; wx+=3){
+        g.fillStyle=S.win; g.fillRect(wx*T+3, y*T+4, T-6, 7);
+      }
+      g.fillStyle = S.roof; g.fillRect(x*T, y*T-3, w*T, 3);
+      g.fillStyle = 'rgba(0,0,0,.25)'; g.fillRect(x*T, y*T-1, w*T, 1);
     }
+
+    for(const f of (L.furniture||[])){
+      const fn = PROP[f.type];
+      if(fn) fn(g, f.x*T, f.y*T);
+    }
+
     g.font = '9px ui-monospace,monospace';
     g.textAlign = 'center';
-    g.fillStyle = 'rgba(0,0,0,.65)';
-    g.fillRect((x+w/2)*T - L.name.length*2.7 - 4, (y+h)*T+1, L.name.length*5.4+8, 11);
-    g.fillStyle = '#9aa8bf';
+    const tw = L.name.length*5.4 + 8;
+    g.fillStyle = 'rgba(8,10,14,.78)';
+    g.fillRect((x+w/2)*T - tw/2, (y+h)*T+1, tw, 11);
+    g.fillStyle = '#aeb9cc';
     g.fillText(L.name, (x+w/2)*T, (y+h)*T+10);
   }
 }
@@ -444,9 +584,12 @@ function agentRenderPos(id, nowMs){
   return {x:p[0]+w[0]*0.5, y:p[1]+w[1]*0.5+bob, moving:false, facing:st.facing};
 }
 
+// Must stay in step with city.py's WALKABLE — a tile type added there and forgotten here
+// becomes an invisible wall the player cannot cross but everyone else walks straight over.
+const WALKABLE_TILES = '.,:=gfD';
 function walkableAt(x,y){
   if(!MAP || y<0 || y>=MAP.h || x<0 || x>=MAP.w) return false;
-  return '.,fD'.includes(MAP.grid[y][x]);
+  return WALKABLE_TILES.includes(MAP.grid[y][x]);
 }
 
 // ── camera + draw ───────────────────────────────────────────────────────────
@@ -732,9 +875,8 @@ function paintPanel(){
     el.className = 'who' + (selected===id?' on':'');
     el.onclick = ()=>select(id);
     el.appendChild(castThumb(id));
-    const loc = (MAP.locations[a.at]||{}).name || a.at;
     el.insertAdjacentHTML('beforeend',
-      `<div class="n">${esc(a.name)}<div class="w">${esc(loc)}</div></div>`);
+      `<div class="n">${esc(a.name)}<div class="w">${esc(a.action || a.activity || '')}</div></div>`);
     cast.appendChild(el);
   }
 
@@ -765,7 +907,8 @@ function paintMind(){
     <div class="row"><span>fear</span><span>${a.mood.fear}</span></div>${bar(a.mood.fear,'#9a5fd0')}
 
     <div style="padding:8px 0 2px;color:var(--dim)">RIGHT NOW</div>
-    <div>${esc(a.action||'—')}</div>
+    <div>${esc(a.action || a.activity || '—')}</div>
+    <div style="color:var(--dim);font-size:10px">at ${esc((MAP.locations[a.at]||{}).name||a.at)}</div>
     ${a.thought ? `<div class="thought">“${esc(a.thought)}”</div>` : ''}
     ${a.speech ? `<div class="thought">to ${esc((AGENTS[a.speech.to]||{}).name||a.speech.to)}:
         “${esc(a.speech.text)}”</div>` : ''}

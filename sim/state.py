@@ -126,32 +126,29 @@ def bootstrap(seed="the-cut-001", start_at=None):
     for spec in ROSTER:
         loc = city.LOCATIONS[spec["routine"]["morning"]]
         anchor = list(loc["anchor"])
-        mood = dict(BASE_MOOD)
         agents[spec["id"]] = {
             "id": spec["id"], "name": spec["name"], "age": spec["age"], "role": spec["role"],
             "faction": spec["faction"], "home": spec["home"], "work": spec["work"],
+            "principal": bool(spec.get("principal")),
             "traits": spec["traits"], "ambition": spec["ambition"], "private_fear": spec["fear"],
             "voice": spec["voice"], "routine": spec["routine"],
-            "pos": anchor, "dest": anchor, "at": spec["routine"]["morning"],
-            "mood": mood,
+            "pos": anchor, "dest": anchor, "at": spec["routine"]["morning"], "spot": None,
+            "mood": dict(BASE_MOOD),
             "relationships": {},
             "memories": [],
-            "action": "starting the day", "thought": "", "speech": None,
+            "action": "starting the day", "activity": "starting the day",
+            "thought": "", "speech": None,
         }
 
-    # Seeded opinions, mirrored to a weak reciprocal where the other side has none authored,
-    # so nobody begins as a stranger to someone who already has strong feelings about them.
+    # Relationships are SPARSE. Filling every pair would be 30x29 = 870 entries of "knows
+    # the face, not much else" — most of agents.json, and most of every git diff, saying
+    # nothing. Opinions are created the moment two people actually interact.
     for aid, rels in SEED_RELATIONSHIPS.items():
+        if aid not in agents:
+            continue
         for other, (aff, opinion) in rels.items():
-            if other not in agents:
-                continue
-            agents[aid]["relationships"][other] = {"affinity": aff, "opinion": opinion}
-    for aid in agents:
-        for other in agents:
-            if other == aid:
-                continue
-            agents[aid]["relationships"].setdefault(
-                other, {"affinity": 0, "opinion": "knows the face, not much else"})
+            if other in agents:
+                agents[aid]["relationships"][other] = {"affinity": aff, "opinion": opinion}
 
     turf = {}
     for fid, f in FACTIONS.items():

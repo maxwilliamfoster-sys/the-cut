@@ -12,7 +12,7 @@ import copy
 import sys
 from datetime import timedelta
 
-from sim import city, clock, events, llm, state, tick
+from sim import city, clock, cognition, events, llm, state, tick
 
 FAILS = []
 
@@ -88,8 +88,14 @@ if not world:
 else:
     w, a = copy.deepcopy(world), copy.deepcopy(agents)
 
-    check("relationships are symmetric in coverage",
-          all(set(x["relationships"]) == set(a.keys()) - {aid} for aid, x in a.items()))
+    # Relationships are sparse by design — filling all 30x29 pairs with "knows the face"
+    # would be most of agents.json and most of every diff, saying nothing.
+    check("relationships only reference real people",
+          all(k in a for x in a.values() for k in x["relationships"]))
+    check("everyone has at least one authored tie or none at all",
+          all(isinstance(x["relationships"], dict) for x in a.values()))
+    check("every home and workplace is a real location",
+          all(x["home"] in city.LOCATIONS and x["work"] in city.LOCATIONS for x in a.values()))
 
     # Determinism: same seed + same beat must produce the same city, or no bug is ever
     # reproducible and an interesting week can never be replayed.
@@ -140,7 +146,29 @@ else:
           f"range {min(heat_samples)}..{max(heat_samples)}")
 
     visited = {loc for x in a3.values() for loc in [x["at"]]}
-    check("the cast actually spreads across the map", len(visited) >= 5, f"only {visited}")
+    check("the cast actually spreads across the map", len(visited) >= 8, f"only {visited}")
+
+    # The whole point of the activity layer: nobody is ever just standing there.
+    idle = [x["name"] for x in a3.values() if not (x.get("activity") or "").strip()]
+    check("everybody is always doing something", not idle, f"{idle[:4]}")
+
+    # And what they are doing has to be possible where they are standing.
+    misplaced = [(x["name"], x["activity"]) for x in a3.values()
+                 if x.get("spot") and not city.walkable(*x["spot"])]
+    check("activity spots are all reachable", not misplaced, f"{misplaced[:3]}")
+
+    # Rotation fairness: over a couple of city-days nobody should go completely unheard.
+    w6, a6 = copy.deepcopy(w), copy.deepcopy(a)
+    heard = set()
+    for _ in range(10):
+        g6 = tick.colocation(a6)
+        for aid in cognition.select(w6, a6, g6, [], None, w6["beat"]):
+            heard.add(aid)
+            a6[aid]["last_thought_beat"] = w6["beat"]
+        tick.run_beat(w6, a6)
+    check("attention rotates across the whole cast",
+          len(heard) >= len(a6) * 0.7,
+          f"only {len(heard)}/{len(a6)} heard in 10 beats")
 
     ev_count = sum(1 for _ in range(400)
                    if events.roll_event(__import__("random").Random(_), a3, w3["factions"]))
@@ -152,7 +180,6 @@ else:
     # request with a 413 if the sum exceeds it. This caught a live failure where a generous
     # max_tokens silently made every call impossible. Checked against a *worn-in* city,
     # because the prompt grows as characters accumulate memories.
-    from sim import cognition
     w5, a5 = copy.deepcopy(w), copy.deepcopy(a)
     for i in range(40):                                    # age it so memory lines are full
         for x in a5.values():
@@ -162,9 +189,13 @@ else:
         tick.run_beat(w5, a5)
 
     groups5 = tick.colocation(a5)
+    chosen5 = cognition.select(w5, a5, groups5, [], None, w5["beat"])
+    check("cognition rations attention rather than prompting the whole cast",
+          len(chosen5) <= cognition.COGNITION_SLOTS < len(a5),
+          f"chose {len(chosen5)} of {len(a5)}")
     prompt = cognition.build_prompt(w5, a5, groups5, [], None,
                                     w5["beat"], clock.day_of(w5["beat"]),
-                                    clock.block_of(w5["beat"]))
+                                    clock.block_of(w5["beat"]), chosen5)
     chars = len(cognition.SYSTEM) + len(prompt)
     reply = llm.fit_max_tokens(llm.FAST, chars)
     total = chars // 4 + reply

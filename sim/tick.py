@@ -17,7 +17,7 @@ import random
 import sys
 import time
 
-from . import city, clock, cognition, events, llm, player, reflect, state
+from . import activities, city, clock, cognition, events, llm, player, reflect, state
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against a 6,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -55,18 +55,27 @@ def target_location(agent, block, world):
     return loc
 
 
-def move(agent, dest_id):
-    """Resolve the beat's movement and leave a path behind for the renderer to walk.
+def move(agent, dest_id, block, weather, rng):
+    """Resolve the beat's movement and settle on something to be doing when you get there.
 
     The simulation is authoritative about *where you end up*; the browser is authoritative
     about how that looks over the next fifteen real minutes.
+
+    The destination is the activity's furniture, not the building's door anchor — somebody
+    asleep should be drawn in a bed, and somebody washing up at the sink. Standing every
+    resident on one anchor tile is what made a house of four look like a single person.
     """
-    anchor = tuple(city.LOCATIONS[dest_id]["anchor"])
-    start = tuple(agent["pos"])
-    p = city.path(start, anchor)
-    agent["path"] = [list(t) for t in p[:400]]
-    agent["pos"] = list(anchor)
+    loc = city.LOCATIONS[dest_id]
     agent["at"] = dest_id
+
+    text, spot = activities.choose(agent, loc, block, weather, rng)
+    agent["activity"] = text
+    agent["spot"] = spot
+
+    target = tuple(spot) if spot and city.walkable(*spot) else tuple(loc["anchor"])
+    p = city.path(tuple(agent["pos"]), target)
+    agent["path"] = [list(t) for t in p[:600]]
+    agent["pos"] = list(target)
 
 
 #          stat        baseline  rate
@@ -140,6 +149,7 @@ def tick_debts(world, agents, day):
             apply_mood(debtor, {"stress": min(4 + overdue * 2, 18), "fear": min(2 + overdue * 2, 14)})
             pressures.append({
                 "debt_id": d["id"], "from": debtor["name"], "to": creditor["name"],
+                "from_id": debtor["id"], "to_id": creditor["id"],
                 "kind": d["kind"], "amount": d["amount"], "days_overdue": overdue,
                 "note": d["note"],
             })
@@ -164,7 +174,7 @@ def run_beat(world, agents, quiet=False, cognition=None):
     world["weather"] = events.roll_weather(rng)
 
     for a in agents.values():
-        move(a, target_location(a, block, world))
+        move(a, target_location(a, block, world), block, world["weather"], rng)
 
     groups = colocation(agents)
     for a in agents.values():
@@ -195,14 +205,16 @@ def run_beat(world, agents, quiet=False, cognition=None):
         "heat": dict(world["heat"]),
     }]
 
+    # Everyone's baseline is whatever the activity system decided. Cognition then overwrites
+    # that for the handful of people it covers this beat, so nobody is ever left standing on
+    # a tile with nothing to their name.
+    for a in agents.values():
+        a["action"] = a.get("activity") or "here"
+        a["thought"] = ""
+        a["speech"] = None
+
     if cognition and not quiet:
         records += cognition(world, agents, groups, pressures, ev, beat, day, block)
-    else:
-        for a in agents.values():
-            loc = city.LOCATIONS[a["at"]]["name"]
-            a["action"] = f"at {loc}"
-            a["thought"] = ""
-            a["speech"] = None
 
     world["last_beat_at"] = clock.advance(world["last_beat_at"], 1)
     return records

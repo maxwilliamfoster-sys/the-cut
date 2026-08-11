@@ -1,7 +1,9 @@
 # THE CUT
 
-A pixel-art American city with twelve people in it. They have names, memories,
-personalities, routines and moods. Nobody wrote the story.
+A pixel-art American city with thirty people in it — families, shop staff, the priest, the
+man who sleeps under the flyover. They have names, memories, personalities, routines and
+moods, and they are always doing something specific: asleep in a bed, washing up, restocking
+shelves, watching television. Nobody wrote the story.
 
 **It keeps running when you close the tab.** The city's heartbeat is a GitHub Actions
 cron, not your computer — one beat every fifteen real minutes, four beats to a city day,
@@ -30,6 +32,29 @@ from *real elapsed time*, never from how many times the cron actually fired. Git
 scheduled runs by 5–30 minutes routinely and drops them under load; a run that arrives
 late simply pays several beats at once. After a long outage the backlog is fast-forwarded
 quietly and only the recent tail is narrated in full.
+
+### Thirty people on a fixed token budget
+
+The cast is two-tier, and the reason is arithmetic. Groq reserves `prompt + max_tokens`
+against a 6,000-per-minute ceiling; twelve people cost ~2,000 prompt tokens, so thirty would
+need roughly 8,000 — over the per-minute limit *and* about double the daily cap.
+
+So attention is rationed rather than the cast being capped:
+
+- **Everyone** gets a deterministic activity every beat from `sim/activities.py`, chosen
+  from where they are, the time of day, and whether they are at work, at home or visiting.
+  A background character loading a dishwasher does not need a language model to decide that.
+- **Eleven people per beat** get actual cognition, picked by `cognition.select()`: the
+  principals, whoever the event landed on, anyone the player spoke to, anyone with an overdue
+  debt, anyone standing in a room with other people — plus a rotation term so nobody goes
+  unheard for long.
+
+Cost is therefore flat at ~3,500 tokens a beat whether the city holds twelve people or
+thirty. An unselected character is not idle; they are just not being narrated.
+
+Activities also *place* people: an activity names the furniture it happens at, so somebody
+asleep is drawn in a bed and somebody washing up is at the sink, rather than the whole
+household standing on one anchor tile.
 
 ### What generates the story
 
