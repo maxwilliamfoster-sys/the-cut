@@ -221,6 +221,28 @@ else:
                 if phrase in m["what"].lower():
                     leaked.append((x["name"], phrase))
     check("no prompt example has leaked into anyone's beliefs", not leaked, f"{leaked[:3]}")
+
+    # The model's reply is untrusted input. A bare array instead of {"people":[...]} crashed
+    # the live cron for two hours, so every shape it has actually produced must parse, and
+    # anything unrecognised must degrade to "nobody narrated" rather than a traceback.
+    shapes = {
+        "documented object": ({"people": [{"id": "dez", "action": "x"}]}, 1),
+        "bare array": ([{"id": "dez", "action": "x"}], 1),
+        "keyed by id": ({"dez": {"action": "x"}, "ivy": {"action": "y"}}, 2),
+        "alternate key": ({"agents": [{"id": "dez"}]}, 1),
+        "null": (None, 0),
+        "junk string": ("nope", 0),
+        "list of junk": ([1, 2, "three"], 0),
+    }
+    bad = []
+    for label, (payload, expect) in shapes.items():
+        try:
+            got = len(cognition.rows_of(payload))
+        except Exception as e:
+            got = f"raised {type(e).__name__}"
+        if got != expect:
+            bad.append((label, got, expect))
+    check("every response shape the model emits parses without raising", not bad, f"{bad}")
     check("the reflection prompt still warns against reusing its example",
           "Never output it" in reflect.REFLECT_SYSTEM)
 

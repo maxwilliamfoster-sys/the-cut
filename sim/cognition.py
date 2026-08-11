@@ -183,11 +183,32 @@ def build_prompt(world, agents, groups, pressures, event, beat, day, block, chos
     )
 
 
+def rows_of(data):
+    """Pull the per-person list out of whatever shape came back.
+
+    Asking for {"people":[...]} gets you {"people":[...]} almost always — and then one run
+    in fifty returns a bare array, or keys the objects by id. The bare-array case crashed
+    the live city's cron for two hours with 'list object has no attribute get'. The
+    response is untrusted input; treat it like it.
+    """
+    if isinstance(data, list):
+        return [r for r in data if isinstance(r, dict)]
+    if isinstance(data, dict):
+        for key in ("people", "agents", "results", "characters"):
+            v = data.get(key)
+            if isinstance(v, list):
+                return [r for r in v if isinstance(r, dict)]
+        # {"dez": {...}, "malik": {...}} — id as the key rather than a field
+        if data and all(isinstance(v, dict) for v in data.values()):
+            return [dict(v, id=v.get("id", k)) for k, v in data.items()]
+    return []
+
+
 def _apply(agents, data, groups, beat, day, records, chosen):
     """Apply whatever came back. A malformed entry is skipped rather than failing the beat —
     losing one person's turn is survivable; losing the whole city's is not."""
     applied, seen = 0, set()
-    for row in (data or {}).get("people", []):
+    for row in rows_of(data):
         aid = (row or {}).get("id")
         a = agents.get(aid)
         if not a or aid in seen or aid not in chosen:

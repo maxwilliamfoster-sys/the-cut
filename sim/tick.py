@@ -214,7 +214,16 @@ def run_beat(world, agents, quiet=False, cognition=None):
         a["speech"] = None
 
     if cognition and not quiet:
-        records += cognition(world, agents, groups, pressures, ev, beat, day, block)
+        # A malformed response must never take the city down with it. This exact path
+        # crashed the live cron for two hours: the model returned a bare array instead of
+        # an object and the traceback killed the whole run, so no beat was paid at all.
+        # Everyone already has an activity, so the worst case here is a beat nobody
+        # narrates — which is survivable, unlike a city that stops.
+        try:
+            records += cognition(world, agents, groups, pressures, ev, beat, day, block)
+        except Exception as e:
+            print(f"[tick] cognition failed on beat {beat} ({type(e).__name__}: {e}) — "
+                  f"beat still paid, nobody narrated.")
 
     world["last_beat_at"] = clock.advance(world["last_beat_at"], 1)
     return records

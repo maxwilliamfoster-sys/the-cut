@@ -23,7 +23,7 @@ budget is spent where prose quality is the whole point.
 import json
 import os
 
-from . import llm, memory, state
+from . import cognition, llm, memory, state
 
 REFLECT_SYSTEM = """You are the reflective layer of THE CUT, a simulated American city block.
 
@@ -115,7 +115,7 @@ def reflect(world, agents, budget, day, beat):
         return []
 
     records, n = [], 0
-    for row in data.get("people", []):
+    for row in cognition.rows_of(data):
         a = agents.get((row or {}).get("id"))
         if not a:
             continue
