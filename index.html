@@ -32,7 +32,12 @@
   main{flex:1; display:flex; min-height:0}
   #stage{flex:1; position:relative; min-width:0; background:#080a0e; overflow:hidden}
   canvas{position:absolute; left:0; top:0; image-rendering:pixelated;
-         image-rendering:crisp-edges; cursor:crosshair}
+         image-rendering:crisp-edges; cursor:crosshair; touch-action:none}
+  #controls{
+    position:absolute; left:10px; bottom:8px; pointer-events:none;
+    color:var(--dim); font-size:10px; background:rgba(13,15,20,.72);
+    padding:3px 8px; border-radius:3px; opacity:.75;
+  }
 
   aside{
     width:310px; flex-shrink:0; border-left:1px solid var(--line); background:var(--panel);
@@ -78,6 +83,15 @@
     border-top:1px solid var(--line); background:var(--panel); padding:6px 14px;
     color:var(--dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
+
+  /* A 310px sidebar next to a 64-tile-wide city leaves the map unreadable on anything
+     narrow — on a phone the sprites came out under a pixel each. Below this width the
+     map takes the full width and the panel moves underneath it. */
+  @media (max-width: 820px){
+    main{flex-direction:column}
+    #stage{flex:0 0 58vh; min-height:240px}
+    aside{width:100%; border-left:none; border-top:1px solid var(--line); flex:1}
+  }
   .err{color:var(--hot); padding:10px}
   .hint{color:var(--dim); font-size:10px; padding-top:6px}
 </style>
@@ -92,7 +106,10 @@
 </header>
 
 <main>
-  <div id="stage"><canvas id="cv"></canvas></div>
+  <div id="stage">
+    <canvas id="cv"></canvas>
+    <div id="controls">scroll to zoom · drag to pan · double-click to reset · click anyone</div>
+  </div>
   <aside>
     <div class="sec">
       <h2>THE BLOCK</h2>
@@ -344,19 +361,58 @@ function walkableAt(x,y){
 
 // ── camera + draw ───────────────────────────────────────────────────────────
 let view = {s:1, ox:0, oy:0};
+let fitS = 1, zoom = 1, pan = {x:0, y:0};
+
+function applyView(){
+  view.s = fitS * zoom;
+  const mw = MAP.w*T*view.s, mh = MAP.h*T*view.s;
+  // Keep the city on screen: pan is only allowed along an axis that actually overflows.
+  const slackX = Math.max(0, (mw - cv.width)/2), slackY = Math.max(0, (mh - cv.height)/2);
+  pan.x = clamp(pan.x, -slackX, slackX);
+  pan.y = clamp(pan.y, -slackY, slackY);
+  view.ox = (cv.width - mw)/2 + pan.x;
+  view.oy = (cv.height - mh)/2 + pan.y;
+}
 
 function fitCanvas(){
   const st = document.getElementById('stage');
-  const cw = st.clientWidth, ch = st.clientHeight;
-  cv.width = cw; cv.height = ch;
+  cv.width = st.clientWidth; cv.height = st.clientHeight;
   ctx.imageSmoothingEnabled = false;
   // Fit the whole city rather than forcing scale >= 1 — clamping to 1 clipped ~27px off
   // every edge on a typical pane, which quietly hid the docks and the underpass.
-  const s = Math.min(cw/(MAP.w*T), ch/(MAP.h*T));
-  view.s = s;
-  view.ox = (cw - MAP.w*T*s)/2;
-  view.oy = (ch - MAP.h*T*s)/2;
+  fitS = Math.min(cv.width/(MAP.w*T), cv.height/(MAP.h*T));
+  applyView();
 }
+
+// Fitting a 64-tile-wide city into a narrow pane puts the sprites below a pixel each, so
+// zoom is not a nicety here — without it the whole thing is unreadable on a phone.
+cv.addEventListener('wheel', e=>{
+  e.preventDefault();
+  if(!MAP) return;
+  const r = cv.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const wx = (mx - view.ox)/view.s, wy = (my - view.oy)/view.s;   // world point under cursor
+  zoom = clamp(zoom * (e.deltaY < 0 ? 1.2 : 1/1.2), 1, 8);
+  applyView();
+  pan.x += mx - (wx*view.s + view.ox);                            // keep it under the cursor
+  pan.y += my - (wy*view.s + view.oy);
+  applyView(); draw();
+}, {passive:false});
+
+let drag = null;
+cv.addEventListener('pointerdown', e=>{
+  drag = {x:e.clientX, y:e.clientY, px:pan.x, py:pan.y, moved:0};
+  cv.setPointerCapture(e.pointerId);
+});
+cv.addEventListener('pointermove', e=>{
+  if(!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  drag.moved = Math.max(drag.moved, Math.hypot(dx, dy));
+  pan.x = drag.px + dx; pan.y = drag.py + dy;
+  applyView(); draw();
+});
+cv.addEventListener('pointerup', ()=>{ setTimeout(()=>{ drag = null; }, 0); });
+cv.addEventListener('dblclick', ()=>{ zoom = 1; pan = {x:0,y:0}; applyView(); draw(); });
 window.addEventListener('resize', ()=>{ if(MAP) fitCanvas(); });
 // A tab that loads while hidden (background tab, collapsed pane) reports clientWidth 0,
 // which leaves a 0x0 canvas that a window resize alone may never fix. Observing the stage
@@ -435,10 +491,13 @@ requestAnimationFrame(frame);
 // ── picking ─────────────────────────────────────────────────────────────────
 cv.addEventListener('click', e=>{
   if(!AGENTS) return;
+  if(drag && drag.moved > 4) return;          // a pan is not a selection
   const r = cv.getBoundingClientRect();
   const mx = (e.clientX - r.left - view.ox)/view.s/T;
   const my = (e.clientY - r.top  - view.oy)/view.s/T;
-  let best=null, bd=2.2;
+  // Generous when zoomed out (sprites are tiny), tighter when zoomed in and you can
+  // actually aim at the person you mean.
+  let best=null, bd=Math.max(0.9, 2.2/zoom);
   for(const id in AGENTS){
     const p = agentRenderPos(id, Date.now());
     const d = Math.hypot(p.x+0.5-mx, p.y+0.5-my);
