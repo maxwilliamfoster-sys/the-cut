@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 34,
-  "last_beat_at": "2026-08-11T19:18:47Z",
+  "beat": 37,
+  "last_beat_at": "2026-08-11T20:03:47Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "rain",
   "heat": {
-    "riverside": 29,
-    "delmar": 30,
+    "riverside": 26,
+    "delmar": 27,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -379,27 +391,14 @@
         "brennan"
       ],
       "text": "Sgt. Hal Brennan does Marisol Vasquez a favour that costs them something real."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "brennan",
-        "boateng"
-      ],
-      "text": "Fr. Emmanuel Boateng does Sgt. Hal Brennan a favour that costs them something real."
     }
   ],
   "player_queue": [],
-  "last_gazette_day": 7,
+  "last_gazette_day": 8,
   "llm_budget": {
-    "day": 8,
+    "day": 9,
     "spent": {
-      "llama-3.1-8b-instant": 11072
+      "llama-3.1-8b-instant": 7024
     }
   }
 }
