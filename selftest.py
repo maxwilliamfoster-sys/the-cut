@@ -175,6 +175,25 @@ else:
           reply >= 900, f"only {reply} tokens for {len(a5)} people")
 
 
+    # The reflection prompt illustrates the memory/belief distinction with a worked example,
+    # and the model once emitted that example verbatim as a character's actual belief —
+    # Dez concluded "somebody is building a case against Dad", which is not his storyline.
+    # Any wording lifted straight from the prompt is a leak, not a thought.
+    from sim import reflect
+    leaked = []
+    for phrase in ("building a case against dad", "the landlord came by twice",
+                   "trying to push us out"):
+        for x in a.values():
+            if x.get("belief") and phrase in x["belief"].lower():
+                leaked.append((x["name"], phrase))
+            for m in (x.get("memories") or []):
+                if phrase in m["what"].lower():
+                    leaked.append((x["name"], phrase))
+    check("no prompt example has leaked into anyone's beliefs", not leaked, f"{leaked[:3]}")
+    check("the reflection prompt still warns against reusing its example",
+          "Never output it" in reflect.REFLECT_SYSTEM)
+
+
 print()
 if FAILS:
     print(f"{len(FAILS)} FAILED: {', '.join(FAILS)}")

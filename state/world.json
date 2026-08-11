@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 10,
-  "last_beat_at": "2026-08-11T13:45:02Z",
+  "beat": 15,
+  "last_beat_at": "2026-08-11T15:00:02Z",
   "started_at": "2026-08-11T13:15:30Z",
-  "weather": "overcast",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 8,
+    "delmar": 5,
     "terraces": 5,
     "civic": 5
   },
@@ -113,6 +113,40 @@
   ],
   "events": [
     {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "rey",
+        "booker"
+      ],
+      "text": "Rey Vasquez and Booker Lyle are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
+    {
       "id": "debt_called",
       "heat": {},
       "mood": {
@@ -191,11 +225,12 @@
       "reply": "Forty years, since the days when I was still young and foolish."
     }
   ],
-  "last_gazette_day": -1,
+  "last_gazette_day": 3,
   "llm_budget": {
-    "day": 2,
+    "day": 3,
     "spent": {
-      "llama-3.1-8b-instant": 11011
+      "llama-3.1-8b-instant": 18505,
+      "llama-3.3-70b-versatile": 588
     }
   }
 }

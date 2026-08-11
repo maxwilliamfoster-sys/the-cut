@@ -118,7 +118,27 @@ state/log-wNNN.jsonl append-only event log, rotated per city-week
 - [x] **Phase 1** — the city breathes: routines, needs, heat, debts, events, renderer, cron
 - [x] **Phase 2** — the city thinks: batched cognition, memory streams, opinions, dialogue
 - [x] **Phase 3** — you exist: a player sprite, and characters who remember meeting you
-- [ ] **Phase 4** — the city narrates itself: nightly reflection, a daily newspaper
+- [x] **Phase 4** — the city narrates itself: nightly reflection, a daily newspaper
+
+## The end of a day
+
+Two things happen when a city-day closes.
+
+**Reflection** turns incidents into a character. During the day people record what happened;
+at night they decide what it *meant*. "Ruiz asked about my father twice" is a memory;
+"somebody is building a case against Dad" is a belief — and beliefs are what change how a
+person behaves next week. Beliefs are allowed to be wrong: people draw the conclusion their
+fears point at. Junie has decided Booker is the only one who genuinely wants to help her,
+which is the opposite of true.
+
+**The Gazette** is the same day written from outside — a short front page in
+`state/gazette/day-NNN.md`. Coming back to the city gives you that paper plus everything
+that happened since your last visit, rather than a diff.
+
+The model split is forced, not chosen: 70b gets 100K tokens a day against 8b's 500K, and
+there are 24 city-days in a real day. Reflection on 70b would eat the entire 70b allowance,
+so reflection (a summarising job) runs on 8b and the scarce budget goes where prose quality
+is the whole point. The Gazette falls back to 8b rather than skipping if 70b is spent.
 
 Sprites are drawn procedurally in `index.html` — no asset packs, no licences, nothing to
 download.

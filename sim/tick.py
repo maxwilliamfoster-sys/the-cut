@@ -17,7 +17,7 @@ import random
 import sys
 import time
 
-from . import city, clock, cognition, events, llm, player, state
+from . import city, clock, cognition, events, llm, player, reflect, state
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against a 6,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -275,6 +275,17 @@ def main(argv=None):
         if i and cog and not args.no_pacing:
             time.sleep(BEAT_PACING_SECONDS)
         records += run_beat(world, agents, quiet=False, cognition=cog)
+
+        # A city-day just closed: work out what today meant to everybody, then write it up.
+        # Reflection first — the Gazette should be able to report what people concluded,
+        # not just what happened to them.
+        if cog and clock.is_day_end(world["beat"]):
+            d = clock.day_of(world["beat"])
+            records += reflect.reflect(world, agents, budget, d, world["beat"])
+            # Earlier beats of this day were written by earlier cron runs and are already
+            # on disk; only the tail is still in memory. The Gazette needs both.
+            today = state.read_day(d) + [r for r in records if r.get("day") == d]
+            records += reflect.gazette(world, agents, budget, d, today)
 
     world["llm_budget"] = budget.to_json()
     day = clock.day_of(world["beat"])

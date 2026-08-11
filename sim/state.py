@@ -86,6 +86,16 @@ def append_log(day, records):
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
+def read_day(day):
+    """Every record already written for a city-day.
+
+    A day is four beats and a run normally pays one, so the day's history is spread across
+    four separate cron runs. The Gazette reading only the current run's in-memory records
+    saw a quarter of the day and duly reported that 'details are scarce'.
+    """
+    return [r for r in read_log_tail(day, limit=20000) if r.get("day") == day]
+
+
 def read_log_tail(day, limit=200):
     """Most recent records, newest last. Reads the current week and the one before it so a
     week boundary does not blank the front-end's 'while you were away' diff."""
