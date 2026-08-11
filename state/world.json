@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 48,
-  "last_beat_at": "2026-08-11T21:42:12Z",
+  "beat": 50,
+  "last_beat_at": "2026-08-11T22:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 40,
-    "delmar": 30,
-    "terraces": 6,
-    "civic": 7
+    "riverside": 38,
+    "delmar": 28,
+    "terraces": 5,
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "dot",
+        "simone"
+      ],
+      "text": "Dot Feeney and Simone Adeyemi are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -380,17 +393,6 @@
         "junie"
       ],
       "text": "Something pays out for Junie Marsh. More than expected, which is its own problem."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -403,7 +405,9 @@
   ],
   "last_gazette_day": 11,
   "llm_budget": {
-    "day": 11,
-    "spent": {}
+    "day": 12,
+    "spent": {
+      "llama-3.1-8b-instant": 4083
+    }
   }
 }
