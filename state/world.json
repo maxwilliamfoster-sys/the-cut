@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 25,
-  "last_beat_at": "2026-08-11T17:03:47Z",
+  "beat": 31,
+  "last_beat_at": "2026-08-11T18:33:47Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 13,
-    "delmar": 19,
+    "riverside": 32,
+    "delmar": 33,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,68 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "amara",
+        "simone"
+      ],
+      "text": "Amara Bello and Simone Adeyemi are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "chidi",
+        "wes"
+      ],
+      "text": "Wes Doyle does Chidi Okonkwo a favour that costs them something real."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -332,11 +394,12 @@
     }
   ],
   "player_queue": [],
-  "last_gazette_day": 5,
+  "last_gazette_day": 7,
   "llm_budget": {
-    "day": 6,
+    "day": 7,
     "spent": {
-      "llama-3.1-8b-instant": 7112
+      "llama-3.1-8b-instant": 12998,
+      "llama-3.3-70b-versatile": 701
     }
   }
 }
