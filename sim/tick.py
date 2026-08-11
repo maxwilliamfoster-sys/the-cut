@@ -290,38 +290,57 @@ def main(argv=None):
     # in the right person's head when they next decide what to do.
     records = player.absorb(world, agents, world["beat"], clock.day_of(world["beat"]))
 
-    for _ in range(quiet_n):
-        records += run_beat(world, agents, quiet=True)
-    for i in range(think_n):
-        if i and cog and not args.no_pacing:
-            time.sleep(BEAT_PACING_SECONDS)
-        records += run_beat(world, agents, quiet=False, cognition=cog)
+    # Beats already simulated must survive anything that goes wrong later in the run.
+    # Before this, state was only written at the very end, so one unexpected exception
+    # threw away every beat the run had paid and the city stopped dead — which is exactly
+    # what a malformed model reply did for two hours. The `finally` means the worst case is
+    # losing the narration of a single beat, never the run.
+    paid = 0
+    try:
+        for _ in range(quiet_n):
+            records += run_beat(world, agents, quiet=True)
+            paid += 1
+        for i in range(think_n):
+            if i and cog and not args.no_pacing:
+                time.sleep(BEAT_PACING_SECONDS)
+            records += run_beat(world, agents, quiet=False, cognition=cog)
+            paid += 1
 
-        # A city-day just closed: work out what today meant to everybody, then write it up.
-        # Reflection first — the Gazette should be able to report what people concluded,
-        # not just what happened to them.
-        if cog and clock.is_day_end(world["beat"]):
-            d = clock.day_of(world["beat"])
-            records += reflect.reflect(world, agents, budget, d, world["beat"])
-            # Earlier beats of this day were written by earlier cron runs and are already
-            # on disk; only the tail is still in memory. The Gazette needs both.
-            today = state.read_day(d) + [r for r in records if r.get("day") == d]
-            records += reflect.gazette(world, agents, budget, d, today)
-
-    world["llm_budget"] = budget.to_json()
-    day = clock.day_of(world["beat"])
-    print(f"Paid {owed} beat(s) -> {clock.describe(world['beat'])}, weather {world['weather']}.")
-    if world.get("events"):
-        print(f"Latest: {world['events'][0]['text']}")
+            # A city-day just closed: work out what today meant to everybody, then write it
+            # up. Reflection first — the Gazette should be able to report what people
+            # concluded, not just what happened to them. Both are enrichment: if either
+            # falls over, the day still happened.
+            if cog and clock.is_day_end(world["beat"]):
+                d = clock.day_of(world["beat"])
+                try:
+                    records += reflect.reflect(world, agents, budget, d, world["beat"])
+                except Exception as e:
+                    print(f"[tick] reflection failed for day {d} "
+                          f"({type(e).__name__}: {e}) — no beliefs formed.")
+                try:
+                    # Earlier beats of this day were written by earlier cron runs and are
+                    # already on disk; only the tail is still in memory. The Gazette needs both.
+                    today = state.read_day(d) + [r for r in records if r.get("day") == d]
+                    records += reflect.gazette(world, agents, budget, d, today)
+                except Exception as e:
+                    print(f"[tick] gazette failed for day {d} "
+                          f"({type(e).__name__}: {e}) — no front page.")
+    finally:
+        world["llm_budget"] = budget.to_json()
+        day = clock.day_of(world["beat"])
+        print(f"Paid {paid}/{owed} beat(s) -> {clock.describe(world['beat'])}, "
+              f"weather {world['weather']}.")
+        if world.get("events"):
+            print(f"Latest: {world['events'][0]['text']}")
+        if not args.dry_run and paid:
+            state.save_world(world)
+            state.save_agents(agents)
+            state.append_log(day, records)
+            print(f"[tick] state written ({paid} beat(s) persisted).")
 
     if args.dry_run:
         print("--dry-run: nothing written.")
-        return 0
-
-    state.save_world(world)
-    state.save_agents(agents)
-    state.append_log(day, records)
-    return 0
+    return 0                      # state was already persisted in the finally above
 
 
 if __name__ == "__main__":

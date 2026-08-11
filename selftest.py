@@ -265,6 +265,29 @@ else:
           "Never output it" in reflect.REFLECT_SYSTEM)
 
 
+# Durability of a run is half Python and half workflow, and the workflow half cannot be
+# exercised locally. Two failures took the live city down for two hours: the tick threw, so
+# every beat it had already paid was discarded, and the default fail-fast then skipped the
+# commit step so nothing reached the repo either.
+import inspect
+import os as _os
+
+src = inspect.getsource(tick.main)
+check("the tick persists paid beats in a finally, not only on success",
+      "finally:" in src and "state.save_world" in src.split("finally:")[1])
+
+wf = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                   ".github", "workflows", "tick.yml")
+wf_src = open(wf, encoding="utf-8").read() if _os.path.exists(wf) else ""
+commit_block = wf_src.split("Commit the new state")[-1]
+check("the workflow commits state even when the tick fails",
+      "if: always()" in commit_block.split("run:")[0],
+      "commit step would be skipped on failure, stranding paid beats on the runner")
+
+check("cognition failures cannot take the beat down with them",
+      "except Exception" in inspect.getsource(tick.run_beat))
+
+
 print()
 if FAILS:
     print(f"{len(FAILS)} FAILED: {', '.join(FAILS)}")
