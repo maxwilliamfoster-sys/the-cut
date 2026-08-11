@@ -124,11 +124,19 @@ def build_prompt(world, agents, groups, pressures, event, beat, day, block):
         f' ({p["days_overdue"]}d late)'
         for p in pressures) or "nothing overdue"
 
+    # A stranger walking up and talking to you is one of the more notable things that can
+    # happen on a quiet block, so it goes near the top rather than buried in a memory line.
+    stranger = ""
+    for ex in (world.get("player_queue") or []):
+        stranger += (f'\nA stranger spoke to {ex["name"]}: "{ex["line"]}" '
+                     f'and was told "{ex["reply"]}". They are still turning it over.')
+
     return (
         f"DAY {day}, {block}. Weather: {world['weather']}.\n"
         f"Police attention - {heat}.\n"
         f"Overdue - {debts}.\n"
-        f"Just happened - {event['text'] if event else 'nothing anybody would write down'}\n\n"
+        f"Just happened - {event['text'] if event else 'nothing anybody would write down'}"
+        f"{stranger}\n\n"
         f"PEOPLE\n{_people_block(agents, groups, beat)}\n\n"
         f"Return JSON for all {len(agents)} people."
     )

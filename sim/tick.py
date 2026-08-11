@@ -17,7 +17,7 @@ import random
 import sys
 import time
 
-from . import city, clock, cognition, events, llm, state
+from . import city, clock, cognition, events, llm, player, state
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against a 6,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -239,12 +239,18 @@ def main(argv=None):
     # city until the wall clock catches up. It froze for two hours once, silently, which is
     # the worst way for this to fail. Detect it and pull the marker back.
     drift = (clock.parse(world["last_beat_at"]) - clock.now_utc()).total_seconds()
-    if args.resync or drift > clock.BEAT_SECONDS:
+    ahead = drift > (clock.BEAT_SECONDS if not args.resync else 0)
+    if ahead:
         world["last_beat_at"] = clock.iso(clock.now_utc())
-        print(f"[clock] last_beat_at was {drift/60:.0f} min ahead of now — resynced.")
-        if args.resync:
-            state.save_world(world)
-            return 0
+        print(f"[clock] last_beat_at was {drift/60:.0f} min ahead of now — pulled back.")
+    elif args.resync:
+        # Only ever pulls the marker backwards. Moving it forward to "now" when it is
+        # already behind would silently throw away beats the city genuinely owes.
+        print(f"[clock] already {abs(drift)/60:.0f} min behind — nothing to resync.")
+
+    if args.resync:
+        state.save_world(world)
+        return 0
 
     owed = args.owe if args.owe is not None else clock.beats_owed(world["last_beat_at"])
     if owed <= 0:
@@ -259,7 +265,10 @@ def main(argv=None):
     budget = llm.Budget(world.get("llm_budget"), clock.day_of(world["beat"]))
     cog = None if args.no_llm else cognition.make_cognition(budget)
 
-    records = []
+    # Before any beat is paid, so anything said to the city while it was idle is already
+    # in the right person's head when they next decide what to do.
+    records = player.absorb(world, agents, world["beat"], clock.day_of(world["beat"]))
+
     for _ in range(quiet_n):
         records += run_beat(world, agents, quiet=True)
     for i in range(think_n):

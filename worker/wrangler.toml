@@ -1,0 +1,15 @@
+name = "the-cut-talk"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Secrets (set with `npx wrangler secret put <NAME>`, never committed):
+#   GROQ_API_KEY  the brain
+#   PLAYER_KEY    gate on /talk so a public URL cannot burn the token budget
+#   DRAIN_KEY     lets the GitHub Action pull the queue and nobody else
+
+[[kv_namespaces]]
+binding = "CUT_KV"
+id = "ed0402dbd6b84f6383b961cae89f7fe2"
+
+[observability]
+enabled = true

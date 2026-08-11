@@ -73,6 +73,37 @@ py selftest.py                 # 25 invariants — run before touching the clock
 py -m http.server 8777         # then open http://localhost:8777
 ```
 
+## Walking in
+
+Press **WASD** on the live page and you drop into the city as a sprite. Stand next to
+somebody and press **E** to talk to them.
+
+You are not simulated. Between beats the cloud has no idea you exist, and if you never
+speak to anyone you leave no trace. The only thing that crosses from the browser into the
+city is a line you actually said:
+
+```
+browser  ──POST /talk──▶  Cloudflare Worker  ──▶ Groq   (replies in character)
+                                │
+                                └──▶ KV queue ──▶ next cron beat ──▶ their memory stream
+```
+
+The Worker exists because the browser can hold neither of the two things needed to make
+someone remember you: the Groq key (the page is public) and a write path into the repo.
+
+Two details that matter:
+
+- The Worker fetches the character's persona from the **published state, server-side**. If
+  the client supplied it, anyone could POST an invented "character", have the endpoint
+  speak in the city's voice, and get it written into the city's memory as fact.
+- The memory is written in plain Python on drain, not left to the model to volunteer. If
+  "they remember you" depended on the model choosing to emit a memory object, it would work
+  nearly always — and the one time it quietly didn't would be the exact moment the whole
+  premise stopped being true.
+
+`/talk` is gated by a player key and rate-limited per IP, so a public URL cannot burn the
+token budget.
+
 ## State
 
 ```
@@ -86,7 +117,7 @@ state/log-wNNN.jsonl append-only event log, rotated per city-week
 
 - [x] **Phase 1** — the city breathes: routines, needs, heat, debts, events, renderer, cron
 - [x] **Phase 2** — the city thinks: batched cognition, memory streams, opinions, dialogue
-- [ ] **Phase 3** — you exist: a player sprite, and characters who remember meeting you
+- [x] **Phase 3** — you exist: a player sprite, and characters who remember meeting you
 - [ ] **Phase 4** — the city narrates itself: nightly reflection, a daily newspaper
 
 Sprites are drawn procedurally in `index.html` — no asset packs, no licences, nothing to

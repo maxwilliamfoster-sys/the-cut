@@ -38,6 +38,45 @@
     color:var(--dim); font-size:10px; background:rgba(13,15,20,.72);
     padding:3px 8px; border-radius:3px; opacity:.75;
   }
+  #controls b{color:var(--gold); font-weight:400}
+  #prompt{
+    position:absolute; left:50%; transform:translateX(-50%); bottom:14px;
+    pointer-events:none; display:none; color:#14171d; background:var(--gold);
+    padding:4px 12px; border-radius:3px; font-size:11px; font-weight:600;
+  }
+
+  #talk{
+    position:absolute; left:50%; bottom:16px; transform:translateX(-50%);
+    width:min(460px, calc(100% - 24px)); display:none; flex-direction:column;
+    background:rgba(13,15,20,.97); border:1px solid var(--gold); border-radius:4px;
+    box-shadow:0 8px 30px rgba(0,0,0,.6);
+  }
+  .t-head{
+    display:flex; align-items:center; padding:7px 10px; border-bottom:1px solid var(--line);
+    color:var(--gold); letter-spacing:1px;
+  }
+  .t-head button{
+    margin-left:auto; background:none; border:1px solid var(--line); color:var(--dim);
+    font:inherit; font-size:10px; padding:1px 6px; border-radius:3px; cursor:pointer;
+  }
+  #talkLog{padding:9px 10px; max-height:180px; overflow-y:auto; display:flex;
+           flex-direction:column; gap:6px}
+  .tl-you{color:#9fd0ff}
+  .tl-them{color:var(--ink)}
+  .tl-them b{color:var(--gold); font-weight:400}
+  .tl-sys{color:var(--dim); font-size:10px; font-style:italic}
+  .tl-wait{color:var(--dim)}
+  .tl-err{color:var(--hot); font-size:11px}
+  .t-foot{display:flex; gap:6px; padding:8px 10px; border-top:1px solid var(--line)}
+  .t-foot input{
+    flex:1; background:#0d1017; border:1px solid var(--line); color:var(--ink);
+    font:inherit; padding:5px 8px; border-radius:3px; outline:none;
+  }
+  .t-foot input:focus{border-color:var(--gold)}
+  .t-foot button{
+    background:var(--gold); border:none; color:#14171d; font:inherit; font-weight:600;
+    padding:5px 12px; border-radius:3px; cursor:pointer;
+  }
 
   aside{
     width:310px; flex-shrink:0; border-left:1px solid var(--line); background:var(--panel);
@@ -108,7 +147,16 @@
 <main>
   <div id="stage">
     <canvas id="cv"></canvas>
-    <div id="controls">scroll to zoom · drag to pan · double-click to reset · click anyone</div>
+    <div id="controls">scroll to zoom · drag to pan · click anyone · <b>WASD to walk in</b></div>
+    <div id="prompt"></div>
+    <div id="talk">
+      <div class="t-head"><span id="talkWho">—</span><button id="talkX">esc</button></div>
+      <div id="talkLog"></div>
+      <div class="t-foot">
+        <input id="talkInput" maxlength="180" placeholder="say something…" autocomplete="off">
+        <button id="talkSend">say</button>
+      </div>
+    </div>
   </div>
   <aside>
     <div class="sec">
@@ -159,6 +207,8 @@ const P = {
   cass:   {sk:SKIN.d, hair:'#8a8578', top:'#20242b', leg:'#20242b'},
 };
 const FALLBACK = {sk:SKIN.c, hair:'#333', top:'#888', leg:'#444'};
+// Deliberately the only cold blue in the palette — you should be findable at a glance.
+P.__player = {sk:SKIN.d, hair:'#2a2622', top:'#2f7fb8', leg:'#232a33'};
 
 const TILECOL = {
   '.':'#39404e',   // pavement
@@ -170,6 +220,10 @@ const TILECOL = {
 };
 
 // ── state ───────────────────────────────────────────────────────────────────
+// The dialogue proxy. It holds the Groq key and the write path into the city's memory;
+// the browser holds neither, which is why this is a URL and not an API key.
+const TALK_URL = 'https://the-cut-talk.maxwilliamfoster.workers.dev';
+
 let MAP=null, WORLD=null, AGENTS=null, LOG=[];
 let selected=null, bg=null, T=16, lastFetch=0, beatStartMs=0;
 const anim = {};                 // per-agent render state
@@ -365,6 +419,14 @@ let fitS = 1, zoom = 1, pan = {x:0, y:0};
 
 function applyView(){
   view.s = fitS * zoom;
+  // Walking in switches the camera from "look at the city" to "be in it": zoom to where a
+  // face is legible and lock on, rather than leaving you a two-pixel speck on a map.
+  if(follow && PLAYER.spawned){
+    view.s = Math.max(view.s, 2.2);
+    view.ox = cv.width/2  - PLAYER.x*T*view.s;
+    view.oy = cv.height/2 - PLAYER.y*T*view.s;
+    return;
+  }
   const mw = MAP.w*T*view.s, mh = MAP.h*T*view.s;
   // Keep the city on screen: pan is only allowed along an axis that actually overflows.
   const slackX = Math.max(0, (mw - cv.width)/2), slackY = Math.max(0, (mh - cv.height)/2);
@@ -419,7 +481,27 @@ window.addEventListener('resize', ()=>{ if(MAP) fitCanvas(); });
 // means the map appears the moment the element actually has a size.
 new ResizeObserver(()=>{ if(MAP){ fitCanvas(); draw(); } }).observe(document.getElementById('stage'));
 
-function frame(){ requestAnimationFrame(frame); draw(); }
+function frame(){
+  requestAnimationFrame(frame);
+  const now = Date.now();
+  const dt = Math.min(0.05, (now - (lastFrame || now)) / 1000);   // cap so a stalled tab
+  lastFrame = now;                                                // cannot teleport you
+  movePlayer(dt);
+
+  if(PLAYER.spawned){
+    const near = nearestNPC();
+    if(near !== PLAYER.near){
+      PLAYER.near = near;
+      const p = $('prompt');
+      if(near && !talkOpen){
+        p.style.display = 'block';
+        p.textContent = `press E to talk to ${AGENTS[near].name}`;
+      } else p.style.display = 'none';
+    }
+    if(talkOpen) $('prompt').style.display = 'none';
+  }
+  draw();
+}
 
 // Split out from the rAF loop so a paint can be forced. A tab opened in the background
 // gets no rAF callbacks at all until it is focused, which previously meant an empty canvas
@@ -427,6 +509,7 @@ function frame(){ requestAnimationFrame(frame); draw(); }
 function draw(){
   if(!MAP || !bg || !AGENTS || !cv.width) return;
   const now = Date.now();
+  if(follow && PLAYER.spawned) applyView();      // camera tracks you every frame
 
   ctx.fillStyle = '#080a0e';
   ctx.fillRect(0,0,cv.width,cv.height);
@@ -483,6 +566,20 @@ function draw(){
       ctx.fillStyle = selected===id ? '#e0b44a' : 'rgba(201,211,227,.62)';
       ctx.fillText(AGENTS[id].name.split(' ').slice(-1)[0], px+5, py-4);
     }
+  }
+
+  if(PLAYER.spawned){
+    const px = PLAYER.x*T + 3, py = PLAYER.y*T + 1;
+    if(PLAYER.near){                              // halo on whoever is in earshot
+      const r = R[PLAYER.near];
+      ctx.strokeStyle = 'rgba(224,180,74,.85)'; ctx.lineWidth = 1;
+      ctx.strokeRect(r.x*T + 0.5, r.y*T - 2, 15, 19);
+    }
+    drawPerson(ctx, px, py, '__player', PLAYER.moving ? Math.floor(now/120)%2 : 0,
+               PLAYER.facing, 1);
+    ctx.font='7px ui-monospace,monospace'; ctx.textAlign='center';
+    ctx.fillStyle='#7fd4ff';
+    ctx.fillText('you', px+5, py-4);
   }
 
   // Dialogue last, so a bubble is never painted over by somebody standing lower down.
@@ -666,7 +763,123 @@ function renderTicker(){
     `The city has been running since ${WORLD ? WORLD.started_at : '—'}.`;
 }
 
+// ── the player ──────────────────────────────────────────────────────────────
+// You are not part of the simulation: the cloud has no idea you exist between beats.
+// You move locally at whatever framerate the browser manages, and only the things you
+// actually say to somebody are sent anywhere.
+const PLAYER = {x:31.5, y:24.5, facing:'S', moving:false, spawned:false, near:null};
+const SPEED = 5.2;                       // tiles per second
+const keys = {};
+let follow = false, lastFrame = 0;
+
+addEventListener('keydown', e=>{
+  if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(e.key.toLowerCase())){
+    keys[e.key.toLowerCase()] = true;
+    if(!PLAYER.spawned){ PLAYER.spawned = true; follow = true; $('controls').style.display='none'; }
+    e.preventDefault();
+  }
+  if(e.key === 'e' || e.key === 'E'){ if(PLAYER.near) openTalk(PLAYER.near); }
+  if(e.key === 'Escape') closeTalk();
+});
+addEventListener('keyup', e=>{ keys[e.key.toLowerCase()] = false; });
+
+function movePlayer(dt){
+  if(!PLAYER.spawned || talkOpen) return;
+  let dx = (keys.d||keys.arrowright?1:0) - (keys.a||keys.arrowleft?1:0);
+  let dy = (keys.s||keys.arrowdown?1:0) - (keys.w||keys.arrowup?1:0);
+  PLAYER.moving = !!(dx||dy);
+  if(!PLAYER.moving) return;
+
+  const len = Math.hypot(dx,dy) || 1;
+  dx = dx/len*SPEED*dt; dy = dy/len*SPEED*dt;
+  PLAYER.facing = Math.abs(dx) > Math.abs(dy) ? (dx>0?'E':'W') : (dy>0?'S':'N');
+
+  // Axis-separated so sliding along a wall feels right instead of sticking. Tested
+  // against the player's leading EDGE, not their centre: testing the centre let you walk
+  // half a tile into a wall before the rounding noticed, so sprites clipped through
+  // brickwork.
+  const RAD = 0.42;
+  const edgeX = Math.round(PLAYER.x + dx + Math.sign(dx)*RAD);
+  const edgeY = Math.round(PLAYER.y + dy + Math.sign(dy)*RAD);
+  if(dx && walkableAt(edgeX, Math.round(PLAYER.y))) PLAYER.x += dx;
+  if(dy && walkableAt(Math.round(PLAYER.x), edgeY)) PLAYER.y += dy;
+}
+
+function nearestNPC(){
+  if(!AGENTS || !PLAYER.spawned) return null;
+  let best=null, bd=1.8;
+  for(const id in AGENTS){
+    const p = AGENTS[id].pos;
+    const d = Math.hypot(p[0]-PLAYER.x, p[1]-PLAYER.y);
+    if(d < bd){ bd = d; best = id; }
+  }
+  return best;
+}
+
+// ── talking ─────────────────────────────────────────────────────────────────
+let talkOpen = false, talkWith = null;
+
+function openTalk(id){
+  talkOpen = true; talkWith = id; selected = id; paintPanel();
+  $('talk').style.display = 'flex';
+  $('talkWho').textContent = AGENTS[id].name;
+  $('talkLog').innerHTML = `<div class="tl-sys">You walk up to ${esc(AGENTS[id].name)}.</div>`;
+  $('talkInput').value = '';
+  $('talkInput').focus();
+}
+function closeTalk(){
+  talkOpen = false; talkWith = null;
+  $('talk').style.display = 'none';
+}
+
+async function sendLine(){
+  const box = $('talkInput'), line = box.value.trim();
+  if(!line || !talkWith) return;
+  box.value = ''; box.disabled = true;
+
+  $('talkLog').insertAdjacentHTML('beforeend', `<div class="tl-you">You: ${esc(line)}</div>`);
+  $('talkLog').insertAdjacentHTML('beforeend', `<div class="tl-wait" id="tw">…</div>`);
+  $('talkLog').scrollTop = 1e6;
+
+  try{
+    const r = await fetch(TALK_URL + '/talk', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','X-Player-Key':playerKey()},
+      body: JSON.stringify({agent: talkWith, line}),
+    });
+    const d = await r.json();
+    document.getElementById('tw').remove();
+    if(!r.ok) throw new Error(d.error || ('HTTP '+r.status));
+    $('talkLog').insertAdjacentHTML('beforeend',
+      `<div class="tl-them"><b>${esc(AGENTS[talkWith].name.split(' ').slice(-1)[0])}:</b> ${esc(d.reply)}</div>`);
+    $('talkLog').insertAdjacentHTML('beforeend',
+      `<div class="tl-sys">They will remember this by the next beat.</div>`);
+  }catch(e){
+    const w = document.getElementById('tw'); if(w) w.remove();
+    $('talkLog').insertAdjacentHTML('beforeend', `<div class="tl-err">${esc(e.message)}</div>`);
+  }
+  box.disabled = false; box.focus();
+  $('talkLog').scrollTop = 1e6;
+}
+
+function playerKey(){
+  let k = localStorage.getItem('cut_player_key');
+  if(!k){
+    k = prompt('Player key (set when the dialogue worker was deployed):') || '';
+    if(k) localStorage.setItem('cut_player_key', k);
+  }
+  return k;
+}
+
 // ── go ──────────────────────────────────────────────────────────────────────
+$('talkX').onclick = closeTalk;
+$('talkSend').onclick = sendLine;
+$('talkInput').addEventListener('keydown', e=>{
+  e.stopPropagation();                       // WASD in the box must type, not walk
+  if(e.key === 'Enter') sendLine();
+  if(e.key === 'Escape') closeTalk();
+});
+
 load(true);
 setInterval(()=>load(false), 60*1000);
 document.addEventListener('visibilitychange', ()=>{

@@ -36,6 +36,9 @@ jobs:
       - name: Advance the city
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Lets the run pull anything said to the city through the dialogue Worker since
+          # the last beat. Absent, the city simply runs without a player in it.
+          THE_CUT_DRAIN_KEY: ${{ secrets.THE_CUT_DRAIN_KEY }}
         run: python -m sim.tick
 
       - name: Commit the new state

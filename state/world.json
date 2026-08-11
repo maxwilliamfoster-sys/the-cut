@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 9,
-  "last_beat_at": "2026-08-11T13:28:46Z",
+  "beat": 10,
+  "last_beat_at": "2026-08-11T13:45:02Z",
   "started_at": "2026-08-11T13:15:30Z",
   "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 9,
+    "delmar": 8,
     "terraces": 5,
     "civic": 5
   },
@@ -120,6 +120,18 @@
         "fear": 12
       },
       "targets": [
+        "rey"
+      ],
+      "text": "Rey Vasquez gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
         "junie"
       ],
       "text": "Junie Marsh gets word that what they owe is wanted sooner than agreed."
@@ -159,12 +171,31 @@
       "text": "Something pays out for Nadia Vasquez. More than expected, which is its own problem."
     }
   ],
-  "player_queue": [],
+  "player_queue": [
+    {
+      "agent": "dez",
+      "name": "Dez Okonkwo",
+      "line": "You run this laundromat? I am looking for work.",
+      "reply": "I ain't hiring no one to run the washer and dryer."
+    },
+    {
+      "agent": "ivy",
+      "name": "Ms. Ivy Calloway",
+      "line": "Been on this block long?",
+      "reply": "Since before you were born, dear."
+    },
+    {
+      "agent": "ivy",
+      "name": "Ms. Ivy Calloway",
+      "line": "Been on this block long?",
+      "reply": "Forty years, since the days when I was still young and foolish."
+    }
+  ],
   "last_gazette_day": -1,
   "llm_budget": {
     "day": 2,
     "spent": {
-      "llama-3.1-8b-instant": 6880
+      "llama-3.1-8b-instant": 11011
     }
   }
 }
