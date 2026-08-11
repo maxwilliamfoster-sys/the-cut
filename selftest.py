@@ -12,7 +12,7 @@ import copy
 import sys
 from datetime import timedelta
 
-from sim import city, clock, events, state, tick
+from sim import city, clock, events, llm, state, tick
 
 FAILS = []
 
@@ -140,6 +140,33 @@ else:
                    if events.roll_event(__import__("random").Random(_), a3, w3["factions"]))
     check("event table fires sometimes but not constantly",
           80 < ev_count < 340, f"{ev_count}/400 beats had an event")
+
+
+    # Groq reserves prompt + max_tokens against the per-minute ceiling and refuses the whole
+    # request with a 413 if the sum exceeds it. This caught a live failure where a generous
+    # max_tokens silently made every call impossible. Checked against a *worn-in* city,
+    # because the prompt grows as characters accumulate memories.
+    from sim import cognition
+    w5, a5 = copy.deepcopy(w), copy.deepcopy(a)
+    for i in range(40):                                    # age it so memory lines are full
+        for x in a5.values():
+            memory_mod = __import__("sim.memory", fromlist=["remember"])
+            memory_mod.remember(x, i, i // 4,
+                                f"Something happened involving {i} that they keep turning over.", 6)
+        tick.run_beat(w5, a5)
+
+    groups5 = tick.colocation(a5)
+    prompt = cognition.build_prompt(w5, a5, groups5, [], None,
+                                    w5["beat"], clock.day_of(w5["beat"]),
+                                    clock.block_of(w5["beat"]))
+    chars = len(cognition.SYSTEM) + len(prompt)
+    reply = llm.fit_max_tokens(llm.FAST, chars)
+    total = chars // 4 + reply
+    check("cognition request fits Groq's per-minute reservation",
+          total <= llm.TPM[llm.FAST],
+          f"prompt ~{chars//4} + reply {reply} = {total} > {llm.TPM[llm.FAST]}")
+    check("reply allowance stays big enough for the whole cast",
+          reply >= 900, f"only {reply} tokens for {len(a5)} people")
 
 
 print()

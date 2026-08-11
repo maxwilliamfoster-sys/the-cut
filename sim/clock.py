@@ -25,7 +25,11 @@ BLOCKS = ["morning", "afternoon", "evening", "night"]
 # A beat with cognition costs an LLM call. A very long outage is paid off with cheap
 # deterministic beats for the backlog and full cognition only for the recent tail, so a
 # two-day Actions failure cannot detonate the daily token budget in a single run.
-MAX_COGNITION_BEATS = 24
+# Beats cannot be narrated faster than about one a minute (Groq's per-minute ceiling), so
+# this is also a wall-clock budget for the job: 12 beats is roughly 13 minutes of catch-up,
+# comfortably inside the workflow timeout, and three city-days of narrated backlog is far
+# more than anyone returning to the city will read.
+MAX_COGNITION_BEATS = 12
 
 
 def now_utc():

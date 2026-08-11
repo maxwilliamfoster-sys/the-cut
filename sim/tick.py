@@ -13,11 +13,17 @@ Cognition (the LLM deciding what people actually *do* about all this) plugs into
 """
 
 import argparse
-import json
 import random
 import sys
+import time
 
-from . import city, clock, events, state
+from . import city, clock, cognition, events, llm, state
+
+# Seconds between two thinking beats inside one run. A batched beat actually costs about
+# 4,000 tokens against a 6,000-per-minute ceiling, so beats cannot run faster than roughly
+# one a minute no matter how many are owed. Measured, not guessed: at 30s every catch-up
+# spent most of its time inside the 429 handler being told to wait anyway.
+BEAT_PACING_SECONDS = 62
 
 MOOD_MIN, MOOD_MAX = 0, 100
 
@@ -210,6 +216,8 @@ def main(argv=None):
     ap.add_argument("--seed", default="the-cut-001")
     ap.add_argument("--owe", type=int, default=None, help="force N beats owed (testing)")
     ap.add_argument("--dry-run", action="store_true", help="simulate but write nothing")
+    ap.add_argument("--no-llm", action="store_true", help="deterministic only, no cognition")
+    ap.add_argument("--no-pacing", action="store_true", help="skip the inter-beat TPM pause")
     args = ap.parse_args(argv)
 
     if args.bootstrap:
@@ -234,12 +242,18 @@ def main(argv=None):
         print(f"Backlog of {owed} beats — fast-forwarding {quiet_n} quiet, "
               f"narrating the last {think_n}.")
 
+    budget = llm.Budget(world.get("llm_budget"), clock.day_of(world["beat"]))
+    cog = None if args.no_llm else cognition.make_cognition(budget)
+
     records = []
     for _ in range(quiet_n):
         records += run_beat(world, agents, quiet=True)
-    for _ in range(think_n):
-        records += run_beat(world, agents, quiet=False)
+    for i in range(think_n):
+        if i and cog and not args.no_pacing:
+            time.sleep(BEAT_PACING_SECONDS)
+        records += run_beat(world, agents, quiet=False, cognition=cog)
 
+    world["llm_budget"] = budget.to_json()
     day = clock.day_of(world["beat"])
     print(f"Paid {owed} beat(s) -> {clock.describe(world['beat'])}, weather {world['weather']}.")
     if world.get("events"):

@@ -484,7 +484,54 @@ function draw(){
       ctx.fillText(AGENTS[id].name.split(' ').slice(-1)[0], px+5, py-4);
     }
   }
+
+  // Dialogue last, so a bubble is never painted over by somebody standing lower down.
+  // Two people in the same room both speak most beats, and the sprite fan-out is only
+  // half a tile against a ~110px bubble — so stack them instead, newest lowest.
+  const stack = {};
+  for(const id of order){
+    const sp = AGENTS[id].speech;
+    if(!sp || !sp.text) continue;
+    const r = R[id], key = AGENTS[id].at;
+    const lift = stack[key] || 0;
+    const h = drawBubble(ctx, r.x*T + 8, r.y*T - 4 - lift, sp.text, selected===id);
+    stack[key] = lift + h + 3;
+  }
   ctx.restore();
+}
+
+function drawBubble(g, ax, ay, text, hot){
+  const maxW = 108, pad = 4, lh = 8;
+  g.font = '7px ui-monospace,monospace';
+  g.textAlign = 'left';
+
+  const words = String(text).split(/\s+/), lines = [];
+  let cur = '';
+  for(const w of words){
+    const t = cur ? cur+' '+w : w;
+    if(g.measureText(t).width > maxW - pad*2 && cur){ lines.push(cur); cur = w; }
+    else cur = t;
+  }
+  if(cur) lines.push(cur);
+  if(lines.length > 3){ lines.length = 3; lines[2] = lines[2].replace(/.{2}$/,'…'); }
+
+  const w = Math.min(maxW, Math.max(...lines.map(l=>g.measureText(l).width)) + pad*2);
+  const h = lines.length*lh + pad*2 - 2;
+  // Keep the bubble inside the map — a speaker on the west edge had half their line cut off.
+  const x = Math.max(2, Math.min(MAP.w*T - w - 2, ax - w/2));
+  const y = ay - h;
+
+  g.fillStyle = hot ? 'rgba(224,180,74,.94)' : 'rgba(233,238,246,.94)';
+  g.beginPath();
+  if(g.roundRect) g.roundRect(x, y, w, h, 3); else g.rect(x, y, w, h);
+  g.fill();
+  g.beginPath();                                   // tail
+  g.moveTo(ax-3, y+h); g.lineTo(ax+1, y+h+4); g.lineTo(ax+3, y+h);
+  g.closePath(); g.fill();
+
+  g.fillStyle = '#14171d';
+  lines.forEach((l,i)=> g.fillText(l, x+pad, y+pad+lh*i+6));
+  return h;
 }
 requestAnimationFrame(frame);
 
@@ -610,10 +657,13 @@ function paintMind(){
 }
 
 function renderTicker(){
-  const recent = LOG.filter(r=>r.event).slice(-6).reverse();
-  $('ticker').textContent = recent.length
-    ? recent.map(r=>`d${r.day} ${r.block}: ${r.event}`).join('   ·   ')
-    : `The city has been running since ${WORLD ? WORLD.started_at : '—'}.`;
+  // Dialogue first — a line somebody actually said is far more alive than the weather.
+  const said = LOG.filter(r=>r.kind==='act' && r.speech && r.speech.text).slice(-5).reverse()
+    .map(r=>`${r.name.split(' ').slice(-1)[0]}: “${r.speech.text}”`);
+  const evs = LOG.filter(r=>r.event).slice(-3).reverse().map(r=>`d${r.day}: ${r.event}`);
+  const line = said.concat(evs).join('   ·   ');
+  $('ticker').textContent = line ||
+    `The city has been running since ${WORLD ? WORLD.started_at : '—'}.`;
 }
 
 // ── go ──────────────────────────────────────────────────────────────────────

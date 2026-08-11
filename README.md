@@ -44,6 +44,24 @@ There is no script and no story state machine. Narrative falls out of:
   and decisions are where drama comes from.
 - **the event table** — a weighted, seeded roll each beat. Reproducible, so an interesting
   week can be replayed and a bug can be caught.
+- **cognition** — one batched LLM call per beat decides what all twelve do about the above,
+  what they think, what they say to whoever is standing next to them, and what they will
+  still be turning over tomorrow.
+
+### The token constraint that shapes the whole design
+
+Groq's free tier is bound by tokens per *day*, and reserves `prompt + max_tokens` against a
+per-*minute* ceiling as a single booking — exceed it and the request is refused outright
+(413), not truncated. So:
+
+- **one batched call per beat for the entire cast**, never one per character, which would
+  spend a day's allowance in about an hour
+- the reply allowance is sized against the prompt at call time, not chosen freely
+- beats cannot be narrated faster than roughly one a minute, so catch-up paces itself and
+  caps at 12 narrated beats; anything older is fast-forwarded quietly
+
+Cost lands around 3,400 tokens a beat, ~320K a day against a 450K self-imposed budget, with
+automatic failover to OpenRouter if Groq's daily cap is ever hit.
 
 ## Running it locally
 
@@ -67,7 +85,7 @@ state/log-wNNN.jsonl append-only event log, rotated per city-week
 ## Status
 
 - [x] **Phase 1** — the city breathes: routines, needs, heat, debts, events, renderer, cron
-- [ ] **Phase 2** — the city thinks: batched LLM cognition, memory streams, opinions
+- [x] **Phase 2** — the city thinks: batched cognition, memory streams, opinions, dialogue
 - [ ] **Phase 3** — you exist: a player sprite, and characters who remember meeting you
 - [ ] **Phase 4** — the city narrates itself: nightly reflection, a daily newspaper
 

@@ -127,8 +127,11 @@ ROSTER = [
         "id": "cass", "name": "Cass Deveaux", "age": 38, "role": "buying property on Delmar for someone nobody has met",
         "faction": "outside", "home": "harborbar", "work": "lot",
         "traits": ["polished", "patient", "answers questions with questions", "never seems to be in a hurry"],
-        "ambition": "[hidden — the model may invent and must stay consistent]",
-        "fear": "[hidden — the model may invent and must stay consistent]",
+        # Mysterious to the rest of the cast, but concrete here: a bracketed authoring note
+        # would be fed verbatim into the prompt as a meta-instruction and shown to the
+        # player in the mind panel, which is neither mysterious nor intended.
+        "ambition": "to have the whole block optioned before anyone works out who is buying",
+        "fear": "the people he answers to deciding he has learned too much to keep around",
         "voice": "warm, corporate, unnervingly specific about details nobody mentioned",
         "routine": {"morning": "lot", "afternoon": "cornerstore", "evening": "harborbar", "night": "harborbar"},
     },

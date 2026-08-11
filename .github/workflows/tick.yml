@@ -19,7 +19,10 @@ concurrency:
 jobs:
   tick:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # A catch-up narrates up to 12 beats and Groq's per-minute ceiling means beats cannot
+    # run faster than roughly one a minute, so a worst-case run is ~14 minutes of mostly
+    # waiting. 40 leaves room without letting a wedged run burn an hour.
+    timeout-minutes: 40
     permissions:
       contents: write
 

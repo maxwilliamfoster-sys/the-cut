@@ -1,0 +1,256 @@
+"""
+The Cut — what people decide to do about their situation.
+
+One call per beat for the whole cast. Not one per character: at four beats a city-day and
+a city-day an hour, per-character calls would spend a day's token allowance in about an
+hour. Batching also buys something the per-character version cannot — the model sees the
+whole block at once, so two people in the same room can be given a single coherent
+exchange rather than two monologues written in ignorance of each other.
+
+Nothing here decides the plot. It is handed a situation (who is where, how they feel, what
+they remember, what just happened, who owes whom) and asked only what these particular
+people would do next. The story is whatever falls out of that, compounded over days.
+"""
+
+import json
+
+from . import city, llm, memory
+
+SYSTEM = """You are the narrative engine for THE CUT, a simulated American city block.
+
+You are given the entire cast for one six-hour stretch. For each person, decide what they
+do next, based strictly on who they are, how they feel, what they remember, and what is
+happening around them.
+
+REGISTER
+Prestige-television crime drama - The Wire, not a video game and not a thriller trailer.
+Understated. People are tired, funny, petty, loyal, and mostly trying to get through a day.
+Consequences land quietly and much later.
+
+RULES
+- STAY WHERE THEY ARE. The `at:` line is where that person physically is right now. The
+  action must happen THERE. If a barber is at the diner he is not cutting hair; he is
+  eating. If a nurse is at home she is not treating patients. This is the rule most often
+  got wrong - check every action against the location before you write it.
+- Small actions. A beat is somebody wiping a counter, avoiding a question, counting money
+  twice. Dramatic events are rare and earned by what came before.
+- Let people refuse, deflect, lie and hold grudges. Characters who agree with each other
+  are boring and wrong. If two people have low affinity, it should show.
+- Speech is optional and only to somebody listed as present with them.
+- Vary the interior voice. Do not begin thoughts with "I have to" or "I need to" - most
+  people are not narrating their own resolve. Let some thoughts be petty, funny, evasive,
+  or about something else entirely.
+- A memory must be a COMPLETE SENTENCE describing what actually happened and why it stuck.
+  "Booker offered to buy the corner store and did not blink when I said no" is a memory.
+  "Booker's offer" is not - never write a bare noun phrase.
+- Only record a memory if this person would still be turning it over tomorrow. Importance
+  1-3 routine, 4-6 notable, 7-8 significant, 9-10 life-changing. Most beats deserve no
+  memory at all - return null. Do not invent a memory to fill the field.
+- NEVER repeat anything from that person's `remembers:` list. That is what they already
+  know. A memory records something that happened in THIS beat, or nothing at all.
+- Return an entry for EVERY person listed. Never omit anyone.
+- Crime stays NARRATIVE, never procedural. "He moved the package through the laundromat"
+  is right. Never describe how anything illegal is actually made, built, or done.
+- No sexual content. No slurs. Violence has weight and aftermath; it is never relished.
+
+OUTPUT
+Return JSON only, exactly this shape, one entry per person, using their exact id:
+
+{"people":[{
+  "id": "dez",
+  "action": "third person, present tense, MAX 10 WORDS",
+  "thought": "first person, MAX 16 WORDS",
+  "to": "id of someone present, or null",
+  "says": "one line, MAX 16 WORDS, only if `to` is set",
+  "mood": {"stress": 5},
+  "feels_about": {"malik": {"shift": -6, "opinion": "MAX 10 WORDS"}},
+  "memory": {"what": "one sentence, MAX 18 WORDS", "importance": 6}
+}]}
+
+BE TERSE. The word limits are hard - overrunning them truncates the batch and the last
+people listed lose their turn entirely.
+
+mood keys: energy, happiness, stress, social_need, fear. Values -20..20; include only keys
+that actually changed. Omit `feels_about` and `memory` entirely unless something happened -
+on a normal beat most people have neither."""
+
+
+def _people_block(agents, groups, beat):
+    lines = []
+    for aid in sorted(agents):
+        a = agents[aid]
+        here = [agents[o]["name"] for o in groups.get(a["at"], []) if o != aid]
+        loc = city.LOCATIONS[a["at"]]["name"]
+        m = a["mood"]
+
+        # Everything here is rationed. The prompt and the reply share one 6,000-token
+        # per-minute reservation, so every line spent describing somebody is a line the
+        # model cannot spend answering. Two relationships and three memories is the point
+        # where characters still behave like themselves.
+        rels = sorted(a["relationships"].items(),
+                      key=lambda kv: abs(kv[1]["affinity"]), reverse=True)[:2]
+        rel_s = "; ".join(
+            f'{agents[k]["name"].split()[-1]}{v["affinity"]:+d} "{v["opinion"]}"'
+            for k, v in rels if k in agents)
+
+        query = f'{loc} {" ".join(here)} {a["ambition"]}'
+        mems = memory.retrieve(a, beat, query, k=3)
+        mem_s = " | ".join(f'd{m2["day"]}: {m2["what"]}' for m2 in mems) or "nothing yet"
+
+        # Only the stats that are actually notable — a mood sitting near its resting level
+        # tells the model nothing and costs tokens on every character every beat.
+        feels = [f"{k} {v}" for k, v in
+                 (("drained", 100 - m["energy"]), ("unhappy", 100 - m["happiness"]),
+                  ("stressed", m["stress"]), ("lonely", m["social_need"]), ("afraid", m["fear"]))
+                 if v >= 55]
+
+        lines.append(
+            f'[{aid}] {a["name"]}, {a["age"]}, {a["role"]}\n'
+            f'  is: {"; ".join(a["traits"][:3])}\n'
+            f'  wants: {a["ambition"]}\n'
+            f'  at: {loc}{(" with " + ", ".join(here)) if here else " (ALONE)"}\n'
+            f'  feels: {", ".join(feels) if feels else "steady"}\n'
+            f'  thinks: {rel_s}\n'
+            f'  remembers: {mem_s}'
+        )
+    return "\n".join(lines)
+
+
+def build_prompt(world, agents, groups, pressures, event, beat, day, block):
+    heat = ", ".join(f'{city.DISTRICTS[d]["name"]} {v}' for d, v in world["heat"].items())
+    debts = "; ".join(
+        f'{p["from"]} owes {p["to"]} '
+        f'{"$" + format(p["amount"], ",") if p["kind"] == "money" else p["kind"]}'
+        f' ({p["days_overdue"]}d late)'
+        for p in pressures) or "nothing overdue"
+
+    return (
+        f"DAY {day}, {block}. Weather: {world['weather']}.\n"
+        f"Police attention - {heat}.\n"
+        f"Overdue - {debts}.\n"
+        f"Just happened - {event['text'] if event else 'nothing anybody would write down'}\n\n"
+        f"PEOPLE\n{_people_block(agents, groups, beat)}\n\n"
+        f"Return JSON for all {len(agents)} people."
+    )
+
+
+def _apply(agents, data, groups, beat, day, records):
+    """Apply whatever came back. A malformed entry is skipped rather than failing the beat —
+    losing one person's turn is survivable; losing the whole city's is not."""
+    applied, seen = 0, set()
+    for row in (data or {}).get("people", []):
+        aid = (row or {}).get("id")
+        a = agents.get(aid)
+        if not a or aid in seen:
+            continue
+        seen.add(aid)
+
+        a["action"] = str(row.get("action") or a["action"])[:120]
+        a["thought"] = str(row.get("thought") or "")[:220]
+
+        # The model will happily have someone speak to a person on the other side of the
+        # city — caught live: Dez addressed Malik from the laundromat while Malik was at
+        # home two districts away. Only accept speech aimed at someone actually here.
+        to, says = row.get("to"), row.get("says")
+        present = set(groups.get(a["at"], []))
+        a["speech"] = ({"to": to, "text": str(says)[:220]}
+                       if says and to in agents and to != aid and to in present else None)
+
+        for k, dv in (row.get("mood") or {}).items():
+            if k in a["mood"] and isinstance(dv, (int, float)):
+                a["mood"][k] = max(0, min(100, a["mood"][k] + int(max(-20, min(20, dv)))))
+
+        for other, chg in (row.get("feels_about") or {}).items():
+            if other not in agents or other == aid or not isinstance(chg, dict):
+                continue
+            rel = a["relationships"].setdefault(
+                other, {"affinity": 0, "opinion": "knows the face, not much else"})
+            shift = chg.get("shift")
+            if isinstance(shift, (int, float)):
+                rel["affinity"] = max(-100, min(100, rel["affinity"] + int(max(-20, min(20, shift)))))
+            if chg.get("opinion"):
+                rel["opinion"] = str(chg["opinion"])[:110]
+
+        mem = row.get("memory")
+        if isinstance(mem, dict) and mem.get("what"):
+            memory.remember(a, beat, day, mem["what"], mem.get("importance", 4))
+        memory.prune(a)
+
+        records.append({
+            "beat": beat, "day": day, "kind": "act", "who": aid, "name": a["name"],
+            "at": a["at"], "action": a["action"], "thought": a["thought"],
+            "speech": a["speech"],
+        })
+        applied += 1
+
+    # The model quietly drops someone from the batch now and then. Without this they keep
+    # last beat's action forever — on the very first beat that meant a character stuck
+    # visibly on the bootstrap string "starting the day".
+    for aid, a in agents.items():
+        if aid in seen:
+            continue
+        a["action"] = f"at {city.LOCATIONS[a['at']]['name']}"
+        a["thought"] = ""
+        a["speech"] = None
+        records.append({"beat": beat, "day": day, "kind": "act", "who": aid,
+                        "name": a["name"], "at": a["at"], "action": a["action"],
+                        "thought": "", "speech": None, "omitted": True})
+    return applied
+
+
+def make_cognition(budget, verbose=True):
+    """Returns the callable tick.run_beat expects. Closes over the day's token budget so
+    spend accumulates across every beat paid in this run."""
+
+    def cognition(world, agents, groups, pressures, event, beat, day, block):
+        records = []
+        budget.ensure_day(day)
+        prompt = build_prompt(world, agents, groups, pressures, event, beat, day, block)
+
+        # ~4 chars a token, plus room for the reply. If the day's allowance cannot cover
+        # it, fall through to a quiet beat rather than half-applying a truncated response.
+        estimate = len(SYSTEM + prompt) // 4 + 1200
+        if not budget.can_afford(llm.FAST, estimate):
+            if verbose:
+                print(f"[cognition] budget exhausted for {llm.FAST} "
+                      f"({budget.remaining(llm.FAST)} left, need ~{estimate}) — quiet beat.")
+            return records
+
+        messages = [{"role": "system", "content": SYSTEM},
+                    {"role": "user", "content": prompt}]
+        reply_room = llm.fit_max_tokens(llm.FAST, len(SYSTEM) + len(prompt), want=2000)
+
+        text, used = "", 0
+        for attempt in range(2):
+            try:
+                text, used = llm.chat(messages, model=llm.FAST,
+                                      max_tokens=reply_room, temperature=0.9)
+            except Exception as e:
+                print(f"[cognition] beat {beat} call failed: {e}")
+                return records
+            budget.charge(llm.FAST, used)
+
+            hit = llm.trips_guardrail(text)
+            if not hit:
+                break
+            print(f"[cognition] guardrail tripped on {hit!r} — retrying once, stricter.")
+            if attempt == 0:
+                messages.append({"role": "user", "content":
+                                 "That drifted into describing how something illegal is done. "
+                                 "Rewrite: reference it only in passing, never the method."})
+            else:
+                print("[cognition] still tripping — dropping this beat's cognition.")
+                return records
+
+        data = llm.parse_json(text)
+        if not data:
+            print(f"[cognition] beat {beat}: unparseable response ({len(text)} chars)")
+            return records
+
+        n = _apply(agents, data, groups, beat, day, records)
+        if verbose:
+            print(f"[cognition] beat {beat}: {n}/{len(agents)} people, {used} tokens "
+                  f"({budget.remaining(llm.FAST)} left today)")
+        return records
+
+    return cognition

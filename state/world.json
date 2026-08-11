@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 5,
-  "last_beat_at": "2026-08-11T12:40:19Z",
-  "started_at": "2026-08-11T11:25:19Z",
+  "beat": 9,
+  "last_beat_at": "2026-08-11T15:30:30Z",
+  "started_at": "2026-08-11T13:15:30Z",
   "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 13,
+    "delmar": 9,
     "terraces": 5,
     "civic": 5
   },
@@ -113,6 +113,18 @@
   ],
   "events": [
     {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "junie"
+      ],
+      "text": "Junie Marsh gets word that what they owe is wanted sooner than agreed."
+    },
+    {
       "id": "patrol_surge",
       "heat": {
         "delmar": 12
@@ -148,5 +160,11 @@
     }
   ],
   "player_queue": [],
-  "last_gazette_day": -1
+  "last_gazette_day": -1,
+  "llm_budget": {
+    "day": 2,
+    "spent": {
+      "llama-3.1-8b-instant": 6880
+    }
+  }
 }
