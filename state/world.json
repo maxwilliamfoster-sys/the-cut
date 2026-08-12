@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 82,
-  "last_beat_at": "2026-08-12T06:12:12Z",
+  "beat": 89,
+  "last_beat_at": "2026-08-12T07:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 6,
-    "delmar": 14,
+    "riverside": 5,
+    "delmar": 19,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,55 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "rey",
+        "boateng"
+      ],
+      "text": "Rey Vasquez and Fr. Emmanuel Boateng are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "nadia"
+      ],
+      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "boateng",
+        "gus"
+      ],
+      "text": "Gus Petrakis does Fr. Emmanuel Boateng a favour that costs them something real."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -336,52 +385,6 @@
         "rey"
       ],
       "text": "Somebody tells Malik Reyes that Rey Vasquez has been seen talking to police."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "yusuf"
-      ],
-      "text": "Dr. Yusuf Amin gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
     }
   ],
   "player_queue": [
@@ -392,11 +395,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 19,
+  "last_gazette_day": 21,
   "llm_budget": {
-    "day": 20,
+    "day": 22,
     "spent": {
-      "llama-3.1-8b-instant": 13117
+      "llama-3.1-8b-instant": 4185
     }
   }
 }
