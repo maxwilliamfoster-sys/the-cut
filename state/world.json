@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 118,
-  "last_beat_at": "2026-08-12T15:12:12Z",
+  "beat": 122,
+  "last_beat_at": "2026-08-12T16:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 16,
-    "delmar": 38,
-    "terraces": 6,
+    "riverside": 12,
+    "delmar": 40,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,37 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -353,40 +384,6 @@
         "malik"
       ],
       "text": "Dot Feeney and Malik Reyes are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
     }
   ],
   "player_queue": [
@@ -397,11 +394,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 28,
+  "last_gazette_day": 29,
   "llm_budget": {
-    "day": 29,
+    "day": 30,
     "spent": {
-      "llama-3.1-8b-instant": 12757
+      "llama-3.1-8b-instant": 13164
     }
   }
 }
