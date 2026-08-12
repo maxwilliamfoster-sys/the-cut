@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 140,
-  "last_beat_at": "2026-08-12T20:42:12Z",
+  "beat": 144,
+  "last_beat_at": "2026-08-12T21:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 25,
-    "delmar": 54,
+    "riverside": 21,
+    "delmar": 44,
     "terraces": 5,
-    "civic": 8
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "tee",
+        "sticks"
+      ],
+      "text": "Somebody tells Tariq 'Tee' Bello that Sticks has been seen talking to police."
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
     {
       "id": "hospital",
       "heat": {
@@ -359,28 +383,6 @@
         "ruiz"
       ],
       "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -391,11 +393,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 34,
+  "last_gazette_day": 35,
   "llm_budget": {
-    "day": 35,
+    "day": 36,
     "spent": {
-      "llama-3.1-8b-instant": 4310
+      "llama-3.1-8b-instant": 4748
     }
   }
 }
