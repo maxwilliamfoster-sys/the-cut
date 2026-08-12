@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 95,
-  "last_beat_at": "2026-08-12T09:27:12Z",
+  "beat": 100,
+  "last_beat_at": "2026-08-12T10:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 1,
+    "delmar": 12,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,43 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "ruiz",
+        "femi"
+      ],
+      "text": "Somebody tells Det. Yolanda Ruiz that Femi Adeyemi has been seen talking to police."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "dot",
+        "malik"
+      ],
+      "text": "Dot Feeney and Malik Reyes are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "power_cut",
       "heat": {
@@ -350,37 +387,6 @@
       },
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "sticks",
-        "wes"
-      ],
-      "text": "Wes Doyle does Sticks a favour that costs them something real."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
@@ -391,12 +397,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 23,
+  "last_gazette_day": 24,
   "llm_budget": {
-    "day": 23,
+    "day": 25,
     "spent": {
-      "llama-3.1-8b-instant": 20411,
-      "llama-3.3-70b-versatile": 691
+      "llama-3.1-8b-instant": 4564
     }
   }
 }
