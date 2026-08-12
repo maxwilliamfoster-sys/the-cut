@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 76,
-  "last_beat_at": "2026-08-12T04:42:12Z",
+  "beat": 82,
+  "last_beat_at": "2026-08-12T06:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "clear",
   "heat": {
-    "riverside": 12,
-    "delmar": 8,
+    "riverside": 6,
+    "delmar": 14,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,54 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "marcus",
+        "rosa"
+      ],
+      "text": "Rosa Reyes does Marcus Calloway a favour that costs them something real."
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "gus"
+      ],
+      "text": "Something pays out for Gus Petrakis. More than expected, which is its own problem."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -334,53 +382,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "dot",
-        "simone"
-      ],
-      "text": "Dot Feeney and Simone Adeyemi are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
     }
   ],
   "player_queue": [
@@ -391,9 +392,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 18,
+  "last_gazette_day": 19,
   "llm_budget": {
-    "day": 19,
-    "spent": {}
+    "day": 20,
+    "spent": {
+      "llama-3.1-8b-instant": 13117
+    }
   }
 }
