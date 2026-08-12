@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 100,
-  "last_beat_at": "2026-08-12T10:42:12Z",
+  "beat": 103,
+  "last_beat_at": "2026-08-12T11:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 12,
+    "delmar": 21,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,41 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kohl",
+        "hector"
+      ],
+      "text": "Somebody tells Ofc. Brady Kohl that Hector Delgado has been seen talking to police."
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -349,44 +384,6 @@
         "priya"
       ],
       "text": "Something pays out for Ms. Priya Raman. More than expected, which is its own problem."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "ruiz"
-      ],
-      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "marcus"
-      ],
-      "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -397,11 +394,12 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 24,
+  "last_gazette_day": 25,
   "llm_budget": {
     "day": 25,
     "spent": {
-      "llama-3.1-8b-instant": 4564
+      "llama-3.1-8b-instant": 21439,
+      "llama-3.3-70b-versatile": 819
     }
   }
 }
