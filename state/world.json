@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 240,
-  "last_beat_at": "2026-08-13T21:42:12Z",
+  "beat": 244,
+  "last_beat_at": "2026-08-13T22:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 36,
-    "terraces": 5,
+    "delmar": 32,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,54 @@
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "gus"
+      ],
+      "text": "Something pays out for Gus Petrakis. More than expected, which is its own problem."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -343,51 +391,6 @@
         "marcus"
       ],
       "text": "Somebody tells Junie Marsh that Marcus Calloway has been seen talking to police."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Something pays out for Ofc. Brady Kohl. More than expected, which is its own problem."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -400,7 +403,7 @@
   ],
   "last_gazette_day": 59,
   "llm_budget": {
-    "day": 60,
+    "day": 61,
     "spent": {}
   }
 }
