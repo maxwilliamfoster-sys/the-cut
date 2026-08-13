@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 177,
-  "last_beat_at": "2026-08-13T05:57:12Z",
+  "beat": 184,
+  "last_beat_at": "2026-08-13T07:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 38,
-    "delmar": 45,
+    "riverside": 31,
+    "delmar": 38,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,42 @@
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "rosa"
+      ],
+      "text": "Rosa Reyes gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "fight",
       "heat": {},
@@ -354,43 +390,6 @@
         "malik"
       ],
       "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "dot",
-        "marisol"
-      ],
-      "text": "Dot Feeney and Marisol Vasquez are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
     }
   ],
   "player_queue": [
@@ -401,11 +400,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 43,
+  "last_gazette_day": 45,
   "llm_budget": {
-    "day": 44,
+    "day": 46,
     "spent": {
-      "llama-3.1-8b-instant": 9332
+      "llama-3.1-8b-instant": 3731
     }
   }
 }
