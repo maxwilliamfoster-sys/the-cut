@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 335,
-  "last_beat_at": "2026-08-14T21:27:12Z",
+  "beat": 337,
+  "last_beat_at": "2026-08-14T21:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "clear",
   "heat": {
-    "riverside": 22,
-    "delmar": 65,
+    "riverside": 20,
+    "delmar": 63,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "yusuf",
+        "dot"
+      ],
+      "text": "Somebody tells Dr. Yusuf Amin that Dot Feeney has been seen talking to police."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "dot"
+      ],
+      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed."
+    },
     {
       "id": "fight",
       "heat": {},
@@ -369,29 +394,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "chidi",
-        "simone"
-      ],
-      "text": "Chidi Okonkwo and Simone Adeyemi are seen arguing in the street loud enough that people stop."
     }
   ],
   "player_queue": [
@@ -404,9 +406,9 @@
   ],
   "last_gazette_day": 82,
   "llm_budget": {
-    "day": 83,
+    "day": 84,
     "spent": {
-      "llama-3.1-8b-instant": 9173
+      "llama-3.1-8b-instant": 4536
     }
   }
 }
