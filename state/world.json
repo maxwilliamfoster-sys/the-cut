@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 273,
-  "last_beat_at": "2026-08-14T05:57:12Z",
+  "beat": 280,
+  "last_beat_at": "2026-08-14T07:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 15,
-    "delmar": 47,
-    "terraces": 6,
+    "riverside": 8,
+    "delmar": 52,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,66 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "okafor",
+        "rey"
+      ],
+      "text": "Somebody tells Chinedu Okafor that Rey Vasquez has been seen talking to police."
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "okafor",
+        "dot"
+      ],
+      "text": "Dot Feeney does Chinedu Okafor a favour that costs them something real."
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -326,64 +386,6 @@
       },
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "dez",
-        "malik"
-      ],
-      "text": "Somebody tells Dez Okonkwo that Malik Reyes has been seen talking to police."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "marisol",
-        "kohl"
-      ],
-      "text": "Marisol Vasquez and Ofc. Brady Kohl are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Something pays out for Gus Petrakis. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -394,9 +396,9 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 67,
+  "last_gazette_day": 68,
   "llm_budget": {
-    "day": 68,
+    "day": 70,
     "spent": {}
   }
 }
