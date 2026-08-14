@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 337,
-  "last_beat_at": "2026-08-14T21:57:12Z",
+  "beat": 339,
+  "last_beat_at": "2026-08-14T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 20,
-    "delmar": 63,
+    "riverside": 18,
+    "delmar": 61,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -383,17 +395,6 @@
         "tee"
       ],
       "text": "Tariq 'Tee' Bello ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -408,7 +409,7 @@
   "llm_budget": {
     "day": 84,
     "spent": {
-      "llama-3.1-8b-instant": 4536
+      "llama-3.1-8b-instant": 13479
     }
   }
 }
