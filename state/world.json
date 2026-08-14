@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 258,
-  "last_beat_at": "2026-08-14T02:12:12Z",
+  "beat": 266,
+  "last_beat_at": "2026-08-14T04:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "clear",
   "heat": {
-    "riverside": 30,
-    "delmar": 26,
-    "terraces": 6,
+    "riverside": 22,
+    "delmar": 42,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,79 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ruiz",
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl does Det. Yolanda Ruiz a favour that costs them something real."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "malik",
+        "adaeze"
+      ],
+      "text": "Malik Reyes and Adaeze Okonkwo are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "femi",
+        "booker"
+      ],
+      "text": "Booker Lyle does Femi Adeyemi a favour that costs them something real."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "raid",
       "heat": {
@@ -313,79 +386,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "dez",
-        "wes"
-      ],
-      "text": "Somebody tells Dez Okonkwo that Wes Doyle has been seen talking to police."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "simone"
-      ],
-      "text": "Simone Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "sticks",
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan does Sticks a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -396,11 +396,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 63,
+  "last_gazette_day": 65,
   "llm_budget": {
-    "day": 64,
+    "day": 66,
     "spent": {
-      "llama-3.1-8b-instant": 4578
+      "llama-3.1-8b-instant": 4854
     }
   }
 }
