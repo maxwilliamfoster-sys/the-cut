@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 280,
-  "last_beat_at": "2026-08-14T07:42:12Z",
+  "beat": 284,
+  "last_beat_at": "2026-08-14T08:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 8,
-    "delmar": 52,
+    "riverside": 5,
+    "delmar": 48,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,28 @@
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "marcus",
+        "hector"
+      ],
+      "text": "Somebody tells Marcus Calloway that Hector Delgado has been seen talking to police."
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -362,30 +384,6 @@
         "malik"
       ],
       "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
     }
   ],
   "player_queue": [
@@ -396,9 +394,9 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 68,
+  "last_gazette_day": 70,
   "llm_budget": {
-    "day": 70,
+    "day": 71,
     "spent": {}
   }
 }
