@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 327,
-  "last_beat_at": "2026-08-14T19:27:12Z",
+  "beat": 330,
+  "last_beat_at": "2026-08-14T20:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "overcast",
   "heat": {
-    "riverside": 30,
-    "delmar": 73,
+    "riverside": 27,
+    "delmar": 70,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "tiny",
+        "dot"
+      ],
+      "text": "Dot Feeney does Tiny Reyes a favour that costs them something real."
+    },
     {
       "id": "raid",
       "heat": {
@@ -364,28 +387,6 @@
         "tiny"
       ],
       "text": "Something pays out for Tiny Reyes. More than expected, which is its own problem."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -398,9 +399,9 @@
   ],
   "last_gazette_day": 75,
   "llm_budget": {
-    "day": 81,
+    "day": 82,
     "spent": {
-      "llama-3.1-8b-instant": 8231
+      "llama-3.1-8b-instant": 8681
     }
   }
 }
