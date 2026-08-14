@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 248,
-  "last_beat_at": "2026-08-13T23:42:12Z",
+  "beat": 258,
+  "last_beat_at": "2026-08-14T02:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
-    "riverside": 5,
-    "delmar": 28,
+    "riverside": 30,
+    "delmar": 26,
     "terraces": 6,
     "civic": 5
   },
@@ -149,6 +149,68 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "dot"
+      ],
+      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "dez",
+        "malik"
+      ],
+      "text": "Somebody tells Dez Okonkwo that Malik Reyes has been seen talking to police."
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -324,68 +386,6 @@
         "brennan"
       ],
       "text": "Sgt. Hal Brennan does Sticks a favour that costs them something real."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "sticks",
-        "yusuf"
-      ],
-      "text": "Dr. Yusuf Amin does Sticks a favour that costs them something real."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "tiny",
-        "priya"
-      ],
-      "text": "Ms. Priya Raman does Tiny Reyes a favour that costs them something real."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "hector",
-        "ivy"
-      ],
-      "text": "Hector Delgado and Ms. Ivy Calloway are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -396,9 +396,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 61,
+  "last_gazette_day": 63,
   "llm_budget": {
-    "day": 62,
-    "spent": {}
+    "day": 64,
+    "spent": {
+      "llama-3.1-8b-instant": 4578
+    }
   }
 }
