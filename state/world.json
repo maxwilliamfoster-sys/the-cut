@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 333,
-  "last_beat_at": "2026-08-14T20:57:12Z",
+  "beat": 335,
+  "last_beat_at": "2026-08-14T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 24,
-    "delmar": 67,
+    "riverside": 22,
+    "delmar": 65,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,32 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "tee",
+        "cass"
+      ],
+      "text": "Tariq 'Tee' Bello and Cass Deveaux are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "rey",
+        "sticks"
+      ],
+      "text": "Rey Vasquez and Sticks are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "cold_case",
       "heat": {},
@@ -366,28 +392,6 @@
         "simone"
       ],
       "text": "Chidi Okonkwo and Simone Adeyemi are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -401,6 +405,8 @@
   "last_gazette_day": 82,
   "llm_budget": {
     "day": 83,
-    "spent": {}
+    "spent": {
+      "llama-3.1-8b-instant": 9173
+    }
   }
 }
