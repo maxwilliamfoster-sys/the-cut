@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 307,
-  "last_beat_at": "2026-08-14T14:27:12Z",
+  "beat": 311,
+  "last_beat_at": "2026-08-14T15:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
-    "delmar": 49,
+    "delmar": 45,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "chidi",
+        "simone"
+      ],
+      "text": "Chidi Okonkwo and Simone Adeyemi are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -358,29 +381,6 @@
         "dot"
       ],
       "text": "Dot Feeney does Chinedu Okafor a favour that costs them something real."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -393,9 +393,9 @@
   ],
   "last_gazette_day": 75,
   "llm_budget": {
-    "day": 76,
+    "day": 77,
     "spent": {
-      "llama-3.1-8b-instant": 9047
+      "llama-3.1-8b-instant": 13719
     }
   }
 }
