@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 311,
-  "last_beat_at": "2026-08-14T15:27:12Z",
+  "beat": 315,
+  "last_beat_at": "2026-08-14T16:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 45,
-    "terraces": 5,
-    "civic": 5
+    "delmar": 65,
+    "terraces": 13,
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,55 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello ends up at the clinic. The paperwork says one thing; the injury says another."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -333,54 +382,6 @@
         "hector"
       ],
       "text": "Somebody tells Marcus Calloway that Hector Delgado has been seen talking to police."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "okafor",
-        "rey"
-      ],
-      "text": "Somebody tells Chinedu Okafor that Rey Vasquez has been seen talking to police."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "okafor",
-        "dot"
-      ],
-      "text": "Dot Feeney does Chinedu Okafor a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -393,9 +394,9 @@
   ],
   "last_gazette_day": 75,
   "llm_budget": {
-    "day": 77,
+    "day": 78,
     "spent": {
-      "llama-3.1-8b-instant": 13719
+      "llama-3.1-8b-instant": 13910
     }
   }
 }
