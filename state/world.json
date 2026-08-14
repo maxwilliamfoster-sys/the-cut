@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 284,
-  "last_beat_at": "2026-08-14T08:42:12Z",
+  "beat": 289,
+  "last_beat_at": "2026-08-14T09:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
-    "delmar": 48,
+    "delmar": 43,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "marisol",
+        "dez"
+      ],
+      "text": "Dez Okonkwo does Marisol Vasquez a favour that costs them something real."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo gets word that what they owe is wanted sooner than agreed."
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -359,31 +384,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -394,9 +394,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 70,
+  "last_gazette_day": 71,
   "llm_budget": {
-    "day": 71,
-    "spent": {}
+    "day": 72,
+    "spent": {
+      "llama-3.1-8b-instant": 4293
+    }
   }
 }
