@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 323,
-  "last_beat_at": "2026-08-14T18:27:12Z",
+  "beat": 327,
+  "last_beat_at": "2026-08-14T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
-    "riverside": 5,
-    "delmar": 57,
+    "riverside": 30,
+    "delmar": 73,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "money_found",
       "heat": {},
@@ -362,29 +386,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "dot",
-        "sticks"
-      ],
-      "text": "Dot Feeney and Sticks are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
     }
   ],
   "player_queue": [
@@ -397,9 +398,9 @@
   ],
   "last_gazette_day": 75,
   "llm_budget": {
-    "day": 80,
+    "day": 81,
     "spent": {
-      "llama-3.1-8b-instant": 13813
+      "llama-3.1-8b-instant": 8231
     }
   }
 }
