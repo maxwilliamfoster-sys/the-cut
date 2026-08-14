@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 330,
-  "last_beat_at": "2026-08-14T20:12:12Z",
+  "beat": 333,
+  "last_beat_at": "2026-08-14T20:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 27,
-    "delmar": 70,
+    "riverside": 24,
+    "delmar": 67,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "simone",
+        "okafor"
+      ],
+      "text": "Somebody tells Simone Adeyemi that Chinedu Okafor has been seen talking to police."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -363,30 +388,6 @@
       },
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "tiny"
-      ],
-      "text": "Something pays out for Tiny Reyes. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -397,11 +398,9 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 75,
+  "last_gazette_day": 82,
   "llm_budget": {
-    "day": 82,
-    "spent": {
-      "llama-3.1-8b-instant": 8681
-    }
+    "day": 83,
+    "spent": {}
   }
 }
