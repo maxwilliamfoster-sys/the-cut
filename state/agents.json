@@ -14,7 +14,7 @@
       "exhausted in a way he hides",
       "loyal past the point of sense"
     ],
-    "ambition": "restore my reputation",
+    "ambition": "restore my reputation, no matter the cost",
     "private_fear": "that he has already become his father",
     "voice": "quiet, economical, never repeats himself",
     "routine": {
@@ -24,8 +24,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      21,
-      17
+      18,
+      21
     ],
     "dest": [
       22,
@@ -33,20 +33,20 @@
     ],
     "at": "laundromat",
     "spot": [
-      21,
-      17
+      18,
+      21
     ],
     "mood": {
       "energy": 6,
-      "happiness": 61,
-      "stress": 87,
-      "social_need": 12,
-      "fear": 14
+      "happiness": 37,
+      "stress": 98,
+      "social_need": 24,
+      "fear": 10
     },
     "relationships": {
       "malik": {
-        "affinity": -78,
-        "opinion": "Malik is plotting against me"
+        "affinity": -86,
+        "opinion": "betrayed me"
       },
       "ruiz": {
         "affinity": -59,
@@ -297,10 +297,10 @@
         "importance": 6
       },
       {
-        "beat": 287,
-        "day": 71,
+        "beat": 291,
+        "day": 72,
         "what": "I have lost my reputation, but I will restore it",
-        "importance": 8
+        "importance": 10
       },
       {
         "beat": 255,
@@ -319,36 +319,26 @@
         "day": 68,
         "what": "I am respected for who I am",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "my reputation is irrevocably damaged",
+        "importance": 8
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "counting the float",
+    "activity": "counting the float",
     "thought": "",
     "speech": null,
     "path": [
       [
-        23,
-        19
-      ],
-      [
-        22,
-        19
-      ],
-      [
-        21,
-        19
-      ],
-      [
-        21,
-        18
-      ],
-      [
-        21,
-        17
+        18,
+        21
       ]
     ],
-    "last_thought_beat": 288,
-    "belief": "I have lost my reputation, but I will restore it"
+    "last_thought_beat": 291,
+    "belief": "my reputation is irrevocably damaged"
   },
   "malik": {
     "id": "malik",
@@ -375,7 +365,7 @@
       "night": "lot"
     },
     "pos": [
-      22,
+      19,
       52
     ],
     "dest": [
@@ -384,12 +374,12 @@
     ],
     "at": "terrace_b",
     "spot": [
-      22,
+      19,
       52
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 100,
       "fear": 100
@@ -397,7 +387,7 @@
     "relationships": {
       "dez": {
         "affinity": -100,
-        "opinion": "deceptive"
+        "opinion": "manipulative"
       },
       "rosa": {
         "affinity": 55,
@@ -936,32 +926,56 @@
         "day": 71,
         "what": "dez is playing me",
         "importance": 8
+      },
+      {
+        "beat": 290,
+        "day": 72,
+        "what": "Dez said I'm not the kid he used to know, and I couldn't believe him",
+        "importance": 7
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Dez no longer trusts me, and I've lost his respect",
+        "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
-    "activity": "sitting down for a minute",
+    "action": "sitting down for a minute, listening to the rain",
+    "activity": "sitting down for a minute, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
       [
-        19,
-        52
+        24,
+        53
       ],
       [
-        20,
-        52
-      ],
-      [
-        21,
-        52
+        23,
+        53
       ],
       [
         22,
+        53
+      ],
+      [
+        21,
+        53
+      ],
+      [
+        20,
+        53
+      ],
+      [
+        19,
+        53
+      ],
+      [
+        19,
         52
       ]
     ],
-    "last_thought_beat": 288,
-    "belief": "Dez and Lyle are conspiring against me"
+    "last_thought_beat": 291,
+    "belief": "Dez no longer trusts me, and I've lost his respect"
   },
   "ruiz": {
     "id": "ruiz",
@@ -988,8 +1002,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      35,
-      34
+      36,
+      35
     ],
     "dest": [
       6,
@@ -997,13 +1011,13 @@
     ],
     "at": "diner",
     "spot": [
-      35,
-      34
+      36,
+      35
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 83,
+      "happiness": 32,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -1301,12 +1315,16 @@
     "speech": null,
     "path": [
       [
-        4,
-        65
+        8,
+        66
       ],
       [
-        5,
-        65
+        7,
+        66
+      ],
+      [
+        6,
+        66
       ],
       [
         6,
@@ -1541,19 +1559,19 @@
         37
       ],
       [
-        35,
+        36,
+        37
+      ],
+      [
+        36,
         36
       ],
       [
-        35,
+        36,
         35
-      ],
-      [
-        35,
-        34
       ]
     ],
-    "last_thought_beat": 288,
+    "last_thought_beat": 291,
     "belief": "Booker is trying to corrupt me"
   },
   "kohl": {
@@ -1595,7 +1613,7 @@
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 0,
       "fear": 100
@@ -1623,7 +1641,7 @@
       },
       "malik": {
         "affinity": -100,
-        "opinion": "guilty"
+        "opinion": "is in trouble"
       },
       "rey": {
         "affinity": -23,
@@ -1922,8 +1940,8 @@
         "importance": 8
       },
       {
-        "beat": 283,
-        "day": 70,
+        "beat": 290,
+        "day": 72,
         "what": "Lyle's smile when he handed me the envelope makes my stomach hurt",
         "importance": 10
       },
@@ -2063,6 +2081,12 @@
         "beat": 283,
         "day": 70,
         "what": "Lyle's out to get me, I'm in danger",
+        "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Lyle's set a trap for me, and I'm walking into danger",
         "importance": 8
       }
     ],
@@ -2256,8 +2280,8 @@
         33
       ]
     ],
-    "last_thought_beat": 288,
-    "belief": "Lyle is using me for something"
+    "last_thought_beat": 291,
+    "belief": "Lyle's set a trap for me, and I'm walking into danger"
   },
   "ivy": {
     "id": "ivy",
@@ -2284,8 +2308,8 @@
       "night": "cornerstore"
     },
     "pos": [
-      3,
-      32
+      7,
+      36
     ],
     "dest": [
       6,
@@ -2293,13 +2317,13 @@
     ],
     "at": "cornerstore",
     "spot": [
-      3,
-      32
+      7,
+      36
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 83,
+      "happiness": 32,
+      "stress": 91,
       "social_need": 0,
       "fear": 10
     },
@@ -2573,14 +2597,30 @@
         "importance": 8
       }
     ],
-    "action": "signing for a delivery",
-    "activity": "signing for a delivery",
+    "action": "restocking shelves",
+    "activity": "restocking shelves",
     "thought": "",
     "speech": null,
     "path": [
       [
-        3,
-        32
+        8,
+        33
+      ],
+      [
+        7,
+        33
+      ],
+      [
+        7,
+        34
+      ],
+      [
+        7,
+        35
+      ],
+      [
+        7,
+        36
       ]
     ],
     "last_thought_beat": 285,
@@ -2611,8 +2651,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      24,
-      37
+      18,
+      35
     ],
     "dest": [
       21,
@@ -2620,13 +2660,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      24,
-      37
+      18,
+      35
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 85,
+      "happiness": 32,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -2641,7 +2681,7 @@
       },
       "amara": {
         "affinity": 100,
-        "opinion": "Amara is ambitious"
+        "opinion": "ambitious"
       },
       "nadia": {
         "affinity": 6,
@@ -2840,8 +2880,8 @@
         "importance": 8
       },
       {
-        "beat": 287,
-        "day": 71,
+        "beat": 291,
+        "day": 72,
         "what": "It's time for Amara to take over my responsibilities",
         "importance": 8
       },
@@ -2850,20 +2890,26 @@
         "day": 68,
         "what": "it's time for a change",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "I'll retire and let the next generation take over.",
+        "importance": 10
       }
     ],
-    "action": "pouring for somebody",
-    "activity": "pouring for somebody",
+    "action": "clearing tables",
+    "activity": "clearing tables",
     "thought": "",
     "speech": null,
     "path": [
       [
-        24,
-        37
+        18,
+        35
       ]
     ],
-    "last_thought_beat": 287,
-    "belief": "it's time for Amara to take over"
+    "last_thought_beat": 291,
+    "belief": "it's time for Amara to take over my responsibilities, and I'll retire"
   },
   "simone": {
     "id": "simone",
@@ -2890,8 +2936,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      24,
-      63
+      20,
+      64
     ],
     "dest": [
       21,
@@ -2899,13 +2945,13 @@
     ],
     "at": "clinic",
     "spot": [
-      24,
-      63
+      20,
+      64
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 85,
+      "happiness": 32,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -3169,8 +3215,8 @@
         "importance": 8
       },
       {
-        "beat": 283,
-        "day": 70,
+        "beat": 290,
+        "day": 72,
         "what": "speaking truth to power is empowering",
         "importance": 8
       }
@@ -3183,9 +3229,29 @@
       [
         24,
         63
+      ],
+      [
+        23,
+        63
+      ],
+      [
+        22,
+        63
+      ],
+      [
+        21,
+        63
+      ],
+      [
+        20,
+        63
+      ],
+      [
+        20,
+        64
       ]
     ],
-    "last_thought_beat": 287,
+    "last_thought_beat": 291,
     "belief": "speaking truth to power is empowering"
   },
   "rey": {
@@ -3213,8 +3279,8 @@
       "night": "vasquez"
     },
     "pos": [
-      48,
-      63
+      47,
+      64
     ],
     "dest": [
       50,
@@ -3222,12 +3288,12 @@
     ],
     "at": "autoshop",
     "spot": [
-      48,
-      63
+      47,
+      64
     ],
     "mood": {
       "energy": 12,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 24,
       "fear": 100
@@ -3558,8 +3624,8 @@
         "importance": 8
       },
       {
-        "beat": 283,
-        "day": 70,
+        "beat": 290,
+        "day": 72,
         "what": "My wife's love is my strength, and my duty.",
         "importance": 10
       },
@@ -3660,37 +3726,25 @@
         "importance": 8
       }
     ],
-    "action": "restocking shelves",
-    "activity": "restocking shelves",
+    "action": "counting the float",
+    "activity": "counting the float",
     "thought": "",
     "speech": null,
     "path": [
       [
-        46,
-        66
+        48,
+        63
       ],
       [
         47,
-        66
-      ],
-      [
-        48,
-        66
-      ],
-      [
-        48,
-        65
-      ],
-      [
-        48,
-        64
-      ],
-      [
-        48,
         63
+      ],
+      [
+        47,
+        64
       ]
     ],
-    "last_thought_beat": 288,
+    "last_thought_beat": 291,
     "belief": "Dez and Lyle are conspiring against me"
   },
   "nadia": {
@@ -3718,8 +3772,8 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      32
+      35,
+      36
     ],
     "dest": [
       34,
@@ -3727,13 +3781,13 @@
     ],
     "at": "diner",
     "spot": [
-      31,
-      32
+      35,
+      36
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 43,
+      "happiness": 32,
+      "stress": 51,
       "social_need": 0,
       "fear": 10
     },
@@ -3987,14 +4041,30 @@
         "importance": 8
       }
     ],
-    "action": "waiting to be served",
-    "activity": "waiting to be served",
+    "action": "in the chair",
+    "activity": "in the chair",
     "thought": "",
     "speech": null,
     "path": [
       [
-        35,
-        63
+        33,
+        67
+      ],
+      [
+        34,
+        67
+      ],
+      [
+        34,
+        66
+      ],
+      [
+        34,
+        65
+      ],
+      [
+        34,
+        64
       ],
       [
         34,
@@ -4137,36 +4207,12 @@
         37
       ],
       [
-        33,
+        35,
         37
       ],
       [
-        32,
-        37
-      ],
-      [
-        31,
-        37
-      ],
-      [
-        31,
+        35,
         36
-      ],
-      [
-        31,
-        35
-      ],
-      [
-        31,
-        34
-      ],
-      [
-        31,
-        33
-      ],
-      [
-        31,
-        32
       ]
     ],
     "last_thought_beat": 288,
@@ -4197,8 +4243,8 @@
       "night": "pawnshop"
     },
     "pos": [
-      53,
-      34
+      46,
+      32
     ],
     "dest": [
       50,
@@ -4206,13 +4252,13 @@
     ],
     "at": "pawnshop",
     "spot": [
-      53,
-      34
+      46,
+      32
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 58,
+      "happiness": 32,
+      "stress": 66,
       "social_need": 0,
       "fear": 10
     },
@@ -4410,50 +4456,14 @@
         "importance": 8
       }
     ],
-    "action": "restocking shelves, keeping warm",
-    "activity": "restocking shelves, keeping warm",
+    "action": "counting the float",
+    "activity": "counting the float",
     "thought": "",
     "speech": null,
     "path": [
       [
         46,
         32
-      ],
-      [
-        47,
-        32
-      ],
-      [
-        48,
-        32
-      ],
-      [
-        49,
-        32
-      ],
-      [
-        50,
-        32
-      ],
-      [
-        51,
-        32
-      ],
-      [
-        52,
-        32
-      ],
-      [
-        53,
-        32
-      ],
-      [
-        53,
-        33
-      ],
-      [
-        53,
-        34
       ]
     ],
     "last_thought_beat": 286,
@@ -4484,8 +4494,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      31,
-      32
+      30,
+      34
     ],
     "dest": [
       34,
@@ -4493,12 +4503,12 @@
     ],
     "at": "diner",
     "spot": [
-      31,
-      32
+      30,
+      34
     ],
     "mood": {
       "energy": 8,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 0,
       "fear": 100
@@ -4979,8 +4989,8 @@
         "importance": 8
       },
       {
-        "beat": 285,
-        "day": 71,
+        "beat": 291,
+        "day": 72,
         "what": "Mom says I'll never escape this cycle, and I think she's right.",
         "importance": 10
       },
@@ -5025,20 +5035,38 @@
         "day": 70,
         "what": "escape is impossible, I'm trapped",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "I'm trapped in this cycle and there's no escape",
+        "importance": 8
       }
     ],
-    "action": "wiping down the counter, keeping warm",
-    "activity": "wiping down the counter, keeping warm",
+    "action": "restocking the back bar",
+    "activity": "restocking the back bar",
     "thought": "",
     "speech": null,
     "path": [
       [
         31,
         32
+      ],
+      [
+        30,
+        32
+      ],
+      [
+        30,
+        33
+      ],
+      [
+        30,
+        34
       ]
     ],
-    "last_thought_beat": 288,
-    "belief": "I'll never escape this cycle"
+    "last_thought_beat": 291,
+    "belief": "I'm trapped in this cycle and there's no escape"
   },
   "cass": {
     "id": "cass",
@@ -5076,8 +5104,8 @@
     "spot": null,
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 35,
+      "happiness": 32,
+      "stress": 43,
       "social_need": 0,
       "fear": 10
     },
@@ -5658,8 +5686,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      62,
-      52
+      65,
+      49
     ],
     "dest": [
       62,
@@ -5667,13 +5695,13 @@
     ],
     "at": "okonkwo",
     "spot": [
-      62,
-      52
+      65,
+      49
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 42,
+      "happiness": 32,
+      "stress": 50,
       "social_need": 12,
       "fear": 10
     },
@@ -5721,8 +5749,8 @@
         "importance": 8
       }
     ],
-    "action": "folding laundry",
-    "activity": "folding laundry",
+    "action": "on hold with somebody",
+    "activity": "on hold with somebody",
     "thought": "",
     "speech": null,
     "path": [
@@ -5871,12 +5899,28 @@
         53
       ],
       [
-        62,
+        64,
         53
       ],
       [
-        62,
+        65,
+        53
+      ],
+      [
+        65,
         52
+      ],
+      [
+        65,
+        51
+      ],
+      [
+        65,
+        50
+      ],
+      [
+        65,
+        49
       ]
     ],
     "last_thought_beat": 286,
@@ -5907,8 +5951,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      84,
-      51
+      82,
+      49
     ],
     "dest": [
       34,
@@ -5916,13 +5960,13 @@
     ],
     "at": "green",
     "spot": [
-      84,
-      51
+      82,
+      49
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -6226,52 +6270,52 @@
         61
       ],
       [
-        83,
-        61
-      ],
-      [
-        84,
-        61
-      ],
-      [
-        84,
+        82,
         60
       ],
       [
-        84,
+        82,
         59
       ],
       [
-        84,
+        82,
         58
       ],
       [
-        84,
+        82,
         57
       ],
       [
-        84,
+        82,
         56
       ],
       [
-        84,
+        82,
         55
       ],
       [
-        84,
+        82,
         54
       ],
       [
-        84,
+        82,
         53
       ],
       [
-        84,
+        82,
         52
       ],
       [
-        84,
+        82,
         51
+      ],
+      [
+        82,
+        50
+      ],
+      [
+        82,
+        49
       ]
     ],
     "last_thought_beat": 288
@@ -6301,8 +6345,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      61,
-      18
+      63,
+      19
     ],
     "dest": [
       63,
@@ -6310,13 +6354,13 @@
     ],
     "at": "cannery",
     "spot": [
-      61,
-      18
+      63,
+      19
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 38,
+      "happiness": 32,
+      "stress": 46,
       "social_need": 0,
       "fear": 10
     },
@@ -6346,8 +6390,8 @@
         "importance": 3
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "shifting crates",
+    "activity": "shifting crates",
     "thought": "",
     "speech": null,
     "path": [
@@ -6356,16 +6400,20 @@
         21
       ],
       [
-        61,
+        62,
+        21
+      ],
+      [
+        63,
+        21
+      ],
+      [
+        63,
         20
       ],
       [
-        61,
+        63,
         19
-      ],
-      [
-        61,
-        18
       ]
     ],
     "last_thought_beat": 282
@@ -6394,22 +6442,19 @@
       "night": "terrace_b"
     },
     "pos": [
-      76,
-      52
+      79,
+      51
     ],
     "dest": [
       34,
       63
     ],
     "at": "green",
-    "spot": [
-      76,
-      52
-    ],
+    "spot": null,
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -6435,26 +6480,22 @@
         "importance": 3
       }
     ],
-    "action": "sheltering from the weather",
-    "activity": "sheltering from the weather",
+    "action": "watching the street",
+    "activity": "watching the street",
     "thought": "",
     "speech": null,
     "path": [
       [
-        30,
-        66
+        36,
+        67
       ],
       [
-        31,
-        66
+        35,
+        67
       ],
       [
-        32,
-        66
-      ],
-      [
-        33,
-        66
+        34,
+        67
       ],
       [
         34,
@@ -6649,40 +6690,56 @@
         61
       ],
       [
-        76,
+        77,
+        61
+      ],
+      [
+        78,
+        61
+      ],
+      [
+        79,
+        61
+      ],
+      [
+        79,
         60
       ],
       [
-        76,
+        79,
         59
       ],
       [
-        76,
+        79,
         58
       ],
       [
-        76,
+        79,
         57
       ],
       [
-        76,
+        79,
         56
       ],
       [
-        76,
+        79,
         55
       ],
       [
-        76,
+        79,
         54
       ],
       [
-        76,
+        79,
         53
       ],
       [
-        76,
+        79,
         52
+      ],
+      [
+        79,
+        51
       ]
     ],
     "last_thought_beat": 276
@@ -6712,8 +6769,8 @@
       "night": "vasquez"
     },
     "pos": [
-      76,
-      32
+      77,
+      36
     ],
     "dest": [
       33,
@@ -6721,13 +6778,13 @@
     ],
     "at": "bodega",
     "spot": [
-      76,
-      32
+      77,
+      36
     ],
     "mood": {
       "energy": 80,
-      "happiness": 61,
-      "stress": 33,
+      "happiness": 37,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -6757,18 +6814,14 @@
         "importance": 3
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "queueing",
+    "activity": "queueing",
     "thought": "",
     "speech": null,
     "path": [
       [
-        35,
-        49
-      ],
-      [
-        34,
-        49
+        33,
+        48
       ],
       [
         33,
@@ -7043,24 +7096,12 @@
         37
       ],
       [
-        76,
+        77,
+        37
+      ],
+      [
+        77,
         36
-      ],
-      [
-        76,
-        35
-      ],
-      [
-        76,
-        34
-      ],
-      [
-        76,
-        33
-      ],
-      [
-        76,
-        32
       ]
     ],
     "last_thought_beat": 288
@@ -7104,8 +7145,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 39,
+      "happiness": 32,
+      "stress": 47,
       "social_need": 0,
       "fear": 10
     },
@@ -7149,8 +7190,24 @@
     "speech": null,
     "path": [
       [
-        3,
-        32
+        8,
+        33
+      ],
+      [
+        7,
+        33
+      ],
+      [
+        6,
+        33
+      ],
+      [
+        5,
+        33
+      ],
+      [
+        4,
+        33
       ],
       [
         3,
@@ -7187,8 +7244,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      22,
-      33
+      24,
+      37
     ],
     "dest": [
       21,
@@ -7196,13 +7253,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      22,
-      33
+      24,
+      37
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 58,
+      "happiness": 32,
+      "stress": 66,
       "social_need": 0,
       "fear": 10
     },
@@ -7262,38 +7319,38 @@
         "importance": 8
       }
     ],
-    "action": "clearing tables, keeping warm",
-    "activity": "clearing tables, keeping warm",
+    "action": "wiping down the counter",
+    "activity": "wiping down the counter",
     "thought": "",
     "speech": null,
     "path": [
       [
-        24,
-        37
+        22,
+        33
       ],
       [
         23,
-        37
+        33
       ],
       [
-        22,
-        37
+        24,
+        33
       ],
       [
-        22,
-        36
-      ],
-      [
-        22,
-        35
-      ],
-      [
-        22,
+        24,
         34
       ],
       [
-        22,
-        33
+        24,
+        35
+      ],
+      [
+        24,
+        36
+      ],
+      [
+        24,
+        37
       ]
     ],
     "last_thought_beat": 287,
@@ -7337,7 +7394,7 @@
     ],
     "mood": {
       "energy": 12,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 0,
       "fear": 100
@@ -7744,8 +7801,8 @@
         "importance": 8
       },
       {
-        "beat": 283,
-        "day": 70,
+        "beat": 290,
+        "day": 72,
         "what": "Booker's intentions are not pure",
         "importance": 8
       },
@@ -7778,20 +7835,38 @@
         "day": 71,
         "what": "Booker is not trustworthy",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Booker's intentions are not pure, and a danger to others",
+        "importance": 8
       }
     ],
-    "action": "pouring for somebody",
-    "activity": "pouring for somebody",
+    "action": "wiping down the counter",
+    "activity": "wiping down the counter",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        30,
+        34
+      ],
+      [
+        31,
+        34
+      ],
+      [
+        31,
+        33
+      ],
       [
         31,
         32
       ]
     ],
-    "last_thought_beat": 287,
-    "belief": "Booker is not trustworthy"
+    "last_thought_beat": 291,
+    "belief": "Booker's intentions are not pure, and a danger to others"
   },
   "dot": {
     "id": "dot",
@@ -7832,8 +7907,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 85,
+      "happiness": 32,
+      "stress": 98,
       "social_need": 24,
       "fear": 10
     },
@@ -7909,8 +7984,8 @@
         "importance": 8
       },
       {
-        "beat": 275,
-        "day": 68,
+        "beat": 290,
+        "day": 72,
         "what": "Booker's smile hides something sinister.",
         "importance": 8
       },
@@ -7937,6 +8012,12 @@
         "day": 68,
         "what": "some people are out to get me",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Booker's intentions are sinister, and a threat to me",
+        "importance": 8
       }
     ],
     "action": "sitting down for a minute",
@@ -7945,28 +8026,12 @@
     "speech": null,
     "path": [
       [
-        78,
-        17
-      ],
-      [
-        79,
-        17
-      ],
-      [
-        79,
-        18
-      ],
-      [
-        79,
-        19
-      ],
-      [
         79,
         20
       ]
     ],
-    "last_thought_beat": 275,
-    "belief": "some people are out to get me"
+    "last_thought_beat": 290,
+    "belief": "Booker's intentions are sinister, and a threat to me"
   },
   "wes": {
     "id": "wes",
@@ -7993,7 +8058,7 @@
     },
     "pos": [
       46,
-      36
+      32
     ],
     "dest": [
       50,
@@ -8002,11 +8067,11 @@
     "at": "pawnshop",
     "spot": [
       46,
-      36
+      32
     ],
     "mood": {
       "energy": 48,
-      "happiness": 50,
+      "happiness": 32,
       "stress": 100,
       "social_need": 0,
       "fear": 100
@@ -8025,8 +8090,8 @@
         "opinion": "incompetent"
       },
       "malik": {
-        "affinity": -79,
-        "opinion": "guilty"
+        "affinity": -87,
+        "opinion": "is in trouble"
       },
       "priya": {
         "affinity": 5,
@@ -8241,8 +8306,8 @@
         "importance": 8
       },
       {
-        "beat": 287,
-        "day": 71,
+        "beat": 290,
+        "day": 72,
         "what": "Lyle handed me an envelope and smiled, his eyes seemed cold.",
         "importance": 9
       },
@@ -8377,10 +8442,16 @@
         "day": 71,
         "what": "Lyle is a threat",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Lyle's handed me a warning, and I need to be cautious",
+        "importance": 8
       }
     ],
-    "action": "signing for a delivery, keeping warm",
-    "activity": "signing for a delivery, keeping warm",
+    "action": "watching the door, listening to the rain",
+    "activity": "watching the door, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
@@ -8410,15 +8481,15 @@
       ],
       [
         46,
-        35
+        33
       ],
       [
         46,
-        36
+        32
       ]
     ],
-    "last_thought_beat": 287,
-    "belief": "Lyle is a threat"
+    "last_thought_beat": 291,
+    "belief": "Lyle's handed me a warning, and I need to be cautious"
   },
   "okafor": {
     "id": "okafor",
@@ -8445,8 +8516,8 @@
       "night": "bodega"
     },
     "pos": [
-      77,
-      34
+      76,
+      32
     ],
     "dest": [
       76,
@@ -8454,13 +8525,13 @@
     ],
     "at": "bodega",
     "spot": [
-      77,
-      34
+      76,
+      32
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 39,
+      "happiness": 32,
+      "stress": 47,
       "social_need": 82,
       "fear": 10
     },
@@ -8471,8 +8542,8 @@
       }
     },
     "memories": [],
-    "action": "restocking shelves",
-    "activity": "restocking shelves",
+    "action": "restocking shelves, listening to the rain",
+    "activity": "restocking shelves, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
@@ -8481,12 +8552,24 @@
         36
       ],
       [
-        77,
+        76,
+        36
+      ],
+      [
+        76,
         35
       ],
       [
-        77,
+        76,
         34
+      ],
+      [
+        76,
+        33
+      ],
+      [
+        76,
+        32
       ]
     ],
     "last_thought_beat": 275
@@ -8517,7 +8600,7 @@
     },
     "pos": [
       4,
-      68
+      65
     ],
     "dest": [
       6,
@@ -8526,12 +8609,12 @@
     "at": "precinct",
     "spot": [
       4,
-      68
+      65
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 60,
+      "happiness": 32,
+      "stress": 88,
       "social_need": 12,
       "fear": 10
     },
@@ -8569,8 +8652,8 @@
         "opinion": "unwavering"
       },
       "malik": {
-        "affinity": -24,
-        "opinion": "not to be trusted"
+        "affinity": -32,
+        "opinion": "is hiding something"
       }
     },
     "memories": [
@@ -8605,8 +8688,8 @@
         "importance": 8
       },
       {
-        "beat": 263,
-        "day": 65,
+        "beat": 290,
+        "day": 72,
         "what": "Lyle is hiding something, needs to be watched",
         "importance": 8
       },
@@ -8614,6 +8697,12 @@
         "beat": 275,
         "day": 68,
         "what": "they want to bring me down through my daughter",
+        "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Lyle has a hidden agenda, needs to be watched",
         "importance": 8
       }
     ],
@@ -8623,24 +8712,8 @@
     "speech": null,
     "path": [
       [
-        8,
-        66
-      ],
-      [
-        7,
-        66
-      ],
-      [
-        6,
-        66
-      ],
-      [
-        5,
-        66
-      ],
-      [
         4,
-        66
+        68
       ],
       [
         4,
@@ -8648,11 +8721,15 @@
       ],
       [
         4,
-        68
+        66
+      ],
+      [
+        4,
+        65
       ]
     ],
-    "last_thought_beat": 274,
-    "belief": "they want to bring me down through my daughter"
+    "last_thought_beat": 290,
+    "belief": "Lyle has a hidden agenda, needs to be watched"
   },
   "yusuf": {
     "id": "yusuf",
@@ -8679,8 +8756,8 @@
       "night": "riverflats"
     },
     "pos": [
-      20,
-      64
+      24,
+      68
     ],
     "dest": [
       21,
@@ -8688,13 +8765,13 @@
     ],
     "at": "clinic",
     "spot": [
-      20,
-      64
+      24,
+      68
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -8730,16 +8807,24 @@
     "speech": null,
     "path": [
       [
-        22,
-        64
-      ],
-      [
         21,
-        64
+        67
       ],
       [
-        20,
-        64
+        22,
+        67
+      ],
+      [
+        23,
+        67
+      ],
+      [
+        24,
+        67
+      ],
+      [
+        24,
+        68
       ]
     ],
     "last_thought_beat": 286
@@ -8768,8 +8853,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      35,
-      63
+      34,
+      66
     ],
     "dest": [
       34,
@@ -8777,13 +8862,13 @@
     ],
     "at": "school",
     "spot": [
-      35,
-      63
+      34,
+      66
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 12,
       "fear": 10
     },
@@ -8809,38 +8894,26 @@
         "importance": 3
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
+    "action": "filing paperwork",
+    "activity": "filing paperwork",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
-        67
+        34,
+        63
       ],
       [
         34,
-        67
-      ],
-      [
-        35,
-        67
-      ],
-      [
-        35,
-        66
-      ],
-      [
-        35,
-        65
-      ],
-      [
-        35,
         64
       ],
       [
-        35,
-        63
+        34,
+        65
+      ],
+      [
+        34,
+        66
       ]
     ],
     "last_thought_beat": 288
@@ -8869,8 +8942,8 @@
       "night": "church"
     },
     "pos": [
-      64,
-      34
+      61,
+      32
     ],
     "dest": [
       62,
@@ -8878,13 +8951,13 @@
     ],
     "at": "church",
     "spot": [
-      64,
-      34
+      61,
+      32
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 94,
       "fear": 10
     },
@@ -8912,38 +8985,14 @@
         "importance": 6
       }
     ],
-    "action": "filing paperwork, keeping warm",
-    "activity": "filing paperwork, keeping warm",
+    "action": "on the phone",
+    "activity": "on the phone",
     "thought": "",
     "speech": null,
     "path": [
       [
-        59,
-        33
-      ],
-      [
-        60,
-        33
-      ],
-      [
         61,
-        33
-      ],
-      [
-        62,
-        33
-      ],
-      [
-        63,
-        33
-      ],
-      [
-        64,
-        33
-      ],
-      [
-        64,
-        34
+        32
       ]
     ],
     "last_thought_beat": 252
@@ -8973,8 +9022,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      82,
-      66
+      73,
+      63
     ],
     "dest": [
       78,
@@ -8982,13 +9031,13 @@
     ],
     "at": "depot",
     "spot": [
-      82,
-      66
+      73,
+      63
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 27,
+      "happiness": 32,
+      "stress": 35,
       "social_need": 24,
       "fear": 10
     },
@@ -9024,42 +9073,26 @@
         "importance": 8
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "running the machine",
+    "activity": "running the machine",
     "thought": "",
     "speech": null,
     "path": [
       [
-        76,
-        67
+        74,
+        65
       ],
       [
-        77,
-        67
+        73,
+        65
       ],
       [
-        78,
-        67
+        73,
+        64
       ],
       [
-        79,
-        67
-      ],
-      [
-        80,
-        67
-      ],
-      [
-        81,
-        67
-      ],
-      [
-        82,
-        67
-      ],
-      [
-        82,
-        66
+        73,
+        63
       ]
     ],
     "last_thought_beat": 283,
@@ -9090,7 +9123,7 @@
     },
     "pos": [
       61,
-      18
+      16
     ],
     "dest": [
       63,
@@ -9099,12 +9132,12 @@
     "at": "cannery",
     "spot": [
       61,
-      18
+      16
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 49,
+      "happiness": 32,
+      "stress": 57,
       "social_need": 0,
       "fear": 10
     },
@@ -9142,8 +9175,8 @@
         "importance": 4
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "running the machine",
+    "activity": "running the machine",
     "thought": "",
     "speech": null,
     "path": [
@@ -9170,6 +9203,14 @@
       [
         61,
         18
+      ],
+      [
+        61,
+        17
+      ],
+      [
+        61,
+        16
       ]
     ],
     "last_thought_beat": 281
@@ -9210,8 +9251,8 @@
     "spot": null,
     "mood": {
       "energy": 16,
-      "happiness": 50,
-      "stress": 80,
+      "happiness": 32,
+      "stress": 98,
       "social_need": 82,
       "fear": 10
     },
@@ -9317,8 +9358,8 @@
         "importance": 8
       },
       {
-        "beat": 287,
-        "day": 71,
+        "beat": 290,
+        "day": 72,
         "what": "Marcus gave me a cup of coffee on the coldest night of the year.",
         "importance": 10
       },
@@ -9549,19 +9590,45 @@
         "day": 70,
         "what": "respect is hard to earn, but possible",
         "importance": 8
+      },
+      {
+        "beat": 291,
+        "day": 72,
+        "what": "Marcus showed me kindness, and I'm grateful",
+        "importance": 8
       }
     ],
-    "action": "kicking at the gravel",
-    "activity": "kicking at the gravel",
+    "action": "standing around",
+    "activity": "standing around",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        84,
+        51
+      ],
+      [
+        83,
+        51
+      ],
+      [
+        82,
+        51
+      ],
+      [
+        81,
+        51
+      ],
+      [
+        80,
+        51
+      ],
       [
         79,
         51
       ]
     ],
-    "last_thought_beat": 288,
-    "belief": "respect is hard to earn, but possible"
+    "last_thought_beat": 291,
+    "belief": "Marcus showed me kindness, and I'm grateful"
   }
 }

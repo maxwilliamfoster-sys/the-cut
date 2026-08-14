@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 289,
-  "last_beat_at": "2026-08-14T09:57:12Z",
+  "beat": 293,
+  "last_beat_at": "2026-08-14T10:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 43,
-    "terraces": 5,
+    "delmar": 39,
+    "terraces": 19,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -360,30 +384,6 @@
         "adaeze"
       ],
       "text": "Malik Reyes and Adaeze Okonkwo are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "femi",
-        "booker"
-      ],
-      "text": "Booker Lyle does Femi Adeyemi a favour that costs them something real."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -394,11 +394,9 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 71,
+  "last_gazette_day": 72,
   "llm_budget": {
-    "day": 72,
-    "spent": {
-      "llama-3.1-8b-instant": 4293
-    }
+    "day": 73,
+    "spent": {}
   }
 }
