@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 360,
-  "last_beat_at": "2026-08-15T03:42:12Z",
+  "beat": 362,
+  "last_beat_at": "2026-08-15T04:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 64,
+    "delmar": 62,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "dot",
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello does Dot Feeney a favour that costs them something real."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -359,32 +382,6 @@
         "dot"
       ],
       "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "tee",
-        "cass"
-      ],
-      "text": "Tariq 'Tee' Bello and Cass Deveaux are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "rey",
-        "sticks"
-      ],
-      "text": "Rey Vasquez and Sticks are seen arguing in the street loud enough that people stop."
     }
   ],
   "player_queue": [
@@ -398,6 +395,8 @@
   "last_gazette_day": 88,
   "llm_budget": {
     "day": 90,
-    "spent": {}
+    "spent": {
+      "llama-3.1-8b-instant": 4305
+    }
   }
 }
