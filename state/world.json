@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 411,
-  "last_beat_at": "2026-08-15T16:27:12Z",
+  "beat": 412,
+  "last_beat_at": "2026-08-15T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 55,
+    "delmar": 54,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "hector",
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz does Hector Delgado a favour that costs them something real."
+    },
     {
       "id": "power_cut",
       "heat": {
@@ -379,19 +392,6 @@
         "brennan"
       ],
       "text": "Something pays out for Sgt. Hal Brennan. More than expected, which is its own problem."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "malik",
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan does Malik Reyes a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -404,9 +404,9 @@
   ],
   "last_gazette_day": 99,
   "llm_budget": {
-    "day": 102,
+    "day": 103,
     "spent": {
-      "llama-3.1-8b-instant": 8837
+      "llama-3.1-8b-instant": 3958
     }
   }
 }
