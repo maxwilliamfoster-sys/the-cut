@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 433,
-  "last_beat_at": "2026-08-15T21:57:12Z",
+  "beat": 435,
+  "last_beat_at": "2026-08-15T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 45,
+    "delmar": 37,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
     {
       "id": "cold_case",
       "heat": {},
@@ -371,21 +382,6 @@
       },
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Gus Petrakis ends up at the clinic. The paperwork says one thing; the injury says another."
     }
   ],
   "player_queue": [
@@ -400,7 +396,7 @@
   "llm_budget": {
     "day": 108,
     "spent": {
-      "llama-3.1-8b-instant": 4097
+      "llama-3.1-8b-instant": 13647
     }
   }
 }
