@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 377,
-  "last_beat_at": "2026-08-15T07:57:12Z",
+  "beat": 380,
+  "last_beat_at": "2026-08-15T08:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 95,
+    "delmar": 92,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "priya",
+        "ivy"
+      ],
+      "text": "Ms. Ivy Calloway does Ms. Priya Raman a favour that costs them something real."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -362,31 +387,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "priya",
-        "yusuf"
-      ],
-      "text": "Dr. Yusuf Amin does Ms. Priya Raman a favour that costs them something real."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "tee"
-      ],
-      "text": "Tariq 'Tee' Bello gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -397,11 +397,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 93,
+  "last_gazette_day": 94,
   "llm_budget": {
-    "day": 94,
+    "day": 95,
     "spent": {
-      "llama-3.1-8b-instant": 3721
+      "llama-3.1-8b-instant": 4553
     }
   }
 }
