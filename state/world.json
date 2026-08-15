@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 373,
-  "last_beat_at": "2026-08-15T06:57:12Z",
+  "beat": 375,
+  "last_beat_at": "2026-08-15T07:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 99,
+    "delmar": 97,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Something pays out for Sgt. Hal Brennan. More than expected, which is its own problem."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "malik",
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan does Malik Reyes a favour that costs them something real."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -359,29 +384,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nadia"
-      ],
-      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -392,9 +394,12 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 92,
+  "last_gazette_day": 93,
   "llm_budget": {
     "day": 93,
-    "spent": {}
+    "spent": {
+      "llama-3.1-8b-instant": 10686,
+      "llama-3.3-70b-versatile": 767
+    }
   }
 }
