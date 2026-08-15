@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 429,
-  "last_beat_at": "2026-08-15T20:57:12Z",
+  "beat": 431,
+  "last_beat_at": "2026-08-15T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 49,
+    "delmar": 47,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,16 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -376,18 +386,6 @@
         "cass"
       ],
       "text": "Something pays out for Cass Deveaux. More than expected, which is its own problem."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -398,11 +396,12 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 105,
+  "last_gazette_day": 107,
   "llm_budget": {
     "day": 107,
     "spent": {
-      "llama-3.1-8b-instant": 4286
+      "llama-3.1-8b-instant": 14824,
+      "llama-3.3-70b-versatile": 802
     }
   }
 }
