@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 343,
-  "last_beat_at": "2026-08-14T23:27:12Z",
+  "beat": 345,
+  "last_beat_at": "2026-08-14T23:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 14,
-    "delmar": 57,
+    "riverside": 12,
+    "delmar": 49,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "nadia"
+      ],
+      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -366,32 +389,6 @@
         "chidi"
       ],
       "text": "Somebody tells Wes Doyle that Chidi Okonkwo has been seen talking to police."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "booker",
-        "simone"
-      ],
-      "text": "Somebody tells Booker Lyle that Simone Adeyemi has been seen talking to police."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "wes",
-        "priya"
-      ],
-      "text": "Wes Doyle and Ms. Priya Raman are seen arguing in the street loud enough that people stop."
     }
   ],
   "player_queue": [
@@ -404,10 +401,7 @@
   ],
   "last_gazette_day": 85,
   "llm_budget": {
-    "day": 85,
-    "spent": {
-      "llama-3.1-8b-instant": 15844,
-      "llama-3.3-70b-versatile": 761
-    }
+    "day": 86,
+    "spent": {}
   }
 }
