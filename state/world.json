@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 435,
-  "last_beat_at": "2026-08-15T22:27:12Z",
+  "beat": 437,
+  "last_beat_at": "2026-08-15T22:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 37,
+    "delmar": 35,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
     {
       "id": "power_cut",
       "heat": {
@@ -371,17 +382,6 @@
         "okafor"
       ],
       "text": "Something pays out for Chinedu Okafor. More than expected, which is its own problem."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -394,9 +394,9 @@
   ],
   "last_gazette_day": 107,
   "llm_budget": {
-    "day": 108,
+    "day": 109,
     "spent": {
-      "llama-3.1-8b-instant": 13647
+      "llama-3.1-8b-instant": 4717
     }
   }
 }
