@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 386,
-  "last_beat_at": "2026-08-15T10:12:12Z",
+  "beat": 388,
+  "last_beat_at": "2026-08-15T10:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 86,
+    "delmar": 84,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "dez",
+        "priya"
+      ],
+      "text": "Somebody tells Dez Okonkwo that Ms. Priya Raman has been seen talking to police."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -377,18 +390,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "simone"
-      ],
-      "text": "Something pays out for Simone Adeyemi. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -399,11 +400,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 94,
+  "last_gazette_day": 96,
   "llm_budget": {
-    "day": 96,
+    "day": 97,
     "spent": {
-      "llama-3.1-8b-instant": 12639
+      "llama-3.1-8b-instant": 4135
     }
   }
 }
