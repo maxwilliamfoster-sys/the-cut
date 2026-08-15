@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 439,
-  "last_beat_at": "2026-08-15T23:27:12Z",
+  "beat": 440,
+  "last_beat_at": "2026-08-15T23:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 33,
-    "terraces": 13,
+    "delmar": 32,
+    "terraces": 12,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,16 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
     {
       "id": "overdose",
       "heat": {
@@ -368,19 +378,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "chidi",
-        "priya"
-      ],
-      "text": "Chidi Okonkwo and Ms. Priya Raman are seen arguing in the street loud enough that people stop."
     }
   ],
   "player_queue": [
@@ -393,9 +390,9 @@
   ],
   "last_gazette_day": 107,
   "llm_budget": {
-    "day": 109,
+    "day": 110,
     "spent": {
-      "llama-3.1-8b-instant": 9439
+      "llama-3.1-8b-instant": 4529
     }
   }
 }
