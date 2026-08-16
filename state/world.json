@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 530,
-  "last_beat_at": "2026-08-16T22:12:12Z",
+  "beat": 532,
+  "last_beat_at": "2026-08-16T22:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 14,
-    "delmar": 59,
+    "riverside": 12,
+    "delmar": 57,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "wes",
+        "cass"
+      ],
+      "text": "Wes Doyle and Cass Deveaux are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -369,21 +382,6 @@
         "simone"
       ],
       "text": "Adaeze Okonkwo and Simone Adeyemi are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "booker"
-      ],
-      "text": "Booker Lyle ends up at the clinic. The paperwork says one thing; the injury says another."
     }
   ],
   "player_queue": [
@@ -396,9 +394,7 @@
   ],
   "last_gazette_day": 128,
   "llm_budget": {
-    "day": 132,
-    "spent": {
-      "llama-3.1-8b-instant": 8628
-    }
+    "day": 133,
+    "spent": {}
   }
 }
