@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 511,
-  "last_beat_at": "2026-08-16T17:27:12Z",
+  "beat": 513,
+  "last_beat_at": "2026-08-16T17:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "rain",
   "heat": {
-    "riverside": 33,
-    "delmar": 42,
+    "riverside": 31,
+    "delmar": 40,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "junie",
+        "simone"
+      ],
+      "text": "Somebody tells Junie Marsh that Simone Adeyemi has been seen talking to police."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -372,18 +385,6 @@
       },
       "targets": [],
       "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -396,9 +397,9 @@
   ],
   "last_gazette_day": 124,
   "llm_budget": {
-    "day": 127,
+    "day": 128,
     "spent": {
-      "llama-3.1-8b-instant": 13605
+      "llama-3.1-8b-instant": 4421
     }
   }
 }
