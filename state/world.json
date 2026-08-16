@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 483,
-  "last_beat_at": "2026-08-16T10:27:12Z",
+  "beat": 485,
+  "last_beat_at": "2026-08-16T10:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "overcast",
   "heat": {
-    "riverside": 36,
-    "delmar": 26,
+    "riverside": 34,
+    "delmar": 36,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -367,30 +390,6 @@
         "cass"
       ],
       "text": "Somebody tells Marisol Vasquez that Cass Deveaux has been seen talking to police."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "marisol"
-      ],
-      "text": "Something pays out for Marisol Vasquez. More than expected, which is its own problem."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -403,10 +402,9 @@
   ],
   "last_gazette_day": 120,
   "llm_budget": {
-    "day": 120,
+    "day": 121,
     "spent": {
-      "llama-3.1-8b-instant": 14514,
-      "llama-3.3-70b-versatile": 756
+      "llama-3.1-8b-instant": 4784
     }
   }
 }
