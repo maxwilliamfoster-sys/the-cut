@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 487,
-  "last_beat_at": "2026-08-16T11:27:12Z",
+  "beat": 489,
+  "last_beat_at": "2026-08-16T11:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "rain",
   "heat": {
-    "riverside": 32,
-    "delmar": 34,
+    "riverside": 30,
+    "delmar": 32,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "marisol",
+        "dez"
+      ],
+      "text": "Somebody tells Marisol Vasquez that Dez Okonkwo has been seen talking to police."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -377,19 +390,6 @@
         "marcus"
       ],
       "text": "Marcus Calloway does Fr. Emmanuel Boateng a favour that costs them something real."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "marisol",
-        "cass"
-      ],
-      "text": "Somebody tells Marisol Vasquez that Cass Deveaux has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -402,9 +402,9 @@
   ],
   "last_gazette_day": 120,
   "llm_budget": {
-    "day": 121,
+    "day": 122,
     "spent": {
-      "llama-3.1-8b-instant": 13604
+      "llama-3.1-8b-instant": 3802
     }
   }
 }
