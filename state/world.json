@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 523,
-  "last_beat_at": "2026-08-16T20:27:12Z",
+  "beat": 525,
+  "last_beat_at": "2026-08-16T20:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 21,
-    "delmar": 36,
+    "riverside": 19,
+    "delmar": 40,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -372,18 +383,6 @@
       },
       "targets": [],
       "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back."
     }
   ],
   "player_queue": [
@@ -396,9 +395,9 @@
   ],
   "last_gazette_day": 128,
   "llm_budget": {
-    "day": 130,
+    "day": 131,
     "spent": {
-      "llama-3.1-8b-instant": 14186
+      "llama-3.1-8b-instant": 8683
     }
   }
 }
