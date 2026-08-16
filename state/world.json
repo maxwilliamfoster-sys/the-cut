@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 505,
-  "last_beat_at": "2026-08-16T15:57:12Z",
+  "beat": 507,
+  "last_beat_at": "2026-08-16T16:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 39,
-    "delmar": 30,
+    "riverside": 37,
+    "delmar": 34,
     "terraces": 5,
-    "civic": 10
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "adaeze",
+        "simone"
+      ],
+      "text": "Adaeze Okonkwo and Simone Adeyemi are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "hospital",
       "heat": {
@@ -360,32 +384,6 @@
         "amara"
       ],
       "text": "Something pays out for Amara Bello. More than expected, which is its own problem."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "brennan",
-        "tee"
-      ],
-      "text": "Sgt. Hal Brennan and Tariq 'Tee' Bello are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
     }
   ],
   "player_queue": [
@@ -400,7 +398,7 @@
   "llm_budget": {
     "day": 126,
     "spent": {
-      "llama-3.1-8b-instant": 4683
+      "llama-3.1-8b-instant": 9176
     }
   }
 }
