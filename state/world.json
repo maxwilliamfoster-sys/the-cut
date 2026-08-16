@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 476,
-  "last_beat_at": "2026-08-16T08:42:12Z",
+  "beat": 479,
+  "last_beat_at": "2026-08-16T09:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 18,
-    "delmar": 13,
-    "terraces": 6,
+    "riverside": 40,
+    "delmar": 18,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -382,16 +395,6 @@
         "brennan"
       ],
       "text": "Sgt. Hal Brennan ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
     }
   ],
   "player_queue": [
@@ -406,7 +409,7 @@
   "llm_budget": {
     "day": 119,
     "spent": {
-      "llama-3.1-8b-instant": 4258
+      "llama-3.1-8b-instant": 13891
     }
   }
 }
