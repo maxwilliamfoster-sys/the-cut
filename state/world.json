@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 534,
-  "last_beat_at": "2026-08-16T23:12:12Z",
+  "beat": 536,
+  "last_beat_at": "2026-08-16T23:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
-    "riverside": 10,
-    "delmar": 55,
+    "riverside": 8,
+    "delmar": 53,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -368,17 +379,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -391,9 +391,7 @@
   ],
   "last_gazette_day": 128,
   "llm_budget": {
-    "day": 133,
-    "spent": {
-      "llama-3.1-8b-instant": 9044
-    }
+    "day": 134,
+    "spent": {}
   }
 }
