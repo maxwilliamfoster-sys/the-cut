@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 452,
-  "last_beat_at": "2026-08-16T02:42:12Z",
+  "beat": 456,
+  "last_beat_at": "2026-08-16T03:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 20,
+    "delmar": 16,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "brennan",
+        "priya"
+      ],
+      "text": "Sgt. Hal Brennan and Ms. Priya Raman are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "dot"
+      ],
+      "text": "Something pays out for Dot Feeney. More than expected, which is its own problem."
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -360,27 +385,6 @@
         "ruiz"
       ],
       "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
     }
   ],
   "player_queue": [
@@ -391,9 +395,11 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 110,
+  "last_gazette_day": 113,
   "llm_budget": {
-    "day": 113,
-    "spent": {}
+    "day": 114,
+    "spent": {
+      "llama-3.1-8b-instant": 4423
+    }
   }
 }
