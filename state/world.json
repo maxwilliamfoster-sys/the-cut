@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 509,
-  "last_beat_at": "2026-08-16T16:57:12Z",
+  "beat": 511,
+  "last_beat_at": "2026-08-16T17:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "first snow",
   "heat": {
-    "riverside": 35,
-    "delmar": 44,
+    "riverside": 33,
+    "delmar": 42,
     "terraces": 5,
-    "civic": 6
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -372,17 +384,6 @@
         "malik"
       ],
       "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -397,7 +398,7 @@
   "llm_budget": {
     "day": 127,
     "spent": {
-      "llama-3.1-8b-instant": 3974
+      "llama-3.1-8b-instant": 13605
     }
   }
 }
