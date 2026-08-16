@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 456,
-  "last_beat_at": "2026-08-16T03:42:12Z",
+  "beat": 459,
+  "last_beat_at": "2026-08-16T04:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 16,
-    "terraces": 5,
+    "delmar": 13,
+    "terraces": 12,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "fight",
       "heat": {},
@@ -373,18 +385,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "ruiz"
-      ],
-      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
     }
   ],
   "player_queue": [
@@ -399,7 +399,7 @@
   "llm_budget": {
     "day": 114,
     "spent": {
-      "llama-3.1-8b-instant": 4423
+      "llama-3.1-8b-instant": 9280
     }
   }
 }
