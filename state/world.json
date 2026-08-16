@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 447,
-  "last_beat_at": "2026-08-16T01:27:12Z",
+  "beat": 452,
+  "last_beat_at": "2026-08-16T02:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heat",
   "heat": {
     "riverside": 5,
-    "delmar": 25,
+    "delmar": 20,
     "terraces": 5,
-    "civic": 7
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,42 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "boateng",
+        "marcus"
+      ],
+      "text": "Marcus Calloway does Fr. Emmanuel Boateng a favour that costs them something real."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "marisol",
+        "cass"
+      ],
+      "text": "Somebody tells Marisol Vasquez that Cass Deveaux has been seen talking to police."
+    },
     {
       "id": "money_found",
       "heat": {},
@@ -345,43 +381,6 @@
       },
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Gus Petrakis gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "simone",
-        "gus"
-      ],
-      "text": "Gus Petrakis does Simone Adeyemi a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -394,9 +393,7 @@
   ],
   "last_gazette_day": 110,
   "llm_budget": {
-    "day": 111,
-    "spent": {
-      "llama-3.1-8b-instant": 12480
-    }
+    "day": 113,
+    "spent": {}
   }
 }
