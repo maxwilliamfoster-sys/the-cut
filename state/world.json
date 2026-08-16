@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 497,
-  "last_beat_at": "2026-08-16T13:57:12Z",
+  "beat": 499,
+  "last_beat_at": "2026-08-16T14:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "rain",
   "heat": {
-    "riverside": 22,
-    "delmar": 36,
+    "riverside": 45,
+    "delmar": 42,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back."
+    },
     {
       "id": "inspection",
       "heat": {
@@ -364,31 +389,6 @@
         "priya"
       ],
       "text": "Ms. Priya Raman does Sticks a favour that costs them something real."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "brennan",
-        "priya"
-      ],
-      "text": "Sgt. Hal Brennan and Ms. Priya Raman are seen arguing in the street loud enough that people stop."
     }
   ],
   "player_queue": [
@@ -399,11 +399,12 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 122,
+  "last_gazette_day": 124,
   "llm_budget": {
     "day": 124,
     "spent": {
-      "llama-3.1-8b-instant": 4635
+      "llama-3.1-8b-instant": 15463,
+      "llama-3.3-70b-versatile": 823
     }
   }
 }
