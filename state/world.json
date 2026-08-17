@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 589,
-  "last_beat_at": "2026-08-17T12:57:12Z",
+  "beat": 592,
+  "last_beat_at": "2026-08-17T13:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 5,
-    "delmar": 30,
+    "riverside": 29,
+    "delmar": 35,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -356,32 +381,6 @@
       },
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "hector",
-        "kohl"
-      ],
-      "text": "Hector Delgado and Ofc. Brady Kohl are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "cass",
-        "yusuf"
-      ],
-      "text": "Somebody tells Cass Deveaux that Dr. Yusuf Amin has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -394,7 +393,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 147,
+    "day": 148,
     "spent": {}
   }
 }
