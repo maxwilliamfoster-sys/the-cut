@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 612,
-  "last_beat_at": "2026-08-17T18:42:12Z",
+  "beat": 615,
+  "last_beat_at": "2026-08-17T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 84,
-    "delmar": 51,
-    "terraces": 5,
+    "riverside": 81,
+    "delmar": 66,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,40 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "raid",
       "heat": {
@@ -354,40 +388,6 @@
         "priya"
       ],
       "text": "Somebody tells Ofc. Brady Kohl that Ms. Priya Raman has been seen talking to police."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "adaeze",
-        "amara"
-      ],
-      "text": "Somebody tells Adaeze Okonkwo that Amara Bello has been seen talking to police."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
