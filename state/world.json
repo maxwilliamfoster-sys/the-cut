@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 599,
-  "last_beat_at": "2026-08-17T15:27:12Z",
+  "beat": 601,
+  "last_beat_at": "2026-08-17T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 47,
-    "delmar": 36,
+    "riverside": 45,
+    "delmar": 34,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "raid",
       "heat": {
@@ -371,17 +383,6 @@
       },
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -394,7 +395,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 149,
+    "day": 150,
     "spent": {}
   }
 }
