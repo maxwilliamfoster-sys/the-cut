@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 629,
-  "last_beat_at": "2026-08-17T22:57:12Z",
+  "beat": 631,
+  "last_beat_at": "2026-08-17T23:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 67,
-    "delmar": 99,
+    "riverside": 65,
+    "delmar": 97,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "booker",
+        "simone"
+      ],
+      "text": "Booker Lyle and Simone Adeyemi are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -370,19 +383,6 @@
       },
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
     }
   ],
   "player_queue": [
