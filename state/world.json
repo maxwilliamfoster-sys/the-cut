@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 570,
-  "last_beat_at": "2026-08-17T08:12:12Z",
+  "beat": 573,
+  "last_beat_at": "2026-08-17T08:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "fog off the water",
   "heat": {
     "riverside": 5,
-    "delmar": 43,
+    "delmar": 46,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "adaeze",
+        "amara"
+      ],
+      "text": "Somebody tells Adaeze Okonkwo that Amara Bello has been seen talking to police."
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -348,28 +372,6 @@
       },
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -382,9 +384,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 142,
-    "spent": {
-      "llama-3.1-8b-instant": 12918
-    }
+    "day": 143,
+    "spent": {}
   }
 }
