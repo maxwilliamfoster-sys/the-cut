@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 573,
-  "last_beat_at": "2026-08-17T08:57:12Z",
+  "beat": 577,
+  "last_beat_at": "2026-08-17T09:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
-    "delmar": 46,
+    "delmar": 42,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,41 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kohl",
+        "priya"
+      ],
+      "text": "Somebody tells Ofc. Brady Kohl that Ms. Priya Raman has been seen talking to police."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -342,36 +377,6 @@
         "brennan"
       ],
       "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
     }
   ],
   "player_queue": [
@@ -384,7 +389,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 143,
+    "day": 144,
     "spent": {}
   }
 }
