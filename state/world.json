@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 543,
-  "last_beat_at": "2026-08-17T01:27:12Z",
+  "beat": 548,
+  "last_beat_at": "2026-08-17T02:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 58,
+    "delmar": 53,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,38 @@
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -338,44 +370,6 @@
         "rey"
       ],
       "text": "Rey Vasquez does Tariq 'Tee' Bello a favour that costs them something real."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "dez",
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl does Dez Okonkwo a favour that costs them something real."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "junie",
-        "simone"
-      ],
-      "text": "Somebody tells Junie Marsh that Simone Adeyemi has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -388,9 +382,7 @@
   ],
   "last_gazette_day": 134,
   "llm_budget": {
-    "day": 135,
-    "spent": {
-      "llama-3.1-8b-instant": 4604
-    }
+    "day": 137,
+    "spent": {}
   }
 }
