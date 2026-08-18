@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 697,
-  "last_beat_at": "2026-08-18T15:57:12Z",
+  "beat": 700,
+  "last_beat_at": "2026-08-18T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "overcast",
   "heat": {
-    "riverside": 27,
-    "delmar": 97,
+    "riverside": 24,
+    "delmar": 94,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,32 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "cass",
+        "boateng"
+      ],
+      "text": "Fr. Emmanuel Boateng does Cass Deveaux a favour that costs them something real."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "gus",
+        "junie"
+      ],
+      "text": "Gus Petrakis and Junie Marsh are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -361,33 +387,6 @@
       },
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "ruiz"
-      ],
-      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
     }
   ],
   "player_queue": [
@@ -400,7 +399,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 174,
+    "day": 175,
     "spent": {}
   }
 }
