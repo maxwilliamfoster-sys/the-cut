@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 695,
-  "last_beat_at": "2026-08-18T15:27:12Z",
+  "beat": 697,
+  "last_beat_at": "2026-08-18T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "heat",
   "heat": {
-    "riverside": 29,
-    "delmar": 99,
+    "riverside": 27,
+    "delmar": 97,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "amara",
+        "booker"
+      ],
+      "text": "Booker Lyle does Amara Bello a favour that costs them something real."
+    },
     {
       "id": "raid",
       "heat": {
@@ -375,19 +388,6 @@
         "ruiz"
       ],
       "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "gus",
-        "rey"
-      ],
-      "text": "Rey Vasquez does Gus Petrakis a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -400,7 +400,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 173,
+    "day": 174,
     "spent": {}
   }
 }
