@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 663,
-  "last_beat_at": "2026-08-18T07:27:12Z",
+  "beat": 666,
+  "last_beat_at": "2026-08-18T08:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 33,
-    "delmar": 82,
+    "riverside": 30,
+    "delmar": 79,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -378,18 +390,6 @@
         "sticks"
       ],
       "text": "Sticks does Cass Deveaux a favour that costs them something real."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
     }
   ],
   "player_queue": [
@@ -402,7 +402,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 165,
+    "day": 166,
     "spent": {}
   }
 }
