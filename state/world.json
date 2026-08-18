@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 677,
-  "last_beat_at": "2026-08-18T10:57:12Z",
+  "beat": 680,
+  "last_beat_at": "2026-08-18T11:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 19,
-    "delmar": 86,
+    "riverside": 16,
+    "delmar": 89,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "marcus"
+      ],
+      "text": "Marcus Calloway gets word that what they owe is wanted sooner than agreed."
+    },
     {
       "id": "debt_called",
       "heat": {},
@@ -368,31 +391,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "cass",
-        "boateng"
-      ],
-      "text": "Somebody tells Cass Deveaux that Fr. Emmanuel Boateng has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -405,7 +403,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 169,
+    "day": 170,
     "spent": {}
   }
 }
