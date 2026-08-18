@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 654,
-  "last_beat_at": "2026-08-18T05:12:12Z",
+  "beat": 656,
+  "last_beat_at": "2026-08-18T05:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heat",
   "heat": {
-    "riverside": 42,
-    "delmar": 97,
+    "riverside": 40,
+    "delmar": 95,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "tee"
+      ],
+      "text": "Something pays out for Tariq 'Tee' Bello. More than expected, which is its own problem."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Something pays out for Malik Reyes. More than expected, which is its own problem."
+    },
     {
       "id": "debt_called",
       "heat": {},
@@ -358,28 +382,6 @@
         "simone"
       ],
       "text": "Booker Lyle and Simone Adeyemi are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
     }
   ],
   "player_queue": [
@@ -392,7 +394,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 163,
+    "day": 164,
     "spent": {}
   }
 }
