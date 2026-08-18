@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 651,
-  "last_beat_at": "2026-08-18T04:27:12Z",
+  "beat": 654,
+  "last_beat_at": "2026-08-18T05:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "overcast",
   "heat": {
-    "riverside": 45,
-    "delmar": 100,
+    "riverside": 42,
+    "delmar": 97,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "rosa"
+      ],
+      "text": "Rosa Reyes gets word that what they owe is wanted sooner than agreed."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Something pays out for Det. Yolanda Ruiz. More than expected, which is its own problem."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -356,29 +380,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "priya"
-      ],
-      "text": "Ms. Priya Raman gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -391,7 +392,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 162,
+    "day": 163,
     "spent": {}
   }
 }
