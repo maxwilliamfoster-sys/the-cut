@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 686,
-  "last_beat_at": "2026-08-18T13:12:12Z",
+  "beat": 689,
+  "last_beat_at": "2026-08-18T13:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "clear",
   "heat": {
-    "riverside": 10,
-    "delmar": 95,
-    "terraces": 13,
+    "riverside": 7,
+    "delmar": 92,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "dez",
+        "adaeze"
+      ],
+      "text": "Dez Okonkwo and Adaeze Okonkwo are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "tiny"
+      ],
+      "text": "Something pays out for Tiny Reyes. More than expected, which is its own problem."
+    },
     {
       "id": "overdose",
       "heat": {
@@ -368,30 +393,6 @@
         "nadia"
       ],
       "text": "Nadia Vasquez ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Something pays out for Dot Feeney. More than expected, which is its own problem."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "tee"
-      ],
-      "text": "Something pays out for Tariq 'Tee' Bello. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -404,7 +405,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 171,
+    "day": 172,
     "spent": {}
   }
 }
