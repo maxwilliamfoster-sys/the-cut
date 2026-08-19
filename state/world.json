@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 815,
-  "last_beat_at": "2026-08-19T21:27:12Z",
+  "beat": 816,
+  "last_beat_at": "2026-08-19T21:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 49,
-    "terraces": 7,
-    "civic": 10
+    "delmar": 48,
+    "terraces": 6,
+    "civic": 9
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
     {
       "id": "hospital",
       "heat": {
@@ -372,15 +383,6 @@
       },
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
@@ -393,7 +395,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 203,
+    "day": 204,
     "spent": {}
   }
 }
