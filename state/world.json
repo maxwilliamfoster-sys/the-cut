@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 741,
-  "last_beat_at": "2026-08-19T02:57:12Z",
+  "beat": 745,
+  "last_beat_at": "2026-08-19T03:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "first snow",
   "heat": {
-    "riverside": 46,
-    "delmar": 93,
-    "terraces": 13,
+    "riverside": 42,
+    "delmar": 89,
+    "terraces": 9,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,43 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "tiny",
+        "kohl"
+      ],
+      "text": "Somebody tells Tiny Reyes that Ofc. Brady Kohl has been seen talking to police."
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "ivy"
+      ],
+      "text": "Something pays out for Ms. Ivy Calloway. More than expected, which is its own problem."
+    },
     {
       "id": "overdose",
       "heat": {
@@ -341,41 +378,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "sticks",
-        "tiny"
-      ],
-      "text": "Sticks and Tiny Reyes are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
     }
   ],
   "player_queue": [
@@ -388,7 +390,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 185,
+    "day": 186,
     "spent": {}
   }
 }
