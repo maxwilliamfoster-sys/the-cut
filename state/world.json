@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 736,
-  "last_beat_at": "2026-08-19T01:42:12Z",
+  "beat": 741,
+  "last_beat_at": "2026-08-19T02:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 51,
-    "delmar": 98,
-    "terraces": 8,
+    "riverside": 46,
+    "delmar": 93,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,55 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "rosa",
+        "junie"
+      ],
+      "text": "Junie Marsh does Rosa Reyes a favour that costs them something real."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "simone",
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz does Simone Adeyemi a favour that costs them something real."
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -327,53 +376,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
     }
   ],
   "player_queue": [
@@ -386,7 +388,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 184,
+    "day": 185,
     "spent": {}
   }
 }
