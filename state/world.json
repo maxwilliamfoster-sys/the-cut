@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 791,
-  "last_beat_at": "2026-08-19T15:27:12Z",
+  "beat": 793,
+  "last_beat_at": "2026-08-19T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 61,
+    "delmar": 59,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,16 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -363,15 +373,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
@@ -384,7 +385,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 197,
+    "day": 198,
     "spent": {}
   }
 }
