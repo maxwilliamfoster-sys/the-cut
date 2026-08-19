@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 816,
-  "last_beat_at": "2026-08-19T21:42:12Z",
+  "beat": 819,
+  "last_beat_at": "2026-08-19T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 48,
-    "terraces": 6,
-    "civic": 9
+    "delmar": 45,
+    "terraces": 5,
+    "civic": 6
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,16 @@
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -373,16 +383,6 @@
       },
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
     }
   ],
   "player_queue": [
