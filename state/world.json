@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 748,
-  "last_beat_at": "2026-08-19T04:42:12Z",
+  "beat": 751,
+  "last_beat_at": "2026-08-19T05:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "first snow",
   "heat": {
-    "riverside": 39,
-    "delmar": 92,
-    "terraces": 6,
+    "riverside": 36,
+    "delmar": 89,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "dez",
+        "junie"
+      ],
+      "text": "Dez Okonkwo and Junie Marsh are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "debt_called",
       "heat": {},
@@ -359,25 +382,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
