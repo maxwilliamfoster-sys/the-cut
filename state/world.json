@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 766,
-  "last_beat_at": "2026-08-19T09:12:12Z",
+  "beat": 769,
+  "last_beat_at": "2026-08-19T09:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "rain",
   "heat": {
-    "riverside": 21,
-    "delmar": 80,
+    "riverside": 18,
+    "delmar": 71,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,27 @@
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -358,31 +379,6 @@
         "ivy"
       ],
       "text": "Something pays out for Ms. Ivy Calloway. More than expected, which is its own problem."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "rosa",
-        "junie"
-      ],
-      "text": "Junie Marsh does Rosa Reyes a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -395,7 +391,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 191,
+    "day": 192,
     "spent": {}
   }
 }
