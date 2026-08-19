@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 808,
-  "last_beat_at": "2026-08-19T19:42:12Z",
+  "beat": 809,
+  "last_beat_at": "2026-08-19T19:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 56,
-    "terraces": 5,
+    "delmar": 55,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -362,18 +374,6 @@
         "brennan"
       ],
       "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
