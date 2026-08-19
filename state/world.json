@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 805,
-  "last_beat_at": "2026-08-19T18:57:12Z",
+  "beat": 808,
+  "last_beat_at": "2026-08-19T19:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 59,
+    "delmar": 56,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,16 @@
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -364,18 +374,6 @@
         "malik"
       ],
       "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "amara"
-      ],
-      "text": "Something pays out for Amara Bello. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -388,7 +386,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 201,
+    "day": 202,
     "spent": {}
   }
 }
