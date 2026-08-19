@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 812,
-  "last_beat_at": "2026-08-19T20:42:12Z",
+  "beat": 815,
+  "last_beat_at": "2026-08-19T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "fog off the water",
   "heat": {
     "riverside": 5,
-    "delmar": 52,
-    "terraces": 10,
-    "civic": 5
+    "delmar": 49,
+    "terraces": 7,
+    "civic": 10
   },
   "turf": {
     "riverside": "crew",
@@ -149,6 +149,46 @@
     }
   ],
   "events": [
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "amara"
+      ],
+      "text": "Amara Bello ends up at the clinic. The paperwork says one thing; the injury says another."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "malik",
+        "dot"
+      ],
+      "text": "Malik Reyes and Dot Feeney are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -341,39 +381,6 @@
       },
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
     }
   ],
   "player_queue": [
