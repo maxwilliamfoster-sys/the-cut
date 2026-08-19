@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 793,
-  "last_beat_at": "2026-08-19T15:57:12Z",
+  "beat": 796,
+  "last_beat_at": "2026-08-19T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 59,
+    "delmar": 68,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,43 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "sticks",
+        "femi"
+      ],
+      "text": "Somebody tells Sticks that Femi Adeyemi has been seen talking to police."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "sticks",
+        "marcus"
+      ],
+      "text": "Marcus Calloway does Sticks a favour that costs them something real."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -336,43 +373,6 @@
         "booker"
       ],
       "text": "Somebody tells Chinedu Okafor that Booker Lyle has been seen talking to police."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "booker"
-      ],
-      "text": "Something pays out for Booker Lyle. More than expected, which is its own problem."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "nadia",
-        "sticks"
-      ],
-      "text": "Sticks does Nadia Vasquez a favour that costs them something real."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -385,7 +385,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 198,
+    "day": 199,
     "spent": {}
   }
 }
