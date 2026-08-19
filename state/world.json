@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 788,
-  "last_beat_at": "2026-08-19T14:42:12Z",
+  "beat": 791,
+  "last_beat_at": "2026-08-19T15:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 64,
+    "delmar": 61,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,25 @@
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days."
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -353,26 +372,6 @@
       },
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
