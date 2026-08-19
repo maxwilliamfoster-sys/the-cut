@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 785,
-  "last_beat_at": "2026-08-19T13:57:12Z",
+  "beat": 788,
+  "last_beat_at": "2026-08-19T14:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 67,
+    "delmar": 64,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -361,18 +373,6 @@
       },
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "hector"
-      ],
-      "text": "Something pays out for Hector Delgado. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -385,7 +385,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 196,
+    "day": 197,
     "spent": {}
   }
 }
