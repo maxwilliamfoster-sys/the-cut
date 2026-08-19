@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 809,
-  "last_beat_at": "2026-08-19T19:57:12Z",
+  "beat": 812,
+  "last_beat_at": "2026-08-19T20:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 55,
-    "terraces": 13,
+    "delmar": 52,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,29 @@
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "priya",
+        "rey"
+      ],
+      "text": "Somebody tells Ms. Priya Raman that Rey Vasquez has been seen talking to police."
+    },
     {
       "id": "overdose",
       "heat": {
@@ -351,29 +374,6 @@
       },
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
     }
   ],
   "player_queue": [
@@ -386,7 +386,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 202,
+    "day": 203,
     "spent": {}
   }
 }
