@@ -12,7 +12,9 @@ import copy
 import sys
 from datetime import timedelta
 
-from sim import city, clock, cognition, events, llm, reflect, state, tick
+import re
+from sim import (city, clock, cognition, construction, events, law, llm,
+                 mortality, reflect, state, tick)
 
 FAILS = []
 
@@ -286,6 +288,148 @@ check("the workflow commits state even when the tick fails",
 
 check("cognition failures cannot take the beat down with them",
       "except Exception" in inspect.getsource(tick.run_beat))
+
+
+# ── the city can change shape ────────────────────────────────────────────────────
+# Buildings burn down, get rebuilt and go up on empty ground, and the layout is authored by
+# hand. Both of those want checking mechanically rather than by looking at the map.
+
+_cells = {}
+_overlap = []
+for _b in city.BUILDINGS:
+    for _c in city.cells(_b):
+        if _c in _cells:
+            _overlap.append((_b["id"], _cells[_c], _c))
+        _cells[_c] = _b["id"]
+check("no two buildings occupy the same ground", not _overlap, f"{_overlap[:3]}")
+
+_road = set()
+for _y0, _h in city.H_ROADS:
+    for _y in range(_y0, _y0 + _h):
+        _road |= {(_x, _y) for _x in range(city.W)}
+for _x0, _w in city.V_ROADS:
+    for _x in range(_x0, _x0 + _w):
+        _road |= {(_x, _y) for _y in range(city.RIVER_DEPTH + 1, city.H)}
+check("nothing is built on top of a road",
+      not [b["id"] for b in city.BUILDINGS if city.cells(b) & _road],
+      f'{[b["id"] for b in city.BUILDINGS if city.cells(b) & _road][:3]}')
+
+check("the city is not four rows of identical boxes",
+      len({(b["w"], b["h"]) for b in city.BUILDINGS}) >= 12
+      and len({b["y"] for b in city.BUILDINGS}) >= 8,
+      "footprints and setbacks are too uniform — this is what made it read as a tilemap")
+
+check("some buildings are not rectangles",
+      any(b.get("wings") for b in city.BUILDINGS))
+
+# The renderer keeps its own copy of which tiles can be walked on. When they disagree, the
+# new tile type becomes an invisible wall that only the player collides with.
+_html = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "index.html"),
+             encoding="utf-8").read()
+_m = re.search(r"const WALKABLE_TILES = '([^']*)'", _html)
+check("the renderer agrees with the simulation about what is walkable",
+      _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
+      f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
+
+# A lost building must actually be lost: not usable, and not somewhere routine sends people.
+_w4 = copy.deepcopy(w)
+_a4 = copy.deepcopy(a)
+_w4["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w4["buildings"])
+mortality.ensure_fields(_a4)
+_victim = next(b for b in _w4["buildings"] if b["kind"] == "home")
+_victim["condition"] = city.RUIN
+city.rebuild(_w4["buildings"])
+check("a burnt building stops being a usable location", not city.usable(_victim["id"]))
+check("rubble can be stood in but scaffolding cannot",
+      city.RUBBLE in city.WALKABLE and city.SCAFFOLD not in city.WALKABLE)
+
+construction.displace(_a4, _w4["buildings"], _victim["id"], 1)
+for _ in range(6):
+    tick.run_beat(_w4, _a4)
+check("nobody is routed into a building that no longer exists",
+      not [x["name"] for x in _a4.values()
+           if x.get("alive", True) and x.get("at") == _victim["id"]],
+      "somebody is still going to work in a ruin")
+
+check("everyone is still on walkable ground after the city changed shape",
+      all(city.walkable(*x["pos"]) for x in _a4.values() if x.get("alive", True)))
+
+# ── death, and what it does to everybody else ────────────────────────────────────
+_w5 = copy.deepcopy(w)
+_a5 = copy.deepcopy(a)
+_w5["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w5["buildings"])
+mortality.ensure_fields(_a5)
+_dead = _a5["dez"]
+_friend = max((x for x in _a5.values() if x["id"] != "dez"),
+              key=lambda x: x.get("relationships", {}).get("dez", {}).get("affinity", 0))
+_enemy = min((x for x in _a5.values() if x["id"] != "dez"),
+             key=lambda x: x.get("relationships", {}).get("dez", {}).get("affinity", 0))
+_before = (_friend["mood"]["happiness"], _enemy["mood"]["happiness"])
+mortality.kill(_w5, _a5, _dead, mortality.NATURAL[0], _w5["beat"], 300)
+
+check("the dead are actually dead", _dead["alive"] is False and _w5["dead"][0]["id"] == "dez")
+check("a death reaches everybody who knew them",
+      any("dez" in str(m.get("what", "")) or "Dez" in str(m.get("what", ""))
+          for m in _friend.get("memories", [])),
+      "nobody remembers it happening")
+check("grief is scaled by how people actually felt, not applied evenly",
+      _friend["mood"]["happiness"] < _before[0] and _friend.get("grief", 0) > 0,
+      "the closest person to the deceased did not grieve")
+check("a funeral gets scheduled", (_w5.get("funeral") or {}).get("id") == "dez")
+
+_a5["dez"]["grief"] = 0
+for _x in _a5.values():
+    _x["grief"] = 50
+mortality.decay_grief(_a5)
+check("grief fades instead of pinning the whole cast flat",
+      all(x["grief"] < 50 for x in _a5.values()))
+
+_cog5 = cognition.select(_w5, mortality.living(_a5), {}, [], None, _w5["beat"])
+check("nobody dead is asked what they are doing", "dez" not in _cog5)
+
+# ── law the city wrote itself ────────────────────────────────────────────────────
+_w6 = copy.deepcopy(w)
+_a6 = copy.deepcopy(a)
+_w6["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w6["buildings"])
+law.ensure(_w6)
+mortality.ensure_fields(_a6)
+_w6["laws"] = [{"id": "law01", "title": "No burning in the yards",
+                "text": "No unlicensed burning after dark.",
+                "keywords": ["burn", "torch"], "penalty": {"type": "jail", "amount": 3},
+                "proposed_by": "dez", "because": "a fire", "day_enacted": 1,
+                "status": "enacted", "convictions": 0}]
+_w6["heat"]["delmar"] = 100
+_day6 = clock.day_of(_w6["beat"])
+_acts = [{"kind": "act", "who": "malik", "name": _a6["malik"]["name"],
+          "action": "decides to burn the crates out the back", "district": "delmar"}]
+_charges = law.detect(_w6, _a6, _acts, _w6["beat"], _day6)
+check("breaking a law the block passed gets you charged",
+      bool(_charges) and _w6["charges"][0]["who"] == "malik")
+check("being charged puts you in a cell rather than back on the street",
+      bool(_a6["malik"].get("detained_until")))
+
+_verdicts = law.try_cases(_w6, _a6, _w6["beat"], _day6 + law.TRIAL_DELAY)
+check("a charge is actually tried", bool(_verdicts)
+      and _w6["charges"][0]["status"] in ("convicted", "acquitted"))
+check("the jury is the block, so the verdict follows the social graph",
+      "affinity" in inspect.getsource(law.try_cases)
+      and "_jury(" in inspect.getsource(law.try_cases),
+      "verdicts do not consult how people actually feel about the accused")
+
+_a6["malik"]["detained_until"] = _day6 + 1
+check("people come back out",
+      bool(law.release(_a6, _day6 + 5, _w6["beat"]))
+      and not _a6["malik"].get("detained_until"))
+
+check("an action nothing outlaws is not a crime",
+      not law.match_laws(_w6, "wipes down the counter and counts the till twice"))
+
+check("legislation is rationed like every other model call",
+      law.LAW_TOKENS_PER_DAY <= 8000 and law.MIN_DAYS_BETWEEN_LAWS >= 1
+      and "can_afford" in inspect.getsource(law.propose_law))
 
 
 # ── the silent-death invariants ──────────────────────────────────────────────────

@@ -8,10 +8,24 @@ Buildings are "roofless dollhouse": walls plus a visible walkable interior, furn
 keeps everyone on screen — a character who goes home to watch television is still watchable,
 and we never need interior scene-switching or a second camera mode.
 
-Furniture is generated deterministically per building rather than hand-placed, because 25
+Furniture is generated deterministically per building rather than hand-placed, because 30
 buildings of hand-placed props is a maintenance job nobody will do twice. It exists for two
 reasons: rooms that read as rooms, and anchors for what people are actually doing — you
 cannot sit on a sofa the map does not have.
+
+**The city is no longer a constant.** `BASE_BUILDINGS` is only the seed; the live list is
+persisted in `state/city.json` and can be damaged, ruined, rebuilt and extended while the
+city runs (see `sim/construction.py`). Everything downstream reads the module globals
+`GRID / LOCATIONS / ANCHORS / FURNITURE`, which `rebuild()` recomputes in place — so call
+sites did not have to learn that the ground can move under them.
+
+**Footprints are deliberately irregular.** Every building used to be h=8 sitting on one of
+four y values, which is why the city read as four rows of identical boxes. Buildings now
+vary in width, depth and setback; `wings` lets one building occupy several rectangles, so a
+warehouse can be L-shaped and an apartment block can enclose a courtyard; and shops on
+Delmar and the houses in the Terraces are authored as *attached rows* that share party
+walls, which is what actually makes a street look like a street. `selftest.py` asserts no
+two buildings overlap and none is laid on top of a road.
 
 Tile legend (also consumed by the front-end renderer):
     .  pavement    walkable
@@ -23,8 +37,11 @@ Tile legend (also consumed by the front-end renderer):
     f  floor       walkable, inside a building
     D  door        walkable
     ~  water       blocked
+    x  rubble      walkable — what is left of a destroyed building
+    s  scaffold    blocked — a building going back up
 """
 
+import hashlib
 import random
 from collections import deque
 
@@ -33,7 +50,11 @@ W, H = 96, 72
 
 PAVEMENT, ROAD, LINE, CROSS, GRASS = ".", ",", ":", "=", "g"
 WALL, FLOOR, DOOR, WATER = "#", "f", "D", "~"
-WALKABLE = {PAVEMENT, ROAD, LINE, CROSS, GRASS, FLOOR, DOOR}
+RUBBLE, SCAFFOLD = "x", "s"
+
+# Rubble is walkable on purpose: a burnt-out shell is somewhere people can still stand,
+# pick through, and hold a vigil. Scaffolding is not — a site under construction is closed.
+WALKABLE = {PAVEMENT, ROAD, LINE, CROSS, GRASS, FLOOR, DOOR, RUBBLE}
 
 # (start, width) — roads are 4 wide with painted centre lines, pavements are added either side
 H_ROADS = [(10, 4), (26, 4), (42, 4), (58, 4)]
@@ -46,40 +67,70 @@ DISTRICTS = {
     "civic":     {"name": "Civic End", "y": (58, 71)},
 }
 
-# id, name, district, x, y, w, h, door, kind, style, open
-BUILDINGS = [
+RIVER_DEPTH = 4     # the water Riverside is named after
+
+
+def _b(bid, name, district, x, y, w, h, door, kind, style, is_open=False,
+       wings=(), floors=1):
+    """One building. `wings` are extra rectangles offset from (x, y), which is what turns a
+    plain box into an L, a U or a courtyard block."""
+    return {"id": bid, "name": name, "district": district,
+            "x": x, "y": y, "w": w, "h": h, "door": door, "kind": kind,
+            "style": style, "open": is_open, "wings": [list(v) for v in wings],
+            "floors": floors, "condition": "standing", "since_day": 0}
+
+
+# The seed city. Ids here are load-bearing — agents reference their home and work by id, so
+# an id may be re-skinned but must not vanish.
+BASE_BUILDINGS = [
     # ── Riverside ────────────────────────────────────────────────────────────
-    ("warehouse",  "Pier 9 Warehouse",    "riverside", 2,  15, 9,  8, "S", "industrial", "metal",     False),
-    ("laundromat", "Spin Cycle",          "riverside", 17, 15, 10, 8, "S", "business",   "shopfront", False),
-    ("harborbar",  "The Harbor Bar",      "riverside", 29, 15, 10, 8, "S", "social",     "brick",     False),
-    ("docks",      "Kessler Docks",       "riverside", 45, 15, 13, 8, "S", "outdoor",    "none",      True),
-    ("cannery",    "Delgado Cannery",     "riverside", 59, 15, 8,  8, "S", "industrial", "metal",     False),
-    ("riverflats", "Riverside Flats",     "riverside", 72, 15, 12, 8, "S", "home",       "concrete",  False),
+    # The warehouse is L-shaped around its own loading yard.
+    _b("warehouse",  "Pier 9 Warehouse",  "riverside", 1,  15, 10, 7, "S", "industrial", "metal",
+       wings=[(0, 7, 6, 4)], floors=2),
+    _b("laundromat", "Spin Cycle",        "riverside", 17, 18, 9,  7, "S", "business",   "shopfront"),
+    _b("harborbar",  "The Harbor Bar",    "riverside", 27, 15, 10, 6, "S", "social",     "brick", floors=2),
+    # Sits in the bar's back lot — the gap between them is an alley, not a field.
+    _b("tenement",   "Kessler Tenement",  "riverside", 27, 22, 10, 4, "S", "home",       "brownstone", floors=3),
+    _b("docks",      "Kessler Docks",     "riverside", 45, 15, 13, 8, "S", "outdoor",    "none", is_open=True),
+    _b("cannery",    "Delgado Cannery",   "riverside", 59, 15, 8,  11, "S", "industrial", "metal", floors=2),
+    # U-shaped around a courtyard, the way a real block of flats encloses its yard.
+    _b("riverflats", "Riverside Flats",   "riverside", 73, 15, 13, 4, "S", "home",       "concrete",
+       wings=[(0, 4, 4, 7), (9, 4, 4, 7)], floors=3),
 
     # ── Delmar Row ───────────────────────────────────────────────────────────
-    ("cornerstore","Calloway's Corner",   "delmar",    2,  31, 9,  8, "S", "business",   "shopfront", False),
-    ("barbershop", "Tee's Barbershop",    "delmar",    17, 31, 9,  8, "S", "social",     "shopfront", False),
-    ("diner",      "The Blue Spoon",      "delmar",    29, 31, 10, 8, "S", "social",     "shopfront", False),
-    ("pawnshop",   "Lyle Pawn & Loan",    "delmar",    45, 31, 10, 8, "S", "business",   "brownstone",False),
-    ("church",     "St. Brendan's",       "delmar",    58, 31, 9,  8, "S", "civic",      "stone",     False),
-    ("bodega",     "Okafor Bodega",       "delmar",    72, 31, 9,  8, "S", "business",   "shopfront", False),
-    ("delmarflats","Delmar Apartments",   "delmar",    84, 31, 10, 8, "S", "home",       "brownstone",False),
+    _b("cornerstore", "Calloway's Corner", "delmar",   1,  31, 10, 6, "S", "business",   "shopfront", floors=2),
+    _b("printshop",   "Ruiz Print & Sign", "delmar",   1,  38, 8,  4, "S", "business",   "brick"),
+    # An attached run of shopfronts sharing party walls — the actual high street.
+    _b("barbershop",  "Tee's Barbershop",  "delmar",   17, 31, 7,  6, "S", "social",     "shopfront", floors=2),
+    _b("diner",       "The Blue Spoon",    "delmar",   24, 31, 8,  6, "S", "social",     "shopfront", floors=2),
+    _b("pawnshop",    "Lyle Pawn & Loan",  "delmar",   32, 31, 6,  6, "S", "business",   "brownstone", floors=2),
+    # Set back off the street with a porch pushed out towards it.
+    _b("church",      "St. Brendan's",     "delmar",   45, 33, 11, 9, "S", "civic",      "stone",
+       wings=[(4, -2, 3, 2)], floors=2),
+    _b("bodega",      "Okafor Bodega",     "delmar",   59, 31, 7,  5, "S", "business",   "shopfront"),
+    _b("courthouse",  "Delmar Courthouse", "delmar",   59, 37, 8,  5, "S", "civic",      "stone", floors=2),
+    _b("delmarflats", "Delmar Apartments", "delmar",   73, 31, 12, 7, "S", "home",       "brownstone",
+       wings=[(0, 7, 7, 4)], floors=4),
 
     # ── The Terraces ─────────────────────────────────────────────────────────
-    ("terrace_a",  "Terrace Block A",     "terraces",  2,  47, 9,  8, "S", "home",       "brownstone",False),
-    ("terrace_b",  "Terrace Block B",     "terraces",  17, 47, 9,  8, "S", "home",       "brownstone",False),
-    ("vasquez",    "The Vasquez House",   "terraces",  29, 47, 9,  8, "S", "home",       "clapboard", False),
-    ("lot",        "The Vacant Lot",      "terraces",  45, 47, 12, 8, "S", "outdoor",    "none",      True),
-    ("okonkwo",    "The Okonkwo House",   "terraces",  59, 47, 8,  8, "S", "home",       "clapboard", False),
-    ("green",      "Marrow Green",        "terraces",  72, 47, 14, 8, "S", "outdoor",    "none",      True),
+    # Two attached pairs and a row of three: narrow, deep, sharing walls.
+    _b("terrace_a",  "Terrace Block A",   "terraces",  1,  47, 5,  8, "S", "home", "brownstone", floors=2),
+    _b("terrace_b",  "Terrace Block B",   "terraces",  6,  47, 5,  8, "S", "home", "brownstone", floors=2),
+    _b("terrace_c",  "12 Marrow Row",     "terraces",  17, 47, 4,  9, "S", "home", "brownstone", floors=2),
+    _b("terrace_d",  "14 Marrow Row",     "terraces",  21, 47, 4,  9, "S", "home", "brownstone", floors=2),
+    _b("terrace_e",  "16 Marrow Row",     "terraces",  25, 47, 4,  9, "S", "home", "brownstone", floors=2),
+    _b("vasquez",    "The Vasquez House", "terraces",  30, 47, 8,  7, "S", "home", "clapboard"),
+    _b("lot",        "The Vacant Lot",    "terraces",  45, 47, 12, 8, "S", "outdoor", "none", is_open=True),
+    _b("okonkwo",    "The Okonkwo House", "terraces",  59, 48, 8,  7, "S", "home", "clapboard"),
+    _b("green",      "Marrow Green",      "terraces",  73, 47, 14, 9, "S", "outdoor", "none", is_open=True),
 
     # ── Civic End ────────────────────────────────────────────────────────────
-    ("precinct",   "9th Precinct",        "civic",     2,  62, 9,  8, "N", "civic",      "stone",     False),
-    ("clinic",     "Halloway Clinic",     "civic",     17, 62, 9,  8, "N", "civic",      "concrete",  False),
-    ("school",     "Delmar High",         "civic",     29, 62, 10, 8, "N", "civic",      "brick",     False),
-    ("autoshop",   "Vasquez Auto Body",   "civic",     45, 62, 10, 8, "N", "business",   "metal",     False),
-    ("underpass",  "The Underpass",       "civic",     59, 62, 8,  8, "N", "outdoor",    "none",      True),
-    ("depot",      "Transit Depot",       "civic",     72, 62, 12, 8, "N", "industrial", "concrete",  False),
+    _b("precinct",  "9th Precinct",       "civic",     1,  63, 10, 8, "N", "civic",      "stone", floors=2),
+    _b("clinic",    "Halloway Clinic",    "civic",     17, 63, 9,  8, "N", "civic",      "concrete", floors=2),
+    _b("school",    "Delmar High",        "civic",     28, 63, 11, 9, "N", "civic",      "brick", floors=2),
+    _b("autoshop",  "Vasquez Auto Body",  "civic",     45, 63, 10, 7, "N", "business",   "metal"),
+    _b("underpass", "The Underpass",      "civic",     59, 63, 8,  8, "N", "outdoor",    "none", is_open=True),
+    _b("depot",     "Transit Depot",      "civic",     73, 63, 12, 9, "N", "industrial", "concrete", floors=2),
 ]
 
 # What each kind of interior is furnished with, and roughly how much of it. Order matters:
@@ -94,8 +145,34 @@ FURNITURE_PLAN = {
     "outdoor":    [("bench", 2), ("bin", 1), ("tree", 3)],
 }
 
+# Conditions a building can be in. Only "standing" is a working location.
+STANDING, DAMAGED, RUIN, REBUILDING = "standing", "damaged", "ruin", "rebuilding"
+USABLE = {STANDING, DAMAGED}
 
-RIVER_DEPTH = 4     # the water Riverside is named after
+
+def rects(b):
+    """Every rectangle this building occupies — the main block plus any wings."""
+    out = [(b["x"], b["y"], b["w"], b["h"])]
+    for dx, dy, w, h in b.get("wings") or []:
+        out.append((b["x"] + dx, b["y"] + dy, w, h))
+    return out
+
+
+def cells(b):
+    out = set()
+    for x, y, w, h in rects(b):
+        for yy in range(y, y + h):
+            for xx in range(x, x + w):
+                if 0 <= xx < W and 0 <= yy < H:
+                    out.add((xx, yy))
+    return out
+
+
+def bounds(b):
+    cs = cells(b)
+    xs = [c[0] for c in cs] or [b["x"]]
+    ys = [c[1] for c in cs] or [b["y"]]
+    return min(xs), min(ys), max(xs) - min(xs) + 1, max(ys) - min(ys) + 1
 
 
 def _blank():
@@ -114,12 +191,13 @@ def _blank():
     return g
 
 
-def _paint_yards(g):
+def _paint_yards(g, buildings):
     """A strip of green behind each house. Cheap, and it stops the residential rows
     looking like the same terrace repeated six times."""
-    for bid, _n, _d, x, y, w, h, _s, kind, _st, is_open in BUILDINGS:
-        if kind != "home" or is_open:
+    for b in buildings:
+        if b["kind"] != "home" or b["open"]:
             continue
+        x, y, w, _h = bounds(b)
         for yy in range(max(0, y - 3), y):
             for xx in range(x, x + w):
                 if g[yy][xx] == PAVEMENT:
@@ -162,32 +240,65 @@ def _paint_roads(g):
                         g[y][x] = CROSS
 
 
-def _door_tile(x, y, w, h, side):
-    if side == "S":
-        return x + w // 2, y + h - 1
-    if side == "N":
-        return x + w // 2, y
-    if side == "W":
-        return x, y + h // 2
-    return x + w - 1, y + h // 2
+def _door_tile(b, cs=None):
+    """Pick a wall cell that actually faces the street.
+
+    The old version assumed a plain rectangle and returned the midpoint of one edge. On an
+    L-shaped building that lands on the *seam* between the block and its wing — a cell with
+    building on both sides — so the door opened into another room and the whole place became
+    unreachable. Instead: take the boundary cells that genuinely touch open ground, prefer
+    the requested side, and break ties deterministically so the city is stable run to run.
+    """
+    cs = cs if cs is not None else cells(b)
+    side = b["door"]
+    outward = {"S": (0, 1), "N": (0, -1), "W": (-1, 0), "E": (1, 0)}[side]
+
+    def opens_inward(cell):
+        x, y = cell
+        return any(n in cs and _interior(cs, n)
+                   for n in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)))
+
+    facing, any_side = [], []
+    for (x, y) in cs:
+        if _interior(cs, (x, y)) or not opens_inward((x, y)):
+            continue
+        for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            n = (x + dx, y + dy)
+            if n in cs or not (0 <= n[0] < W and 0 <= n[1] < H):
+                continue
+            any_side.append((x, y))
+            if (dx, dy) == outward:
+                facing.append((x, y))
+            break
+
+    pool = facing or any_side
+    if not pool:
+        return b["x"], b["y"]
+
+    # Deepest wall on the requested side, then nearest that wall's midpoint — a corner door
+    # is both ugly and, on an L-shape, frequently sealed by the building's own walls.
+    horiz = side in ("S", "N")
+    depth = (lambda c: -c[1]) if side == "S" else (lambda c: c[1]) if side == "N"         else (lambda c: c[0]) if side == "W" else (lambda c: -c[0])
+    best = depth(min(pool, key=depth))
+    run = [c for c in pool if depth(c) == best]
+    mid = sum(c[0] if horiz else c[1] for c in run) / len(run)
+    return min(run, key=lambda c: (abs((c[0] if horiz else c[1]) - mid), c))
 
 
-def _furnish(bid, kind, x, y, w, h, is_open):
+def _furnish(b):
     """Deterministic per building: same city every run, and diffs stay readable."""
-    plan = FURNITURE_PLAN.get(kind, [])
-    rng = random.Random(f"furnish:{bid}")
-    if is_open:
-        spots = [(xx, yy) for yy in range(y + 1, y + h - 1) for xx in range(x + 1, x + w - 1)]
-    else:
-        spots = [(xx, yy) for yy in range(y + 1, y + h - 1) for xx in range(x + 1, x + w - 1)]
-    rng.shuffle(spots)
+    plan = FURNITURE_PLAN.get(b["kind"], [])
+    rng = random.Random(f'furnish:{b["id"]}:{b.get("generation", 0)}')
+    cs = cells(b)
+    interior = [c for c in cs if _interior(cs, c)]
+    rng.shuffle(interior)
 
-    door = None if is_open else _door_tile(x, y, w, h, "S")
+    door = None if b["open"] else _door_tile(b, cs)
     out, used = [], set()
     for kind_name, count in plan:
         for _ in range(count):
-            while spots:
-                sx, sy = spots.pop()
+            while interior:
+                sx, sy = interior.pop()
                 # Never block the doorway or the tile just inside it.
                 if door and abs(sx - door[0]) <= 1 and abs(sy - door[1]) <= 1:
                     continue
@@ -199,46 +310,111 @@ def _furnish(bid, kind, x, y, w, h, is_open):
     return out
 
 
-def build_grid():
+def _interior(cs, cell):
+    """A cell is interior when all four of its neighbours are also part of the building —
+    which is what makes an L or a U wall itself correctly without special-casing shapes.
+    Takes the cell set rather than the building so build_grid computes it once."""
+    x, y = cell
+    return all(n in cs for n in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)))
+
+
+def build_grid(buildings):
     g = _blank()
     _paint_roads(g)
-    _paint_yards(g)
+    _paint_yards(g, buildings)
 
     anchors, furniture = {}, {}
-    for bid, _n, _d, x, y, w, h, side, kind, _style, is_open in BUILDINGS:
-        if is_open:
-            for yy in range(y, y + h):
-                for xx in range(x, x + w):
-                    g[yy][xx] = GRASS if kind == "outdoor" else FLOOR
-            anchors[bid] = (x + w // 2, y + h // 2)
+    for b in buildings:
+        cond = b.get("condition", STANDING)
+        cs = cells(b)
+
+        if cond == RUIN:
+            # A shell. Walkable, so people can stand in what is left of it.
+            for (xx, yy) in cs:
+                g[yy][xx] = RUBBLE
+            anchors[b["id"]] = _centre(cs)
+            furniture[b["id"]] = []
+            continue
+
+        if cond == REBUILDING:
+            for (xx, yy) in cs:
+                g[yy][xx] = SCAFFOLD
+            anchors[b["id"]] = _centre(cs)
+            furniture[b["id"]] = []
+            continue
+
+        if b["open"]:
+            for (xx, yy) in cs:
+                g[yy][xx] = GRASS if b["kind"] == "outdoor" else FLOOR
+            anchors[b["id"]] = _centre(cs)
         else:
-            for yy in range(y, y + h):
-                for xx in range(x, x + w):
-                    edge = yy in (y, y + h - 1) or xx in (x, x + w - 1)
-                    g[yy][xx] = WALL if edge else FLOOR
-            dx, dy = _door_tile(x, y, w, h, side)
+            for (xx, yy) in cs:
+                g[yy][xx] = FLOOR if _interior(cs, (xx, yy)) else WALL
+            dx, dy = _door_tile(b, cs)
             g[dy][dx] = DOOR
-            inside = {"S": (dx, dy - 1), "N": (dx, dy + 1),
-                      "W": (dx + 1, dy), "E": (dx - 1, dy)}[side]
-            anchors[bid] = inside
-        furniture[bid] = _furnish(bid, kind, x, y, w, h, is_open)
+            # Stand just inside the door, whichever way "inside" happens to be for this shape.
+            inside = next((n for n in ((dx, dy - 1), (dx, dy + 1), (dx + 1, dy), (dx - 1, dy))
+                           if n in cs and _interior(cs, n)), None)
+            anchors[b["id"]] = inside or _centre(cs)
+        furniture[b["id"]] = _furnish(b)
 
     return g, anchors, furniture
 
 
-GRID, ANCHORS, FURNITURE = build_grid()
+def _centre(cs):
+    xs = sorted(c[0] for c in cs)
+    ys = sorted(c[1] for c in cs)
+    return (xs[len(xs) // 2], ys[len(ys) // 2])
 
-LOCATIONS = {
-    b[0]: {
-        "id": b[0], "name": b[1], "district": b[2],
-        "rect": [b[3], b[4], b[5], b[6]], "kind": b[8], "style": b[9],
-        "anchor": list(ANCHORS[b[0]]),
-        "furniture": FURNITURE[b[0]],
+
+# ── the live city ────────────────────────────────────────────────────────────
+# Module globals so every existing call site keeps working; `rebuild()` swaps them when the
+# city is damaged, repaired or extended.
+
+BUILDINGS = [dict(b) for b in BASE_BUILDINGS]   # replaced wholesale by rebuild()
+GRID, ANCHORS, FURNITURE = build_grid(BUILDINGS)
+LOCATIONS = {}
+HOMES = []
+
+
+def rebuild(buildings=None):
+    """Recompute the world from a building list. Call after anything structural changes.
+
+    The list is adopted **by reference**, not copied. That matters: the caller (the world)
+    owns the buildings, and this module is a derived view of them. Copying here meant a fire
+    recorded in city.BUILDINGS never reached the world that was supposed to persist it, and
+    two simulations in one process silently shared one city — which is exactly how the
+    determinism invariant caught it.
+    """
+    global BUILDINGS, GRID, ANCHORS, FURNITURE, LOCATIONS, HOMES
+    if buildings is not None:
+        BUILDINGS = buildings
+    GRID, ANCHORS, FURNITURE = build_grid(BUILDINGS)
+    LOCATIONS = {
+        b["id"]: {
+            "id": b["id"], "name": b["name"], "district": b["district"],
+            "rect": list(bounds(b)),
+            "rects": [list(r) for r in rects(b)],
+            "kind": b["kind"], "style": b["style"], "floors": b.get("floors", 1),
+            "open": b["open"],
+            "condition": b.get("condition", STANDING),
+            "anchor": list(ANCHORS[b["id"]]),
+            "furniture": FURNITURE[b["id"]],
+        }
+        for b in BUILDINGS
     }
-    for b in BUILDINGS
-}
+    HOMES = [b["id"] for b in BUILDINGS
+             if b["kind"] == "home" and b.get("condition", STANDING) in USABLE]
+    return LOCATIONS
 
-HOMES = [b[0] for b in BUILDINGS if b[8] == "home"]
+
+rebuild()
+
+
+def usable(loc_id):
+    """Can somebody actually be inside this place right now?"""
+    loc = LOCATIONS.get(loc_id)
+    return bool(loc) and loc["condition"] in USABLE
 
 
 def walkable(x, y):
@@ -247,7 +423,10 @@ def walkable(x, y):
 
 def furniture_of(loc_id, types):
     """Positions in this location matching any of `types` — where an activity happens."""
-    return [f for f in LOCATIONS[loc_id]["furniture"] if f["type"] in types]
+    loc = LOCATIONS.get(loc_id)
+    if not loc:
+        return []
+    return [f for f in loc["furniture"] if f["type"] in types]
 
 
 def district_at(y):
@@ -288,9 +467,24 @@ def path(start, goal):
     return list(reversed(out))
 
 
+def map_version():
+    """Cheap signature of the city's *shape*.
+
+    The browser polls the map every refresh now that buildings can burn down, but rebuilding
+    the background canvas is expensive. This lets it redraw only when something actually
+    moved rather than every few seconds.
+    """
+    parts = [f'{b["id"]}:{b.get("condition")}:{b["x"]},{b["y"]},{b["w"]},{b["h"]}:'
+             f'{b["kind"]}:{b["style"]}:{b.get("generation", 0)}'
+             for b in BUILDINGS]
+    # Not hash(): Python salts it per process, so the version would change on every run and
+    # the browser would rebuild its background canvas forever.
+    return hashlib.md5("|".join(sorted(parts)).encode()).hexdigest()[:12]
+
+
 def export_map():
     return {
-        "tile": TILE, "w": W, "h": H,
+        "tile": TILE, "w": W, "h": H, "version": map_version(),
         "grid": ["".join(row) for row in GRID],
         "districts": DISTRICTS,
         "locations": LOCATIONS,

@@ -41,6 +41,17 @@ RULES
   Most of the people who have company should have a `to` and a `says` this beat. Silence is
   for somebody marked ALONE, or for two people whose not-speaking is itself the point.
 - Speech can only be aimed at somebody listed as with them. Never at an absent person.
+- GRIEF IS NOT A MOOD. Somebody marked as grieving is not simply sad: they are distracted,
+  angry at the wrong people, doing an ordinary task badly, or unable to be in a particular
+  room. Nobody makes a speech about loss. Let it show in what they get wrong.
+- Somebody HELD AT THE 9TH is in a cell. They cannot be anywhere else, cannot do anything
+  outside, and can only speak to whoever is listed as with them. Write the waiting.
+- The laws on this block were written BY THESE PEOPLE, recently, after something went
+  wrong. They are local and petty and everybody knows who pushed for them. Characters may
+  resent a law, use it against somebody, ignore it, or hide behind it — but they know it
+  exists. Never invent a law that is not listed.
+- A building listed as a burnt shell is gone. Do not put anybody inside it doing business.
+  People stand at it, pick through it, or avoid the sight of it.
 - Where two people are together, it is good for them to answer each other — one addresses
   the other, and the other replies to them in the same beat.
 - Vary the interior voice. Do not begin thoughts with "I have to" or "I need to" - most
@@ -148,6 +159,20 @@ def _people_block(agents, groups, beat, chosen):
         mems = memory.retrieve(a, beat, query, k=3)
         mem_s = " | ".join(f'd{m2["day"]}: {m2["what"]}' for m2 in mems) or "nothing yet"
 
+        # Bereavement and custody outrank every other fact about somebody, so they go first
+        # and are only present when true — a line spent saying "not grieving" is a line the
+        # model cannot spend answering.
+        flags = []
+        if a.get("grief", 0) >= 40:
+            flags.append("DEEP IN GRIEF")
+        elif a.get("grief", 0) >= 15:
+            flags.append("still grieving")
+        if a.get("detained_until"):
+            flags.append(f'HELD AT THE 9TH over {a.get("charged_with", "a charge")}')
+        if a.get("service_until"):
+            flags.append("working off a sentence")
+        flag_s = ("  " + "; ".join(flags) + "\n") if flags else ""
+
         # Only the stats that are actually notable — a mood sitting near its resting level
         # tells the model nothing and costs tokens on every character every beat.
         feels = [f"{k} {v}" for k, v in
@@ -157,6 +182,7 @@ def _people_block(agents, groups, beat, chosen):
 
         lines.append(
             f'[{aid}] {a["name"]}, {a["age"]}, {a["role"]}\n'
+            f'{flag_s}'
             f'  is: {"; ".join(a["traits"][:3])}\n'
             f'  wants: {a["ambition"]}\n'
             f'  at: {loc}, currently {a.get("activity", "here")}'
@@ -183,10 +209,37 @@ def build_prompt(world, agents, groups, pressures, event, beat, day, block, chos
         stranger += (f'\nA stranger spoke to {ex["name"]}: "{ex["line"]}" '
                      f'and was told "{ex["reply"]}". They are still turning it over.')
 
+    # ── what the block itself is going through ───────────────────────────────
+    # Laws, deaths and ruins are the three things everybody on a block knows without being
+    # told, so they are stated once at the top rather than repeated for each person. All
+    # three are capped: the city can accumulate fourteen laws and months of dead, and this
+    # prompt shares one per-minute token reservation with the reply.
+    enacted = [l for l in (world.get("laws") or []) if l.get("status") == "enacted"]
+    law_s = "; ".join(f'{l["title"]} ({l["penalty"]["type"]})' for l in enacted[-4:])
+    if len(enacted) > 4:
+        law_s += f" (+{len(enacted) - 4} older)"
+    law_line = ("Laws this block has passed - "
+                + (law_s or "none yet; nothing is written down") + "." + "\n")
+
+    dead = [d for d in (world.get("dead") or []) if day - d.get("day", 0) <= 10][:3]
+    dead_line = ("Recently dead - " + "; ".join(
+        f'{d["name"]} ({d["cause"]}, day {d["day"]})' for d in dead) + "." + "\n") if dead else ""
+
+    ruins = [b for b in (world.get("buildings") or [])
+             if b.get("condition") in ("ruin", "rebuilding", "damaged")]
+    ruin_line = ("The state of the block - " + "; ".join(
+        f'{b["name"]} is {"a burnt shell" if b["condition"] == "ruin" else b["condition"]}'
+        for b in ruins[:4]) + "." + "\n") if ruins else ""
+
+    funeral = world.get("funeral") or {}
+    fun_line = (f'There is a funeral today for {funeral["for"]}. Most of the block goes.' + "\n"
+                ) if funeral.get("day") == day else ""
+
     return (
         f"DAY {day}, {block}. Weather: {world['weather']}.\n"
         f"Police attention - {heat}.\n"
         f"Overdue - {debts}.\n"
+        f"{law_line}{dead_line}{ruin_line}{fun_line}"
         f"Just happened - {event['text'] if event else 'nothing anybody would write down'}"
         f"{stranger}\n\n"
         f"PEOPLE\n{_people_block(agents, groups, beat, chosen)}\n\n"

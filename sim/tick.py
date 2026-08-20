@@ -17,7 +17,8 @@ import random
 import sys
 import time
 
-from . import activities, city, clock, cognition, events, llm, player, reflect, state
+from . import (activities, city, clock, cognition, construction, events, law, llm,
+               mortality, player, reflect, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -49,13 +50,37 @@ def target_location(agent, block, world):
     Exhaustion overrides work and high district heat pushes people off the street — two
     rules, both cheap, and between them the routine stops looking like a timetable.
     """
-    loc = agent["routine"][block]
-    if agent["mood"]["energy"] < 15 and block != "night":
+    # Being held overrides every other reason to be anywhere.
+    if agent.get("detained_until"):
+        return "precinct" if city.usable("precinct") else _fallback(agent)
+
+    # The block turns out for a funeral. This is the one thing that moves everybody at once,
+    # and it is what makes a death land as an event rather than a line in a log.
+    f = world.get("funeral")
+    if f and f.get("day") == clock.day_of(world["beat"]) and block in ("morning", "afternoon"):
+        if city.usable("church"):
+            return "church"
+
+    loc = agent["routine"].get(block) or agent["home"]
+    if not city.usable(loc):
+        # Somewhere they used to go has burned down or is behind hoarding.
+        loc = agent["home"] if city.usable(agent.get("home")) else _fallback(agent)
+    if agent["mood"]["energy"] < 15 and block != "night" and city.usable(agent.get("home")):
         return agent["home"]
-    dest_district = city.LOCATIONS[loc]["district"]
+    dest_district = city.LOCATIONS.get(loc, {}).get("district", "delmar")
     if world["heat"].get(dest_district, 0) > 55 and agent["faction"] in ("crew", "grey"):
-        return agent["home"]
+        if city.usable(agent.get("home")):
+            return agent["home"]
     return loc
+
+
+def _fallback(agent):
+    """Anywhere real. Used when somebody's home or work no longer exists."""
+    for lid in (agent.get("work"), "green", "lot", "diner"):
+        if city.usable(lid):
+            return lid
+    standing = [l for l in city.LOCATIONS if city.usable(l)]
+    return standing[0] if standing else agent.get("home")
 
 
 def move(agent, dest_id, block, weather, rng):
@@ -176,11 +201,17 @@ def run_beat(world, agents, quiet=False, cognition=None):
     rng = random.Random(f"{world['seed']}:{beat}")
     world["weather"] = events.roll_weather(rng)
 
-    for a in agents.values():
+    # This world's city, not whatever city another simulation in this process last built.
+    state.point_city(world)
+    mortality.ensure_fields(agents)
+    law.ensure(world)
+    alive = mortality.living(agents)
+
+    for a in alive.values():
         move(a, target_location(a, block, world), block, world["weather"], rng)
 
-    groups = colocation(agents)
-    for a in agents.values():
+    groups = colocation(alive)
+    for a in alive.values():
         tick_needs(a, block, alone=len(groups.get(a["at"], [])) <= 1)
 
     tick_heat(world)
@@ -195,10 +226,10 @@ def run_beat(world, agents, quiet=False, cognition=None):
             elif d in world["heat"]:
                 world["heat"][d] = clamp(world["heat"][d] + dv)
 
-        targets = ev.get("targets") or list(agents.keys())
+        targets = ev.get("targets") or list(alive.keys())
         for aid in targets:
-            if aid in agents:
-                apply_mood(agents[aid], ev.get("mood", {}))
+            if aid in alive:
+                apply_mood(alive[aid], ev.get("mood", {}))
         world["events"] = ([ev] + world.get("events", []))[:20]
 
     records = [{
@@ -211,10 +242,18 @@ def run_beat(world, agents, quiet=False, cognition=None):
     # Everyone's baseline is whatever the activity system decided. Cognition then overwrites
     # that for the handful of people it covers this beat, so nobody is ever left standing on
     # a tile with nothing to their name.
-    for a in agents.values():
+    for a in alive.values():
         a["action"] = a.get("activity") or "here"
         a["thought"] = ""
         a["speech"] = None
+        if law.detained(a):
+            a["action"] = "is being held at the 9th"
+
+    # ── the city itself lives this beat ──────────────────────────────────────
+    # Structural change, death and arrivals all resolve BEFORE cognition, so that whoever
+    # is thinking this beat is reacting to the fire rather than finding out next beat.
+    if not quiet:
+        records += world_beat(world, agents, alive, beat, day)
 
     if cognition and not quiet:
         # A malformed response must never take the city down with it. This exact path
@@ -223,13 +262,121 @@ def run_beat(world, agents, quiet=False, cognition=None):
         # Everyone already has an activity, so the worst case here is a beat nobody
         # narrates — which is survivable, unlike a city that stops.
         try:
-            records += cognition(world, agents, groups, pressures, ev, beat, day, block)
+            # Only the living are asked what they are doing. Passing the whole roster let
+            # selection pick somebody who died three days ago and quietly narrate them.
+            records += cognition(world, alive, groups, pressures, ev, beat, day, block)
         except Exception as e:
             print(f"[tick] cognition failed on beat {beat} ({type(e).__name__}: {e}) — "
                   f"beat still paid, nobody narrated.")
 
+    # What people just did is scanned against the block's own laws. This has to come after
+    # cognition — the actions it reads are the ones cognition wrote this beat.
+    if not quiet:
+        try:
+            records += law.detect(world, agents, records, beat, day)
+            law.note_pressure(world, records)
+        except Exception as e:
+            print(f"[tick] enforcement failed on beat {beat} ({type(e).__name__}: {e})")
+
     world["last_beat_at"] = clock.advance(world["last_beat_at"], 1)
     return records
+
+
+def _evacuate(alive):
+    """Get anybody standing where a building just stopped being walkable back onto the map.
+
+    Scaffolding is solid: without this, whoever was inside when the hoarding went up is
+    sealed into a tile the pathfinder cannot leave, and they stand there forever.
+    """
+    for a in alive.values():
+        if city.walkable(*a["pos"]):
+            continue
+        home = a.get("home") if city.usable(a.get("home")) else None
+        dest = city.LOCATIONS.get(home or _fallback(a), {}).get("anchor")
+        if dest:
+            a["pos"] = list(dest)
+            a["spot"] = list(dest)
+            a["dest"] = list(dest)
+            a["at"] = home or _fallback(a)
+
+
+def world_beat(world, agents, alive, beat, day):
+    """Everything that happens to the city rather than inside somebody's head.
+
+    Wrapped individually so one bad system cannot cost the beat: a city that fails to catch
+    fire correctly should still be a city.
+    """
+    out = []
+    dirty = False
+
+    try:
+        rec, hit = construction.roll_disaster(world, world["buildings"], beat, day)
+        if rec:
+            out.append(rec)
+            dirty = True
+            if rec["event"] == "destroyed":
+                # Anyone inside it when it went.
+                inside = [a for a in alive.values() if a.get("at") == hit["id"]]
+                for a in inside:
+                    if random.Random(f'{a["id"]}:{beat}:caught').random() < 0.22:
+                        out.append(mortality.kill(world, agents, a, mortality.ACCIDENT[0],
+                                                  beat, day, place=hit["name"]))
+                        break
+                out += [{"kind": "displaced", "day": day, "beat": beat, **d}
+                        for d in construction.displace(agents, world["buildings"],
+                                                       hit["id"], day)]
+    except Exception as e:
+        print(f"[tick] disaster roll failed ({type(e).__name__}: {e})")
+
+    try:
+        works = construction.advance_works(world, world["buildings"], beat, day)
+        if works:
+            out += works
+            dirty = True
+    except Exception as e:
+        print(f"[tick] works failed ({type(e).__name__}: {e})")
+
+    try:
+        grew = construction.maybe_expand(world, agents, world["buildings"], beat, day)
+        if grew:
+            out += grew
+            dirty = True
+    except Exception as e:
+        print(f"[tick] expansion failed ({type(e).__name__}: {e})")
+
+    if dirty:
+        # The ground moved: recompute the grid, then get everyone off it who is now standing
+        # in rubble or behind hoarding.
+        #
+        # Deliberately NOT written to disk here. run_beat is called by selftest.py and by
+        # any local experiment, and a simulation that persists as a side effect of thinking
+        # rewrote the real state/city.json from a throwaway run — which then loaded back as
+        # the live city's starting condition. Saving belongs to the one place that owns it:
+        # the `finally` in main().
+        city.rebuild(world["buildings"])
+        _evacuate(alive)
+
+    try:
+        d = mortality.roll_death(world, agents, beat, day)
+        if d:
+            out.append(d)
+    except Exception as e:
+        print(f"[tick] mortality failed ({type(e).__name__}: {e})")
+
+    try:
+        arr = mortality.maybe_arrival(world, agents, world["buildings"], beat, day)
+        if arr:
+            out.append(arr)
+    except Exception as e:
+        print(f"[tick] arrival failed ({type(e).__name__}: {e})")
+
+    try:
+        out += law.try_cases(world, agents, beat, day)
+        out += law.release(agents, day, beat)
+    except Exception as e:
+        print(f"[tick] justice failed ({type(e).__name__}: {e})")
+
+    return out
 
 
 # ── entry point ──────────────────────────────────────────────────────────────
@@ -257,6 +404,20 @@ def main(argv=None):
         print("No state/world.json — run with --bootstrap first.", file=sys.stderr)
         return 1
     agents = state.load_agents()
+    # The map is state now, not a constant: load whatever shape the city is currently in
+    # before anything tries to path across it.
+    state.sync_city(world)
+    mortality.ensure_fields(agents)
+    law.ensure(world)
+
+    # The layout in code can change under a city that is already running — this deploy moved
+    # every building on the map. Anyone whose saved position is now inside a wall has to be
+    # put back on walkable ground before the first beat is paid, or the pathfinder spends
+    # the rest of the city's life trying to route out of solid masonry.
+    stuck = [a for a in mortality.living(agents).values() if not city.walkable(*a["pos"])]
+    if stuck:
+        _evacuate(mortality.living(agents))
+        print(f"[tick] the map changed under {len(stuck)} people — moved them back inside.")
 
     # `--owe N` advances last_beat_at by N beats regardless of real time, so local testing
     # leaves the marker in the future — and beats_owed then returns 0 forever, freezing the
@@ -320,6 +481,23 @@ def main(argv=None):
                 except Exception as e:
                     print(f"[tick] reflection failed for day {d} "
                           f"({type(e).__name__}: {e}) — no beliefs formed.")
+
+                mortality.decay_grief(agents)
+
+                # The block legislates only when something has actually built up. This is
+                # the one model call the civic layer makes, and it is capped and skippable.
+                try:
+                    if law.should_legislate(world, d):
+                        recent = [r.get("text") or r.get("action") for r in
+                                  (state.read_day(d) + records)
+                                  if r.get("kind") in ("death", "structure", "act",
+                                                       "verdict", "charge")
+                                  and (r.get("text") or r.get("action"))]
+                        records += law.propose_law(world, agents, budget, d,
+                                                   world["beat"], recent[-14:])
+                except Exception as e:
+                    print(f"[tick] legislation failed for day {d} "
+                          f"({type(e).__name__}: {e}) — no new law.")
                 try:
                     # Earlier beats of this day were written by earlier cron runs and are
                     # already on disk; only the tail is still in memory. The Gazette needs both.
@@ -363,6 +541,7 @@ def main(argv=None):
         if not args.dry_run and paid:
             state.save_world(world)
             state.save_agents(agents)
+            state.save_map()
             state.append_log(day, records)
             print(f"[tick] state written ({paid} beat(s) persisted).")
 

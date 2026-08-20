@@ -69,9 +69,45 @@ There is no script and no story state machine. Narrative falls out of:
   and decisions are where drama comes from.
 - **the event table** — a weighted, seeded roll each beat. Reproducible, so an interesting
   week can be replayed and a bug can be caught.
-- **cognition** — one batched LLM call per beat decides what all twelve do about the above,
-  what they think, what they say to whoever is standing next to them, and what they will
-  still be turning over tomorrow.
+- **cognition** — one batched LLM call per beat decides what the selected cast do about the
+  above, what they think, what they say to whoever is standing next to them, and what they
+  will still be turning over tomorrow.
+- **mortality** — people die, rarely, of things the city already tracks: age, sustained
+  stress, the heat on their district, a building coming down on them. Everyone who knew
+  them reacts in the direction they actually felt — grief scaled by affinity, so somebody
+  who hated the deceased gets relief and the fear that comes with it. Grief persists for
+  days and shows in what people get wrong. Two city-days later there is a funeral, and the
+  whole block turns out for it.
+- **the city itself** — buildings burn, are condemned, stand as walkable rubble for days,
+  go behind scaffolding, and reopen — sometimes as something else entirely, so the block's
+  character drifts over months without anybody authoring it. When homes get tight or the
+  city has been static too long, a new building goes up on empty ground.
+- **law** — see below. The block writes its own.
+
+### Law nobody wrote
+
+There is no statute book in this repo. The block accumulates incidents, and when enough of
+them are things no existing rule covers, the model is asked **once** to write a single
+ordinance in response to what actually happened. The result is a legal code that reads as a
+history of the city's worst weeks.
+
+Only the drafting costs tokens. Everything downstream is plain Python:
+
+```
+propose  ── LLM, rare, budget-capped ──> a law, with keywords
+detect   ── keyword scan on narrated actions
+arrest   ── caught or not, by district heat and how many people saw
+trial     ── a jury of nine actual characters
+sentence ── a fine, days in a cell, days of service, or acquittal
+```
+
+The jury is the interesting part. Verdicts are voted by real characters weighted by how
+they actually feel about the accused, so a popular defendant walks and somebody the block
+has turned on does not. That is the social graph deciding the outcome, and it costs
+nothing — no model call could produce a more grounded answer than the affinities the city
+has spent weeks building. Detection uses keywords the model supplies **when it writes the
+law**, so the expensive judgement happens once and the machine applies it ten thousand
+times.
 
 ### The token constraint that shapes the whole design
 
@@ -132,9 +168,9 @@ token budget.
 ## State
 
 ```
-state/map.json       the city, generated once from sim/city.py
-state/world.json     clock, weather, heat, turf, debts, recent events
-state/agents.json    twelve people: mood, relationships, memories
+state/map.json       the city as it currently stands — re-exported whenever it changes
+state/world.json     clock, weather, heat, turf, debts, events, buildings, laws, charges, dead
+state/agents.json    the cast: mood, relationships, memories, who is alive, who is inside
 state/log-wNNN.jsonl append-only event log, rotated per city-week
 ```
 
@@ -144,6 +180,8 @@ state/log-wNNN.jsonl append-only event log, rotated per city-week
 - [x] **Phase 2** — the city thinks: batched cognition, memory streams, opinions, dialogue
 - [x] **Phase 3** — you exist: a player sprite, and characters who remember meeting you
 - [x] **Phase 4** — the city narrates itself: nightly reflection, a daily newspaper
+- [x] **Phase 5** — the city can be lost: death and grief, buildings that burn and are
+      rebuilt, growth onto empty land, and law the block writes and enforces on itself
 
 ## The end of a day
 

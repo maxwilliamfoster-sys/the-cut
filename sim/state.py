@@ -70,6 +70,69 @@ def save_agents(agents):
     _write(agents_path(), agents)
 
 
+# ── the city itself ──────────────────────────────────────────────────────────
+# The map used to be a constant compiled into city.py and written to map.json exactly once,
+# at bootstrap. It is now mutable state: buildings burn down, stand as ruins, get rebuilt,
+# and new ones go up on empty land.
+#
+# The live building list lives in world.json and nowhere else. An earlier version also kept
+# a copy in city.json, which is exactly the sort of second source of truth that is right
+# until the day it silently is not.
+
+def map_path():
+    return os.path.join(STATE, "map.json")
+
+
+def merge_base(existing):
+    """Fold the seed city in code together with the city as it has actually turned out.
+
+    Geometry comes from source, so a layout fix reaches a city that has been running for
+    weeks. Everything the city earned — whether a place is a ruin, what it was renamed to
+    when it reopened — comes from the save. Buildings the city invented at runtime are not
+    in the seed at all and are carried through untouched.
+    """
+    saved = {b["id"]: b for b in (existing or [])}
+    out = []
+    for base in city.BASE_BUILDINGS:
+        b = dict(base)
+        keep = saved.get(base["id"])
+        if keep:
+            for k in ("condition", "since_day", "generation", "name", "kind", "style"):
+                if k in keep:
+                    b[k] = keep[k]
+        out.append(b)
+    known = {b["id"] for b in out}
+    out += [dict(b) for b in (existing or []) if b["id"] not in known]
+    return out
+
+
+def sync_city(world):
+    """Reconcile the world's buildings with the seed, then point the city module at them."""
+    merged = merge_base(world.get("buildings"))
+    if merged != world.get("buildings"):
+        world["buildings"] = merged
+    point_city(world)
+    return world["buildings"]
+
+
+def point_city(world):
+    """Cheap per-beat re-point: only rebuilds the grid if this world's city is not the one
+    the module is currently showing. Two simulations in one process each keep their own.
+
+    A world saved before the city became mutable has no buildings at all, so it is seeded
+    here rather than crashing — the live city is upgraded by being run, not by a migration.
+    """
+    if not world.get("buildings"):
+        return sync_city(world)
+    if city.BUILDINGS is not world["buildings"]:
+        city.rebuild(world["buildings"])
+    return world["buildings"]
+
+
+def save_map():
+    _write(map_path(), city.export_map())
+
+
 # ── log ──────────────────────────────────────────────────────────────────────
 
 def log_path(day):
@@ -169,9 +232,10 @@ def bootstrap(seed="the-cut-001", start_at=None):
         "events": [],
         "player_queue": [],
         "last_gazette_day": -1,
+        "buildings": [dict(b) for b in city.BASE_BUILDINGS],
     }
 
-    _write(os.path.join(STATE, "map.json"), city.export_map())
+    save_map()
     save_world(world)
     save_agents(agents)
     os.makedirs(GAZETTE_DIR, exist_ok=True)

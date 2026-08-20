@@ -207,7 +207,20 @@
       <div id="debts"></div>
     </div>
     <div class="sec">
-      <h2>TWELVE PEOPLE</h2>
+      <h2>THE LAW OF THIS BLOCK</h2>
+      <div id="laws"></div>
+      <div class="hint">Nobody wrote these. The block passed them after something happened.</div>
+    </div>
+    <div class="sec" id="worksec" style="display:none">
+      <h2>THE BLOCK ITSELF</h2>
+      <div id="works"></div>
+    </div>
+    <div class="sec" id="deadsec" style="display:none">
+      <h2>THE DEAD</h2>
+      <div id="dead"></div>
+    </div>
+    <div class="sec">
+      <h2 id="casthead">THE CAST</h2>
       <div id="cast"></div>
       <div class="hint">Click anyone — on the map or here.</div>
     </div>
@@ -255,6 +268,8 @@ const TILECOL = {
   'f':'#5a5348',   // interior floor
   'D':'#c8a04a',   // door
   '~':'#1b3a4a',
+  'x':'#3a352f',   // rubble — what is left after a fire
+  's':'#6b5c3a',   // scaffolding — a building coming back
 };
 
 // Every building drew in the same brown, so a street of six shops read as one repeated
@@ -322,6 +337,8 @@ const PROP = {
 const TALK_URL = 'https://the-cut-talk.maxwilliamfoster.workers.dev';
 
 let MAP=null, WORLD=null, AGENTS=null, LOG=[];
+// ROSTER is everybody ever; AGENTS is only the living, which is what gets drawn.
+let ROSTER=null, DEAD=[];
 let selected=null, bg=null, T=16, lastFetch=0, beatStartMs=0;
 const anim = {};                 // per-agent render state
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
@@ -343,10 +360,25 @@ async function jget(path){
 
 async function load(first){
   try{
-    if(first) MAP = await jget('state/map.json');
+    // The map used to be fetched once, because it could never change. Buildings now burn
+    // down, get rebuilt and go up on empty land, so the shape is re-checked every poll —
+    // but the background canvas is only redrawn when `version` says something moved.
+    const m = await jget('state/map.json');
+    const shapeChanged = MAP && MAP.version !== m.version;
+    MAP = m; T = MAP.tile;
     const [w,a] = await Promise.all([jget('state/world.json'), jget('state/agents.json')]);
     const newBeat = !WORLD || w.beat !== WORLD.beat;
-    WORLD = w; AGENTS = a;
+    WORLD = w;
+    // People can die now. Splitting them out here rather than at each use means every
+    // render loop, hit-test and cast list excludes them without having to remember to —
+    // a corpse that still walks to work is a worse bug than one that renders oddly.
+    ROSTER = a;
+    AGENTS = {};
+    DEAD = [];
+    for(const id in a){
+      if(a[id].alive === false) DEAD.push(a[id]); else AGENTS[id] = a[id];
+    }
+    DEAD.sort((p,q)=>(q.died_day||0)-(p.died_day||0));
 
     try{
       const day = Math.floor(w.beat/4), wk = String(Math.floor(day/7)).padStart(3,'0');
@@ -354,7 +386,8 @@ async function load(first){
       LOG = txt.trim().split('\n').filter(Boolean).map(JSON.parse);
     }catch(e){ LOG = []; }
 
-    if(first){ T = MAP.tile; buildBackground(); fitCanvas(); }
+    if(first || shapeChanged) buildBackground();
+    if(first) fitCanvas();
     if(newBeat) onNewBeat();
     paintPanel();
     draw();
@@ -382,8 +415,12 @@ function buildBackground(){
   // own style rather than one shared brown.
   const owner = {};
   for(const id in MAP.locations){
-    const [bx,by,bw,bh] = MAP.locations[id].rect;
-    for(let y=by;y<by+bh;y++) for(let x=bx;x<bx+bw;x++) owner[x+','+y] = id;
+    const L = MAP.locations[id];
+    // rects, not rect: the bounding box of an L-shaped building covers the street beside
+    // it and a U-shaped one covers its own courtyard, so both would be painted as wall.
+    for(const [bx,by,bw,bh] of (L.rects || [L.rect])){
+      for(let y=by;y<by+bh;y++) for(let x=bx;x<bx+bw;x++) owner[x+','+y] = id;
+    }
   }
 
   for(let y=0;y<MAP.h;y++){
@@ -418,6 +455,20 @@ function buildBackground(){
       } else if(c==='g'){                            // grass: tufts
         if((x*3+y*7)%5===0){ g.fillStyle='rgba(140,180,120,.16)'; g.fillRect(x*T+5,y*T+6,3,4); }
         if((x*11+y*5)%9===0){ g.fillStyle='rgba(90,120,80,.25)'; g.fillRect(x*T+9,y*T+9,3,3); }
+      } else if(c==='x'){                            // rubble: broken masonry, scorching
+        g.fillStyle='rgba(0,0,0,.35)';
+        if((x*5+y*7)%3===0) g.fillRect(x*T+2,y*T+3,4,3);
+        if((x*11+y*3)%4===0) g.fillRect(x*T+9,y*T+8,4,4);
+        g.fillStyle='rgba(150,140,125,.22)';
+        if((x*7+y*13)%5===0) g.fillRect(x*T+5,y*T+10,5,2);
+        if((x*3+y*11)%6===0) g.fillRect(x*T+10,y*T+2,3,3);
+        g.fillStyle='rgba(20,15,12,.30)'; g.fillRect(x*T,y*T+T-2,T,2);
+      } else if(c==='s'){                            // scaffolding: poles and boards
+        g.fillStyle='rgba(0,0,0,.30)'; g.fillRect(x*T,y*T,T,T);
+        g.fillStyle='#8a7440';
+        g.fillRect(x*T+2,y*T,2,T); g.fillRect(x*T+T-4,y*T,2,T);
+        g.fillStyle='#a08a52'; g.fillRect(x*T,y*T+4,T,2); g.fillRect(x*T,y*T+11,T,2);
+        g.fillStyle='rgba(210,190,140,.18)'; g.fillRect(x*T,y*T,T,1);
       } else if(c==='#'){
         g.fillStyle='rgba(0,0,0,.30)';
         g.fillRect(x*T,y*T+T-3,T,3); g.fillRect(x*T+T-3,y*T,3,T);
@@ -615,7 +666,9 @@ function agentRenderPos(id, nowMs){
 
 // Must stay in step with city.py's WALKABLE — a tile type added there and forgotten here
 // becomes an invisible wall the player cannot cross but everyone else walks straight over.
-const WALKABLE_TILES = '.,:=gfD';
+// Must stay in step with city.WALKABLE in sim/city.py. Rubble is walkable (people
+// stand in the shell of a burnt building); scaffolding is not.
+const WALKABLE_TILES = '.,:=gfDx';
 function walkableAt(x,y){
   if(!MAP || y<0 || y>=MAP.h || x<0 || x>=MAP.w) return false;
   return WALKABLE_TILES.includes(MAP.grid[y][x]);
@@ -922,6 +975,52 @@ function paintPanel(){
     return `<div class="row"><span>${esc(nm)}</span><span>${v}</span></div>` +
            bar(v, v>60?'var(--hot)':v>30?'var(--gold)':'var(--cool)');
   }).join('');
+
+
+  // ── the law ───────────────────────────────────────────────────────────────
+  // Every one of these was written by the model in response to something that actually
+  // happened here, so the list doubles as a history of the block's worst weeks.
+  const laws = (WORLD.laws||[]).filter(l=>l.status==='enacted');
+  const charges = (WORLD.charges||[]).filter(c=>c.status==='awaiting_trial');
+  $('laws').innerHTML = (laws.length ? laws.slice().reverse().map(l=>{
+    const pen = l.penalty||{};
+    const p = pen.type==='fine' ? '$'+pen.amount
+            : pen.type==='jail' ? pen.amount+'d inside'
+            : pen.amount+'d service';
+    const by = (ROSTER&&ROSTER[l.proposed_by]||{}).name || l.proposed_by;
+    return `<div class="row" style="align-items:flex-start">
+        <span><b>${esc(l.title)}</b><br>
+        <span style="color:var(--dim);font-size:11px">${esc(l.text)}</span><br>
+        <span style="color:var(--dim);font-size:11px">pushed by ${esc(by)} · day ${l.day_enacted}
+        · ${l.convictions||0} conviction${(l.convictions||0)===1?'':'s'}</span></span>
+        <span style="color:var(--gold);white-space:nowrap">${esc(p)}</span></div>`;
+  }).join('') : '<div class="hint">No laws yet. Nothing has gone wrong enough.</div>')
+   + (charges.length ? '<div style="margin-top:8px">' + charges.map(c=>
+        `<div class="row"><span style="color:var(--hot)">${esc(c.name)} — awaiting trial</span>
+         <span style="color:var(--dim)">${esc(c.law_title)}</span></div>`).join('') + '</div>' : '');
+
+  // ── what has been lost and what is going back up ──────────────────────────
+  // Read conditions from the map rather than world.buildings: map.json is what the
+  // renderer already trusts for the city's shape, and it is always present.
+  const works = Object.values(MAP.locations)
+    .filter(b=>b.condition && b.condition!=='standing');
+  $('worksec').style.display = works.length ? '' : 'none';
+  $('works').innerHTML = works.map(b=>{
+    const label = b.condition==='ruin' ? 'burnt out'
+                : b.condition==='rebuilding' ? 'going back up' : 'damaged';
+    const col = b.condition==='ruin' ? 'var(--hot)'
+              : b.condition==='rebuilding' ? 'var(--gold)' : 'var(--dim)';
+    return `<div class="row"><span>${esc(b.name)}</span>
+            <span style="color:${col}">${label}</span></div>`;
+  }).join('');
+
+  // ── the dead ──────────────────────────────────────────────────────────────
+  $('deadsec').style.display = DEAD.length ? '' : 'none';
+  $('dead').innerHTML = DEAD.slice(0,12).map(d=>
+    `<div class="row"><span>${esc(d.name)}</span>
+     <span style="color:var(--dim)">${esc(d.cause||'')} · day ${d.died_day}</span></div>`).join('');
+
+  $('casthead').textContent = Object.keys(AGENTS).length + ' PEOPLE';
 
   const open = (WORLD.debts||[]).filter(d=>!d.settled);
   $('debts').innerHTML = open.length ? open.map(d=>{
