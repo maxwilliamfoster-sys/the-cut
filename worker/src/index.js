@@ -18,7 +18,11 @@
 
 const PAGES = "https://maxwilliamfoster-sys.github.io/the-cut";
 const GROQ = "https://api.groq.com/openai/v1/chat/completions";
-const MODEL = "llama-3.1-8b-instant";
+// Groq retired llama-3.1-8b-instant in Aug 2026 (404). gpt-oss is a reasoning model:
+// reasoning_format "hidden" keeps the trace out of the reply, and "low" effort keeps it
+// from eating max_tokens — without both, a short reply budget is spent thinking and the
+// character answers with nothing but a 502 "they said nothing".
+const MODEL = "openai/gpt-oss-20b";
 
 const RATE_LIMIT = 40;          // talk requests
 const RATE_WINDOW = 3600;       // per hour, per IP
@@ -143,8 +147,10 @@ async function talk(req, env) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 120,
+      max_tokens: 300,
       temperature: 0.95,
+      reasoning_format: "hidden",
+      reasoning_effort: "low",
       messages: [
         { role: "system", content: personaPrompt(a, world) },
         { role: "user", content: line },
