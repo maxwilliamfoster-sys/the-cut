@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 881,
-  "last_beat_at": "2026-08-20T13:57:12Z",
+  "beat": 884,
+  "last_beat_at": "2026-08-20T14:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 25,
-    "delmar": 16,
+    "riverside": 22,
+    "delmar": 13,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "boateng",
+        "hector"
+      ],
+      "text": "Somebody tells Fr. Emmanuel Boateng that Hector Delgado has been seen talking to police."
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -375,19 +388,6 @@
         "boateng"
       ],
       "text": "Amara Bello and Fr. Emmanuel Boateng are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
     }
   ],
   "player_queue": [
@@ -400,7 +400,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 220,
+    "day": 221,
     "spent": {}
   }
 }
