@@ -1,10 +1,11 @@
 """
 The Cut — the brain, and the budget around it.
 
-Groq's free tier is bound by *tokens per day*, not requests, and the good model is bound
-hardest: llama-3.3-70b gets 100K TPD against llama-3.1-8b's 500K. That single fact decides
-the architecture — one batched call per beat covering the whole cast, never one call per
-character, which would exhaust a day's allowance inside an hour.
+Groq's free tier is bound by *tokens per day*, not requests. Both surviving models get
+200K TPD, and a real day of beats costs more than that — so the architecture depends on
+two things: one batched call per beat covering the whole cast (never one call per
+character, which would exhaust the allowance inside an hour), and treating the two models
+as two separate 200K buckets that cognition spills between.
 
 Stdlib urllib rather than the `groq` package: this runs 96 times a day in CI and skipping
 a pip install makes every tick start faster and removes a dependency that can break the
@@ -15,6 +16,7 @@ daily cap, switch to OpenRouter's free models for the rest of the run rather tha
 the city stop.
 """
 
+import datetime
 import json
 import os
 import re
@@ -25,26 +27,46 @@ import urllib.request
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-FAST = "llama-3.1-8b-instant"        # 500K TPD — the workhorse, one call per beat
-DEEP = "llama-3.3-70b-versatile"     # 100K TPD — rationed for reflection and the Gazette
+# Groq retired the whole Llama text line (both former models now 404). The replacements
+# are gpt-oss, which changes two things that the rest of this file has to respect:
+#   1. Both tiers get the SAME allowance — 8K TPM / 200K TPD each. The old design leaned on
+#      FAST having 500K TPD; it no longer does. 200K does not cover a day of beats alone, so
+#      the two models are treated as two *separate* 200K buckets and cognition spills from
+#      one into the other rather than going quiet (see cognition.make_cognition).
+#   2. They are reasoning models. Reasoning tokens are billed as completion tokens and eat
+#      the same max_tokens reservation as the visible reply, so REASONING_EFFORT is pinned
+#      low and fit_max_tokens() budgets for them explicitly.
+FAST = "openai/gpt-oss-20b"          # 200K TPD — the workhorse, one call per beat
+DEEP = "openai/gpt-oss-120b"         # 200K TPD — the Gazette, and cognition's spillover
+
+# gpt-oss emits reasoning tokens before the answer. On a JSON batch they buy nothing (the
+# schema does the thinking) but they are charged, and if they consume the whole reservation
+# the reply comes back EMPTY with finish_reason=length — a silent failure, which is exactly
+# how the city died for 85 city-days. Low effort, and headroom reserved below.
+REASONING_EFFORT = "low"
+REASONING_RESERVE = 350              # tokens set aside for the hidden channel
 
 # Groq charges `prompt + max_tokens` against the per-minute ceiling as a single
 # reservation, and rejects the whole request with a 413 if that sum exceeds it — max_tokens
 # is a booking, not a limit on what you get billed. So the reply allowance has to be sized
 # against the prompt, not chosen freely.
-TPM = {FAST: 6000, DEEP: 12000}
+TPM = {FAST: 8000, DEEP: 8000}
 TPM_HEADROOM = 400
 
 
 def fit_max_tokens(model, prompt_chars, want=2000, floor=700):
     """Largest reply we can reserve without the request being refused outright."""
     prompt_est = prompt_chars // 4
-    room = TPM.get(model, 6000) - TPM_HEADROOM - prompt_est
-    return max(floor, min(want, room))
+    room = TPM.get(model, 8000) - TPM_HEADROOM - prompt_est
+    # The reservation has to cover the hidden reasoning channel as well as the JSON we
+    # actually want, or the visible reply gets squeezed to nothing.
+    return max(floor, min(want + REASONING_RESERVE, room))
 
 # Headroom under the published caps: a beat that overruns should degrade to a quiet beat,
 # not get a 429 halfway through a batch and lose everyone's decisions.
-DAILY_BUDGET = {FAST: 450_000, DEEP: 88_000}
+# Two independent 200K buckets, held just under the published cap so an overrun degrades
+# to a quiet beat instead of a 429 landing mid-batch and costing everyone their turn.
+DAILY_BUDGET = {FAST: 188_000, DEEP: 188_000}
 
 OPENROUTER_FALLBACKS = [
     "meta-llama/llama-3.3-70b-instruct:free",
@@ -54,21 +76,36 @@ OPENROUTER_FALLBACKS = [
 _openrouter_only = False
 
 
-class Budget:
-    """Token spend for one city-day, carried in world.json so it survives between runs."""
+def quota_day():
+    """The day Groq is actually metering — UTC, wall-clock.
 
-    def __init__(self, raw, day):
+    This used to be keyed on the *city* day (beat // 4). A city-day is 4 beats, so the
+    allowance reset 24 times per real day while Groq's 200K kept counting down across all
+    of them: the guard could never bind, and instead of degrading to quiet beats the city
+    drove into hard 429s with no failover key set. The budget only means something if it
+    is measured in the same unit as the meter it is protecting.
+    """
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+
+
+class Budget:
+    """Token spend for one real (UTC) day, carried in world.json so it survives runs."""
+
+    def __init__(self, raw, day=None):
+        day = quota_day()
         raw = raw or {}
         if raw.get("day") != day:
             raw = {"day": day, "spent": {}}
         self.day = day
         self.spent = dict(raw.get("spent") or {})
 
-    def ensure_day(self, day):
-        """A single run can pay beats across a city-day boundary; the allowance resets with
-        the day rather than with the run."""
-        if self.day != day:
-            self.day = day
+    def ensure_day(self, day=None):
+        """A single run can straddle midnight UTC; the allowance resets with the quota day
+        rather than with the run. The argument is ignored — callers pass the city day, and
+        it is deliberately not what the quota is measured in."""
+        today = quota_day()
+        if self.day != today:
+            self.day = today
             self.spent = {}
 
     def remaining(self, model):
@@ -136,8 +173,11 @@ def _openrouter(messages, max_tokens, temperature):
                 "model": model, "messages": messages,
                 "max_tokens": max_tokens, "temperature": temperature,
             })
+            text = (d["choices"][0]["message"].get("content") or "").strip()
+            if not text:
+                raise RuntimeError(f"{model} returned empty content")
             print(f"[llm] OpenRouter -> {model}")
-            return d["choices"][0]["message"]["content"], 0
+            return text, 0
         except Exception as e:
             last = e
     raise RuntimeError(f"All OpenRouter fallbacks failed: {last}")
@@ -154,6 +194,8 @@ def chat(messages, model=FAST, max_tokens=1800, temperature=0.9, json_mode=True,
         "model": model, "messages": messages,
         "max_tokens": max_tokens, "temperature": temperature,
     }
+    if model.startswith("openai/gpt-oss"):
+        payload["reasoning_effort"] = REASONING_EFFORT
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
 
@@ -166,7 +208,35 @@ def chat(messages, model=FAST, max_tokens=1800, temperature=0.9, json_mode=True,
                 # that completed, so the beat still lands, but people at the end of the
                 # batch silently lose their turn. Worth seeing in the log.
                 print(f"[llm] WARNING response hit max_tokens ({max_tokens}) — batch truncated")
-            return choice["message"]["content"], (d.get("usage") or {}).get("total_tokens", 0)
+
+            msg = choice.get("message") or {}
+            content = (msg.get("content") or "").strip()
+            used = (d.get("usage") or {}).get("total_tokens", 0)
+
+            # A 200 with an empty body is the failure mode that killed the city quietly:
+            # reasoning models can spend the entire reservation on the hidden channel and
+            # return nothing visible. Never hand an empty string back to a caller that is
+            # about to shrug and call it a quiet beat — retry harder, then fail LOUDLY.
+            if not content:
+                reasoning = (msg.get("reasoning") or "").strip()
+                salvaged = parse_json(reasoning) if reasoning else None
+                if salvaged is not None:
+                    print("[llm] empty content — salvaged JSON from the reasoning channel")
+                    return json.dumps(salvaged), used
+                if attempt < retries:
+                    bigger = min(int(max_tokens * 1.5), TPM.get(model, 8000) - TPM_HEADROOM)
+                    print(f"[llm] EMPTY content (finish={choice.get('finish_reason')}, "
+                          f"{used} tokens spent on reasoning) — retrying with "
+                          f"max_tokens {bigger}")
+                    payload["max_tokens"] = bigger
+                    time.sleep(2)
+                    continue
+                raise RuntimeError(
+                    f"{model} returned empty content {retries + 1}x "
+                    f"(finish_reason={choice.get('finish_reason')}) — the model answered "
+                    f"but said nothing usable.")
+
+            return content, used
         except urllib.error.HTTPError as e:
             body = e.read().decode(errors="replace")[:400]
             if e.code == 413 or (e.code == 429 and "Request too large" in body):

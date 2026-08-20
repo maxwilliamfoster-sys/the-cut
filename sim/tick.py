@@ -20,10 +20,13 @@ import time
 from . import activities, city, clock, cognition, events, llm, player, reflect, state
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
-# 4,000 tokens against a 6,000-per-minute ceiling, so beats cannot run faster than roughly
+# 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
 # one a minute no matter how many are owed. Measured, not guessed: at 30s every catch-up
 # spent most of its time inside the 429 handler being told to wait anyway.
 BEAT_PACING_SECONDS = 62
+
+# Consecutive thinking runs producing zero actions before the run is failed on purpose.
+SILENT_RUNS_ALARM = 2
 
 MOOD_MIN, MOOD_MAX = 0, 100
 
@@ -321,12 +324,37 @@ def main(argv=None):
                     # Earlier beats of this day were written by earlier cron runs and are
                     # already on disk; only the tail is still in memory. The Gazette needs both.
                     today = state.read_day(d) + [r for r in records if r.get("day") == d]
-                    records += reflect.gazette(world, agents, budget, d, today)
+                    records += reflect.gazette(world, agents, budget, d, today,
+                                               dry_run=args.dry_run)
                 except Exception as e:
                     print(f"[tick] gazette failed for day {d} "
                           f"({type(e).__name__}: {e}) — no front page.")
     finally:
         world["llm_budget"] = budget.to_json()
+
+        # ── the canary ───────────────────────────────────────────────────────────────
+        # Cognition failures are deliberately non-fatal, so the city keeps its history
+        # when the model has a bad night. The cost of that mercy is that a PERMANENT
+        # breakage looks identical to a bad night: when Groq retired both models, every
+        # run stayed green while 30 people stood frozen for 85 city-days. Nothing was
+        # wrong with the clock, the commits, or the exit code — which is why nobody saw.
+        # So: one silent run is weather, two in a row is an outage, and an outage has to
+        # be able to turn the run red. This is recorded AFTER state is saved, so raising
+        # the alarm never costs the city a beat.
+        # Only genuine attempts count. Exhausting the day's token allowance is the budget
+        # working as designed and must never raise the alarm; attempting to think and
+        # producing nothing is the outage this canary exists to catch.
+        st = getattr(cog, "stats", None) or {}
+        attempted, narrated = st.get("attempted", 0), st.get("narrated", 0)
+        if cog and attempted:
+            world["silent_runs"] = 0 if narrated else int(world.get("silent_runs", 0)) + 1
+            if not narrated:
+                print(f"[canary] {attempted} thinking beat(s) attempted and NOBODY acted — "
+                      f"{world['silent_runs']} silent run(s) in a row.")
+        elif cog and st.get("skipped_budget"):
+            print(f"[canary] {st['skipped_budget']} beat(s) skipped on budget, not broken "
+                  f"— alarm not armed.")
+
         day = clock.day_of(world["beat"])
         print(f"Paid {paid}/{owed} beat(s) -> {clock.describe(world['beat'])}, "
               f"weather {world['weather']}.")
@@ -340,6 +368,15 @@ def main(argv=None):
 
     if args.dry_run:
         print("--dry-run: nothing written.")
+
+    # State is already safely on disk (the finally above). Only now is it safe to fail the
+    # run — a red tick that has already committed its beats costs nothing but attention.
+    silent = int(world.get("silent_runs", 0))
+    if silent >= SILENT_RUNS_ALARM:
+        print(f"::error::The city is ticking but nobody is thinking — {silent} consecutive "
+              f"runs produced zero actions. The clock is fine; cognition is not. "
+              f"Check the [cognition] lines above for the real error.")
+        return 1
     return 0                      # state was already persisted in the finally above
 
 

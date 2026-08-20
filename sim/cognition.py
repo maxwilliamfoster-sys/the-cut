@@ -295,31 +295,52 @@ def make_cognition(budget, verbose=True):
     def cognition(world, agents, groups, pressures, event, beat, day, block):
         records = []
         budget.ensure_day(day)
+        stats = cognition.stats
         chosen = select(world, agents, groups, pressures, event, beat)
         prompt = build_prompt(world, agents, groups, pressures, event, beat, day, block, chosen)
 
         # ~4 chars a token, plus room for the reply. If the day's allowance cannot cover
         # it, fall through to a quiet beat rather than half-applying a truncated response.
         estimate = len(SYSTEM + prompt) // 4 + 1200
-        if not budget.can_afford(llm.FAST, estimate):
-            if verbose:
-                print(f"[cognition] budget exhausted for {llm.FAST} "
-                      f"({budget.remaining(llm.FAST)} left, need ~{estimate}) — quiet beat.")
-            return records
+
+        # Both models now get the same 200K/day, and one bucket does not cover 96 beats.
+        # They are separate allowances though, so when the workhorse is spent the beat
+        # moves to the other model rather than the city going quiet for the rest of the
+        # day. Only when BOTH are gone is a quiet beat the honest answer.
+        model = llm.FAST
+        if not budget.can_afford(model, estimate):
+            if budget.can_afford(llm.DEEP, estimate):
+                model = llm.DEEP
+                if verbose:
+                    print(f"[cognition] {llm.FAST} spent — spilling this beat onto {model} "
+                          f"({budget.remaining(model)} left).")
+            else:
+                if verbose:
+                    print(f"[cognition] both budgets exhausted "
+                          f"({budget.remaining(llm.FAST)}/{budget.remaining(llm.DEEP)} left, "
+                          f"need ~{estimate}) — quiet beat.")
+                stats["skipped_budget"] += 1
+                return records
+
+        # Past this line the beat is a genuine attempt to think. The canary in tick.main
+        # distinguishes this from the budget skip above: running out of allowance is the
+        # system working, while attempting and producing nothing is the system broken, and
+        # only the second one should ever turn a run red.
+        stats["attempted"] += 1
 
         messages = [{"role": "system", "content": SYSTEM},
                     {"role": "user", "content": prompt}]
-        reply_room = llm.fit_max_tokens(llm.FAST, len(SYSTEM) + len(prompt), want=2000)
+        reply_room = llm.fit_max_tokens(model, len(SYSTEM) + len(prompt), want=2000)
 
         text, used = "", 0
         for attempt in range(2):
             try:
-                text, used = llm.chat(messages, model=llm.FAST,
+                text, used = llm.chat(messages, model=model,
                                       max_tokens=reply_room, temperature=0.9)
             except Exception as e:
                 print(f"[cognition] beat {beat} call failed: {e}")
                 return records
-            budget.charge(llm.FAST, used)
+            budget.charge(model, used)
 
             hit = llm.trips_guardrail(text)
             if not hit:
@@ -339,10 +360,13 @@ def make_cognition(budget, verbose=True):
             return records
 
         n = _apply(agents, data, groups, beat, day, records, chosen)
+        if n:
+            stats["narrated"] += 1
         if verbose:
             print(f"[cognition] beat {beat}: {n}/{len(chosen)} narrated "
-                  f"(of {len(agents)} living), {used} tokens "
-                  f"({budget.remaining(llm.FAST)} left today)")
+                  f"(of {len(agents)} living), {used} tokens on {model} "
+                  f"({budget.remaining(model)} left today)")
         return records
 
+    cognition.stats = {"attempted": 0, "narrated": 0, "skipped_budget": 0}
     return cognition

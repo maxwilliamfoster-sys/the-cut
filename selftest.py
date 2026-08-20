@@ -12,7 +12,7 @@ import copy
 import sys
 from datetime import timedelta
 
-from sim import city, clock, cognition, events, llm, state, tick
+from sim import city, clock, cognition, events, llm, reflect, state, tick
 
 FAILS = []
 
@@ -286,6 +286,73 @@ check("the workflow commits state even when the tick fails",
 
 check("cognition failures cannot take the beat down with them",
       "except Exception" in inspect.getsource(tick.run_beat))
+
+
+# ── the silent-death invariants ──────────────────────────────────────────────────
+# Groq retired both Llama models and the city ran on for 85 city-days: green runs, a
+# perfect clock, committed state, and 30 people frozen mid-stride. Every check below
+# exists because nothing existing caught that.
+
+RETIRED = {"llama-3.1-8b-instant", "llama-3.3-70b-versatile", "llama3-8b-8192",
+           "llama3-70b-8192", "mixtral-8x7b-32768"}
+check("the city is not pointed at a decommissioned model",
+      not ({llm.FAST, llm.DEEP} & RETIRED),
+      f"FAST={llm.FAST} DEEP={llm.DEEP} — retired by Groq, every call will 404")
+
+# A reasoning model that spends its whole allowance thinking returns HTTP 200 with an
+# empty body. Returning "" to the caller reads as "the model had nothing to say" and the
+# beat is quietly dropped — indistinguishable from a healthy quiet beat. It must raise.
+chat_src = inspect.getsource(llm.chat)
+check("an empty model reply is an error, never an empty string",
+      "raise RuntimeError" in chat_src.split("if not content:")[-1],
+      "chat() can hand back empty content and the city dies quietly again")
+
+check("reasoning tokens are budgeted for, not discovered at runtime",
+      llm.REASONING_RESERVE > 0
+      and "REASONING_RESERVE" in inspect.getsource(llm.fit_max_tokens),
+      "reply allowance ignores the hidden channel; content will come back empty")
+
+check("reasoning effort is pinned low on the reasoning models",
+      "reasoning_effort" in chat_src and llm.REASONING_EFFORT == "low")
+
+# 200K/day does not cover 96 beats. The two buckets are separate, so a spent workhorse
+# must move the beat onto the other model rather than silencing the city until midnight.
+cog_src = inspect.getsource(cognition.make_cognition)
+check("a spent budget spills onto the other model instead of silencing the city",
+      "llm.DEEP" in cog_src and "budget.can_afford(llm.DEEP" in cog_src,
+      "cognition goes quiet for the rest of the day once FAST is spent")
+
+# The alarm itself: paying thinking beats while nobody acts must eventually go red.
+main_src = inspect.getsource(tick.main)
+check("a city that ticks without thinking eventually fails the run",
+      "silent_runs" in main_src and "return 1" in main_src
+      and tick.SILENT_RUNS_ALARM >= 1,
+      "cognition can break permanently and every run stays green")
+
+# Anchored to the alarm's own marker, not to the first `return 1` in main() — that one is
+# the pre-flight bail for a missing world.json, which fires before there is any state to lose.
+# The quota is metered per real UTC day; a city-day is 4 beats and resets 24x as fast, so
+# keying the budget on it made the guard unable to bind at all.
+b = llm.Budget({"day": "1999-01-01", "spent": {llm.FAST: 999_999}}, 7)
+check("the token budget is measured in the same day Groq meters",
+      b.day == llm.quota_day() and b.remaining(llm.FAST) == llm.DAILY_BUDGET[llm.FAST],
+      "budget keyed on the city day; the real 200K cap is hit with the guard still open")
+
+check("running out of allowance is not treated as an outage",
+      "skipped_budget" in inspect.getsource(cognition.make_cognition)
+      and "skipped_budget" in main_src,
+      "a legitimately quiet end-of-day would fail the run every single day")
+
+# --dry-run printed "nothing written" while the Gazette wrote a real front page to disk,
+# because it opens its own file instead of going through state.save_*.
+check("a dry run cannot write a front page to disk",
+      "dry_run" in inspect.getsource(reflect.gazette)
+      and "dry_run=args.dry_run" in main_src,
+      "--dry-run still writes state/gazette/day-NNN.md")
+
+check("the alarm is raised only after state is safely written",
+      main_src.index("state.save_world") < main_src.index("::error::"),
+      "failing the run before the save would cost the city its beats")
 
 
 print()

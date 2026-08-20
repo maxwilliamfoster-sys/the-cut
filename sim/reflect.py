@@ -13,11 +13,11 @@ uncanny rather than alive.
 **The Gazette** is the same day written from the outside. It is the single highest-value
 thing for somebody returning to a city that ran without them: not a diff, a front page.
 
-Model split is forced by the budget rather than chosen. 70b has 100K tokens a day against
-8b's 500K, and there are 24 city-days in a real day. Reflection on 70b (~4K x 24 = 96K)
-would consume essentially the entire 70b allowance and leave nothing for the Gazette. So
-reflection — a summarising job 8b does perfectly well — runs on 8b, and the scarce 70b
-budget is spent where prose quality is the whole point.
+Model split is forced by the budget rather than chosen. Both models now get 200K tokens a
+day, and there are 24 city-days in a real day, so neither allowance is big enough to be
+spent casually. Reflection — a summarising job the small model does perfectly well — runs
+on FAST, and the Gazette gets DEEP, so the scarcer, better model is spent where prose
+quality is the whole point.
 """
 
 import json
@@ -151,7 +151,7 @@ def reflect(world, agents, budget, day, beat):
     return records
 
 
-def gazette(world, agents, budget, day, records_today):
+def gazette(world, agents, budget, day, records_today, dry_run=False):
     """Write the day's front page. Returns log records."""
     path = os.path.join(state.GAZETTE_DIR, f"day-{day:03d}.md")
     if os.path.exists(path) or world.get("last_gazette_day", -1) >= day:
@@ -212,10 +212,17 @@ def gazette(world, agents, budget, day, records_today):
         print("[gazette] guardrail tripped — front page withheld.")
         return []
 
-    os.makedirs(state.GAZETTE_DIR, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(f"*The Cut Gazette — day {day}*\n\n{page}\n")
-    world["last_gazette_day"] = day
+    # The Gazette writes its own file rather than going through state.save_*, so it used
+    # to slip past --dry-run entirely and leave a real front page on disk under a run that
+    # had just printed "nothing written". A dry run that quietly writes is worse than no
+    # dry run at all.
+    if dry_run:
+        print(f"[gazette] --dry-run: day {day} front page not written to disk.")
+    else:
+        os.makedirs(state.GAZETTE_DIR, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(f"*The Cut Gazette — day {day}*\n\n{page}\n")
+        world["last_gazette_day"] = day
 
     headline = next((l.lstrip("# ").strip() for l in page.splitlines()
                      if l.strip().startswith("#")), "The day on the block")
