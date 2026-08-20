@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 890,
-  "last_beat_at": "2026-08-20T16:12:12Z",
+  "beat": 892,
+  "last_beat_at": "2026-08-20T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 16,
-    "delmar": 7,
+    "riverside": 14,
+    "delmar": 5,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,18 @@
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "marcus"
+      ],
+      "text": "Marcus Calloway gets word that what they owe is wanted sooner than agreed."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -375,18 +387,6 @@
       },
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -399,7 +399,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 222,
+    "day": 223,
     "spent": {}
   }
 }
