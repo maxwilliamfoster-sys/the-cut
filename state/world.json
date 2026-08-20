@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 845,
-  "last_beat_at": "2026-08-20T04:57:12Z",
+  "beat": 848,
+  "last_beat_at": "2026-08-20T05:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 7,
-    "delmar": 27,
-    "terraces": 11,
+    "riverside": 5,
+    "delmar": 24,
+    "terraces": 8,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "marcus",
+        "wes"
+      ],
+      "text": "Marcus Calloway and Wes Doyle are seen arguing in the street loud enough that people stop."
+    },
     {
       "id": "debt_called",
       "heat": {},
@@ -374,19 +387,6 @@
       },
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "priya",
-        "rey"
-      ],
-      "text": "Somebody tells Ms. Priya Raman that Rey Vasquez has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -399,7 +399,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 211,
+    "day": 212,
     "spent": {}
   }
 }
