@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 901,
-  "last_beat_at": "2026-08-20T18:57:12Z",
+  "beat": 903,
+  "last_beat_at": "2026-08-20T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "first snow",
   "heat": {
     "riverside": 5,
-    "delmar": 9,
+    "delmar": 19,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,17 @@
     }
   ],
   "events": [
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "debt_called",
       "heat": {},
@@ -377,18 +388,6 @@
         "kohl"
       ],
       "text": "Chidi Okonkwo and Ofc. Brady Kohl are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "boateng"
-      ],
-      "text": "Something pays out for Fr. Emmanuel Boateng. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -399,9 +398,13 @@
       "reply": "You'd think I'd notice that, wouldn't you, but I've been standing out here in rain worse than this, cold nights, hot days, I've seen it all."
     }
   ],
-  "last_gazette_day": 140,
+  "last_gazette_day": 225,
   "llm_budget": {
-    "day": 225,
-    "spent": {}
-  }
+    "day": "2026-08-20",
+    "spent": {
+      "openai/gpt-oss-20b": 7285,
+      "openai/gpt-oss-120b": 832
+    }
+  },
+  "silent_runs": 0
 }
