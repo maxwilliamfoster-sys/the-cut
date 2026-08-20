@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 867,
-  "last_beat_at": "2026-08-20T10:27:12Z",
+  "beat": 869,
+  "last_beat_at": "2026-08-20T10:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 39,
-    "delmar": 15,
+    "riverside": 37,
+    "delmar": 13,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,30 @@
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "chidi"
+      ],
+      "text": "Something pays out for Chidi Okonkwo. More than expected, which is its own problem."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -364,27 +388,6 @@
       },
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "sticks"
-      ],
-      "text": "Something pays out for Sticks. More than expected, which is its own problem."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
@@ -397,7 +400,7 @@
   ],
   "last_gazette_day": 140,
   "llm_budget": {
-    "day": 216,
+    "day": 217,
     "spent": {}
   }
 }
