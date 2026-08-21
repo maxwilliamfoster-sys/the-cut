@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 988,
-  "last_beat_at": "2026-08-21T16:42:12Z",
+  "beat": 991,
+  "last_beat_at": "2026-08-21T17:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
-    "riverside": 15,
-    "delmar": 5,
+    "riverside": 12,
+    "delmar": 0,
     "terraces": 5,
-    "civic": 10
+    "civic": 7
   },
   "turf": {
     "riverside": "crew",
@@ -180,6 +180,30 @@
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "hector",
+        "brennan"
+      ],
+      "text": "Somebody tells Hector Delgado that Sgt. Hal Brennan has been seen talking to police."
+    },
     {
       "id": "hospital",
       "heat": {
@@ -395,30 +419,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "cass"
-      ],
-      "text": "Cass Deveaux gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back."
     }
   ],
   "player_queue": [
@@ -447,7 +447,7 @@
     "spent": {
       "openai/gpt-oss-20b": 73297,
       "openai/gpt-oss-120b": 3114,
-      "fast": 20482,
+      "fast": 24089,
       "deep": 3530
     }
   },
@@ -1043,19 +1043,19 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 37
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 47
+      "heat": 45
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-21",
-    "beat": 988,
+    "beat": 991,
     "providers": []
   }
 }
