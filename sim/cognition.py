@@ -82,6 +82,8 @@ COGNITION_SLOTS = 11
 # A narrower beat is far better than no beat. Attention now shrinks as the day's allowance
 # runs down, so the block keeps talking all day and simply has fewer people in frame when
 # it is running low.
+QUOTA_RECHECK_BEATS = 8      # ~2 city-hours before trying a spent provider again
+
 SLOT_LADDER = [(0.62, 11), (0.42, 9), (0.25, 7), (0.10, 5), (0.0, 4)]
 
 
@@ -417,9 +419,13 @@ def make_cognition(budget, verbose=True):
         # about what we could reach since then.
         spent = world.get("quota_exhausted_on")
         if isinstance(spent, str):
-            spent = {"day": spent, "providers": []}      # older saves
+            spent = {"day": spent, "providers": [], "beat": 0}      # older saves
         here_now = sorted(p["name"] for p in llm.providers_available())
-        if (spent and spent.get("day") == llm.quota_day()
+        # Sticky, but not for the whole day. A provider that said "daily cap" can recover —
+        # Groq did, within the same UTC day — and a flag held until midnight kept the city
+        # silent long after there were tokens to spend again. Wait a few beats, then look.
+        stale = beat - int(spent.get("beat", 0)) >= QUOTA_RECHECK_BEATS if spent else True
+        if (spent and spent.get("day") == llm.quota_day() and not stale
                 and here_now and set(here_now) <= set(spent.get("providers") or [])):
             if verbose:
                 print("[cognition] the day's token allowance is gone — quiet beat.")
@@ -466,7 +472,11 @@ def make_cognition(budget, verbose=True):
                 # a key has to take effect on the very next beat.
                 world["quota_exhausted_on"] = {
                     "day": llm.quota_day(),
-                    "providers": sorted(p["name"] for p in llm.PROVIDERS),
+                    "beat": beat,
+                    # Only the providers actually reachable when it failed. Recording every
+                    # provider in the table meant the set could never change, so adding a
+                    # key never cleared the flag.
+                    "providers": sorted(p["name"] for p in llm.providers_available()),
                 }
                 stats["attempted"] -= 1
                 stats["skipped_budget"] += 1

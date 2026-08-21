@@ -120,8 +120,12 @@ else:
           all(0 <= h <= 100 for h in w3["heat"].values()), f"{w3['heat']}")
     check("everyone is somewhere real after 120 beats",
           all(x["at"] in city.LOCATIONS for x in a3.values()))
+    # The living only. The dead keep the position they fell in, and if a building is later
+    # scaffolded over them that tile stops being walkable — which is not a bug, because a
+    # corpse is neither drawn nor pathed. Checking everybody made this fail the first time
+    # somebody happened to die indoors.
     check("nobody is stranded off-grid",
-          all(city.walkable(*x["pos"]) for x in a3.values()))
+          all(city.walkable(*x["pos"]) for x in a3.values() if x.get("alive", True)))
 
     # Both heat and stress/fear originally decayed faster than the event table could feed
     # them, so they sat pinned at their floor forever: dead bars in the UI and, worse, a
@@ -512,6 +516,9 @@ check("volatile people are more likely to be narrated",
 # ── feuds ────────────────────────────────────────────────────────────────────────
 _w9 = copy.deepcopy(_w7)
 _a9 = copy.deepcopy(_a7)
+# Start from no feuds: the live save carries whatever the city is currently arguing about,
+# and this checks that a feud ENDS, which cannot be observed with other feuds still standing.
+_w9["feuds"] = []
 _a9["dez"]["relationships"]["malik"] = {"affinity": -80, "opinion": "done talking"}
 drama.open_feud(_w9, _a9["dez"], _a9["malik"], _day7, "refused me")
 check("a bad enough falling-out becomes a feud", bool(_w9.get("feuds")))
