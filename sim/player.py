@@ -50,6 +50,39 @@ def drain(timeout=20):
     return []
 
 
+# Titles, and words that happen to be somebody's name here.
+_NOT_A_NAME = {"det", "ofc", "sgt", "dr", "ms", "fr", "the", "and", "his", "her", "she"}
+
+
+def _claim_from_line(line, agents, speaker_id):
+    """Did the player say something ABOUT somebody else on the block?
+
+    Deliberately dumb: if the line names another living character, that is a claim about
+    them. It over-triggers a little — mentioning somebody in passing counts — but a
+    character going to ask a neighbour about something a stranger said is exactly the
+    behaviour we want, and a false positive just produces a conversation.
+    """
+    low = f" {line.lower()} "
+    best = None
+    for aid, other in agents.items():
+        if aid == speaker_id or not other.get("alive", True):
+            continue
+        # Three letters is the floor, not four: half this cast is Wes, Tee, Dot, Rey, Gus.
+        # Titles and a couple of words that are also names are excluded so "the doc said"
+        # does not become an accusation against Dr. Amin.
+        parts = [p.strip(".,'").lower() for p in other["name"].split()]
+        names = [other["name"].lower()] + [
+            p for p in parts if len(p) >= 3 and p not in _NOT_A_NAME]
+        for n in names:
+            if f" {n} " in low or f" {n}'" in low or f" {n}." in low or f" {n}," in low:
+                # Prefer the longest match, so "Rosa Reyes" beats "Reyes".
+                if not best or len(n) > best[1]:
+                    best = (aid, len(n))
+    if not best:
+        return {}
+    return {"about": best[0], "what": line.strip()[:120]}
+
+
 def absorb(world, agents, beat, day):
     """Fold queued conversations into the people who had them. Returns log records."""
     exchanges = drain()
@@ -75,6 +108,14 @@ def absorb(world, agents, beat, day):
         # an unverified lead — and will go and ask. This is the only route by which
         # information from outside the simulation gets into it.
         claim = ex.get("claim") or {}
+        if not claim.get("about"):
+            # The Worker asks its brain to extract the claim in the same call that writes
+            # the reply, which is free but only works when that brain returns the JSON it
+            # was asked for. Cloudflare's fallback answers in prose, so the claim is lost
+            # exactly when Groq is out of tokens — i.e. when it matters most. Falling back
+            # to a plain scan of what the player actually typed works with any brain, and
+            # costs nothing.
+            claim = _claim_from_line(line, agents, a["id"])
         lead = None
         if claim.get("about") in agents and claim.get("what"):
             lead = drama.open_lead(a, claim["about"], claim["what"], day)

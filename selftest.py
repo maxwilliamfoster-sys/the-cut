@@ -14,7 +14,7 @@ from datetime import timedelta
 
 import re
 from sim import (city, clock, cognition, construction, drama, events, law, llm,
-                 mortality, reflect, state, tick)
+                 mortality, player, reflect, state, tick)
 
 FAILS = []
 
@@ -553,6 +553,19 @@ check("something the player says becomes a lead the character carries",
 # The live save may already have him chasing a debt, which correctly outranks gossip.
 _a10["dez"]["chasing"] = None
 drama.press_leads(_w10, mortality.living(_a10), _day10)
+# The Worker asks its brain to extract the claim in the same call as the reply, which only
+# works when that brain returns JSON. Cloudflare's free fallback answers in prose, so the
+# claim vanished exactly when Groq was out of tokens. This scan works with any brain.
+check("a claim is found even when the brain answers in prose",
+      (player._claim_from_line("Wes has been skimming off your counter.", _a10, "booker")
+       .get("about") == "wes")
+      and (player._claim_from_line("Malik has been talking to police.", _a10, "dez")
+           .get("about") == "malik"),
+      "player claims only work when the reply happens to be JSON")
+check("an ordinary remark is not treated as an accusation",
+      not player._claim_from_line("Cold one tonight. Quiet on the block?",
+                                  _a10, "tee").get("about"))
+
 check("carrying an unchecked rumour sends them to find the person it is about",
       _a10["dez"].get("checking") == "malik")
 check("a debt outranks a rumour",
