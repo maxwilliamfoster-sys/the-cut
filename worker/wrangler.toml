@@ -13,6 +13,10 @@ compatibility_date = "2026-08-01"
 [ai]
 binding = "AI"
 
+# This id exists in the maxwilliamfoster@gmail.com account and nowhere else. Deploying while
+# signed into a different Cloudflare account fails with "KV namespace not found [code: 10041]",
+# which reads like the storage is gone when really the account is wrong. deploy.cmd checks
+# the signed-in account before it tries anything.
 [[kv_namespaces]]
 binding = "CUT_KV"
 id = "ed0402dbd6b84f6383b961cae89f7fe2"
