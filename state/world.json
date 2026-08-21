@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1007,
-  "last_beat_at": "2026-08-21T21:27:12Z",
+  "beat": 1009,
+  "last_beat_at": "2026-08-21T21:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 23,
-    "delmar": 18,
-    "terraces": 9,
-    "civic": 8
+    "riverside": 21,
+    "delmar": 16,
+    "terraces": 7,
+    "civic": 6
   },
   "turf": {
     "riverside": "crew",
@@ -193,6 +193,28 @@
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "malik",
+        "kohl"
+      ],
+      "text": "Malik Reyes and Ofc. Brady Kohl are seen arguing in the street loud enough that people stop."
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days."
+    },
     {
       "id": "inspection",
       "heat": {
@@ -414,31 +436,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "gus",
-        "wes"
-      ],
-      "text": "Wes Doyle does Gus Petrakis a favour that costs them something real."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -1070,12 +1067,12 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 57
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-21",
-    "beat": 1007,
+    "beat": 1009,
     "providers": []
   }
 }
