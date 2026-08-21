@@ -1246,15 +1246,27 @@ async function sendLine(){
   $('talkLog').insertAdjacentHTML('beforeend', `<div class="tl-wait" id="tw">…</div>`);
   $('talkLog').scrollTop = 1e6;
 
-  try{
+  // One retry, quietly. A brain being briefly busy should not end a conversation you are in
+  // the middle of — and the failure people actually hit was transient contention for tokens.
+  async function ask(){
     const r = await fetch(TALK_URL + '/talk', {
       method:'POST',
       headers:{'Content-Type':'application/json','X-Player-Key':playerKey()},
       body: JSON.stringify({agent: talkWith, line}),
     });
-    const d = await r.json();
+    return {r, d: await r.json()};
+  }
+
+  try{
+    let {r, d} = await ask();
+    if(!r.ok && r.status >= 500){
+      await new Promise(res=>setTimeout(res, 1200));
+      ({r, d} = await ask());
+    }
     document.getElementById('tw').remove();
-    if(!r.ok) throw new Error(d.error || ('HTTP '+r.status));
+    if(!r.ok) throw new Error(
+      r.status >= 500 ? 'They are distracted — try that again in a moment.'
+                      : (d.error || ('HTTP '+r.status)));
     $('talkLog').insertAdjacentHTML('beforeend',
       `<div class="tl-them"><b>${esc(AGENTS[talkWith].name.split(' ').slice(-1)[0])}:</b> ${esc(d.reply)}</div>`);
     // Only say something when there is something to say. A line after every message

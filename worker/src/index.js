@@ -234,37 +234,59 @@ async function talk(req, env) {
   return await finish(env, ip, body, a, agents, line, raw.text);
 }
 
-// Groq first, then Cloudflare's own inference. Workers AI is the only fallback that needs no
-// key and no second account — this Worker is already running on Cloudflare — so the one
-// thing a player actually touches cannot be taken out by a daily token cap somewhere else.
+// Cloudflare's own inference FIRST, Groq second.
+//
+// Both used to share one Groq key with the simulation's cron, which burns the entire
+// 8,000-token-per-minute ceiling every time it thinks. So a player got two or three replies
+// and then "brain unavailable" as the city stole the budget mid-conversation. Workers AI is
+// a separate allowance that nothing else touches, it needs no key, and it runs on the
+// machine this Worker is already on — which makes it the right primary for the one part of
+// the system a human is sitting in front of. Groq stays as backup, and the city keeps its
+// tokens for thinking.
+//
+// Model ids verified against developers.cloudflare.com — the first set here was guessed and
+// two of the three did not exist, which is what produced "every brain is unavailable".
 const CF_MODELS = [
   "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
-  "@cf/meta/llama-3.1-8b-instruct",
-  "@cf/qwen/qwen1.5-14b-chat-awq",
+  "@cf/meta/llama-3.1-8b-instruct-fast",
+  "@cf/openai/gpt-oss-20b",
 ];
 
 async function think(env, messages) {
+  const tried = [];
+
+  if (env.AI) {
+    for (const m of CF_MODELS) {
+      try {
+        const out = await env.AI.run(m, { messages, max_tokens: 420, temperature: 0.95 });
+        const text = (out?.response || out?.result?.response || "").trim();
+        if (text) return { ok: true, text, via: m };
+        tried.push(`${m}: empty`);
+      } catch (e) {
+        tried.push(`${m}: ${e}`);
+      }
+    }
+  } else {
+    tried.push("no AI binding");
+  }
+
   if (env.GROQ_API_KEY) {
     try {
       const r = await groqCall(env, messages);
       if (r.ok) return r;
-      console.log(`groq unavailable (${r.status}) — falling back to Workers AI`);
+      tried.push(`groq: ${r.status} ${r.detail || ""}`);
     } catch (e) {
-      console.log(`groq threw (${e}) — falling back to Workers AI`);
+      tried.push(`groq threw: ${e}`);
     }
+  } else {
+    tried.push("no groq key");
   }
-  if (!env.AI) return { ok: false, status: 503, detail: "no fallback configured" };
-  for (const m of CF_MODELS) {
-    try {
-      const out = await env.AI.run(m, { messages, max_tokens: 420, temperature: 0.95 });
-      const text = (out?.response || out?.result?.response || "").trim();
-      if (text) return { ok: true, text, via: m };
-    } catch (e) {
-      console.log(`workers-ai ${m} failed: ${e}`);
-    }
-  }
-  return { ok: false, status: 502, detail: "every brain is unavailable" };
+
+  // Say WHY, not just that. The first version returned a bare "every brain is unavailable",
+  // which is exactly as useful as it sounds when the cause is a mistyped model id.
+  return { ok: false, status: 502, detail: tried.join(" | ").slice(0, 400) };
 }
+
 
 async function groqCall(env, messages) {
   const res = await fetch(GROQ, {
