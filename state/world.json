@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 932,
-  "last_beat_at": "2026-08-21T02:42:12Z",
+  "beat": 936,
+  "last_beat_at": "2026-08-21T03:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "clear",
   "heat": {
-    "riverside": 46,
-    "delmar": 24,
-    "terraces": 5,
+    "riverside": 42,
+    "delmar": 20,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,27 @@
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days."
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "raid",
       "heat": {
@@ -355,31 +376,6 @@
         "marcus"
       ],
       "text": "Marcus Calloway gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "kohl",
-        "ivy"
-      ],
-      "text": "Ms. Ivy Calloway does Ofc. Brady Kohl a favour that costs them something real."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -394,7 +390,7 @@
   "llm_budget": {
     "day": "2026-08-21",
     "spent": {
-      "openai/gpt-oss-20b": 36949,
+      "openai/gpt-oss-20b": 45205,
       "openai/gpt-oss-120b": 1563
     }
   },
