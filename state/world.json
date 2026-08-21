@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 940,
-  "last_beat_at": "2026-08-21T04:42:12Z",
+  "beat": 942,
+  "last_beat_at": "2026-08-21T05:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "cold snap",
   "heat": {
-    "riverside": 38,
-    "delmar": 28,
-    "terraces": 7,
+    "riverside": 36,
+    "delmar": 26,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -149,6 +149,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "priya",
+        "booker"
+      ],
+      "text": "Somebody tells Ms. Priya Raman that Booker Lyle has been seen talking to police."
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -361,18 +374,6 @@
         "malik"
       ],
       "text": "Malik Reyes gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "cass"
-      ],
-      "text": "Cass Deveaux gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -387,7 +388,7 @@
   "llm_budget": {
     "day": "2026-08-21",
     "spent": {
-      "openai/gpt-oss-20b": 49005,
+      "openai/gpt-oss-20b": 53150,
       "openai/gpt-oss-120b": 1563
     }
   },
