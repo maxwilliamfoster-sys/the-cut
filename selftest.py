@@ -405,9 +405,18 @@ _w6["heat"]["delmar"] = 100
 _day6 = clock.day_of(_w6["beat"])
 _acts = [{"kind": "act", "who": "malik", "name": _a6["malik"]["name"],
           "action": "decides to burn the crates out the back", "district": "delmar"}]
-_charges = law.detect(_w6, _a6, _acts, _w6["beat"], _day6)
+# Whether any single offence is SEEN is a deterministic roll on (who, law, beat) — being
+# caught is meant to be uncertain. An earlier version of this check used the live world's
+# beat, so it passed or failed depending on where the city happened to be when it ran. Walk
+# a few beats and assert the mechanism fires, not that one particular roll came up.
+_charges = []
+for _b6 in range(_w6["beat"], _w6["beat"] + 12):
+    _charges = law.detect(_w6, _a6, _acts, _b6, _day6)
+    if _charges:
+        break
 check("breaking a law the block passed gets you charged",
-      bool(_charges) and _w6["charges"][0]["who"] == "malik")
+      bool(_charges) and _w6["charges"][0]["who"] == "malik",
+      "twelve consecutive offences in a hot district and nobody was ever seen")
 check("being charged puts you in a cell rather than back on the street",
       bool(_a6["malik"].get("detained_until")))
 
