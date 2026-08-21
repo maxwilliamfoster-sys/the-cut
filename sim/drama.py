@@ -211,6 +211,7 @@ def _resolve(world, agents, d, creditor, debtor, witnesses, beat, day, rng):
         _mood(debtor, stress=-18, fear=-10, happiness=-4)
         text = (f'{debtor["name"]} settles with {creditor["name"]} at {where}. '
                 f'{owed}, {overdue} days late.')
+        _lines(rng, "settled", debtor, creditor)
         _both(creditor, debtor, beat, day,
               f'{debtor["name"]} finally paid me.', f'I paid {creditor["name"]} off.', 8)
         return _rec("settled", d, creditor, debtor, text, beat, day)
@@ -229,6 +230,7 @@ def _resolve(world, agents, d, creditor, debtor, witnesses, beat, day, rng):
         _mood(debtor, stress=+10, fear=+6)
         text = (f'{creditor["name"]} corners {debtor["name"]} at {where} about {owed}. '
                 f'They get another promise.')
+        _lines(rng, "promised", debtor, creditor)
         _both(creditor, debtor, beat, day,
               f'{debtor["name"]} promised me again. That is {asked + 1} times.',
               f'I bought myself more time with {creditor["name"]}.', 7)
@@ -244,6 +246,7 @@ def _resolve(world, agents, d, creditor, debtor, witnesses, beat, day, rng):
           f'{debtor["name"]} refused me in front of people.',
           f'I told {creditor["name"]} no. That will cost me.', 8)
     open_feud(world, creditor, debtor, day, f'{owed} never repaid')
+    _lines(rng, "refused", debtor, creditor)
     text = (f'{creditor["name"]} asks {debtor["name"]} for {owed} at {where}, in front of '
             f'people, and is refused.')
     return _rec("refused", d, creditor, debtor, text, beat, day)
@@ -267,6 +270,7 @@ def _violence(world, agents, d, creditor, debtor, where, beat, day, rng):
           f'I put hands on {debtor["name"]} over what I am owed.',
           f'{creditor["name"]} put hands on me. Everyone saw.', 9)
 
+    _lines(rng, "violent", debtor, creditor)
     text = (f'{creditor["name"]} puts {debtor["name"]} against a wall at {where} over '
             f'{what_is_owed(d)}. People stop to watch.')
     rec = _rec("violent", d, creditor, debtor, text, beat, day)
@@ -276,12 +280,49 @@ def _violence(world, agents, d, creditor, debtor, where, beat, day, rng):
     return rec
 
 
+# What people actually say when these things happen. The model writes far better lines, but
+# it costs tokens and the day's allowance runs out; these cost nothing and mean the block is
+# never completely mute. A confrontation you can SEE — a speech bubble over the person doing
+# the shouting — is most of what makes the city look alive from the outside.
+SAID = {
+    "settled":  [("Take it. We are square.", "Then we are done."),
+                 ("That is all of it.", "About time."),
+                 ("Count it if you want.", "I will, actually."),
+                 ("We good now?", "We are good. For now.")],
+    "promised": [("Give me two more days.", "You said that last week."),
+                 ("I am good for it.", "You keep saying."),
+                 ("Friday. I mean it.", "You meant it last Friday."),
+                 ("Do not do this here.", "Then do not make me come here.")],
+    "refused":  [("You are not getting it.", "Say that again."),
+                 ("I do not have it and I am done being asked.", "Then we have a problem."),
+                 ("Take me to court.", "That is not how this works."),
+                 ("No.", "No? In front of everyone, no?")],
+    "violent":  [("Do not.", "You made me do this."),
+                 ("Get off me.", "Where is it?"),
+                 ("Not here, not here.", "Here is exactly where."),
+                 ("You are going to regret this.", "I already do.")],
+}
+
+
+def _say(a, to, text):
+    """Put words in somebody's mouth for this beat. Cognition overwrites this for whoever it
+    narrates, so a real line always wins over a canned one."""
+    a["speech"] = {"to": to["id"], "text": text}
+
+
 def _rec(kind, d, creditor, debtor, text, beat, day):
     return {"kind": "confrontation", "outcome": kind, "debt": d["id"],
             "creditor": creditor["id"], "debtor": debtor["id"],
             "creditor_name": creditor["name"], "debtor_name": debtor["name"],
             "text": text, "beat": beat, "day": day,
             "action": text}          # so law.detect and the Gazette both see it
+
+
+def _lines(rng, outcome, debtor, creditor):
+    """Both halves of the exchange, so the bubble over one head answers the other."""
+    debtor_line, creditor_line = rng.choice(SAID[outcome])
+    _say(debtor, creditor, debtor_line)
+    _say(creditor, debtor, creditor_line)
 
 
 def _both(a, b, beat, day, a_mem, b_mem, weight):
@@ -337,11 +378,19 @@ def feud_partner(world, aid):
 
 INSTIGATIONS = [
     ("rumour", "{who} tells the room something about {other} that may not be true.",
-     {"stress": 10, "happiness": -6}),
-    ("callout", "{who} brings up, loudly, what {other} still owes.", {"stress": 12}),
+     {"stress": 10, "happiness": -6},
+     ["Ask them where they were Tuesday.", "That is not what I heard.",
+      "Somebody should say it, so I will.", "Funny, the story keeps changing."]),
+    ("callout", "{who} brings up, loudly, what {other} still owes.", {"stress": 12},
+     ["Tell them what you owe. Go on.", "How long has it been now?",
+      "Say it out loud, in front of everyone.", "Still nothing? Still nothing."]),
     ("needle", "{who} will not let go of something {other} said weeks ago.",
-     {"stress": 9, "happiness": -8}),
-    ("side", "{who} takes a side in something that was not their argument.", {"stress": 8}),
+     {"stress": 9, "happiness": -8},
+     ["You said it. I heard you say it.", "You do not get to take that back.",
+      "Weeks, and you have not apologised.", "I remember it differently."]),
+    ("side", "{who} takes a side in something that was not their argument.", {"stress": 8},
+     ["No, he is right, and you know it.", "Do not look at me. Answer them.",
+      "Everybody here saw what happened.", "You started this, not them."]),
 ]
 
 
@@ -382,8 +431,9 @@ def instigate(world, agents, groups, beat, day):
             target = here[0]
 
         a["last_instigated_day"] = day
-        kind, tmpl, mood = rng.choice(INSTIGATIONS)
+        kind, tmpl, mood, lines = rng.choice(INSTIGATIONS)
         text = tmpl.format(who=a["name"], other=target["name"])
+        _say(a, target, rng.choice(lines))   # a bubble, not only a line in the log
         _mood(target, **mood)
         _mood(a, stress=+4)
         rel = a.setdefault("relationships", {}).setdefault(

@@ -159,7 +159,11 @@ def fit_max_tokens(model, prompt_chars, want=2000, floor=700):
 # not get a 429 halfway through a batch and lose everyone's decisions.
 # Two independent 200K buckets, held just under the published cap so an overrun degrades
 # to a quiet beat instead of a 429 landing mid-batch and costing everyone their turn.
-DAILY_BUDGET = {FAST: 188_000, DEEP: 188_000}
+# Held well under the published cap for two reasons: an overrun should degrade to a quiet
+# beat rather than a 429 landing mid-batch, and this key is SHARED with the user's other
+# tools (Skill-Anything, CIPHER), so the city does not get the whole account allowance to
+# itself. Leaving room is what keeps it talking into the evening.
+DAILY_BUDGET = {FAST: 165_000, DEEP: 165_000}
 
 # OpenRouter is now just another entry in PROVIDERS, not a special case.
 

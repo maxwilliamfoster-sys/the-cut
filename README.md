@@ -132,6 +132,26 @@ per-*minute* ceiling as a single booking — exceed it and the request is refuse
 Cost lands around 3,400 tokens a beat, ~320K a day against a 450K self-imposed budget, with
 automatic failover to OpenRouter if Groq's daily cap is ever hit.
 
+## Staying alive on a free allowance
+
+The city used to think brilliantly until early afternoon and then go silent for the rest of
+the day — and a silent city has no dialogue, which means no speech bubbles, which is the
+thing a visitor actually notices. Three changes so it lasts the whole day:
+
+- **The instruction prompt was 1,388 tokens, re-sent every beat** — 133K a day, a third of
+  the entire allowance, spent restating the same rules. Compressed to 931 without dropping
+  a single rule.
+- **Attention now narrows as the allowance runs down** (`cognition.SLOT_LADDER`): eleven
+  people early, down to four when it is nearly gone. A narrower beat is enormously better
+  than no beat.
+- **The mechanical drama speaks.** Confrontations and instigations already produced events;
+  they now put words in people's mouths too, so there are speech bubbles even on a beat that
+  spends nothing. Cognition overwrites them with better lines for whoever it narrates, so a
+  real line always wins over a canned one.
+
+Together: ~84 of 96 beats narrated per day inside a budget deliberately held below the cap
+(the key is shared with other tools), and visible speech on the rest.
+
 ## Never running out of tokens
 
 A tier (`FAST` / `DEEP`) is not a model id. It used to be, which is exactly why the city
