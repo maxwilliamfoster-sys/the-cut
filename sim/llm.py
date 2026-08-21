@@ -61,8 +61,10 @@ PROVIDERS = [
         "key": "CEREBRAS_API_KEY",
         "url": "https://api.cerebras.ai/v1/chat/completions",
         "tpm": 60000,
-        "models": {FAST: ["llama3.1-8b", "gpt-oss-120b", "qwen-3-32b"],
-                   DEEP: ["llama-3.3-70b", "gpt-oss-120b", "qwen-3-32b"]},
+        # Verified against GET /v1/models on a real key — the llama ids guessed here first
+        # do not exist on Cerebras at all.
+        "models": {FAST: ["gpt-oss-120b", "gemma-4-31b"],
+                   DEEP: ["gpt-oss-120b", "gemma-4-31b"]},
     },
     {
         "name": "gemini",
@@ -363,7 +365,11 @@ def _call(prov, model, messages, max_tokens, temperature, json_mode, retries):
             if e.code == 404 or "model_not_found" in body or "does not exist" in body:
                 raise _ModelGone(f"HTTP {e.code}")
             if e.code in (401, 403):
-                raise QuotaExhausted(f'rejected the key (HTTP {e.code})')
+                raise QuotaExhausted(f"rejected the key (HTTP {e.code})")
+            if e.code == 402:
+                # Valid key, no allowance on the account. Provider-level and permanent for
+                # this run, so skip it immediately rather than retrying every candidate.
+                raise QuotaExhausted("account has no inference quota (HTTP 402 — billing)")
             if e.code == 413 or (e.code == 429 and "Request too large" in body):
                 # The reservation was too big for the per-minute ceiling. Shrinking the
                 # reply allowance is better than dropping the beat.
