@@ -423,8 +423,14 @@ def make_cognition(budget, verbose=True):
         # They are separate allowances though, so when the workhorse is spent the beat
         # moves to the other model rather than the city going quiet for the rest of the
         # day. Only when BOTH are gone is a quiet beat the honest answer.
-        # Already found out the hard way earlier today.
-        if world.get("quota_exhausted_on") == llm.quota_day():
+        # Already found out the hard way earlier today — but only if nothing has changed
+        # about what we could reach since then.
+        spent = world.get("quota_exhausted_on")
+        if isinstance(spent, str):
+            spent = {"day": spent, "providers": []}      # older saves
+        here_now = sorted(p["name"] for p in llm.providers_available())
+        if (spent and spent.get("day") == llm.quota_day()
+                and here_now and set(here_now) <= set(spent.get("providers") or [])):
             if verbose:
                 print("[cognition] the day's token allowance is gone — quiet beat.")
             stats["skipped_budget"] += 1
@@ -465,7 +471,13 @@ def make_cognition(budget, verbose=True):
                 # outage — record it as a skip so the canary stays quiet, and remember it
                 # on the world so the rest of today's beats do not each burn three
                 # doomed requests discovering the same thing.
-                world["quota_exhausted_on"] = llm.quota_day()
+                # Record WHICH providers were dry, not just that today was a bad day. With
+                # a fallback chain, "Groq is out" must never mean "the city is out" — adding
+                # a key has to take effect on the very next beat.
+                world["quota_exhausted_on"] = {
+                    "day": llm.quota_day(),
+                    "providers": sorted(p["name"] for p in llm.PROVIDERS),
+                }
                 stats["attempted"] -= 1
                 stats["skipped_budget"] += 1
                 print(f"[cognition] beat {beat}: {e}")

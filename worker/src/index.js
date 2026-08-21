@@ -109,8 +109,9 @@ async function loadHistory(env, ip, agentId) {
   return Array.isArray(raw) ? raw.slice(-HIST_TURNS) : [];
 }
 
-async function saveHistory(env, ip, agentId, turns) {
-  await env.CUT_KV.put(histKey(ip, agentId), JSON.stringify(turns.slice(-HIST_TURNS)),
+async function saveHistory(env, ip, agentId, newTurns, prior = []) {
+  const turns = [...prior, ...newTurns].slice(-HIST_TURNS);
+  await env.CUT_KV.put(histKey(ip, agentId), JSON.stringify(turns),
                        { expirationTtl: HIST_TTL });
 }
 
@@ -222,7 +223,50 @@ async function talk(req, env) {
   if (!a) return json({ error: "no such person" }, 404);
 
   const history = await loadHistory(env, ip, body.agent);
+  const messages = [
+    { role: "system", content: personaPrompt(a, world, agents) },
+    ...history,
+    { role: "user", content: line },
+  ];
 
+  const raw = await think(env, messages);
+  if (!raw.ok) return json({ error: `brain unavailable (${raw.status})`, detail: raw.detail }, 502);
+  return await finish(env, ip, body, a, agents, line, raw.text);
+}
+
+// Groq first, then Cloudflare's own inference. Workers AI is the only fallback that needs no
+// key and no second account — this Worker is already running on Cloudflare — so the one
+// thing a player actually touches cannot be taken out by a daily token cap somewhere else.
+const CF_MODELS = [
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "@cf/meta/llama-3.1-8b-instruct",
+  "@cf/qwen/qwen1.5-14b-chat-awq",
+];
+
+async function think(env, messages) {
+  if (env.GROQ_API_KEY) {
+    try {
+      const r = await groqCall(env, messages);
+      if (r.ok) return r;
+      console.log(`groq unavailable (${r.status}) — falling back to Workers AI`);
+    } catch (e) {
+      console.log(`groq threw (${e}) — falling back to Workers AI`);
+    }
+  }
+  if (!env.AI) return { ok: false, status: 503, detail: "no fallback configured" };
+  for (const m of CF_MODELS) {
+    try {
+      const out = await env.AI.run(m, { messages, max_tokens: 420, temperature: 0.95 });
+      const text = (out?.response || out?.result?.response || "").trim();
+      if (text) return { ok: true, text, via: m };
+    } catch (e) {
+      console.log(`workers-ai ${m} failed: ${e}`);
+    }
+  }
+  return { ok: false, status: 502, detail: "every brain is unavailable" };
+}
+
+async function groqCall(env, messages) {
   const res = await fetch(GROQ, {
     method: "POST",
     headers: {
@@ -237,35 +281,34 @@ async function talk(req, env) {
       reasoning_format: "hidden",
       reasoning_effort: "low",
       response_format: { type: "json_object" },
-      messages: [
-        { role: "system", content: personaPrompt(a, world, agents) },
-        ...history,
-        { role: "user", content: line },
-      ],
+      messages,
     }),
   });
-
-  if (!res.ok) {
-    const detail = (await res.text()).slice(0, 200);
-    return json({ error: `brain unavailable (${res.status})`, detail }, 502);
-  }
+  if (!res.ok) return { ok: false, status: res.status, detail: (await res.text()).slice(0, 200) };
   const d = await res.json();
-  const raw = (d.choices?.[0]?.message?.content || "").trim();
+  const text = (d.choices?.[0]?.message?.content || "").trim();
+  if (!text) return { ok: false, status: 502, detail: "empty content" };
+  return { ok: true, text, via: MODEL };
+}
 
-  // The model is asked for JSON so a claim can be extracted from the same call that writes
-  // the reply — a second call per message would double what a conversation costs. If it
-  // comes back as plain prose anyway, that is still a usable reply; only the claim is lost.
+// Turn whatever the brain said into a reply plus, if there was one, a claim about somebody
+// else. Groq is asked for JSON so the claim comes out of the SAME call that writes the
+// reply — a second request per message would double what a conversation costs. Workers AI
+// often answers in prose regardless, and that is fine: the reply still works, only the
+// claim is lost.
+async function finish(env, ip, body, a, agents, line, raw) {
   let reply = raw, claim = null;
   try {
     const parsed = JSON.parse(raw);
-    if (parsed && typeof parsed === "object") {
-      reply = String(parsed.say || "").trim();
+    if (parsed && typeof parsed === "object" && parsed.say) {
+      reply = String(parsed.say).trim();
       const c = parsed.claim;
       if (c && agents[c.about] && c.about !== body.agent && String(c.what || "").trim())
         claim = { about: c.about, what: String(c.what).trim().slice(0, 120) };
     }
   } catch (_) {
-    reply = raw.replace(/^\{[\s\S]*"say"\s*:\s*"/, "").replace(/"[\s\S]*$/, "");
+    const m = raw.match(/"say"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+    if (m) reply = m[1].replace(/\\"/g, '"');
   }
 
   reply = reply.replace(/^["']|["']$/g, "").replace(/\*/g, "").trim().slice(0, 300);
@@ -274,8 +317,8 @@ async function talk(req, env) {
   if (claim && GUARD.test(claim.what)) claim = null;
 
   await saveHistory(env, ip, body.agent,
-                    [...history, { role: "user", content: line },
-                                 { role: "assistant", content: reply }]);
+                    [{ role: "user", content: line }, { role: "assistant", content: reply }],
+                    await loadHistory(env, ip, body.agent));
 
   // Queued under a unique key rather than appended to one blob — two people talking at
   // once would otherwise read-modify-write over each other and silently lose a line.
@@ -292,6 +335,7 @@ async function talk(req, env) {
     asked_about: claim ? ((agents[claim.about] || {}).name || null) : null,
   });
 }
+
 
 async function drain(req, env) {
   if (req.headers.get("X-Drain-Key") !== env.DRAIN_KEY)

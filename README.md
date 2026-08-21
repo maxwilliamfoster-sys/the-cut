@@ -132,6 +132,34 @@ per-*minute* ceiling as a single booking — exceed it and the request is refuse
 Cost lands around 3,400 tokens a beat, ~320K a day against a 450K self-imposed budget, with
 automatic failover to OpenRouter if Groq's daily cap is ever hit.
 
+## Never running out of tokens
+
+A tier (`FAST` / `DEEP`) is not a model id. It used to be, which is exactly why the city
+died silently for eighty-five city-days when Groq retired both of them. `sim/llm.py` now
+walks a chain of free providers, and within each one a list of candidate models, so a
+retirement demotes an entry instead of stopping the city:
+
+| provider | free allowance | secret to set |
+|---|---|---|
+| Groq | ~200K tokens/day per model | `GROQ_API_KEY` |
+| Cerebras | ~1M tokens/day — the largest | `CEREBRAS_API_KEY` |
+| Google Gemini | ~1,500 requests/day | `GEMINI_API_KEY` |
+| OpenRouter | rotating `:free` models | `OPENROUTER_API_KEY` |
+| Ollama | whatever is on this machine | none — local only |
+
+Adding a repo secret is the entire job of enabling a provider; the workflow already passes
+all of them and a provider with no key is skipped silently. Ordered most-generous-first,
+and each one is only abandoned for the day when it actually says it is out.
+
+**Local models are deliberately opt-in** (`THE_CUT_ALLOW_LOCAL=1`). The city lives on a
+cron in the cloud, so a model on somebody's desktop cannot serve it — treating Ollama as a
+fallback for the thing that actually needs one would be a lie. It is there for local runs,
+where it works well: a full beat, eleven people narrated, on `qwen2.5:14b-instruct`.
+
+The dialogue Worker has its own chain — Groq, then **Cloudflare Workers AI**, which needs no
+key and no second account because the Worker is already running on Cloudflare. The one part
+of this a player actually touches cannot be taken out by a token cap somewhere else.
+
 ## Running it locally
 
 ```bash

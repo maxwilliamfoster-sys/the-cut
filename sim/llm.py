@@ -24,20 +24,106 @@ import time
 import urllib.error
 import urllib.request
 
-GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# Groq retired the whole Llama text line (both former models now 404). The replacements
-# are gpt-oss, which changes two things that the rest of this file has to respect:
-#   1. Both tiers get the SAME allowance — 8K TPM / 200K TPD each. The old design leaned on
-#      FAST having 500K TPD; it no longer does. 200K does not cover a day of beats alone, so
-#      the two models are treated as two *separate* 200K buckets and cognition spills from
-#      one into the other rather than going quiet (see cognition.make_cognition).
-#   2. They are reasoning models. Reasoning tokens are billed as completion tokens and eat
-#      the same max_tokens reservation as the visible reply, so REASONING_EFFORT is pinned
-#      low and fit_max_tokens() budgets for them explicitly.
-FAST = "openai/gpt-oss-20b"          # 200K TPD — the workhorse, one call per beat
-DEEP = "openai/gpt-oss-120b"         # 200K TPD — the Gazette, and cognition's spillover
+# ── providers ────────────────────────────────────────────────────────────────
+# FAST and DEEP are TIERS, not model ids. They used to be literal Groq model names, which is
+# why the city died silently for 85 city-days when Groq retired both of them: a model id is
+# not a durable thing to build on. Now each tier resolves to whichever provider is currently
+# answering, and each provider offers a LIST of candidate models — so a retirement demotes
+# one entry instead of stopping the city.
+#
+# Order matters: cheapest-to-reach and most generous first. Adding a key to the repo secrets
+# enables that provider with no code change; a provider with no key is skipped silently.
+#
+#   groq        200K tokens/day per model, very fast          GROQ_API_KEY
+#   cerebras    ~1M tokens/day, the largest free allowance     CEREBRAS_API_KEY
+#   gemini      ~1,500 requests/day via the OpenAI-compatible  GEMINI_API_KEY
+#               endpoint
+#   openrouter  a rotating set of :free community models       OPENROUTER_API_KEY
+#   ollama      whatever is running on this machine — only     (no key; local only)
+#               reachable when the tick runs locally, NOT from
+#               the GitHub Actions cron
+FAST, DEEP = "fast", "deep"
+
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434")
+
+PROVIDERS = [
+    {
+        "name": "groq",
+        "key": "GROQ_API_KEY",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "tpm": 8000,
+        "models": {FAST: ["openai/gpt-oss-20b", "openai/gpt-oss-120b", "groq/compound-mini"],
+                   DEEP: ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]},
+    },
+    {
+        "name": "cerebras",
+        "key": "CEREBRAS_API_KEY",
+        "url": "https://api.cerebras.ai/v1/chat/completions",
+        "tpm": 60000,
+        "models": {FAST: ["llama3.1-8b", "gpt-oss-120b", "qwen-3-32b"],
+                   DEEP: ["llama-3.3-70b", "gpt-oss-120b", "qwen-3-32b"]},
+    },
+    {
+        "name": "gemini",
+        "key": "GEMINI_API_KEY",
+        "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+        "tpm": 60000,
+        "models": {FAST: ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-flash-latest"],
+                   DEEP: ["gemini-2.5-flash", "gemini-2.0-flash"]},
+    },
+    {
+        "name": "openrouter",
+        "key": "OPENROUTER_API_KEY",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "tpm": 30000,
+        "models": {FAST: ["meta-llama/llama-3.3-70b-instruct:free",
+                          "qwen/qwen-2.5-72b-instruct:free",
+                          "google/gemma-2-9b-it:free"],
+                   DEEP: ["meta-llama/llama-3.3-70b-instruct:free",
+                          "qwen/qwen-2.5-72b-instruct:free"]},
+    },
+    {
+        "name": "ollama",
+        "key": None,                       # local, no key, and usually not there at all
+        "url": f"{OLLAMA_URL}/v1/chat/completions",
+        "tpm": 100000,
+        "local": True,
+        # Instruction-tuned first: qwen3 is a reasoning model and spends the reply budget
+        # thinking, which on a batched beat is the empty-content failure all over again.
+        "models": {FAST: ["qwen2.5:14b-instruct", "qwen3:8b", "qwen3:14b"],
+                   DEEP: ["qwen2.5:14b-instruct", "qwen3:14b", "qwen3:8b"]},
+    },
+]
+
+# Which (provider, tier) pairs have already proved dead this run, so the city stops paying
+# a round-trip to rediscover it. Model-level failures demote just that candidate.
+_dead_models = set()
+_dead_providers = set()
+_working = {}
+
+
+def providers_available():
+    """Providers we could actually reach right now, in order."""
+    out = []
+    for p in PROVIDERS:
+        if p["name"] in _dead_providers:
+            continue
+        if p["key"] and not os.environ.get(p["key"]):
+            continue
+        if p.get("local") and not os.environ.get("THE_CUT_ALLOW_LOCAL"):
+            # The city lives on a cron in the cloud; a model on somebody's desktop cannot
+            # serve it. Local is opt-in so it helps local runs without pretending to be a
+            # fallback for the thing that actually needs one.
+            continue
+        out.append(p)
+    return out
+
+
+def _candidates(prov, tier):
+    return [m for m in prov["models"].get(tier, [])
+            if (prov["name"], m) not in _dead_models]
+
 
 # gpt-oss emits reasoning tokens before the answer. On a JSON batch they buy nothing (the
 # schema does the thinking) but they are charged, and if they consume the whole reservation
@@ -57,7 +143,9 @@ TPM_HEADROOM = 400
 def fit_max_tokens(model, prompt_chars, want=2000, floor=700):
     """Largest reply we can reserve without the request being refused outright."""
     prompt_est = prompt_chars // 4
-    room = TPM.get(model, 8000) - TPM_HEADROOM - prompt_est
+    avail = providers_available()
+    ceiling = min([p.get("tpm", 8000) for p in avail], default=8000)
+    room = ceiling - TPM_HEADROOM - prompt_est
     # The reservation has to cover the hidden reasoning channel as well as the JSON we
     # actually want, or the visible reply gets squeezed to nothing.
     return max(floor, min(want + REASONING_RESERVE, room))
@@ -68,12 +156,7 @@ def fit_max_tokens(model, prompt_chars, want=2000, floor=700):
 # to a quiet beat instead of a 429 landing mid-batch and costing everyone their turn.
 DAILY_BUDGET = {FAST: 188_000, DEEP: 188_000}
 
-OPENROUTER_FALLBACKS = [
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "qwen/qwen-2.5-72b-instruct:free",
-]
-
-_openrouter_only = False
+# OpenRouter is now just another entry in PROVIDERS, not a special case.
 
 
 class QuotaExhausted(RuntimeError):
@@ -154,6 +237,9 @@ def trips_guardrail(text):
 # ── transport ────────────────────────────────────────────────────────────────
 
 def _post(url, key, payload, timeout=90):
+    """Every provider in the chain speaks the OpenAI chat-completions shape, including
+    Gemini (via its compatibility endpoint) and Ollama, so one transport serves all of
+    them."""
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode(),
@@ -171,51 +257,68 @@ def _post(url, key, payload, timeout=90):
         return json.loads(r.read().decode())
 
 
-def _openrouter(messages, max_tokens, temperature):
-    key = os.environ.get("OPENROUTER_API_KEY")
-    if not key:
-        raise QuotaExhausted("Groq daily cap reached and OPENROUTER_API_KEY is not set.")
-    last = None
-    for model in OPENROUTER_FALLBACKS:
-        try:
-            d = _post(OPENROUTER_URL, key, {
-                "model": model, "messages": messages,
-                "max_tokens": max_tokens, "temperature": temperature,
-            })
-            text = (d["choices"][0]["message"].get("content") or "").strip()
-            if not text:
-                raise RuntimeError(f"{model} returned empty content")
-            print(f"[llm] OpenRouter -> {model}")
-            return text, 0
-        except Exception as e:
-            last = e
-    raise RuntimeError(f"All OpenRouter fallbacks failed: {last}")
-
-
 def chat(messages, model=FAST, max_tokens=1800, temperature=0.9, json_mode=True, retries=2):
-    """One completion. Returns (text, tokens_used). Raises only if every route fails."""
-    global _openrouter_only
-    key = os.environ.get("GROQ_API_KEY")
-    if not key or _openrouter_only:
-        return _openrouter(messages, max_tokens, temperature)
+    """One completion, from whichever free provider is still answering.
+
+    `model` is a TIER — FAST or DEEP — not a model id. This walks the provider chain in
+    order and, within each provider, its candidate models. A model that no longer exists is
+    demoted for the rest of the run rather than retried; a provider out of tokens for the
+    day is skipped entirely. Only when every route is exhausted does this raise, and it
+    raises QuotaExhausted so the caller can tell "out of allowance" from "broken".
+    """
+    tier = model if model in (FAST, DEEP) else FAST
+    avail = providers_available()
+    if not avail:
+        raise QuotaExhausted("no provider has a key configured")
+
+    last = None
+    for prov in avail:
+        for candidate in _candidates(prov, tier):
+            try:
+                return _call(prov, candidate, messages, max_tokens, temperature,
+                             json_mode, retries)
+            except _ModelGone as e:
+                print(f'[llm] {prov["name"]}/{candidate} is gone ({e}) — demoting it')
+                _dead_models.add((prov["name"], candidate))
+                last = e
+            except QuotaExhausted as e:
+                print(f'[llm] {prov["name"]}: {e} — trying the next provider')
+                _dead_providers.add(prov["name"])
+                last = e
+                break
+            except Exception as e:
+                print(f'[llm] {prov["name"]}/{candidate} failed: {e}')
+                last = e
+    raise QuotaExhausted(f"every provider is exhausted or failing (last: {last})")
+
+
+class _ModelGone(RuntimeError):
+    """This provider no longer serves this model. Try the next candidate, not the next
+    provider — the account is fine, the name is stale."""
+
+
+def _call(prov, model, messages, max_tokens, temperature, json_mode, retries):
+    key = os.environ.get(prov["key"]) if prov["key"] else "local"
+    url = prov["url"]
 
     payload = {
         "model": model, "messages": messages,
         "max_tokens": max_tokens, "temperature": temperature,
     }
-    if model.startswith("openai/gpt-oss"):
+    if "gpt-oss" in model:
         payload["reasoning_effort"] = REASONING_EFFORT
+        payload["reasoning_format"] = "hidden"
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
 
     for attempt in range(retries + 1):
         try:
-            d = _post(GROQ_URL, key, payload)
-            choice = d["choices"][0]
+            d = _post(url, key, payload)
+            choice = (d.get("choices") or [{}])[0]
             if choice.get("finish_reason") == "length":
-                # Truncated mid-JSON: the salvage in parse_json will recover the entries
-                # that completed, so the beat still lands, but people at the end of the
-                # batch silently lose their turn. Worth seeing in the log.
+                # Truncated mid-JSON: the salvage in parse_json recovers the entries that
+                # completed, so the beat still lands, but people at the end of the batch
+                # silently lose their turn. Worth seeing in the log.
                 print(f"[llm] WARNING response hit max_tokens ({max_tokens}) — batch truncated")
 
             msg = choice.get("message") or {}
@@ -233,52 +336,58 @@ def chat(messages, model=FAST, max_tokens=1800, temperature=0.9, json_mode=True,
                     print("[llm] empty content — salvaged JSON from the reasoning channel")
                     return json.dumps(salvaged), used
                 if attempt < retries:
-                    bigger = min(int(max_tokens * 1.5), TPM.get(model, 8000) - TPM_HEADROOM)
-                    print(f"[llm] EMPTY content (finish={choice.get('finish_reason')}, "
-                          f"{used} tokens spent on reasoning) — retrying with "
-                          f"max_tokens {bigger}")
+                    bigger = min(int(max_tokens * 1.5), prov.get("tpm", 8000) - TPM_HEADROOM)
+                    print(f'[llm] EMPTY content from {prov["name"]}/{model} '
+                          f'(finish={choice.get("finish_reason")}) — retrying at {bigger}')
                     payload["max_tokens"] = bigger
                     time.sleep(2)
                     continue
-                raise RuntimeError(
-                    f"{model} returned empty content {retries + 1}x "
-                    f"(finish_reason={choice.get('finish_reason')}) — the model answered "
-                    f"but said nothing usable.")
+                raise RuntimeError(f"{model} returned empty content {retries + 1}x")
 
+            if prov["name"] != _working.get("name"):
+                print(f'[llm] using {prov["name"]}/{model}')
+                _working["name"] = prov["name"]
             return content, used
+
         except urllib.error.HTTPError as e:
             body = e.read().decode(errors="replace")[:400]
+            if e.code == 404 or "model_not_found" in body or "does not exist" in body:
+                raise _ModelGone(f"HTTP {e.code}")
+            if e.code in (401, 403):
+                raise QuotaExhausted(f'rejected the key (HTTP {e.code})')
             if e.code == 413 or (e.code == 429 and "Request too large" in body):
                 # The reservation was too big for the per-minute ceiling. Shrinking the
-                # reply allowance is better than dropping the beat: a slightly terser
-                # batch still gives everyone a turn.
+                # reply allowance is better than dropping the beat.
                 new_max = max(600, int(payload["max_tokens"] * 0.6))
                 if new_max < payload["max_tokens"] and attempt < retries:
                     print(f"[llm] request too large — retrying with max_tokens {new_max}")
                     payload["max_tokens"] = new_max
                     time.sleep(2)
                     continue
-                raise RuntimeError(f"Groq {e.code} (request too large): {body}")
+                raise RuntimeError(f"{e.code} request too large: {body}")
             if e.code == 429:
-                if re.search(r"tokens? per day|TPD", body, re.I):
-                    print("[llm] Groq daily token cap reached — failing over to OpenRouter.")
-                    _openrouter_only = True
-                    return _openrouter(messages, max_tokens, temperature)
-                # Per-minute ceiling: Groq tells us how long to wait, so wait exactly that.
+                if re.search(r"tokens? per day|TPD|daily", body, re.I):
+                    raise QuotaExhausted("daily cap reached")
+                # Per-minute ceiling: the provider says how long to wait, so wait that long.
                 m = re.search(r"try again in (?:(\d+)m)?\s*([\d.]+)s", body, re.I)
                 wait = (int(m.group(1) or 0) * 60 + float(m.group(2)) + 2) if m else 20
-                print(f"[llm] Groq rate limit — sleeping {wait:.0f}s")
+                print(f'[llm] {prov["name"]} rate limit — sleeping {wait:.0f}s')
                 time.sleep(min(wait, 120))
                 continue
             if attempt >= retries:
-                raise RuntimeError(f"Groq HTTP {e.code}: {body}")
+                raise RuntimeError(f"HTTP {e.code}: {body}")
             time.sleep(3)
+        except (urllib.error.URLError, TimeoutError) as e:
+            # A local Ollama that is not running looks exactly like this.
+            raise QuotaExhausted(f"unreachable ({e})")
+        except _ModelGone:
+            raise
         except Exception:
             if attempt >= retries:
                 raise
             time.sleep(3)
 
-    raise RuntimeError("Groq exhausted retries")
+    raise RuntimeError("exhausted retries")
 
 
 def parse_json(text):

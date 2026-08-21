@@ -7,6 +7,12 @@ compatibility_date = "2026-08-01"
 #   PLAYER_KEY    gate on /talk so a public URL cannot burn the token budget
 #   DRAIN_KEY     lets the GitHub Action pull the queue and nobody else
 
+# Cloudflare's own inference, used as the fallback when Groq is out of tokens for the day.
+# It needs no key and no account beyond the one already running this Worker, which makes it
+# the only fallback that cannot itself be misconfigured.
+[ai]
+binding = "AI"
+
 [[kv_namespaces]]
 binding = "CUT_KV"
 id = "ed0402dbd6b84f6383b961cae89f7fe2"

@@ -585,17 +585,40 @@ check("people stop caring about an old rumour eventually", _stale["checked"] == 
 
 RETIRED = {"llama-3.1-8b-instant", "llama-3.3-70b-versatile", "llama3-8b-8192",
            "llama3-70b-8192", "mixtral-8x7b-32768"}
+_all_models = {m for p in llm.PROVIDERS for ms in p["models"].values() for m in ms}
 check("the city is not pointed at a decommissioned model",
-      not ({llm.FAST, llm.DEEP} & RETIRED),
-      f"FAST={llm.FAST} DEEP={llm.DEEP} — retired by Groq, every call will 404")
+      not (_all_models & RETIRED),
+      f"{sorted(_all_models & RETIRED)} are retired — those calls will 404")
+
+# The whole outage happened because a tier WAS a model id. Now it is a tier, and each
+# provider offers several candidates so one retirement demotes an entry instead of
+# stopping the city.
+check("a tier is not a single model id",
+      llm.FAST not in _all_models and llm.DEEP not in _all_models,
+      "FAST/DEEP are literal model names again — one retirement kills the city")
+check("every tier has more than one candidate model per provider",
+      all(len(p["models"][t]) >= 2 for p in llm.PROVIDERS for t in (llm.FAST, llm.DEEP)))
+check("there is more than one provider to fall back to",
+      len(llm.PROVIDERS) >= 3,
+      "one provider means one daily cap between the city and silence")
+check("a provider with no key configured is skipped, not attempted",
+      all(p["key"] is None or "os.environ" in inspect.getsource(llm.providers_available)
+          for p in llm.PROVIDERS))
+check("a model that no longer exists is demoted, not retried forever",
+      "_dead_models" in inspect.getsource(llm.chat)
+      and "_ModelGone" in inspect.getsource(llm._call))
+check("a local model is never relied on by the cloud cron",
+      all(not p.get("local") or "THE_CUT_ALLOW_LOCAL" in inspect.getsource(llm.providers_available)
+          for p in llm.PROVIDERS),
+      "the city runs on a cron; a model on somebody's desktop cannot serve it")
 
 # A reasoning model that spends its whole allowance thinking returns HTTP 200 with an
 # empty body. Returning "" to the caller reads as "the model had nothing to say" and the
 # beat is quietly dropped — indistinguishable from a healthy quiet beat. It must raise.
-chat_src = inspect.getsource(llm.chat)
+chat_src = inspect.getsource(llm._call)
 check("an empty model reply is an error, never an empty string",
       "raise RuntimeError" in chat_src.split("if not content:")[-1],
-      "chat() can hand back empty content and the city dies quietly again")
+      "the transport can hand back empty content and the city dies quietly again")
 
 check("reasoning tokens are budgeted for, not discovered at runtime",
       llm.REASONING_RESERVE > 0
