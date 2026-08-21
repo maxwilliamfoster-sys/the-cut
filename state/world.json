@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 927,
-  "last_beat_at": "2026-08-21T01:27:12Z",
+  "beat": 932,
+  "last_beat_at": "2026-08-21T02:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heat",
   "heat": {
-    "riverside": 26,
-    "delmar": 21,
+    "riverside": 46,
+    "delmar": 24,
     "terraces": 5,
     "civic": 5
   },
@@ -149,6 +149,31 @@
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -355,31 +380,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "boateng",
-        "hector"
-      ],
-      "text": "Somebody tells Fr. Emmanuel Boateng that Hector Delgado has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -394,7 +394,7 @@
   "llm_budget": {
     "day": "2026-08-21",
     "spent": {
-      "openai/gpt-oss-20b": 28810,
+      "openai/gpt-oss-20b": 36949,
       "openai/gpt-oss-120b": 1563
     }
   },
