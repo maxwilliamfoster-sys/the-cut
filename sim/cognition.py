@@ -82,9 +82,11 @@ COGNITION_SLOTS = 11
 # A narrower beat is far better than no beat. Attention now shrinks as the day's allowance
 # runs down, so the block keeps talking all day and simply has fewer people in frame when
 # it is running low.
-QUOTA_RECHECK_BEATS = 8      # ~2 city-hours before trying a spent provider again
-
 SLOT_LADDER = [(0.62, 11), (0.42, 9), (0.25, 7), (0.10, 5), (0.0, 4)]
+
+# A provider that reported "daily cap" can recover, so a spent one is retried after this
+# many beats rather than being written off until midnight.
+QUOTA_RECHECK_BEATS = 8
 
 
 def affordable_slots(budget):
@@ -350,8 +352,12 @@ def _apply(agents, data, groups, beat, day, records, chosen):
                        if agents[o]["name"].lower() == want
                        or agents[o]["name"].split()[-1].lower() == want
                        or agents[o]["name"].split()[0].lower() == want), to)
-        a["speech"] = ({"to": to, "text": str(says)[:220]}
-                       if says and to in agents and to != aid and to in present else None)
+        # Only overwrite when there is a real line. The mechanical drama gives people
+        # something to say before cognition runs, and blanking it here wiped exactly the
+        # wrong people: whoever just had a confrontation is weighted UP in select(), so
+        # the free line was destroyed for the character most likely to be worth hearing.
+        if says and to in agents and to != aid and to in present:
+            a["speech"] = {"to": to, "text": str(says)[:220]}
 
         for k, dv in (row.get("mood") or {}).items():
             if k in a["mood"] and isinstance(dv, (int, float)):
