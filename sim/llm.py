@@ -71,8 +71,11 @@ PROVIDERS = [
         "key": "GEMINI_API_KEY",
         "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
         "tpm": 60000,
-        "models": {FAST: ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-flash-latest"],
-                   DEEP: ["gemini-2.5-flash", "gemini-2.0-flash"]},
+        # Newest first — Google's docs show gemini-3.7-flash as current, and the 2.x names
+        # this originally guessed are on their way out. The older ones stay as fallbacks;
+        # a name that has been retired simply gets demoted on the first 404.
+        "models": {FAST: ["gemini-3.7-flash", "gemini-2.5-flash", "gemini-flash-latest"],
+                   DEEP: ["gemini-3.7-flash", "gemini-2.5-flash", "gemini-flash-latest"]},
     },
     {
         "name": "openrouter",
