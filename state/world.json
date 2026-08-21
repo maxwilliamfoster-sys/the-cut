@@ -1,12 +1,12 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 983,
-  "last_beat_at": "2026-08-21T15:27:12Z",
+  "beat": 985,
+  "last_beat_at": "2026-08-21T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "first snow",
   "heat": {
-    "riverside": 20,
+    "riverside": 18,
     "delmar": 5,
     "terraces": 5,
     "civic": 5
@@ -180,6 +180,18 @@
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -405,17 +417,6 @@
       },
       "targets": [],
       "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out."
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards."
     }
   ],
   "player_queue": [
@@ -1052,7 +1053,7 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-08-21",
-    "beat": 983,
+    "beat": 985,
     "providers": []
   }
 }
