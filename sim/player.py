@@ -16,7 +16,7 @@ import os
 import urllib.error
 import urllib.request
 
-from . import memory
+from . import drama, memory
 
 WORKER_URL = os.environ.get("THE_CUT_WORKER_URL",
                             "https://the-cut-talk.maxwilliamfoster.workers.dev")
@@ -71,10 +71,26 @@ def absorb(world, agents, beat, day):
         )
         memory.prune(a)
 
+        # If the stranger said something about somebody else, this person now carries it as
+        # an unverified lead — and will go and ask. This is the only route by which
+        # information from outside the simulation gets into it.
+        claim = ex.get("claim") or {}
+        lead = None
+        if claim.get("about") in agents and claim.get("what"):
+            lead = drama.open_lead(a, claim["about"], claim["what"], day)
+            if lead:
+                memory.remember(
+                    a, beat, day,
+                    f'A stranger told me {claim["what"]}. I have not checked it.', 7)
+                memory.prune(a)
+                print(f'[player] {a["name"]} is now carrying a rumour about '
+                      f'{agents[claim["about"]]["name"]}')
+
         kept.append({"agent": a["id"], "name": a["name"], "line": line, "reply": reply})
         records.append({
             "beat": beat, "day": day, "kind": "player",
             "who": a["id"], "name": a["name"], "line": line, "reply": reply,
+            "claim": (lead or {}).get("what"), "about": (lead or {}).get("about"),
         })
         print(f'[player] {a["name"]} remembers being spoken to: "{line[:60]}"')
 

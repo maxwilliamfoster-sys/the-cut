@@ -96,28 +96,111 @@ async function loadCity() {
   return cityCache.data;
 }
 
-function personaPrompt(a, world) {
+// Conversations are remembered for this long, so a back-and-forth actually holds together.
+// Keyed by caller IP + character: the browser is never trusted to supply the history, for
+// the same reason it is never trusted to supply the persona.
+const HIST_TURNS = 8;
+const HIST_TTL = 60 * 60 * 2;
+
+function histKey(ip, agentId) { return `hist:${ip}:${agentId}`; }
+
+async function loadHistory(env, ip, agentId) {
+  const raw = await env.CUT_KV.get(histKey(ip, agentId), "json");
+  return Array.isArray(raw) ? raw.slice(-HIST_TURNS) : [];
+}
+
+async function saveHistory(env, ip, agentId, turns) {
+  await env.CUT_KV.put(histKey(ip, agentId), JSON.stringify(turns.slice(-HIST_TURNS)),
+                       { expirationTtl: HIST_TTL });
+}
+
+// Everything this person is currently living through. The old prompt gave the model a name,
+// some traits and four memories, which produced a character who sounded right but had no
+// stake in anything. These are the same facts the simulation's own cognition prompt uses.
+function situation(a, world, agents) {
+  const bits = [];
+  const nameOf = id => (agents[id] || {}).name || id;
+
+  for (const d of (world.debts || [])) {
+    if (d.settled) continue;
+    const day = Math.floor(world.beat / 4);
+    const over = day - d.due_day;
+    if (over < 0) continue;
+    const what = d.kind === "money" ? `$${d.amount}` : d.kind === "favour" ? "a favour" : "a package";
+    if (d.to === a.id)
+      bits.push(`${nameOf(d.from)} owes you ${what} and is ${over} days late` +
+                (d.asked ? `; you have asked ${d.asked} times` : "") + ". You are sick of it.");
+    if (d.from === a.id)
+      bits.push(`You owe ${nameOf(d.to)} ${what} and you are ${over} days late. You are avoiding it.`);
+  }
+
+  for (const f of (world.feuds || [])) {
+    if (f.a === a.id || f.b === a.id)
+      bits.push(`You are feuding with ${nameOf(f.a === a.id ? f.b : f.a)} — ${f.cause}.`);
+  }
+
+  if (a.grief >= 40) bits.push("Somebody you were close to has died recently. You are not over it.");
+  else if (a.grief >= 15) bits.push("There has been a death on the block and it is still sitting with you.");
+  if (a.detained_until) bits.push(`You are being held at the 9th Precinct over ${a.charged_with || "a charge"}.`);
+
+  const laws = (world.laws || []).filter(l => l.status === "enacted").slice(-3);
+  if (laws.length)
+    bits.push(`Rules this block passed recently: ${laws.map(l => l.title).join("; ")}.`);
+
+  return bits.length ? bits.join("\n") : "Nothing much is hanging over you right now.";
+}
+
+function personaPrompt(a, world, agents) {
   const block = ["morning", "afternoon", "evening", "night"][world.beat % 4];
-  const mems = (a.memories || []).slice(-4).map(m => `d${m.day}: ${m.what}`).join(" | ") || "nothing much";
+  const mems = (a.memories || []).slice(-5).map(m => `d${m.day}: ${m.what}`).join(" | ") || "nothing much";
   const rels = Object.entries(a.relationships || {})
-    .sort((x, y) => Math.abs(y[1].affinity) - Math.abs(x[1].affinity)).slice(0, 3)
-    .map(([, v]) => v.opinion).join("; ");
+    .sort((x, y) => Math.abs(y[1].affinity) - Math.abs(x[1].affinity)).slice(0, 4)
+    .map(([id, v]) => `${(agents[id] || {}).name || id}: ${v.opinion}`).join("; ");
+
+  // Ids the stranger might say something ABOUT, so a claim can be attached to a real person
+  // rather than a name the simulation cannot resolve.
+  const who = Object.values(agents)
+    .filter(x => x.alive !== false && x.id !== a.id)
+    .slice(0, 30).map(x => `${x.id}=${x.name}`).join(", ");
+
+  const temper = a.volatility >= 75 ? "You do not let things go, and you start them."
+               : a.volatility <= 25 ? "You calm rooms down rather than lighting them."
+               : "";
 
   return `You are ${a.name}, ${a.age}. ${a.role}.
-You are: ${(a.traits || []).join("; ")}.
+You are: ${(a.traits || []).join("; ")}. ${temper}
 You want: ${a.ambition}. You dread: ${a.private_fear}.
 You speak like this: ${a.voice}.
-Right now it is day ${Math.floor(world.beat / 4)}, ${block}, weather ${world.weather}.
-You are ${a.action || "here"}. Privately you are thinking: ${a.thought || "not much"}.
+It is day ${Math.floor(world.beat / 4)}, ${block}, weather ${world.weather}.
+You are ${a.action || "here"}. Privately: ${a.thought || "not much"}.
 You remember: ${mems}
-Your read on people: ${rels}
+Your read on people: ${rels || "no strong views"}
 
-A stranger has just spoken to you in the street. Reply IN CHARACTER, as ${a.name}, in ONE
-or TWO short sentences. You do not know this person. Be guarded, or funny, or dismissive,
-or curious - whatever this particular person would actually be. Do not narrate, do not use
-asterisks, do not explain yourself. Just the words you say out loud.
+WHAT IS ON YOUR PLATE
+${situation(a, world, agents)}
 
-Never describe how anything illegal is actually done. No sexual content. No slurs.`;
+A stranger is talking to you in the street. You do not know them and you have no reason to
+trust them. Reply IN CHARACTER as ${a.name} — one or two short sentences, the words you say
+out loud and nothing else. No narration, no asterisks, no explaining yourself. Be guarded,
+funny, rude, evasive or curious, whatever THIS person would actually be.
+
+Give them something to push against — a question back, a denial with an edge, a piece of
+what you actually think, a demand. Never a bare "is that so" or "sounds like a lie" and
+nothing else; that ends the conversation and wastes both your time. If you have spoken to
+this stranger already, answer what they ACTUALLY just said and remember what was said
+before — do not reintroduce yourself or start the conversation over.
+
+If the stranger tells you something ABOUT SOMEBODY ELSE on this block — a rumour, an
+accusation, a piece of gossip, that somebody did something — record it as a claim so you can
+go and check whether it is true. Only do this for a specific named person from this list:
+${who}
+If they said nothing about anybody else, claim must be null.
+
+Never describe how anything illegal is actually done. No sexual content. No slurs.
+
+Return JSON only:
+{"say":"what you say out loud","claim":{"about":"<id from the list>","what":"the claim, MAX 14 WORDS"}}
+or {"say":"...","claim":null}`;
 }
 
 async function talk(req, env) {
@@ -138,6 +221,8 @@ async function talk(req, env) {
   const a = agents[body.agent];
   if (!a) return json({ error: "no such person" }, 404);
 
+  const history = await loadHistory(env, ip, body.agent);
+
   const res = await fetch(GROQ, {
     method: "POST",
     headers: {
@@ -147,34 +232,65 @@ async function talk(req, env) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 300,
+      max_tokens: 420,
       temperature: 0.95,
       reasoning_format: "hidden",
       reasoning_effort: "low",
+      response_format: { type: "json_object" },
       messages: [
-        { role: "system", content: personaPrompt(a, world) },
+        { role: "system", content: personaPrompt(a, world, agents) },
+        ...history,
         { role: "user", content: line },
       ],
     }),
   });
 
-  if (!res.ok) return json({ error: `brain unavailable (${res.status})` }, 502);
+  if (!res.ok) {
+    const detail = (await res.text()).slice(0, 200);
+    return json({ error: `brain unavailable (${res.status})`, detail }, 502);
+  }
   const d = await res.json();
-  let reply = (d.choices?.[0]?.message?.content || "").trim()
-    .replace(/^["']|["']$/g, "").replace(/\*/g, "").slice(0, 300);
+  const raw = (d.choices?.[0]?.message?.content || "").trim();
 
+  // The model is asked for JSON so a claim can be extracted from the same call that writes
+  // the reply — a second call per message would double what a conversation costs. If it
+  // comes back as plain prose anyway, that is still a usable reply; only the claim is lost.
+  let reply = raw, claim = null;
+  try {
+    const parsed = JSON.parse(raw);
+    if (parsed && typeof parsed === "object") {
+      reply = String(parsed.say || "").trim();
+      const c = parsed.claim;
+      if (c && agents[c.about] && c.about !== body.agent && String(c.what || "").trim())
+        claim = { about: c.about, what: String(c.what).trim().slice(0, 120) };
+    }
+  } catch (_) {
+    reply = raw.replace(/^\{[\s\S]*"say"\s*:\s*"/, "").replace(/"[\s\S]*$/, "");
+  }
+
+  reply = reply.replace(/^["']|["']$/g, "").replace(/\*/g, "").trim().slice(0, 300);
   if (!reply) return json({ error: "they said nothing" }, 502);
-  if (GUARD.test(reply)) reply = "They look at you for a second and change the subject.";
+  if (GUARD.test(reply)) { reply = "They look at you for a second and change the subject."; claim = null; }
+  if (claim && GUARD.test(claim.what)) claim = null;
+
+  await saveHistory(env, ip, body.agent,
+                    [...history, { role: "user", content: line },
+                                 { role: "assistant", content: reply }]);
 
   // Queued under a unique key rather than appended to one blob — two people talking at
   // once would otherwise read-modify-write over each other and silently lose a line.
   await env.CUT_KV.put(
     `q:${Date.now()}:${Math.random().toString(36).slice(2, 8)}`,
-    JSON.stringify({ agent: body.agent, line, reply, at: new Date().toISOString() }),
+    JSON.stringify({ agent: body.agent, line, reply, claim, at: new Date().toISOString() }),
     { expirationTtl: 60 * 60 * 24 * 7 },
   );
 
-  return json({ reply });
+  // Telling the player their rumour landed is the difference between talking at the city
+  // and talking to it: they can watch the person walk off to go and check.
+  return json({
+    reply,
+    asked_about: claim ? ((agents[claim.about] || {}).name || null) : null,
+  });
 }
 
 async function drain(req, env) {

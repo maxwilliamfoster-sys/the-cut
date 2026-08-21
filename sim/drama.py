@@ -33,6 +33,7 @@ people toward each other, and they decay only if nothing feeds them.
 """
 
 import random
+import re
 
 from . import city, memory
 from .roster import VOLATILITY
@@ -463,3 +464,172 @@ def maybe_new_debt(world, agents, beat, day):
     return [{"kind": "debt", "event": "opened", "from": debtor["id"], "to": creditor["id"],
              "text": f'{debtor["name"]} {note} — {creditor["name"]}.',
              "beat": beat, "day": day}]
+
+
+# ── things the player told them ──────────────────────────────────────────────
+# You are the only source of information in this city that did not come from inside it. If
+# you tell somebody that Malik has been talking to the police, that has to be able to travel
+# — otherwise talking to people is a novelty act rather than a way of affecting anything.
+#
+# A claim becomes a LEAD: an unverified thing this person now carries. They go and find the
+# person it is about, and when they do it resolves against the city's own record — the
+# subject's actual memories — rather than against a coin flip. So a true rumour lands and a
+# lie mostly does not, and neither outcome was scripted.
+
+LEAD_STALE_DAYS = 8              # after this they stop caring
+MIN_CORROBORATION = 2            # overlapping significant words to count as "something in it"
+
+_STOPWORDS = {"the", "a", "an", "and", "is", "was", "has", "have", "been", "to", "of", "in",
+              "on", "for", "with", "that", "this", "it", "he", "she", "they", "them", "his",
+              "her", "about", "me", "my", "you", "your", "at", "be", "are", "were", "not"}
+
+
+def open_lead(a, about, what, day, source="a stranger"):
+    """Somebody has been told something about somebody else, and has not checked it."""
+    if not about or about == a["id"] or not what:
+        return None
+    leads = a.setdefault("leads", [])
+    for l in leads:
+        if l["about"] == about and not l.get("checked"):
+            l["what"] = what          # they heard it again; same lead, fresher wording
+            l["day"] = day
+            return l
+    lead = {"about": about, "what": str(what)[:120], "day": day,
+            "source": source, "checked": False}
+    leads.append(lead)
+    del leads[:-4]
+    return lead
+
+
+def press_leads(world, agents, day):
+    """Anybody carrying an unchecked lead goes looking for the person it is about."""
+    for a in agents.values():
+        for l in list(a.get("leads", [])):
+            if l.get("checked"):
+                continue
+            if day - l.get("day", day) > LEAD_STALE_DAYS:
+                l["checked"] = "gave up"
+                continue
+            # A debt outranks a rumour: money first, gossip second.
+            if not a.get("chasing") and not a.get("detained_until") and l["about"] in agents:
+                a["checking"] = l["about"]
+                break
+
+
+def _significant(text):
+    return {w for w in re.findall(r"[a-z']+", (text or "").lower())
+            if len(w) > 3 and w not in _STOPWORDS}
+
+
+def _document_frequency(agents):
+    """How many people's memories each word appears in.
+
+    Plain word overlap does not work: "Malik has been talking to the police" shares
+    *police* and *talking* with half the memories in a city about police and talk, so an
+    invented rumour corroborated itself immediately. A word only counts as evidence if it
+    is rare across the block — which is cheap to work out from the city's own record.
+    """
+    df = {}
+    for a in agents.values():
+        seen = set()
+        for m in (a.get("memories") or []):
+            seen |= _significant(m.get("what", ""))
+        for w in seen:
+            df[w] = df.get(w, 0) + 1
+    return df
+
+
+def corroborated(subject, what, df=None, population=1):
+    """Is there anything in this person's own history that matches the claim?
+
+    This is the trick that keeps the player honest: the city already holds a record of what
+    everybody actually did, so a claim can be checked against it without asking the model
+    anything. A rumour that happens to be true finds its evidence; an invented one usually
+    does not — provided the match is on something *distinctive* rather than on the ordinary
+    vocabulary of the place.
+    """
+    words = _significant(what)
+    if not words:
+        return False
+    df = df or {}
+    rare_at = max(2, population * 0.25)
+
+    def hit(text):
+        overlap = words & _significant(text)
+        if len(overlap) < MIN_CORROBORATION:
+            return False
+        # At least one of the matching words has to be something not everybody says.
+        return any(df.get(w, 0) <= rare_at for w in overlap)
+
+    for m in (subject.get("memories") or []):
+        if hit(m.get("what", "")):
+            return True
+    return hit(subject.get("belief", ""))
+
+
+def check_leads(world, agents, groups, beat, day):
+    """They have found the person the rumour was about. Now they ask."""
+    out = []
+    df = _document_frequency(agents)
+    for a in agents.values():
+        if not a.get("alive", True) or a.get("detained_until"):
+            continue
+        lead = next((l for l in a.get("leads", [])
+                     if not l.get("checked") and l["about"] in agents), None)
+        if not lead:
+            continue
+        subject = agents[lead["about"]]
+        if not subject.get("alive", True) or subject.get("at") != a.get("at"):
+            continue
+
+        rng = random.Random(f'{a["id"]}:{lead["about"]}:{beat}:lead')
+        true_ish = corroborated(subject, lead["what"], df, len(agents))
+        rel = a.setdefault("relationships", {}).setdefault(
+            subject["id"], {"affinity": 0, "opinion": "not sure about them"})
+        where = city.LOCATIONS.get(a["at"], {}).get("name", "the block")
+
+        if true_ish:
+            lead["checked"] = "true"
+            rel["affinity"] = max(-100, rel["affinity"] - 22)
+            rel["opinion"] = "it turned out to be true"
+            _mood(a, stress=+14, fear=+10, happiness=-10)
+            _mood(subject, stress=+16, fear=+14)
+            memory.remember(a, beat, day,
+                            f'I asked {subject["name"]} about it. There was something in it.', 8)
+            memory.remember(subject, beat, day,
+                            f'{a["name"]} came at me about {lead["what"]}. Somebody has been talking.', 8)
+            if rel["affinity"] <= FEUD_AT:
+                open_feud(world, a, subject, day, "a rumour that turned out to be true")
+            text = (f'{a["name"]} puts it to {subject["name"]} at {where} — {lead["what"]} — '
+                    f'and does not like the answer.')
+        else:
+            # Nothing in the record. Whether they let it go is a question of temperament.
+            believes = rng.random() < (a.get("volatility", 45) / 260.0
+                                       + a["mood"].get("fear", 0) / 320.0)
+            lead["checked"] = "believed anyway" if believes else "false"
+            if believes:
+                rel["affinity"] = max(-100, rel["affinity"] - 12)
+                rel["opinion"] = "I do not believe the denial"
+                _mood(a, stress=+8, fear=+6)
+                memory.remember(a, beat, day,
+                                f'{subject["name"]} denied it. I did not believe them.', 7)
+                text = (f'{a["name"]} asks {subject["name"]} about {lead["what"]} at {where}. '
+                        f'The denial does not take.')
+            else:
+                rel["affinity"] = min(100, rel["affinity"] + 6)
+                _mood(a, stress=-4)
+                memory.remember(a, beat, day,
+                                f'I asked {subject["name"]} about it. It was nothing.', 5)
+                text = (f'{a["name"]} asks {subject["name"]} about {lead["what"]} at {where}, '
+                        f'and lets it drop.')
+            memory.remember(subject, beat, day,
+                            f'{a["name"]} asked me about something a stranger told them.', 6)
+
+        memory.prune(a)
+        memory.prune(subject)
+        a["checking"] = None
+        out.append({"kind": "lead", "who": a["id"], "name": a["name"],
+                    "about": subject["id"], "about_name": subject["name"],
+                    "verdict": lead["checked"], "what": lead["what"],
+                    "text": text, "action": text, "beat": beat, "day": day})
+    return out

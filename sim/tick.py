@@ -66,7 +66,8 @@ def target_location(agent, block, world, others=None):
             return "church"
 
     # Chasing a debt outranks routine. You do not go to work; you go and find them.
-    chase = agent.get("chasing")
+    # Money first, gossip second: a debt outranks a rumour.
+    chase = agent.get("chasing") or agent.get("checking")
     if chase and chase in others:
         return _chase_target(agent, others[chase], world)
 
@@ -213,6 +214,8 @@ def run_beat(world, agents, quiet=False, cognition=None):
     # them to wherever that person was last seen — which is the only way a confrontation
     # ever physically happens.
     pressures = drama.press_debts(world, alive, day)
+    # Anybody carrying an unverified rumour goes looking for whoever it is about.
+    drama.press_leads(world, alive, day)
 
     for a in alive.values():
         move(a, target_location(a, block, world, alive), block, world["weather"], rng)
@@ -273,6 +276,7 @@ def run_beat(world, agents, quiet=False, cognition=None):
                     if victim:
                         records.append(mortality.kill(
                             world, agents, victim, mortality.VIOLENT[1], beat, day))
+            records += drama.check_leads(world, alive, groups, beat, day)
             records += drama.instigate(world, alive, groups, beat, day)
             records += drama.maybe_new_debt(world, alive, beat, day)
         except Exception as e:

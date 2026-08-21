@@ -518,6 +518,66 @@ check("a violent confrontation is something the law can see",
       "only narrated `act` records were scanned, so assaults were never chargeable")
 
 
+# ── what the player says has to travel ───────────────────────────────────────────
+# Talking to people used to leave a memory and nothing else. If you tell somebody that Malik
+# has been talking to police, that has to be able to move through the city — otherwise the
+# conversation is a novelty act rather than a way of affecting anything.
+
+_w10 = copy.deepcopy(w)
+_a10 = copy.deepcopy(a)
+_w10["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w10["buildings"])
+mortality.ensure_fields(_a10)
+drama.ensure(_w10, _a10)
+_day10 = clock.day_of(_w10["beat"])
+
+drama.open_lead(_a10["dez"], "malik", "Malik torched the cannery himself", _day10)
+check("something the player says becomes a lead the character carries",
+      bool(_a10["dez"].get("leads")))
+# The live save may already have him chasing a debt, which correctly outranks gossip.
+_a10["dez"]["chasing"] = None
+drama.press_leads(_w10, mortality.living(_a10), _day10)
+check("carrying an unchecked rumour sends them to find the person it is about",
+      _a10["dez"].get("checking") == "malik")
+check("a debt outranks a rumour",
+      inspect.getsource(tick.target_location).index('agent.get("chasing")')
+      < inspect.getsource(tick.target_location).index('agent.get("checking")'),
+      "gossip would pull people off collecting money they are owed")
+
+# The claim is checked against the city's own record, not a coin flip.
+_a10["malik"]["at"] = _a10["dez"]["at"]
+_g10 = tick.colocation(mortality.living(_a10))
+_false = drama.check_leads(_w10, mortality.living(_a10), _g10, _w10["beat"], _day10)
+check("an invented rumour does not stick",
+      _false and _false[0]["verdict"] in ("false", "believed anyway"),
+      f'{_false[0]["verdict"] if _false else "unresolved"} — nothing in the record supports it')
+
+_a11 = copy.deepcopy(_a10)
+for _x in _a11.values():
+    _x["leads"] = []
+_a11["malik"]["memories"].append({"day": _day10 - 1, "beat": _w10["beat"],
+                                  "what": "I torched the cannery and nobody knows it was me.",
+                                  "importance": 8})
+drama.open_lead(_a11["dez"], "malik", "Malik torched the cannery himself", _day10)
+_a11["malik"]["at"] = _a11["dez"]["at"]
+_true = drama.check_leads(_w10, mortality.living(_a11), tick.colocation(mortality.living(_a11)),
+                          _w10["beat"], _day10)
+check("a rumour that happens to be true finds its evidence",
+      _true and _true[0]["verdict"] == "true",
+      "the city's own record should corroborate it")
+
+# Plain word overlap corroborated an invented rumour instantly, because "police" and
+# "talking" appear in half the memories in a city about police and talk.
+check("corroboration weighs how rare a word is, not just whether it matches",
+      "_document_frequency" in inspect.getsource(drama.check_leads),
+      "common vocabulary will corroborate anything")
+
+_stale = {"about": "malik", "what": "x", "day": _day10 - 99, "checked": False}
+_a10["dez"]["leads"] = [_stale]
+drama.press_leads(_w10, mortality.living(_a10), _day10)
+check("people stop caring about an old rumour eventually", _stale["checked"] == "gave up")
+
+
 # ── the silent-death invariants ──────────────────────────────────────────────────
 # Groq retired both Llama models and the city ran on for 85 city-days: green runs, a
 # perfect clock, committed state, and 30 people frozen mid-stride. Every check below

@@ -1216,11 +1216,19 @@ function nearestNPC(){
 // ── talking ─────────────────────────────────────────────────────────────────
 let talkOpen = false, talkWith = null;
 
+// The Worker remembers a conversation for two hours, so the transcript has to survive
+// closing the box too — otherwise you reopen it, see an empty log, and start again while
+// they carry on from where you left off.
+const TRANSCRIPTS = {};
+
 function openTalk(id){
   talkOpen = true; talkWith = id; selected = id; paintPanel();
   $('talk').style.display = 'flex';
   $('talkWho').textContent = AGENTS[id].name;
-  $('talkLog').innerHTML = `<div class="tl-sys">You walk up to ${esc(AGENTS[id].name)}.</div>`;
+  const prior = TRANSCRIPTS[id];
+  $('talkLog').innerHTML = prior
+    ? `<div class="tl-sys">You pick up where you left off with ${esc(AGENTS[id].name)}.</div>` + prior
+    : `<div class="tl-sys">You walk up to ${esc(AGENTS[id].name)}.</div>`;
   $('talkInput').value = '';
   $('talkInput').focus();
 }
@@ -1249,12 +1257,18 @@ async function sendLine(){
     if(!r.ok) throw new Error(d.error || ('HTTP '+r.status));
     $('talkLog').insertAdjacentHTML('beforeend',
       `<div class="tl-them"><b>${esc(AGENTS[talkWith].name.split(' ').slice(-1)[0])}:</b> ${esc(d.reply)}</div>`);
-    $('talkLog').insertAdjacentHTML('beforeend',
-      `<div class="tl-sys">They will remember this by the next beat.</div>`);
+    // Only say something when there is something to say. A line after every message
+    // saying they will remember it is noise by the third one.
+    if(d.asked_about){
+      $('talkLog').insertAdjacentHTML('beforeend',
+        `<div class="tl-sys">That landed. They are going to go and ask ${esc(d.asked_about)} about it.</div>`);
+    }
   }catch(e){
     const w = document.getElementById('tw'); if(w) w.remove();
     $('talkLog').insertAdjacentHTML('beforeend', `<div class="tl-err">${esc(e.message)}</div>`);
   }
+  if(talkWith) TRANSCRIPTS[talkWith] = $('talkLog').innerHTML
+    .replace(/^<div class="tl-sys">You (walk up to|pick up where)[^<]*<\/div>/, '');
   box.disabled = false; box.focus();
   $('talkLog').scrollTop = 1e6;
 }

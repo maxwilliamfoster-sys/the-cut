@@ -211,6 +211,15 @@ def _people_block(agents, groups, beat, chosen, world=None, pressures=()):
                     flags.append(f'OWES {other["name"]}, who is standing right here')
         if a.get("chasing") and a["chasing"] in agents:
             flags.append(f'is out looking for {agents[a["chasing"]]["name"]}')
+        lead = next((l for l in (a.get("leads") or [])
+                     if not l.get("checked") and l["about"] in agents), None)
+        if lead:
+            subj = agents[lead["about"]]
+            here = subj["id"] in groups.get(a["at"], [])
+            flags.append(
+                f'was told by a stranger: "{lead["what"]}" about {subj["name"]}'
+                + (" — WHO IS STANDING RIGHT HERE, and they have not asked yet"
+                   if here else " — and has not checked it"))
         enemy = (world or {}).get("feuds") and next(
             (f for f in world["feuds"] if aid in (f["a"], f["b"])), None)
         if enemy:

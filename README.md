@@ -142,6 +142,29 @@ py selftest.py                 # 25 invariants — run before touching the clock
 py -m http.server 8777         # then open http://localhost:8777
 ```
 
+## Talking to them
+
+Walk up to somebody and press E. The Cloudflare Worker in `worker/` is the only thing that
+can hold the Groq key *and* write into the city, so it answers in character and queues the
+exchange for the next beat to absorb.
+
+Three things make it a conversation rather than a vending machine:
+
+- **They remember the conversation.** History is kept per caller per character in KV for two
+  hours, so a back-and-forth holds together and they answer what you actually just said.
+- **They know what they are living through.** The persona is built from the same facts the
+  simulation's own prompt uses — who owes them money and how late it is, who they are
+  feuding with, whether they are grieving, whether they are in a cell, what laws the block
+  has passed. Not just a name and some adjectives.
+- **What you tell them travels.** If you say something about somebody else, the same call
+  that writes the reply extracts it as a *claim*. That becomes an unverified **lead**: they
+  go and find the person it is about, and when they do it resolves against the city's own
+  record — the subject's actual memories — rather than a coin flip. A true rumour finds its
+  evidence and costs somebody a friendship. An invented one usually gets dropped, unless the
+  person you told is volatile or frightened enough to believe it anyway.
+
+You are the only source of information in this city that did not come from inside it.
+
 ## Walking in
 
 Press **WASD** on the live page and you drop into the city as a sprite. Stand next to
