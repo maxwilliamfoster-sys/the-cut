@@ -289,7 +289,16 @@ def chat(messages, model=FAST, max_tokens=1800, temperature=0.9, json_mode=True,
             except Exception as e:
                 print(f'[llm] {prov["name"]}/{candidate} failed: {e}')
                 last = e
-    raise QuotaExhausted(f"every provider is exhausted or failing (last: {last})")
+    configured = [p["name"] for p in PROVIDERS
+                  if not p["key"] or os.environ.get(p["key"])]
+    hint = ""
+    if len(configured) <= 1:
+        # Worth saying out loud rather than leaving somebody to read the source: a chain
+        # with one link in it is not a chain, and this is the exact failure it exists for.
+        missing = [p["key"] for p in PROVIDERS if p["key"] and not os.environ.get(p["key"])]
+        hint = (f" — only {configured or ['nothing']} is configured, so there was nowhere to "
+                f"fall back to. Set any of {missing} to give the city a second source.")
+    raise QuotaExhausted(f"every provider is exhausted or failing (last: {last}){hint}")
 
 
 class _ModelGone(RuntimeError):
