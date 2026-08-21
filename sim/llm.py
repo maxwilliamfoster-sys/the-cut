@@ -76,6 +76,15 @@ OPENROUTER_FALLBACKS = [
 _openrouter_only = False
 
 
+class QuotaExhausted(RuntimeError):
+    """Groq's daily token allowance is gone and there is no failover key configured.
+
+    Distinct from every other failure on purpose. Running out of quota is the budget
+    working, not the city breaking, and the canary in tick.py must be able to tell those
+    apart — otherwise the run turns red every single day the moment the cap is reached.
+    """
+
+
 def quota_day():
     """The day Groq is actually metering — UTC, wall-clock.
 
@@ -165,7 +174,7 @@ def _post(url, key, payload, timeout=90):
 def _openrouter(messages, max_tokens, temperature):
     key = os.environ.get("OPENROUTER_API_KEY")
     if not key:
-        raise RuntimeError("Groq daily cap reached and OPENROUTER_API_KEY is not set.")
+        raise QuotaExhausted("Groq daily cap reached and OPENROUTER_API_KEY is not set.")
     last = None
     for model in OPENROUTER_FALLBACKS:
         try:

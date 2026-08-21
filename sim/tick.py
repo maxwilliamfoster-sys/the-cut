@@ -17,8 +17,8 @@ import random
 import sys
 import time
 
-from . import (activities, city, clock, cognition, construction, events, law, llm,
-               mortality, player, reflect, state)
+from . import (activities, city, clock, cognition, construction, drama, events, law,
+               llm, mortality, player, reflect, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -44,12 +44,16 @@ def apply_mood(agent, deltas):
 
 # ── deterministic systems ────────────────────────────────────────────────────
 
-def target_location(agent, block, world):
+def target_location(agent, block, world, others=None):
     """Where routine says this person should be, before anyone decides otherwise.
 
     Exhaustion overrides work and high district heat pushes people off the street — two
     rules, both cheap, and between them the routine stops looking like a timetable.
+
+    `others` is the living cast, needed because somebody chasing a debt goes wherever the
+    person who owes them is, not wherever their own day says they should be.
     """
+    others = others or {}
     # Being held overrides every other reason to be anywhere.
     if agent.get("detained_until"):
         return "precinct" if city.usable("precinct") else _fallback(agent)
@@ -60,6 +64,11 @@ def target_location(agent, block, world):
     if f and f.get("day") == clock.day_of(world["beat"]) and block in ("morning", "afternoon"):
         if city.usable("church"):
             return "church"
+
+    # Chasing a debt outranks routine. You do not go to work; you go and find them.
+    chase = agent.get("chasing")
+    if chase and chase in others:
+        return _chase_target(agent, others[chase], world)
 
     loc = agent["routine"].get(block) or agent["home"]
     if not city.usable(loc):
@@ -72,6 +81,14 @@ def target_location(agent, block, world):
         if city.usable(agent.get("home")):
             return agent["home"]
     return loc
+
+
+def _chase_target(agent, other, world):
+    """Where somebody who owes you was last seen, or the places they cannot avoid forever."""
+    for lid in ((other or {}).get("at"), (other or {}).get("work"), (other or {}).get("home")):
+        if lid and city.usable(lid):
+            return lid
+    return _fallback(agent)
 
 
 def _fallback(agent):
@@ -162,26 +179,10 @@ def tick_heat(world):
             world["heat"][d] = clamp(v + 1)
 
 
-def tick_debts(world, agents, day):
-    """Overdue debts are the most reliable story engine in the table: they impose a
-    deadline, and a deadline forces somebody to choose badly."""
-    pressures = []
-    for d in world["debts"]:
-        if d["settled"]:
-            continue
-        if day >= d["due_day"]:
-            overdue = day - d["due_day"]
-            debtor, creditor = agents.get(d["from"]), agents.get(d["to"])
-            if not debtor or not creditor:
-                continue
-            apply_mood(debtor, {"stress": min(4 + overdue * 2, 18), "fear": min(2 + overdue * 2, 14)})
-            pressures.append({
-                "debt_id": d["id"], "from": debtor["name"], "to": creditor["name"],
-                "from_id": debtor["id"], "to_id": creditor["id"],
-                "kind": d["kind"], "amount": d["amount"], "days_overdue": overdue,
-                "note": d["note"],
-            })
-    return pressures
+# tick_debts used to live here. It only ever stressed the person who owed — the creditor
+# felt nothing, never went looking, and nothing could mark a debt settled, so every debt in
+# the live city sat over two hundred city-days overdue with no consequence. Replaced by
+# sim/drama.py, which makes the person who is owed angry and sends them to find you.
 
 
 def colocation(agents):
@@ -207,15 +208,20 @@ def run_beat(world, agents, quiet=False, cognition=None):
     law.ensure(world)
     alive = mortality.living(agents)
 
+    # Debt pressure is resolved BEFORE anybody moves, because it decides where some of them
+    # are going. A creditor who has run out of patience sets `chasing`, and routing sends
+    # them to wherever that person was last seen — which is the only way a confrontation
+    # ever physically happens.
+    pressures = drama.press_debts(world, alive, day)
+
     for a in alive.values():
-        move(a, target_location(a, block, world), block, world["weather"], rng)
+        move(a, target_location(a, block, world, alive), block, world["weather"], rng)
 
     groups = colocation(alive)
     for a in alive.values():
         tick_needs(a, block, alone=len(groups.get(a["at"], [])) <= 1)
 
     tick_heat(world)
-    pressures = tick_debts(world, agents, day)
 
     ev = None if quiet else events.roll_event(rng, agents, world["factions"])
     if ev:
@@ -254,6 +260,23 @@ def run_beat(world, agents, quiet=False, cognition=None):
     # is thinking this beat is reacting to the fire rather than finding out next beat.
     if not quiet:
         records += world_beat(world, agents, alive, beat, day)
+
+    # ── things people do to each other ───────────────────────────────────────
+    # Resolved before cognition so the beat that narrates is reacting to the confrontation
+    # rather than reporting it a beat late.
+    if not quiet:
+        try:
+            for r in drama.confrontations(world, alive, groups, beat, day):
+                records.append(r)
+                if r.get("fatal"):
+                    victim = alive.get(r["debtor"])
+                    if victim:
+                        records.append(mortality.kill(
+                            world, agents, victim, mortality.VIOLENT[1], beat, day))
+            records += drama.instigate(world, alive, groups, beat, day)
+            records += drama.maybe_new_debt(world, alive, beat, day)
+        except Exception as e:
+            print(f"[tick] drama failed on beat {beat} ({type(e).__name__}: {e})")
 
     if cognition and not quiet:
         # A malformed response must never take the city down with it. This exact path
@@ -483,6 +506,7 @@ def main(argv=None):
                           f"({type(e).__name__}: {e}) — no beliefs formed.")
 
                 mortality.decay_grief(agents)
+                drama.tick_feuds(world, agents, d)
 
                 # The block legislates only when something has actually built up. This is
                 # the one model call the civic layer makes, and it is capped and skippable.

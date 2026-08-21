@@ -89,7 +89,7 @@ def note_pressure(world, records):
             add += 3
         elif k == "structure" and r.get("event") == "destroyed":
             add += 2
-        elif k == "act" and r.get("action"):
+        elif k in ("act", "confrontation") and r.get("action"):
             # Only things nothing already covers push towards new law.
             if not match_laws(world, r["action"]):
                 if re.search(r"\b(steal|stole|threat|beat|burn|smash|rob|jump|cut|gun|knife)",
@@ -212,9 +212,15 @@ def detect(world, agents, records, beat, day):
     ensure(world)
     out = []
     for r in records:
-        if r.get("kind") != "act" or not r.get("action"):
+        # Confrontations and instigations carry an `action` too, and a creditor who put
+        # somebody against a wall is exactly the sort of thing the block passes laws about.
+        # Scanning only narrated `act` records meant the most chargeable events in the city
+        # were the ones enforcement never looked at.
+        if r.get("kind") not in ("act", "confrontation", "instigation"):
             continue
-        who = agents.get(r.get("who"))
+        if not r.get("action"):
+            continue
+        who = agents.get(r.get("who") or r.get("creditor"))
         if not who or not who.get("alive", True) or who.get("detained_until"):
             continue
         for law in match_laws(world, r["action"]):

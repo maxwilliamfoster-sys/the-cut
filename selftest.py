@@ -13,7 +13,7 @@ import sys
 from datetime import timedelta
 
 import re
-from sim import (city, clock, cognition, construction, events, law, llm,
+from sim import (city, clock, cognition, construction, drama, events, law, llm,
                  mortality, reflect, state, tick)
 
 FAILS = []
@@ -432,6 +432,92 @@ check("legislation is rationed like every other model call",
       and "can_afford" in inspect.getsource(law.propose_law))
 
 
+# ── the debt engine actually runs ────────────────────────────────────────────────
+# The README called debts "the most reliable story engine in the table". It was inert:
+# only the debtor was ever touched, the creditor felt nothing, nothing could mark a debt
+# settled, and every debt in the live city sat 220+ city-days overdue with no consequence.
+
+_w7 = copy.deepcopy(w)
+_a7 = copy.deepcopy(a)
+_w7["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w7["buildings"])
+mortality.ensure_fields(_a7)
+_day7 = clock.day_of(_w7["beat"])
+_w7["debts"] = [{"id": "dtest", "from": "malik", "to": "dez", "kind": "money",
+                 "amount": 500, "due_day": _day7 - 20, "note": "fronted", "settled": False}]
+_a7["dez"]["relationships"]["malik"] = {"affinity": 20, "opinion": "fine"}
+_before7 = _a7["dez"]["relationships"]["malik"]["affinity"]
+_pres7 = drama.press_debts(_w7, mortality.living(_a7), _day7)
+
+check("being owed and ignored makes the creditor angry, not sad",
+      _a7["dez"]["relationships"]["malik"]["affinity"] < _before7,
+      "the person owed money felt nothing at all — the original bug")
+check("a creditor out of patience goes looking for the debtor",
+      _a7["dez"].get("chasing") == "malik")
+check("routing sends them where the debtor actually is",
+      tick.target_location(_a7["dez"], "morning", _w7, mortality.living(_a7))
+      in (_a7["malik"].get("at"), _a7["malik"].get("work"), _a7["malik"].get("home")),
+      "chasing is set but routine still wins, so they never meet")
+check("the prompt is told the creditor has run out of patience",
+      any(p.get("chasing") for p in _pres7))
+
+# Put them in the same room and it has to resolve — one way or another.
+_a7["malik"]["at"] = _a7["dez"]["at"]
+_groups7 = tick.colocation(mortality.living(_a7))
+_conf = drama.confrontations(_w7, mortality.living(_a7), _groups7, _w7["beat"], _day7)
+check("creditor and debtor in the same room produces a confrontation", bool(_conf))
+check("a confrontation has an outcome, not just a mood change",
+      _conf and _conf[0]["outcome"] in ("settled", "promised", "refused", "violent"))
+check("a debt can actually be discharged",
+      "settled" in inspect.getsource(drama._resolve)
+      and 'd["settled"] = True' in inspect.getsource(drama._resolve),
+      "nothing in the codebase can mark a debt settled — this was literally true before")
+
+# And the ledger has to refill, or the engine runs once and the city is square forever.
+_w8 = copy.deepcopy(_w7)
+_a8 = copy.deepcopy(_a7)
+for _d in _w8["debts"]:
+    _d["settled"] = True
+_opened = []
+for _i in range(400):
+    _opened += drama.maybe_new_debt(_w8, mortality.living(_a8), _i * 4, _day7 + _i)
+check("new obligations keep forming so the city is never square forever",
+      bool(_opened), "every debt settles and no new one is ever created")
+
+# ── who starts things ────────────────────────────────────────────────────────────
+_vols = [x.get("volatility", 45) for x in _a7.values()]
+check("volatility is authored across the cast, not one flat number",
+      len(set(_vols)) >= 8 and max(_vols) >= 75 and min(_vols) <= 25,
+      f"spread {min(_vols)}..{max(_vols)} over {len(set(_vols))} distinct values")
+check("the block has several instigators, not one lunatic",
+      sum(1 for v in _vols if v >= 65) >= 5,
+      "inferring volatility from trait prose put everyone on 45 except Dez")
+check("it also has people who calm rooms down",
+      sum(1 for v in _vols if v <= 25) >= 3)
+check("the same person cannot start everything",
+      drama.INSTIGATE_COOLDOWN >= 2 and "last_instigated_day" in inspect.getsource(drama.instigate))
+check("volatile people are more likely to be narrated",
+      "volatility" in inspect.getsource(cognition.select),
+      "the troublemakers never get a turn, so the block reads as placid")
+
+# ── feuds ────────────────────────────────────────────────────────────────────────
+_w9 = copy.deepcopy(_w7)
+_a9 = copy.deepcopy(_a7)
+_a9["dez"]["relationships"]["malik"] = {"affinity": -80, "opinion": "done talking"}
+drama.open_feud(_w9, _a9["dez"], _a9["malik"], _day7, "refused me")
+check("a bad enough falling-out becomes a feud", bool(_w9.get("feuds")))
+_a9["dez"]["relationships"]["malik"]["affinity"] = 40
+for _f in _w9["feuds"]:
+    _f["heat"] = 0
+drama.tick_feuds(_w9, _a9, _day7 + 1)
+check("feuds end when nothing feeds them", not _w9["feuds"])
+
+# Enforcement has to look at the most chargeable thing in the city.
+check("a violent confrontation is something the law can see",
+      '"confrontation"' in inspect.getsource(law.detect),
+      "only narrated `act` records were scanned, so assaults were never chargeable")
+
+
 # ── the silent-death invariants ──────────────────────────────────────────────────
 # Groq retired both Llama models and the city ran on for 85 city-days: green runs, a
 # perfect clock, committed state, and 30 people frozen mid-stride. Every check below
@@ -493,6 +579,18 @@ check("a dry run cannot write a front page to disk",
       "dry_run" in inspect.getsource(reflect.gazette)
       and "dry_run=args.dry_run" in main_src,
       "--dry-run still writes state/gazette/day-NNN.md")
+
+# Running out of the day's tokens is the budget working. Before this, quota exhaustion
+# counted as "attempted and narrated nobody", so the run went red every single day the
+# moment the cap was hit — the canary crying wolf at exactly the wrong time.
+check("running out of quota is a skip, not an outage",
+      issubclass(llm.QuotaExhausted, Exception)
+      and "QuotaExhausted" in inspect.getsource(cognition.make_cognition)
+      and "skipped_budget" in inspect.getsource(cognition.make_cognition),
+      "hitting the daily cap would fail the run every day")
+check("once the cap is hit the city stops re-discovering it every beat",
+      "quota_exhausted_on" in inspect.getsource(cognition.make_cognition),
+      "every remaining beat burns three doomed requests finding out the same thing")
 
 check("the alarm is raised only after state is safely written",
       main_src.index("state.save_world") < main_src.index("::error::"),

@@ -33,11 +33,46 @@ FACTIONS = {
 }
 
 
+# ── who starts things ────────────────────────────────────────────────────────
+# Volatility is the one number that decides who escalates and who calms things down. It is
+# authored rather than inferred: a first attempt read it off the trait prose and put every
+# single person on 45 except Dez, so one man started twenty-five of twenty-five arguments
+# in a test run. Drama needs a spread — instigators AND people worth having in the room
+# because they refuse to take the bait.
+#
+#   80+  starts things for its own sake
+#   65+  will escalate rather than let it go   (drama.volatile())
+#   40s  can be pushed, does not push
+#   -30  actively de-escalates
+VOLATILITY = {
+    # the ones who light fires
+    "dot":     84,   # knows every tab in the bar, and who is behind on which
+    "malik":   82,   # nineteen, impulsive, with something to prove to Dez
+    "wes":     78,   # moves what comes in and talks about what he moves
+    "dez":     76,   # proud, and cannot be seen to let anything go
+    "cass":    74,   # buying the block for somebody nobody has met
+    "kohl":    72,   # a cop taking envelopes has to keep everyone unsteady
+    "rey":     70,   # chops cars, owes up, and is angry about both
+    "sticks":  68,   # sees everything from under the flyover and says it out loud
+    "hector":  66,   # signs for what arrives, and holds it over people
+    "booker":  65,   # knows everyone's price and reminds them
+
+    # pushed, but not pushers
+    "ruiz":    55, "chidi": 52, "junie": 48, "rosa": 48, "femi": 46, "marcus": 45,
+    "gus":     44, "okafor": 42, "nadia": 40, "amara": 38, "brennan": 34,
+
+    # the ones who cool a room down
+    "ivy":     30, "marisol": 28, "priya": 26, "adaeze": 25, "simone": 22,
+    "yusuf":   20, "tee":     18, "tiny":    14, "boateng": 10,
+}
+
+
 def _p(id, name, age, role, faction, home, work, traits, ambition, fear, voice, routine,
        principal=False):
     return {"id": id, "name": name, "age": age, "role": role, "faction": faction,
             "home": home, "work": work, "traits": traits, "ambition": ambition,
-            "fear": fear, "voice": voice, "routine": routine, "principal": principal}
+            "fear": fear, "voice": voice, "routine": routine, "principal": principal,
+            "volatility": VOLATILITY.get(id, 45)}
 
 
 ROSTER = [

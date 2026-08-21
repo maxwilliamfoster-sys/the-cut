@@ -65,8 +65,16 @@ There is no script and no story state machine. Narrative falls out of:
   resting level, all pushed around by what happens
 - **heat** — police attention per district, which rises with visible crime and takes about
   six city-days to bleed off. People in the wrong line of work avoid hot districts.
-- **debts** — an explicit ledger of who owes whom and by when. Deadlines force decisions,
-  and decisions are where drama comes from.
+- **debts** — an explicit ledger of who owes whom and by when, and the block's main engine.
+  When somebody is late, the person who is *owed* loses patience, gets angry rather than
+  sad, and goes looking for them; routing overrides their whole day to do it. When the two
+  end up in a room it resolves — paid, promised, refused, or it turns physical — and new
+  obligations keep forming so the city is never square for long.
+- **volatility** — an authored number per character for who starts things. The block has
+  about ten people who escalate rather than let something go, and a handful who calm a room
+  down, and the difference is what makes a scene rather than a conversation.
+- **feuds** — what is left after a confrontation goes badly. They persist, they pull two
+  people toward each other, and they fade only if nothing feeds them.
 - **the event table** — a weighted, seeded roll each beat. Reproducible, so an interesting
   week can be replayed and a bug can be caught.
 - **cognition** — one batched LLM call per beat decides what the selected cast do about the

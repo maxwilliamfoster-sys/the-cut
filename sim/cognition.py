@@ -52,6 +52,15 @@ RULES
   exists. Never invent a law that is not listed.
 - A building listed as a burnt shell is gone. Do not put anybody inside it doing business.
   People stand at it, pick through it, or avoid the sight of it.
+- MONEY OWED IS THE ENGINE OF THIS BLOCK. If somebody is marked IS OWED by a person
+  standing right there, they raise it. Not politely, not obliquely — they have been waiting
+  and asking. Somebody marked as OWING deflects, promises, gets angry, or pays. Do not let
+  two people who are mid-argument about a debt discuss the weather.
+- Somebody who "does not let things go, and starts them" is the reason scenes happen. Give
+  them the needling remark, the old grievance dragged up, the thing said in front of the
+  wrong person. Somebody who "calms rooms down" does the opposite and is worth the contrast.
+- A FEUD is not a mood, it is a history. Two people feuding cannot be in a room neutrally:
+  they either go at it, or the effort of not doing so is the scene.
 - Where two people are together, it is good for them to answer each other — one addresses
   the other, and the other replies to them in the same beat.
 - Vary the interior voice. Do not begin thoughts with "I have to" or "I need to" - most
@@ -106,6 +115,10 @@ def select(world, agents, groups, pressures, event, beat, limit=COGNITION_SLOTS)
     to, with a rotation term so nobody goes unheard for long.
     """
     overdue = {p["from_id"] for p in pressures if p.get("from_id")}
+    # The person who is OWED was never scored at all, which is part of why the debt ledger
+    # never produced a scene: the one character with a reason to act was rarely in the room.
+    chasing = {p["to_id"] for p in pressures if p.get("chasing")}
+    feuding = {f["a"] for f in world.get("feuds", [])} | {f["b"] for f in world.get("feuds", [])}
     touched = set((event or {}).get("targets") or [])
     spoken_to = {q["agent"] for q in (world.get("player_queue") or [])}
 
@@ -120,6 +133,13 @@ def select(world, agents, groups, pressures, event, beat, limit=COGNITION_SLOTS)
             s += 12                                  # the player spoke to them
         if aid in overdue:
             s += 5
+        if aid in chasing:
+            s += 8                                   # they have run out of patience
+        if aid in feuding:
+            s += 3
+        # Volatile people get a thumb on the scale: they are the ones who turn a room into
+        # a scene, and a block whose troublemakers are never narrated reads as placid.
+        s += max(0, a.get("volatility", 45) - 55) / 12.0
         here = len(groups.get(a["at"], []))
         s += min(here - 1, 3) * 2.0                  # people in a room together make scenes
         s += min(a["mood"]["stress"], 100) / 40.0
@@ -132,7 +152,7 @@ def select(world, agents, groups, pressures, event, beat, limit=COGNITION_SLOTS)
     return [aid for _, aid in scored[:limit]]
 
 
-def _people_block(agents, groups, beat, chosen):
+def _people_block(agents, groups, beat, chosen, world=None, pressures=()):
     lines = []
     for aid in chosen:
         a = agents[aid]
@@ -171,6 +191,36 @@ def _people_block(agents, groups, beat, chosen):
             flags.append(f'HELD AT THE 9TH over {a.get("charged_with", "a charge")}')
         if a.get("service_until"):
             flags.append("working off a sentence")
+        # What this person is owed, or owes, to somebody standing right here. This is the
+        # line that turns a ledger entry into a scene — without it the model was told a
+        # debt existed but never that the other party was within arm's reach.
+        for p in (pressures or []):
+            other = None
+            if p["to_id"] == aid and p["from_id"] in groups.get(a["at"], []):
+                other = agents.get(p["from_id"])
+                if other:
+                    asked = f', asked {p["asked"]}x already' if p.get("asked") else ""
+                    fed_up = (" — and has run out of patience"
+                              if p.get("chasing") else "")
+                    flags.append(
+                        f'IS OWED by {other["name"]}, WHO IS STANDING RIGHT HERE'
+                        f' ({p["days_overdue"]}d late{asked}){fed_up}')
+            elif p["from_id"] == aid and p["to_id"] in groups.get(a["at"], []):
+                other = agents.get(p["to_id"])
+                if other:
+                    flags.append(f'OWES {other["name"]}, who is standing right here')
+        if a.get("chasing") and a["chasing"] in agents:
+            flags.append(f'is out looking for {agents[a["chasing"]]["name"]}')
+        enemy = (world or {}).get("feuds") and next(
+            (f for f in world["feuds"] if aid in (f["a"], f["b"])), None)
+        if enemy:
+            other_id = enemy["b"] if enemy["a"] == aid else enemy["a"]
+            if other_id in agents:
+                flags.append(f'FEUDING with {agents[other_id]["name"]} ({enemy["cause"]})')
+        if a.get("volatility", 45) >= 75:
+            flags.append("does not let things go, and starts them")
+        elif a.get("volatility", 45) <= 25:
+            flags.append("calms rooms down rather than lighting them")
         flag_s = ("  " + "; ".join(flags) + "\n") if flags else ""
 
         # Only the stats that are actually notable — a mood sitting near its resting level
@@ -196,11 +246,15 @@ def _people_block(agents, groups, beat, chosen):
 
 def build_prompt(world, agents, groups, pressures, event, beat, day, block, chosen):
     heat = ", ".join(f'{city.DISTRICTS[d]["name"]} {v}' for d, v in world["heat"].items())
-    debts = "; ".join(
-        f'{p["from"]} owes {p["to"]} '
-        f'{"$" + format(p["amount"], ",") if p["kind"] == "money" else p["kind"]}'
-        f' ({p["days_overdue"]}d late)'
-        for p in pressures) or "nothing overdue"
+    # Spelled out rather than tabulated. "owes $9,000, 223d late, asked 3 times" tells the
+    # model what the scene is; a row in a ledger does not.
+    def _debt_line(p):
+        what = ("$" + format(p["amount"], ",")) if p["kind"] == "money" else p["kind"]
+        asked = f', asked {p["asked"]}x' if p.get("asked") else ""
+        chase = " — AND IS OUT LOOKING FOR THEM" if p.get("chasing") else ""
+        return (f'{p["from"]} owes {p["to"]} {what} ({p["days_overdue"]}d late'
+                f'{asked}){chase}')
+    debts = "; ".join(_debt_line(p) for p in pressures) or "nothing overdue"
 
     # A stranger walking up and talking to you is one of the more notable things that can
     # happen on a quiet block, so it goes near the top rather than buried in a memory line.
@@ -242,7 +296,7 @@ def build_prompt(world, agents, groups, pressures, event, beat, day, block, chos
         f"{law_line}{dead_line}{ruin_line}{fun_line}"
         f"Just happened - {event['text'] if event else 'nothing anybody would write down'}"
         f"{stranger}\n\n"
-        f"PEOPLE\n{_people_block(agents, groups, beat, chosen)}\n\n"
+        f"PEOPLE\n{_people_block(agents, groups, beat, chosen, world, pressures)}\n\n"
         f"Return JSON for all {len(chosen)} people."
     )
 
@@ -360,6 +414,13 @@ def make_cognition(budget, verbose=True):
         # They are separate allowances though, so when the workhorse is spent the beat
         # moves to the other model rather than the city going quiet for the rest of the
         # day. Only when BOTH are gone is a quiet beat the honest answer.
+        # Already found out the hard way earlier today.
+        if world.get("quota_exhausted_on") == llm.quota_day():
+            if verbose:
+                print("[cognition] the day's token allowance is gone — quiet beat.")
+            stats["skipped_budget"] += 1
+            return records
+
         model = llm.FAST
         if not budget.can_afford(model, estimate):
             if budget.can_afford(llm.DEEP, estimate):
@@ -390,6 +451,16 @@ def make_cognition(budget, verbose=True):
             try:
                 text, used = llm.chat(messages, model=model,
                                       max_tokens=reply_room, temperature=0.9)
+            except llm.QuotaExhausted as e:
+                # The day's allowance is gone. That is the budget doing its job, not an
+                # outage — record it as a skip so the canary stays quiet, and remember it
+                # on the world so the rest of today's beats do not each burn three
+                # doomed requests discovering the same thing.
+                world["quota_exhausted_on"] = llm.quota_day()
+                stats["attempted"] -= 1
+                stats["skipped_budget"] += 1
+                print(f"[cognition] beat {beat}: {e}")
+                return records
             except Exception as e:
                 print(f"[cognition] beat {beat} call failed: {e}")
                 return records
