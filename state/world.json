@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1048,
-  "last_beat_at": "2026-08-22T07:42:12Z",
+  "beat": 1051,
+  "last_beat_at": "2026-08-22T08:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 9,
-    "terraces": 8,
+    "delmar": 6,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -219,6 +219,18 @@
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
+    },
     {
       "id": "inspection",
       "heat": {
@@ -441,18 +453,6 @@
       },
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
     }
   ],
   "player_queue": [
@@ -479,7 +479,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 49243,
+      "fast": 52934,
       "deep": 805
     }
   },
@@ -1075,19 +1075,19 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 9
+      "heat": 7
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 35
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1048,
+    "beat": 1051,
     "providers": []
   },
   "dead": [
