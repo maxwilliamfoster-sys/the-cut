@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1109,
-  "last_beat_at": "2026-08-22T22:57:12Z",
+  "beat": 1111,
+  "last_beat_at": "2026-08-22T23:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 83,
-    "delmar": 52,
+    "riverside": 81,
+    "delmar": 62,
     "terraces": 5,
-    "civic": 6
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -272,6 +272,31 @@
   ],
   "events": [
     {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1111
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "simone"
+      ],
+      "text": "Simone Adeyemi gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1110
+    },
+    {
       "id": "money_found",
       "heat": {},
       "mood": {
@@ -505,30 +530,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1080
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1079
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1078
     }
   ],
   "player_queue": [
@@ -556,7 +557,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 68111
+      "deep": 71440
     }
   },
   "silent_runs": 0,
@@ -1200,7 +1201,7 @@
     }
   ],
   "charges": [],
-  "law_pressure": 0,
+  "law_pressure": 1,
   "last_law_day": 269,
   "last_expansion_day": 270,
   "feuds": [
@@ -1209,40 +1210,40 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 7
+      "heat": 5
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 25
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 43
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 87
+      "heat": 85
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1106,
+    "beat": 1111,
     "providers": [
       "gemini"
     ]
