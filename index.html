@@ -370,6 +370,9 @@ ctx.imageSmoothingEnabled = false;
 
 const BEAT_MS = 15*60*1000;
 const WALK_TPS = 3.5;            // tiles per second while walking a path
+// Driving is the point of driving. Fast enough that a cross-town trip is over in seconds
+// and you can watch the car take the corners, rather than a sprite gliding for a minute.
+const DRIVE_TPS = 15;
 
 const $ = id => document.getElementById(id);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -659,7 +662,8 @@ function agentRenderPos(id, nowMs){
   const st = anim[id];
   if(!st) return {x:AGENTS[id].pos[0], y:AGENTS[id].pos[1], moving:false, facing:'S'};
 
-  const dur = (st.path.length-1) / WALK_TPS;
+  const tps = (AGENTS[id] && AGENTS[id].driving) ? DRIVE_TPS : WALK_TPS;
+  const dur = (st.path.length-1) / tps;
   const t = (nowMs - beatStartMs)/1000 + st.t;
 
   if(t < dur && st.path.length > 1){
@@ -849,7 +853,11 @@ function draw(){
       ctx.strokeStyle='#e0b44a'; ctx.lineWidth=1;
       ctx.strokeRect(px-2.5, py-2.5, 15, 19);
     }
-    drawPerson(ctx, px, py, id, frameN, r.facing, 1);
+    // In a vehicle and still moving: draw the vehicle. They get out at the far end, which
+    // is the moment the path finishes and this falls back to the person.
+    const veh = AGENTS[id].driving;
+    if(veh && r.moving) drawVehicle(ctx, px, py, veh, r.facing, id);
+    else drawPerson(ctx, px, py, id, frameN, r.facing, 1);
 
     if(view.s >= 1.1 || selected===id){
       tags.push({wx: r.x + 0.5, wy: r.y - 0.25,
@@ -898,6 +906,46 @@ function draw(){
 // TRAFFIC is pure decoration and costs the simulation nothing. The city has had four-lane
 // roads with painted centre lines since the beginning and absolutely nothing on them, which
 // is most of why it read as a diagram rather than a place.
+
+// A driven vehicle, oriented to travel. Same fillRect vocabulary as the people — no assets,
+// nothing to download — and deliberately small: a car should read as a car at a glance and
+// never compete with the person who gets out of it.
+const VEHICLE_LOOK = {
+  car:     {body:'#5a6472', trim:'#7b8798', w:11, h:7},
+  van:     {body:'#6b6250', trim:'#8a8068', w:13, h:8},
+  cruiser: {body:'#dfe4ea', trim:'#2c3440', w:12, h:7},
+};
+
+function drawVehicle(g, px, py, kind, facing, id){
+  const V = VEHICLE_LOOK[kind] || VEHICLE_LOOK.car;
+  const across = (facing === 'E' || facing === 'W');
+  const w = across ? V.w : V.h, h = across ? V.h : V.w;
+  const x = px + 5 - w/2, y = py + 8 - h/2;
+
+  g.fillStyle = 'rgba(0,0,0,.30)';  g.fillRect(x+1, y+2, w, h);
+  g.fillStyle = V.body;             g.fillRect(x, y, w, h);
+  g.fillStyle = V.trim;             // roof band
+  if(across) g.fillRect(x+2, y+1, w-4, h-2);
+  else       g.fillRect(x+1, y+2, w-2, h-4);
+
+  // Windscreen at the leading end, so you can tell which way it is going.
+  g.fillStyle = 'rgba(180,210,235,.55)';
+  if(facing === 'E')      g.fillRect(x+w-3, y+1, 2, h-2);
+  else if(facing === 'W') g.fillRect(x+1,   y+1, 2, h-2);
+  else if(facing === 'S') g.fillRect(x+1,   y+h-3, w-2, 2);
+  else                    g.fillRect(x+1,   y+1, w-2, 2);
+
+  if(kind === 'cruiser'){
+    const on = Math.floor(Date.now()/200) % 2;
+    g.fillStyle = on ? '#5b9bd5' : '#d9534f';
+    if(across) g.fillRect(x+w/2-2, y-1, 4, 2);
+    else       g.fillRect(x-1, y+h/2-2, 2, 4);
+  }
+  if(selected === id){
+    g.strokeStyle = '#e0b44a'; g.lineWidth = 1;
+    g.strokeRect(x-1.5, y-1.5, w+3, h+3);
+  }
+}
 
 function liveIncidents(){
   if(!WORLD) return [];
@@ -1070,7 +1118,9 @@ function buildRoads(){
       lanes.push({axis:'v', at:(b.start + b.end)/2 + (dir>0 ? 0.6 : -1.4),
                   from:b.from, to:b.to, dir});
   lanes.forEach((ln, i)=>{
-    const n = 2 + (i%2);                                  // two or three cars per lane
+    // Thin. Ambient traffic is texture so the streets are not dead between journeys — the
+    // cars worth looking at are the ones with somebody from the cast at the wheel.
+    const n = (i % 3 === 0) ? 1 : (i % 3 === 1 ? 1 : 0);
     for(let k=0;k<n;k++){
       CARS.push({
         lane: ln, dir: ln.dir,

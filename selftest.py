@@ -14,7 +14,7 @@ from datetime import timedelta
 
 import re
 from sim import (city, clock, cognition, construction, drama, events, incidents,
-                 law, llm, mortality, player, reflect, state, tick)
+                 law, llm, mortality, player, reflect, roster, state, tick)
 
 FAILS = []
 
@@ -341,6 +341,47 @@ _m = re.search(r"const WALKABLE_TILES = '([^']*)'", _html)
 check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
+
+# ── people who drive ─────────────────────────────────────────────────────────────
+# Ambient traffic was decoration. These are journeys somebody in the cast is actually making.
+_w13 = copy.deepcopy(w)
+_w13["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w13["buildings"])
+_a13 = copy.deepcopy(a)
+for _x in _a13.values():
+    _x["vehicle"] = roster.VEHICLES.get(_x["id"])
+
+check("some people drive and most people do not",
+      0 < len(roster.VEHICLES) < len(_a13) / 2,
+      "a block where everybody owns a car is a suburb")
+check("the renderer can draw every vehicle the roster hands out",
+      all(f"{v}:" in _html.split("VEHICLE_LOOK")[1][:400] for v in set(roster.VEHICLES.values())),
+      "an unknown vehicle silently falls back to a car")
+
+# A car should go round by the street, not diagonally across the park.
+_from = tuple(city.LOCATIONS["warehouse"]["anchor"])
+_to = tuple(city.LOCATIONS["depot"]["anchor"])
+_walk, _drive = city.path(_from, _to), city.road_path(_from, _to)
+_on_road = lambda pth: sum(1 for x, y in pth if city.GRID[y][x] in ",:=") / max(1, len(pth))
+check("driving follows the roads more closely than walking does",
+      _on_road(_drive) > _on_road(_walk) + 0.1,
+      f"walk {_on_road(_walk):.0%} vs drive {_on_road(_drive):.0%} on tarmac")
+check("an unreachable destination falls back to walking rather than failing",
+      city.road_path((1, 1), (1, 1)) == [(1, 1)])
+
+# Distance decides it, not mood: nobody drives to the end of their own street.
+_driver = _a13["ruiz"]
+_driver["pos"] = list(city.LOCATIONS["warehouse"]["anchor"])
+tick.move(_driver, "depot", "morning", "clear", __import__("random").Random(3))
+check("a long journey is driven by somebody with a vehicle", bool(_driver.get("driving")))
+_driver["pos"] = list(city.LOCATIONS["precinct"]["anchor"])
+tick.move(_driver, "precinct", "morning", "clear", __import__("random").Random(3))
+check("a short journey is walked even by a driver", not _driver.get("driving"))
+_walker = _a13["tiny"]
+_walker["pos"] = list(city.LOCATIONS["warehouse"]["anchor"])
+tick.move(_walker, "depot", "morning", "clear", __import__("random").Random(3))
+check("somebody with no vehicle walks it however far it is",
+      not _walker.get("driving"))
 
 # ── things you can stand and watch ───────────────────────────────────────────────
 # Every dramatic event used to resolve inside one beat and leave only text, so on the map a

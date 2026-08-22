@@ -42,6 +42,7 @@ Tile legend (also consumed by the front-end renderer):
 """
 
 import hashlib
+import heapq
 import random
 from collections import deque
 
@@ -496,6 +497,54 @@ def map_version():
     # Not hash(): Python salts it per process, so the version would change on every run and
     # the browser would rebuild its background canvas forever.
     return hashlib.md5("|".join(sorted(parts)).encode()).hexdigest()[:12]
+
+
+# What a tile costs to drive over. Roads are free; everything else is something you would
+# only cross to get to or from one, which is what keeps cars on the streets instead of
+# cutting diagonally across Marrow Green.
+DRIVE_COST = {ROAD: 1, LINE: 1, CROSS: 1, PAVEMENT: 4, GRASS: 9,
+              FLOOR: 14, DOOR: 14, RUBBLE: 12}
+
+
+def road_path(start, goal):
+    """The way you would actually drive it: down the street, not through the park.
+
+    Dijkstra rather than the BFS used for walking, because the point is not the fewest tiles
+    but the cheapest ones — a route two tiles longer that stays on tarmac is the right answer
+    and a breadth-first search cannot express that.
+    """
+    if start == goal:
+        return [start]
+    if not walkable(*goal):
+        return [start]
+
+    dist = {start: 0}
+    prev = {start: None}
+    q = [(0, start)]
+    while q:
+        d, cur = heapq.heappop(q)
+        if cur == goal:
+            break
+        if d > dist.get(cur, 1 << 30):
+            continue
+        cx, cy = cur
+        for nxt in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+            if not walkable(*nxt):
+                continue
+            step = DRIVE_COST.get(GRID[nxt[1]][nxt[0]], 8)
+            nd = d + step
+            if nd < dist.get(nxt, 1 << 30):
+                dist[nxt] = nd
+                prev[nxt] = cur
+                heapq.heappush(q, (nd, nxt))
+
+    if goal not in prev:
+        return path(start, goal)          # unreachable by road; walk it
+    out, node = [], goal
+    while node is not None:
+        out.append(node)
+        node = prev[node]
+    return list(reversed(out))
 
 
 def export_map():

@@ -149,13 +149,27 @@ how long it has left. Clicking takes you there to watch before it stops.
 
 Costs nothing: the simulation only records where the beat's events happened.
 
-## Traffic
+## Driving
 
-The city has had four-lane roads with painted centre lines since the first commit and
-absolutely nothing on them, which is most of why it read as a diagram. Cars are pure
-decoration and cost the simulation nothing — the browser reads the road corridors off the
-map itself, so adding a street in `sim/city.py` puts traffic on it with no other change.
-Headlights at night, and marked cars on any district under heavy police attention.
+Twelve people have something to drive, chosen by what they actually do: three police
+cruisers, vans for the auto shop and the cannery foreman and whoever is moving Booker's
+stock, cars for the doctor, the outside money, and the man who runs the corner. Not
+everybody — a block where all thirty own a car is a suburb, and the people who walk are half
+the reason the streets have anybody on them.
+
+Anything more than about twenty tiles gets driven, so crossing districts is a journey and
+nobody drives to the shop at the end of their own street. A driven trip is routed by
+`city.road_path` — Dijkstra weighted so tarmac is cheap and everything else is only worth
+crossing to reach it — which keeps cars on the streets instead of cutting across Marrow
+Green. The same trip: 75% on road walking, 96% driving.
+
+They travel at 15 tiles a second against a walking 3.5, so a cross-town run takes about
+three seconds and you can watch it take the corners. The sprite is the vehicle while they
+are in it and the person again when they get out.
+
+There is also thin ambient traffic so the streets are not dead between journeys — but the
+cars worth watching are the ones with somebody from the cast at the wheel. Corridors are
+read off the map itself, so a street the city builds gets traffic with no other change.
 
 ## Room to grow
 

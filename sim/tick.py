@@ -29,6 +29,11 @@ BEAT_PACING_SECONDS = 62
 # Consecutive thinking runs producing zero actions before the run is failed on purpose.
 SILENT_RUNS_ALARM = 2
 
+# How far a journey has to be before somebody with a vehicle bothers using it, in tiles of
+# walking path. Short enough that crossing districts is a drive, long enough that nobody
+# drives to the shop at the end of their own street.
+DRIVE_IF_FARTHER = 22
+
 MOOD_MIN, MOOD_MAX = 0, 100
 
 
@@ -119,8 +124,20 @@ def move(agent, dest_id, block, weather, rng):
     agent["spot"] = spot
 
     target = tuple(spot) if spot and city.walkable(*spot) else tuple(loc["anchor"])
-    p = city.path(tuple(agent["pos"]), target)
-    agent["path"] = [list(t) for t in p[:600]]
+    start = tuple(agent["pos"])
+    p = city.path(start, target)
+
+    # Anything across town gets driven by whoever has something to drive. The map is 128
+    # tiles wide now, so the far corners are a genuinely long way on foot — and a doctor
+    # crossing four districts to the clinic should not be strolling it.
+    agent["driving"] = None
+    if agent.get("vehicle") and len(p) > DRIVE_IF_FARTHER:
+        drive = city.road_path(start, target)
+        if len(drive) > 1:
+            p = drive
+            agent["driving"] = agent["vehicle"]
+
+    agent["path"] = [list(t) for t in p[:900]]
     agent["pos"] = list(target)
 
 

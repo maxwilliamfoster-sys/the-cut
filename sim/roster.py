@@ -67,12 +67,32 @@ VOLATILITY = {
 }
 
 
+# ── who has something to drive ───────────────────────────────────────────────
+# Not everybody. A block where all thirty people own a car is a suburb, and the ones who
+# walk everywhere are half the reason the streets have anybody on them. These are the people
+# whose job or trade actually comes with a vehicle.
+VEHICLES = {
+    "ruiz":    "cruiser",   # narcotics detective
+    "kohl":    "cruiser",   # patrol
+    "brennan": "cruiser",   # sergeant
+    "rey":     "van",       # runs the auto body shop
+    "wes":     "van",       # moves what comes in for Booker
+    "hector":  "van",       # foreman; signs for what arrives at the cannery
+    "okafor":  "van",       # bodega deliveries
+    "femi":    "car",       # drives for the transit depot
+    "cass":    "car",       # outside money, and it shows
+    "booker":  "car",       # pawn shop owner
+    "dez":     "car",       # runs the corner crew
+    "yusuf":   "car",       # the clinic's only doctor
+}
+
+
 def _p(id, name, age, role, faction, home, work, traits, ambition, fear, voice, routine,
        principal=False):
     return {"id": id, "name": name, "age": age, "role": role, "faction": faction,
             "home": home, "work": work, "traits": traits, "ambition": ambition,
             "fear": fear, "voice": voice, "routine": routine, "principal": principal,
-            "volatility": VOLATILITY.get(id, 45)}
+            "volatility": VOLATILITY.get(id, 45), "vehicle": VEHICLES.get(id)}
 
 
 ROSTER = [
