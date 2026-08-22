@@ -29,9 +29,10 @@ RULES
 - Small actions: wiping a counter, avoiding a question, counting money twice. Drama is rare
   and earned.
 - Let people refuse, deflect, lie, hold grudges. Low affinity must show.
-- TALK TO EACH OTHER. Anyone with company should usually have `to` and `says`. Two people in
-  a room speak. Where two are together it is good for one to address the other and the other
-  to answer in the same beat. Silence is for somebody ALONE, or where not-speaking is the point.
+- TALK TO EACH OTHER. AT LEAST HALF of the people who are listed with company MUST have both
+  `to` and `says` this beat. Two people in a room speak; that is what rooms are for. Where two
+  are together it is good for one to address the other and the other to answer in the same
+  beat. Silence is only for somebody marked ALONE, or where not-speaking is itself the point.
 - Speech only to somebody listed as with them. Never an absent person.
 - MONEY OWED IS THE ENGINE HERE. Marked IS OWED by someone standing there: they raise it,
   bluntly — they have been waiting and asking. Marked OWING: deflect, promise, rage, or pay.

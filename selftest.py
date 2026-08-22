@@ -220,7 +220,14 @@ else:
     check("companions are named in the prompt with their ids",
           len(crowd) < 2 or all(f"[{o}]" in p7 for o in companions),
           f"missing ids for {[o for o in companions if f'[{o}]' not in p7]}")
-    check("the prompt tells them to talk to each other",
+    # Compressing the prompt to save tokens quietly dropped the explicit quantifier from this
+# rule, and the share of narrated people who actually spoke fell from ~45% to ~18% — which
+# is visible to anybody looking at the map as an absence of speech bubbles. A soft "should
+# usually" is not an instruction; a countable one is.
+check("the prompt puts a countable floor on how many people speak",
+      "AT LEAST HALF" in cognition.SYSTEM and "`to` and `says`" in cognition.SYSTEM,
+      "without a number the model drifts to near-silence and the bubbles disappear")
+check("the prompt tells them to talk to each other",
           "TALK TO EACH OTHER" in cognition.SYSTEM)
 
     check("cognition request fits Groq's per-minute reservation",
