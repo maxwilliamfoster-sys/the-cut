@@ -18,7 +18,7 @@ import sys
 import time
 
 from . import (activities, city, clock, cognition, construction, drama, events,
-               incidents, law, llm, mortality, player, reflect, state)
+               incidents, law, llm, mortality, player, reflect, roster, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -223,6 +223,7 @@ def run_beat(world, agents, quiet=False, cognition=None):
     # This world's city, not whatever city another simulation in this process last built.
     state.point_city(world)
     mortality.ensure_fields(agents)
+    roster.equip(agents)
     law.ensure(world)
     alive = mortality.living(agents)
 

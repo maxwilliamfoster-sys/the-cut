@@ -87,6 +87,22 @@ VEHICLES = {
 }
 
 
+def equip(agents):
+    """Give a running city the fields the roster authors.
+
+    A field added to `_p()` only reaches people built at bootstrap. The live city's agents
+    were created months ago, so a new authored field — `volatility` once, `vehicle` here —
+    is simply absent and everything that reads it silently does nothing. Twelve drivers were
+    assigned and none of them drove, because not one of them had the key.
+    """
+    for a in agents.values():
+        if "vehicle" not in a:
+            a["vehicle"] = VEHICLES.get(a["id"])
+        if "volatility" not in a:
+            a["volatility"] = VOLATILITY.get(a["id"], 45)
+    return agents
+
+
 def _p(id, name, age, role, faction, home, work, traits, ambition, fear, voice, routine,
        principal=False):
     return {"id": id, "name": name, "age": age, "role": role, "faction": faction,

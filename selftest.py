@@ -351,6 +351,21 @@ _a13 = copy.deepcopy(a)
 for _x in _a13.values():
     _x["vehicle"] = roster.VEHICLES.get(_x["id"])
 
+# A field added to roster._p() only reaches people created at bootstrap. The live city's
+# cast is months old, so an authored field is simply absent and everything reading it does
+# nothing at all — twelve drivers were assigned and none of them drove, because not one of
+# them had the key. Volatility hit this first; vehicles hit it again.
+_stale = {k: {kk: vv for kk, vv in v.items() if kk not in ("vehicle", "volatility")}
+          for k, v in copy.deepcopy(a).items()}
+roster.equip(_stale)
+check("authored roster fields reach a city that is already running",
+      all(x.get("volatility") for x in _stale.values())
+      and sum(1 for x in _stale.values() if x.get("vehicle")) == len(roster.VEHICLES),
+      "a new roster field is invisible to everyone who already exists")
+check("the beat equips the cast, not just the bootstrap",
+      "roster.equip" in inspect.getsource(tick.run_beat),
+      "the field only lands on a city built from scratch")
+
 check("some people drive and most people do not",
       0 < len(roster.VEHICLES) < len(_a13) / 2,
       "a block where everybody owns a car is a suburb")
