@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1063,
-  "last_beat_at": "2026-08-22T11:27:12Z",
+  "beat": 1065,
+  "last_beat_at": "2026-08-22T11:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "fog off the water",
   "heat": {
     "riverside": 5,
-    "delmar": 10,
+    "delmar": 8,
     "terraces": 5,
     "civic": 5
   },
@@ -199,10 +199,10 @@
       "amount": 1,
       "due_day": 262,
       "note": "owes a favour that was not small",
-      "settled": false,
+      "settled": true,
       "patience": 3,
       "asked": 0,
-      "last_confront_day": -99
+      "last_confront_day": 266
     },
     {
       "id": "debt10",
@@ -232,6 +232,16 @@
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 1065
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -456,18 +466,6 @@
         "dot"
       ],
       "text": "Somebody tells Dr. Yusuf Amin that Dot Feeney has been seen talking to police."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
     }
   ],
   "player_queue": [
@@ -494,7 +492,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 83074,
+      "fast": 91276,
       "deep": 3727
     }
   },
