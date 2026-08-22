@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1015,
-  "last_beat_at": "2026-08-21T23:27:12Z",
+  "beat": 1017,
+  "last_beat_at": "2026-08-21T23:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 15,
-    "delmar": 4,
-    "terraces": 9,
+    "riverside": 13,
+    "delmar": 16,
+    "terraces": 7,
     "civic": 5
   },
   "turf": {
@@ -193,6 +193,30 @@
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "amara",
+        "june"
+      ],
+      "text": "June Kowal does Amara Bello a favour that costs them something real."
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "power_cut",
       "heat": {
@@ -406,30 +430,6 @@
       },
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "hector",
-        "brennan"
-      ],
-      "text": "Somebody tells Hector Delgado that Sgt. Hal Brennan has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -454,13 +454,8 @@
   ],
   "last_gazette_day": 253,
   "llm_budget": {
-    "day": "2026-08-21",
-    "spent": {
-      "openai/gpt-oss-20b": 73297,
-      "openai/gpt-oss-120b": 3114,
-      "fast": 58625,
-      "deep": 4350
-    }
+    "day": "2026-08-22",
+    "spent": {}
   },
   "silent_runs": 0,
   "buildings": [
@@ -1065,8 +1060,8 @@
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-08-21",
-    "beat": 1013,
+    "day": "2026-08-22",
+    "beat": 1017,
     "providers": []
   }
 }
