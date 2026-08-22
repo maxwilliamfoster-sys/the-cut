@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1079,
-  "last_beat_at": "2026-08-22T15:27:12Z",
+  "beat": 1081,
+  "last_beat_at": "2026-08-22T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "first snow",
   "heat": {
     "riverside": 5,
-    "delmar": 48,
+    "delmar": 58,
     "terraces": 5,
     "civic": 5
   },
@@ -246,6 +246,30 @@
   ],
   "events": [
     {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1081
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1080
+    },
+    {
       "id": "inspection",
       "heat": {
         "delmar": 6
@@ -463,30 +487,6 @@
       },
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "hector",
-        "nadia"
-      ],
-      "text": "Somebody tells Hector Delgado that Nadia Vasquez has been seen talking to police."
     }
   ],
   "player_queue": [
@@ -513,7 +513,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 149332,
+      "fast": 157451,
       "deep": 7759
     }
   },
@@ -1096,6 +1096,23 @@
       "floors": 1,
       "condition": "standing",
       "since_day": 236
+    },
+    {
+      "id": "new_home_270",
+      "name": "Okonkwo Tenement",
+      "district": "flats",
+      "x": 85,
+      "y": 80,
+      "w": 8,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "brownstone",
+      "open": false,
+      "wings": [],
+      "floors": 3,
+      "condition": "standing",
+      "since_day": 270
     }
   ],
   "laws": [
@@ -1143,7 +1160,7 @@
   "charges": [],
   "law_pressure": 0,
   "last_law_day": 269,
-  "last_expansion_day": 236,
+  "last_expansion_day": 270,
   "feuds": [
     {
       "a": "dez",
@@ -1194,5 +1211,18 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1080-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "new_home_270",
+      "x": 88,
+      "y": 84,
+      "who": [],
+      "text": "Okonkwo Tenement opens on what was empty ground in The Flats.",
+      "started": 1080,
+      "until": 1082
+    }
+  ]
 }
