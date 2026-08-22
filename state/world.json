@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1092,
-  "last_beat_at": "2026-08-22T18:42:12Z",
+  "beat": 1093,
+  "last_beat_at": "2026-08-22T18:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "first snow",
   "heat": {
-    "riverside": 43,
-    "delmar": 55,
-    "terraces": 13,
+    "riverside": 42,
+    "delmar": 54,
+    "terraces": 12,
     "civic": 5
   },
   "turf": {
@@ -272,6 +272,19 @@
   ],
   "events": [
     {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "nadia"
+      ],
+      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1093
+    },
+    {
       "id": "overdose",
       "heat": {
         "terraces": 8
@@ -508,16 +521,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1066
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1065
     }
   ],
   "player_queue": [
@@ -1231,10 +1234,8 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1091,
-    "providers": [
-      "gemini"
-    ]
+    "beat": 1093,
+    "providers": []
   },
   "dead": [
     {
@@ -1273,18 +1274,6 @@
       "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
       "started": 1092,
       "until": 1094
-    },
-    {
-      "id": "inc1092-works-0",
-      "kind": "works",
-      "effect": "works",
-      "at": "diner",
-      "x": 28,
-      "y": 34,
-      "who": [],
-      "text": "Hoarding goes up around the shell of The Blue Spoon.",
-      "started": 1092,
-      "until": 1093
     }
   ]
 }
