@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1045,
-  "last_beat_at": "2026-08-22T06:57:12Z",
+  "beat": 1048,
+  "last_beat_at": "2026-08-22T07:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 10,
-    "terraces": 11,
+    "delmar": 9,
+    "terraces": 8,
     "civic": 5
   },
   "turf": {
@@ -220,6 +220,41 @@
   ],
   "events": [
     {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards."
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark."
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "june",
+        "gus"
+      ],
+      "text": "Gus Petrakis does June Kowal a favour that costs them something real."
+    },
+    {
       "id": "overdose",
       "heat": {
         "terraces": 8
@@ -418,40 +453,6 @@
       },
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "malik",
-        "kohl"
-      ],
-      "text": "Malik Reyes and Ofc. Brady Kohl are seen arguing in the street loud enough that people stop."
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days."
     }
   ],
   "player_queue": [
@@ -478,7 +479,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 45459,
+      "fast": 49243,
       "deep": 805
     }
   },
@@ -1074,19 +1075,19 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 11
+      "heat": 9
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 37
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1045,
+    "beat": 1048,
     "providers": []
   },
   "dead": [
