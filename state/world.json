@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1058,
-  "last_beat_at": "2026-08-22T10:12:12Z",
+  "beat": 1059,
+  "last_beat_at": "2026-08-22T10:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 15,
-    "terraces": 6,
+    "delmar": 14,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -474,12 +474,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 254,
+  "last_gazette_day": 264,
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 60558,
-      "deep": 805
+      "fast": 66653,
+      "deep": 2293
     }
   },
   "silent_runs": 0,
@@ -1063,10 +1063,31 @@
       "since_day": 236
     }
   ],
-  "laws": [],
+  "laws": [
+    {
+      "id": "law01",
+      "title": "Quiet Hours in the Empty Lot",
+      "text": "No person may sit alone on the bench in the empty lot after midnight.",
+      "keywords": [
+        "empty lot",
+        "cold bench",
+        "sitting alone",
+        "late night"
+      ],
+      "penalty": {
+        "type": "service",
+        "amount": 10
+      },
+      "proposed_by": "junie",
+      "because": "Too many residents sitting alone on the cold bench all night.",
+      "day_enacted": 264,
+      "status": "enacted",
+      "convictions": 0
+    }
+  ],
   "charges": [],
-  "law_pressure": 3,
-  "last_law_day": -99,
+  "law_pressure": 0,
+  "last_law_day": 264,
   "last_expansion_day": 236,
   "feuds": [
     {
@@ -1074,21 +1095,21 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 25
+      "heat": 23
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 31
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
