@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1061,
-  "last_beat_at": "2026-08-22T10:57:12Z",
+  "beat": 1062,
+  "last_beat_at": "2026-08-22T11:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
-    "delmar": 12,
+    "delmar": 11,
     "terraces": 5,
     "civic": 5
   },
@@ -233,6 +233,19 @@
   ],
   "events": [
     {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 1062
+    },
+    {
       "id": "debt_called",
       "heat": {},
       "mood": {
@@ -455,18 +468,6 @@
         "dez"
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough."
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "boateng"
-      ],
-      "text": "Something pays out for Fr. Emmanuel Boateng. More than expected, which is its own problem."
     }
   ],
   "player_queue": [
@@ -493,7 +494,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 74440,
+      "fast": 78479,
       "deep": 2293
     }
   },
@@ -1145,5 +1146,6 @@
     "day": 257,
     "for": "Marcus Calloway",
     "id": "marcus"
-  }
+  },
+  "incidents": []
 }
