@@ -1,10 +1,10 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1032,
-  "last_beat_at": "2026-08-22T03:42:12Z",
+  "beat": 1035,
+  "last_beat_at": "2026-08-22T04:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
     "delmar": 5,
@@ -206,6 +206,19 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "brennan",
+        "nadia"
+      ],
+      "text": "Somebody tells Sgt. Hal Brennan that Nadia Vasquez has been seen talking to police."
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -428,19 +441,6 @@
         "booker"
       ],
       "text": "Booker Lyle ends up at the clinic. The paperwork says one thing; the injury says another."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "femi",
-        "adaeze"
-      ],
-      "text": "Adaeze Okonkwo does Femi Adeyemi a favour that costs them something real."
     }
   ],
   "player_queue": [
@@ -467,7 +467,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 27837,
+      "fast": 31427,
       "deep": 805
     }
   },
@@ -1063,19 +1063,19 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 43
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1032,
+    "beat": 1035,
     "providers": []
   },
   "dead": [
