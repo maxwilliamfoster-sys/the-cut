@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1037,
-  "last_beat_at": "2026-08-22T04:57:12Z",
+  "beat": 1040,
+  "last_beat_at": "2026-08-22T05:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heat",
   "heat": {
     "riverside": 5,
-    "delmar": 5,
+    "delmar": 15,
     "terraces": 5,
     "civic": 5
   },
@@ -203,9 +203,33 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt10",
+      "from": "dez",
+      "to": "okafor",
+      "kind": "product",
+      "amount": 1,
+      "due_day": 265,
+      "note": "was fronted and has not squared it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -426,21 +450,6 @@
       },
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards."
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "booker"
-      ],
-      "text": "Booker Lyle ends up at the clinic. The paperwork says one thing; the injury says another."
     }
   ],
   "player_queue": [
@@ -467,7 +476,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 34825,
+      "fast": 38419,
       "deep": 805
     }
   },
@@ -1063,19 +1072,19 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 15
+      "heat": 13
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 41
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1037,
+    "beat": 1040,
     "providers": []
   },
   "dead": [
