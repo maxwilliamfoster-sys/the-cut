@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1101,
-  "last_beat_at": "2026-08-22T20:57:12Z",
+  "beat": 1103,
+  "last_beat_at": "2026-08-22T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 91,
-    "delmar": 66,
+    "riverside": 89,
+    "delmar": 64,
     "terraces": 5,
-    "civic": 9
+    "civic": 12
   },
   "turf": {
     "riverside": "crew",
@@ -272,6 +272,35 @@
   ],
   "events": [
     {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "june"
+      ],
+      "text": "June Kowal ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1103
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 1102
+    },
+    {
       "id": "raid",
       "heat": {
         "riverside": 25,
@@ -501,32 +530,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1074
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1073
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "booker",
-        "femi"
-      ],
-      "text": "Somebody tells Booker Lyle that Femi Adeyemi has been seen talking to police.",
-      "beat": 1072
     }
   ],
   "player_queue": [
@@ -554,7 +557,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 49849
+      "deep": 58592
     }
   },
   "silent_runs": 0,
@@ -1207,35 +1210,35 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 21
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 11
+      "heat": 9
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 31
+      "heat": 29
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 49
+      "heat": 47
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 91
+      "heat": 89
     }
   ],
   "quota_exhausted_on": {
@@ -1267,36 +1270,5 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1101-row-1",
-      "kind": "row",
-      "effect": "row",
-      "at": "depot",
-      "x": 78,
-      "y": 64,
-      "who": [
-        "boateng",
-        "femi"
-      ],
-      "text": "Fr. Emmanuel Boateng asks Femi Adeyemi for a favour they have never repaid at Transit Depot, in front of people, and is refused.",
-      "started": 1101,
-      "until": 1102
-    },
-    {
-      "id": "inc1100-fight-0",
-      "kind": "fight",
-      "effect": "scuffle",
-      "at": "laundromat",
-      "x": 21,
-      "y": 23,
-      "who": [
-        "rey",
-        "dez"
-      ],
-      "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
-      "started": 1100,
-      "until": 1102
-    }
-  ]
+  "incidents": []
 }
