@@ -69,13 +69,19 @@ PROVIDERS = [
     {
         "name": "gemini",
         "key": "GEMINI_API_KEY",
-        "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+        # Native API, not the OpenAI-compatible shim. The shim insists on an
+        # `Authorization: Bearer` header and rejects perfectly good AI Studio keys with a
+        # 403; the native endpoint takes the same key in `x-goog-api-key` and works. So this
+        # one provider speaks its own dialect, and _call translates.
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        "dialect": "gemini",
         "tpm": 60000,
         # Newest first — Google's docs show gemini-3.7-flash as current, and the 2.x names
         # this originally guessed are on their way out. The older ones stay as fallbacks;
         # a name that has been retired simply gets demoted on the first 404.
-        "models": {FAST: ["gemini-3.7-flash", "gemini-2.5-flash", "gemini-flash-latest"],
-                   DEEP: ["gemini-3.7-flash", "gemini-2.5-flash", "gemini-flash-latest"]},
+        # Verified against GET /v1beta/models on the real key.
+        "models": {FAST: ["gemini-flash-lite-latest", "gemini-3.7-flash", "gemini-flash-latest"],
+                   DEEP: ["gemini-3.7-flash", "gemini-flash-latest", "gemini-2.5-flash"]},
     },
     {
         "name": "openrouter",
@@ -245,14 +251,38 @@ def trips_guardrail(text):
 
 # ── transport ────────────────────────────────────────────────────────────────
 
-def _post(url, key, payload, timeout=90):
+def _gemini_payload(messages, max_tokens, temperature, json_mode):
+    """OpenAI-shaped messages -> Gemini's contents/systemInstruction/generationConfig."""
+    system = "\n\n".join(m["content"] for m in messages if m.get("role") == "system")
+    contents = [{"role": "model" if m.get("role") == "assistant" else "user",
+                 "parts": [{"text": m.get("content", "")}]}
+                for m in messages if m.get("role") != "system"]
+    cfg = {"maxOutputTokens": max_tokens, "temperature": temperature}
+    if json_mode:
+        cfg["responseMimeType"] = "application/json"
+    out = {"contents": contents, "generationConfig": cfg}
+    if system:
+        out["systemInstruction"] = {"parts": [{"text": system}]}
+    return out
+
+
+def _gemini_read(d):
+    """(text, tokens) out of a generateContent response."""
+    cand = (d.get("candidates") or [{}])[0]
+    parts = ((cand.get("content") or {}).get("parts") or [])
+    text = "".join(p.get("text", "") for p in parts).strip()
+    used = (d.get("usageMetadata") or {}).get("totalTokenCount", 0)
+    return text, used, cand.get("finishReason")
+
+
+def _post(url, key, payload, timeout=90, headers=None):
     """Every provider in the chain speaks the OpenAI chat-completions shape, including
     Gemini (via its compatibility endpoint) and Ollama, so one transport serves all of
     them."""
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode(),
-        headers={
+        headers=headers or {
             "Authorization": f"Bearer {key}",
             "Content-Type": "application/json",
             # Cloudflare fronts the Groq API and rejects urllib's default
@@ -317,21 +347,45 @@ class _ModelGone(RuntimeError):
 
 def _call(prov, model, messages, max_tokens, temperature, json_mode, retries):
     key = os.environ.get(prov["key"]) if prov["key"] else "local"
-    url = prov["url"]
+    gemini = prov.get("dialect") == "gemini"
+    url = prov["url"].replace("{model}", model)
+    headers = None
 
-    payload = {
-        "model": model, "messages": messages,
-        "max_tokens": max_tokens, "temperature": temperature,
-    }
-    if "gpt-oss" in model:
-        payload["reasoning_effort"] = REASONING_EFFORT
-        payload["reasoning_format"] = "hidden"
-    if json_mode:
-        payload["response_format"] = {"type": "json_object"}
+    if gemini:
+        payload = _gemini_payload(messages, max_tokens, temperature, json_mode)
+        headers = {"x-goog-api-key": key, "Content-Type": "application/json",
+                   "User-Agent": "the-cut/1.0"}
+    else:
+        payload = {
+            "model": model, "messages": messages,
+            "max_tokens": max_tokens, "temperature": temperature,
+        }
+        if "gpt-oss" in model:
+            payload["reasoning_effort"] = REASONING_EFFORT
+            payload["reasoning_format"] = "hidden"
+        if json_mode:
+            payload["response_format"] = {"type": "json_object"}
 
     for attempt in range(retries + 1):
         try:
-            d = _post(url, key, payload)
+            d = _post(url, key, payload, headers=headers)
+
+            if gemini:
+                content, used, finish = _gemini_read(d)
+                if finish == "MAX_TOKENS":
+                    print(f"[llm] WARNING response hit max_tokens ({max_tokens}) — truncated")
+                if not content:
+                    if attempt < retries:
+                        payload["generationConfig"]["maxOutputTokens"] = int(max_tokens * 1.5)
+                        print(f'[llm] EMPTY content from gemini/{model} (finish={finish}) — retrying')
+                        time.sleep(2)
+                        continue
+                    raise RuntimeError(f"{model} returned empty content (finish={finish})")
+                if prov["name"] != _working.get("name"):
+                    print(f'[llm] using {prov["name"]}/{model}')
+                    _working["name"] = prov["name"]
+                return content, used
+
             choice = (d.get("choices") or [{}])[0]
             if choice.get("finish_reason") == "length":
                 # Truncated mid-JSON: the salvage in parse_json recovers the entries that
@@ -380,10 +434,15 @@ def _call(prov, model, messages, max_tokens, temperature, json_mode, retries):
             if e.code == 413 or (e.code == 429 and "Request too large" in body):
                 # The reservation was too big for the per-minute ceiling. Shrinking the
                 # reply allowance is better than dropping the beat.
-                new_max = max(600, int(payload["max_tokens"] * 0.6))
-                if new_max < payload["max_tokens"] and attempt < retries:
+                current = (payload["generationConfig"]["maxOutputTokens"] if gemini
+                           else payload["max_tokens"])
+                new_max = max(600, int(current * 0.6))
+                if new_max < current and attempt < retries:
                     print(f"[llm] request too large — retrying with max_tokens {new_max}")
-                    payload["max_tokens"] = new_max
+                    if gemini:
+                        payload["generationConfig"]["maxOutputTokens"] = new_max
+                    else:
+                        payload["max_tokens"] = new_max
                     time.sleep(2)
                     continue
                 raise RuntimeError(f"{e.code} request too large: {body}")

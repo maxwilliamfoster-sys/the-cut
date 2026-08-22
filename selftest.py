@@ -647,6 +647,27 @@ check("there is more than one provider to fall back to",
 check("a provider with no key configured is skipped, not attempted",
       all(p["key"] is None or "os.environ" in inspect.getsource(llm.providers_available)
           for p in llm.PROVIDERS))
+# Gemini's OpenAI-compatibility endpoint demands `Authorization: Bearer` and rejects real
+# AI Studio keys with a 403; the native endpoint takes the same key in a header and works.
+# So one provider speaks its own dialect, and the translation has to keep working.
+_gp = next(p for p in llm.PROVIDERS if p["name"] == "gemini")
+check("gemini uses its native endpoint, not the OpenAI shim that rejects its keys",
+      _gp.get("dialect") == "gemini" and "openai" not in _gp["url"],
+      "the compatibility endpoint 403s perfectly good keys")
+_probe = llm._gemini_payload(
+    [{"role": "system", "content": "S"}, {"role": "user", "content": "U"},
+     {"role": "assistant", "content": "A"}], 300, 0.5, True)
+check("openai-shaped messages translate into gemini's request shape",
+      _probe["systemInstruction"]["parts"][0]["text"] == "S"
+      and [c["role"] for c in _probe["contents"]] == ["user", "model"]
+      and _probe["generationConfig"]["maxOutputTokens"] == 300
+      and _probe["generationConfig"]["responseMimeType"] == "application/json",
+      f"{_probe}")
+check("a gemini response is read back correctly",
+      llm._gemini_read({"candidates": [{"content": {"parts": [{"text": " hi "}]},
+                                        "finishReason": "STOP"}],
+                        "usageMetadata": {"totalTokenCount": 42}}) == ("hi", 42, "STOP"))
+
 check("a model that no longer exists is demoted, not retried forever",
       "_dead_models" in inspect.getsource(llm.chat)
       and "_ModelGone" in inspect.getsource(llm._call))
