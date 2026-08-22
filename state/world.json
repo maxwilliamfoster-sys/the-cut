@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1073,
-  "last_beat_at": "2026-08-22T13:57:12Z",
+  "beat": 1075,
+  "last_beat_at": "2026-08-22T14:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 30,
+    "delmar": 40,
     "terraces": 5,
     "civic": 5
   },
@@ -246,6 +246,31 @@
   ],
   "events": [
     {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 1075
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1074
+    },
+    {
       "id": "patrol_surge",
       "heat": {
         "delmar": 12
@@ -459,31 +484,6 @@
       },
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "june",
-        "gus"
-      ],
-      "text": "Gus Petrakis does June Kowal a favour that costs them something real."
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
     }
   ],
   "player_queue": [
@@ -510,7 +510,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 125527,
+      "fast": 128920,
       "deep": 6257
     }
   },
@@ -1118,7 +1118,7 @@
     }
   ],
   "charges": [],
-  "law_pressure": 2,
+  "law_pressure": 3,
   "last_law_day": 264,
   "last_expansion_day": 236,
   "feuds": [
@@ -1127,26 +1127,26 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 25
+      "heat": 23
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 43
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1058,
+    "beat": 1075,
     "providers": []
   },
   "dead": [
