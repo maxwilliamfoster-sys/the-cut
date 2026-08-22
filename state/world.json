@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1081,
-  "last_beat_at": "2026-08-22T15:57:12Z",
+  "beat": 1083,
+  "last_beat_at": "2026-08-22T16:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 58,
+    "delmar": 56,
     "terraces": 5,
     "civic": 5
   },
@@ -246,6 +246,16 @@
   ],
   "events": [
     {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 1082
+    },
+    {
       "id": "good_night",
       "heat": {},
       "mood": {
@@ -477,16 +487,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
     }
   ],
   "player_queue": [
@@ -509,12 +509,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 269,
+  "last_gazette_day": 270,
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 157451,
-      "deep": 7759
+      "fast": 164547,
+      "deep": 9212
     }
   },
   "silent_runs": 0,
@@ -1167,21 +1167,21 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 31
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 21
+      "heat": 19
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 39
     }
   ],
   "quota_exhausted_on": {
@@ -1211,18 +1211,5 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1080-opening-0",
-      "kind": "opening",
-      "effect": "opening",
-      "at": "new_home_270",
-      "x": 88,
-      "y": 84,
-      "who": [],
-      "text": "Okonkwo Tenement opens on what was empty ground in The Flats.",
-      "started": 1080,
-      "until": 1082
-    }
-  ]
+  "incidents": []
 }
