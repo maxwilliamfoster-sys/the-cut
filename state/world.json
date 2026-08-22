@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1087,
-  "last_beat_at": "2026-08-22T17:27:12Z",
+  "beat": 1089,
+  "last_beat_at": "2026-08-22T17:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "fog off the water",
   "heat": {
-    "riverside": 5,
-    "delmar": 52,
+    "riverside": 30,
+    "delmar": 58,
     "terraces": 5,
     "civic": 5
   },
@@ -212,10 +212,10 @@
       "amount": 1,
       "due_day": 265,
       "note": "was fronted and has not squared it",
-      "settled": false,
+      "settled": true,
       "patience": 6,
       "asked": 1,
-      "last_confront_day": 269
+      "last_confront_day": 272
     },
     {
       "id": "debt11",
@@ -226,9 +226,9 @@
       "due_day": 268,
       "note": "owes a favour that was not small",
       "settled": false,
-      "patience": 3,
-      "asked": 0,
-      "last_confront_day": -99
+      "patience": 6,
+      "asked": 1,
+      "last_confront_day": 272
     },
     {
       "id": "debt12",
@@ -242,9 +242,36 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt13",
+      "from": "booker",
+      "to": "ruiz",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 277,
+      "note": "was got out of something and knows it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 1089
+    },
     {
       "id": "fight",
       "heat": {},
@@ -479,17 +506,6 @@
         "malik"
       ],
       "text": "Malik Reyes gets word that what they owe is wanted sooner than agreed."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -517,7 +533,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 24042
+      "deep": 28086
     }
   },
   "silent_runs": 0,
@@ -1189,8 +1205,10 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1075,
-    "providers": []
+    "beat": 1089,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -1214,5 +1232,18 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1089-raid-0",
+      "kind": "raid",
+      "effect": "lights",
+      "at": "church",
+      "x": 50,
+      "y": 40,
+      "who": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "started": 1089,
+      "until": 1091
+    }
+  ]
 }
