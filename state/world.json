@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1089,
-  "last_beat_at": "2026-08-22T17:57:12Z",
+  "beat": 1092,
+  "last_beat_at": "2026-08-22T18:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "first snow",
   "heat": {
-    "riverside": 30,
-    "delmar": 58,
-    "terraces": 5,
+    "riverside": 43,
+    "delmar": 55,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -241,7 +241,7 @@
       "settled": false,
       "patience": 3,
       "asked": 0,
-      "last_confront_day": -99
+      "last_confront_day": 273
     },
     {
       "id": "debt13",
@@ -255,9 +255,46 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt14",
+      "from": "malik",
+      "to": "dez",
+      "kind": "money",
+      "amount": 200,
+      "due_day": 278,
+      "note": "fronted cash and expects it back",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 1092
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1091
+    },
     {
       "id": "raid",
       "heat": {
@@ -481,31 +518,6 @@
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days.",
       "beat": 1065
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1062
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes gets word that what they owe is wanted sooner than agreed."
     }
   ],
   "player_queue": [
@@ -533,7 +545,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 28086
+      "deep": 31549
     }
   },
   "silent_runs": 0,
@@ -742,8 +754,8 @@
       "open": false,
       "wings": [],
       "floors": 2,
-      "condition": "ruin",
-      "since_day": 267
+      "condition": "rebuilding",
+      "since_day": 273
     },
     {
       "id": "pawnshop",
@@ -1186,26 +1198,40 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 29
+      "heat": 27
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 35
+    },
+    {
+      "a": "amara",
+      "b": "malik",
+      "since_day": 272,
+      "cause": "would not let it go",
+      "heat": 53
+    },
+    {
+      "a": "dez",
+      "b": "rey",
+      "since_day": 273,
+      "cause": "it turned physical",
+      "heat": 55
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1089,
+    "beat": 1091,
     "providers": [
       "gemini"
     ]
@@ -1234,16 +1260,31 @@
   },
   "incidents": [
     {
-      "id": "inc1089-raid-0",
-      "kind": "raid",
-      "effect": "lights",
-      "at": "church",
-      "x": 50,
-      "y": 40,
+      "id": "inc1092-fight-1",
+      "kind": "fight",
+      "effect": "scuffle",
+      "at": "laundromat",
+      "x": 21,
+      "y": 23,
+      "who": [
+        "rey",
+        "dez"
+      ],
+      "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
+      "started": 1092,
+      "until": 1094
+    },
+    {
+      "id": "inc1092-works-0",
+      "kind": "works",
+      "effect": "works",
+      "at": "diner",
+      "x": 28,
+      "y": 34,
       "who": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "started": 1089,
-      "until": 1091
+      "text": "Hoarding goes up around the shell of The Blue Spoon.",
+      "started": 1092,
+      "until": 1093
     }
   ]
 }
