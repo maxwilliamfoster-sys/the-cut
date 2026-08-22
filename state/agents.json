@@ -24,21 +24,21 @@
       "night": "okonkwo"
     },
     "pos": [
-      24,
-      20
+      65,
+      52
     ],
     "dest": [
       22,
       21
     ],
-    "at": "laundromat",
+    "at": "okonkwo",
     "spot": [
-      24,
-      20
+      65,
+      52
     ],
     "mood": {
-      "energy": 20,
-      "happiness": 8,
+      "energy": 48,
+      "happiness": 14,
       "stress": 98,
       "social_need": 0,
       "fear": 98
@@ -77,8 +77,8 @@
         "opinion": "scared cop"
       },
       "rey": {
-        "affinity": -54,
-        "opinion": "Watching me wait to slip."
+        "affinity": -56,
+        "opinion": "still angry"
       },
       "cass": {
         "affinity": -36,
@@ -737,45 +737,345 @@
         "importance": 9
       }
     ],
-    "action": "behind the till, watching the snow",
-    "activity": "behind the till, watching the snow",
+    "action": "dozing in front of the TV",
+    "activity": "dozing in front of the TV",
     "thought": "",
     "speech": null,
     "path": [
       [
-        18,
+        29,
+        18
+      ],
+      [
+        29,
         19
       ],
       [
-        19,
+        30,
         19
       ],
       [
-        20,
+        31,
         19
       ],
       [
-        21,
-        19
-      ],
-      [
-        22,
-        19
-      ],
-      [
-        23,
-        19
-      ],
-      [
-        24,
-        19
-      ],
-      [
-        24,
+        31,
         20
+      ],
+      [
+        31,
+        21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
+        34,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        38,
+        21
+      ],
+      [
+        39,
+        21
+      ],
+      [
+        40,
+        21
+      ],
+      [
+        40,
+        22
+      ],
+      [
+        40,
+        23
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        25
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
+        32
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        40,
+        38
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        40,
+        46
+      ],
+      [
+        40,
+        47
+      ],
+      [
+        40,
+        48
+      ],
+      [
+        40,
+        49
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        40,
+        51
+      ],
+      [
+        40,
+        52
+      ],
+      [
+        40,
+        53
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        40,
+        57
+      ],
+      [
+        40,
+        58
+      ],
+      [
+        41,
+        58
+      ],
+      [
+        42,
+        58
+      ],
+      [
+        43,
+        58
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        45,
+        58
+      ],
+      [
+        46,
+        58
+      ],
+      [
+        47,
+        58
+      ],
+      [
+        48,
+        58
+      ],
+      [
+        49,
+        58
+      ],
+      [
+        50,
+        58
+      ],
+      [
+        51,
+        58
+      ],
+      [
+        52,
+        58
+      ],
+      [
+        53,
+        58
+      ],
+      [
+        54,
+        58
+      ],
+      [
+        55,
+        58
+      ],
+      [
+        56,
+        58
+      ],
+      [
+        57,
+        58
+      ],
+      [
+        58,
+        58
+      ],
+      [
+        59,
+        58
+      ],
+      [
+        60,
+        58
+      ],
+      [
+        61,
+        58
+      ],
+      [
+        62,
+        58
+      ],
+      [
+        62,
+        57
+      ],
+      [
+        62,
+        56
+      ],
+      [
+        62,
+        55
+      ],
+      [
+        62,
+        54
+      ],
+      [
+        62,
+        53
+      ],
+      [
+        62,
+        52
+      ],
+      [
+        63,
+        52
+      ],
+      [
+        64,
+        52
+      ],
+      [
+        65,
+        52
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "Malik is testing my authority publicly, and I cannot afford to look weak right now.",
     "alive": true,
     "health": 68,
@@ -793,7 +1093,7 @@
       }
     ],
     "checking": null,
-    "driving": null,
+    "driving": "car",
     "vehicle": "car"
   },
   "malik": {
@@ -821,24 +1121,21 @@
       "night": "lot"
     },
     "pos": [
-      8,
-      49
+      51,
+      51
     ],
     "dest": [
       21,
       53
     ],
-    "at": "terrace_b",
-    "spot": [
-      8,
-      49
-    ],
+    "at": "lot",
+    "spot": null,
     "mood": {
       "energy": 0,
-      "happiness": 30,
-      "stress": 98,
-      "social_need": 80,
-      "fear": 16
+      "happiness": 36,
+      "stress": 95,
+      "social_need": 74,
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -1688,17 +1985,241 @@
         "importance": 6
       }
     ],
-    "action": "sitting down for a minute, watching the snow",
-    "activity": "sitting down for a minute, watching the snow",
+    "action": "watching the street",
+    "activity": "watching the street",
     "thought": "",
     "speech": null,
     "path": [
       [
+        9,
+        49
+      ],
+      [
         8,
         49
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        53
+      ],
+      [
+        8,
+        54
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        13,
+        55
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        16,
+        55
+      ],
+      [
+        16,
+        56
+      ],
+      [
+        17,
+        56
+      ],
+      [
+        18,
+        56
+      ],
+      [
+        19,
+        56
+      ],
+      [
+        20,
+        56
+      ],
+      [
+        21,
+        56
+      ],
+      [
+        22,
+        56
+      ],
+      [
+        23,
+        56
+      ],
+      [
+        24,
+        56
+      ],
+      [
+        25,
+        56
+      ],
+      [
+        26,
+        56
+      ],
+      [
+        27,
+        56
+      ],
+      [
+        28,
+        56
+      ],
+      [
+        29,
+        56
+      ],
+      [
+        30,
+        56
+      ],
+      [
+        31,
+        56
+      ],
+      [
+        32,
+        56
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        34,
+        56
+      ],
+      [
+        35,
+        56
+      ],
+      [
+        36,
+        56
+      ],
+      [
+        37,
+        56
+      ],
+      [
+        38,
+        56
+      ],
+      [
+        39,
+        56
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        41,
+        56
+      ],
+      [
+        42,
+        56
+      ],
+      [
+        43,
+        56
+      ],
+      [
+        44,
+        56
+      ],
+      [
+        45,
+        56
+      ],
+      [
+        46,
+        56
+      ],
+      [
+        47,
+        56
+      ],
+      [
+        48,
+        56
+      ],
+      [
+        49,
+        56
+      ],
+      [
+        50,
+        56
+      ],
+      [
+        51,
+        56
+      ],
+      [
+        51,
+        55
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        51,
+        53
+      ],
+      [
+        51,
+        52
+      ],
+      [
+        51,
+        51
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "We are all turning to stone inside if a death leaves us completely cold.",
     "alive": true,
     "health": 80,
@@ -1734,24 +2255,24 @@
       "night": "terrace_a"
     },
     "pos": [
-      9,
-      64
+      3,
+      50
     ],
     "dest": [
       6,
       63
     ],
-    "at": "precinct",
+    "at": "terrace_a",
     "spot": [
-      9,
-      64
+      3,
+      50
     ],
     "mood": {
-      "energy": 72,
-      "happiness": 30,
-      "stress": 87,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 83,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -2203,61 +2724,85 @@
         "importance": 6
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        2,
-        67
-      ],
-      [
-        3,
-        67
-      ],
-      [
-        4,
-        67
+        5,
+        64
       ],
       [
         5,
-        67
+        63
       ],
       [
-        6,
-        67
+        5,
+        62
       ],
       [
-        7,
-        67
+        4,
+        62
       ],
       [
-        8,
-        67
+        3,
+        62
       ],
       [
-        9,
-        67
+        3,
+        61
       ],
       [
-        9,
-        66
+        3,
+        60
       ],
       [
-        9,
-        65
+        3,
+        59
       ],
       [
-        9,
-        64
+        3,
+        58
+      ],
+      [
+        3,
+        57
+      ],
+      [
+        3,
+        56
+      ],
+      [
+        3,
+        55
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        3,
+        53
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        50
       ]
     ],
     "last_thought_beat": 1088,
     "belief": "Another casualty nobody wants to properly look at.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 55,
     "chasing": null,
     "driving": null,
@@ -2288,24 +2833,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      8,
-      35
+      77,
+      34
     ],
     "dest": [
       6,
       63
     ],
-    "at": "cornerstore",
+    "at": "delmarflats",
     "spot": [
-      8,
-      35
+      77,
+      34
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 98,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 95,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "booker": {
@@ -3007,225 +3552,265 @@
         "importance": 3
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        2,
-        67
+        35,
+        32
       ],
       [
-        2,
-        66
+        34,
+        32
       ],
       [
-        2,
-        65
+        34,
+        33
       ],
       [
-        2,
-        64
+        34,
+        34
       ],
       [
-        3,
-        64
+        34,
+        35
       ],
       [
-        4,
-        64
-      ],
-      [
-        5,
-        64
-      ],
-      [
-        5,
-        63
-      ],
-      [
-        5,
-        62
-      ],
-      [
-        5,
-        61
-      ],
-      [
-        5,
-        60
-      ],
-      [
-        5,
-        59
-      ],
-      [
-        5,
-        58
-      ],
-      [
-        6,
-        58
-      ],
-      [
-        7,
-        58
-      ],
-      [
-        8,
-        58
-      ],
-      [
-        9,
-        58
-      ],
-      [
-        10,
-        58
-      ],
-      [
-        11,
-        58
-      ],
-      [
-        12,
-        58
-      ],
-      [
-        12,
-        57
-      ],
-      [
-        12,
-        56
-      ],
-      [
-        12,
-        55
-      ],
-      [
-        12,
-        54
-      ],
-      [
-        12,
-        53
-      ],
-      [
-        12,
-        52
-      ],
-      [
-        12,
-        51
-      ],
-      [
-        12,
-        50
-      ],
-      [
-        12,
-        49
-      ],
-      [
-        12,
-        48
-      ],
-      [
-        12,
-        47
-      ],
-      [
-        12,
-        46
-      ],
-      [
-        12,
-        45
-      ],
-      [
-        12,
-        44
-      ],
-      [
-        12,
-        43
-      ],
-      [
-        12,
-        42
-      ],
-      [
-        12,
-        41
-      ],
-      [
-        12,
-        40
-      ],
-      [
-        12,
-        39
-      ],
-      [
-        12,
-        38
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        10,
-        37
-      ],
-      [
-        9,
-        37
-      ],
-      [
-        8,
-        37
-      ],
-      [
-        7,
-        37
-      ],
-      [
-        6,
-        37
-      ],
-      [
-        5,
-        37
-      ],
-      [
-        5,
+        34,
         36
       ],
       [
-        5,
+        34,
+        37
+      ],
+      [
+        34,
+        38
+      ],
+      [
+        34,
+        39
+      ],
+      [
+        34,
+        40
+      ],
+      [
+        34,
+        41
+      ],
+      [
+        34,
+        42
+      ],
+      [
+        35,
+        42
+      ],
+      [
+        36,
+        42
+      ],
+      [
+        37,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        43,
+        42
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        46,
+        42
+      ],
+      [
+        47,
+        42
+      ],
+      [
+        48,
+        42
+      ],
+      [
+        49,
+        42
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        51,
+        42
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        53,
+        42
+      ],
+      [
+        54,
+        42
+      ],
+      [
+        55,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        59,
+        42
+      ],
+      [
+        60,
+        42
+      ],
+      [
+        61,
+        42
+      ],
+      [
+        62,
+        42
+      ],
+      [
+        63,
+        42
+      ],
+      [
+        64,
+        42
+      ],
+      [
+        65,
+        42
+      ],
+      [
+        66,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
         35
       ],
       [
-        6,
-        35
+        76,
+        34
       ],
       [
-        7,
-        35
-      ],
-      [
-        8,
-        35
+        77,
+        34
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "I feel nothing for the dead, which means I am becoming one of them.",
     "alive": true,
     "health": 80,
@@ -3261,8 +3846,8 @@
       "night": "cornerstore"
     },
     "pos": [
-      7,
-      34
+      6,
+      32
     ],
     "dest": [
       6,
@@ -3270,15 +3855,15 @@
     ],
     "at": "cornerstore",
     "spot": [
-      7,
-      34
+      6,
+      32
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 57,
-      "social_need": 74,
-      "fear": 16
+      "energy": 50,
+      "happiness": 36,
+      "stress": 53,
+      "social_need": 98,
+      "fear": 12
     },
     "relationships": {
       "nadia": {
@@ -3628,33 +4213,33 @@
         "importance": 6
       }
     ],
-    "action": "behind the till, watching the snow",
-    "activity": "behind the till, watching the snow",
+    "action": "counting the float",
+    "activity": "counting the float",
     "thought": "",
     "speech": null,
     "path": [
       [
+        7,
+        34
+      ],
+      [
         6,
-        32
+        34
       ],
       [
-        7,
-        32
-      ],
-      [
-        7,
+        6,
         33
       ],
       [
-        7,
-        34
+        6,
+        32
       ]
     ],
     "last_thought_beat": 1085,
     "belief": "When we stop feeling death, the block has truly lost its soul.",
     "alive": true,
     "health": 80,
-    "grief": 19,
+    "grief": 16,
     "volatility": 30,
     "chasing": null,
     "driving": null,
@@ -3685,24 +4270,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      22,
-      34
+      9,
+      49
     ],
     "dest": [
       21,
       37
     ],
-    "at": "barbershop",
+    "at": "terrace_b",
     "spot": [
-      22,
-      34
+      9,
+      49
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 96,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 92,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -4112,29 +4697,193 @@
         "importance": 6
       }
     ],
-    "action": "restocking the back bar",
-    "activity": "restocking the back bar",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        22,
+        33
+      ],
       [
         21,
         33
       ],
       [
-        22,
+        20,
         33
       ],
       [
-        22,
+        20,
         34
+      ],
+      [
+        20,
+        35
+      ],
+      [
+        20,
+        36
+      ],
+      [
+        20,
+        37
+      ],
+      [
+        19,
+        37
+      ],
+      [
+        18,
+        37
+      ],
+      [
+        17,
+        37
+      ],
+      [
+        16,
+        37
+      ],
+      [
+        15,
+        37
+      ],
+      [
+        14,
+        37
+      ],
+      [
+        13,
+        37
+      ],
+      [
+        12,
+        37
+      ],
+      [
+        11,
+        37
+      ],
+      [
+        11,
+        38
+      ],
+      [
+        11,
+        39
+      ],
+      [
+        11,
+        40
+      ],
+      [
+        11,
+        41
+      ],
+      [
+        11,
+        42
+      ],
+      [
+        11,
+        43
+      ],
+      [
+        11,
+        44
+      ],
+      [
+        11,
+        45
+      ],
+      [
+        11,
+        46
+      ],
+      [
+        11,
+        47
+      ],
+      [
+        11,
+        48
+      ],
+      [
+        11,
+        49
+      ],
+      [
+        11,
+        50
+      ],
+      [
+        11,
+        51
+      ],
+      [
+        11,
+        52
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        11,
+        54
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        8,
+        54
+      ],
+      [
+        8,
+        53
+      ],
+      [
+        9,
+        53
+      ],
+      [
+        9,
+        52
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        9,
+        50
+      ],
+      [
+        9,
+        49
       ]
     ],
     "last_thought_beat": 1087,
     "belief": "The diner keeps running even when the street loses another soul.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 18,
     "chasing": null,
     "leads": [
@@ -4175,24 +4924,24 @@
       "night": "terrace_a"
     },
     "pos": [
-      23,
-      69
+      3,
+      52
     ],
     "dest": [
       3,
       53
     ],
-    "at": "clinic",
+    "at": "terrace_a",
     "spot": [
-      23,
-      69
+      3,
+      52
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 98,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 94,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "junie": {
@@ -4606,57 +5355,33 @@
         "importance": 6
       }
     ],
-    "action": "filing paperwork, watching the snow",
-    "activity": "filing paperwork, watching the snow",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        19,
-        64
+        4,
+        50
       ],
       [
-        20,
-        64
+        3,
+        50
       ],
       [
-        21,
-        64
+        3,
+        51
       ],
       [
-        22,
-        64
-      ],
-      [
-        23,
-        64
-      ],
-      [
-        23,
-        65
-      ],
-      [
-        23,
-        66
-      ],
-      [
-        23,
-        67
-      ],
-      [
-        23,
-        68
-      ],
-      [
-        23,
-        69
+        3,
+        52
       ]
     ],
     "last_thought_beat": 1087,
     "belief": "We are all exhausted to the bone by what this place demands.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 22,
     "chasing": null,
     "driving": null,
@@ -4687,24 +5412,24 @@
       "night": "vasquez"
     },
     "pos": [
-      18,
-      19
+      65,
+      50
     ],
     "dest": [
       50,
       63
     ],
-    "at": "laundromat",
+    "at": "okonkwo",
     "spot": [
-      18,
-      19
+      65,
+      50
     ],
     "mood": {
-      "energy": 38,
+      "energy": 26,
       "happiness": 14,
       "stress": 98,
       "social_need": 0,
-      "fear": 24
+      "fear": 20
     },
     "relationships": {
       "nadia": {
@@ -5366,53 +6091,361 @@
         "importance": 9
       }
     ],
-    "action": "queueing",
-    "activity": "queueing",
+    "action": "sitting in someone else's kitchen",
+    "activity": "sitting in someone else's kitchen",
     "thought": "",
     "speech": null,
     "path": [
       [
-        21,
-        23
+        29,
+        18
       ],
       [
-        20,
-        23
+        29,
+        19
       ],
       [
-        19,
-        23
+        30,
+        19
       ],
       [
-        18,
-        23
+        31,
+        19
       ],
       [
-        18,
-        22
-      ],
-      [
-        18,
-        21
-      ],
-      [
-        18,
+        31,
         20
       ],
       [
-        18,
-        19
+        31,
+        21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
+        34,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        38,
+        21
+      ],
+      [
+        39,
+        21
+      ],
+      [
+        40,
+        21
+      ],
+      [
+        40,
+        22
+      ],
+      [
+        40,
+        23
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        25
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
+        32
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        40,
+        38
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        40,
+        46
+      ],
+      [
+        40,
+        47
+      ],
+      [
+        40,
+        48
+      ],
+      [
+        40,
+        49
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        40,
+        51
+      ],
+      [
+        40,
+        52
+      ],
+      [
+        40,
+        53
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        40,
+        57
+      ],
+      [
+        40,
+        58
+      ],
+      [
+        41,
+        58
+      ],
+      [
+        42,
+        58
+      ],
+      [
+        43,
+        58
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        45,
+        58
+      ],
+      [
+        46,
+        58
+      ],
+      [
+        47,
+        58
+      ],
+      [
+        48,
+        58
+      ],
+      [
+        49,
+        58
+      ],
+      [
+        50,
+        58
+      ],
+      [
+        51,
+        58
+      ],
+      [
+        52,
+        58
+      ],
+      [
+        53,
+        58
+      ],
+      [
+        54,
+        58
+      ],
+      [
+        55,
+        58
+      ],
+      [
+        56,
+        58
+      ],
+      [
+        57,
+        58
+      ],
+      [
+        58,
+        58
+      ],
+      [
+        59,
+        58
+      ],
+      [
+        60,
+        58
+      ],
+      [
+        61,
+        58
+      ],
+      [
+        62,
+        58
+      ],
+      [
+        62,
+        57
+      ],
+      [
+        62,
+        56
+      ],
+      [
+        62,
+        55
+      ],
+      [
+        62,
+        54
+      ],
+      [
+        62,
+        53
+      ],
+      [
+        62,
+        52
+      ],
+      [
+        62,
+        51
+      ],
+      [
+        62,
+        50
+      ],
+      [
+        63,
+        50
+      ],
+      [
+        64,
+        50
+      ],
+      [
+        65,
+        50
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "We survive by locking our hearts against the endless losses.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 70,
     "chasing": "dez",
     "last_instigated_day": 257,
-    "driving": null,
+    "driving": "van",
     "vehicle": "van"
   },
   "nadia": {
@@ -5440,24 +6473,24 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
-      65
+      31,
+      49
     ],
     "dest": [
       33,
       52
     ],
-    "at": "school",
+    "at": "vasquez",
     "spot": [
-      35,
-      65
+      31,
+      49
     ],
     "mood": {
-      "energy": 72,
-      "happiness": 30,
-      "stress": 82,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 78,
       "social_need": 0,
-      "fear": 28
+      "fear": 24
     },
     "relationships": {
       "rey": {
@@ -5779,21 +6812,101 @@
         "importance": 6
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
+    "action": "lying awake",
+    "activity": "lying awake",
     "thought": "",
     "speech": null,
     "path": [
       [
         35,
         65
+      ],
+      [
+        34,
+        65
+      ],
+      [
+        33,
+        65
+      ],
+      [
+        33,
+        64
+      ],
+      [
+        33,
+        63
+      ],
+      [
+        33,
+        62
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        59
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        33,
+        57
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        33,
+        55
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        32,
+        52
+      ],
+      [
+        31,
+        52
+      ],
+      [
+        31,
+        51
+      ],
+      [
+        31,
+        50
+      ],
+      [
+        31,
+        49
       ]
     ],
     "last_thought_beat": 1088,
     "belief": "The block absorbs another death without missing a beat.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 40,
     "chasing": null,
     "driving": null,
@@ -5824,8 +6937,8 @@
       "night": "pawnshop"
     },
     "pos": [
-      34,
-      32
+      36,
+      35
     ],
     "dest": [
       50,
@@ -5833,15 +6946,15 @@
     ],
     "at": "pawnshop",
     "spot": [
-      34,
-      32
+      36,
+      35
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 98,
-      "social_need": 0,
-      "fear": 16
+      "energy": 50,
+      "happiness": 36,
+      "stress": 95,
+      "social_need": 12,
+      "fear": 12
     },
     "relationships": {
       "kohl": {
@@ -6229,17 +7342,177 @@
         "importance": 6
       }
     ],
-    "action": "counting the float",
-    "activity": "counting the float",
+    "action": "behind the till",
+    "activity": "behind the till",
     "thought": "",
     "speech": null,
     "path": [
       [
+        32,
+        17
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        31,
+        18
+      ],
+      [
+        31,
+        19
+      ],
+      [
+        31,
+        20
+      ],
+      [
+        31,
+        21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
         34,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        38,
+        21
+      ],
+      [
+        39,
+        21
+      ],
+      [
+        40,
+        21
+      ],
+      [
+        40,
+        22
+      ],
+      [
+        40,
+        23
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        25
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
         32
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        39,
+        37
+      ],
+      [
+        38,
+        37
+      ],
+      [
+        37,
+        37
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        35,
+        37
+      ],
+      [
+        34,
+        37
+      ],
+      [
+        34,
+        36
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        36,
+        35
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "Death touches everyone here, and my lack of grief proves my cold heart.",
     "alive": true,
     "health": 80,
@@ -6257,7 +7530,7 @@
     ],
     "checking": null,
     "last_instigated_day": 263,
-    "driving": null,
+    "driving": "car",
     "vehicle": "car"
   },
   "junie": {
@@ -7128,24 +8401,24 @@
       "night": "harborbar"
     },
     "pos": [
-      6,
-      32
+      32,
+      16
     ],
     "dest": [
       31,
       19
     ],
-    "at": "cornerstore",
+    "at": "harborbar",
     "spot": [
-      6,
-      32
+      32,
+      16
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 98,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 95,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "ivy": {
@@ -7569,281 +8842,21 @@
         "importance": 3
       }
     ],
-    "action": "counting out change",
-    "activity": "counting out change",
+    "action": "talking over the table",
+    "activity": "talking over the table",
     "thought": "",
     "speech": null,
     "path": [
       [
-        51,
-        51
-      ],
-      [
-        51,
-        50
-      ],
-      [
-        51,
-        49
-      ],
-      [
-        51,
-        48
-      ],
-      [
-        51,
-        47
-      ],
-      [
-        51,
-        46
-      ],
-      [
-        51,
-        45
-      ],
-      [
-        50,
-        45
-      ],
-      [
-        49,
-        45
-      ],
-      [
-        48,
-        45
-      ],
-      [
-        47,
-        45
-      ],
-      [
-        46,
-        45
-      ],
-      [
-        45,
-        45
-      ],
-      [
-        44,
-        45
-      ],
-      [
-        43,
-        45
-      ],
-      [
-        42,
-        45
-      ],
-      [
-        41,
-        45
-      ],
-      [
-        40,
-        45
-      ],
-      [
-        39,
-        45
-      ],
-      [
-        38,
-        45
-      ],
-      [
-        37,
-        45
-      ],
-      [
-        36,
-        45
-      ],
-      [
-        35,
-        45
-      ],
-      [
-        34,
-        45
-      ],
-      [
-        33,
-        45
+        32,
+        17
       ],
       [
         32,
-        45
-      ],
-      [
-        31,
-        45
-      ],
-      [
-        30,
-        45
-      ],
-      [
-        29,
-        45
-      ],
-      [
-        28,
-        45
-      ],
-      [
-        27,
-        45
-      ],
-      [
-        26,
-        45
-      ],
-      [
-        25,
-        45
-      ],
-      [
-        24,
-        45
-      ],
-      [
-        23,
-        45
-      ],
-      [
-        22,
-        45
-      ],
-      [
-        21,
-        45
-      ],
-      [
-        20,
-        45
-      ],
-      [
-        19,
-        45
-      ],
-      [
-        18,
-        45
-      ],
-      [
-        17,
-        45
-      ],
-      [
-        16,
-        45
-      ],
-      [
-        15,
-        45
-      ],
-      [
-        14,
-        45
-      ],
-      [
-        13,
-        45
-      ],
-      [
-        12,
-        45
-      ],
-      [
-        12,
-        44
-      ],
-      [
-        12,
-        43
-      ],
-      [
-        12,
-        42
-      ],
-      [
-        12,
-        41
-      ],
-      [
-        12,
-        40
-      ],
-      [
-        12,
-        39
-      ],
-      [
-        12,
-        38
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        10,
-        37
-      ],
-      [
-        9,
-        37
-      ],
-      [
-        8,
-        37
-      ],
-      [
-        7,
-        37
-      ],
-      [
-        6,
-        37
-      ],
-      [
-        5,
-        37
-      ],
-      [
-        5,
-        36
-      ],
-      [
-        5,
-        35
-      ],
-      [
-        5,
-        34
-      ],
-      [
-        5,
-        33
-      ],
-      [
-        5,
-        32
-      ],
-      [
-        6,
-        32
+        16
       ]
     ],
-    "last_thought_beat": 1090,
+    "last_thought_beat": 1094,
     "belief": "The atmosphere is rotting from within, and we are all complicit.",
     "alive": true,
     "health": 80,
@@ -7851,7 +8864,7 @@
     "volatility": 74,
     "chasing": null,
     "last_instigated_day": 260,
-    "driving": "car",
+    "driving": null,
     "vehicle": "car"
   },
   "adaeze": {
@@ -7878,8 +8891,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      65,
-      52
+      60,
+      51
     ],
     "dest": [
       62,
@@ -7887,15 +8900,15 @@
     ],
     "at": "okonkwo",
     "spot": [
-      65,
-      52
+      60,
+      51
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 44,
-      "social_need": 12,
-      "fear": 16
+      "energy": 100,
+      "happiness": 36,
+      "stress": 40,
+      "social_need": 0,
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -8045,166 +9058,38 @@
         "importance": 6
       }
     ],
-    "action": "on hold with somebody, watching the snow",
-    "activity": "on hold with somebody, watching the snow",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        48,
-        37
-      ],
-      [
-        49,
-        37
-      ],
-      [
-        50,
-        37
-      ],
-      [
-        50,
-        38
-      ],
-      [
-        50,
-        39
-      ],
-      [
-        50,
-        40
-      ],
-      [
-        50,
-        41
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        58,
-        43
-      ],
-      [
-        58,
-        44
-      ],
-      [
-        58,
-        45
-      ],
-      [
-        58,
-        46
-      ],
-      [
-        58,
-        47
-      ],
-      [
-        58,
-        48
-      ],
-      [
-        58,
-        49
-      ],
-      [
-        58,
-        50
-      ],
-      [
-        58,
-        51
-      ],
-      [
-        58,
+        65,
         52
-      ],
-      [
-        58,
-        53
-      ],
-      [
-        58,
-        54
-      ],
-      [
-        58,
-        55
-      ],
-      [
-        59,
-        55
-      ],
-      [
-        60,
-        55
-      ],
-      [
-        61,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        62,
-        54
-      ],
-      [
-        62,
-        53
-      ],
-      [
-        63,
-        53
       ],
       [
         64,
-        53
-      ],
-      [
-        65,
-        53
-      ],
-      [
-        65,
         52
+      ],
+      [
+        63,
+        52
+      ],
+      [
+        62,
+        52
+      ],
+      [
+        61,
+        52
+      ],
+      [
+        60,
+        52
+      ],
+      [
+        60,
+        51
       ]
     ],
     "last_thought_beat": 1082,
@@ -8242,24 +9127,24 @@
       "night": "okonkwo"
     },
     "pos": [
-      74,
-      48
+      60,
+      51
     ],
     "dest": [
       34,
       63
     ],
-    "at": "green",
+    "at": "okonkwo",
     "spot": [
-      74,
-      48
+      60,
+      51
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 53,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 49,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -8385,254 +9270,38 @@
         "importance": 6
       }
     ],
-    "action": "sitting on a bench, watching the snow",
-    "activity": "sitting on a bench, watching the snow",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
-        67
-      ],
-      [
-        33,
-        66
-      ],
-      [
-        33,
-        65
-      ],
-      [
-        33,
-        64
-      ],
-      [
-        33,
-        63
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        34,
-        62
-      ],
-      [
-        35,
-        62
-      ],
-      [
-        36,
-        62
-      ],
-      [
-        37,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        40,
-        62
-      ],
-      [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
         65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        74,
-        61
-      ],
-      [
-        74,
-        60
-      ],
-      [
-        74,
-        59
-      ],
-      [
-        74,
-        58
-      ],
-      [
-        74,
-        57
-      ],
-      [
-        74,
-        56
-      ],
-      [
-        74,
-        55
-      ],
-      [
-        74,
-        54
-      ],
-      [
-        74,
-        53
-      ],
-      [
-        74,
-        52
-      ],
-      [
-        74,
-        51
-      ],
-      [
-        74,
         50
       ],
       [
-        74,
-        49
+        64,
+        50
       ],
       [
-        74,
-        48
+        63,
+        50
+      ],
+      [
+        62,
+        50
+      ],
+      [
+        61,
+        50
+      ],
+      [
+        60,
+        50
+      ],
+      [
+        60,
+        51
       ]
     ],
     "last_thought_beat": 1087,
@@ -8670,24 +9339,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      65,
-      21
+      9,
+      52
     ],
     "dest": [
       63,
       21
     ],
-    "at": "cannery",
+    "at": "terrace_b",
     "spot": [
-      65,
-      21
+      9,
+      52
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 86,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 82,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "malik": {
@@ -8751,32 +9420,24 @@
         "importance": 6
       }
     ],
-    "action": "shifting crates",
-    "activity": "shifting crates",
+    "action": "dozing in front of the TV",
+    "activity": "dozing in front of the TV",
     "thought": "",
     "speech": null,
     "path": [
       [
-        65,
-        18
+        9,
+        51
       ],
       [
-        65,
-        19
-      ],
-      [
-        65,
-        20
-      ],
-      [
-        65,
-        21
+        9,
+        52
       ]
     ],
     "last_thought_beat": 1086,
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 48,
     "chasing": null,
     "driving": null,
@@ -8807,24 +9468,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      75,
-      50
+      9,
+      49
     ],
     "dest": [
       34,
       63
     ],
-    "at": "green",
+    "at": "terrace_b",
     "spot": [
-      75,
-      50
+      9,
+      49
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 62,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 58,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "malik": {
@@ -8924,277 +9585,29 @@
         "importance": 6
       }
     ],
-    "action": "sheltering from the weather",
-    "activity": "sheltering from the weather",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        29,
-        68
+        8,
+        48
       ],
       [
-        30,
-        68
+        9,
+        48
       ],
       [
-        31,
-        68
-      ],
-      [
-        32,
-        68
-      ],
-      [
-        33,
-        68
-      ],
-      [
-        33,
-        67
-      ],
-      [
-        33,
-        66
-      ],
-      [
-        33,
-        65
-      ],
-      [
-        33,
-        64
-      ],
-      [
-        33,
-        63
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        34,
-        62
-      ],
-      [
-        35,
-        62
-      ],
-      [
-        36,
-        62
-      ],
-      [
-        37,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        40,
-        62
-      ],
-      [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
-        65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        75,
-        62
-      ],
-      [
-        75,
-        61
-      ],
-      [
-        75,
-        60
-      ],
-      [
-        75,
-        59
-      ],
-      [
-        75,
-        58
-      ],
-      [
-        75,
-        57
-      ],
-      [
-        75,
-        56
-      ],
-      [
-        75,
-        55
-      ],
-      [
-        75,
-        54
-      ],
-      [
-        75,
-        53
-      ],
-      [
-        75,
-        52
-      ],
-      [
-        75,
-        51
-      ],
-      [
-        75,
-        50
+        9,
+        49
       ]
     ],
     "last_thought_beat": 1084,
     "belief": "People disappear and the grown-ups just stare at the floor.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 14,
     "chasing": null,
     "driving": null,
@@ -9225,24 +9638,24 @@
       "night": "vasquez"
     },
     "pos": [
-      63,
-      33
+      34,
+      49
     ],
     "dest": [
       33,
       53
     ],
-    "at": "bodega",
+    "at": "vasquez",
     "spot": [
-      63,
-      33
+      34,
+      49
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 30,
-      "stress": 50,
+      "energy": 100,
+      "happiness": 36,
+      "stress": 46,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "rey": {
@@ -9312,240 +9725,20 @@
         "importance": 6
       }
     ],
-    "action": "browsing the shelves, watching the snow",
-    "activity": "browsing the shelves, watching the snow",
+    "action": "up for a glass of water",
+    "activity": "up for a glass of water",
     "thought": "",
     "speech": null,
     "path": [
       [
         34,
-        51
-      ],
-      [
-        33,
-        51
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        54
-      ],
-      [
-        34,
-        54
-      ],
-      [
-        35,
-        54
-      ],
-      [
-        36,
-        54
-      ],
-      [
-        37,
-        54
-      ],
-      [
-        38,
-        54
-      ],
-      [
-        39,
-        54
-      ],
-      [
-        40,
-        54
-      ],
-      [
-        41,
-        54
-      ],
-      [
-        42,
-        54
-      ],
-      [
-        43,
-        54
-      ],
-      [
-        44,
-        54
-      ],
-      [
-        45,
-        54
-      ],
-      [
-        46,
-        54
-      ],
-      [
-        47,
-        54
-      ],
-      [
-        48,
-        54
-      ],
-      [
-        49,
-        54
-      ],
-      [
-        50,
-        54
-      ],
-      [
-        51,
-        54
-      ],
-      [
-        52,
-        54
-      ],
-      [
-        53,
-        54
-      ],
-      [
-        54,
-        54
-      ],
-      [
-        55,
-        54
-      ],
-      [
-        56,
-        54
-      ],
-      [
-        57,
-        54
-      ],
-      [
-        58,
-        54
-      ],
-      [
-        58,
-        53
-      ],
-      [
-        58,
-        52
-      ],
-      [
-        58,
-        51
-      ],
-      [
-        58,
-        50
-      ],
-      [
-        58,
         49
-      ],
-      [
-        58,
-        48
-      ],
-      [
-        58,
-        47
-      ],
-      [
-        58,
-        46
-      ],
-      [
-        58,
-        45
-      ],
-      [
-        58,
-        44
-      ],
-      [
-        58,
-        43
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        58,
-        41
-      ],
-      [
-        58,
-        40
-      ],
-      [
-        58,
-        39
-      ],
-      [
-        58,
-        38
-      ],
-      [
-        58,
-        37
-      ],
-      [
-        58,
-        36
-      ],
-      [
-        59,
-        36
-      ],
-      [
-        60,
-        36
-      ],
-      [
-        61,
-        36
-      ],
-      [
-        62,
-        36
-      ],
-      [
-        62,
-        35
-      ],
-      [
-        62,
-        34
-      ],
-      [
-        63,
-        34
-      ],
-      [
-        63,
-        33
       ]
     ],
     "last_thought_beat": 1081,
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 28,
     "chasing": null,
     "driving": null,
@@ -10078,24 +10271,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      22,
-      34
+      9,
+      49
     ],
     "dest": [
       21,
       37
     ],
-    "at": "barbershop",
+    "at": "terrace_b",
     "spot": [
-      22,
-      34
+      9,
+      49
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 25,
-      "stress": 71,
+      "energy": 50,
+      "happiness": 31,
+      "stress": 67,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "tee": {
@@ -10235,29 +10428,33 @@
         "importance": 7
       }
     ],
-    "action": "restocking the back bar",
-    "activity": "restocking the back bar",
+    "action": "lying awake",
+    "activity": "lying awake",
     "thought": "",
     "speech": null,
     "path": [
       [
-        21,
-        33
+        9,
+        52
       ],
       [
-        22,
-        33
+        9,
+        51
       ],
       [
-        22,
-        34
+        9,
+        50
+      ],
+      [
+        9,
+        49
       ]
     ],
     "last_thought_beat": 1090,
     "belief": "Junie's passing changes nothing about the work we have to do.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 38,
     "chasing": null,
     "driving": null,
@@ -10287,24 +10484,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      63,
-      32
+      77,
+      34
     ],
     "dest": [
       76,
       40
     ],
-    "at": "bodega",
+    "at": "delmarflats",
     "spot": [
-      63,
-      32
+      77,
+      34
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 97,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 93,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "junie": {
@@ -10990,25 +11187,157 @@
         "importance": 6
       }
     ],
-    "action": "signing for a delivery, watching the snow",
-    "activity": "signing for a delivery, watching the snow",
+    "action": "lying awake",
+    "activity": "lying awake",
     "thought": "",
     "speech": null,
     "path": [
       [
         63,
+        32
+      ],
+      [
+        62,
+        32
+      ],
+      [
+        62,
         33
       ],
       [
+        62,
+        34
+      ],
+      [
+        62,
+        35
+      ],
+      [
+        62,
+        36
+      ],
+      [
         63,
-        32
+        36
+      ],
+      [
+        64,
+        36
+      ],
+      [
+        65,
+        36
+      ],
+      [
+        66,
+        36
+      ],
+      [
+        67,
+        36
+      ],
+      [
+        68,
+        36
+      ],
+      [
+        69,
+        36
+      ],
+      [
+        70,
+        36
+      ],
+      [
+        71,
+        36
+      ],
+      [
+        72,
+        36
+      ],
+      [
+        72,
+        37
+      ],
+      [
+        72,
+        38
+      ],
+      [
+        72,
+        39
+      ],
+      [
+        72,
+        40
+      ],
+      [
+        72,
+        41
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        77,
+        40
+      ],
+      [
+        77,
+        39
+      ],
+      [
+        77,
+        38
+      ],
+      [
+        77,
+        37
+      ],
+      [
+        77,
+        36
+      ],
+      [
+        77,
+        35
+      ],
+      [
+        77,
+        34
       ]
     ],
     "last_thought_beat": 1079,
     "belief": "The weight on this street is getting heavier by the hour.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 44,
     "chasing": null,
     "leads": [
@@ -11049,24 +11378,24 @@
       "night": "harborbar"
     },
     "pos": [
-      75,
-      16
+      33,
+      17
     ],
     "dest": [
       75,
       24
     ],
-    "at": "riverflats",
+    "at": "harborbar",
     "spot": [
-      75,
-      16
+      33,
+      17
     ],
     "mood": {
       "energy": 0,
-      "happiness": 30,
-      "stress": 98,
-      "social_need": 24,
-      "fear": 16
+      "happiness": 36,
+      "stress": 94,
+      "social_need": 0,
+      "fear": 12
     },
     "relationships": {
       "booker": {
@@ -11260,34 +11589,246 @@
         "importance": 6
       }
     ],
-    "action": "sitting down for a minute",
-    "activity": "sitting down for a minute",
+    "action": "wiping down the counter",
+    "activity": "wiping down the counter",
     "thought": "",
     "speech": null,
     "path": [
       [
+        75,
+        23
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
         74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        37,
+        25
+      ],
+      [
+        37,
+        24
+      ],
+      [
+        37,
+        23
+      ],
+      [
+        37,
+        22
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        34,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        31,
+        21
+      ],
+      [
+        31,
         20
       ],
       [
-        75,
-        20
-      ],
-      [
-        75,
+        31,
         19
       ],
       [
-        75,
+        32,
+        19
+      ],
+      [
+        33,
+        19
+      ],
+      [
+        33,
         18
       ],
       [
-        75,
+        33,
         17
-      ],
-      [
-        75,
-        16
       ]
     ],
     "last_thought_beat": 1082,
@@ -11324,24 +11865,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      34,
-      32
+      78,
+      35
     ],
     "dest": [
       50,
       37
     ],
-    "at": "pawnshop",
+    "at": "delmarflats",
     "spot": [
-      34,
-      32
+      78,
+      35
     ],
     "mood": {
-      "energy": 62,
-      "happiness": 30,
-      "stress": 88,
+      "energy": 90,
+      "happiness": 36,
+      "stress": 84,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "booker": {
@@ -11919,238 +12460,26 @@
         "importance": 6
       }
     ],
-    "action": "counting the float",
-    "activity": "counting the float",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        75,
-        39
-      ],
-      [
-        75,
-        40
-      ],
-      [
-        76,
-        40
-      ],
-      [
-        76,
-        41
-      ],
-      [
-        76,
-        42
-      ],
-      [
-        75,
-        42
-      ],
-      [
-        74,
-        42
-      ],
-      [
-        73,
-        42
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        71,
-        42
-      ],
-      [
-        70,
-        42
-      ],
-      [
-        69,
-        42
-      ],
-      [
-        68,
-        42
-      ],
-      [
-        67,
-        42
-      ],
-      [
-        66,
-        42
-      ],
-      [
-        65,
-        42
-      ],
-      [
-        64,
-        42
-      ],
-      [
-        63,
-        42
-      ],
-      [
-        62,
-        42
-      ],
-      [
-        61,
-        42
-      ],
-      [
-        60,
-        42
-      ],
-      [
-        59,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        43,
-        42
-      ],
-      [
-        42,
-        42
-      ],
-      [
-        41,
-        42
-      ],
-      [
-        40,
-        42
-      ],
-      [
-        39,
-        42
-      ],
-      [
-        38,
-        42
-      ],
-      [
-        37,
-        42
-      ],
-      [
-        36,
-        42
-      ],
-      [
-        35,
-        42
-      ],
-      [
-        34,
-        42
-      ],
-      [
-        34,
-        41
-      ],
-      [
-        34,
-        40
-      ],
-      [
-        34,
-        39
-      ],
-      [
-        34,
-        38
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        34,
-        36
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
+        79,
         33
       ],
       [
-        34,
-        32
+        78,
+        33
+      ],
+      [
+        78,
+        34
+      ],
+      [
+        78,
+        35
       ]
     ],
     "last_thought_beat": 1083,
@@ -12161,7 +12490,7 @@
     "volatility": 78,
     "chasing": null,
     "last_instigated_day": 259,
-    "driving": "van",
+    "driving": null,
     "vehicle": "van"
   },
   "okafor": {
@@ -12190,7 +12519,7 @@
     },
     "pos": [
       60,
-      32
+      33
     ],
     "dest": [
       76,
@@ -12199,14 +12528,14 @@
     "at": "bodega",
     "spot": [
       60,
-      32
+      33
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 36,
-      "stress": 58,
-      "social_need": 0,
-      "fear": 16
+      "energy": 58,
+      "happiness": 42,
+      "stress": 54,
+      "social_need": 12,
+      "fear": 12
     },
     "relationships": {
       "ivy": {
@@ -12294,25 +12623,21 @@
         "importance": 8
       }
     ],
-    "action": "restocking shelves, watching the snow",
-    "activity": "restocking shelves, watching the snow",
+    "action": "watching the door",
+    "activity": "watching the door",
     "thought": "",
     "speech": null,
     "path": [
       [
         60,
         33
-      ],
-      [
-        60,
-        32
       ]
     ],
     "last_thought_beat": 1088,
     "belief": "Another one gone. The tally keeps rising while we watch.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 42,
     "chasing": null,
     "driving": null,
@@ -12343,24 +12668,24 @@
       "night": "riverflats"
     },
     "pos": [
-      2,
-      67
+      75,
+      23
     ],
     "dest": [
       6,
       63
     ],
-    "at": "precinct",
+    "at": "riverflats",
     "spot": [
-      2,
-      67
+      75,
+      23
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 47,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 43,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "ruiz": {
@@ -12506,38 +12831,74 @@
         "importance": 6
       }
     ],
-    "action": "filing paperwork",
-    "activity": "filing paperwork",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        5,
-        64
+        83,
+        18
       ],
       [
-        4,
-        64
+        82,
+        18
       ],
       [
-        3,
-        64
+        82,
+        17
       ],
       [
-        2,
-        64
+        81,
+        17
       ],
       [
-        2,
-        65
+        80,
+        17
       ],
       [
-        2,
-        66
+        79,
+        17
       ],
       [
-        2,
-        67
+        78,
+        17
+      ],
+      [
+        77,
+        17
+      ],
+      [
+        76,
+        17
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        18
+      ],
+      [
+        75,
+        19
+      ],
+      [
+        75,
+        20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
       ]
     ],
     "last_thought_beat": 1080,
@@ -12575,21 +12936,24 @@
       "night": "riverflats"
     },
     "pos": [
-      21,
-      64
+      74,
+      20
     ],
     "dest": [
       75,
       24
     ],
-    "at": "clinic",
-    "spot": null,
+    "at": "riverflats",
+    "spot": [
+      74,
+      20
+    ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 95,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 91,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "simone": {
@@ -12697,48 +13061,420 @@
         "importance": 6
       }
     ],
-    "action": "making bad coffee, watching the snow",
-    "activity": "making bad coffee, watching the snow",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        24,
-        67
+        21,
+        64
       ],
       [
-        23,
-        67
+        21,
+        63
+      ],
+      [
+        21,
+        62
+      ],
+      [
+        21,
+        61
+      ],
+      [
+        21,
+        60
+      ],
+      [
+        21,
+        59
+      ],
+      [
+        21,
+        58
       ],
       [
         22,
-        67
+        58
       ],
       [
-        21,
-        67
+        23,
+        58
       ],
       [
-        21,
-        66
+        24,
+        58
       ],
       [
-        21,
-        65
+        25,
+        58
       ],
       [
-        21,
-        64
+        26,
+        58
+      ],
+      [
+        27,
+        58
+      ],
+      [
+        28,
+        58
+      ],
+      [
+        29,
+        58
+      ],
+      [
+        30,
+        58
+      ],
+      [
+        31,
+        58
+      ],
+      [
+        32,
+        58
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        34,
+        58
+      ],
+      [
+        35,
+        58
+      ],
+      [
+        36,
+        58
+      ],
+      [
+        37,
+        58
+      ],
+      [
+        38,
+        58
+      ],
+      [
+        39,
+        58
+      ],
+      [
+        40,
+        58
+      ],
+      [
+        40,
+        57
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        40,
+        53
+      ],
+      [
+        40,
+        52
+      ],
+      [
+        40,
+        51
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        40,
+        49
+      ],
+      [
+        40,
+        48
+      ],
+      [
+        40,
+        47
+      ],
+      [
+        40,
+        46
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        40,
+        38
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        32
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        74,
+        24
+      ],
+      [
+        74,
+        23
+      ],
+      [
+        74,
+        22
+      ],
+      [
+        74,
+        21
+      ],
+      [
+        74,
+        20
       ]
     ],
     "last_thought_beat": 1087,
     "belief": "Another body for the registry, another reminder of our failure.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 20,
     "chasing": null,
-    "driving": null,
+    "driving": "car",
     "vehicle": "car"
   },
   "priya": {
@@ -12765,24 +13501,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      37,
-      68
+      78,
+      35
     ],
     "dest": [
       76,
       40
     ],
-    "at": "school",
+    "at": "delmarflats",
     "spot": [
-      37,
-      68
+      78,
+      35
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 50,
+      "energy": 30,
+      "happiness": 24,
+      "stress": 46,
       "social_need": 0,
-      "fear": 16
+      "fear": 22
     },
     "relationships": {
       "nadia": {
@@ -12872,41 +13608,33 @@
         "importance": 6
       }
     ],
-    "action": "at the desk, watching the snow",
-    "activity": "at the desk, watching the snow",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
-        67
+        75,
+        35
       ],
       [
-        34,
-        67
+        76,
+        35
       ],
       [
-        35,
-        67
+        77,
+        35
       ],
       [
-        36,
-        67
-      ],
-      [
-        37,
-        67
-      ],
-      [
-        37,
-        68
+        78,
+        35
       ]
     ],
     "last_thought_beat": 1080,
     "belief": "The air is poisoned when death brings only numbness.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 26,
     "chasing": null,
     "driving": null,
@@ -12936,8 +13664,8 @@
       "night": "church"
     },
     "pos": [
-      52,
-      39
+      48,
+      37
     ],
     "dest": [
       50,
@@ -12945,15 +13673,15 @@
     ],
     "at": "church",
     "spot": [
-      52,
-      39
+      48,
+      37
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 68,
-      "social_need": 74,
-      "fear": 16
+      "energy": 50,
+      "happiness": 36,
+      "stress": 64,
+      "social_need": 98,
+      "fear": 12
     },
     "relationships": {
       "adaeze": {
@@ -13029,26 +13757,38 @@
     "speech": null,
     "path": [
       [
-        50,
-        40
+        52,
+        39
       ],
       [
         51,
-        40
-      ],
-      [
-        52,
-        40
-      ],
-      [
-        52,
         39
+      ],
+      [
+        50,
+        39
+      ],
+      [
+        49,
+        39
+      ],
+      [
+        48,
+        39
+      ],
+      [
+        48,
+        38
+      ],
+      [
+        48,
+        37
       ]
     ],
     "last_thought_beat": 1088,
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 10,
     "chasing": null,
     "driving": null,
@@ -13080,21 +13820,24 @@
       "night": "terrace_a"
     },
     "pos": [
-      78,
-      64
+      3,
+      52
     ],
     "dest": [
       78,
       63
     ],
-    "at": "depot",
-    "spot": null,
+    "at": "terrace_a",
+    "spot": [
+      3,
+      52
+    ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
+      "energy": 50,
+      "happiness": 36,
       "stress": 98,
-      "social_need": 24,
-      "fear": 95
+      "social_need": 0,
+      "fear": 98
     },
     "relationships": {
       "simone": {
@@ -13192,49 +13935,41 @@
         "importance": 7
       }
     ],
-    "action": "having a smoke by the door",
-    "activity": "having a smoke by the door",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        75,
-        68
+        4,
+        48
       ],
       [
-        76,
-        68
+        3,
+        48
       ],
       [
-        77,
-        68
+        3,
+        49
       ],
       [
-        78,
-        68
+        3,
+        50
       ],
       [
-        78,
-        67
+        3,
+        51
       ],
       [
-        78,
-        66
-      ],
-      [
-        78,
-        65
-      ],
-      [
-        78,
-        64
+        3,
+        52
       ]
     ],
-    "last_thought_beat": 1086,
+    "last_thought_beat": 1094,
     "belief": "Another day ends without incident, save for the usual neighborhood grief.",
     "alive": true,
     "health": 80,
-    "grief": 12,
+    "grief": 9,
     "volatility": 46,
     "chasing": null,
     "driving": null,
@@ -13264,24 +13999,24 @@
       "night": "riverflats"
     },
     "pos": [
-      65,
-      21
+      74,
+      20
     ],
     "dest": [
       63,
       21
     ],
-    "at": "cannery",
+    "at": "riverflats",
     "spot": [
-      65,
-      21
+      74,
+      20
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 67,
+      "energy": 50,
+      "happiness": 36,
+      "stress": 63,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "rosa": {
@@ -13395,38 +14130,262 @@
         "importance": 6
       }
     ],
-    "action": "shifting crates",
-    "activity": "shifting crates",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        60,
+        33,
+        17
+      ],
+      [
+        32,
+        17
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        31,
+        18
+      ],
+      [
+        31,
+        19
+      ],
+      [
+        31,
+        20
+      ],
+      [
+        31,
+        21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
+        34,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        38,
+        21
+      ],
+      [
+        39,
+        21
+      ],
+      [
+        40,
+        21
+      ],
+      [
+        40,
         22
+      ],
+      [
+        40,
+        23
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        25
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        60,
+        26
       ],
       [
         61,
-        22
+        26
       ],
       [
         62,
-        22
+        26
       ],
       [
         63,
-        22
+        26
       ],
       [
         64,
-        22
+        26
       ],
       [
         65,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        74,
+        24
+      ],
+      [
+        74,
+        23
+      ],
+      [
+        74,
         22
       ],
       [
-        65,
+        74,
         21
+      ],
+      [
+        74,
+        20
       ]
     ],
     "last_thought_beat": 1082,
@@ -13437,7 +14396,7 @@
     "volatility": 66,
     "chasing": null,
     "last_instigated_day": 248,
-    "driving": null,
+    "driving": "van",
     "vehicle": "van"
   },
   "sticks": {
@@ -13465,21 +14424,21 @@
       "night": "underpass"
     },
     "pos": [
-      80,
-      51
+      63,
+      67
     ],
     "dest": [
       79,
       51
     ],
-    "at": "green",
+    "at": "underpass",
     "spot": null,
     "mood": {
-      "energy": 22,
-      "happiness": 30,
-      "stress": 60,
-      "social_need": 74,
-      "fear": 16
+      "energy": 50,
+      "happiness": 36,
+      "stress": 56,
+      "social_need": 98,
+      "fear": 12
     },
     "relationships": {
       "ivy": {
@@ -14053,21 +15012,21 @@
         "importance": 6
       }
     ],
-    "action": "watching the road",
-    "activity": "watching the road",
+    "action": "watching the street",
+    "activity": "watching the street",
     "thought": "",
     "speech": null,
     "path": [
       [
-        80,
-        51
+        63,
+        67
       ]
     ],
     "last_thought_beat": 1081,
     "belief": "The shadows grow longer when someone falls and nobody cries.",
     "alive": true,
     "health": 80,
-    "grief": 31,
+    "grief": 28,
     "volatility": 68,
     "chasing": null,
     "last_instigated_day": 271,
@@ -14097,24 +15056,24 @@
       "night": "okonkwo"
     },
     "pos": [
-      36,
-      35
+      63,
+      50
     ],
     "dest": [
       62,
       53
     ],
-    "at": "pawnshop",
+    "at": "okonkwo",
     "spot": [
-      36,
-      35
+      63,
+      50
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 30,
-      "stress": 50,
+      "energy": 76,
+      "happiness": 36,
+      "stress": 46,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "dez": {
@@ -14184,34 +15143,22 @@
     "grief": 0,
     "arrived_day": 236,
     "last_thought_beat": 1079,
-    "activity": "behind the till",
+    "activity": "asleep",
     "path": [
       [
-        34,
-        32
+        65,
+        50
       ],
       [
-        35,
-        32
+        64,
+        50
       ],
       [
-        36,
-        32
-      ],
-      [
-        36,
-        33
-      ],
-      [
-        36,
-        34
-      ],
-      [
-        36,
-        35
+        63,
+        50
       ]
     ],
-    "action": "behind the till",
+    "action": "asleep",
     "thought": "",
     "speech": null,
     "volatility": 45,
@@ -14242,24 +15189,24 @@
       "night": "riverflats"
     },
     "pos": [
-      2,
-      67
+      76,
+      16
     ],
     "dest": [
       75,
       24
     ],
-    "at": "precinct",
+    "at": "riverflats",
     "spot": [
-      2,
-      67
+      76,
+      16
     ],
     "mood": {
-      "energy": 56,
-      "happiness": 30,
-      "stress": 62,
+      "energy": 84,
+      "happiness": 36,
+      "stress": 58,
       "social_need": 0,
-      "fear": 16
+      "fear": 12
     },
     "relationships": {
       "kohl": {
@@ -14307,54 +15254,18 @@
     "last_thought_beat": 1086,
     "volatility": 33,
     "chasing": null,
-    "activity": "filing paperwork",
+    "activity": "up for a glass of water",
     "path": [
       [
-        9,
-        64
+        75,
+        16
       ],
       [
-        8,
-        64
-      ],
-      [
-        7,
-        64
-      ],
-      [
-        6,
-        64
-      ],
-      [
-        5,
-        64
-      ],
-      [
-        4,
-        64
-      ],
-      [
-        3,
-        64
-      ],
-      [
-        2,
-        64
-      ],
-      [
-        2,
-        65
-      ],
-      [
-        2,
-        66
-      ],
-      [
-        2,
-        67
+        76,
+        16
       ]
     ],
-    "action": "filing paperwork",
+    "action": "up for a glass of water",
     "thought": "",
     "speech": null,
     "driving": null,

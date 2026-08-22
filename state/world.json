@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1093,
-  "last_beat_at": "2026-08-22T18:57:12Z",
+  "beat": 1095,
+  "last_beat_at": "2026-08-22T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "overcast",
   "heat": {
-    "riverside": 42,
-    "delmar": 54,
-    "terraces": 12,
-    "civic": 5
+    "riverside": 40,
+    "delmar": 52,
+    "terraces": 10,
+    "civic": 10
   },
   "turf": {
     "riverside": "crew",
@@ -272,6 +272,22 @@
   ],
   "events": [
     {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "priya"
+      ],
+      "text": "Ms. Priya Raman ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1095
+    },
+    {
       "id": "debt_called",
       "heat": {},
       "mood": {
@@ -509,18 +525,6 @@
       ],
       "text": "Marcus Calloway does Cass Deveaux a favour that costs them something real.",
       "beat": 1067
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1066
     }
   ],
   "player_queue": [
@@ -548,7 +552,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 31549
+      "deep": 34630
     }
   },
   "silent_runs": 0,
@@ -1201,41 +1205,43 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 25
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 15
+      "heat": 13
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 33
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 51
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 55
+      "heat": 53
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1093,
-    "providers": []
+    "beat": 1095,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -1259,21 +1265,5 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1092-fight-1",
-      "kind": "fight",
-      "effect": "scuffle",
-      "at": "laundromat",
-      "x": 21,
-      "y": 23,
-      "who": [
-        "rey",
-        "dez"
-      ],
-      "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
-      "started": 1092,
-      "until": 1094
-    }
-  ]
+  "incidents": []
 }
