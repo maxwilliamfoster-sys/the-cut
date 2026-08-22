@@ -17,8 +17,8 @@ import random
 import sys
 import time
 
-from . import (activities, city, clock, cognition, construction, drama, events, law,
-               llm, mortality, player, reflect, state)
+from . import (activities, city, clock, cognition, construction, drama, events,
+               incidents, law, llm, mortality, player, reflect, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -239,7 +239,9 @@ def run_beat(world, agents, quiet=False, cognition=None):
         for aid in targets:
             if aid in alive:
                 apply_mood(alive[aid], ev.get("mood", {}))
-        world["events"] = ([ev] + world.get("events", []))[:20]
+        # Stamped with the beat so anything downstream can tell "this just happened" from
+        # "this is still the most recent thing on record" — the incident layer could not.
+        world["events"] = ([dict(ev, beat=beat)] + world.get("events", []))[:20]
 
     records = [{
         "beat": beat, "day": day, "block": block, "kind": "beat",
@@ -304,6 +306,15 @@ def run_beat(world, agents, quiet=False, cognition=None):
             law.note_pressure(world, records)
         except Exception as e:
             print(f"[tick] enforcement failed on beat {beat} ({type(e).__name__}: {e})")
+
+    # Anything worth standing and watching gets a place and a lifespan, so the browser has
+    # something to draw. Free — it only records where the beat's events happened.
+    if not quiet:
+        try:
+            incidents.expire(world, beat)
+            incidents.from_records(world, alive, records, beat)
+        except Exception as e:
+            print(f"[tick] incidents failed on beat {beat} ({type(e).__name__}: {e})")
 
     world["last_beat_at"] = clock.advance(world["last_beat_at"], 1)
     return records

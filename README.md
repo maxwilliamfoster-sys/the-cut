@@ -132,6 +132,43 @@ per-*minute* ceiling as a single booking — exceed it and the request is refuse
 Cost lands around 3,400 tokens a beat, ~320K a day against a 450K self-imposed budget, with
 automatic failover to OpenRouter if Groq's daily cap is ever hit.
 
+## Things you can stand and watch
+
+Every dramatic event used to resolve inside one beat and leave nothing but a line of text —
+so on the map a beating looked exactly like a quiet afternoon. `sim/incidents.py` gives an
+event a **place and a lifespan**, and a beat is fifteen real minutes, so a two-beat fight is
+half an hour of trouble on a street corner you can actually catch.
+
+Fires, fights, public rows, shots fired, police raids, arrests, vigils, building work and
+openings. It is deliberately not graphic: shapes, flashes and drifting smoke, the register
+of a police report seen from across the street. Nothing is depicted.
+
+Because the map is 128 tiles wide, an incident is a few pixels at fit-zoom — so each one
+also gets a pulsing ring drawn in screen space, and appears at the top of the panel with
+how long it has left. Clicking takes you there to watch before it stops.
+
+Costs nothing: the simulation only records where the beat's events happened.
+
+## Traffic
+
+The city has had four-lane roads with painted centre lines since the first commit and
+absolutely nothing on them, which is most of why it read as a diagram. Cars are pure
+decoration and cost the simulation nothing — the browser reads the road corridors off the
+map itself, so adding a street in `sim/city.py` puts traffic on it with no other change.
+Headlights at night, and marked cars on any district under heavy police attention.
+
+## Room to grow
+
+The map was 96x72 and effectively full: one 8x6 plot left and nothing bigger, so the
+expansion system had nowhere to put anything. It is now **128x104** — the original blocks
+keep their exact coordinates, and the extra ground is open land to the south and east, with
+a fifth district, **The Flats**, that starts completely empty.
+
+Growth was throttled hard when there was nowhere to build. Now it runs at roughly a building
+every couple of real hours, and `find_plot` prefers whichever district is thinnest, so the
+city spreads into open ground instead of thickening one corner. Over a simulated week: nine
+new buildings, six of them in The Flats, including a library and a social club.
+
 ## Staying alive on a free allowance
 
 The city used to think brilliantly until early afternoon and then go silent for the rest of

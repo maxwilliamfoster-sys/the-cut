@@ -177,7 +177,7 @@ def _reopen(b, rng):
 
 # ── expansion ────────────────────────────────────────────────────────────────
 
-def find_plot(buildings, w, h):
+def find_plot(buildings, w, h, rng=None):
     """An empty rectangle with a pavement margin, clear of roads, water and everything
     already built. Returns (x, y, district) or None."""
     taken = set()
@@ -200,13 +200,28 @@ def find_plot(buildings, w, h):
         for x in range(city.W):
             blocked.add((x, y))
 
-    for y in range(city.RIVER_DEPTH + 2, city.H - h):
-        for x in range(1, city.W - w):
+    # Collect every valid plot rather than returning the first one found. Scanning top-left
+    # to bottom-right and taking the first hit put four consecutive new buildings in the
+    # same corner while an entire empty district sat untouched.
+    found = []
+    for y in range(city.RIVER_DEPTH + 2, city.H - h, 2):
+        for x in range(1, city.W - w, 2):
             if any((xx, yy) in blocked
                    for yy in range(y, y + h) for xx in range(x, x + w)):
                 continue
-            return x, y, city.district_at(y)
-    return None
+            found.append((x, y, city.district_at(y)))
+    if not found:
+        return None
+
+    # Prefer wherever the city is thinnest, so it spreads into open ground instead of
+    # thickening one corner. That is what makes growth legible from the map.
+    density = {}
+    for b in buildings:
+        density[b["district"]] = density.get(b["district"], 0) + 1
+    rng = rng or random
+    thin = min(density.get(d, 0) for (_x, _y, d) in found)
+    best = [p for p in found if density.get(p[2], 0) <= thin + 1]
+    return rng.choice(best or found)
 
 
 def maybe_expand(world, agents, buildings, beat, day):
@@ -221,14 +236,22 @@ def maybe_expand(world, agents, buildings, beat, day):
     # city grew a new building roughly every eight city-hours.
     if beat % 4 != 0:
         return []
+    # The map used to be full, so growth was throttled hard to stop it thrashing against
+    # nowhere to build. There is open ground to the south and east now, and watching the
+    # city actually spread onto it is the point — roughly a new building every couple of
+    # real hours, which is a visible skyline change inside a single sitting.
     last = world.get("last_expansion_day", -999)
-    overdue = day - last >= 60
-    if not (crowded or overdue) or rng.random() > 0.12:
+    overdue = day - last >= 18
+    if not (crowded or overdue) or rng.random() > 0.35:
         return []
 
-    kind, style, name_t, w, h, floors = rng.choice(
-        [e for e in EXPANSIONS if e[0] == "home"] if crowded else EXPANSIONS)
-    plot = find_plot(buildings, w, h)
+    # Crowding pushes towards housing, but not exclusively — a district of nothing but
+    # tenements is not a city growing, it is a car park with beds in it.
+    pool = EXPANSIONS
+    if crowded and rng.random() < 0.6:
+        pool = [e for e in EXPANSIONS if e[0] == "home"]
+    kind, style, name_t, w, h, floors = rng.choice(pool)
+    plot = find_plot(buildings, w, h, rng)
     if not plot:
         return []
     x, y, district = plot

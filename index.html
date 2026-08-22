@@ -183,6 +183,7 @@
   .tr.go:hover{background:rgba(255,255,255,.045)}
   .tr b{font-weight:600}
   .pip{width:7px; height:7px; border-radius:50%; margin-top:5px; flex-shrink:0}
+  .p4{background:#ff8a3d; box-shadow:0 0 0 3px rgba(255,138,61,.18)}
   .p3{background:var(--hot)} .p2{background:var(--gold)} .p1{background:var(--dim)}
   .tr .sub{color:var(--dim); font-size:10px; display:block; margin-top:1px}
   .calm{color:var(--dim); font-size:11px; padding:4px 0}
@@ -409,7 +410,7 @@ async function load(first){
       LOG = txt.trim().split('\n').filter(Boolean).map(JSON.parse);
     }catch(e){ LOG = []; }
 
-    if(first || shapeChanged) buildBackground();
+    if(first || shapeChanged){ buildBackground(); ROADS = null; }   // new streets, new traffic
     if(first) fitCanvas();
     if(newBeat) onNewBeat();
     paintPanel();
@@ -875,12 +876,271 @@ function draw(){
                     text: sp.text, hot: selected === id});
   }
 
+  drawCars(now);          // traffic on the roads that have always been empty
+  drawIncidents(now);     // fights, fires, police lights — the things worth watching
+
   ctx.restore();
   drawLabels();
+  drawIncidentMarks();   // so an incident is findable even zoomed all the way out
   drawLinks(R);          // who is hunting whom, drawn across the map
   drawMarks(R);          // one dot per person for what state they are in
   drawTags(tags);
   drawBubbles(bubbles);
+}
+
+// ── things happening, and traffic ───────────────────────────────────────────
+// Two layers drawn inside the world transform, so they scale and pan with the city.
+//
+// INCIDENTS are events the simulation has given a place and a lifespan to (see
+// sim/incidents.py). Everything here is abstract on purpose — shapes, flashes and smoke,
+// the register of a police report seen from across the street. Nothing is depicted.
+//
+// TRAFFIC is pure decoration and costs the simulation nothing. The city has had four-lane
+// roads with painted centre lines since the beginning and absolutely nothing on them, which
+// is most of why it read as a diagram rather than a place.
+
+function liveIncidents(){
+  if(!WORLD) return [];
+  const b = WORLD.beat || 0;
+  return (WORLD.incidents || []).filter(i => (i.until||0) > b);
+}
+
+function drawIncidents(now){
+  for(const inc of liveIncidents()){
+    const x = (inc.x + 0.5) * T, y = (inc.y + 0.5) * T;
+    // Age 0..1 across the incident's life, so effects can settle rather than strobe forever.
+    const span = Math.max(1, (inc.until - inc.started)) * BEAT_MS;
+    const age = Math.min(1, Math.max(0, (Date.now() - Date.parse(WORLD.last_beat_at) +
+                        (WORLD.beat - inc.started) * BEAT_MS) / span));
+    switch(inc.effect){
+      case 'flames':   fxFlames(x, y, now); break;
+      case 'lights':   fxLights(x, y, now); break;
+      case 'flashes':  fxFlashes(x, y, now); break;
+      case 'scuffle':  fxScuffle(x, y, now); break;
+      case 'row':      fxRow(x, y, now); break;
+      case 'crowd':    fxCrowd(x, y, now); break;
+      case 'works':    fxWorks(x, y, now); break;
+      case 'opening':  fxOpening(x, y, now, age); break;
+    }
+  }
+}
+
+function fxFlames(x, y, now){
+  for(let i=0;i<7;i++){
+    const t = now/220 + i*1.7;
+    const fx = x + Math.sin(t*1.3 + i)*7, h = 7 + Math.sin(t)*4 + (i%3)*2;
+    ctx.fillStyle = i%3===0 ? 'rgba(255,196,80,.85)' : 'rgba(226,110,40,.8)';
+    ctx.fillRect(fx-2, y-h, 4, h);
+  }
+  ctx.fillStyle='rgba(255,236,180,.9)'; ctx.fillRect(x-5, y-3, 10, 4);
+  for(let i=0;i<5;i++){                                   // smoke going up and drifting
+    const t=(now/900 + i*0.2)%1;
+    ctx.fillStyle=`rgba(90,88,86,${(1-t)*0.35})`;
+    ctx.fillRect(x-3 + Math.sin(t*6+i)*8, y-14 - t*26, 5, 5);
+  }
+}
+
+function fxLights(x, y, now){
+  // A cruiser's bar: blue one side, red the other, alternating.
+  const on = Math.floor(now/260)%2;
+  const glow = (cx, col) => {
+    const g = ctx.createRadialGradient(cx, y, 1, cx, y, 16);
+    g.addColorStop(0, col); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(cx-16, y-16, 32, 32);
+  };
+  glow(x-5, on ? 'rgba(90,150,255,.8)' : 'rgba(90,150,255,.15)');
+  glow(x+5, on ? 'rgba(255,90,90,.15)' : 'rgba(255,90,90,.8)');
+}
+
+function fxFlashes(x, y, now){
+  // Shots: two brief muzzle flashes trading, and people getting away from it.
+  const beat = Math.floor(now/150)%6;
+  if(beat===0 || beat===2){
+    const fx = beat===0 ? x-9 : x+9;
+    ctx.fillStyle='rgba(255,240,190,.95)';
+    ctx.beginPath();
+    for(let i=0;i<8;i++){
+      const a=i*Math.PI/4, r=i%2?3:8;
+      ctx[i?'lineTo':'moveTo'](fx+Math.cos(a)*r, y+Math.sin(a)*r);
+    }
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.strokeStyle='rgba(255,220,150,.35)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(x-9,y); ctx.lineTo(x+9,y); ctx.stroke();
+  for(let i=0;i<4;i++){                                   // onlookers scattering outward
+    const t=(now/700 + i*0.25)%1, a=i*1.9;
+    ctx.fillStyle=`rgba(200,205,215,${(1-t)*0.5})`;
+    ctx.fillRect(x+Math.cos(a)*(10+t*22)-1, y+Math.sin(a)*(8+t*16)-2, 3, 4);
+  }
+}
+
+function fxScuffle(x, y, now){
+  // Two shapes shoving, with impact rings. No detail, and none wanted.
+  const sh = Math.sin(now/90)*3;
+  ctx.fillStyle='rgba(226,226,232,.85)';
+  ctx.fillRect(x-8+sh, y-6, 4, 9);
+  ctx.fillRect(x+4-sh, y-6, 4, 9);
+  const p = (now/260)%1;
+  ctx.strokeStyle=`rgba(255,180,90,${(1-p)*0.8})`; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.arc(x, y-2, 4+p*11, 0, 7); ctx.stroke();
+}
+
+function fxRow(x, y, now){
+  // A public argument: jagged shout lines, nobody touching anybody.
+  const p=(now/400)%1;
+  ctx.strokeStyle=`rgba(224,180,74,${(1-p)*0.75})`; ctx.lineWidth=1.2;
+  for(const dir of [-1, 1]){
+    ctx.beginPath();
+    for(let i=0;i<4;i++)
+      ctx.lineTo(x + dir*(6+i*3), y - 6 + (i%2?3:-3));
+    ctx.stroke();
+  }
+}
+
+function fxCrowd(x, y, now){
+  for(let i=0;i<9;i++){
+    const a=i*0.7, r=7+ (i%3)*4 + Math.sin(now/1400+i)*1.5;
+    ctx.fillStyle='rgba(60,64,74,.9)';
+    ctx.fillRect(x+Math.cos(a)*r-1.5, y+Math.sin(a)*r*0.6-3, 3, 6);
+  }
+}
+
+function fxWorks(x, y, now){
+  ctx.strokeStyle='rgba(200,170,80,.9)'; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.moveTo(x-9, y+6); ctx.lineTo(x-9, y-12);
+  ctx.lineTo(x+7 + Math.sin(now/1500)*3, y-12); ctx.stroke();   // a slewing crane arm
+  if(Math.floor(now/240)%3===0){                                // welding
+    ctx.fillStyle='rgba(190,225,255,.9)'; ctx.fillRect(x+2, y-2, 3, 3);
+  }
+}
+
+function fxOpening(x, y, now, age){
+  for(let i=0;i<8;i++){
+    const t=(now/800 + i*0.13)%1;
+    ctx.fillStyle=`rgba(${i%2?'224,180,74':'150,210,180'},${(1-t)*(1-age)*0.9})`;
+    ctx.fillRect(x + Math.cos(i*0.9)*t*24 - 1, y - t*20 - 2, 2.5, 2.5);
+  }
+}
+
+// ── traffic ─────────────────────────────────────────────────────────────────
+// Corridors are read off the map once rather than hard-coded, so adding a road in
+// sim/city.py puts cars on it with no change here.
+
+let ROADS = null;
+const CAR_COLORS = ['#7d8590','#4a5a6a','#8a5a4a','#3f4a55','#6a6f58','#55506a','#9aa0a8'];
+
+function buildRoads(){
+  ROADS = {h:[], v:[]};
+  const isRoad = (x,y) => ',:='.includes(MAP.grid[y][x]);
+  for(let y=0;y<MAP.h;y++){
+    let run=0;
+    for(let x=0;x<=MAP.w;x++){
+      if(x<MAP.w && isRoad(x,y)) run++;
+      else { if(run > MAP.w*0.5) ROADS.h.push({y, x0:x-run, x1:x-1}); run=0; }
+    }
+  }
+  for(let x=0;x<MAP.w;x++){
+    let run=0;
+    for(let y=0;y<=MAP.h;y++){
+      if(y<MAP.h && isRoad(x,y)) run++;
+      else { if(run > MAP.h*0.5) ROADS.v.push({x, y0:y-run, y1:y-1}); run=0; }
+    }
+  }
+  // Roads are four tiles wide, so the scan above finds each one four times over — once per
+  // lane row. Merge adjacent rows back into a single carriageway, then run one lane each
+  // way down it. Without this the city had sixty-six cars stacked four deep per street.
+  const band = (runs, key, lo, hi) => {
+    runs.sort((a,b)=>a[key]-b[key]);
+    const out = [];
+    for(const r of runs){
+      const last = out[out.length-1];
+      if(last && r[key] === last.end + 1){ last.end = r[key]; }
+      else out.push({start:r[key], end:r[key], from:r[lo], to:r[hi]});
+    }
+    return out;
+  };
+  CARS = [];
+  const lanes = [];
+  for(const b of band(ROADS.h, 'y', 'x0', 'x1'))
+    for(const dir of [1, -1])
+      lanes.push({axis:'h', at:(b.start + b.end)/2 + (dir>0 ? 0.6 : -1.4),
+                  from:b.from, to:b.to, dir});
+  for(const b of band(ROADS.v, 'x', 'y0', 'y1'))
+    for(const dir of [1, -1])
+      lanes.push({axis:'v', at:(b.start + b.end)/2 + (dir>0 ? 0.6 : -1.4),
+                  from:b.from, to:b.to, dir});
+  lanes.forEach((ln, i)=>{
+    const n = 2 + (i%2);                                  // two or three cars per lane
+    for(let k=0;k<n;k++){
+      CARS.push({
+        lane: ln, dir: ln.dir,
+        t: (k+1)/(n+1) + Math.random()*0.3,
+        speed: 0.010 + Math.random()*0.012,
+        color: CAR_COLORS[(i*3+k) % CAR_COLORS.length],
+        police: false,
+      });
+    }
+  });
+}
+
+let CARS = [];
+
+function drawCars(now){
+  if(!ROADS) buildRoads();
+  if(!CARS.length) return;
+  const night = WORLD && (WORLD.beat % 4) === 3;
+  // A district under heavy police attention gets marked cars on its streets.
+  const hot = WORLD && Object.entries(WORLD.heat||{}).filter(([,v])=>v>55).map(([d])=>d);
+
+  for(const c of CARS){
+    c.t += c.speed * c.dir * 0.016;
+    if(c.t > 1.15) c.t = -0.15;
+    if(c.t < -0.15) c.t = 1.15;
+
+    const ln = c.lane;
+    let x, y, w, h;
+    if(ln.axis === 'h'){
+      x = (ln.from + (ln.to - ln.from) * c.t) * T;
+      y = ln.at * T;
+      w = 13; h = 7;
+    } else {
+      x = ln.at * T;
+      y = (ln.from + (ln.to - ln.from) * c.t) * T;
+      w = 7; h = 13;
+    }
+    if(x < -40 || y < -40 || x > MAP.w*T+40 || y > MAP.h*T+40) continue;
+
+    const district = districtAt(Math.floor(y/T));
+    const isPolice = hot && hot.includes(district) && (CARS.indexOf(c) % 5 === 0);
+
+    ctx.fillStyle = 'rgba(0,0,0,.28)';                    // shadow, sells the third dimension
+    ctx.fillRect(x+1, y+2, w, h);
+    ctx.fillStyle = isPolice ? '#dfe4ea' : c.color;
+    ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = 'rgba(255,255,255,.13)';              // windscreen
+    if(ln.axis==='h') ctx.fillRect(x+(c.dir>0?w-5:2), y+1, 3, h-2);
+    else              ctx.fillRect(x+1, y+(c.dir>0?h-5:2), w-2, 3);
+
+    if(isPolice){
+      const on = Math.floor(now/220)%2;
+      ctx.fillStyle = on ? '#5b9bd5' : '#d9534f';
+      if(ln.axis==='h') ctx.fillRect(x+w/2-2, y-1, 4, 2);
+      else              ctx.fillRect(x-1, y+h/2-2, 2, 4);
+    } else if(night){
+      ctx.fillStyle='rgba(255,240,190,.5)';
+      if(ln.axis==='h') ctx.fillRect(x+(c.dir>0?w:-3), y+1, 3, h-2);
+      else              ctx.fillRect(x+1, y+(c.dir>0?h:-3), w-2, 3);
+    }
+  }
+}
+
+function districtAt(ty){
+  if(!MAP || !MAP.districts) return 'delmar';
+  for(const id in MAP.districts){
+    const [lo,hi] = MAP.districts[id].y;
+    if(ty >= lo && ty <= hi) return id;
+  }
+  return 'delmar';
 }
 
 // ── seeing the drama instead of reading it ──────────────────────────────────
@@ -906,6 +1166,37 @@ function marksFor(id){
   if((a.grief||0) >= 15) out.push('grief');
   if((WORLD.feuds||[]).some(f=>f.a===id||f.b===id)) out.push('feud');
   return out;
+}
+
+const INCIDENT_LOOK = {
+  fight:    ['#e8873c', 'fight'],
+  row:      ['#e0b44a', 'argument'],
+  shooting: ['#ff6b6b', 'shots fired'],
+  raid:     ['#5b9bd5', 'police raid'],
+  arrest:   ['#5b9bd5', 'arrest'],
+  fire:     ['#ff8a3d', 'fire'],
+  vigil:    ['#a97fd0', 'vigil'],
+  works:    ['#c8a04a', 'building work'],
+  opening:  ['#4bb3a5', 'newly open'],
+};
+
+// The map is 128x104 now, so at fit-zoom a tile is a few pixels and a fight is invisible.
+// A pulsing ring in SCREEN space keeps every incident findable however far out you are; the
+// detailed effect underneath is the reward for zooming in.
+function drawIncidentMarks(){
+  const live = liveIncidents(); if(!live.length) return;
+  ctx.save(); ctx.setTransform(1,0,0,1,0,0); ctx.imageSmoothingEnabled = true;
+  const t = (Date.now()/700) % 1;
+  for(const inc of live){
+    const sx = (inc.x + 0.5)*T*view.s + view.ox, sy = (inc.y + 0.5)*T*view.s + view.oy;
+    if(sx < -40 || sy < -40 || sx > cv.width+40 || sy > cv.height+40) continue;
+    const col = (INCIDENT_LOOK[inc.kind] || ['#fff'])[0];
+    ctx.strokeStyle = col; ctx.globalAlpha = (1 - t) * 0.9; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(sx, sy, 6 + t*16, 0, 7); ctx.stroke();
+    ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(sx, sy, 3.5, 0, 7); ctx.fillStyle = col; ctx.fill();
+  }
+  ctx.restore(); ctx.globalAlpha = 1; ctx.imageSmoothingEnabled = false;
 }
 
 function drawMarks(R){
@@ -1077,6 +1368,15 @@ function focusOn(id){
 }
 window.focusOn = focusOn;
 
+// Incidents happen at a place, not to a person — a fire has no one to follow.
+function focusTile(tx, ty){
+  zoom = Math.max(zoom, 2.6); applyView();
+  pan.x += cv.width/2  - ((tx + 0.5)*T*view.s + view.ox);
+  pan.y += cv.height/2 - ((ty + 0.5)*T*view.s + view.oy);
+  applyView(); draw();
+}
+window.focusTile = focusTile;
+
 // ── panel ───────────────────────────────────────────────────────────────────
 function bar(v, color){
   return `<div class="bar"><i style="width:${clamp(v,0,100)}%;background:${color}"></i></div>`;
@@ -1114,6 +1414,16 @@ function paintPanel(){
   // the same thing from the reader's point of view — who is angry with whom, and why.
   const items = [];
 
+  // Anything happening RIGHT NOW goes to the top — it is the only thing on this list with a
+  // clock on it, and clicking takes you there to watch before it stops.
+  for(const inc of liveIncidents()){
+    const [col, label] = INCIDENT_LOOK[inc.kind] || ['#fff', inc.kind];
+    const left = (inc.until - WORLD.beat);
+    items.push({p:4, sort: 10000, who: (inc.who||[])[0], at: inc,
+      head: `<b style="color:${col}">${esc(label.toUpperCase())}</b> — ${esc(inc.text || '')}`,
+      sub: `happening now · ${left} beat${left===1?'':'s'} left`});
+  }
+
   for(const d of (WORLD.debts||[])){
     if(d.settled) continue;
     const over = day - d.due_day;
@@ -1145,8 +1455,9 @@ function paintPanel(){
   $('troublecount').textContent = items.length ? `${items.length}` : '';
   $('trouble').innerHTML = items.length
     ? items.slice(0,8).map(t=>
-        `<div class="tr${t.who && AGENTS[t.who] ? ' go' : ''}"` +
-        (t.who && AGENTS[t.who] ? ` onclick="focusOn('${t.who}')"` : '') +
+        `<div class="tr${(t.at || (t.who && AGENTS[t.who])) ? ' go' : ''}"` +
+        (t.at ? ` onclick="focusTile(${t.at.x},${t.at.y})"`
+              : t.who && AGENTS[t.who] ? ` onclick="focusOn('${t.who}')"` : '') +
         `><div class="pip p${t.p}"></div>
          <div>${t.head}<span class="sub">${t.sub}</span></div></div>`).join('')
     : '<div class="calm">Nobody is owed anything and nobody is fighting. It will not last.</div>';

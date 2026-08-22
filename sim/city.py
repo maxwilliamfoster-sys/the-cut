@@ -46,7 +46,11 @@ import random
 from collections import deque
 
 TILE = 16
-W, H = 96, 72
+# The map was 96x72 and effectively full — one 8x6 plot left and nothing bigger, so the
+# expansion system had nowhere to put anything and the city could not visibly grow. The
+# original blocks keep their exact coordinates; the extra ground is added to the south and
+# east as open land for the city to spread into.
+W, H = 128, 104
 
 PAVEMENT, ROAD, LINE, CROSS, GRASS = ".", ",", ":", "=", "g"
 WALL, FLOOR, DOOR, WATER = "#", "f", "D", "~"
@@ -57,15 +61,23 @@ RUBBLE, SCAFFOLD = "x", "s"
 WALKABLE = {PAVEMENT, ROAD, LINE, CROSS, GRASS, FLOOR, DOOR, RUBBLE}
 
 # (start, width) — roads are 4 wide with painted centre lines, pavements are added either side
-H_ROADS = [(10, 4), (26, 4), (42, 4), (58, 4)]
-V_ROADS = [(12, 4), (40, 4), (68, 4)]
+H_ROADS = [(10, 4), (26, 4), (42, 4), (58, 4), (74, 4), (90, 4)]
+V_ROADS = [(12, 4), (40, 4), (68, 4), (96, 4), (112, 4)]
 
 DISTRICTS = {
     "riverside": {"name": "Riverside", "y": (0, 25)},
     "delmar":    {"name": "Delmar Row", "y": (26, 41)},
     "terraces":  {"name": "The Terraces", "y": (42, 57)},
-    "civic":     {"name": "Civic End", "y": (58, 71)},
+    "civic":     {"name": "Civic End", "y": (58, 73)},
+    # Open ground the city has not reached yet. Buildings appear here as it grows, which is
+    # the whole point of having it — an empty district is a promise, not a gap.
+    "flats":     {"name": "The Flats", "y": (74, 103)},
 }
+
+# Anything past these is undeveloped: scrub and open ground rather than paved street, so the
+# edge of town reads as somewhere the city has not got to instead of an empty car park.
+BUILT_EDGE_Y = 74
+BUILT_EDGE_X = 100
 
 RIVER_DEPTH = 4     # the water Riverside is named after
 
@@ -183,6 +195,10 @@ def _blank():
     something a tile has to earn: the parks, the back yards, and the river bank.
     """
     g = [[PAVEMENT for _ in range(W)] for _ in range(H)]
+    for y in range(H):
+        for x in range(W):
+            if y >= BUILT_EDGE_Y or x >= BUILT_EDGE_X:
+                g[y][x] = GRASS            # open ground the city has not built on yet
     for y in range(RIVER_DEPTH):
         for x in range(W):
             g[y][x] = WATER

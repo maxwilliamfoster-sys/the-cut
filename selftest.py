@@ -13,8 +13,8 @@ import sys
 from datetime import timedelta
 
 import re
-from sim import (city, clock, cognition, construction, drama, events, law, llm,
-                 mortality, player, reflect, state, tick)
+from sim import (city, clock, cognition, construction, drama, events, incidents,
+                 law, llm, mortality, player, reflect, state, tick)
 
 FAILS = []
 
@@ -220,14 +220,14 @@ else:
     check("companions are named in the prompt with their ids",
           len(crowd) < 2 or all(f"[{o}]" in p7 for o in companions),
           f"missing ids for {[o for o in companions if f'[{o}]' not in p7]}")
-    # Compressing the prompt to save tokens quietly dropped the explicit quantifier from this
-# rule, and the share of narrated people who actually spoke fell from ~45% to ~18% — which
-# is visible to anybody looking at the map as an absence of speech bubbles. A soft "should
-# usually" is not an instruction; a countable one is.
-check("the prompt puts a countable floor on how many people speak",
-      "AT LEAST HALF" in cognition.SYSTEM and "`to` and `says`" in cognition.SYSTEM,
-      "without a number the model drifts to near-silence and the bubbles disappear")
-check("the prompt tells them to talk to each other",
+    # Compressing the prompt to save tokens quietly dropped the explicit quantifier from
+    # this rule, and the share of narrated people who actually spoke fell from ~45% to
+    # ~18% — invisible in the logs and obvious on the map, because it is the speech
+    # bubbles going away. A soft "should usually" is not an instruction; a number is.
+    check("the prompt puts a countable floor on how many people speak",
+          "AT LEAST HALF" in cognition.SYSTEM and "`to` and `says`" in cognition.SYSTEM,
+          "without a number the model drifts to near-silence and the bubbles disappear")
+    check("the prompt tells them to talk to each other",
           "TALK TO EACH OTHER" in cognition.SYSTEM)
 
     check("cognition request fits Groq's per-minute reservation",
@@ -341,6 +341,49 @@ _m = re.search(r"const WALKABLE_TILES = '([^']*)'", _html)
 check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
+
+# ── things you can stand and watch ───────────────────────────────────────────────
+# Every dramatic event used to resolve inside one beat and leave only text, so on the map a
+# beating looked exactly like a quiet afternoon.
+_w12 = copy.deepcopy(w)
+_w12["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w12["buildings"])
+_w12["incidents"] = []
+incidents.open_incident(_w12, "fight", 100, where="diner", who=["dez"], text="a scuffle")
+check("an incident is placed somewhere real and lasts longer than a beat",
+      _w12["incidents"] and _w12["incidents"][0]["until"] > 101
+      and _w12["incidents"][0]["x"] > 0)
+incidents.expire(_w12, 200)
+check("incidents expire instead of piling up forever", not _w12["incidents"])
+
+for _ in range(incidents.MAX_LIVE + 6):
+    incidents.open_incident(_w12, "row", 300, where="diner")
+check("a busy night is capped so the map stays legible",
+      len(_w12["incidents"]) <= incidents.MAX_LIVE)
+
+# Same front-end/back-end contract as the walkability table: the renderer switches on the
+# effect name the simulation sends, so an unknown one silently draws nothing.
+_effects = set(incidents.EFFECT.values())
+check("the renderer can draw every effect the simulation emits",
+      all(f"case '{e}':" in _html for e in _effects),
+      f"no renderer case for {[e for e in _effects if chr(39) + e + chr(39) not in _html]}")
+check("every incident kind has a label and colour in the panel",
+      all(f"{k}:" in _html.split("INCIDENT_LOOK")[1][:600] for k in incidents.DURATION),
+      "an incident with no entry shows as a blank row")
+
+# ── room to grow ─────────────────────────────────────────────────────────────────
+# The map was full: one 8x6 plot left and nothing bigger, so expansion had nowhere to put
+# anything and the city could never visibly change shape.
+_plots = [construction.find_plot([dict(b) for b in city.BASE_BUILDINGS], wd, ht,
+                                 __import__("random").Random(1))
+          for wd, ht in ((8, 6), (10, 6), (12, 8))]
+check("the city has somewhere left to build",
+      all(p is not None for p in _plots),
+      "no free plot — expansion is a no-op and the city cannot grow")
+check("there is an undeveloped district to grow into",
+      "flats" in city.DISTRICTS
+      and not [b for b in city.BASE_BUILDINGS if b["district"] == "flats"],
+      "open ground is what makes growth visible")
 
 # The map overlay reads agent fields directly to decide what dot to draw over somebody.
 # That is the same front-end/back-end contract that WALKABLE_TILES broke once already: if
