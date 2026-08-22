@@ -33,6 +33,17 @@
   #stage{flex:1; position:relative; min-width:0; background:#080a0e; overflow:hidden}
   canvas{position:absolute; left:0; top:0; image-rendering:pixelated;
          image-rendering:crisp-edges; cursor:crosshair; touch-action:none}
+  /* Only lists what is actually happening right now, so it stays short enough to read. */
+  #legend{
+    position:absolute; left:10px; top:10px; z-index:4; display:flex; flex-wrap:wrap; gap:4px 10px;
+    background:rgba(13,15,20,.78); border:1px solid var(--line); border-radius:7px;
+    padding:6px 9px; font-size:10.5px; color:var(--ink); pointer-events:none;
+    max-width:min(420px, 70%); backdrop-filter:blur(3px);
+  }
+  #legend:empty{display:none}
+  #legend .lg{display:flex; align-items:center; gap:5px; white-space:nowrap}
+  #legend .sw{width:8px; height:8px; border-radius:50%; flex-shrink:0}
+  #legend .ct{color:var(--dim)}
   #controls{
     position:absolute; left:10px; bottom:8px; pointer-events:none;
     color:var(--dim); font-size:10px; background:rgba(13,15,20,.72);
@@ -168,6 +179,8 @@
   .tr{display:flex; gap:7px; align-items:flex-start; padding:4px 0;
       border-bottom:1px solid rgba(255,255,255,.04); line-height:1.35}
   .tr:last-child{border-bottom:0}
+  .tr.go{cursor:pointer}
+  .tr.go:hover{background:rgba(255,255,255,.045)}
   .tr b{font-weight:600}
   .pip{width:7px; height:7px; border-radius:50%; margin-top:5px; flex-shrink:0}
   .p3{background:var(--hot)} .p2{background:var(--gold)} .p1{background:var(--dim)}
@@ -194,6 +207,7 @@
         <button id="awayGo">back to the block</button>
       </div>
     </div>
+    <div id="legend"></div>
     <div id="controls">scroll to zoom · drag to pan · click anyone · <b>WASD to walk in</b></div>
     <div id="prompt"></div>
     <div id="talk">
@@ -863,8 +877,94 @@ function draw(){
 
   ctx.restore();
   drawLabels();
+  drawLinks(R);          // who is hunting whom, drawn across the map
+  drawMarks(R);          // one dot per person for what state they are in
   drawTags(tags);
   drawBubbles(bubbles);
+}
+
+// ── seeing the drama instead of reading it ──────────────────────────────────
+// The side panel says everything, and that turned out to be the problem: working out what
+// was going on meant reading several paragraphs. These two overlays put the same facts on
+// the map, where they can be taken in at a glance — a colour over a head, and a line
+// between two people who have a problem with each other.
+
+const MARKS = [
+  {key:'owed',    color:'#e0b44a', label:'owed money, out of patience'},
+  {key:'feud',    color:'#d9534f', label:'in a feud'},
+  {key:'held',    color:'#5b9bd5', label:'held at the 9th'},
+  {key:'grief',   color:'#a97fd0', label:'grieving'},
+  {key:'rumour',  color:'#4bb3a5', label:'checking a rumour'},
+];
+
+function marksFor(id){
+  const a = AGENTS[id]; if(!a) return [];
+  const out = [];
+  if(a.chasing) out.push('owed');
+  if(a.checking) out.push('rumour');
+  if(a.detained_until) out.push('held');
+  if((a.grief||0) >= 15) out.push('grief');
+  if((WORLD.feuds||[]).some(f=>f.a===id||f.b===id)) out.push('feud');
+  return out;
+}
+
+function drawMarks(R){
+  ctx.save(); ctx.setTransform(1,0,0,1,0,0); ctx.imageSmoothingEnabled = true;
+  const r = Math.max(2.5, Math.min(4.5, 3 * Math.sqrt(view.s)));
+  for(const id in R){
+    const m = marksFor(id); if(!m.length) continue;
+    const sx = (R[id].x + 0.5)*T*view.s + view.ox;
+    const sy = (R[id].y - 0.55)*T*view.s + view.oy;
+    m.forEach((key, i)=>{
+      const col = (MARKS.find(x=>x.key===key)||{}).color || '#fff';
+      const x = sx + (i - (m.length-1)/2) * (r*2.6);
+      ctx.beginPath(); ctx.arc(x, sy, r+1.2, 0, 7);
+      ctx.fillStyle = 'rgba(8,10,14,.85)'; ctx.fill();
+      ctx.beginPath(); ctx.arc(x, sy, r, 0, 7);
+      ctx.fillStyle = col; ctx.fill();
+    });
+  }
+  ctx.restore(); ctx.imageSmoothingEnabled = false;
+}
+
+function drawLinks(R){
+  const links = [];
+  for(const id in AGENTS){
+    const a = AGENTS[id];
+    // A chase is the clearest thing on the block: somebody has run out of patience and is
+    // physically crossing the map to find the person who owes them.
+    if(a.chasing && R[a.chasing]) links.push({from:id, to:a.chasing, color:'#e0b44a'});
+    else if(a.checking && R[a.checking]) links.push({from:id, to:a.checking, color:'#4bb3a5'});
+  }
+  // Feuds only when the pair are actually together — otherwise the map fills with threads.
+  for(const f of (WORLD.feuds||[])){
+    const A = AGENTS[f.a], B = AGENTS[f.b];
+    if(A && B && A.at === B.at && R[f.a] && R[f.b])
+      links.push({from:f.a, to:f.b, color:'#d9534f'});
+  }
+  if(!links.length) return;
+
+  ctx.save(); ctx.setTransform(1,0,0,1,0,0); ctx.imageSmoothingEnabled = true;
+  const dash = (Date.now()/90) % 12;
+  for(const l of links){
+    const a = R[l.from], b = R[l.to];
+    const x1=(a.x+0.5)*T*view.s+view.ox, y1=(a.y+0.2)*T*view.s+view.oy;
+    const x2=(b.x+0.5)*T*view.s+view.ox, y2=(b.y+0.2)*T*view.s+view.oy;
+    ctx.setLineDash([5,7]); ctx.lineDashOffset = -dash;
+    ctx.strokeStyle = l.color; ctx.globalAlpha = .55; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+    // A blunt arrowhead so it reads as "going after", not "connected to".
+    const ang = Math.atan2(y2-y1, x2-x1);
+    ctx.globalAlpha = .9; ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(x2 - Math.cos(ang)*9, y2 - Math.sin(ang)*9);
+    ctx.lineTo(x2 - Math.cos(ang-0.5)*15, y2 - Math.sin(ang-0.5)*15);
+    ctx.moveTo(x2 - Math.cos(ang)*9, y2 - Math.sin(ang)*9);
+    ctx.lineTo(x2 - Math.cos(ang+0.5)*15, y2 - Math.sin(ang+0.5)*15);
+    ctx.stroke();
+  }
+  ctx.restore(); ctx.globalAlpha = 1; ctx.setLineDash([]);
+  ctx.imageSmoothingEnabled = false;
 }
 
 function drawTags(tags){
@@ -962,6 +1062,21 @@ cv.addEventListener('click', e=>{
 
 function select(id){ selected = id; paintPanel(); }
 
+// Clicking a line in TROUBLE should take you to the person it is about. Reading that Booker
+// is owed $4,200 is one thing; being put in front of him on the map is another.
+function focusOn(id){
+  if(!AGENTS[id]) return;
+  selected = id;
+  const p = agentRenderPos(id, Date.now());
+  zoom = Math.max(zoom, 2.2);
+  applyView();
+  // Centre that tile in the viewport.
+  pan.x += cv.width/2  - ((p.x + 0.5)*T*view.s + view.ox);
+  pan.y += cv.height/2 - ((p.y + 0.5)*T*view.s + view.oy);
+  applyView(); paintPanel(); draw();
+}
+window.focusOn = focusOn;
+
 // ── panel ───────────────────────────────────────────────────────────────────
 function bar(v, color){
   return `<div class="bar"><i style="width:${clamp(v,0,100)}%;background:${color}"></i></div>`;
@@ -1007,21 +1122,21 @@ function paintPanel(){
                : d.kind==='favour' ? 'a favour' : 'a package';
     const asked = d.asked ? ` Asked ${d.asked} time${d.asked===1?'':'s'} already.` : '';
     const fedUp = over > (d.patience!=null ? d.patience : 3);
-    items.push({p: fedUp ? 3 : 2, sort: over,
+    items.push({p: fedUp ? 3 : 2, sort: over, who: d.to,
       head: `<b>${esc(name(d.to))}</b> is owed ${esc(what)} by <b>${esc(name(d.from))}</b>`,
       sub: `${over} day${over===1?'':'s'} late.${asked}` +
            (fedUp ? ' Out of patience — looking for them.' : '')});
   }
 
   for(const f of (WORLD.feuds||[])){
-    items.push({p:3, sort: f.heat||0,
+    items.push({p:3, sort: f.heat||0, who: f.a,
       head: `<b>${esc(name(f.a))}</b> and <b>${esc(name(f.b))}</b> are feuding`,
       sub: esc(f.cause||'') + ` · since day ${f.since_day}`});
   }
 
   for(const c of (WORLD.charges||[])){
     if(c.status!=='awaiting_trial') continue;
-    items.push({p:3, sort: 999,
+    items.push({p:3, sort: 999, who: c.who,
       head: `<b>${esc(c.name)}</b> is in a cell awaiting trial`,
       sub: `charged over ${esc(c.law_title||'a local ordinance')}`});
   }
@@ -1030,7 +1145,9 @@ function paintPanel(){
   $('troublecount').textContent = items.length ? `${items.length}` : '';
   $('trouble').innerHTML = items.length
     ? items.slice(0,8).map(t=>
-        `<div class="tr"><div class="pip p${t.p}"></div>
+        `<div class="tr${t.who && AGENTS[t.who] ? ' go' : ''}"` +
+        (t.who && AGENTS[t.who] ? ` onclick="focusOn('${t.who}')"` : '') +
+        `><div class="pip p${t.p}"></div>
          <div>${t.head}<span class="sub">${t.sub}</span></div></div>`).join('')
     : '<div class="calm">Nobody is owed anything and nobody is fighting. It will not last.</div>';
 
@@ -1081,6 +1198,14 @@ function paintPanel(){
       · ${esc(p)} · ${l.convictions||0} convicted</span></div></div>`;
   }).join('')
    : '<div class="calm">Nothing is written down yet. The block passes a rule when something goes wrong enough.</div>';
+
+  // The map legend: one entry per state that somebody is actually in, with a count. Absent
+  // states are omitted entirely, which keeps it to two or three items most of the time.
+  const tally = {};
+  for(const id in AGENTS) for(const k of marksFor(id)) tally[k] = (tally[k]||0) + 1;
+  $('legend').innerHTML = MARKS.filter(m=>tally[m.key]).map(m=>
+    `<span class="lg"><span class="sw" style="background:${m.color}"></span>` +
+    `${esc(m.label)} <span class="ct">${tally[m.key]}</span></span>`).join('');
 
   $('casthead').textContent = Object.keys(AGENTS).length + ' PEOPLE';
 

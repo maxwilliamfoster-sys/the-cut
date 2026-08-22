@@ -335,6 +335,20 @@ check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
 
+# The map overlay reads agent fields directly to decide what dot to draw over somebody.
+# That is the same front-end/back-end contract that WALKABLE_TILES broke once already: if
+# the simulation renames a field, the dot silently stops appearing and nothing complains.
+_overlay_fields = re.findall(r"a\.(chasing|checking|detained_until|grief)", _html)
+check("the map overlay reads fields the simulation actually writes",
+      set(_overlay_fields) == {"chasing", "checking", "detained_until", "grief"}
+      and all(f in inspect.getsource(drama) or f in inspect.getsource(law)
+              or f in inspect.getsource(mortality)
+              for f in ("chasing", "checking", "detained_until", "grief")),
+      f"overlay reads {sorted(set(_overlay_fields))}")
+check("the overlay legend covers every state it can draw",
+      all(k in _html for k in ("'owed'", "'feud'", "'held'", "'grief'", "'rumour'")),
+      "a dot with no legend entry is a colour nobody can interpret")
+
 # A lost building must actually be lost: not usable, and not somewhere routine sends people.
 _w4 = copy.deepcopy(w)
 _a4 = copy.deepcopy(a)
