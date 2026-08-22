@@ -158,12 +158,6 @@ function personaPrompt(a, world, agents) {
     .sort((x, y) => Math.abs(y[1].affinity) - Math.abs(x[1].affinity)).slice(0, 4)
     .map(([id, v]) => `${(agents[id] || {}).name || id}: ${v.opinion}`).join("; ");
 
-  // Ids the stranger might say something ABOUT, so a claim can be attached to a real person
-  // rather than a name the simulation cannot resolve.
-  const who = Object.values(agents)
-    .filter(x => x.alive !== false && x.id !== a.id)
-    .slice(0, 30).map(x => `${x.id}=${x.name}`).join(", ");
-
   const temper = a.volatility >= 75 ? "You do not let things go, and you start them."
                : a.volatility <= 25 ? "You calm rooms down rather than lighting them."
                : "";
@@ -191,17 +185,10 @@ nothing else; that ends the conversation and wastes both your time. If you have 
 this stranger already, answer what they ACTUALLY just said and remember what was said
 before — do not reintroduce yourself or start the conversation over.
 
-If the stranger tells you something ABOUT SOMEBODY ELSE on this block — a rumour, an
-accusation, a piece of gossip, that somebody did something — record it as a claim so you can
-go and check whether it is true. Only do this for a specific named person from this list:
-${who}
-If they said nothing about anybody else, claim must be null.
-
 Never describe how anything illegal is actually done. No sexual content. No slurs.
 
-Return JSON only:
-{"say":"what you say out loud","claim":{"about":"<id from the list>","what":"the claim, MAX 14 WORDS"}}
-or {"say":"...","claim":null}`;
+Reply with the spoken words ONLY — no JSON, no braces, no quotes around it, no label, no
+narration. Just what ${a.name} says out loud.`;
 }
 
 async function talk(req, env) {
@@ -318,22 +305,54 @@ async function groqCall(env, messages) {
 // reply — a second request per message would double what a conversation costs. Workers AI
 // often answers in prose regardless, and that is fine: the reply still works, only the
 // claim is lost.
+// Deliberately dumb, and brain-independent: if the player named somebody else on the block,
+// that is a claim about them. sim/player.py does the same scan server-side; this copy exists
+// only so the reply can tell the player it landed.
+const NOT_A_NAME = new Set(["det", "ofc", "sgt", "dr", "ms", "fr", "the", "and", "his", "her"]);
+
+function claimFrom(line, agents, speakerId) {
+  const low = ` ${line.toLowerCase()} `;
+  let best = null;
+  for (const id in agents) {
+    const o = agents[id];
+    if (id === speakerId || o.alive === false) continue;
+    const parts = String(o.name).split(/\s+/).map(p => p.replace(/[.,']/g, "").toLowerCase());
+    const names = [String(o.name).toLowerCase(),
+                   ...parts.filter(p => p.length >= 3 && !NOT_A_NAME.has(p))];
+    for (const n of names) {
+      if (low.includes(` ${n} `) || low.includes(` ${n}'`) ||
+          low.includes(` ${n}.`) || low.includes(` ${n},`)) {
+        if (!best || n.length > best.len) best = { about: id, len: n.length };
+      }
+    }
+  }
+  return best ? { about: best.about, what: line.trim().slice(0, 120) } : null;
+}
+
+
 async function finish(env, ip, body, a, agents, line, raw) {
-  let reply = raw, claim = null;
+  let reply = raw;
+
+  // The prompt no longer asks for JSON — Python extracts claims now — but an older cached
+  // prompt or a helpful brain can still volunteer a schema. Anything that looks like one is
+  // stripped rather than spoken: {"claim":null} came out of a character's mouth once, and
+  // once is too often.
   try {
     const parsed = JSON.parse(raw);
-    if (parsed && typeof parsed === "object" && parsed.say) {
-      reply = String(parsed.say).trim();
-      const c = parsed.claim;
-      if (c && agents[c.about] && c.about !== body.agent && String(c.what || "").trim())
-        claim = { about: c.about, what: String(c.what).trim().slice(0, 120) };
-    }
-  } catch (_) {
-    const m = raw.match(/"say"\s*:\s*"((?:[^"\\]|\\.)*)"/);
-    if (m) reply = m[1].replace(/\\"/g, '"');
-  }
+    if (parsed && typeof parsed === "object" && parsed.say) reply = String(parsed.say);
+  } catch (_) { /* prose, which is what we now ask for */ }
+  reply = reply
+    .replace(/\{[^{}]*\}/g, " ")               // stray JSON objects
+    .replace(/^\s*(claim|say|reply)\s*:\s*/i, "")  // stray labels
+    .replace(/\s+/g, " ");
 
-  reply = reply.replace(/^["']|["']$/g, "").replace(/\*/g, "").trim().slice(0, 300);
+  // Who did the player name? The same plain scan sim/player.py does, so the browser can
+  // honestly report that a rumour landed whichever brain answered.
+  let claim = claimFrom(line, agents, body.agent);
+
+  // Trim BEFORE stripping the wrapping quotes: collapsing whitespace first leaves a leading
+  // space, and then ^["'] no longer matches, so every quoted reply kept its quotes.
+  reply = reply.trim().replace(/^["']+|["']+$/g, "").replace(/\*/g, "").trim().slice(0, 300);
   if (!reply) return json({ error: "they said nothing" }, 502);
   if (GUARD.test(reply)) { reply = "They look at you for a second and change the subject."; claim = null; }
   if (claim && GUARD.test(claim.what)) claim = null;
