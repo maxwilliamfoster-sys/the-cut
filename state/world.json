@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1097,
-  "last_beat_at": "2026-08-22T19:57:12Z",
+  "beat": 1099,
+  "last_beat_at": "2026-08-22T20:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "clear",
   "heat": {
-    "riverside": 54,
-    "delmar": 50,
-    "terraces": 8,
-    "civic": 8
+    "riverside": 52,
+    "delmar": 60,
+    "terraces": 6,
+    "civic": 6
   },
   "turf": {
     "riverside": "crew",
@@ -272,6 +272,30 @@
   ],
   "events": [
     {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1099
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1098
+    },
+    {
       "id": "hospital",
       "heat": {
         "civic": 5
@@ -499,32 +523,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1069
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1068
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "cass",
-        "marcus"
-      ],
-      "text": "Marcus Calloway does Cass Deveaux a favour that costs them something real.",
-      "beat": 1067
     }
   ],
   "player_queue": [
@@ -1205,40 +1203,40 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 25
+      "heat": 23
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 13
+      "heat": 11
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 31
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 51
+      "heat": 49
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 73
+      "heat": 71
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1095,
+    "beat": 1098,
     "providers": [
       "gemini"
     ]
@@ -1265,21 +1263,5 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1096-fight-0",
-      "kind": "fight",
-      "effect": "scuffle",
-      "at": "laundromat",
-      "x": 21,
-      "y": 23,
-      "who": [
-        "rey",
-        "dez"
-      ],
-      "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
-      "started": 1096,
-      "until": 1098
-    }
-  ]
+  "incidents": []
 }
