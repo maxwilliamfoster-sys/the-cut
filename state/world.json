@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1053,
-  "last_beat_at": "2026-08-22T08:57:12Z",
+  "beat": 1056,
+  "last_beat_at": "2026-08-22T09:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 5,
-    "terraces": 11,
+    "delmar": 17,
+    "terraces": 8,
     "civic": 5
   },
   "turf": {
@@ -220,6 +220,38 @@
   ],
   "events": [
     {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning."
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not."
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
+    },
+    {
       "id": "snitch_rumour",
       "heat": {},
       "mood": {
@@ -420,41 +452,6 @@
       },
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name."
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "amara",
-        "june"
-      ],
-      "text": "June Kowal does Amara Bello a favour that costs them something real."
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark."
     }
   ],
   "player_queue": [
@@ -481,7 +478,7 @@
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 56858,
+      "fast": 60558,
       "deep": 805
     }
   },
@@ -1077,19 +1074,26 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 7
+      "heat": 5
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 33
+    },
+    {
+      "a": "booker",
+      "b": "kohl",
+      "since_day": 263,
+      "cause": "would not let it go",
+      "heat": 53
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-22",
-    "beat": 1053,
+    "beat": 1056,
     "providers": []
   },
   "dead": [
