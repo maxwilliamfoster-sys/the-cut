@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1068,
-  "last_beat_at": "2026-08-22T12:42:12Z",
+  "beat": 1071,
+  "last_beat_at": "2026-08-22T13:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 11,
+    "delmar": 20,
     "terraces": 5,
     "civic": 5
   },
@@ -246,6 +246,32 @@
   ],
   "events": [
     {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ivy",
+        "dot"
+      ],
+      "text": "Dot Feeney does Ms. Ivy Calloway a favour that costs them something real.",
+      "beat": 1070
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1069
+    },
+    {
       "id": "power_cut",
       "heat": {
         "delmar": -6
@@ -455,30 +481,6 @@
       },
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning."
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "brennan",
-        "nadia"
-      ],
-      "text": "Somebody tells Sgt. Hal Brennan that Nadia Vasquez has been seen talking to police."
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong."
     }
   ],
   "player_queue": [
@@ -501,12 +503,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 266,
+  "last_gazette_day": 267,
   "llm_budget": {
     "day": "2026-08-22",
     "spent": {
-      "fast": 103460,
-      "deep": 4699
+      "fast": 118224,
+      "deep": 6257
     }
   },
   "silent_runs": 0,
@@ -715,8 +717,8 @@
       "open": false,
       "wings": [],
       "floors": 2,
-      "condition": "standing",
-      "since_day": 0
+      "condition": "ruin",
+      "since_day": 267
     },
     {
       "id": "pawnshop",
@@ -1113,7 +1115,7 @@
     }
   ],
   "charges": [],
-  "law_pressure": 0,
+  "law_pressure": 2,
   "last_law_day": 264,
   "last_expansion_day": 236,
   "feuds": [
@@ -1122,21 +1124,21 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 25
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 47
+      "heat": 45
     }
   ],
   "quota_exhausted_on": {
@@ -1146,6 +1148,13 @@
   },
   "dead": [
     {
+      "id": "junie",
+      "name": "Junie Marsh",
+      "day": 267,
+      "cause": "accident",
+      "where": "The Blue Spoon"
+    },
+    {
       "id": "marcus",
       "name": "Marcus Calloway",
       "day": 255,
@@ -1154,9 +1163,22 @@
     }
   ],
   "funeral": {
-    "day": 257,
-    "for": "Marcus Calloway",
-    "id": "marcus"
+    "day": 269,
+    "for": "Junie Marsh",
+    "id": "junie"
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1069-fire-0",
+      "kind": "fire",
+      "effect": "flames",
+      "at": "diner",
+      "x": 28,
+      "y": 34,
+      "who": [],
+      "text": "A fire takes The Blue Spoon. It burns for most of the night.",
+      "started": 1069,
+      "until": 1072
+    }
+  ]
 }
