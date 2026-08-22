@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1095,
-  "last_beat_at": "2026-08-22T19:27:12Z",
+  "beat": 1097,
+  "last_beat_at": "2026-08-22T19:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 40,
-    "delmar": 52,
-    "terraces": 10,
-    "civic": 10
+    "riverside": 54,
+    "delmar": 50,
+    "terraces": 8,
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -241,7 +241,7 @@
       "settled": false,
       "patience": 3,
       "asked": 0,
-      "last_confront_day": 273
+      "last_confront_day": 274
     },
     {
       "id": "debt13",
@@ -552,7 +552,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 34630
+      "deep": 41981
     }
   },
   "silent_runs": 0,
@@ -1233,7 +1233,7 @@
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 53
+      "heat": 73
     }
   ],
   "quota_exhausted_on": {
@@ -1265,5 +1265,21 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1096-fight-0",
+      "kind": "fight",
+      "effect": "scuffle",
+      "at": "laundromat",
+      "x": 21,
+      "y": 23,
+      "who": [
+        "rey",
+        "dez"
+      ],
+      "text": "Rey Vasquez puts Dez Okonkwo against a wall at Spin Cycle over what they were fronted. People stop to watch.",
+      "started": 1096,
+      "until": 1098
+    }
+  ]
 }
