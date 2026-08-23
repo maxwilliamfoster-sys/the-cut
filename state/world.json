@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1137,
-  "last_beat_at": "2026-08-23T05:57:12Z",
+  "beat": 1141,
+  "last_beat_at": "2026-08-23T06:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 55,
-    "delmar": 64,
-    "terraces": 12,
+    "riverside": 51,
+    "delmar": 60,
+    "terraces": 8,
     "civic": 5
   },
   "turf": {
@@ -264,10 +264,10 @@
       "amount": 200,
       "due_day": 278,
       "note": "fronted cash and expects it back",
-      "settled": false,
+      "settled": true,
       "patience": 6,
       "asked": 1,
-      "last_confront_day": 282
+      "last_confront_day": 285
     },
     {
       "id": "debt15",
@@ -297,6 +297,16 @@
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 1138
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -533,18 +543,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1108
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1106
     }
   ],
   "player_queue": [
@@ -567,12 +565,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 283,
+  "last_gazette_day": 284,
   "llm_budget": {
     "day": "2026-08-23",
     "spent": {
-      "fast": 98397,
-      "deep": 5799
+      "fast": 115902,
+      "deep": 7280
     }
   },
   "silent_runs": 0,
@@ -1226,7 +1224,7 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 5
+      "heat": 3
     },
     {
       "a": "cass",
@@ -1240,28 +1238,28 @@
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 13
+      "heat": 11
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 31
+      "heat": 29
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 73
+      "heat": 71
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 69
+      "heat": 67
     }
   ],
   "quota_exhausted_on": {
