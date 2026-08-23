@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1157,
-  "last_beat_at": "2026-08-23T10:57:12Z",
+  "beat": 1159,
+  "last_beat_at": "2026-08-23T11:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
-    "riverside": 35,
-    "delmar": 38,
+    "riverside": 33,
+    "delmar": 36,
     "terraces": 5,
-    "civic": 9
+    "civic": 7
   },
   "turf": {
     "riverside": "crew",
@@ -298,6 +298,20 @@
   ],
   "events": [
     {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "amara",
+        "june"
+      ],
+      "text": "Amara Bello and June Kowal are seen arguing in the street loud enough that people stop.",
+      "beat": 1158
+    },
+    {
       "id": "cold_case",
       "heat": {},
       "mood": {
@@ -527,18 +541,6 @@
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark.",
       "beat": 1131
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1128
     }
   ],
   "player_queue": [
@@ -566,7 +568,7 @@
     "day": "2026-08-23",
     "spent": {
       "fast": 163908,
-      "deep": 23842
+      "deep": 27338
     }
   },
   "silent_runs": 0,
@@ -1222,6 +1224,18 @@
       "trial_day": 290,
       "status": "awaiting_trial",
       "witnesses": 0
+    },
+    {
+      "id": "c002",
+      "who": "dez",
+      "name": "Dez Okonkwo",
+      "law": "law02",
+      "law_title": "Counter Glass Prohibition",
+      "evidence": "stares at empty glass, clenches fist",
+      "day": 289,
+      "trial_day": 291,
+      "status": "awaiting_trial",
+      "witnesses": 2
     }
   ],
   "law_pressure": 1,
@@ -1247,33 +1261,33 @@
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 3
+      "heat": 1
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 39
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 63
+      "heat": 61
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 59
+      "heat": 57
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-23",
-    "beat": 1157,
+    "beat": 1159,
     "providers": [
       "gemini"
     ]
