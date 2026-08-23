@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1156,
-  "last_beat_at": "2026-08-23T10:42:12Z",
+  "beat": 1157,
+  "last_beat_at": "2026-08-23T10:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 36,
-    "delmar": 39,
+    "riverside": 35,
+    "delmar": 38,
     "terraces": 5,
-    "civic": 10
+    "civic": 9
   },
   "turf": {
     "riverside": "crew",
@@ -298,6 +298,19 @@
   ],
   "events": [
     {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1157
+    },
+    {
       "id": "hospital",
       "heat": {
         "civic": 5
@@ -526,20 +539,6 @@
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards.",
       "beat": 1128
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "okafor",
-        "junie"
-      ],
-      "text": "Somebody tells Chinedu Okafor that Junie Marsh has been seen talking to police.",
-      "beat": 1126
     }
   ],
   "player_queue": [
@@ -1274,7 +1273,7 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-08-23",
-    "beat": 1113,
+    "beat": 1157,
     "providers": [
       "gemini"
     ]
