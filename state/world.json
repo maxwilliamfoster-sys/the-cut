@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1111,
-  "last_beat_at": "2026-08-22T23:27:12Z",
+  "beat": 1113,
+  "last_beat_at": "2026-08-22T23:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "clear",
   "heat": {
-    "riverside": 81,
-    "delmar": 62,
+    "riverside": 79,
+    "delmar": 60,
     "terraces": 5,
     "civic": 5
   },
@@ -268,9 +268,35 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt15",
+      "from": "june",
+      "to": "marisol",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 282,
+      "note": "was got out of something and knows it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 1112
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -518,18 +544,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1081
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1080
     }
   ],
   "player_queue": [
@@ -557,7 +571,7 @@
     "day": "2026-08-22",
     "spent": {
       "fast": 164547,
-      "deep": 71440
+      "deep": 74565
     }
   },
   "silent_runs": 0,
@@ -766,8 +780,9 @@
       "open": false,
       "wings": [],
       "floors": 2,
-      "condition": "rebuilding",
-      "since_day": 273
+      "condition": "standing",
+      "since_day": 278,
+      "generation": 1
     },
     {
       "id": "pawnshop",
@@ -1242,8 +1257,8 @@
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-08-22",
-    "beat": 1111,
+    "day": "2026-08-23",
+    "beat": 1113,
     "providers": [
       "gemini"
     ]
@@ -1270,5 +1285,18 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1112-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "diner",
+      "x": 27,
+      "y": 35,
+      "who": [],
+      "text": "The Blue Spoon opens on the site of The Blue Spoon.",
+      "started": 1112,
+      "until": 1114
+    }
+  ]
 }
