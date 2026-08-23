@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1129,
-  "last_beat_at": "2026-08-23T03:57:12Z",
+  "beat": 1132,
+  "last_beat_at": "2026-08-23T04:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "overcast",
   "heat": {
-    "riverside": 63,
-    "delmar": 84,
+    "riverside": 60,
+    "delmar": 75,
     "terraces": 5,
     "civic": 5
   },
@@ -251,10 +251,10 @@
       "amount": 1,
       "due_day": 277,
       "note": "was got out of something and knows it",
-      "settled": false,
+      "settled": true,
       "patience": 3,
       "asked": 1,
-      "last_confront_day": 282
+      "last_confront_day": 283
     },
     {
       "id": "debt14",
@@ -297,6 +297,18 @@
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1131
+    },
     {
       "id": "inspection",
       "heat": {
@@ -543,18 +555,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1099
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1098
     }
   ],
   "player_queue": [
@@ -577,12 +577,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 281,
+  "last_gazette_day": 282,
   "llm_budget": {
     "day": "2026-08-23",
     "spent": {
-      "fast": 64478,
-      "deep": 3439
+      "fast": 77249,
+      "deep": 4307
     }
   },
   "silent_runs": 0,
@@ -1236,7 +1236,7 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 9
+      "heat": 7
     },
     {
       "a": "cass",
@@ -1250,28 +1250,28 @@
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 33
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 77
+      "heat": 75
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 73
+      "heat": 71
     }
   ],
   "quota_exhausted_on": {
@@ -1303,21 +1303,5 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1128-fight-0",
-      "kind": "fight",
-      "effect": "scuffle",
-      "at": "pawnshop",
-      "x": 34,
-      "y": 35,
-      "who": [
-        "ruiz",
-        "booker"
-      ],
-      "text": "Det. Yolanda Ruiz puts Booker Lyle against a wall at Lyle Pawn & Loan over a favour they have never repaid. People stop to watch.",
-      "started": 1128,
-      "until": 1130
-    }
-  ]
+  "incidents": []
 }
