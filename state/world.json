@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1161,
-  "last_beat_at": "2026-08-23T11:57:12Z",
+  "beat": 1164,
+  "last_beat_at": "2026-08-23T12:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "first snow",
   "heat": {
-    "riverside": 31,
-    "delmar": 34,
+    "riverside": 28,
+    "delmar": 31,
     "terraces": 5,
     "civic": 5
   },
@@ -294,9 +294,35 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine17",
+      "who": "dez",
+      "to": "the block",
+      "kind": "money",
+      "amount": 15,
+      "reason": "fine — Counter Glass Prohibition",
+      "settled": false,
+      "day": 291,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1164
+    },
     {
       "id": "eviction",
       "heat": {},
@@ -529,18 +555,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 1135
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1134
     }
   ],
   "player_queue": [
@@ -568,7 +582,7 @@
     "day": "2026-08-23",
     "spent": {
       "fast": 163908,
-      "deep": 30895
+      "deep": 37828
     }
   },
   "silent_runs": 0,
@@ -1168,6 +1182,23 @@
       "floors": 3,
       "condition": "standing",
       "since_day": 270
+    },
+    {
+      "id": "new_home_291",
+      "name": "Brendan Tenement",
+      "district": "flats",
+      "x": 29,
+      "y": 80,
+      "w": 8,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "brownstone",
+      "open": false,
+      "wings": [],
+      "floors": 3,
+      "condition": "standing",
+      "since_day": 291
     }
   ],
   "laws": [
@@ -1209,7 +1240,7 @@
       "because": "Unattended glasses left on the counter in the cold.",
       "day_enacted": 269,
       "status": "enacted",
-      "convictions": 0
+      "convictions": 1
     }
   ],
   "charges": [
@@ -1235,13 +1266,14 @@
       "evidence": "stares at empty glass, clenches fist",
       "day": 289,
       "trial_day": 291,
-      "status": "awaiting_trial",
-      "witnesses": 2
+      "status": "convicted",
+      "witnesses": 2,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 1,
   "last_law_day": 269,
-  "last_expansion_day": 270,
+  "last_expansion_day": 291,
   "feuds": [
     {
       "a": "dez",
@@ -1262,28 +1294,35 @@
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 1
+      "heat": 0
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 37
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 61
+      "heat": 59
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 57
+      "heat": 55
+    },
+    {
+      "a": "gus",
+      "b": "kohl",
+      "since_day": 290,
+      "cause": "would not let it go",
+      "heat": 53
     }
   ],
   "quota_exhausted_on": {
@@ -1315,5 +1354,18 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1164-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "new_home_291",
+      "x": 32,
+      "y": 84,
+      "who": [],
+      "text": "Brendan Tenement opens on what was empty ground in The Flats.",
+      "started": 1164,
+      "until": 1166
+    }
+  ]
 }
