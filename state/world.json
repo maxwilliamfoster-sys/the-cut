@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1125,
-  "last_beat_at": "2026-08-23T02:57:12Z",
+  "beat": 1129,
+  "last_beat_at": "2026-08-23T03:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 67,
-    "delmar": 66,
+    "riverside": 63,
+    "delmar": 84,
     "terraces": 5,
     "civic": 5
   },
@@ -254,7 +254,7 @@
       "settled": false,
       "patience": 3,
       "asked": 1,
-      "last_confront_day": 281
+      "last_confront_day": 282
     },
     {
       "id": "debt14",
@@ -265,9 +265,9 @@
       "due_day": 278,
       "note": "fronted cash and expects it back",
       "settled": false,
-      "patience": 3,
-      "asked": 0,
-      "last_confront_day": -99
+      "patience": 6,
+      "asked": 1,
+      "last_confront_day": 282
     },
     {
       "id": "debt15",
@@ -281,9 +281,48 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt16",
+      "from": "adaeze",
+      "to": "dez",
+      "kind": "product",
+      "amount": 1,
+      "due_day": 287,
+      "note": "was fronted and has not squared it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 1128
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "okafor",
+        "junie"
+      ],
+      "text": "Somebody tells Chinedu Okafor that Junie Marsh has been seen talking to police.",
+      "beat": 1126
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -516,35 +555,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1098
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "priya"
-      ],
-      "text": "Ms. Priya Raman ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1095
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nadia"
-      ],
-      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed.",
-      "beat": 1093
     }
   ],
   "player_queue": [
@@ -567,12 +577,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 280,
+  "last_gazette_day": 281,
   "llm_budget": {
     "day": "2026-08-23",
     "spent": {
-      "fast": 47543,
-      "deep": 2591
+      "fast": 64478,
+      "deep": 3439
     }
   },
   "silent_runs": 0,
@@ -1226,7 +1236,7 @@
       "b": "malik",
       "since_day": 239,
       "cause": "would not let it go",
-      "heat": 11
+      "heat": 9
     },
     {
       "a": "cass",
@@ -1240,28 +1250,28 @@
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 35
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 79
+      "heat": 77
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
-      "cause": "a favour they have never repaid never repaid",
-      "heat": 55
+      "cause": "it turned physical",
+      "heat": 73
     }
   ],
   "quota_exhausted_on": {
@@ -1293,5 +1303,21 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": []
+  "incidents": [
+    {
+      "id": "inc1128-fight-0",
+      "kind": "fight",
+      "effect": "scuffle",
+      "at": "pawnshop",
+      "x": 34,
+      "y": 35,
+      "who": [
+        "ruiz",
+        "booker"
+      ],
+      "text": "Det. Yolanda Ruiz puts Booker Lyle against a wall at Lyle Pawn & Loan over a favour they have never repaid. People stop to watch.",
+      "started": 1128,
+      "until": 1130
+    }
+  ]
 }
