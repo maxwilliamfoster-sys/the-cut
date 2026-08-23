@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1159,
-  "last_beat_at": "2026-08-23T11:27:12Z",
+  "beat": 1161,
+  "last_beat_at": "2026-08-23T11:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "first snow",
   "heat": {
-    "riverside": 33,
-    "delmar": 36,
+    "riverside": 31,
+    "delmar": 34,
     "terraces": 5,
-    "civic": 7
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -298,6 +298,30 @@
   ],
   "events": [
     {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 1161
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Something pays out for Dez Okonkwo. More than expected, which is its own problem.",
+      "beat": 1160
+    },
+    {
       "id": "fight",
       "heat": {},
       "mood": {
@@ -517,30 +541,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1134
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1133
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1131
     }
   ],
   "player_queue": [
@@ -568,7 +568,7 @@
     "day": "2026-08-23",
     "spent": {
       "fast": 163908,
-      "deep": 27338
+      "deep": 30895
     }
   },
   "silent_runs": 0,
@@ -1222,8 +1222,9 @@
       "evidence": "stares at the empty lot, counting packages",
       "day": 288,
       "trial_day": 290,
-      "status": "awaiting_trial",
-      "witnesses": 0
+      "status": "acquitted",
+      "witnesses": 0,
+      "verdict": "not guilty"
     },
     {
       "id": "c002",
@@ -1287,7 +1288,7 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-08-23",
-    "beat": 1159,
+    "beat": 1161,
     "providers": [
       "gemini"
     ]
