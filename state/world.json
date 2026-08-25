@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1387,
-  "last_beat_at": "2026-08-25T20:27:12Z",
+  "beat": 1388,
+  "last_beat_at": "2026-08-25T20:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 17,
-    "delmar": 17,
-    "terraces": 19,
+    "riverside": 16,
+    "delmar": 16,
+    "terraces": 18,
     "civic": 5
   },
   "turf": {
@@ -320,9 +320,33 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt19",
+      "from": "amara",
+      "to": "tee",
+      "kind": "money",
+      "amount": 600,
+      "due_day": 352,
+      "note": "fronted cash and expects it back",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1388
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -568,19 +592,6 @@
       ],
       "text": "Rey Vasquez ends up at the clinic. The paperwork says one thing; the injury says another.",
       "beat": 1156
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1155
     }
   ],
   "player_queue": [
@@ -607,7 +618,7 @@
   "llm_budget": {
     "day": "2026-08-25",
     "spent": {
-      "fast": 72982,
+      "fast": 76758,
       "deep": 4370
     }
   },
@@ -1243,6 +1254,23 @@
       "condition": "standing",
       "since_day": 346,
       "built_by": "the city"
+    },
+    {
+      "id": "new_civic_347",
+      "name": "Okonkwo Library",
+      "district": "flats",
+      "x": 53,
+      "y": 96,
+      "w": 10,
+      "h": 6,
+      "door": "S",
+      "kind": "civic",
+      "style": "concrete",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 347
     }
   ],
   "laws": [
@@ -1317,7 +1345,7 @@
   ],
   "law_pressure": 1,
   "last_law_day": 269,
-  "last_expansion_day": 291,
+  "last_expansion_day": 347,
   "feuds": [
     {
       "a": "dez",
@@ -1405,7 +1433,20 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [],
+  "incidents": [
+    {
+      "id": "inc1388-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "new_civic_347",
+      "x": 57,
+      "y": 100,
+      "who": [],
+      "text": "Okonkwo Library opens on what was empty ground in The Flats.",
+      "started": 1388,
+      "until": 1390
+    }
+  ],
   "treasury": 10289,
   "tax_rate": 0.18,
   "ledger": [
@@ -1486,7 +1527,68 @@
       ]
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "kind": "build",
+      "what": "shop",
+      "at": "2026-08-25T20:32:58.029Z"
+    },
+    {
+      "kind": "build",
+      "what": "shop",
+      "at": "2026-08-25T20:33:00.698Z"
+    },
+    {
+      "kind": "build",
+      "what": "shop",
+      "at": "2026-08-25T20:33:01.647Z"
+    },
+    {
+      "kind": "build",
+      "what": "shop",
+      "at": "2026-08-25T20:33:02.809Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:07.244Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:07.568Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:07.908Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:08.374Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:08.718Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:08.866Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:09.196Z"
+    },
+    {
+      "kind": "tax",
+      "rate": 0.23,
+      "at": "2026-08-25T20:33:09.823Z"
+    }
+  ],
   "order_log": [
     {
       "kind": "order",
@@ -1602,6 +1704,7 @@
     "amnesty": 1500,
     "festival": 1100
   },
-  "orders_pending": 0,
-  "grade": "getting by"
+  "orders_pending": 12,
+  "grade": "getting by",
+  "standing": 45
 }
