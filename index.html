@@ -413,7 +413,7 @@ const TALK_URL = 'https://the-cut-talk.maxwilliamfoster.workers.dev';
 let MAP=null, WORLD=null, AGENTS=null, LOG=[];
 // ROSTER is everybody ever; AGENTS is only the living, which is what gets drawn.
 let ROSTER=null, DEAD=[];
-let selected=null, bg=null, T=16, lastFetch=0, beatStartMs=0;
+let selected=null, T=16, lastFetch=0, beatStartMs=0;
 const anim = {};                 // per-agent render state
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
 ctx.imageSmoothingEnabled = false;
@@ -463,7 +463,7 @@ async function load(first){
       LOG = txt.trim().split('\n').filter(Boolean).map(JSON.parse);
     }catch(e){ LOG = []; }
 
-    if(first || shapeChanged){ buildBackground(); ROADS = null; }   // new streets, new traffic
+    if(first || shapeChanged){ invalidateGround(); ROADS = null; }   // new streets, new traffic
     if(first) fitCanvas();
     if(newBeat) onNewBeat();
     paintPanel();
@@ -482,27 +482,92 @@ async function load(first){
 }
 
 // ── static map, drawn once ──────────────────────────────────────────────────
-function buildBackground(){
-  bg = document.createElement('canvas');
-  bg.width = MAP.w*T; bg.height = MAP.h*T;
-  const g = bg.getContext('2d');
-  g.imageSmoothingEnabled = false;
+// ── the ground, drawn in chunks ─────────────────────────────────────────────
+// The background used to be a single canvas the size of the whole city — fine at 128 tiles
+// across, and a hard wall at around 512, because browsers cap a canvas at roughly 16,384
+// pixels a side. That cap was the only real thing standing between this city and unlimited
+// expansion.
+//
+// Now the ground is rendered in 64-tile chunks, made on demand and only for what you are
+// actually looking at. Memory scales with the size of the window rather than the size of
+// the world, a chunk that scrolls out of view is dropped, and the map can be any size at
+// all. It also means a building going up only invalidates the chunks it touches instead of
+// forcing a redraw of the entire city.
+const CHUNK = 64;                    // tiles per side: 1024px at T=16
+const CHUNK_BUDGET = 48;             // chunks kept in memory before the furthest are dropped
+let CHUNKS = new Map();
+let CHUNK_VERSION = null;
+let OWNER = null;                    // which building owns each tile, built once per version
 
-  // Which building (if any) owns each tile, so walls can be painted in that building's
-  // own style rather than one shared brown.
-  const owner = {};
+function tileOwners(){
+  if(OWNER) return OWNER;
+  OWNER = {};
   for(const id in MAP.locations){
     const L = MAP.locations[id];
     // rects, not rect: the bounding box of an L-shaped building covers the street beside
     // it and a U-shaped one covers its own courtyard, so both would be painted as wall.
     for(const [bx,by,bw,bh] of (L.rects || [L.rect])){
-      for(let y=by;y<by+bh;y++) for(let x=bx;x<bx+bw;x++) owner[x+','+y] = id;
+      for(let y=by;y<by+bh;y++) for(let x=bx;x<bx+bw;x++) OWNER[x+','+y] = id;
     }
   }
+  return OWNER;
+}
 
-  for(let y=0;y<MAP.h;y++){
+function invalidateGround(){
+  CHUNKS = new Map();
+  OWNER = null;
+  CHUNK_VERSION = MAP && MAP.version;
+}
+
+function getChunk(cx, cy){
+  const key = cx + ',' + cy;
+  const hit = CHUNKS.get(key);
+  if(hit){ hit.used = Date.now(); return hit.cv; }
+
+  const c = document.createElement('canvas');
+  c.width = CHUNK * T; c.height = CHUNK * T;
+  const g = c.getContext('2d');
+  g.imageSmoothingEnabled = false;
+  paintGround(g, cx * CHUNK, cy * CHUNK, CHUNK, CHUNK);
+
+  if(CHUNKS.size >= CHUNK_BUDGET){    // drop whatever was looked at longest ago
+    let oldest = null;
+    for(const [k, v] of CHUNKS) if(!oldest || v.used < oldest[1].used) oldest = [k, v];
+    if(oldest) CHUNKS.delete(oldest[0]);
+  }
+  CHUNKS.set(key, {cv: c, used: Date.now()});
+  return c;
+}
+
+function drawGround(){
+  if(!MAP) return;
+  if(CHUNK_VERSION !== MAP.version) invalidateGround();
+  // Only the chunks the viewport actually touches.
+  const x0 = Math.floor((-view.ox / view.s) / (CHUNK * T));
+  const y0 = Math.floor((-view.oy / view.s) / (CHUNK * T));
+  const x1 = Math.floor(((cv.width - view.ox) / view.s) / (CHUNK * T));
+  const y1 = Math.floor(((cv.height - view.oy) / view.s) / (CHUNK * T));
+  const maxX = Math.floor((MAP.w - 1) / CHUNK), maxY = Math.floor((MAP.h - 1) / CHUNK);
+  for(let cy = Math.max(0, y0); cy <= Math.min(maxY, y1); cy++){
+    for(let cx = Math.max(0, x0); cx <= Math.min(maxX, x1); cx++){
+      ctx.drawImage(getChunk(cx, cy), cx * CHUNK * T, cy * CHUNK * T);
+    }
+  }
+}
+
+// Paints one rectangle of tiles into `g`, with (px, py) as the top-left of the target.
+function paintGround(g, px, py, cw, ch){
+  const owner = tileOwners();
+  // Shift the whole context instead of offsetting every coordinate inside it. The painter
+  // below thinks in world tiles and has a facade pass with its own variables; rewriting
+  // each of those by hand is exactly the kind of edit that puts `w(x-px)*T` in your source.
+  g.save();
+  g.translate(-px * T, -py * T);
+  for(let y=py; y<py+ch; y++){
+    if(y < 0 || y >= MAP.h) continue;
     const row = MAP.grid[y];
-    for(let x=0;x<MAP.w;x++){
+    for(let x=px; x<px+cw; x++){
+      if(x < 0 || x >= MAP.w) continue;
       const c = row[x];
       const L = MAP.locations[owner[x+','+y]];
       const S = L ? (STYLE[L.style] || STYLE.none) : STYLE.none;
@@ -583,6 +648,8 @@ function buildBackground(){
   let awn = 0;
   for(const id in MAP.locations){
     const L = MAP.locations[id], [x,y,w,h] = L.rect;
+    // Facades outside this chunk would be drawn and immediately clipped away.
+    if(x+w < px || y+h < py || x > px+cw || y > py+ch) continue;
     const S = STYLE[L.style] || STYLE.none;
     if(L.kind === 'outdoor'){ /* open sites get no facade */ }
     else {
@@ -626,6 +693,7 @@ function buildBackground(){
   // with smoothing off, so any text baked into it gets stretched into pixel mush. They are
   // drawn in screen space in drawLabels() instead, at native resolution, so they stay
   // crisp at every zoom level.
+  g.restore();
 }
 
 function drawLabels(){
@@ -846,7 +914,9 @@ function frame(){
 // gets no rAF callbacks at all until it is focused, which previously meant an empty canvas
 // on arrival; load() now paints one frame directly so the city is there the moment you look.
 function draw(){
-  if(!MAP || !bg || !AGENTS || !cv.width) return;
+  // Was `!bg` — the single background canvas that no longer exists. Left as it was, this
+  // guard returned on every frame and the city rendered as an empty rectangle.
+  if(!MAP || !AGENTS || !cv.width) return;
   const now = Date.now();
   if(follow && PLAYER.spawned) applyView();      // camera tracks you every frame
 
@@ -855,7 +925,7 @@ function draw(){
   ctx.save();
   ctx.translate(view.ox, view.oy);
   ctx.scale(view.s, view.s);
-  ctx.drawImage(bg, 0, 0);
+  drawGround();
 
   // Night wash — the city visibly changes shift, which sells "time is passing" more
   // cheaply than any clock in the corner.

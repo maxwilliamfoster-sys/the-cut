@@ -552,12 +552,18 @@ def road_path(start, goal):
 # nowhere left". It now grows on demand: when nothing of a useful size will fit any more,
 # another strip is added and the road grid is extended into it at the same pitch.
 #
-# Not literally infinite — the browser downloads the grid, so there is a practical ceiling
-# measured in hundreds of tiles rather than a hard limit in the code. Growth is in chunks
-# because re-exporting the map is the expensive part, not the tiles themselves.
+# The old ceiling was the browser's, not this file's: the ground used to be painted onto a
+# single canvas the size of the whole city, and browsers cap a canvas at roughly 16,384
+# pixels a side. The renderer now paints in 64-tile chunks made on demand, so that wall is
+# gone and the city can keep going outwards.
+#
+# What is left is the cost of shipping the tile grid itself, which is a text file of mostly
+# repeated characters and compresses to almost nothing. MAX_SIDE is a sanity rail rather
+# than a limit anybody is expected to reach — at 4,096 a side this city is sixteen million
+# tiles, which is more ground than a hundred years of ticks would ever build on.
 GROW_CHUNK = 32
 ROAD_PITCH = 16
-MAX_SIDE = 512          # a 512x512 grid is a ~1MB map.json; past that the browser suffers
+MAX_SIDE = 4096
 
 
 def resize(new_w, new_h):
