@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1388,
-  "last_beat_at": "2026-08-25T20:42:12Z",
+  "beat": 1391,
+  "last_beat_at": "2026-08-25T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 16,
-    "delmar": 16,
-    "terraces": 18,
+    "riverside": 13,
+    "delmar": 25,
+    "terraces": 15,
     "civic": 5
   },
   "turf": {
@@ -337,6 +337,43 @@
   ],
   "events": [
     {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "nadia"
+      ],
+      "text": "Something pays out for Nadia Vasquez. More than expected, which is its own problem.",
+      "beat": 1391
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1390
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1389
+    },
+    {
       "id": "funeral",
       "heat": {},
       "mood": {
@@ -549,77 +586,34 @@
       ],
       "text": "Something pays out for Dez Okonkwo. More than expected, which is its own problem.",
       "beat": 1160
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "amara",
-        "june"
-      ],
-      "text": "Amara Bello and June Kowal are seen arguing in the street loud enough that people stop.",
-      "beat": 1158
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "ruiz"
-      ],
-      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 1157
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "rey"
-      ],
-      "text": "Rey Vasquez ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1156
     }
   ],
   "player_queue": [
     {
       "agent": "dez",
       "name": "Dez Okonkwo",
-      "line": "You alright?",
-      "reply": "You think I'm on your side?"
+      "line": "kill yourself",
+      "reply": "You think you're the first to try to get under my skin, Mayor? What's your business here?"
     },
     {
       "agent": "dez",
       "name": "Dez Okonkwo",
-      "line": "Heard the 9th were asking about you.",
-      "reply": "Who are you talking to?"
+      "line": "im demanding you",
+      "reply": "Demanding me what, exactly? You think you can just come in here and I'll roll over? What do you want, Mayor?"
     },
     {
       "agent": "dez",
       "name": "Dez Okonkwo",
-      "line": "I'm not winding you up.",
-      "reply": "What's your business with the 9th?"
+      "line": "i want you to die",
+      "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 346,
+  "last_gazette_day": 347,
   "llm_budget": {
     "day": "2026-08-25",
     "spent": {
-      "fast": 76758,
-      "deep": 4370
+      "fast": 89576,
+      "deep": 5337
     }
   },
   "silent_runs": 0,
@@ -1271,6 +1265,78 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 347
+    },
+    {
+      "id": "civic_shop_347",
+      "name": "Riverside Market",
+      "district": "flats",
+      "x": 1,
+      "y": 96,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 347,
+      "built_by": "the city"
+    },
+    {
+      "id": "civic_shop_347b",
+      "name": "Riverside Market",
+      "district": "flats",
+      "x": 19,
+      "y": 96,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 347,
+      "built_by": "the city"
+    },
+    {
+      "id": "civic_shop_347b",
+      "name": "Riverside Market",
+      "district": "flats",
+      "x": 1,
+      "y": 82,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 347,
+      "built_by": "the city"
+    },
+    {
+      "id": "civic_shop_347b",
+      "name": "Riverside Market",
+      "district": "flats",
+      "x": 47,
+      "y": 82,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 347,
+      "built_by": "the city"
     }
   ],
   "laws": [
@@ -1373,35 +1439,35 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 25
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 49
+      "heat": 47
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 45
+      "heat": 43
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 41
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 45
+      "heat": 43
     }
   ],
   "quota_exhausted_on": {
@@ -1433,23 +1499,44 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
-    {
-      "id": "inc1388-opening-0",
-      "kind": "opening",
-      "effect": "opening",
-      "at": "new_civic_347",
-      "x": 57,
-      "y": 100,
-      "who": [],
-      "text": "Okonkwo Library opens on what was empty ground in The Flats.",
-      "started": 1388,
-      "until": 1390
-    }
-  ],
-  "treasury": 10289,
-  "tax_rate": 0.18,
+  "incidents": [],
+  "treasury": 2318,
+  "tax_rate": 0.23,
   "ledger": [
+    {
+      "day": 347,
+      "wages": 1483,
+      "takings": 2780,
+      "tax": 969,
+      "welfare": 0,
+      "civic": 540,
+      "net": 429,
+      "treasury": 2318
+    },
+    {
+      "day": 347,
+      "spend": 2100,
+      "reason": "built a shop",
+      "treasury": 1889
+    },
+    {
+      "day": 347,
+      "spend": 2100,
+      "reason": "built a shop",
+      "treasury": 3989
+    },
+    {
+      "day": 347,
+      "spend": 2100,
+      "reason": "built a shop",
+      "treasury": 6089
+    },
+    {
+      "day": 347,
+      "spend": 2100,
+      "reason": "built a shop",
+      "treasury": 8189
+    },
     {
       "day": 346,
       "wages": 1483,
@@ -1509,6 +1596,15 @@
   ],
   "births": [
     {
+      "id": "etta",
+      "name": "Etta Adeyemi",
+      "day": 347,
+      "parents": [
+        "simone",
+        "femi"
+      ]
+    },
+    {
       "id": "elias",
       "name": "Elias Reyes",
       "day": 345,
@@ -1527,69 +1623,108 @@
       ]
     }
   ],
-  "orders": [
-    {
-      "kind": "build",
-      "what": "shop",
-      "at": "2026-08-25T20:32:58.029Z"
-    },
-    {
-      "kind": "build",
-      "what": "shop",
-      "at": "2026-08-25T20:33:00.698Z"
-    },
-    {
-      "kind": "build",
-      "what": "shop",
-      "at": "2026-08-25T20:33:01.647Z"
-    },
-    {
-      "kind": "build",
-      "what": "shop",
-      "at": "2026-08-25T20:33:02.809Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:07.244Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:07.568Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:07.908Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:08.374Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:08.718Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:08.866Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:09.196Z"
-    },
-    {
-      "kind": "tax",
-      "rate": 0.23,
-      "at": "2026-08-25T20:33:09.823Z"
-    }
-  ],
+  "orders": [],
   "order_log": [
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 23%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 347,
+      "text": "Tax set to 23% (was 18%)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 347,
+      "beat": 1391,
+      "order": "build",
+      "building": "civic_shop_347b",
+      "what": "shop",
+      "cost": 2100,
+      "text": "Riverside Market is commissioned in The Flats ($2,100)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 347,
+      "beat": 1391,
+      "order": "build",
+      "building": "civic_shop_347b",
+      "what": "shop",
+      "cost": 2100,
+      "text": "Riverside Market is commissioned in The Flats ($2,100)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 347,
+      "beat": 1391,
+      "order": "build",
+      "building": "civic_shop_347b",
+      "what": "shop",
+      "cost": 2100,
+      "text": "Riverside Market is commissioned in The Flats ($2,100)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 347,
+      "beat": 1391,
+      "order": "build",
+      "building": "civic_shop_347",
+      "what": "shop",
+      "cost": 2100,
+      "text": "Riverside Market is commissioned in The Flats ($2,100)."
+    },
     {
       "kind": "order",
       "order": "tax",
@@ -1674,29 +1809,70 @@
       "buildings": 35,
       "treasury": 10289,
       "employment": 100
+    },
+    {
+      "day": 347,
+      "overall": 70,
+      "economy": 82,
+      "wellbeing": 65,
+      "society": 26,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 34,
+      "buildings": 40,
+      "treasury": 2318,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 346,
-    "overall": 67,
-    "economy": 88,
-    "wellbeing": 62,
-    "society": 25,
-    "infrastructure": 97,
-    "growth": 73,
-    "population": 33,
-    "buildings": 35,
-    "treasury": 10289,
+    "day": 347,
+    "overall": 70,
+    "economy": 82,
+    "wellbeing": 65,
+    "society": 26,
+    "infrastructure": 100,
+    "growth": 100,
+    "population": 34,
+    "buildings": 40,
+    "treasury": 2318,
     "employment": 100
   },
   "buildable": {
-    "housing": 2600,
-    "shop": 2100,
-    "workshop": 3400,
-    "bar": 2300,
-    "clinic": 4200,
-    "school": 4600,
-    "park": 1200
+    "housing": {
+      "cost": 2600,
+      "w": 8,
+      "h": 6
+    },
+    "shop": {
+      "cost": 2100,
+      "w": 9,
+      "h": 5
+    },
+    "workshop": {
+      "cost": 3400,
+      "w": 10,
+      "h": 6
+    },
+    "bar": {
+      "cost": 2300,
+      "w": 8,
+      "h": 5
+    },
+    "clinic": {
+      "cost": 4200,
+      "w": 9,
+      "h": 6
+    },
+    "school": {
+      "cost": 4600,
+      "w": 11,
+      "h": 6
+    },
+    "park": {
+      "cost": 1200,
+      "w": 10,
+      "h": 7
+    }
   },
   "programmes": {
     "policing": 900,
@@ -1704,7 +1880,8 @@
     "amnesty": 1500,
     "festival": 1100
   },
-  "orders_pending": 12,
-  "grade": "getting by",
-  "standing": 45
+  "orders_pending": 0,
+  "grade": "doing well",
+  "standing": 45,
+  "forces": {}
 }
