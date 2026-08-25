@@ -117,13 +117,38 @@ def match_jobs(world, agents, day, rng=None):
     if not open_roles:
         return out
 
+    by_id = {b["id"]: b for b in world.get("buildings", [])}
+
+    # First pass: put people back into their own trade. Without this the matcher sorted
+    # everybody by skill and handed out the best-paid vacancies in order, which put the
+    # detective and the man who runs the corner crew side by side on a hospital ward. What
+    # somebody does is most of who they are, and the roster already says what that is.
+    for a in list(seeking):
+        home_job = a.get("work")
+        if home_job in open_roles:
+            free, pay = open_roles[home_job]
+            b = by_id[home_job]
+            a["job"] = {"at": home_job, "title": _own_trade(a),
+                        "wage": int(pay * (0.7 + a.get("skill", 30) / 140.0)),
+                        "since_day": day}
+            out.append({"kind": "job", "event": "hired", "who": a["id"], "name": a["name"],
+                        "at": home_job, "wage": a["job"]["wage"], "day": day,
+                        "text": f'{a["name"]} is working at {b["name"]}.'})
+            seeking.remove(a)
+            if free - 1 > 0:
+                open_roles[home_job] = (free - 1, pay)
+            else:
+                del open_roles[home_job]
+
+    # Whoever is left takes what is going, best-paid to most skilled. That is what quietly
+    # produces an underclass, and an underclass is what makes the society score mean
+    # something.
     seeking.sort(key=lambda a: -a.get("skill", 30))
     roles = []
     for bid, (free, pay) in open_roles.items():
         roles += [(bid, pay)] * free
     roles.sort(key=lambda r: -r[1])
 
-    by_id = {b["id"]: b for b in world.get("buildings", [])}
     for a, (bid, pay) in zip(seeking, roles):
         b = by_id[bid]
         wage = int(pay * (0.7 + a.get("skill", 30) / 140.0))
@@ -132,6 +157,14 @@ def match_jobs(world, agents, day, rng=None):
                     "at": bid, "wage": wage, "day": day,
                     "text": f'{a["name"]} starts at {b["name"]}.'})
     return out
+
+
+def _own_trade(a):
+    """Somebody in their own workplace does their own job, and the roster already says what
+    that is in better words than a generic table can — "narcotics detective, 9th Precinct"
+    beats "on the ward" for a detective standing in a police station."""
+    role = (a.get("role") or "working").strip()
+    return role[:1].lower() + role[1:] if role else "working"
 
 
 def _title(building, rng):
