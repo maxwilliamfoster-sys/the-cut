@@ -572,6 +572,7 @@ def main(argv=None):
                     print(f"[tick] family failed for day {d} ({type(e).__name__}: {e})")
                 try:
                     records += economy.match_jobs(world, agents, d)
+                    records += economy.apply_roles(world, agents, d)
                     records += economy.settle_day(world, agents, d)
                 except Exception as e:
                     print(f"[tick] economy failed for day {d} ({type(e).__name__}: {e})")
@@ -657,10 +658,14 @@ def main(argv=None):
         # What the leader's panel needs to draw itself: the menu and its prices, and how
         # many orders are still waiting. Written into the world rather than hard-coded in
         # the browser so a price change is a one-line edit in sim/orders.py.
-        world["buildable"] = {k: v["cost"] for k, v in orders.BUILDABLE.items()}
+        # Size as well as price: the browser draws a footprint you can place, so it needs
+        # to know how big the thing is before it exists.
+        world["buildable"] = {k: {"cost": v["cost"], "w": v["w"], "h": v["h"]}
+                              for k, v in orders.BUILDABLE.items()}
         world["programmes"] = {k: v["cost"] for k, v in orders.PROGRAMMES.items()}
         world["orders_pending"] = len(world.get("orders") or [])
         world["standing"] = directives.average_standing(agents)
+        world["forces"] = economy.forces(agents)
         if world.get("scores"):
             world["grade"] = scores.grade(world["scores"].get("overall", 0))
 

@@ -271,6 +271,9 @@
       <div id="buildbtns" class="btns"></div>
       <div class="subhead">SPEND ON PEOPLE</div>
       <div id="progbtns" class="btns"></div>
+      <div class="subhead">PUT SOMEBODY TO WORK</div>
+      <div id="rolerow"></div>
+      <div id="forcerow"></div>
       <div class="subhead">TAX</div>
       <div id="taxrow"></div>
       <div id="orderlog"></div>
@@ -881,6 +884,28 @@ cv.addEventListener('pointermove', e=>{
   applyView(); draw();
 });
 cv.addEventListener('pointerup', ()=>{ setTimeout(()=>{ drag = null; }, 0); });
+cv.addEventListener('mousemove', e=>{
+  if(!PLACING) return;
+  const t = tileUnder(e);
+  if(!PLACE_AT || t[0] !== PLACE_AT[0] || t[1] !== PLACE_AT[1]){ PLACE_AT = t; draw(); }
+});
+
+cv.addEventListener('click', e=>{
+  if(!PLACING) return;
+  e.stopPropagation();
+  const [x, y] = tileUnder(e);
+  if(!siteFits(x, y, PLACING.w, PLACING.h)){
+    $('orderlog').innerHTML = `<div class="bad">Not there — something is in the way.</div>`
+      + $('orderlog').innerHTML;
+    return;
+  }
+  const label = PLACING.label.toLowerCase();
+  sendOrder({kind:'build', what: PLACING.what, x, y}, `a ${label} at ${x},${y}`);
+  cancelBuild();
+}, true);
+
+window.addEventListener('keydown', e=>{ if(e.key === 'Escape') cancelBuild(); });
+
 cv.addEventListener('dblclick', ()=>{ zoom = 1; pan = {x:0,y:0}; applyView(); draw(); });
 window.addEventListener('resize', ()=>{ if(MAP) fitCanvas(); });
 // A tab that loads while hidden (background tab, collapsed pane) reports clientWidth 0,
@@ -1006,6 +1031,7 @@ function draw(){
 
   drawCars(now);          // traffic on the roads that have always been empty
   drawIncidents(now);     // fights, fires, police lights — the things worth watching
+  drawSite();             // the footprint the mayor is marking out, if any
 
   ctx.restore();
   drawLabels();
@@ -1872,6 +1898,79 @@ function nearestNPC(){
   return best;
 }
 
+// ── marking out a site ──────────────────────────────────────────────────────
+// Choosing a building used to drop it wherever the simulation found room, which is fine for
+// a city that grows on its own and useless for a mayor with a plan. Arming a build puts a
+// footprint under the cursor: green where it will go, red where it will not, and the ground
+// under it is checked as you move so you find out before you spend the money.
+//
+// The check here is a preview only. The simulation decides for real when the order lands —
+// it knows about margins and roads the browser has no business duplicating.
+let PLACING = null;
+let PLACE_AT = null;
+
+function armBuild(what, label){
+  const spec = (WORLD.buildable || {})[what];
+  if(!spec) return;
+  const size = (spec.w && spec.h) ? spec : {w: 8, h: 6, cost: spec.cost || spec};
+  PLACING = {what, label, w: size.w, h: size.h, cost: size.cost !== undefined ? size.cost : spec};
+  PLACE_AT = null;
+  $('orderlog').innerHTML =
+    `<div>Marking out <b>${esc(label)}</b> — click the ground to put it there. ` +
+    `Esc to stop.</div>` + $('orderlog').innerHTML;
+  paintLeader();
+  draw();
+}
+
+function cancelBuild(){
+  if(!PLACING) return;
+  PLACING = null; PLACE_AT = null;
+  paintLeader(); draw();
+}
+window.armBuild = armBuild;
+window.cancelBuild = cancelBuild;
+
+// Ground you can build on. Pavement and open grass only — never a road, the river, or
+// anything already standing.
+function buildableTile(x, y){
+  if(!MAP || x < 0 || y < 0 || x >= MAP.w || y >= MAP.h) return false;
+  return '.g'.includes(MAP.grid[y][x]);
+}
+
+function siteFits(x, y, w, h){
+  for(let yy = y; yy < y + h; yy++)
+    for(let xx = x; xx < x + w; xx++)
+      if(!buildableTile(xx, yy)) return false;
+  return true;
+}
+
+function drawSite(){
+  if(!PLACING || !PLACE_AT) return;
+  const {w, h} = PLACING;
+  const [x, y] = PLACE_AT;
+  const ok = siteFits(x, y, w, h);
+  ctx.save();
+  ctx.globalAlpha = 0.34;
+  ctx.fillStyle = ok ? '#6fb3a0' : '#d9534f';
+  ctx.fillRect(x * T, y * T, w * T, h * T);
+  ctx.globalAlpha = 0.95;
+  ctx.strokeStyle = ok ? '#8fe0c8' : '#ff8a8a';
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([4, 3]);
+  ctx.strokeRect(x * T + 0.5, y * T + 0.5, w * T - 1, h * T - 1);
+  ctx.setLineDash([]);
+  ctx.restore();
+}
+
+// Where the pointer is, in tiles, given the current pan and zoom.
+function tileUnder(ev){
+  const r = cv.getBoundingClientRect();
+  const sx = (ev.clientX - r.left) * (cv.width / r.width);
+  const sy = (ev.clientY - r.top) * (cv.height / r.height);
+  return [Math.floor(((sx - view.ox) / view.s) / T),
+          Math.floor(((sy - view.oy) / view.s) / T)];
+}
+
 // ── running the city ────────────────────────────────────────────────────────
 // The player is not a character and has no sprite. They set the tax rate, commission
 // buildings and fund programmes; everything else — who takes the jobs, who falls out with
@@ -1950,10 +2049,12 @@ function paintLeader(){
 
   const costs = WORLD.buildable || {};
   $('buildbtns').innerHTML = BUILD_MENU.map(([k,label,why])=>{
-    const c = costs[k];
+    const spec = costs[k];
+    const c = (spec && spec.cost !== undefined) ? spec.cost : spec;
     if(c === undefined) return '';
-    return `<button class="btn" title="${esc(why)}" ${money < c ? 'disabled' : ''}
-      onclick="sendOrder({kind:'build',what:'${k}'}, 'a ${esc(label.toLowerCase())}')">
+    const armed = PLACING && PLACING.what === k;
+    return `<button class="btn ${armed?'on':''}" title="${esc(why)}" ${money < c ? 'disabled' : ''}
+      onclick="armBuild('${k}','${esc(label)}')">
       ${esc(label)} <span class="cost">$${c.toLocaleString()}</span></button>`;
   }).join('');
 
@@ -1965,6 +2066,27 @@ function paintLeader(){
       onclick="sendOrder({kind:'programme',what:'${k}'}, '${esc(label.toLowerCase())}')">
       ${esc(label)} <span class="cost">$${c.toLocaleString()}</span></button>`;
   }).join('');
+
+  // Roles are assigned to whoever is selected, so the flow is: click a person, then pick
+  // what the city needs them to be. A role needs somewhere to do it — nurses need a clinic —
+  // which is the chain that makes building things matter.
+  const ROLE_MENU = [['officer','Police'], ['soldier','Soldier'], ['nurse','Nurse'],
+                     ['teacher','Teacher'], ['builder','Builder'], ['labourer','Labourer']];
+  const who = selected && AGENTS[selected];
+  $('rolerow').innerHTML = who
+    ? `<div style="font-size:11px;padding-bottom:4px">` +
+      `<b>${esc(who.name)}</b>${who.job ? ` — ${esc(who.job.title)}` : ' — no work'}</div>` +
+      `<div class="btns">` + ROLE_MENU.map(([k,label])=>
+        `<button class="btn" onclick="sendOrder({kind:'assign',who:'${selected}',role:'${k}'},` +
+        ` '${esc(who.name)} as ${esc(label.toLowerCase())}')">${esc(label)}</button>`).join('') +
+      `</div>`
+    : `<div class="hint" style="padding:0">Click somebody on the map to give them a job.</div>`;
+
+  const f = WORLD.forces || {};
+  const shown = ROLE_MENU.filter(([k])=>f[k]).map(([k,label])=>
+    `<span><b>${f[k]}</b> ${esc(label.toLowerCase())}${f[k]===1?'':'s'}</span>`);
+  $('forcerow').innerHTML = shown.length
+    ? `<div id="cityfacts" style="padding-top:6px">${shown.join('')}</div>` : '';
 
   $('taxrow').innerHTML =
     `<button class="btn" ${tax<=0?'disabled':''}

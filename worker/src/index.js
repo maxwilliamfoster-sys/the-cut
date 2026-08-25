@@ -406,6 +406,7 @@ async function finish(env, ip, body, a, agents, line, raw) {
 // simulation, and a rate limit stops one caller filling the queue.
 const BUILDABLE = ["housing", "shop", "workshop", "bar", "clinic", "school", "park"];
 const PROGRAMMES = ["policing", "outreach", "amnesty", "festival"];
+const ROLES = ["labourer", "nurse", "teacher", "officer", "soldier", "builder"];
 const ORDER_LIMIT = 20;        // per IP per hour — a leader does not sign 200 things an hour
 
 async function order(req, env) {
@@ -424,9 +425,22 @@ async function order(req, env) {
   if (kind === "build") {
     if (!BUILDABLE.includes(body.what)) return json({ error: "cannot build that" }, 400);
     out = { kind: "build", what: body.what };
+    // An optional spot the mayor marked out on the map. Bounds are sanity only — whether
+    // anything actually fits there is the simulation's call, not this one's.
+    const x = Number(body.x), y = Number(body.y);
+    if (Number.isInteger(x) && Number.isInteger(y) &&
+        x >= 0 && y >= 0 && x < 8192 && y < 8192) {
+      out.x = x; out.y = y;
+    }
   } else if (kind === "programme") {
     if (!PROGRAMMES.includes(body.what)) return json({ error: "no such programme" }, 400);
     out = { kind: "programme", what: body.what };
+  } else if (kind === "assign") {
+    const role = String(body.role || "");
+    if (!ROLES.includes(role)) return json({ error: "no such job" }, 400);
+    const who = String(body.who || "").slice(0, 40);
+    if (!who) return json({ error: "assign who?" }, 400);
+    out = { kind: "assign", who, role };
   } else if (kind === "tax") {
     const rate = Number(body.rate);
     if (!isFinite(rate) || rate < 0 || rate > 0.45) return json({ error: "rate out of range" }, 400);

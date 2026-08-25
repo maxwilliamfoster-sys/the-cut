@@ -343,6 +343,65 @@ check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
 
+# ── choosing where a building goes, and what people are ──────────────────────────
+_w17 = copy.deepcopy(w)
+_a17 = copy.deepcopy(a)
+_w17["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w17["buildings"])
+mortality.ensure_fields(_a17)
+economy.ensure(_w17, _a17)
+orders.ensure(_w17)
+_d17 = clock.day_of(_w17["beat"])
+
+_b0 = _w17["buildings"][0]
+check("a spot the mayor picks is checked, not trusted",
+      not construction.plot_free(_w17["buildings"], _b0["x"], _b0["y"], 8, 6)
+      and not construction.plot_free(_w17["buildings"], -5, -5, 8, 6),
+      "you could build on top of the church")
+_w17["treasury"] = 60_000
+_bad = orders._apply(_w17, _a17, {"kind": "build", "what": "clinic",
+                                  "x": _b0["x"], "y": _b0["y"]}, _d17, 1)
+check("building on an occupied spot is refused with a reason",
+      _bad and not _bad.get("ok") and "way" in _bad["text"])
+check("refusing a placement does not take the money", _w17["treasury"] == 60_000)
+
+# ── roles, and the forces they add up to ─────────────────────────────────────────
+check("a role needs somewhere to do it",
+      all(spec["needs"] in (None, "civic", "industrial") for spec in economy.ROLES.values()))
+_kid = next((x for x in _a17.values() if x.get("age", 30) < 16), None)
+if _kid:
+    _r = economy.assign_role(_w17, _a17, _kid["id"], "soldier", _d17)
+    check("children are not made soldiers", _r and not _r.get("ok"))
+
+_adult = next(x for x in _a17.values() if economy.working_age(x) and x.get("alive", True))
+_ok = economy.assign_role(_w17, _a17, _adult["id"], "officer", _d17)
+check("somebody can be put into a public role", _ok and _ok.get("ok"))
+check("the force counts what people actually are",
+      economy.forces(_a17).get("officer", 0) >= 1)
+
+_heat_before = dict(_w17["heat"])
+_w17["heat"] = {k: 60 for k in _w17["heat"]}
+economy.apply_roles(_w17, _a17, _d17)
+check("police on the strength actually cool the streets",
+      all(v < 60 for v in _w17["heat"].values()))
+
+_t = _w17["treasury"]
+_sol = [x for x in _a17.values() if economy.working_age(x) and x.get("alive", True)][1]
+economy.assign_role(_w17, _a17, _sol["id"], "soldier", _d17)
+economy.apply_roles(_w17, _a17, _d17)
+check("an army costs money every day it exists", _w17["treasury"] < _t,
+      "soldiers should be a standing cost, not free")
+
+check("somebody in a public role is not re-hired into a shop",
+      "role_job" in inspect.getsource(economy.match_jobs))
+
+# ── enough people to do any of it ────────────────────────────────────────────────
+check("the city can hold a town, not just a street",
+      mortality.MAX_POPULATION >= 150 and family.MAX_POPULATION >= 150)
+check("people come for the work",
+      "vacancies" in inspect.getsource(mortality.maybe_arrival),
+      "arrivals ignore whether there are jobs, so building does not attract anybody")
+
 # ── telling people what to do ────────────────────────────────────────────────────
 _w15 = copy.deepcopy(w)
 _a15 = copy.deepcopy(a)

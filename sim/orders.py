@@ -105,6 +105,24 @@ def _apply(world, agents, o, day, beat):
         return {"kind": "order", "order": "tax", "ok": True, "day": day,
                 "text": f'Tax set to {rate * 100:.0f}% (was {before * 100:.0f}%).'}
 
+    if kind == "assign":
+        # Directing somebody into a public role is an instruction, not a posting — it goes
+        # through the same refusal that everything else the mayor says does.
+        from . import directives
+        aid, role = o.get("who"), o.get("role")
+        a = agents.get(aid)
+        if not a or role not in economy.ROLES:
+            return {"kind": "order", "ok": False, "day": day,
+                    "text": "Nobody by that name, or no such job."}
+        told = directives.give(world, agents, aid,
+                               f"I need you to take work as a {role}.", day, beat)
+        if told and not told.get("ok"):
+            return {"kind": "order", "ok": False, "day": day, "order": "assign",
+                    "text": told["text"]}
+        return dict(economy.assign_role(world, agents, aid, role, day) or
+                    {"kind": "order", "ok": False, "day": day,
+                     "text": "That did not work."}, order="assign")
+
     if kind == "programme":
         return _programme(world, agents, o, day, beat)
 
@@ -123,7 +141,26 @@ def _build(world, agents, o, day, beat):
 
     import random
     rng = random.Random(f'order:{day}:{o.get("what")}')
-    plot = construction.find_plot(world["buildings"], spec["w"], spec["h"], rng)
+
+    # A spot the mayor picked on the map, if they picked one. Checked here rather than
+    # trusted: the page is public, and "build me a clinic on top of the church" should be
+    # refused with a reason rather than quietly relocated somewhere else.
+    plot = None
+    if o.get("x") is not None and o.get("y") is not None:
+        try:
+            px, py = int(o["x"]), int(o["y"])
+        except (TypeError, ValueError):
+            px = py = None
+        if px is not None:
+            if construction.plot_free(world["buildings"], px, py, spec["w"], spec["h"]):
+                plot = (px, py, city.district_at(py))
+            else:
+                return {"kind": "order", "ok": False, "day": day, "order": "build",
+                        "text": f'A {o["what"]} will not fit there — something is in the '
+                                f'way, or it is on a road.'}
+
+    if plot is None:
+        plot = construction.find_plot(world["buildings"], spec["w"], spec["h"], rng)
     if not plot:
         # A mayor who has paid for a building should not be told there is no room while
         # there is still map to survey.

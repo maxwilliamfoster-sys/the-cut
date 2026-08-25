@@ -43,6 +43,31 @@ SKILL_DECAY = 0.2             # per city-day out of it
 DOLE = 12                     # what the city pays somebody with no work, per day
 
 
+# ── what somebody can be put to ──────────────────────────────────────────────
+# Everyone starts as a person with a trade, not a unit. A mayor can direct somebody into a
+# public role, and that role is what turns a populace into a police force, a hospital or an
+# army — but it is a request, not a conscription: see sim/directives.py for who says no.
+#
+# `needs` is the kind of building the role has to be carried out in, so you cannot have
+# nurses without a clinic or soldiers without a barracks. That is the point of the chain:
+# ordering people about is only as good as what you have built for them.
+ROLES = {
+    "labourer": {"needs": None,      "pay": 40, "title": "labouring where they are needed"},
+    "nurse":    {"needs": "civic",   "pay": 56, "title": "nursing at the clinic",
+                 "health": 1.4},
+    "teacher":  {"needs": "civic",   "pay": 54, "title": "teaching",
+                 "skill": 0.35},
+    "officer":  {"needs": "civic",   "pay": 58, "title": "on the strength of the 9th",
+                 "heat": -1.6},
+    "soldier":  {"needs": "civic",   "pay": 60, "title": "under arms for the city",
+                 "upkeep": 22, "order": 1.1},
+    "builder":  {"needs": "industrial", "pay": 52, "title": "on the works crews",
+                 "build": 1},
+}
+
+FORCE_ROLES = ("officer", "soldier")
+
+
 def ensure(world, agents):
     world.setdefault("treasury", STARTING_TREASURY)
     world.setdefault("tax_rate", DEFAULT_TAX)
@@ -110,7 +135,8 @@ def match_jobs(world, agents, day, rng=None):
                         "at": j["at"], "day": day,
                         "text": f'{a["name"]} is out of work — {j["title"]} is gone.'})
 
-    seeking = [a for a in workforce(agents) if not a.get("job")]
+    seeking = [a for a in workforce(agents)
+               if not a.get("job") and not a.get("role_job")]
     if not seeking:
         return out
     open_roles = vacancies(world, agents)
@@ -224,6 +250,89 @@ def settle_day(world, agents, day):
     return [{"kind": "economy", "day": day, "text":
              f'Day {day}: the city took ${collected + trade_tax:,} and spent '
              f'${welfare + civic_cost:,}. Treasury ${world["treasury"]:,}.', **entry}]
+
+
+def assign_role(world, agents, aid, role, day):
+    """Put somebody into a public role, if the city has anywhere to put them."""
+    spec = ROLES.get(role)
+    a = agents.get(aid)
+    if not spec or not a or not a.get("alive", True):
+        return None
+    if not working_age(a):
+        return {"kind": "role", "ok": False, "who": aid, "name": a["name"], "day": day,
+                "text": f'{a["name"]} is not old enough to be a {role}.'}
+
+    where = None
+    if spec["needs"]:
+        options = [b for b in world.get("buildings", [])
+                   if b["kind"] == spec["needs"] and b.get("condition") in ("standing", "damaged")]
+        if not options:
+            return {"kind": "role", "ok": False, "who": aid, "name": a["name"], "day": day,
+                    "text": f'There is nowhere for a {role} to work — build a '
+                            f'{spec["needs"]} building first.'}
+        where = min(options, key=lambda b: abs(b["x"] - a["pos"][0])
+                    + abs(b["y"] - a["pos"][1]))["id"]
+
+    a["role_job"] = role
+    a["work"] = where or a.get("work")
+    a["job"] = {"at": where or a.get("work"), "title": spec["title"],
+                "wage": int(spec["pay"] * (0.7 + a.get("skill", 30) / 140.0)),
+                "since_day": day, "role": role}
+    return {"kind": "role", "ok": True, "who": aid, "name": a["name"], "role": role,
+            "day": day, "text": f'{a["name"]} is now {spec["title"]}.'}
+
+
+def forces(agents):
+    """How many people the city currently has under each public role."""
+    out = {}
+    for a in agents.values():
+        if not a.get("alive", True):
+            continue
+        r = (a.get("job") or {}).get("role") or a.get("role_job")
+        if r:
+            out[r] = out.get(r, 0) + 1
+    return out
+
+
+def apply_roles(world, agents, day):
+    """What having a police force, a hospital or an army actually does. Once a city-day."""
+    f = forces(agents)
+    notes = []
+
+    officers = f.get("officer", 0)
+    if officers:
+        drop = int(officers * abs(ROLES["officer"]["heat"]))
+        for d in world.get("heat", {}):
+            world["heat"][d] = max(0, world["heat"][d] - drop)
+        notes.append(f"{officers} on the strength")
+
+    soldiers = f.get("soldier", 0)
+    if soldiers:
+        # An army is a standing cost. It is the one role that takes money out every day for
+        # something you hope never to need.
+        cost = soldiers * ROLES["soldier"]["upkeep"]
+        world["treasury"] = int(world.get("treasury", 0) - cost)
+        notes.append(f"{soldiers} under arms costing ${cost}/day")
+
+    nurses = f.get("nurse", 0)
+    if nurses:
+        for a in agents.values():
+            if a.get("alive", True):
+                a["health"] = min(100, a.get("health", 80) + nurses * 0.25)
+        notes.append(f"{nurses} nursing")
+
+    teachers = f.get("teacher", 0)
+    if teachers:
+        for a in agents.values():
+            if a.get("alive", True) and working_age(a):
+                a["skill"] = min(100, a.get("skill", 30) + teachers * 0.12)
+        notes.append(f"{teachers} teaching")
+
+    world["forces"] = f
+    if not notes:
+        return []
+    return [{"kind": "forces", "day": day, "text": "The city's people at work: "
+             + ", ".join(notes) + "."}]
 
 
 def employment_rate(agents):

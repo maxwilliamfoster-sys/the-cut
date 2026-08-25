@@ -177,28 +177,42 @@ def _reopen(b, rng):
 
 # ── expansion ────────────────────────────────────────────────────────────────
 
-def find_plot(buildings, w, h, rng=None):
-    """An empty rectangle with a pavement margin, clear of roads, water and everything
-    already built. Returns (x, y, district) or None."""
+def blocked_cells(buildings):
+    """Every tile a new building may not occupy: anything already built (plus a one-tile
+    margin), every road and its verge, and the river."""
     taken = set()
     for b in buildings:
         for (x, y) in city.cells(b):
             for dx in range(-1, 2):
                 for dy in range(-1, 2):
                     taken.add((x + dx, y + dy))
-
-    blocked = set(taken)
     for y0, rh in city.H_ROADS:
         for y in range(y0 - 2, y0 + rh + 2):
             for x in range(city.W):
-                blocked.add((x, y))
+                taken.add((x, y))
     for x0, rw in city.V_ROADS:
         for x in range(x0 - 2, x0 + rw + 2):
             for y in range(city.H):
-                blocked.add((x, y))
+                taken.add((x, y))
     for y in range(city.RIVER_DEPTH + 2):
         for x in range(city.W):
-            blocked.add((x, y))
+            taken.add((x, y))
+    return taken
+
+
+def plot_free(buildings, x, y, w, h, blocked=None):
+    """Can a building of this size go exactly here? Used when the mayor picks the spot."""
+    if x < 1 or y < 1 or x + w > city.W - 1 or y + h > city.H - 1:
+        return False
+    blocked = blocked_cells(buildings) if blocked is None else blocked
+    return not any((xx, yy) in blocked
+                   for yy in range(y, y + h) for xx in range(x, x + w))
+
+
+def find_plot(buildings, w, h, rng=None):
+    """An empty rectangle with a pavement margin, clear of roads, water and everything
+    already built. Returns (x, y, district) or None."""
+    blocked = blocked_cells(buildings)
 
     # Collect every valid plot rather than returning the first one found. Scanning top-left
     # to bottom-right and taking the first hit put four consecutive new buildings in the

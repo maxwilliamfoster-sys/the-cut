@@ -40,6 +40,11 @@ STRESS_FACTOR = 0.0000075    # per point of stress over 70
 HEAT_FACTOR = 0.0000032      # per point of district heat
 FRAIL_HEALTH = 35            # below this, health itself starts killing people
 
+# The block was capped at 34 people, which was right for one street and far too small for
+# somewhere a mayor is meant to grow. The real ceiling is the prompt, and cognition already
+# rations attention to eleven a beat regardless of how many live here.
+MAX_POPULATION = 220
+
 GRIEF_DECAY = 3              # per city-day
 FUNERAL_DELAY = 2            # city-days between a death and the funeral
 
@@ -220,7 +225,13 @@ def maybe_arrival(world, agents, buildings, beat, day):
     rng = _rng(world, beat, "arrival")
     alive = living(agents)
     homes = [b for b in buildings if b["kind"] == "home" and b["condition"] in city.USABLE]
-    if beat % 4 != 0 or not homes or len(alive) >= 34 or rng.random() > 0.06:
+    # People come for work. An empty vacancy is the strongest reason anybody has to move
+    # to a place, so the arrival rate follows what the city has built rather than a flat
+    # trickle — build a workshop and within a day somebody turns up to work in it.
+    from . import economy
+    open_jobs = sum(free for free, _pay in economy.vacancies(world, agents).values())
+    pull = 0.04 + min(0.30, open_jobs * 0.020)
+    if beat % 4 != 0 or not homes or len(alive) >= MAX_POPULATION or rng.random() > pull:
         return None
     # Only when there is actually room, or the block has thinned out.
     if len(alive) / max(1, len(homes)) > 3.0 and len(alive) > 24:
@@ -247,6 +258,12 @@ def maybe_arrival(world, agents, buildings, beat, day):
         "alive": True, "health": 82, "grief": 0,
         "arrived_day": day, "last_thought_beat": 0,
     }
+    # Somebody who arrives mid-beat has missed the movement pass, so without this they
+    # stand on the map doing literally nothing until the next one. Harmless, and it looks
+    # like a bug to anybody watching — which it also is.
+    agents[aid]["activity"] = "setting their things down"
+    agents[aid]["action"] = "arrives on the block with a bag"
+
     memory.remember(agents[aid], beat, day, f"I moved onto this block today.", 7)
     return {"kind": "arrival", "who": aid, "name": name, "day": day, "beat": beat,
             "text": f'{name} moves into {city.LOCATIONS[home]["name"]}. Nobody knows them yet.'}

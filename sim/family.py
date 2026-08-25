@@ -27,7 +27,9 @@ PAIR_AT = 55                  # mutual affinity before anybody calls it anything
 MIN_PARTNER_AGE = 18
 MAX_BIRTH_AGE = 44
 BIRTH_CHANCE = 0.09           # per couple per city-day, before modifiers
-MAX_POPULATION = 60           # beyond this the prompt and the map both suffer
+# Was 60. Attention is rationed per beat rather than per head, so the cast can be a town
+# rather than a street without the prompt growing at all.
+MAX_POPULATION = 220
 
 CHILD_TRAITS = [
     "watchful", "loud about everything", "easily delighted", "solemn for their age",
