@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1381,
-  "last_beat_at": "2026-08-25T18:57:12Z",
+  "beat": 1383,
+  "last_beat_at": "2026-08-25T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "heat",
   "heat": {
-    "riverside": 23,
-    "delmar": 8,
-    "terraces": 17,
+    "riverside": 21,
+    "delmar": 6,
+    "terraces": 15,
     "civic": 5
   },
   "turf": {
@@ -331,6 +331,31 @@
         "happiness": -10
       },
       "targets": [
+        "dez",
+        "iris"
+      ],
+      "text": "Dez Okonkwo and Iris Amadi are seen arguing in the street loud enough that people stop.",
+      "beat": 1383
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 1382
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
         "junie",
         "booker"
       ],
@@ -554,30 +579,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 1151
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1149
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 1148
     }
   ],
   "player_queue": [
@@ -600,12 +601,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 344,
+  "last_gazette_day": 345,
   "llm_budget": {
     "day": "2026-08-25",
     "spent": {
-      "fast": 49081,
-      "deep": 2569
+      "fast": 57534,
+      "deep": 3475
     }
   },
   "silent_runs": 0,
@@ -1324,35 +1325,35 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 31
+      "heat": 29
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 53
+      "heat": 51
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 49
+      "heat": 47
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 47
+      "heat": 45
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 49
+      "heat": 47
     }
   ],
   "quota_exhausted_on": {
@@ -1385,9 +1386,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 12527,
+  "treasury": 12708,
   "tax_rate": 0.18,
   "ledger": [
+    {
+      "day": 345,
+      "wages": 1483,
+      "takings": 2110,
+      "tax": 631,
+      "welfare": 0,
+      "civic": 450,
+      "net": 181,
+      "treasury": 12708
+    },
     {
       "day": 344,
       "wages": 1483,
@@ -1420,6 +1431,15 @@
     }
   ],
   "births": [
+    {
+      "id": "elias",
+      "name": "Elias Reyes",
+      "day": 345,
+      "parents": [
+        "malik",
+        "rosa"
+      ]
+    },
     {
       "id": "jonah",
       "name": "Jonah Bello",
@@ -1471,19 +1491,49 @@
       "buildings": 34,
       "treasury": 12527,
       "employment": 100
+    },
+    {
+      "day": 345,
+      "overall": 64,
+      "economy": 89,
+      "wellbeing": 61,
+      "society": 26,
+      "infrastructure": 97,
+      "growth": 50,
+      "population": 33,
+      "buildings": 34,
+      "treasury": 12708,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 344,
-    "overall": 62,
+    "day": 345,
+    "overall": 64,
     "economy": 89,
-    "wellbeing": 54,
-    "society": 24,
+    "wellbeing": 61,
+    "society": 26,
     "infrastructure": 97,
     "growth": 50,
-    "population": 32,
+    "population": 33,
     "buildings": 34,
-    "treasury": 12527,
+    "treasury": 12708,
     "employment": 100
-  }
+  },
+  "buildable": {
+    "housing": 2600,
+    "shop": 2100,
+    "workshop": 3400,
+    "bar": 2300,
+    "clinic": 4200,
+    "school": 4600,
+    "park": 1200
+  },
+  "programmes": {
+    "policing": 900,
+    "outreach": 800,
+    "amnesty": 1500,
+    "festival": 1100
+  },
+  "orders_pending": 0,
+  "grade": "getting by"
 }
