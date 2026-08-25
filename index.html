@@ -241,7 +241,7 @@
       </div>
     </div>
     <div id="legend"></div>
-    <div id="controls">scroll to zoom · drag to pan · click anyone · <b>WASD to walk in</b></div>
+    <div id="controls">scroll to zoom · drag to pan · <b>click anyone to speak to them</b></div>
     <div id="prompt"></div>
     <div id="talk">
       <div class="t-head"><span id="talkWho">—</span><button id="talkX">esc</button></div>
@@ -1451,7 +1451,12 @@ cv.addEventListener('click', e=>{
   select(best);
 });
 
-function select(id){ selected = id; paintPanel(); }
+function select(id){
+  selected = id;
+  paintPanel();
+  // A mayor does not walk over. Selecting somebody is how you get them on the line.
+  if(id && AGENTS[id]) openTalk(id);
+}
 
 // Clicking a line in TROUBLE should take you to the person it is about. Reading that Booker
 // is owed $4,200 is one thing; being put in front of him on the map is another.
@@ -1525,7 +1530,9 @@ function paintPanel(){
       `<span><b>$${(S.treasury||0).toLocaleString()}</b> treasury</span>` +
       `<span><b>${S.employment}%</b> in work</span>` +
       `<span><b>${S.buildings}</b> buildings</span>` +
-      `<span>tax <b>${Math.round((WORLD.tax_rate||0)*100)}%</b></span>`;
+      `<span>tax <b>${Math.round((WORLD.tax_rate||0)*100)}%</b></span>` +
+      (WORLD.standing === undefined ? '' :
+        `<span>they think of you: <b>${WORLD.standing}</b>/100</span>`);
   }
 
   // ── right now ─────────────────────────────────────────────────────────────
@@ -1693,6 +1700,9 @@ function paintMind(){
   $('mind').innerHTML = `
     <div style="color:var(--dim);padding-bottom:6px">${esc(a.age)} · ${esc(a.role)}</div>
 
+    <div class="row"><span>thinks of you</span><span>${a.standing===undefined?'—':a.standing}</span></div>
+    ${a.directive && a.directive.status==='pending'
+      ? `<div class="hint" style="color:var(--gold)">You told them: ${esc(a.directive.text)}</div>` : ''}
     <div class="row"><span>energy</span><span>${a.mood.energy}</span></div>${bar(a.mood.energy,'var(--good)')}
     <div class="row"><span>happiness</span><span>${a.mood.happiness}</span></div>${bar(a.mood.happiness,'var(--gold)')}
     <div class="row"><span>stress</span><span>${a.mood.stress}</span></div>${bar(a.mood.stress,'var(--hot)')}
@@ -1739,7 +1749,11 @@ function renderTicker(){
 // You are not part of the simulation: the cloud has no idea you exist between beats.
 // You move locally at whatever framerate the browser manages, and only the things you
 // actually say to somebody are sent anywhere.
-const PLAYER = {x:31.5, y:24.5, facing:'S', moving:false, spawned:false, near:null};
+// You are not in this city, you run it. The walk-in avatar is gone: there is nobody to
+// steer, no proximity to manage, and talking to somebody is a matter of deciding to, not of
+// getting close enough. Kept as an inert object so the render and hit-test paths that still
+// reference it stay simple rather than sprouting null checks.
+const PLAYER = {x:0, y:0, facing:'S', moving:false, spawned:false, near:null};
 const SPEED = 5.2;                       // tiles per second
 const keys = {};
 let follow = false, lastFrame = 0;
@@ -1747,7 +1761,7 @@ let follow = false, lastFrame = 0;
 addEventListener('keydown', e=>{
   if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(e.key.toLowerCase())){
     keys[e.key.toLowerCase()] = true;
-    if(!PLAYER.spawned){ PLAYER.spawned = true; follow = true; $('controls').style.display='none'; }
+    return;                                  // no avatar to spawn any more
     e.preventDefault();
   }
   if(e.key === 'e' || e.key === 'E'){ if(PLAYER.near) openTalk(PLAYER.near); }

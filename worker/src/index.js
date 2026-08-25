@@ -151,7 +151,20 @@ function situation(a, world, agents) {
   return bits.length ? bits.join("\n") : "Nothing much is hanging over you right now.";
 }
 
+// How this person regards the office, in words rather than a number. Somebody who has been
+// taxed hard and refused twice does not talk to the mayor the way somebody who just got a
+// clinic on their street does.
+function standingLine(a) {
+  const s = a.standing === undefined ? 45 : a.standing;
+  if (s >= 75) return "You think well of them and would do most things they asked.";
+  if (s >= 55) return "You are broadly willing to hear them out.";
+  if (s >= 35) return "You are sceptical of them, as you are of anybody in an office.";
+  if (s >= 18) return "You do not think much of them and you are not hiding it well.";
+  return "You have no time for them at all and would enjoy saying so.";
+}
+
 function personaPrompt(a, world, agents) {
+  const standing = standingLine(a);
   const block = ["morning", "afternoon", "evening", "night"][world.beat % 4];
   const mems = (a.memories || []).slice(-5).map(m => `d${m.day}: ${m.what}`).join(" | ") || "nothing much";
   const rels = Object.entries(a.relationships || {})
@@ -174,10 +187,14 @@ Your read on people: ${rels || "no strong views"}
 WHAT IS ON YOUR PLATE
 ${situation(a, world, agents)}
 
-A stranger is talking to you in the street. You do not know them and you have no reason to
-trust them. Reply IN CHARACTER as ${a.name} — one or two short sentences, the words you say
-out loud and nothing else. No narration, no asterisks, no explaining yourself. Be guarded,
-funny, rude, evasive or curious, whatever THIS person would actually be.
+THE MAYOR OF THIS CITY is speaking to you — the person who sets the tax you pay, decides
+what gets built on your street, and can have things done for you or to you. ${standing}
+
+Reply IN CHARACTER as ${a.name} — one or two short sentences, the words you say out loud and
+nothing else. No narration, no asterisks, no explaining yourself. You are talking to power:
+that might make you deferential, or wary, or it might be your one chance to ask for
+something you need. It does not make you a different person. Be guarded, funny, rude,
+evasive, pleading or blunt, whatever THIS person would actually be with the mayor.
 
 Give them something to push against — a question back, a denial with an edge, a piece of
 what you actually think, a demand. Never a bare "is that so" or "sounds like a lie" and

@@ -108,11 +108,20 @@ def merge_base(existing):
 
 def sync_city(world):
     """Reconcile the world's buildings with the seed, then point the city module at them."""
+    _restore_size(world)
     merged = merge_base(world.get("buildings"))
     if merged != world.get("buildings"):
         world["buildings"] = merged
     point_city(world)
     return world["buildings"]
+
+
+def _restore_size(world):
+    """A city that has grown keeps its size in the world, or it would shrink back to the
+    size compiled into city.py the next time the process started."""
+    w, h = world.get("map_w"), world.get("map_h")
+    if w and h and (w > city.W or h > city.H):
+        city.resize(w, h)
 
 
 def point_city(world):
@@ -122,6 +131,7 @@ def point_city(world):
     A world saved before the city became mutable has no buildings at all, so it is seeded
     here rather than crashing — the live city is upgraded by being run, not by a migration.
     """
+    _restore_size(world)
     if not world.get("buildings"):
         return sync_city(world)
     if city.BUILDINGS is not world["buildings"]:

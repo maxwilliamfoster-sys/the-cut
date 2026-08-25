@@ -13,9 +13,9 @@ import sys
 from datetime import timedelta
 
 import re
-from sim import (city, clock, cognition, construction, drama, economy, events,
-                 family, incidents, law, llm, mortality, orders, player, reflect,
-                 roster, scores, state, tick)
+from sim import (city, clock, cognition, construction, directives, drama, economy,
+                 events, family, incidents, law, llm, mortality, orders, player,
+                 reflect, roster, scores, state, tick)
 
 FAILS = []
 
@@ -342,6 +342,77 @@ _m = re.search(r"const WALKABLE_TILES = '([^']*)'", _html)
 check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
+
+# ── telling people what to do ────────────────────────────────────────────────────
+_w15 = copy.deepcopy(w)
+_a15 = copy.deepcopy(a)
+_w15["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w15["buildings"])
+mortality.ensure_fields(_a15)
+directives.ensure(_a15)
+_d15 = clock.day_of(_w15["beat"])
+
+check("an instruction is told apart from ordinary conversation",
+      directives.read("Go to the clinic.", "dez", _a15)
+      and not directives.read("Cold one tonight, isn't it.", "dez", _a15))
+check("every shape of instruction resolves to something real",
+      all(directives.read(t, "dez", _a15) for t in
+          ("Go to the clinic.", "You need to work at the diner.",
+           "Make peace with Malik Reyes.", "Talk to Dot Feeney.")))
+
+# The whole point: it can fail, and how they regard you is what decides it.
+def _obeyed(standing, line="Go to the clinic."):
+    hits = 0
+    for i in range(80):
+        b = copy.deepcopy(_a15)
+        directives.ensure(b)
+        b["dez"]["standing"] = standing
+        r = directives.give(_w15, b, "dez", line, _d15, i)
+        if r and r.get("ok"):
+            hits += 1
+    return hits
+_low, _high = _obeyed(5), _obeyed(95)
+check("people can refuse the mayor", _low < 70,
+      "every instruction lands, which makes this an interface with extra steps")
+check("how somebody regards you decides whether they do it", _high > _low + 15,
+      f"standing 5 obeyed {_low}/80, standing 95 obeyed {_high}/80")
+
+_b15 = copy.deepcopy(_a15)
+directives.ensure(_b15)
+_b15["dez"]["standing"] = 100
+_b15["dez"]["volatility"] = 5
+_b15["dez"]["mood"]["stress"] = 0
+_g = directives.give(_w15, _b15, "dez", "Go to the clinic.", _d15, 7)
+check("an accepted instruction changes where they actually go",
+      not _g["ok"] or tick.target_location(_b15["dez"], "morning", _w15, _b15) == "clinic",
+      "they agreed and then carried on as before")
+if _g["ok"]:
+    _b15["dez"]["at"] = "clinic"
+    check("carrying it out closes it off",
+          any(r.get("done") for r in directives.follow_up(_w15, _b15, _d15, 8)))
+check("an instruction nobody acts on lapses rather than lasting forever",
+      directives.DIRECTIVE_DAYS <= 7)
+
+# ── land ─────────────────────────────────────────────────────────────────────────
+check("the city can survey more ground when it runs out",
+      hasattr(city, "grow_if_needed") and city.MAX_SIDE > city.W,
+      "the map is a fixed rectangle again, so the city cannot grow")
+_w16 = {"buildings": [dict(b) for b in city.BASE_BUILDINGS]}
+_full = _w16["buildings"] + [
+    city._b(f"fill{i}", "x", "flats", (i * 13) % (city.W - 8), 6 + ((i * 7) % (city.H - 12)),
+            6, 5, "S", "home", "brick") for i in range(500)]
+_w0, _h0 = city.W, city.H
+_grew = city.grow_if_needed(_w16, _full)
+check("a full map grows instead of refusing to build",
+      _grew and (city.W > _w0 or city.H > _h0))
+check("new ground gets roads", len(city.H_ROADS) + len(city.V_ROADS) > 11)
+city.resize(_w0, _h0)          # leave the module as we found it for later checks
+city.rebuild([dict(b) for b in city.BASE_BUILDINGS])
+
+# The mayor is not a character in the city.
+check("there is no player avatar to walk around",
+      "no avatar to spawn" in _html and "click anyone to speak to them" in _html,
+      "the mayor is still a sprite with WASD")
 
 # ── the leader's controls ────────────────────────────────────────────────────────
 _worker = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),

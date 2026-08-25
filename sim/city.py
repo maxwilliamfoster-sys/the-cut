@@ -547,6 +547,67 @@ def road_path(start, goal):
     return list(reversed(out))
 
 
+# ── land the city has not needed yet ─────────────────────────────────────────
+# The map used to be a fixed rectangle, so "expand the city" eventually meant "there is
+# nowhere left". It now grows on demand: when nothing of a useful size will fit any more,
+# another strip is added and the road grid is extended into it at the same pitch.
+#
+# Not literally infinite — the browser downloads the grid, so there is a practical ceiling
+# measured in hundreds of tiles rather than a hard limit in the code. Growth is in chunks
+# because re-exporting the map is the expensive part, not the tiles themselves.
+GROW_CHUNK = 32
+ROAD_PITCH = 16
+MAX_SIDE = 512          # a 512x512 grid is a ~1MB map.json; past that the browser suffers
+
+
+def resize(new_w, new_h):
+    """Extend the world, laying new roads only in ground that did not exist before.
+
+    Roads are added strictly beyond the old edges so nothing already built can find a
+    carriageway through the middle of it.
+    """
+    global W, H
+    old_w, old_h = W, H
+    W, H = min(MAX_SIDE, max(W, new_w)), min(MAX_SIDE, max(H, new_h))
+
+    for y in range(((old_h // ROAD_PITCH) + 1) * ROAD_PITCH, H - 6, ROAD_PITCH):
+        if all(y0 != y for y0, _ in H_ROADS):
+            H_ROADS.append((y, 4))
+    for x in range(((old_w // ROAD_PITCH) + 1) * ROAD_PITCH, W - 6, ROAD_PITCH):
+        if all(x0 != x for x0, _ in V_ROADS):
+            V_ROADS.append((x, 4))
+
+    # The outermost district stretches to cover whatever was just added, so district_at()
+    # never returns a name for ground that has no district.
+    last = max(DISTRICTS, key=lambda d: DISTRICTS[d]["y"][1])
+    lo, _hi = DISTRICTS[last]["y"]
+    DISTRICTS[last]["y"] = (lo, H - 1)
+    return W, H
+
+
+def room_left(buildings, w=12, h=8):
+    """Is there anywhere sensible left to put a building of this size?"""
+    from . import construction
+    return construction.find_plot(buildings, w, h) is not None
+
+
+def grow_if_needed(world, buildings):
+    """Add another strip of land when the city is running out. Returns True if it grew."""
+    if room_left(buildings):
+        return False
+    if W >= MAX_SIDE and H >= MAX_SIDE:
+        return False
+    # Grow the shorter side first so the city stays roughly square rather than becoming a
+    # corridor, which is what repeatedly extending one axis produces.
+    if H <= W:
+        resize(W, H + GROW_CHUNK)
+    else:
+        resize(W + GROW_CHUNK, H)
+    world["map_w"], world["map_h"] = W, H
+    rebuild(buildings)
+    return True
+
+
 def export_map():
     return {
         "tile": TILE, "w": W, "h": H, "version": map_version(),

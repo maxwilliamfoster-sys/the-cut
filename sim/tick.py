@@ -17,9 +17,9 @@ import random
 import sys
 import time
 
-from . import (activities, city, clock, cognition, construction, drama, economy,
-               events, family, incidents, law, llm, mortality, player, reflect,
-               orders, roster, scores, state)
+from . import (activities, city, clock, cognition, construction, directives, drama,
+               economy, events, family, incidents, law, llm, mortality, orders,
+               player, reflect, roster, scores, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -72,7 +72,11 @@ def target_location(agent, block, world, others=None):
             return "church"
 
     # Chasing a debt outranks routine. You do not go to work; you go and find them.
-    # Money first, gossip second: a debt outranks a rumour.
+    # Being told by the mayor sits between a debt and a rumour: money still comes first,
+    # because somebody who is owed thousands is not going to run an errand instead.
+    told = directives.destination(agent)
+    if told and city.usable(told) and not agent.get("chasing"):
+        return told
     chase = agent.get("chasing") or agent.get("checking")
     if chase and chase in others:
         return _chase_target(agent, others[chase], world)
@@ -228,6 +232,7 @@ def run_beat(world, agents, quiet=False, cognition=None):
     law.ensure(world)
     economy.ensure(world, agents)
     family.ensure(world, agents)
+    directives.ensure(agents)
     orders.ensure(world)
     alive = mortality.living(agents)
 
@@ -395,6 +400,17 @@ def world_beat(world, agents, alive, beat, day):
             dirty = True
     except Exception as e:
         print(f"[tick] works failed ({type(e).__name__}: {e})")
+
+    try:
+        # Make room before anybody goes looking for it. The city stops being able to grow
+        # the moment the map is full, and a city that cannot grow is the end of the game.
+        if city.grow_if_needed(world, world["buildings"]):
+            dirty = True
+            out.append({"kind": "structure", "event": "land", "day": day, "beat": beat,
+                        "text": f'The city surveys new ground to the edge of the map '
+                                f'({city.W}x{city.H}).'})
+    except Exception as e:
+        print(f"[tick] land survey failed ({type(e).__name__}: {e})")
 
     try:
         grew = construction.maybe_expand(world, agents, world["buildings"], beat, day)
@@ -570,6 +586,10 @@ def main(argv=None):
                     print(f"[tick] scoring failed for day {d} ({type(e).__name__}: {e})")
                 mortality.decay_grief(agents)
                 drama.tick_feuds(world, agents, d)
+                try:
+                    records += directives.follow_up(world, agents, d, world["beat"])
+                except Exception as e:
+                    print(f"[tick] directives failed for day {d} ({type(e).__name__}: {e})")
 
             if cog and clock.is_day_end(world["beat"]):
                 d = clock.day_of(world["beat"])
@@ -640,6 +660,7 @@ def main(argv=None):
         world["buildable"] = {k: v["cost"] for k, v in orders.BUILDABLE.items()}
         world["programmes"] = {k: v["cost"] for k, v in orders.PROGRAMMES.items()}
         world["orders_pending"] = len(world.get("orders") or [])
+        world["standing"] = directives.average_standing(agents)
         if world.get("scores"):
             world["grade"] = scores.grade(world["scores"].get("overall", 0))
 

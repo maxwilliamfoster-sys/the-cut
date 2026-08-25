@@ -16,7 +16,7 @@ import os
 import urllib.error
 import urllib.request
 
-from . import drama, memory, orders
+from . import directives, drama, memory, orders
 
 WORKER_URL = os.environ.get("THE_CUT_WORKER_URL",
                             "https://the-cut-talk.maxwilliamfoster.workers.dev")
@@ -141,6 +141,14 @@ def absorb(world, agents, beat, day):
                 memory.prune(a)
                 print(f'[player] {a["name"]} is now carrying a rumour about '
                       f'{agents[claim["about"]]["name"]}')
+
+        # Anything shaped like an instruction becomes a directive they may or may not
+        # carry out. Ordinary conversation falls straight through this and stays talk.
+        told = directives.give(world, agents, a["id"], line, day, beat)
+        if told:
+            records.append(told)
+            print(f'[player] {a["name"]}: {"agreed to" if told.get("ok") else "REFUSED"} '
+                  f'{told.get("what")}')
 
         kept.append({"agent": a["id"], "name": a["name"], "line": line, "reply": reply})
         records.append({

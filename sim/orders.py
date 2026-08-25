@@ -125,6 +125,11 @@ def _build(world, agents, o, day, beat):
     rng = random.Random(f'order:{day}:{o.get("what")}')
     plot = construction.find_plot(world["buildings"], spec["w"], spec["h"], rng)
     if not plot:
+        # A mayor who has paid for a building should not be told there is no room while
+        # there is still map to survey.
+        if city.grow_if_needed(world, world["buildings"]):
+            plot = construction.find_plot(world["buildings"], spec["w"], spec["h"], rng)
+    if not plot:
         return {"kind": "order", "ok": False, "day": day, "order": "build",
                 "text": 'There is nowhere left to put it.'}
 
