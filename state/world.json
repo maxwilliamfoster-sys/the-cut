@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1164,
-  "last_beat_at": "2026-08-23T12:42:12Z",
+  "beat": 1381,
+  "last_beat_at": "2026-08-25T18:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "rain",
   "heat": {
-    "riverside": 28,
-    "delmar": 31,
-    "terraces": 5,
+    "riverside": 23,
+    "delmar": 8,
+    "terraces": 17,
     "civic": 5
   },
   "turf": {
@@ -290,10 +290,10 @@
       "amount": 1,
       "due_day": 287,
       "note": "was fronted and has not squared it",
-      "settled": false,
+      "settled": true,
       "patience": 3,
-      "asked": 0,
-      "last_confront_day": -99
+      "asked": 1,
+      "last_confront_day": 343
     },
     {
       "id": "fine17",
@@ -307,9 +307,113 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt18",
+      "from": "simone",
+      "to": "yusuf",
+      "kind": "money",
+      "amount": 600,
+      "due_day": 349,
+      "note": "covered somebody's shortfall, once",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "junie",
+        "booker"
+      ],
+      "text": "Junie Marsh and Booker Lyle are seen arguing in the street loud enough that people stop.",
+      "beat": 1381
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1380
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 1379
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 1377
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1376
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 1374
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 1370
+    },
     {
       "id": "cold_case",
       "heat": {},
@@ -474,87 +578,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 1148
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1145
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1143
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1142
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1138
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1137
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 1136
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 1135
     }
   ],
   "player_queue": [
@@ -577,12 +600,12 @@
       "reply": "What's your business with the 9th?"
     }
   ],
-  "last_gazette_day": 288,
+  "last_gazette_day": 344,
   "llm_budget": {
-    "day": "2026-08-23",
+    "day": "2026-08-25",
     "spent": {
-      "fast": 163908,
-      "deep": 37828
+      "fast": 49081,
+      "deep": 2569
     }
   },
   "silent_runs": 0,
@@ -1301,28 +1324,35 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 31
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 59
+      "heat": 53
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 55
+      "heat": 49
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 47
+    },
+    {
+      "a": "adaeze",
+      "b": "dez",
+      "since_day": 342,
+      "cause": "what they were fronted never repaid",
+      "heat": 49
     }
   ],
   "quota_exhausted_on": {
@@ -1354,18 +1384,106 @@
     "id": "junie",
     "marked": 269
   },
-  "incidents": [
+  "incidents": [],
+  "treasury": 12527,
+  "tax_rate": 0.18,
+  "ledger": [
     {
-      "id": "inc1164-opening-0",
-      "kind": "opening",
-      "effect": "opening",
-      "at": "new_home_291",
-      "x": 32,
-      "y": 84,
-      "who": [],
-      "text": "Brendan Tenement opens on what was empty ground in The Flats.",
-      "started": 1164,
-      "until": 1166
+      "day": 344,
+      "wages": 1483,
+      "takings": 2110,
+      "tax": 631,
+      "welfare": 0,
+      "civic": 450,
+      "net": 181,
+      "treasury": 12527
+    },
+    {
+      "day": 343,
+      "wages": 1436,
+      "takings": 2110,
+      "tax": 623,
+      "welfare": 0,
+      "civic": 450,
+      "net": 173,
+      "treasury": 12346
+    },
+    {
+      "day": 342,
+      "wages": 1436,
+      "takings": 2110,
+      "tax": 623,
+      "welfare": 0,
+      "civic": 450,
+      "net": 173,
+      "treasury": 12173
     }
-  ]
+  ],
+  "births": [
+    {
+      "id": "jonah",
+      "name": "Jonah Bello",
+      "day": 344,
+      "parents": [
+        "tee",
+        "amara"
+      ]
+    }
+  ],
+  "orders": [],
+  "order_log": [],
+  "score_history": [
+    {
+      "day": 342,
+      "overall": 66,
+      "economy": 90,
+      "wellbeing": 68,
+      "society": 25,
+      "infrastructure": 97,
+      "growth": 50,
+      "population": 30,
+      "buildings": 34,
+      "treasury": 12173,
+      "employment": 100
+    },
+    {
+      "day": 343,
+      "overall": 65,
+      "economy": 90,
+      "wellbeing": 63,
+      "society": 23,
+      "infrastructure": 97,
+      "growth": 50,
+      "population": 30,
+      "buildings": 34,
+      "treasury": 12346,
+      "employment": 100
+    },
+    {
+      "day": 344,
+      "overall": 62,
+      "economy": 89,
+      "wellbeing": 54,
+      "society": 24,
+      "infrastructure": 97,
+      "growth": 50,
+      "population": 32,
+      "buildings": 34,
+      "treasury": 12527,
+      "employment": 100
+    }
+  ],
+  "scores": {
+    "day": 344,
+    "overall": 62,
+    "economy": 89,
+    "wellbeing": 54,
+    "society": 24,
+    "infrastructure": 97,
+    "growth": 50,
+    "population": 32,
+    "buildings": 34,
+    "treasury": 12527,
+    "employment": 100
+  }
 }
