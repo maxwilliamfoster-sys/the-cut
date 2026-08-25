@@ -189,6 +189,25 @@
   #cityfacts{display:flex; flex-wrap:wrap; gap:3px 14px; padding-top:8px;
              font-size:10.5px; color:var(--dim)}
   #cityfacts b{color:var(--ink); font-weight:600}
+
+  /* The leader's controls. Buttons say what a thing costs, and grey out when the treasury
+     cannot cover it, so the constraint is visible before you click rather than after. */
+  .subhead{font-size:9.5px; letter-spacing:.09em; color:var(--dim); padding:9px 0 4px}
+  .btns{display:flex; flex-wrap:wrap; gap:5px}
+  .btn{
+    border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--ink);
+    border-radius:6px; padding:5px 8px; font-size:11px; cursor:pointer; font-family:inherit;
+    display:flex; gap:6px; align-items:baseline;
+  }
+  .btn:hover:not(:disabled){background:rgba(255,255,255,.10); border-color:#3b4557}
+  .btn:disabled{opacity:.38; cursor:not-allowed}
+  .btn .cost{color:var(--dim); font-size:10px}
+  .btn.on{border-color:var(--gold); background:rgba(224,180,74,.12)}
+  #leadmoney{font-size:12px; padding-bottom:2px}
+  #leadmoney b{font-size:15px}
+  #taxrow{display:flex; align-items:center; gap:8px; font-size:11px}
+  #orderlog{padding-top:9px; font-size:10.5px; color:var(--dim); line-height:1.45}
+  #orderlog .bad{color:var(--hot)}
   .tr{display:flex; gap:7px; align-items:flex-start; padding:4px 0;
       border-bottom:1px solid rgba(255,255,255,.04); line-height:1.35}
   .tr:last-child{border-bottom:0}
@@ -244,6 +263,18 @@
       <div id="bigscore"><span id="scorenum">—</span><span id="scoretrend"></span></div>
       <div id="subscores"></div>
       <div id="cityfacts"></div>
+    </div>
+    <div class="sec" id="leadsec">
+      <h2>YOU RUN THIS CITY <span id="pending" class="tag"></span></h2>
+      <div id="leadmoney"></div>
+      <div class="subhead">COMMISSION</div>
+      <div id="buildbtns" class="btns"></div>
+      <div class="subhead">SPEND ON PEOPLE</div>
+      <div id="progbtns" class="btns"></div>
+      <div class="subhead">TAX</div>
+      <div id="taxrow"></div>
+      <div id="orderlog"></div>
+      <div class="hint">Orders take effect at the end of the city-day, with the bill.</div>
     </div>
     <div class="sec">
       <h2>RIGHT NOW</h2>
@@ -1624,6 +1655,8 @@ function paintPanel(){
     `<span class="lg"><span class="sw" style="background:${m.color}"></span>` +
     `${esc(m.label)} <span class="ct">${tally[m.key]}</span></span>`).join('');
 
+  paintLeader();
+
   $('casthead').textContent = Object.keys(AGENTS).length + ' PEOPLE';
 
 
@@ -1754,6 +1787,122 @@ function nearestNPC(){
   }
   return best;
 }
+
+// ── running the city ────────────────────────────────────────────────────────
+// The player is not a character and has no sprite. They set the tax rate, commission
+// buildings and fund programmes; everything else — who takes the jobs, who falls out with
+// whom, who is born, what the block makes illegal — stays outside their hands.
+//
+// An order goes to the Worker, waits in KV, is drained by the next tick and carried out at
+// the end of that city-day. The delay is deliberate: you are a mayor, not a god, and the gap
+// between signing something and seeing it is what a term of office feels like.
+
+const BUILD_MENU = [
+  ['housing',  'Housing',  'somewhere for people to live, and be born'],
+  ['shop',     'Shop',     'trade, and three jobs'],
+  ['workshop', 'Workshop', 'six jobs, and the best wages on the block'],
+  ['bar',      'Bar',      'somewhere to be together'],
+  ['clinic',   'Clinic',   'costs money every day; people are healthier'],
+  ['school',   'School',   'costs money every day'],
+  ['park',     'Park',     'no jobs, no takings, and people like it'],
+];
+const PROG_MENU = [
+  ['policing', 'More police', 'cools the streets down'],
+  ['outreach', 'Outreach',    'less stress and less fear, for a day'],
+  ['amnesty',  'Debt amnesty','writes off what people owe each other'],
+  ['festival', 'Street party','people are happier and less alone'],
+];
+
+let ORDER_BUSY = false;
+
+async function sendOrder(payload, label){
+  if(ORDER_BUSY) return;
+  ORDER_BUSY = true;
+  const log = $('orderlog');
+  log.innerHTML = `<div>Sending — ${esc(label)}…</div>` + log.innerHTML;
+  try{
+    const r = await fetch(TALK_URL + '/order', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','X-Player-Key':playerKey()},
+      body: JSON.stringify(payload),
+    });
+    const d = await r.json();
+    if(!r.ok) throw new Error(d.error || ('HTTP ' + r.status));
+    // A 200 is not proof it landed. The Worker's catch-all route answers unknown paths with
+    // 200 and a friendly blob, so before /order was deployed every click reported "Signed"
+    // and nothing was queued at all. Insist on the acknowledgement the endpoint actually
+    // sends.
+    if(!d || d.ok !== true || !d.queued)
+      throw new Error('the city did not take that order — is the Worker up to date?');
+    // Optimistic: the tick has not run yet, so show it as signed rather than done.
+    log.innerHTML = `<div>Signed — <b>${esc(label)}</b>. It happens at the end of the ` +
+                    `city-day.</div>` + log.innerHTML;
+    PENDING_LOCAL += 1;
+    paintLeader();
+  }catch(e){
+    log.innerHTML = `<div class="bad">Could not send — ${esc(e.message)}</div>` + log.innerHTML;
+  }
+  ORDER_BUSY = false;
+}
+
+// Orders signed in this browser but not yet drained by a tick. The world only learns about
+// them when the cron next runs, so without this the button click appears to do nothing for
+// up to fifteen minutes.
+let PENDING_LOCAL = 0;
+let LAST_SEEN_ORDERS = null;
+
+function paintLeader(){
+  const sec = $('leadsec');
+  if(!WORLD || WORLD.treasury === undefined){ sec.style.display = 'none'; return; }
+  sec.style.display = '';
+
+  const money = WORLD.treasury || 0;
+  const tax = Math.round((WORLD.tax_rate || 0) * 100);
+  $('leadmoney').innerHTML =
+    `Treasury <b>$${money.toLocaleString()}</b> ` +
+    `<span style="color:var(--dim)">· ${(WORLD.ledger && WORLD.ledger[0]) ?
+      ((WORLD.ledger[0].net >= 0 ? '+' : '') + '$' + (WORLD.ledger[0].net||0).toLocaleString() +
+      ' a day') : ''}</span>`;
+
+  const costs = WORLD.buildable || {};
+  $('buildbtns').innerHTML = BUILD_MENU.map(([k,label,why])=>{
+    const c = costs[k];
+    if(c === undefined) return '';
+    return `<button class="btn" title="${esc(why)}" ${money < c ? 'disabled' : ''}
+      onclick="sendOrder({kind:'build',what:'${k}'}, 'a ${esc(label.toLowerCase())}')">
+      ${esc(label)} <span class="cost">$${c.toLocaleString()}</span></button>`;
+  }).join('');
+
+  const pcosts = WORLD.programmes || {};
+  $('progbtns').innerHTML = PROG_MENU.map(([k,label,why])=>{
+    const c = pcosts[k];
+    if(c === undefined) return '';
+    return `<button class="btn" title="${esc(why)}" ${money < c ? 'disabled' : ''}
+      onclick="sendOrder({kind:'programme',what:'${k}'}, '${esc(label.toLowerCase())}')">
+      ${esc(label)} <span class="cost">$${c.toLocaleString()}</span></button>`;
+  }).join('');
+
+  $('taxrow').innerHTML =
+    `<button class="btn" ${tax<=0?'disabled':''}
+       onclick="sendOrder({kind:'tax',rate:${Math.max(0,(tax-5))/100}}, 'tax at ${Math.max(0,tax-5)}%')">−5%</button>` +
+    `<span>Currently <b>${tax}%</b> of wages and takings</span>` +
+    `<button class="btn" ${tax>=45?'disabled':''}
+       onclick="sendOrder({kind:'tax',rate:${Math.min(45,(tax+5))/100}}, 'tax at ${Math.min(45,tax+5)}%')">+5%</button>`;
+
+  const queued = (WORLD.orders_pending || 0) + PENDING_LOCAL;
+  $('pending').textContent = queued ? `${queued} waiting` : '';
+
+  // Results come back through the world, so show them once the tick has actually run.
+  const done = WORLD.order_log || [];
+  const stamp = done.length ? (done[0].day + ':' + (done[0].text || '')) : '';
+  if(stamp && stamp !== LAST_SEEN_ORDERS){
+    LAST_SEEN_ORDERS = stamp;
+    PENDING_LOCAL = 0;
+    $('orderlog').innerHTML = done.slice(0,4).map(o=>
+      `<div class="${o.ok === false ? 'bad' : ''}">${esc(o.text || '')}</div>`).join('');
+  }
+}
+window.sendOrder = sendOrder;
 
 // ── talking ─────────────────────────────────────────────────────────────────
 let talkOpen = false, talkWith = null;

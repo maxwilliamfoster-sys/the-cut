@@ -343,6 +343,31 @@ check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
 
+# ── the leader's controls ────────────────────────────────────────────────────────
+_worker = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                             "worker", "src", "index.js"), encoding="utf-8").read()
+check("the Worker will accept exactly what the simulation can build",
+      all(f'"{k}"' in _worker.split("const BUILDABLE")[1][:300] for k in orders.BUILDABLE)
+      and all(f'"{k}"' in _worker.split("const PROGRAMMES")[1][:300] for k in orders.PROGRAMMES),
+      "an order the browser can send but the city cannot carry out, or the reverse")
+check("orders reach the world the same way conversation does",
+      "orders.queue" in inspect.getsource(player.absorb)
+      and '"o:"' in _worker and "orders: await take" in _worker,
+      "the browser can sign an order that never arrives")
+
+# The Worker's catch-all used to answer unknown paths with 200, so the browser reported
+# every order as signed while nothing at all was queued.
+check("an unknown endpoint is a 404, not a cheerful 200",
+      "no such endpoint" in _worker and "404" in _worker)
+check("the browser insists on a real acknowledgement, not just a 200",
+      "d.ok !== true" in _html and "queued" in _html,
+      "a 200 from any endpoint would read as success")
+
+check("orders are applied before the day is costed",
+      inspect.getsource(tick.main).index("orders.apply_all")
+      < inspect.getsource(tick.main).index("economy.settle_day"),
+      "a building commissioned today would not be paid for until tomorrow")
+
 # ── an economy, a population, and a score ────────────────────────────────────────
 _w14 = copy.deepcopy(w)
 _a14 = copy.deepcopy(a)

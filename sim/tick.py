@@ -634,6 +634,15 @@ def main(argv=None):
               f"weather {world['weather']}.")
         if world.get("events"):
             print(f"Latest: {world['events'][0]['text']}")
+        # What the leader's panel needs to draw itself: the menu and its prices, and how
+        # many orders are still waiting. Written into the world rather than hard-coded in
+        # the browser so a price change is a one-line edit in sim/orders.py.
+        world["buildable"] = {k: v["cost"] for k, v in orders.BUILDABLE.items()}
+        world["programmes"] = {k: v["cost"] for k, v in orders.PROGRAMMES.items()}
+        world["orders_pending"] = len(world.get("orders") or [])
+        if world.get("scores"):
+            world["grade"] = scores.grade(world["scores"].get("overall", 0))
+
         if not args.dry_run and paid:
             state.save_world(world)
             state.save_agents(agents)

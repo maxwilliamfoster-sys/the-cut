@@ -16,7 +16,7 @@ import os
 import urllib.error
 import urllib.request
 
-from . import drama, memory
+from . import drama, memory, orders
 
 WORKER_URL = os.environ.get("THE_CUT_WORKER_URL",
                             "https://the-cut-talk.maxwilliamfoster.workers.dev")
@@ -35,19 +35,20 @@ def drain(timeout=20):
     """
     key = os.environ.get("THE_CUT_DRAIN_KEY")
     if not key:
-        return []
+        return [], []
     try:
         req = urllib.request.Request(
             f"{WORKER_URL}/drain",
             headers={"X-Drain-Key": key, "User-Agent": "the-cut/1.0"},
         )
         with urllib.request.urlopen(req, timeout=timeout) as r:
-            return (json.loads(r.read().decode()) or {}).get("exchanges", []) or []
+            d = json.loads(r.read().decode()) or {}
+            return (d.get("exchanges") or []), (d.get("orders") or [])
     except urllib.error.HTTPError as e:
         print(f"[player] drain refused: HTTP {e.code}")
     except Exception as e:
         print(f"[player] drain unavailable: {e}")
-    return []
+    return [], []
 
 
 # Titles, and words that happen to be somebody's name here.
@@ -84,12 +85,26 @@ def _claim_from_line(line, agents, speaker_id):
 
 
 def absorb(world, agents, beat, day):
-    """Fold queued conversations into the people who had them. Returns log records."""
-    exchanges = drain()
-    if not exchanges:
-        return []
+    """Fold queued conversations and orders into the city. Returns log records."""
+    exchanges, pending = drain()
 
-    records, kept = [], []
+    # Orders are parked rather than applied here: they take effect at the end of the
+    # city-day, alongside wages and the score, so a decision and its consequences land
+    # together instead of a building appearing mid-afternoon with no bill attached.
+    records = []
+    for o in pending:
+        orders.queue(world, o)
+        what = o.get("what") or (f'{round(float(o.get("rate", 0)) * 100)}%'
+                                 if o.get("kind") == "tax" else "")
+        print(f'[player] order received: {o.get("kind")} {what}')
+        records.append({"beat": beat, "day": day, "kind": "order_in",
+                        "order": o.get("kind"), "what": what,
+                        "text": f'The city takes an instruction: {o.get("kind")} {what}.'})
+
+    if not exchanges:
+        return records
+
+    kept = []
     for ex in exchanges:
         a = agents.get(ex.get("agent"))
         if not a:

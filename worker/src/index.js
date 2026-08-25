@@ -55,12 +55,12 @@ function cors(res, origin) {
 const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj), { status, headers: { "Content-Type": "application/json" } });
 
-async function rateLimited(env, ip) {
-  const key = `rl:${ip}`;
+async function rateLimited(env, ip, bucket = "rl", limit = RATE_LIMIT) {
+  const key = `${bucket}:${ip}`;
   const now = Math.floor(Date.now() / 1000);
   const raw = await env.CUT_KV.get(key, "json");
   if (raw && now - raw.start < RATE_WINDOW) {
-    if (raw.n >= RATE_LIMIT) return true;
+    if (raw.n >= limit) return true;
     await env.CUT_KV.put(key, JSON.stringify({ start: raw.start, n: raw.n + 1 }),
                          { expirationTtl: RATE_WINDOW });
     return false;
@@ -378,19 +378,71 @@ async function finish(env, ip, body, a, agents, line, raw) {
 }
 
 
+// ── the leader's orders ─────────────────────────────────────────────────────
+// The browser cannot write to the repo, so an order takes the same route a conversation
+// does: posted here, parked in KV, drained by the next tick and carried out at the end of
+// that city-day. That delay is a feature — you are a mayor, not a god, and the gap between
+// signing something and seeing it is what a term of office feels like.
+//
+// Validation is deliberately paranoid: the page is public and the site key is a speed bump,
+// not a lock. Anything not on these lists is refused here rather than trusted to the
+// simulation, and a rate limit stops one caller filling the queue.
+const BUILDABLE = ["housing", "shop", "workshop", "bar", "clinic", "school", "park"];
+const PROGRAMMES = ["policing", "outreach", "amnesty", "festival"];
+const ORDER_LIMIT = 20;        // per IP per hour — a leader does not sign 200 things an hour
+
+async function order(req, env) {
+  if (req.headers.get("X-Player-Key") !== env.PLAYER_KEY)
+    return json({ error: "bad player key" }, 401);
+
+  const ip = req.headers.get("CF-Connecting-IP") || "anon";
+  if (await rateLimited(env, ip, "ol", ORDER_LIMIT)) return json({ error: "slow down" }, 429);
+
+  let body;
+  try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
+
+  const kind = String(body.kind || "");
+  let out = null;
+
+  if (kind === "build") {
+    if (!BUILDABLE.includes(body.what)) return json({ error: "cannot build that" }, 400);
+    out = { kind: "build", what: body.what };
+  } else if (kind === "programme") {
+    if (!PROGRAMMES.includes(body.what)) return json({ error: "no such programme" }, 400);
+    out = { kind: "programme", what: body.what };
+  } else if (kind === "tax") {
+    const rate = Number(body.rate);
+    if (!isFinite(rate) || rate < 0 || rate > 0.45) return json({ error: "rate out of range" }, 400);
+    out = { kind: "tax", rate: Math.round(rate * 100) / 100 };
+  } else {
+    return json({ error: "unknown order" }, 400);
+  }
+
+  await env.CUT_KV.put(
+    `o:${Date.now()}:${Math.random().toString(36).slice(2, 8)}`,
+    JSON.stringify({ ...out, at: new Date().toISOString() }),
+    { expirationTtl: 60 * 60 * 24 * 7 },
+  );
+  return json({ ok: true, queued: out });
+}
+
 async function drain(req, env) {
   if (req.headers.get("X-Drain-Key") !== env.DRAIN_KEY)
     return json({ error: "nope" }, 401);
 
-  const list = await env.CUT_KV.list({ prefix: "q:" });
-  const out = [];
-  for (const k of list.keys) {
-    const v = await env.CUT_KV.get(k.name, "json");
-    if (v) out.push(v);
-    await env.CUT_KV.delete(k.name);
-  }
-  out.sort((a, b) => (a.at < b.at ? -1 : 1));
-  return json({ exchanges: out });
+  // Both queues in one round trip. A second endpoint would mean a second subrequest on
+  // every tick for something that is usually empty.
+  const take = async (prefix) => {
+    const list = await env.CUT_KV.list({ prefix });
+    const out = [];
+    for (const k of list.keys) {
+      const v = await env.CUT_KV.get(k.name, "json");
+      if (v) out.push(v);
+      await env.CUT_KV.delete(k.name);
+    }
+    return out.sort((a, b) => (a.at < b.at ? -1 : 1));
+  };
+  return json({ exchanges: await take("q:"), orders: await take("o:") });
 }
 
 export default {
@@ -400,7 +452,14 @@ export default {
     if (req.method === "OPTIONS") return cors(new Response(null, { status: 204 }), origin);
     if (url.pathname === "/talk" && req.method === "POST")
       return cors(await talk(req, env), origin);
+    if (url.pathname === "/order" && req.method === "POST")
+      return cors(await order(req, env), origin);
     if (url.pathname === "/drain") return drain(req, env);   // server-to-server, no CORS
-    return cors(json({ ok: "the cut — dialogue proxy" }), origin);
+    // A real 404 for anything unrecognised. The catch-all used to answer every unknown
+    // path with a cheerful 200, so a client posting to an endpoint that did not exist yet
+    // was told everything was fine.
+    if (url.pathname === "/" || url.pathname === "")
+      return cors(json({ ok: "the cut — dialogue and orders" }), origin);
+    return cors(json({ error: "no such endpoint" }, 404), origin);
   },
 };
