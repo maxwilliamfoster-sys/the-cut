@@ -338,10 +338,15 @@ def _sentence(world, a, law, charge, beat, day):
         what = f"{amount} days of service to the block"
     else:
         a["detained_until"] = 0
+        # A well-formed debt row. The first version used `who` instead of `from` and had no
+        # `due_day` at all, so the moment the block actually fined somebody the debt engine
+        # crashed on the next beat — a latent break that needed a law, a charge and a
+        # conviction to line up before it could fire.
         world.setdefault("debts", []).append({
-            "id": f'fine{len(world.get("debts", [])) + 1}', "who": a["id"],
-            "to": "the block", "kind": "money", "amount": amount,
-            "reason": f'fine — {law["title"]}', "settled": False, "day": day})
+            "id": f'fine{len(world.get("debts", [])) + 1}',
+            "from": a["id"], "to": "the block", "kind": "money", "amount": amount,
+            "note": f'fine — {law["title"]}', "settled": False,
+            "due_day": day + 3, "patience": 4, "asked": 0, "last_confront_day": -99})
         what = f"a ${amount} fine"
 
     a["mood"]["stress"] = min(100, a["mood"].get("stress", 0) + 18)

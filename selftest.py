@@ -13,8 +13,9 @@ import sys
 from datetime import timedelta
 
 import re
-from sim import (city, clock, cognition, construction, drama, events, incidents,
-                 law, llm, mortality, player, reflect, roster, state, tick)
+from sim import (city, clock, cognition, construction, drama, economy, events,
+                 family, incidents, law, llm, mortality, orders, player, reflect,
+                 roster, scores, state, tick)
 
 FAILS = []
 
@@ -341,6 +342,102 @@ _m = re.search(r"const WALKABLE_TILES = '([^']*)'", _html)
 check("the renderer agrees with the simulation about what is walkable",
       _m and set(_m.group(1)) == city.WALKABLE - {city.WATER},
       f'html={_m.group(1) if _m else "?"} sim={"".join(sorted(city.WALKABLE))}')
+
+# ── an economy, a population, and a score ────────────────────────────────────────
+_w14 = copy.deepcopy(w)
+_a14 = copy.deepcopy(a)
+_w14["buildings"] = [dict(b) for b in city.BASE_BUILDINGS]
+city.rebuild(_w14["buildings"])
+mortality.ensure_fields(_a14)
+economy.ensure(_w14, _a14)
+family.ensure(_w14, _a14)
+orders.ensure(_w14)
+_day14 = clock.day_of(_w14["beat"])
+
+economy.match_jobs(_w14, _a14, _day14)
+check("people get jobs in buildings that actually exist",
+      0 < sum(1 for x in _a14.values() if x.get("job")) <= len(economy.workforce(_a14)))
+check("only working-age people are employed",
+      all(economy.working_age(x) for x in _a14.values() if x.get("job")))
+
+# The chain that makes a fire an economic event rather than an orange shape.
+_employer = next(b for b in _w14["buildings"] if b["kind"] == "industrial")
+_lost = [x for x in _a14.values() if (x.get("job") or {}).get("at") == _employer["id"]]
+_employer["condition"] = city.RUIN
+city.rebuild(_w14["buildings"])
+economy.match_jobs(_w14, _a14, _day14 + 1)
+check("a building that burns down takes its jobs with it",
+      all((x.get("job") or {}).get("at") != _employer["id"] for x in _a14.values()),
+      "somebody is still employed by a ruin")
+
+_before = _w14["treasury"]
+economy.settle_day(_w14, _a14, _day14)
+check("wages are paid and the city takes its cut",
+      _w14["treasury"] != _before and any(x.get("money", 0) > 200 for x in _a14.values()))
+
+# Scores are DERIVED. Nothing awards them, so they can only move by moving the thing
+# underneath — which is what stops them being a number that drifts upward on its own.
+_s1 = scores.snapshot(_w14, _a14, _day14)
+for _x in _a14.values():
+    _x["mood"]["happiness"] = 5
+    _x["mood"]["stress"] = 95
+_s2 = scores.snapshot(_w14, _a14, _day14)
+check("a miserable city scores worse without anything being subtracted by hand",
+      _s2["wellbeing"] < _s1["wellbeing"] and _s2["overall"] < _s1["overall"])
+check("every score stays inside 0..100",
+      all(0 <= _s2[k] <= 100 for k in
+          ("overall", "economy", "wellbeing", "society", "infrastructure", "growth")))
+check("the composite is a weighted mean of the parts, not a sixth number",
+      abs(sum(scores.WEIGHTS.values()) - 1.0) < 0.001)
+
+# Family: children have parents, and nobody pairs off with their own relatives.
+# Both forced alive and of age: the live save is months old and whoever this test names
+# may well have died in it, which is not what the check is about.
+_p1, _p2 = _a14["dez"], _a14["junie"]
+_p1["alive"] = _p2["alive"] = True
+_p1["age"] = _p2["age"] = 30
+_p1["relationships"][_p2["id"]] = {"affinity": 90, "opinion": "everything"}
+_p2["relationships"][_p1["id"]] = {"affinity": 90, "opinion": "everything"}
+_p1["partner"] = _p2["partner"] = None
+family.form_couples(_w14, _a14, _day14)
+check("two people who love each other pair off", _p1.get("partner") == _p2["id"])
+_kids = family.births(_w14, _a14, _day14, _w14["beat"],
+                      __import__("random").Random(1))
+_born = [_a14[k["who"]] for k in _kids]
+check("a child knows who its parents are",
+      not _born or set(_born[0]["parents"]) == {_p1["id"], _p2["id"]})
+check("a newborn is nobody's employee", all(not b.get("job") for b in _born))
+check("children are not clones — they get their own temperament",
+      not _born or _born[0]["volatility"] != _p1["volatility"]
+      or _born[0]["traits"] != _p1["traits"])
+if _born:
+    _kid = _born[0]
+    _kid["age"] = 30
+    _kid["relationships"][_p1["id"]] = {"affinity": 99, "opinion": "x"}
+    _p1["relationships"][_kid["id"]] = {"affinity": 99, "opinion": "x"}
+    _p1["partner"] = _kid["partner"] = None
+    family.form_couples(_w14, _a14, _day14)
+    check("nobody pairs off with their own child", _p1.get("partner") != _kid["id"])
+
+# Orders: a leader with an empty treasury cannot commission anything.
+_w14["treasury"] = 10
+_broke = orders._apply(_w14, _a14, {"kind": "build", "what": "clinic"}, _day14, _w14["beat"])
+check("you cannot build what the city cannot pay for",
+      _broke and not _broke.get("ok") and _w14["treasury"] == 10)
+_w14["treasury"] = 50_000
+_n_before = len(_w14["buildings"])
+_built = orders._apply(_w14, _a14, {"kind": "build", "what": "clinic"}, _day14, _w14["beat"])
+check("a funded order actually puts a building on the map",
+      _built and _built.get("ok") and len(_w14["buildings"]) == _n_before + 1
+      and _w14["treasury"] < 50_000)
+
+# The economy must not be a luxury that stops when the model does.
+_main = inspect.getsource(tick.main)
+_free = _main.split("if clock.is_day_end")[1].split("if cog and clock.is_day_end")[0]
+check("wages and births do not stop when the city runs out of tokens",
+      "economy.settle_day" in _free and "family.births" in _free
+      and "scores.record" in _free,
+      "the economy is gated on cognition, so a spent budget freezes the city's life")
 
 # ── people who drive ─────────────────────────────────────────────────────────────
 # Ambient traffic was decoration. These are journeys somebody in the cast is actually making.

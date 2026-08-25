@@ -17,8 +17,9 @@ import random
 import sys
 import time
 
-from . import (activities, city, clock, cognition, construction, drama, events,
-               incidents, law, llm, mortality, player, reflect, roster, state)
+from . import (activities, city, clock, cognition, construction, drama, economy,
+               events, family, incidents, law, llm, mortality, player, reflect,
+               orders, roster, scores, state)
 
 # Seconds between two thinking beats inside one run. A batched beat actually costs about
 # 4,000 tokens against an 8,000-per-minute ceiling, so beats cannot run faster than roughly
@@ -225,6 +226,9 @@ def run_beat(world, agents, quiet=False, cognition=None):
     mortality.ensure_fields(agents)
     roster.equip(agents)
     law.ensure(world)
+    economy.ensure(world, agents)
+    family.ensure(world, agents)
+    orders.ensure(world)
     alive = mortality.living(agents)
 
     # Debt pressure is resolved BEFORE anybody moves, because it decides where some of them
@@ -530,6 +534,43 @@ def main(argv=None):
             # up. Reflection first — the Gazette should be able to report what people
             # concluded, not just what happened to them. Both are enrichment: if either
             # falls over, the day still happened.
+            # ── the free half of a city-day ──────────────────────────────────
+            # Wages, births, ageing and scoring cost nothing, so they must NOT sit behind
+            # `cog`. They used to: the whole day-end block was gated on cognition being
+            # available, which meant the moment the city ran out of tokens its economy
+            # stopped too — nobody got paid, nobody was born, and the score froze. A city
+            # that cannot afford to think can still afford to pay its wages.
+            if clock.is_day_end(world["beat"]):
+                d = clock.day_of(world["beat"])
+                # The leader's orders resolve first, so a building commissioned today is
+                # standing when the day's wages, jobs and score are worked out.
+                try:
+                    records += orders.apply_all(world, agents, d, world["beat"])
+                except Exception as e:
+                    print(f"[tick] orders failed for day {d} ({type(e).__name__}: {e})")
+                try:
+                    records += family.age_everyone(world, agents, d)
+                    records += family.form_couples(world, agents, d)
+                    records += family.births(world, agents, d, world["beat"])
+                except Exception as e:
+                    print(f"[tick] family failed for day {d} ({type(e).__name__}: {e})")
+                try:
+                    records += economy.match_jobs(world, agents, d)
+                    records += economy.settle_day(world, agents, d)
+                except Exception as e:
+                    print(f"[tick] economy failed for day {d} ({type(e).__name__}: {e})")
+                try:
+                    snap = scores.record(world, agents, d)
+                    print(f'[scores] day {d}: {snap["overall"]}/100 {scores.grade(snap["overall"])}'
+                          f' — economy {snap["economy"]}, wellbeing {snap["wellbeing"]},'
+                          f' society {snap["society"]}, works {snap["infrastructure"]},'
+                          f' growth {snap["growth"]} | pop {snap["population"]},'
+                          f' ${snap["treasury"]:,}, {snap["employment"]}% in work')
+                except Exception as e:
+                    print(f"[tick] scoring failed for day {d} ({type(e).__name__}: {e})")
+                mortality.decay_grief(agents)
+                drama.tick_feuds(world, agents, d)
+
             if cog and clock.is_day_end(world["beat"]):
                 d = clock.day_of(world["beat"])
                 try:
@@ -538,8 +579,6 @@ def main(argv=None):
                     print(f"[tick] reflection failed for day {d} "
                           f"({type(e).__name__}: {e}) — no beliefs formed.")
 
-                mortality.decay_grief(agents)
-                drama.tick_feuds(world, agents, d)
 
                 # The block legislates only when something has actually built up. This is
                 # the one model call the civic layer makes, and it is capped and skippable.

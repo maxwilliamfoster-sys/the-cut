@@ -106,7 +106,11 @@ def press_debts(world, agents, day):
     for d in world.get("debts", []):
         if d.get("settled"):
             continue
-        if day < d.get("due_day", 0):
+        # Anything without a debtor and a due date is not a debt this engine can chase — a
+        # fine owed to "the block" has nobody to come looking for it.
+        if "due_day" not in d or "from" not in d:
+            continue
+        if day < d["due_day"]:
             continue
         overdue = day - d["due_day"]
         debtor, creditor = agents.get(d["from"]), agents.get(d["to"])
@@ -163,7 +167,9 @@ def confrontations(world, agents, groups, beat, day):
     ensure(world, agents)
     out = []
     for d in world.get("debts", []):
-        if d.get("settled") or day < d.get("due_day", 0):
+        if d.get("settled") or "due_day" not in d or "from" not in d:
+            continue
+        if day < d["due_day"]:
             continue
         if day - d.get("last_confront_day", -99) < CONFRONT_COOLDOWN:
             continue
