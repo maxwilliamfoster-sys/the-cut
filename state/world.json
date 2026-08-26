@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1454,
-  "last_beat_at": "2026-08-26T13:12:12Z",
+  "beat": 1458,
+  "last_beat_at": "2026-08-26T14:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 1,
-    "delmar": 1,
-    "terraces": 1,
-    "civic": 1
+    "riverside": 4,
+    "delmar": 12,
+    "terraces": 4,
+    "civic": 7
   },
   "turf": {
     "riverside": "crew",
@@ -342,10 +342,10 @@
       "amount": 1,
       "due_day": 360,
       "note": "was fronted and has not squared it",
-      "settled": false,
+      "settled": true,
       "patience": 3,
       "asked": 0,
-      "last_confront_day": -99
+      "last_confront_day": 364
     },
     {
       "id": "debt21",
@@ -385,9 +385,62 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt24",
+      "from": "dez",
+      "to": "kohl",
+      "kind": "money",
+      "amount": 900,
+      "due_day": 367,
+      "note": "fronted cash and expects it back",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "cassius"
+      ],
+      "text": "Cassius Reyes ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1457
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1456
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1455
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -605,42 +658,6 @@
       ],
       "text": "Gus Petrakis ends up at the clinic. The paperwork says one thing; the injury says another.",
       "beat": 1427
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1426
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1423
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1422
     }
   ],
   "player_queue": [
@@ -663,12 +680,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 362,
+  "last_gazette_day": 363,
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
       "fast": 163659,
-      "deep": 42628
+      "deep": 56260
     }
   },
   "silent_runs": 0,
@@ -1480,7 +1497,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 34
+      "heat": 32
     },
     {
       "a": "booker",
@@ -1494,42 +1511,42 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 15
+      "heat": 13
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 13
+      "heat": 11
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 11
+      "heat": 9
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 13
+      "heat": 11
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 67
+      "heat": 65
     }
   ],
   "quota_exhausted_on": {
@@ -1560,9 +1577,43 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 5377,
-  "tax_rate": 0.28,
+  "treasury": 2651,
+  "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 363,
+      "wages": 1553,
+      "takings": 2780,
+      "tax": 1414,
+      "welfare": 0,
+      "civic": 540,
+      "net": 874,
+      "treasury": 2651
+    },
+    {
+      "day": 363,
+      "spend": 900,
+      "reason": "policing",
+      "treasury": 1777
+    },
+    {
+      "day": 363,
+      "spend": 900,
+      "reason": "policing",
+      "treasury": 2677
+    },
+    {
+      "day": 363,
+      "spend": 900,
+      "reason": "policing",
+      "treasury": 3577
+    },
+    {
+      "day": 363,
+      "spend": 900,
+      "reason": "policing",
+      "treasury": 4477
+    },
     {
       "day": 363,
       "spend": 900,
@@ -1780,52 +1831,6 @@
       "civic": 450,
       "net": 181,
       "treasury": 10289
-    },
-    {
-      "day": 346,
-      "spend": 2600,
-      "reason": "built a housing",
-      "treasury": 10108
-    },
-    {
-      "day": 345,
-      "wages": 1483,
-      "takings": 2110,
-      "tax": 631,
-      "welfare": 0,
-      "civic": 450,
-      "net": 181,
-      "treasury": 12708
-    },
-    {
-      "day": 344,
-      "wages": 1483,
-      "takings": 2110,
-      "tax": 631,
-      "welfare": 0,
-      "civic": 450,
-      "net": 181,
-      "treasury": 12527
-    },
-    {
-      "day": 343,
-      "wages": 1436,
-      "takings": 2110,
-      "tax": 623,
-      "welfare": 0,
-      "civic": 450,
-      "net": 173,
-      "treasury": 12346
-    },
-    {
-      "day": 342,
-      "wages": 1436,
-      "takings": 2110,
-      "tax": 623,
-      "welfare": 0,
-      "civic": 450,
-      "net": 173,
-      "treasury": 12173
     }
   ],
   "births": [
@@ -1886,6 +1891,80 @@
   ],
   "orders": [],
   "order_log": [
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 363,
+      "text": "Tax set to 33% (was 33%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 363,
+      "text": "Tax set to 33% (was 33%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 363,
+      "text": "Tax set to 33% (was 33%)."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 363,
+      "text": "Tax set to 33% (was 28%)."
+    },
+    {
+      "kind": "order",
+      "ok": false,
+      "day": 363,
+      "order": "build",
+      "text": "Not enough in the treasury for a housing ($2,600 needed, $1,777 held)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 363,
+      "order": "programme",
+      "what": "policing",
+      "text": "The city puts more officers on the street."
+    },
+    {
+      "kind": "order",
+      "order": "tax",
+      "ok": true,
+      "day": 363,
+      "text": "Tax set to 28% (was 28%)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 363,
+      "order": "programme",
+      "what": "policing",
+      "text": "The city puts more officers on the street."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 363,
+      "order": "programme",
+      "what": "policing",
+      "text": "The city puts more officers on the street."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 363,
+      "order": "programme",
+      "what": "policing",
+      "text": "The city puts more officers on the street."
+    },
     {
       "kind": "order",
       "ok": true,
@@ -2107,46 +2186,6 @@
       "what": "shop",
       "cost": 2100,
       "text": "Riverside Market is commissioned in The Flats ($2,100)."
-    },
-    {
-      "kind": "order",
-      "ok": true,
-      "day": 347,
-      "beat": 1391,
-      "order": "build",
-      "building": "civic_shop_347b",
-      "what": "shop",
-      "cost": 2100,
-      "text": "Riverside Market is commissioned in The Flats ($2,100)."
-    },
-    {
-      "kind": "order",
-      "ok": true,
-      "day": 347,
-      "beat": 1391,
-      "order": "build",
-      "building": "civic_shop_347",
-      "what": "shop",
-      "cost": 2100,
-      "text": "Riverside Market is commissioned in The Flats ($2,100)."
-    },
-    {
-      "kind": "order",
-      "order": "tax",
-      "ok": true,
-      "day": 346,
-      "text": "Tax set to 18% (was 18%)."
-    },
-    {
-      "kind": "order",
-      "ok": true,
-      "day": 346,
-      "beat": 1387,
-      "order": "build",
-      "building": "civic_housing_346",
-      "what": "housing",
-      "cost": 2600,
-      "text": "Halloway Housing is commissioned in The Flats ($2,600)."
     }
   ],
   "score_history": [
@@ -2422,19 +2461,32 @@
       "buildings": 40,
       "treasury": 8977,
       "employment": 100
+    },
+    {
+      "day": 363,
+      "overall": 76,
+      "economy": 95,
+      "wellbeing": 73,
+      "society": 31,
+      "infrastructure": 99,
+      "growth": 100,
+      "population": 40,
+      "buildings": 40,
+      "treasury": 2651,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 362,
-    "overall": 71,
-    "economy": 81,
-    "wellbeing": 64,
-    "society": 30,
+    "day": 363,
+    "overall": 76,
+    "economy": 95,
+    "wellbeing": 73,
+    "society": 31,
     "infrastructure": 99,
     "growth": 100,
     "population": 40,
     "buildings": 40,
-    "treasury": 8977,
+    "treasury": 2651,
     "employment": 100
   },
   "buildable": {
