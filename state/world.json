@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1433,
-  "last_beat_at": "2026-08-26T07:57:12Z",
+  "beat": 1437,
+  "last_beat_at": "2026-08-26T08:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 21,
+    "delmar": 17,
     "terraces": 5,
-    "civic": 5
+    "civic": 10
   },
   "turf": {
     "riverside": "crew",
@@ -329,10 +329,10 @@
       "amount": 600,
       "due_day": 352,
       "note": "fronted cash and expects it back",
-      "settled": false,
+      "settled": true,
       "patience": 6,
       "asked": 2,
-      "last_confront_day": 357
+      "last_confront_day": 359
     },
     {
       "id": "debt20",
@@ -362,6 +362,22 @@
     }
   ],
   "events": [
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "maren"
+      ],
+      "text": "Maren Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1437
+    },
     {
       "id": "money_found",
       "heat": {},
@@ -600,20 +616,6 @@
       ],
       "text": "Hector Delgado does June Kowal a favour that costs them something real.",
       "beat": 1401
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 1400
     }
   ],
   "player_queue": [
@@ -640,7 +642,7 @@
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
-      "fast": 132593,
+      "fast": 140980,
       "deep": 6622
     }
   },
@@ -1453,7 +1455,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 24
+      "heat": 22
     },
     {
       "a": "booker",
@@ -1467,47 +1469,47 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 25
+      "heat": 23
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 27
+      "heat": 25
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 23
+      "heat": 21
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 21
+      "heat": 19
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 23
+      "heat": 21
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 77
+      "heat": 75
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-26",
-    "beat": 1433,
+    "beat": 1437,
     "providers": []
   },
   "dead": [
@@ -1533,9 +1535,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 6738,
+  "treasury": 7193,
   "tax_rate": 0.23,
   "ledger": [
+    {
+      "day": 358,
+      "wages": 1606,
+      "takings": 2780,
+      "tax": 995,
+      "welfare": 0,
+      "civic": 540,
+      "net": 455,
+      "treasury": 7193
+    },
     {
       "day": 357,
       "wages": 1606,
@@ -1728,6 +1740,15 @@
     }
   ],
   "births": [
+    {
+      "id": "maren",
+      "name": "Maren Adeyemi",
+      "day": 358,
+      "parents": [
+        "simone",
+        "femi"
+      ]
+    },
     {
       "id": "etta",
       "name": "Etta Adeyemi",
@@ -2085,19 +2106,32 @@
       "buildings": 40,
       "treasury": 6738,
       "employment": 100
+    },
+    {
+      "day": 358,
+      "overall": 69,
+      "economy": 80,
+      "wellbeing": 62,
+      "society": 27,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 38,
+      "buildings": 40,
+      "treasury": 7193,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 357,
-    "overall": 68,
-    "economy": 79,
-    "wellbeing": 57,
-    "society": 26,
+    "day": 358,
+    "overall": 69,
+    "economy": 80,
+    "wellbeing": 62,
+    "society": 27,
     "infrastructure": 100,
     "growth": 100,
-    "population": 37,
+    "population": 38,
     "buildings": 40,
-    "treasury": 6738,
+    "treasury": 7193,
     "employment": 100
   },
   "buildable": {
