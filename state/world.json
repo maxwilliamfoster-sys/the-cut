@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1437,
-  "last_beat_at": "2026-08-26T08:57:12Z",
+  "beat": 1441,
+  "last_beat_at": "2026-08-26T09:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 17,
+    "delmar": 13,
     "terraces": 5,
-    "civic": 10
+    "civic": 6
   },
   "turf": {
     "riverside": "crew",
@@ -363,6 +363,44 @@
   ],
   "events": [
     {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1440
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1439
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "rosa",
+        "junie"
+      ],
+      "text": "Junie Marsh does Rosa Reyes a favour that costs them something real.",
+      "beat": 1438
+    },
+    {
       "id": "hospital",
       "heat": {
         "civic": 5
@@ -578,44 +616,6 @@
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards.",
       "beat": 1406
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1403
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1402
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "june",
-        "hector"
-      ],
-      "text": "Hector Delgado does June Kowal a favour that costs them something real.",
-      "beat": 1401
     }
   ],
   "player_queue": [
@@ -642,7 +642,7 @@
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
-      "fast": 140980,
+      "fast": 149258,
       "deep": 6622
     }
   },
@@ -1455,7 +1455,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 22
+      "heat": 40
     },
     {
       "a": "booker",
@@ -1469,47 +1469,47 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 21
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 25
+      "heat": 23
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 21
+      "heat": 19
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 21
+      "heat": 19
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 75
+      "heat": 73
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-26",
-    "beat": 1437,
+    "beat": 1441,
     "providers": []
   },
   "dead": [
@@ -1535,9 +1535,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 7193,
+  "treasury": 7648,
   "tax_rate": 0.23,
   "ledger": [
+    {
+      "day": 359,
+      "wages": 1606,
+      "takings": 2780,
+      "tax": 995,
+      "welfare": 0,
+      "civic": 540,
+      "net": 455,
+      "treasury": 7648
+    },
     {
       "day": 358,
       "wages": 1606,
@@ -1740,6 +1750,24 @@
     }
   ],
   "births": [
+    {
+      "id": "maren2",
+      "name": "Maren Bello",
+      "day": 359,
+      "parents": [
+        "tee",
+        "amara"
+      ]
+    },
+    {
+      "id": "cassius",
+      "name": "Cassius Reyes",
+      "day": 359,
+      "parents": [
+        "malik",
+        "rosa"
+      ]
+    },
     {
       "id": "maren",
       "name": "Maren Adeyemi",
@@ -2119,19 +2147,32 @@
       "buildings": 40,
       "treasury": 7193,
       "employment": 100
+    },
+    {
+      "day": 359,
+      "overall": 70,
+      "economy": 80,
+      "wellbeing": 64,
+      "society": 29,
+      "infrastructure": 99,
+      "growth": 100,
+      "population": 40,
+      "buildings": 40,
+      "treasury": 7648,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 358,
-    "overall": 69,
+    "day": 359,
+    "overall": 70,
     "economy": 80,
-    "wellbeing": 62,
-    "society": 27,
-    "infrastructure": 100,
+    "wellbeing": 64,
+    "society": 29,
+    "infrastructure": 99,
     "growth": 100,
-    "population": 38,
+    "population": 40,
     "buildings": 40,
-    "treasury": 7193,
+    "treasury": 7648,
     "employment": 100
   },
   "buildable": {
@@ -2178,7 +2219,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 128,
