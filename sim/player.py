@@ -27,7 +27,10 @@ PLAYER_MEMORY_IMPORTANCE = 6
 KEEP_IN_PROMPT = 3
 
 
-def drain(timeout=20):
+# Cold starts and a queue that has built up while the city was quiet both eat into this.
+# The tick has forty minutes; thirty seconds of headroom here costs nothing and is the
+# difference between an order landing and being reported as "drain unavailable".
+def drain(timeout=30):
     """Pull everything said to the city since the last beat, and clear it.
 
     A failure here must never take the beat down with it — the city carrying on without

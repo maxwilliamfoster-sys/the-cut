@@ -461,21 +461,31 @@ async function order(req, env) {
   return json({ ok: true, queued: out });
 }
 
+const DRAIN_MAX = 10;   // keys per queue per call; see the subrequest note in take()
+
 async function drain(req, env) {
   if (req.headers.get("X-Drain-Key") !== env.DRAIN_KEY)
     return json({ error: "nope" }, 401);
 
   // Both queues in one round trip. A second endpoint would mean a second subrequest on
   // every tick for something that is usually empty.
+  // Read and clear a queue. Two things matter here, and getting either wrong strands
+  // everything the mayor has signed.
+  //
+  // PARALLEL. This loop used to await a get and then a delete for each key in turn. A
+  // queue of 25 orders was 50 sequential KV round trips, which ran past the tick's
+  // timeout: the tick printed "drain unavailable", left the queue untouched, and the
+  // player saw a building they had paid for simply never appear.
+  //
+  // BOUNDED. KV operations count against the Workers free plan's 50-subrequest ceiling, so
+  // an unbounded queue cannot be drained in one request at any speed. Ten keys per queue
+  // is 42 subrequests all in — comfortably under, and whatever is left over is taken by
+  // the next tick rather than being lost.
   const take = async (prefix) => {
-    const list = await env.CUT_KV.list({ prefix });
-    const out = [];
-    for (const k of list.keys) {
-      const v = await env.CUT_KV.get(k.name, "json");
-      if (v) out.push(v);
-      await env.CUT_KV.delete(k.name);
-    }
-    return out.sort((a, b) => (a.at < b.at ? -1 : 1));
+    const list = await env.CUT_KV.list({ prefix, limit: DRAIN_MAX });
+    const vals = await Promise.all(list.keys.map((k) => env.CUT_KV.get(k.name, "json")));
+    await Promise.all(list.keys.map((k) => env.CUT_KV.delete(k.name)));
+    return vals.filter(Boolean).sort((a, b) => (a.at < b.at ? -1 : 1));
   };
   return json({ exchanges: await take("q:"), orders: await take("o:") });
 }
