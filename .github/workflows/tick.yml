@@ -9,6 +9,14 @@ on:
     # once and the city's clock never drifts away from the wall clock.
     - cron: '*/15 * * * *'
   workflow_dispatch:
+  # An external scheduler pinging this, because GitHub's own cron is best-effort and in
+  # practice fires every 30-55 minutes rather than every 15. The clock stays correct either
+  # way — tick.py pays whatever beats it owes — but a late run settles two or three beats in
+  # one go, so people arrive at outcomes instead of being watched living through them, and
+  # anything the mayor orders waits that much longer to happen. A third-party pinger is not
+  # subject to GitHub's queue, so it holds the interval the simulation was written for.
+  repository_dispatch:
+    types: [tick]
 
 # Two overlapping runs would both read the same state and one would clobber the other.
 # Queue instead of cancelling — a beat that is waiting still needs to be paid.

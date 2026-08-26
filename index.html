@@ -2018,8 +2018,8 @@ async function sendOrder(payload, label){
     if(!d || d.ok !== true || !d.queued)
       throw new Error('the city did not take that order — is the Worker up to date?');
     // Optimistic: the tick has not run yet, so show it as signed rather than done.
-    log.innerHTML = `<div>Signed — <b>${esc(label)}</b>. It happens at the end of the ` +
-                    `city-day.</div>` + log.innerHTML;
+    log.innerHTML = `<div>Signed — <b>${esc(label)}</b>. The city acts on it at the next ` +
+                    `tick, within about fifteen minutes.</div>` + log.innerHTML;
     PENDING_LOCAL += 1;
     paintLeader();
   }catch(e){

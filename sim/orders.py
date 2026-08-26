@@ -13,8 +13,10 @@ cannot make anybody go to it, like it, or stop feuding with the person who runs 
 get is a changed set of conditions, and the simulation does what it does with them.
 
 Orders arrive the same way conversation does: posted to the Worker, parked in KV, drained at
-the start of a tick. They are applied at the end of a city-day so the cost, the effect and
-the score all move together.
+the start of a tick — and carried out immediately, before the tick pays out any beats. They
+were once held back to a day-end boundary so that cost, effect and score moved together; but
+the cost is already atomic with the effect (`_build` spends as it builds), and the delay only
+meant a player could click Build and see nothing for an hour or more.
 """
 
 from . import city, construction, economy, scores

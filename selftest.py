@@ -86,6 +86,16 @@ check("every routine target is a real location",
 world = state.load_world()
 agents = state.load_agents()
 
+# Point city.LOCATIONS at THIS world's buildings before anything is asserted about it.
+# Loading state does not do it — sync_city is a separate call, and tick.py makes it on the
+# way in. Without it the module still holds only the 31 authored buildings while the live
+# city has grown past 40, so every resident of anything built during play — by construction
+# or by the mayor — reads as living at an address that does not exist. That surfaced as
+# "every home and workplace is a real location" failing while the state was perfectly
+# sound, which is the worst kind of failing test: it teaches you to ignore the suite.
+if world and world.get("buildings"):
+    state.sync_city(world)
+
 if not world:
     check("state exists (run --bootstrap first)", False)
 else:

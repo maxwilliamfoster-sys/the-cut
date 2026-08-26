@@ -530,6 +530,19 @@ def main(argv=None):
     # in the right person's head when they next decide what to do.
     records = player.absorb(world, agents, world["beat"], clock.day_of(world["beat"]))
 
+    # Orders used to wait for the end of the city-day, on the theory that a decision and its
+    # bill should land together. They already do — _build spends from the treasury in the
+    # same breath as it raises the building, so the two were never separable. What the delay
+    # actually bought was a player clicking Build and watching nothing happen for up to two
+    # hours, because the wait for a day-end stacks on top of however late GitHub ran the
+    # cron. Resolving them here means the building is standing for every beat this tick
+    # pays, which is what the day-end ordering was reaching for in the first place.
+    try:
+        records += orders.apply_all(world, agents, clock.day_of(world["beat"]),
+                                    world["beat"])
+    except Exception as e:
+        print(f"[tick] orders failed ({type(e).__name__}: {e})")
+
     # Beats already simulated must survive anything that goes wrong later in the run.
     # Before this, state was only written at the very end, so one unexpected exception
     # threw away every beat the run had paid and the city stopped dead — which is exactly
@@ -558,12 +571,6 @@ def main(argv=None):
             # that cannot afford to think can still afford to pay its wages.
             if clock.is_day_end(world["beat"]):
                 d = clock.day_of(world["beat"])
-                # The leader's orders resolve first, so a building commissioned today is
-                # standing when the day's wages, jobs and score are worked out.
-                try:
-                    records += orders.apply_all(world, agents, d, world["beat"])
-                except Exception as e:
-                    print(f"[tick] orders failed for day {d} ({type(e).__name__}: {e})")
                 try:
                     records += family.age_everyone(world, agents, d)
                     records += family.form_couples(world, agents, d)

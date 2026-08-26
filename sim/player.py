@@ -88,9 +88,9 @@ def absorb(world, agents, beat, day):
     """Fold queued conversations and orders into the city. Returns log records."""
     exchanges, pending = drain()
 
-    # Orders are parked rather than applied here: they take effect at the end of the
-    # city-day, alongside wages and the score, so a decision and its consequences land
-    # together instead of a building appearing mid-afternoon with no bill attached.
+    # Orders are only queued here; the tick applies them the moment this returns, before it
+    # pays out any beats. Keeping the two steps apart is what lets a failing order be
+    # reported against the day it was received rather than swallowed inside the drain.
     records = []
     for o in pending:
         orders.queue(world, o)
