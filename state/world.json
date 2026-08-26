@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1407,
-  "last_beat_at": "2026-08-26T01:27:12Z",
+  "beat": 1412,
+  "last_beat_at": "2026-08-26T02:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "heavy rain",
   "heat": {
-    "riverside": 23,
-    "delmar": 29,
-    "terraces": 13,
+    "riverside": 18,
+    "delmar": 24,
+    "terraces": 8,
     "civic": 5
   },
   "turf": {
@@ -317,9 +317,9 @@
       "due_day": 349,
       "note": "covered somebody's shortfall, once",
       "settled": false,
-      "patience": 3,
-      "asked": 0,
-      "last_confront_day": -99
+      "patience": 6,
+      "asked": 1,
+      "last_confront_day": 353
     },
     {
       "id": "debt19",
@@ -336,6 +336,34 @@
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "marisol",
+        "tiny"
+      ],
+      "text": "Somebody tells Marisol Vasquez that Tiny Reyes has been seen talking to police.",
+      "beat": 1410
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "femi",
+        "rey"
+      ],
+      "text": "Somebody tells Femi Adeyemi that Rey Vasquez has been seen talking to police.",
+      "beat": 1408
+    },
     {
       "id": "overdose",
       "heat": {
@@ -559,31 +587,6 @@
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
       "beat": 1384
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "dez",
-        "iris"
-      ],
-      "text": "Dez Okonkwo and Iris Amadi are seen arguing in the street loud enough that people stop.",
-      "beat": 1383
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 1382
     }
   ],
   "player_queue": [
@@ -606,12 +609,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 351,
+  "last_gazette_day": 352,
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
-      "fast": 28358,
-      "deep": 1672
+      "fast": 49148,
+      "deep": 2584
     }
   },
   "silent_runs": 0,
@@ -1423,7 +1426,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 14
     },
     {
       "a": "booker",
@@ -1437,42 +1440,42 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 39
+      "heat": 37
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 35
+      "heat": 33
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 31
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 35
+      "heat": 33
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 49
+      "heat": 47
     }
   ],
   "quota_exhausted_on": {
@@ -1505,9 +1508,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 4044,
+  "treasury": 4490,
   "tax_rate": 0.23,
   "ledger": [
+    {
+      "day": 352,
+      "wages": 1564,
+      "takings": 2780,
+      "tax": 986,
+      "welfare": 0,
+      "civic": 540,
+      "net": 446,
+      "treasury": 4490
+    },
     {
       "day": 351,
       "wages": 1530,
@@ -1919,19 +1932,32 @@
       "buildings": 40,
       "treasury": 4044,
       "employment": 100
+    },
+    {
+      "day": 352,
+      "overall": 67,
+      "economy": 77,
+      "wellbeing": 59,
+      "society": 25,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 36,
+      "buildings": 40,
+      "treasury": 4490,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 351,
-    "overall": 66,
-    "economy": 78,
-    "wellbeing": 55,
-    "society": 23,
+    "day": 352,
+    "overall": 67,
+    "economy": 77,
+    "wellbeing": 59,
+    "society": 25,
     "infrastructure": 100,
     "growth": 100,
-    "population": 35,
+    "population": 36,
     "buildings": 40,
-    "treasury": 4044,
+    "treasury": 4490,
     "employment": 100
   },
   "buildable": {
