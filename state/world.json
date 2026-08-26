@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1449,
-  "last_beat_at": "2026-08-26T11:57:12Z",
+  "beat": 1452,
+  "last_beat_at": "2026-08-26T12:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 5,
+    "delmar": 2,
     "terraces": 5,
-    "civic": 5
+    "civic": 10
   },
   "turf": {
     "riverside": "crew",
@@ -372,9 +372,64 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt23",
+      "from": "booker",
+      "to": "dot",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 367,
+      "note": "owes a favour that was not small",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "yusuf"
+      ],
+      "text": "Dr. Yusuf Amin ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1452
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "odette",
+        "marisol"
+      ],
+      "text": "Marisol Vasquez does Odette Ferreira a favour that costs them something real.",
+      "beat": 1451
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1450
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -586,42 +641,6 @@
       ],
       "text": "Something pays out for Marisol Vasquez. More than expected, which is its own problem.",
       "beat": 1418
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1417
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1416
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "ruiz",
-        "tee"
-      ],
-      "text": "Tariq 'Tee' Bello does Det. Yolanda Ruiz a favour that costs them something real.",
-      "beat": 1415
     }
   ],
   "player_queue": [
@@ -644,12 +663,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 361,
+  "last_gazette_day": 362,
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
-      "fast": 162064,
-      "deep": 23474
+      "fast": 163659,
+      "deep": 35905
     }
   },
   "silent_runs": 0,
@@ -1461,7 +1480,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 36
+      "heat": 34
     },
     {
       "a": "booker",
@@ -1475,42 +1494,42 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 15
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 15
+      "heat": 13
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 13
+      "heat": 11
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 15
+      "heat": 13
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 69
+      "heat": 67
     }
   ],
   "quota_exhausted_on": {
@@ -1541,9 +1560,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 8534,
+  "treasury": 8977,
   "tax_rate": 0.23,
   "ledger": [
+    {
+      "day": 362,
+      "wages": 1553,
+      "takings": 2780,
+      "tax": 983,
+      "welfare": 0,
+      "civic": 540,
+      "net": 443,
+      "treasury": 8977
+    },
     {
       "day": 361,
       "wages": 1553,
@@ -2212,19 +2241,32 @@
       "buildings": 40,
       "treasury": 8534,
       "employment": 100
+    },
+    {
+      "day": 362,
+      "overall": 71,
+      "economy": 81,
+      "wellbeing": 64,
+      "society": 30,
+      "infrastructure": 99,
+      "growth": 100,
+      "population": 40,
+      "buildings": 40,
+      "treasury": 8977,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 361,
+    "day": 362,
     "overall": 71,
     "economy": 81,
-    "wellbeing": 65,
-    "society": 29,
+    "wellbeing": 64,
+    "society": 30,
     "infrastructure": 99,
     "growth": 100,
     "population": 40,
     "buildings": 40,
-    "treasury": 8534,
+    "treasury": 8977,
     "employment": 100
   },
   "buildable": {
