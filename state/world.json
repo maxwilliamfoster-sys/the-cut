@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1464,
-  "last_beat_at": "2026-08-26T15:42:12Z",
+  "beat": 1468,
+  "last_beat_at": "2026-08-26T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "heat",
   "heat": {
     "riverside": 5,
-    "delmar": 6,
+    "delmar": 22,
     "terraces": 5,
-    "civic": 6
+    "civic": 7
   },
   "turf": {
     "riverside": "crew",
@@ -398,9 +398,62 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "debt25",
+      "from": "hector",
+      "to": "rey",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 373,
+      "note": "was got out of something and knows it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 1468
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1467
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "gus"
+      ],
+      "text": "Gus Petrakis ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1465
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -618,44 +671,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1444
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 1440
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 1439
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "rosa",
-        "junie"
-      ],
-      "text": "Junie Marsh does Rosa Reyes a favour that costs them something real.",
-      "beat": 1438
     }
   ],
   "player_queue": [
@@ -678,12 +693,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 365,
+  "last_gazette_day": 366,
   "llm_budget": {
     "day": "2026-08-26",
     "spent": {
       "fast": 163659,
-      "deep": 76999
+      "deep": 90959
     }
   },
   "silent_runs": 0,
@@ -1428,7 +1443,7 @@
       "because": "Too many residents sitting alone on the cold bench all night.",
       "day_enacted": 264,
       "status": "enacted",
-      "convictions": 0
+      "convictions": 1
     },
     {
       "id": "law02",
@@ -1487,8 +1502,9 @@
       "evidence": "counts float, glances at empty lot",
       "day": 365,
       "trial_day": 367,
-      "status": "awaiting_trial",
-      "witnesses": 0
+      "status": "convicted",
+      "witnesses": 0,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 3,
@@ -1507,7 +1523,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 28
+      "heat": 26
     },
     {
       "a": "booker",
@@ -1521,42 +1537,42 @@
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 9
+      "heat": 7
     },
     {
       "a": "dez",
       "b": "rey",
       "since_day": 273,
       "cause": "it turned physical",
-      "heat": 11
+      "heat": 9
     },
     {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 7
+      "heat": 5
     },
     {
       "a": "gus",
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 5
+      "heat": 3
     },
     {
       "a": "adaeze",
       "b": "dez",
       "since_day": 342,
       "cause": "what they were fronted never repaid",
-      "heat": 7
+      "heat": 5
     },
     {
       "a": "cass",
       "b": "dez",
       "since_day": 349,
       "cause": "would not let it go",
-      "heat": 61
+      "heat": 59
     }
   ],
   "quota_exhausted_on": {
@@ -1587,9 +1603,19 @@
     "marked": 269
   },
   "incidents": [],
-  "treasury": 4399,
+  "treasury": 5273,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 366,
+      "wages": 1553,
+      "takings": 2780,
+      "tax": 1414,
+      "welfare": 0,
+      "civic": 540,
+      "net": 874,
+      "treasury": 5273
+    },
     {
       "day": 365,
       "wages": 1553,
@@ -1839,12 +1865,6 @@
       "spend": 2100,
       "reason": "built a shop",
       "treasury": 3989
-    },
-    {
-      "day": 347,
-      "spend": 2100,
-      "reason": "built a shop",
-      "treasury": 6089
     }
   ],
   "births": [
@@ -2506,19 +2526,32 @@
       "buildings": 40,
       "treasury": 4399,
       "employment": 100
+    },
+    {
+      "day": 366,
+      "overall": 70,
+      "economy": 82,
+      "wellbeing": 65,
+      "society": 25,
+      "infrastructure": 99,
+      "growth": 100,
+      "population": 40,
+      "buildings": 40,
+      "treasury": 5273,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 365,
-    "overall": 71,
-    "economy": 83,
-    "wellbeing": 67,
+    "day": 366,
+    "overall": 70,
+    "economy": 82,
+    "wellbeing": 65,
     "society": 25,
     "infrastructure": 99,
     "growth": 100,
     "population": 40,
     "buildings": 40,
-    "treasury": 4399,
+    "treasury": 5273,
     "employment": 100
   },
   "buildable": {
