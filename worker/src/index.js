@@ -24,7 +24,7 @@ const GROQ = "https://api.groq.com/openai/v1/chat/completions";
 // character answers with nothing but a 502 "they said nothing".
 const MODEL = "openai/gpt-oss-20b";
 
-const RATE_LIMIT = 40;          // talk requests
+const RATE_LIMIT = 80;          // talk requests — this one does cost tokens
 const RATE_WINDOW = 3600;       // per hour, per IP
 const MAX_LINE = 180;
 
@@ -407,7 +407,11 @@ async function finish(env, ip, body, a, agents, line, raw) {
 const BUILDABLE = ["housing", "shop", "workshop", "bar", "clinic", "school", "park"];
 const PROGRAMMES = ["policing", "outreach", "amnesty", "festival"];
 const ROLES = ["labourer", "nurse", "teacher", "officer", "soldier", "builder"];
-const ORDER_LIMIT = 20;        // per IP per hour — a leader does not sign 200 things an hour
+// Per IP per hour. Set at 20 on the theory that a leader does not sign many things an hour,
+// which is wrong twice over: laying out a district is a dozen orders in a couple of minutes,
+// and orders cost no tokens at all — only /talk does. The limit exists to stop somebody
+// filling KV, not to ration the game, so it is set where only abuse would reach it.
+const ORDER_LIMIT = 200;
 
 async function order(req, env) {
   if (req.headers.get("X-Player-Key") !== env.PLAYER_KEY)
