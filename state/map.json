@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "04d69e00bc9d",
+  "version": "6a3bf28a8e23",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -73,14 +73,14 @@
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "............====........................====........................====........................====............====............",
+    "............====........................====........................====........................====...ggggggg..====............",
     ".####D#####.,,,,.####D####..#####D#####.,,,,.####D#####....gggggggg.,,,,.#####D######...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#...........,:,,.gggggggggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg###D###g.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#######g.,:,,.ggggggggggg",
     ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#...........,,,,.gggggggggg.,,,,.ggggggggggg",
     "............,,,,............###########.,,,,........................,,,,.############...........,,,,.gggggggggg.,,,,.ggggggggggg",
     "............,:,,........................,:,,........................,:,,........................,:,,.gggggggggg.,:,,.ggggggggggg",
@@ -3003,6 +3003,81 @@
           "type": "rug",
           "x": 87,
           "y": 104
+        }
+      ]
+    },
+    "new_home_386": {
+      "id": "new_home_386",
+      "name": "Delmar Cottages",
+      "district": "civic",
+      "rect": [
+        103,
+        64,
+        7,
+        6
+      ],
+      "rects": [
+        [
+          103,
+          64,
+          7,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "clapboard",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        106,
+        65
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 108,
+          "y": 66
+        },
+        {
+          "type": "bed",
+          "x": 106,
+          "y": 66
+        },
+        {
+          "type": "sofa",
+          "x": 104,
+          "y": 66
+        },
+        {
+          "type": "tv",
+          "x": 107,
+          "y": 68
+        },
+        {
+          "type": "table",
+          "x": 105,
+          "y": 66
+        },
+        {
+          "type": "sink",
+          "x": 104,
+          "y": 68
+        },
+        {
+          "type": "shelf",
+          "x": 104,
+          "y": 67
+        },
+        {
+          "type": "plant",
+          "x": 108,
+          "y": 65
+        },
+        {
+          "type": "rug",
+          "x": 106,
+          "y": 67
         }
       ]
     }
