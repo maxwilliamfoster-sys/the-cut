@@ -562,7 +562,15 @@ def road_path(start, goal):
 # than a limit anybody is expected to reach — at 4,096 a side this city is sixteen million
 # tiles, which is more ground than a hundred years of ticks would ever build on.
 GROW_CHUNK = 32
-ROAD_PITCH = 16
+# A road every 16 tiles, 4 wide, with a 2-tile verge either side that nothing may be built
+# on, left exactly 8 free tiles between carriageways — and the widest thing a mayor can
+# commission is an 11-tile school. So most of the frontier refused most buildings, and
+# clicking on open-looking ground got "it is on a road" about three times in four. At 24
+# the gap is 16, which takes anything in BUILDABLE with room to spare.
+#
+# Changing this does not move roads already laid: they are stored per-city in the world (see
+# state._restore_size) rather than regenerated from this number.
+ROAD_PITCH = 24
 MAX_SIDE = 4096
 
 
@@ -591,6 +599,80 @@ def resize(new_w, new_h):
     return W, H
 
 
+# Ground laid beyond wherever the mayor last reached, so the frontier is always a little
+# further out than the last thing built on it.
+FRONTIER_MARGIN = 10
+
+# What a tile of new ground costs to bring inside the city limits. Expansion has to be paid
+# for or the map may as well not have edges: a mayor who can sprawl for nothing will always
+# sprawl, and every problem worth solving — crowding, unemployment, policing a district you
+# cannot reach — is solved by walking away from it onto free land. At this rate a strip of
+# growth runs to roughly a building and a half, which is enough to make "do I expand or do I
+# fix what I have" an actual question.
+LAND_PER_TILE = 0.38
+
+
+def expansion_cost(x, y, w, h):
+    """What it costs to bring ground at (x, y) inside the city limits. 0 if already in."""
+    need_w, need_h = x + w + FRONTIER_MARGIN, y + h + FRONTIER_MARGIN
+    if need_w <= W and need_h <= H:
+        return 0
+    new_w, new_h = max(W, min(MAX_SIDE, need_w)), max(H, min(MAX_SIDE, need_h))
+    return int(max(0, new_w * new_h - W * H) * LAND_PER_TILE)
+
+
+def can_reach(x, y, w, h):
+    """Is this plot somewhere the city could ever extend to?"""
+    return (x >= 0 and y >= 0
+            and x + w + FRONTIER_MARGIN <= MAX_SIDE
+            and y + h + FRONTIER_MARGIN <= MAX_SIDE)
+
+
+def ensure_covers(world, buildings, x, y, w, h):
+    """Grow the map until a plot at (x, y) of this size sits inside it.
+
+    This is what makes the land continuous rather than merely large. Growth used to happen
+    only when the city was so tightly packed that find_plot failed anywhere, which meant a
+    player met a hard edge: click past the border and the build was refused however much was
+    in the treasury. The edge is now wherever they last pointed at, plus a margin.
+
+    Only outward, mind — right and down. Growing up or left would mean renumbering every
+    coordinate in the world (every building, every person, every remembered spot), and a
+    city that silently moves under its own residents is a worse bug than a city that only
+    grows two ways.
+    """
+    if not can_reach(x, y, w, h):
+        return False
+    need_w, need_h = x + w + FRONTIER_MARGIN, y + h + FRONTIER_MARGIN
+    if need_w <= W and need_h <= H:
+        return False
+    resize(max(W, need_w), max(H, need_h))
+    world["map_w"], world["map_h"] = W, H
+    rebuild(buildings)
+    return True
+
+
+def dims_snapshot():
+    """Everything resize() mutates, so a speculative growth can be undone."""
+    return (W, H, list(H_ROADS), list(V_ROADS),
+            {d: DISTRICTS[d]["y"] for d in DISTRICTS})
+
+
+def dims_restore(snap, world, buildings):
+    """Put the map back. Needed because deciding whether a plot is free means asking the
+    grown grid, and a refused build must not leave the ground it surveyed behind — that
+    would let anyone expand for nothing by repeatedly pointing at land they cannot build
+    on."""
+    global W, H
+    W, H, hr, vr, dy = snap
+    H_ROADS[:] = hr
+    V_ROADS[:] = vr
+    for d, y in dy.items():
+        DISTRICTS[d]["y"] = y
+    world["map_w"], world["map_h"] = W, H
+    rebuild(buildings)
+
+
 def room_left(buildings, w=12, h=8):
     """Is there anywhere sensible left to put a building of this size?"""
     from . import construction
@@ -617,6 +699,13 @@ def grow_if_needed(world, buildings):
 def export_map():
     return {
         "tile": TILE, "w": W, "h": H, "version": map_version(),
+        # The rule the frontier is laid out by, so the browser can draw a truthful footprint
+        # on ground that does not exist yet. Without these the preview can only inspect
+        # tiles it already has, which means unclaimed land always looks buildable and the
+        # refusal only arrives after the click.
+        "road_pitch": ROAD_PITCH, "road_width": 4, "verge": 2, "margin": 1,
+        "frontier_margin": FRONTIER_MARGIN, "land_per_tile": LAND_PER_TILE,
+        "max_side": MAX_SIDE,
         "grid": ["".join(row) for row in GRID],
         "districts": DISTRICTS,
         "locations": LOCATIONS,

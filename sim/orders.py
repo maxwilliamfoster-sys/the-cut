@@ -147,16 +147,37 @@ def _build(world, agents, o, day, beat):
     # A spot the mayor picked on the map, if they picked one. Checked here rather than
     # trusted: the page is public, and "build me a clinic on top of the church" should be
     # refused with a reason rather than quietly relocated somewhere else.
-    plot = None
+    plot, land = None, 0
     if o.get("x") is not None and o.get("y") is not None:
         try:
             px, py = int(o["x"]), int(o["y"])
         except (TypeError, ValueError):
             px = py = None
         if px is not None:
+            if not city.can_reach(px, py, spec["w"], spec["h"]):
+                return {"kind": "order", "ok": False, "day": day, "order": "build",
+                        "text": 'That is beyond anywhere this city could ever reach.'}
+            # Ground outside the current limits is bought, not assumed. Pointing past the
+            # edge is how the city expands — but the bill arrives with the building, so
+            # sprawl competes with everything else the treasury is for.
+            land = city.expansion_cost(px, py, spec["w"], spec["h"])
+            if not economy.can_afford(world, spec["cost"] + land):
+                return {"kind": "order", "ok": False, "day": day, "order": "build",
+                        "text": f'Not enough for that: ${spec["cost"]:,} to build and '
+                                f'${land:,} to bring the ground inside the city '
+                                f'(${world.get("treasury", 0):,} held).'}
+            snap = city.dims_snapshot() if land else None
+            if land:
+                city.ensure_covers(world, world["buildings"], px, py,
+                                   spec["w"], spec["h"])
             if construction.plot_free(world["buildings"], px, py, spec["w"], spec["h"]):
                 plot = (px, py, city.district_at(py))
             else:
+                # Hand the surveyed ground back. Growing the map is how we find out whether
+                # the plot is clear, so a refusal has to undo it or a refused build quietly
+                # becomes free expansion.
+                if snap:
+                    city.dims_restore(snap, world, world["buildings"])
                 return {"kind": "order", "ok": False, "day": day, "order": "build",
                         "text": f'A {o["what"]} will not fit there — something is in the '
                                 f'way, or it is on a road.'}
@@ -173,7 +194,7 @@ def _build(world, agents, o, day, beat):
                 "text": 'There is nowhere left to put it.'}
 
     x, y, district = plot
-    economy.spend(world, spec["cost"], f'built a {o["what"]}', day)
+    economy.spend(world, spec["cost"] + land, f'built a {o["what"]}', day)
     name = spec["name"].format(street=rng.choice(construction.STREET_NAMES))
     bid = f'civic_{o["what"]}_{day}'
     if any(b["id"] == bid for b in world["buildings"]):
@@ -186,10 +207,15 @@ def _build(world, agents, o, day, beat):
     world["buildings"][-1]["built_by"] = "the city"
 
     city.rebuild(world["buildings"])
+    where = f'in {city.DISTRICTS[district]["name"]}'
+    bill = (f'${spec["cost"]:,} to build, ${land:,} for the ground' if land
+            else f'${spec["cost"]:,}')
+    if land:
+        where = f'on new ground {where}'
     return {"kind": "order", "ok": True, "day": day, "beat": beat, "order": "build",
-            "building": bid, "what": o["what"], "cost": spec["cost"],
-            "text": f'{name} is commissioned in {city.DISTRICTS[district]["name"]} '
-                    f'(${spec["cost"]:,}).'}
+            "building": bid, "what": o["what"], "cost": spec["cost"] + land,
+            "land": land,
+            "text": f'{name} is commissioned {where} ({bill}).'}
 
 
 def _programme(world, agents, o, day, beat):

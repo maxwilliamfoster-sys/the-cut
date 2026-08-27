@@ -118,10 +118,27 @@ def sync_city(world):
 
 def _restore_size(world):
     """A city that has grown keeps its size in the world, or it would shrink back to the
-    size compiled into city.py the next time the process started."""
+    size compiled into city.py the next time the process started.
+
+    Its roads are kept too, and that matters more than it looks. Roads are laid by
+    ROAD_PITCH at the moment ground is added, so where they fall is a fact about this city's
+    history, not about whichever constant happens to be compiled in today. They were being
+    regenerated from the constant on every load, which meant changing the pitch would slide
+    carriageways sideways underneath buildings that were placed to avoid them. Storing them
+    lets the pitch change the frontier without disturbing anything already standing.
+    """
+    roads = world.get("roads") or {}
+    if roads.get("h"):
+        city.H_ROADS[:] = [tuple(r) for r in roads["h"]]
+    if roads.get("v"):
+        city.V_ROADS[:] = [tuple(r) for r in roads["v"]]
+
     w, h = world.get("map_w"), world.get("map_h")
     if w and h and (w > city.W or h > city.H):
         city.resize(w, h)
+
+    world["roads"] = {"h": [list(r) for r in city.H_ROADS],
+                      "v": [list(r) for r in city.V_ROADS]}
 
 
 def point_city(world):
