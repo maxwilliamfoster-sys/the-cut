@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1489,
-  "last_beat_at": "2026-08-26T21:57:12Z",
+  "beat": 1510,
+  "last_beat_at": "2026-08-27T03:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 44,
-    "delmar": 33,
-    "terraces": 5,
+    "riverside": 39,
+    "delmar": 6,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -368,10 +368,10 @@
       "amount": 1,
       "due_day": 368,
       "note": "owes a favour that was not small",
-      "settled": false,
+      "settled": true,
       "patience": 6,
       "asked": 1,
-      "last_confront_day": 372
+      "last_confront_day": 375
     },
     {
       "id": "debt23",
@@ -397,7 +397,7 @@
       "settled": false,
       "patience": 3,
       "asked": 1,
-      "last_confront_day": 372
+      "last_confront_day": 375
     },
     {
       "id": "debt25",
@@ -408,12 +408,116 @@
       "due_day": 373,
       "note": "was got out of something and knows it",
       "settled": false,
+      "patience": 6,
+      "asked": 1,
+      "last_confront_day": 377
+    },
+    {
+      "id": "debt26",
+      "from": "simone",
+      "to": "femi",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 380,
+      "note": "was got out of something and knows it",
+      "settled": false,
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "gus"
+      ],
+      "text": "Something pays out for Gus Petrakis. More than expected, which is its own problem.",
+      "beat": 1509
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "simone",
+        "sami"
+      ],
+      "text": "Sami Amadi does Simone Adeyemi a favour that costs them something real.",
+      "beat": 1504
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1503
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1502
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "maren",
+        "gus"
+      ],
+      "text": "Gus Petrakis does Maren Adeyemi a favour that costs them something real.",
+      "beat": 1501
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "tiny"
+      ],
+      "text": "Tiny Reyes gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1500
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "priya"
+      ],
+      "text": "Ms. Priya Raman gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1499
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -569,96 +673,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 1472
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1470
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1468
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1467
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Gus Petrakis ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1465
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1464
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "june",
-        "rey"
-      ],
-      "text": "Somebody tells June Kowal that Rey Vasquez has been seen talking to police.",
-      "beat": 1463
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "maren",
-        "june"
-      ],
-      "text": "Somebody tells Maren Adeyemi that June Kowal has been seen talking to police.",
-      "beat": 1462
     }
   ],
   "player_queue": [
@@ -681,12 +695,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 371,
+  "last_gazette_day": 376,
   "llm_budget": {
-    "day": "2026-08-26",
+    "day": "2026-08-27",
     "spent": {
-      "fast": 163659,
-      "deep": 153206
+      "fast": 61799,
+      "deep": 2767
     }
   },
   "silent_runs": 0,
@@ -1469,6 +1483,25 @@
       "day_enacted": 269,
       "status": "enacted",
       "convictions": 1
+    },
+    {
+      "id": "law03",
+      "title": "Public Haircut Ban",
+      "text": "No person may cut hair in public spaces without a barber license.",
+      "keywords": [
+        "cut",
+        "hair",
+        "barber"
+      ],
+      "penalty": {
+        "type": "fine",
+        "amount": 100
+      },
+      "proposed_by": "tee",
+      "because": "snips hair, smiles",
+      "day_enacted": 374,
+      "status": "enacted",
+      "convictions": 0
     }
   ],
   "charges": [
@@ -1510,45 +1543,43 @@
       "status": "convicted",
       "witnesses": 0,
       "verdict": "guilty"
+    },
+    {
+      "id": "c004",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "gives a quick hair trim, listening",
+      "day": 376,
+      "trial_day": 378,
+      "status": "awaiting_trial",
+      "witnesses": 9
     }
   ],
   "law_pressure": 3,
-  "last_law_day": 269,
+  "last_law_day": 374,
   "last_expansion_day": 368,
   "feuds": [
-    {
-      "a": "dez",
-      "b": "malik",
-      "since_day": 239,
-      "cause": "would not let it go",
-      "heat": 0
-    },
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 30
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "amara",
       "b": "malik",
       "since_day": 272,
       "cause": "would not let it go",
-      "heat": 0
-    },
-    {
-      "a": "dez",
-      "b": "rey",
-      "since_day": 273,
-      "cause": "it turned physical",
       "heat": 0
     },
     {
@@ -1564,20 +1595,6 @@
       "since_day": 290,
       "cause": "would not let it go",
       "heat": 0
-    },
-    {
-      "a": "cass",
-      "b": "dez",
-      "since_day": 349,
-      "cause": "would not let it go",
-      "heat": 49
-    },
-    {
-      "a": "dez",
-      "b": "kohl",
-      "since_day": 371,
-      "cause": "it turned physical",
-      "heat": 73
     }
   ],
   "quota_exhausted_on": {
@@ -1588,6 +1605,13 @@
     ]
   },
   "dead": [
+    {
+      "id": "dez",
+      "name": "Dez Okonkwo",
+      "day": 375,
+      "cause": "violence",
+      "where": "Spin Cycle"
+    },
     {
       "id": "junie",
       "name": "Junie Marsh",
@@ -1604,31 +1628,45 @@
     }
   ],
   "funeral": {
-    "day": 269,
-    "for": "Junie Marsh",
-    "id": "junie",
-    "marked": 269
+    "day": 377,
+    "for": "Dez Okonkwo",
+    "id": "dez",
+    "marked": 377
   },
-  "incidents": [
-    {
-      "id": "inc1488-fight-0",
-      "kind": "fight",
-      "effect": "scuffle",
-      "at": "laundromat",
-      "x": 21,
-      "y": 23,
-      "who": [
-        "kohl",
-        "dez"
-      ],
-      "text": "Ofc. Brady Kohl puts Dez Okonkwo against a wall at Spin Cycle over $900. People stop to watch.",
-      "started": 1488,
-      "until": 1490
-    }
-  ],
-  "treasury": 9682,
+  "incidents": [],
+  "treasury": 12354,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 376,
+      "wages": 1587,
+      "takings": 2780,
+      "tax": 1425,
+      "welfare": 0,
+      "civic": 540,
+      "net": 885,
+      "treasury": 12354
+    },
+    {
+      "day": 375,
+      "wages": 1587,
+      "takings": 2780,
+      "tax": 1425,
+      "welfare": 0,
+      "civic": 540,
+      "net": 885,
+      "treasury": 11469
+    },
+    {
+      "day": 374,
+      "wages": 1640,
+      "takings": 2780,
+      "tax": 1442,
+      "welfare": 0,
+      "civic": 540,
+      "net": 902,
+      "treasury": 10584
+    },
     {
       "day": 371,
       "wages": 1640,
@@ -1866,36 +1904,6 @@
       "civic": 540,
       "net": 446,
       "treasury": 4936
-    },
-    {
-      "day": 352,
-      "wages": 1564,
-      "takings": 2780,
-      "tax": 986,
-      "welfare": 0,
-      "civic": 540,
-      "net": 446,
-      "treasury": 4490
-    },
-    {
-      "day": 351,
-      "wages": 1530,
-      "takings": 2780,
-      "tax": 979,
-      "welfare": 0,
-      "civic": 540,
-      "net": 439,
-      "treasury": 4044
-    },
-    {
-      "day": 350,
-      "wages": 1483,
-      "takings": 2780,
-      "tax": 969,
-      "welfare": 0,
-      "civic": 540,
-      "net": 429,
-      "treasury": 3605
     }
   ],
   "births": [
@@ -2644,19 +2652,58 @@
       "buildings": 41,
       "treasury": 9682,
       "employment": 100
+    },
+    {
+      "day": 374,
+      "overall": 70,
+      "economy": 82,
+      "wellbeing": 64,
+      "society": 27,
+      "infrastructure": 99,
+      "growth": 100,
+      "population": 43,
+      "buildings": 41,
+      "treasury": 10584,
+      "employment": 100
+    },
+    {
+      "day": 375,
+      "overall": 71,
+      "economy": 84,
+      "wellbeing": 68,
+      "society": 22,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 42,
+      "buildings": 41,
+      "treasury": 11469,
+      "employment": 100
+    },
+    {
+      "day": 376,
+      "overall": 71,
+      "economy": 85,
+      "wellbeing": 64,
+      "society": 26,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 42,
+      "buildings": 41,
+      "treasury": 12354,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 371,
-    "overall": 70,
-    "economy": 81,
-    "wellbeing": 61,
-    "society": 29,
-    "infrastructure": 99,
+    "day": 376,
+    "overall": 71,
+    "economy": 85,
+    "wellbeing": 64,
+    "society": 26,
+    "infrastructure": 100,
     "growth": 100,
-    "population": 43,
+    "population": 42,
     "buildings": 41,
-    "treasury": 9682,
+    "treasury": 12354,
     "employment": 100
   },
   "buildable": {
