@@ -2,7 +2,14 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "88f2c7f72f76",
+  "version": "04d69e00bc9d",
+  "road_pitch": 24,
+  "road_width": 4,
+  "verge": 2,
+  "margin": 1,
+  "frontier_margin": 10,
+  "land_per_tile": 0.38,
+  "max_side": 4096,
   "grid": [
     "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
     "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
@@ -105,22 +112,14 @@
     "g#fffffff#g.,,,,.gg#fffffff#ggggggggggg.,,,,.gggggggg#ffffffff#gggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "g#fffffff#g.,,,,.gg#fffffff#ggggggggggg.,,,,.gggggggg#ffffffff#gggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "g####D####g.,:,,.gg####D####ggggggggggg.,:,,.gggggggg#ffffffff#gggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggg####D#####gggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggg####D#####gggg.,:,,.ggggggggg########ggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg###D####ggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
-    "............====........................====........................====........................====............====............",
-    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,",
-    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "............====........................====........................====........................====............====............",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
@@ -137,6 +136,14 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====........................====............====............",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.ggggggggggg"
@@ -2921,6 +2928,81 @@
           "type": "rug",
           "x": 121,
           "y": 18
+        }
+      ]
+    },
+    "civic_housing_377": {
+      "id": "civic_housing_377",
+      "name": "Kessler Housing",
+      "district": "flats",
+      "rect": [
+        82,
+        101,
+        8,
+        6
+      ],
+      "rects": [
+        [
+          82,
+          101,
+          8,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "brownstone",
+      "floors": 3,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        85,
+        105
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 87,
+          "y": 103
+        },
+        {
+          "type": "bed",
+          "x": 84,
+          "y": 102
+        },
+        {
+          "type": "sofa",
+          "x": 83,
+          "y": 103
+        },
+        {
+          "type": "tv",
+          "x": 83,
+          "y": 105
+        },
+        {
+          "type": "table",
+          "x": 88,
+          "y": 103
+        },
+        {
+          "type": "sink",
+          "x": 88,
+          "y": 104
+        },
+        {
+          "type": "shelf",
+          "x": 85,
+          "y": 102
+        },
+        {
+          "type": "plant",
+          "x": 85,
+          "y": 103
+        },
+        {
+          "type": "rug",
+          "x": 87,
+          "y": 104
         }
       ]
     }

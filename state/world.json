@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1510,
-  "last_beat_at": "2026-08-27T03:12:12Z",
+  "beat": 1534,
+  "last_beat_at": "2026-08-27T09:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 39,
-    "delmar": 6,
-    "terraces": 10,
+    "riverside": 26,
+    "delmar": 23,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -407,10 +407,10 @@
       "amount": 1,
       "due_day": 373,
       "note": "was got out of something and knows it",
-      "settled": false,
+      "settled": true,
       "patience": 6,
-      "asked": 1,
-      "last_confront_day": 377
+      "asked": 2,
+      "last_confront_day": 382
     },
     {
       "id": "debt26",
@@ -424,9 +424,141 @@
       "patience": 3,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine27",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 383,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "debt28",
+      "from": "malik",
+      "to": "elias",
+      "kind": "product",
+      "amount": 1,
+      "due_day": 386,
+      "note": "was fronted and has not squared it",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1532
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "marcus",
+        "gil"
+      ],
+      "text": "Marcus Calloway and Gil Lindqvist are seen arguing in the street loud enough that people stop.",
+      "beat": 1530
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1528
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1527
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1526
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 1525
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "marcus"
+      ],
+      "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1524
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "june",
+        "sami"
+      ],
+      "text": "June Kowal and Sami Amadi are seen arguing in the street loud enough that people stop.",
+      "beat": 1523
+    },
     {
       "id": "money_found",
       "heat": {},
@@ -578,101 +710,6 @@
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days.",
       "beat": 1483
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "cassius"
-      ],
-      "text": "Cassius Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1482
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1478
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 1477
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 1476
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 1475
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 1474
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1473
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1472
     }
   ],
   "player_queue": [
@@ -695,12 +732,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 376,
+  "last_gazette_day": 382,
   "llm_budget": {
     "day": "2026-08-27",
     "spent": {
-      "fast": 61799,
-      "deep": 2767
+      "fast": 118032,
+      "deep": 5229
     }
   },
   "silent_runs": 0,
@@ -1441,6 +1478,24 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 368
+    },
+    {
+      "id": "civic_housing_377",
+      "name": "Kessler Housing",
+      "district": "flats",
+      "x": 82,
+      "y": 101,
+      "w": 8,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "brownstone",
+      "open": false,
+      "wings": [],
+      "floors": 3,
+      "condition": "standing",
+      "since_day": 377,
+      "built_by": "the city"
     }
   ],
   "laws": [
@@ -1501,6 +1556,26 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
+      "convictions": 1
+    },
+    {
+      "id": "law04",
+      "title": "No Linger on Porch After Dusk",
+      "text": "No person may remain on a porch after 10:00 p.m. without a valid reason.",
+      "keywords": [
+        "porch",
+        "linger",
+        "after dusk",
+        "stay"
+      ],
+      "penalty": {
+        "type": "fine",
+        "amount": 75
+      },
+      "proposed_by": "tee",
+      "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
+      "day_enacted": 380,
+      "status": "enacted",
       "convictions": 0
     }
   ],
@@ -1553,12 +1628,25 @@
       "evidence": "gives a quick hair trim, listening",
       "day": 376,
       "trial_day": 378,
+      "status": "convicted",
+      "witnesses": 9,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c005",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "sitting, smoothing a client’s hair",
+      "day": 383,
+      "trial_day": 385,
       "status": "awaiting_trial",
       "witnesses": 9
     }
   ],
-  "law_pressure": 3,
-  "last_law_day": 374,
+  "law_pressure": 0,
+  "last_law_day": 380,
   "last_expansion_day": 368,
   "feuds": [
     {
@@ -1566,14 +1654,14 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 30
+      "heat": 44
     },
     {
       "a": "booker",
       "b": "kohl",
       "since_day": 263,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 2
     },
     {
       "a": "amara",
@@ -1595,6 +1683,13 @@
       "since_day": 290,
       "cause": "would not let it go",
       "heat": 0
+    },
+    {
+      "a": "hector",
+      "b": "rey",
+      "since_day": 381,
+      "cause": "a favour they have never repaid never repaid",
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
@@ -1633,10 +1728,67 @@
     "id": "dez",
     "marked": 377
   },
-  "incidents": [],
-  "treasury": 12354,
+  "incidents": [
+    {
+      "id": "inc1534-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello is taken to the 9th over Public Haircut Ban.",
+      "started": 1534,
+      "until": 1535
+    }
+  ],
+  "treasury": 11561,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 382,
+      "wages": 1671,
+      "takings": 2780,
+      "tax": 1451,
+      "welfare": 0,
+      "civic": 540,
+      "net": 911,
+      "treasury": 11561
+    },
+    {
+      "day": 381,
+      "wages": 1629,
+      "takings": 2780,
+      "tax": 1438,
+      "welfare": 0,
+      "civic": 540,
+      "net": 898,
+      "treasury": 10650
+    },
+    {
+      "day": 380,
+      "wages": 1629,
+      "takings": 2780,
+      "tax": 1438,
+      "welfare": 0,
+      "civic": 540,
+      "net": 898,
+      "treasury": 9752
+    },
+    {
+      "day": 377,
+      "spend": 2600,
+      "reason": "built a housing",
+      "treasury": 8854
+    },
+    {
+      "day": 377,
+      "spend": 900,
+      "reason": "policing",
+      "treasury": 11454
+    },
     {
       "day": 376,
       "wages": 1587,
@@ -1854,56 +2006,6 @@
       "civic": 540,
       "net": 455,
       "treasury": 7193
-    },
-    {
-      "day": 357,
-      "wages": 1606,
-      "takings": 2780,
-      "tax": 995,
-      "welfare": 0,
-      "civic": 540,
-      "net": 455,
-      "treasury": 6738
-    },
-    {
-      "day": 356,
-      "wages": 1606,
-      "takings": 2780,
-      "tax": 995,
-      "welfare": 0,
-      "civic": 540,
-      "net": 455,
-      "treasury": 6283
-    },
-    {
-      "day": 355,
-      "wages": 1564,
-      "takings": 2780,
-      "tax": 986,
-      "welfare": 0,
-      "civic": 540,
-      "net": 446,
-      "treasury": 5828
-    },
-    {
-      "day": 354,
-      "wages": 1564,
-      "takings": 2780,
-      "tax": 986,
-      "welfare": 0,
-      "civic": 540,
-      "net": 446,
-      "treasury": 5382
-    },
-    {
-      "day": 353,
-      "wages": 1564,
-      "takings": 2780,
-      "tax": 986,
-      "welfare": 0,
-      "civic": 540,
-      "net": 446,
-      "treasury": 4936
     }
   ],
   "births": [
@@ -1973,6 +2075,43 @@
   ],
   "orders": [],
   "order_log": [
+    {
+      "kind": "order",
+      "order": "direct",
+      "ok": false,
+      "day": 377,
+      "beat": 1510,
+      "who": "malik",
+      "name": "Malik Reyes",
+      "text": "Malik Reyes refuses: \"Not for you, not today.\""
+    },
+    {
+      "kind": "order",
+      "ok": false,
+      "day": 377,
+      "order": "build",
+      "text": "A shop will not fit there — something is in the way, or it is on a road."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 377,
+      "beat": 1510,
+      "order": "build",
+      "building": "civic_housing_377",
+      "what": "housing",
+      "cost": 2600,
+      "land": 0,
+      "text": "Kessler Housing is commissioned in The Flats ($2,600)."
+    },
+    {
+      "kind": "order",
+      "ok": true,
+      "day": 377,
+      "order": "programme",
+      "what": "policing",
+      "text": "The city puts more officers on the street."
+    },
     {
       "kind": "order",
       "order": "tax",
@@ -2232,34 +2371,6 @@
       "ok": true,
       "day": 363,
       "text": "Tax set to 28% (was 28%)."
-    },
-    {
-      "kind": "order",
-      "order": "tax",
-      "ok": true,
-      "day": 363,
-      "text": "Tax set to 28% (was 28%)."
-    },
-    {
-      "kind": "order",
-      "order": "tax",
-      "ok": true,
-      "day": 363,
-      "text": "Tax set to 28% (was 28%)."
-    },
-    {
-      "kind": "order",
-      "order": "tax",
-      "ok": true,
-      "day": 363,
-      "text": "Tax set to 28% (was 23%)."
-    },
-    {
-      "kind": "order",
-      "order": "tax",
-      "ok": true,
-      "day": 347,
-      "text": "Tax set to 23% (was 23%)."
     }
   ],
   "score_history": [
@@ -2691,19 +2802,58 @@
       "buildings": 41,
       "treasury": 12354,
       "employment": 100
+    },
+    {
+      "day": 380,
+      "overall": 73,
+      "economy": 87,
+      "wellbeing": 64,
+      "society": 33,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 43,
+      "buildings": 42,
+      "treasury": 9752,
+      "employment": 100
+    },
+    {
+      "day": 381,
+      "overall": 73,
+      "economy": 88,
+      "wellbeing": 66,
+      "society": 30,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 43,
+      "buildings": 42,
+      "treasury": 10650,
+      "employment": 100
+    },
+    {
+      "day": 382,
+      "overall": 73,
+      "economy": 90,
+      "wellbeing": 63,
+      "society": 30,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 44,
+      "buildings": 42,
+      "treasury": 11561,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 376,
-    "overall": 71,
-    "economy": 85,
-    "wellbeing": 64,
-    "society": 26,
+    "day": 382,
+    "overall": 73,
+    "economy": 90,
+    "wellbeing": 63,
+    "society": 30,
     "infrastructure": 100,
     "growth": 100,
-    "population": 42,
-    "buildings": 41,
-    "treasury": 12354,
+    "population": 44,
+    "buildings": 42,
+    "treasury": 11561,
     "employment": 100
   },
   "buildable": {
@@ -2754,5 +2904,59 @@
   "standing": 45,
   "forces": {},
   "map_w": 128,
-  "map_h": 136
+  "map_h": 136,
+  "roads": {
+    "h": [
+      [
+        10,
+        4
+      ],
+      [
+        26,
+        4
+      ],
+      [
+        42,
+        4
+      ],
+      [
+        58,
+        4
+      ],
+      [
+        74,
+        4
+      ],
+      [
+        90,
+        4
+      ],
+      [
+        120,
+        4
+      ]
+    ],
+    "v": [
+      [
+        12,
+        4
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        68,
+        4
+      ],
+      [
+        96,
+        4
+      ],
+      [
+        112,
+        4
+      ]
+    ]
+  }
 }
