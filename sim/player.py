@@ -97,8 +97,21 @@ def absorb(world, agents, beat, day):
     records = []
     for o in pending:
         orders.queue(world, o)
-        what = o.get("what") or (f'{round(float(o.get("rate", 0)) * 100)}%'
-                                 if o.get("kind") == "tax" else "")
+        # Every order kind has to say something useful here, or the log line is the word
+        # "direct" and a trailing space — which is what it printed the first time a real
+        # instruction came through, and which tells you nothing about what was asked or of
+        # whom. This is often the only record of an order that later goes wrong.
+        kind = o.get("kind")
+        if kind == "tax":
+            what = f'{round(float(o.get("rate", 0)) * 100)}%'
+        elif kind == "direct":
+            what = f'{o.get("who")}: {str(o.get("line") or "")[:60]}'
+        elif kind == "assign":
+            what = f'{o.get("who")} as {o.get("role")}'
+        else:
+            what = o.get("what") or ""
+            if o.get("x") is not None:
+                what += f' at {o.get("x")},{o.get("y")}'
         print(f'[player] order received: {o.get("kind")} {what}')
         records.append({"beat": beat, "day": day, "kind": "order_in",
                         "order": o.get("kind"), "what": what,

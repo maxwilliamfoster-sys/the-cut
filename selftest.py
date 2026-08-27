@@ -598,8 +598,13 @@ check("the composite is a weighted mean of the parts, not a sixth number",
 _p1, _p2 = _a14["dez"], _a14["junie"]
 _p1["alive"] = _p2["alive"] = True
 _p1["age"] = _p2["age"] = 30
-_p1["relationships"][_p2["id"]] = {"affinity": 90, "opinion": "everything"}
-_p2["relationships"][_p1["id"]] = {"affinity": 90, "opinion": "everything"}
+# The maximum on both sides, not merely a high number. form_couples pairs somebody with
+# their STRONGEST mutual bond, and months of play had grown Dez a better one elsewhere — he
+# went off with Chidi (192 to Junie's 180) and the check read as "people who love each other
+# do not pair off" when the code had done exactly the right thing. A test that wants a
+# specific pairing has to make that pairing unbeatable, not just plausible.
+_p1["relationships"][_p2["id"]] = {"affinity": 100, "opinion": "everything"}
+_p2["relationships"][_p1["id"]] = {"affinity": 100, "opinion": "everything"}
 _p1["partner"] = _p2["partner"] = None
 family.form_couples(_w14, _a14, _day14)
 check("two people who love each other pair off", _p1.get("partner") == _p2["id"])
