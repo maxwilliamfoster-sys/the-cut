@@ -193,6 +193,29 @@
   /* The leader's controls. Buttons say what a thing costs, and grey out when the treasury
      cannot cover it, so the constraint is visible before you click rather than after. */
   .subhead{font-size:9.5px; letter-spacing:.09em; color:var(--dim); padding:9px 0 4px}
+  #helpBtn{
+    margin-left:auto; background:transparent; color:var(--dim); cursor:pointer;
+    border:1px solid #2a2f38; border-radius:4px; padding:3px 9px; font:inherit; font-size:11px;
+  }
+  #helpBtn:hover{color:var(--gold); border-color:var(--gold)}
+  #help{
+    position:fixed; inset:0; z-index:60; background:rgba(6,8,12,.86);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  #help[hidden]{display:none}
+  #help .h-inner{
+    max-width:620px; max-height:100%; overflow:auto; background:#11151b;
+    border:1px solid #2a2f38; border-radius:8px; padding:22px 26px; position:relative;
+  }
+  #help h3{font-size:10.5px; letter-spacing:.1em; color:var(--gold); margin:16px 0 5px}
+  #help h3:first-of-type{margin-top:0}
+  #help p{font-size:12px; line-height:1.55; color:var(--ink); margin:0 0 8px}
+  #help .h-x{
+    position:absolute; top:14px; right:16px; background:transparent; color:var(--dim);
+    border:1px solid #2a2f38; border-radius:4px; padding:2px 8px; cursor:pointer;
+    font:inherit; font-size:10px;
+  }
+  .k-amber{color:#e8c877}
   .btns{display:flex; flex-wrap:wrap; gap:5px}
   /* Saying it in your own words sits directly under the shortcut buttons, because they do
      the same thing by the same route — the buttons just spell the sentence for you. */
@@ -237,7 +260,50 @@
   <span class="sub" id="when">—</span>
   <span class="sub" id="weather"></span>
   <span class="badge"><span id="dot"></span><span id="live">connecting</span></span>
+  <button id="helpBtn" onclick="toggleHelp()">how to play</button>
 </header>
+
+<!-- Everything the panel implies but never says. The controls had grown to four kinds of
+     order with different costs, different timings and a refusal roll on one of them, and
+     none of that was written down anywhere a player would find it. -->
+<div id="help" hidden>
+  <div class="h-inner">
+    <button class="h-x" onclick="toggleHelp()">close</button>
+    <h3>YOU ARE THE MAYOR</h3>
+    <p>You have no body here and nobody to move around. You run the place: you commission
+       buildings, you fund things, you set the tax rate, and you tell people what you want.
+       Everything else — who takes which job, who falls out with whom, who is born, who
+       dies — happens whether you like it or not.</p>
+
+    <h3>THE FOUR LEVERS</h3>
+    <p><b>Commission</b> — pick a building, then click the ground to place it. Green means
+       it goes there. <span class="k-amber">Amber</span> means it goes there but the ground
+       is outside the city and has to be bought as well; the extra shows above the
+       footprint. Red means no — a road, a verge, the water, or too close to something
+       standing.</p>
+    <p><b>Spend on people</b> — one city-day of effect each. Levers you pull again, not
+       switches you flip once.</p>
+    <p><b>Tax</b> — every point funds the treasury and costs you goodwill the same day.</p>
+    <p><b>Tell somebody</b> — click anyone, on the map or in THE CAST. You can send them
+       somewhere, put them into a public job, or type an instruction in your own words.</p>
+
+    <h3>THEY CAN SAY NO</h3>
+    <p>This is the part that keeps it a game. Whether somebody does as they are told turns
+       on what they think of you, how volatile they are, and how frightened or stressed
+       they are right now. Refusing costs you standing with them; agreeing earns it. A
+       public job also needs somewhere to do it — no clinic, no nurses; no barracks, no
+       soldiers.</p>
+
+    <h3>THE CITY CAN KEEP GROWING</h3>
+    <p>There is no edge you cannot build past. Ground beyond the current limits is bought
+       with the building that goes on it, so expansion competes with clinics, wages and
+       everything else. Sprawl is a choice, not a free answer to crowding.</p>
+
+    <h3>TIMING</h3>
+    <p>The city runs on its own, a beat every fifteen minutes, whether the page is open or
+       not. An order you sign is carried out at the next beat, with its bill.</p>
+  </div>
+</div>
 
 <main>
   <div id="stage">
@@ -976,7 +1042,12 @@ cv.addEventListener('click', e=>{
   cancelBuild();
 }, true);
 
-window.addEventListener('keydown', e=>{ if(e.key === 'Escape') cancelBuild(); });
+window.addEventListener('keydown', e=>{
+  if(e.key !== 'Escape') return;
+  const h = document.getElementById('help');
+  if(h && !h.hidden){ h.hidden = true; return; }   // the overlay first, if it is open
+  cancelBuild();
+});
 
 cv.addEventListener('dblclick', ()=>{ zoom = 1; pan = {x:0,y:0}; applyView(); draw(); });
 window.addEventListener('resize', ()=>{ if(MAP) fitCanvas(); });
@@ -2026,6 +2097,12 @@ function nearestNPC(){
 let PLACING = null;
 let PLACE_AT = null;
 
+function toggleHelp(){
+  const h = document.getElementById('help');
+  h.hidden = !h.hidden;
+}
+window.toggleHelp = toggleHelp;
+
 function armBuild(what, label){
   const spec = (WORLD.buildable || {})[what];
   if(!spec) return;
@@ -2035,13 +2112,23 @@ function armBuild(what, label){
   $('orderlog').innerHTML =
     `<div>Marking out <b>${esc(label)}</b> — click the ground to put it there. ` +
     `Esc to stop.</div>` + $('orderlog').innerHTML;
+  // The strip under the map becomes a key while you are placing. Three colours with no
+  // legend is a puzzle, and the amber one is the whole expansion mechanic.
+  $('controls').innerHTML =
+    `placing <b>${esc(label)}</b> · <span style="color:#8fe0c8">green</span> it goes there` +
+    ` · <span style="color:#e8c877">amber</span> new ground, costs extra` +
+    ` · <span style="color:#ff8a8a">red</span> blocked · <b>esc</b> to stop`;
   paintLeader();
   draw();
 }
 
+const CONTROLS_IDLE =
+  'scroll to zoom · drag to pan · <b>click anyone to speak to them</b>';
+
 function cancelBuild(){
   if(!PLACING) return;
   PLACING = null; PLACE_AT = null;
+  $('controls').innerHTML = CONTROLS_IDLE;
   paintLeader(); draw();
 }
 window.armBuild = armBuild;
