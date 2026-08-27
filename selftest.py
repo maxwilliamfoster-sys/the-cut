@@ -96,6 +96,31 @@ agents = state.load_agents()
 if world and world.get("buildings"):
     state.sync_city(world)
 
+# Most of this suite is written against named people — Dez owes Malik, Junie carries a
+# rumour — because a test that says "somebody owes somebody" is unreadable. But those people
+# live in a city that is allowed to kill them, and it has: Dez to violence on day 375, Junie
+# on 267. Every check built on them then failed for a reason that had nothing to do with what
+# it was testing, and one of them crashed outright and hid the other eleven.
+#
+# So: bring the cast back before anything is derived from them. Blocks that need somebody
+# dead — the mortality checks — kill their own copy explicitly, which is how a precondition
+# ought to be stated anyway.
+for _fixture in ("dez", "junie"):
+    if _fixture in agents:
+        agents[_fixture]["alive"] = True
+        agents[_fixture]["health"] = max(60, agents[_fixture].get("health", 60))
+        agents[_fixture].pop("died_day", None)
+        agents[_fixture].pop("died_beat", None)
+
+# And the funeral that was waiting for one of them. A funeral is the single thing in
+# target_location that moves the entire cast at once — it outranks routine, chasing and
+# anything the mayor said — so a world carrying one silently overrides the very behaviour
+# half these checks are trying to observe. It read as "they agreed and then carried on as
+# before" and as "chasing is set but routine still wins", when in truth everybody was at
+# church. Blocks that want a funeral schedule their own.
+if world:
+    world.pop("funeral", None)
+
 if not world:
     check("state exists (run --bootstrap first)", False)
 else:
@@ -520,8 +545,20 @@ orders.ensure(_w14)
 _day14 = clock.day_of(_w14["beat"])
 
 economy.match_jobs(_w14, _a14, _day14)
+# Everyone employed must be a living adult, and nobody may be employed at a building this
+# world does not contain. The denominator is deliberately NOT economy.workforce(): that
+# means "available to be matched into a job today" and excludes anybody in custody, so a
+# single person held overnight made employed exceed workforce and failed a check about
+# something else entirely. Being locked up for a day does not cost you your job.
+_employable14 = [x for x in _a14.values()
+                 if x.get("alive", True) and economy.working_age(x)]
+_jobbed14 = [x for x in _a14.values() if x.get("job")]
+_ids14 = {b["id"] for b in _w14["buildings"]}
 check("people get jobs in buildings that actually exist",
-      0 < sum(1 for x in _a14.values() if x.get("job")) <= len(economy.workforce(_a14)))
+      0 < len(_jobbed14) <= len(_employable14)
+      and all(x["job"]["at"] in _ids14 for x in _jobbed14),
+      f"{len(_jobbed14)} employed of {len(_employable14)} employable; "
+      f"{sum(1 for x in _jobbed14 if x['job']['at'] not in _ids14)} at buildings that do not exist")
 check("only working-age people are employed",
       all(economy.working_age(x) for x in _a14.values() if x.get("job")))
 

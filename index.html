@@ -194,6 +194,15 @@
      cannot cover it, so the constraint is visible before you click rather than after. */
   .subhead{font-size:9.5px; letter-spacing:.09em; color:var(--dim); padding:9px 0 4px}
   .btns{display:flex; flex-wrap:wrap; gap:5px}
+  /* Saying it in your own words sits directly under the shortcut buttons, because they do
+     the same thing by the same route — the buttons just spell the sentence for you. */
+  .tellrow{display:flex; gap:5px; padding-top:6px}
+  .tellrow input{
+    flex:1; min-width:0; background:#0e1116; color:var(--ink);
+    border:1px solid #2a2f38; border-radius:4px; padding:5px 7px;
+    font:inherit; font-size:11px;
+  }
+  .tellrow input:focus{outline:none; border-color:var(--gold)}
   .btn{
     border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--ink);
     border-radius:6px; padding:5px 8px; font-size:11px; cursor:pointer; font-family:inherit;
@@ -277,7 +286,9 @@
       <div class="subhead">TAX</div>
       <div id="taxrow"></div>
       <div id="orderlog"></div>
-      <div class="hint">Orders take effect at the end of the city-day, with the bill.</div>
+      <div class="hint">Orders are carried out at the next tick — about fifteen minutes —
+        and the bill lands with them. Building past the edge of the map buys the ground as
+        well as the building.</div>
     </div>
     <div class="sec">
       <h2>RIGHT NOW</h2>
@@ -540,6 +551,46 @@ function getChunk(cx, cy){
   }
   CHUNKS.set(key, {cv: c, used: Date.now()});
   return c;
+}
+
+// How far past the current edge you may mark out a building at one go. Not a limit on how
+// big the city can become — that is max_side — just how much unclaimed ground is offered at
+// a time, so expansion is a series of deliberate steps rather than one click into the far
+// distance with a five-figure bill on it.
+const FRONTIER_REACH = 48;
+
+// The ground the city has not bought yet. Only drawn while marking out a building, because
+// the rest of the time it is not land, it is nothing. Painted as flat regions rather than
+// per tile: at 48 tiles out that is fifteen thousand fills a frame, and this runs on every
+// pointer move.
+function drawFrontier(){
+  if(!PLACING || !MAP) return;
+  const R = FRONTIER_REACH, W = MAP.w + R, H = MAP.h + R;
+  const pitch = MAP.road_pitch || 24, width = MAP.road_width || 4;
+  ctx.save();
+
+  ctx.fillStyle = '#2b3327';                          // unclaimed scrub
+  ctx.fillRect(MAP.w * T, 0, R * T, H * T);           // the strip east of the city
+  ctx.fillRect(0, MAP.h * T, MAP.w * T, R * T);       // and the one south of it
+
+  // Where the carriageways will fall once this ground is inside the limits. Showing them
+  // is the difference between choosing a plot and guessing at one.
+  ctx.fillStyle = '#232830';
+  for(let x = Math.ceil(MAP.w / pitch) * pitch; x < W; x += pitch)
+    ctx.fillRect(x * T, 0, width * T, H * T);
+  for(let y = Math.ceil(MAP.h / pitch) * pitch; y < H; y += pitch)
+    ctx.fillRect(0, y * T, W * T, width * T);
+
+  // The line the city currently stops at.
+  ctx.strokeStyle = 'rgba(232,200,119,.5)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([6, 4]);
+  ctx.beginPath();
+  ctx.moveTo(MAP.w * T + .5, 0); ctx.lineTo(MAP.w * T + .5, H * T);
+  ctx.moveTo(0, MAP.h * T + .5); ctx.lineTo(W * T, MAP.h * T + .5);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
 }
 
 function drawGround(){
@@ -839,7 +890,14 @@ function applyView(){
   }
   const mw = MAP.w*T*view.s, mh = MAP.h*T*view.s;
   // Keep the city on screen: pan is only allowed along an axis that actually overflows.
-  const slackX = Math.max(0, (mw - cv.width)/2), slackY = Math.max(0, (mh - cv.height)/2);
+  //
+  // Except while marking out a building. The whole point of buying land is that you can
+  // build past the current edge, and you cannot point at ground you are not allowed to
+  // scroll to — the clamp would have made the frontier visible but unreachable. Marking out
+  // opens up a margin of empty space beyond the map so there is somewhere to put it.
+  const reach = PLACING ? FRONTIER_REACH*T*view.s : 0;
+  const slackX = Math.max(0, (mw - cv.width)/2) + reach;
+  const slackY = Math.max(0, (mh - cv.height)/2) + reach;
   pan.x = clamp(pan.x, -slackX, slackX);
   pan.y = clamp(pan.y, -slackY, slackY);
   view.ox = (cv.width - mw)/2 + pan.x;
@@ -894,13 +952,27 @@ cv.addEventListener('click', e=>{
   if(!PLACING) return;
   e.stopPropagation();
   const [x, y] = tileUnder(e);
+  const label = PLACING.label.toLowerCase();
   if(!siteFits(x, y, PLACING.w, PLACING.h)){
-    $('orderlog').innerHTML = `<div class="bad">Not there — something is in the way.</div>`
-      + $('orderlog').innerHTML;
+    const why = (x >= MAP.w + FRONTIER_REACH || y >= MAP.h + FRONTIER_REACH)
+      ? 'That is further out than the city can reach in one go — build towards it first.'
+      : 'Not there — that is a road, a verge, the water, or too close to something standing.';
+    $('orderlog').innerHTML = `<div class="bad">${why}</div>` + $('orderlog').innerHTML;
     return;
   }
-  const label = PLACING.label.toLowerCase();
-  sendOrder({kind:'build', what: PLACING.what, x, y}, `a ${label} at ${x},${y}`);
+  // The land bill is checked here as well as in the simulation, so an unaffordable plot is
+  // refused under the cursor rather than a tick later in the log.
+  const land = landCost(x, y, PLACING.w, PLACING.h);
+  const bill = (PLACING.cost || 0) + land;
+  if(bill > (WORLD.treasury || 0)){
+    $('orderlog').innerHTML =
+      `<div class="bad">Not enough: a ${esc(label)} there costs $${bill.toLocaleString()}` +
+      (land ? ` ($${land.toLocaleString()} of it for the ground)` : '') +
+      ` and you hold $${(WORLD.treasury||0).toLocaleString()}.</div>` + $('orderlog').innerHTML;
+    return;
+  }
+  sendOrder({kind:'build', what: PLACING.what, x, y},
+            land ? `a ${label} on new ground (+$${land.toLocaleString()})` : `a ${label}`);
   cancelBuild();
 }, true);
 
@@ -950,6 +1022,7 @@ function draw(){
   ctx.save();
   ctx.translate(view.ox, view.oy);
   ctx.scale(view.s, view.s);
+  drawFrontier();     // beneath the city proper: unclaimed ground only shows past its edges
   drawGround();
 
   // Night wash — the city visibly changes shift, which sells "time is passing" more
@@ -1793,12 +1866,56 @@ function paintMind(){
 
   const mems = (a.memories||[]).slice(-6).reverse();
 
+  // Who this person is most at odds with, and who they are closest to. Used to offer
+  // instructions that mean something to THEM rather than a generic menu — "make peace with
+  // Rosa" is a move you can reason about; "make peace with [dropdown]" is admin.
+  const sortedRels = Object.entries(a.relationships||{})
+    .filter(([k])=>AGENTS[k] && AGENTS[k].alive !== false && k !== selected);
+  const worst = sortedRels.slice().sort((x,y)=>x[1].affinity - y[1].affinity)[0];
+  const best  = sortedRels.slice().sort((x,y)=>y[1].affinity - x[1].affinity)[0];
+  const nameOf = k => (AGENTS[k]||{}).name || k;
+  const placeOf = k => ((MAP.locations||{})[k]||{}).name || k;
+
+  // Every button below builds a sentence that sim/directives.read() actually parses. That
+  // is deliberate: the same words typed into the box do the same thing, so the buttons are
+  // a shortcut rather than a separate, privileged control path.
+  const tells = [];
+  if(a.home)  tells.push([`Go to the ${placeOf(a.home)}.`, 'Send home']);
+  const workplace = (a.job && a.job.at) || a.work;
+  if(workplace && workplace !== a.home)
+    tells.push([`Go to the ${placeOf(workplace)}.`, 'Send to work']);
+  if(worst && worst[1].affinity < 0)
+    tells.push([`Make peace with ${nameOf(worst[0])}.`, `Make peace with ${nameOf(worst[0]).split(' ')[0]}`]);
+  if(best && best[1].affinity > 0)
+    tells.push([`Talk to ${nameOf(best[0])}.`, `Send to talk to ${nameOf(best[0]).split(' ')[0]}`]);
+
+  const ROLE_MENU = [['officer','Police'], ['soldier','Soldier'], ['nurse','Nurse'],
+                     ['teacher','Teacher'], ['builder','Builder'], ['labourer','Labourer']];
+
   $('mind').innerHTML = `
     <div style="color:var(--dim);padding-bottom:6px">${esc(a.age)} · ${esc(a.role)}</div>
 
     <div class="row"><span>thinks of you</span><span>${a.standing===undefined?'—':a.standing}</span></div>
     ${a.directive && a.directive.status==='pending'
       ? `<div class="hint" style="color:var(--gold)">You told them: ${esc(a.directive.text)}</div>` : ''}
+
+    <div class="subhead">TELL THEM TO</div>
+    <div class="btns">${tells.map(([line,label])=>
+      `<button class="btn" onclick="tellPerson('${esc(line).replace(/'/g,"&#39;")}')">${esc(label)}</button>`
+    ).join('') || '<span class="hint" style="padding:0">Nowhere obvious to send them.</span>'}</div>
+    <div class="tellrow">
+      <input id="tellbox" maxlength="140" placeholder="…or say it yourself: “Watch the pier tonight”"
+             onkeydown="if(event.key==='Enter')tellPerson()">
+      <button class="btn" onclick="tellPerson()">Tell</button>
+    </div>
+
+    <div class="subhead">PUT THEM TO WORK</div>
+    <div class="btns">${ROLE_MENU.map(([k,label])=>
+      `<button class="btn" onclick="sendOrder({kind:'assign',who:'${selected}',role:'${k}'},
+        '${esc(a.name)} as ${esc(label.toLowerCase())}')">${esc(label)}</button>`).join('')}</div>
+    <div class="hint">They can say no. Whether they do turns on what they think of you
+      (<b>thinks of you</b>, above), how volatile they are, and how frightened or stressed
+      they are right now. A job also needs somewhere to do it — no clinic, no nurses.</div>
     <div class="row"><span>energy</span><span>${a.mood.energy}</span></div>${bar(a.mood.energy,'var(--good)')}
     <div class="row"><span>happiness</span><span>${a.mood.happiness}</span></div>${bar(a.mood.happiness,'var(--gold)')}
     <div class="row"><span>stress</span><span>${a.mood.stress}</span></div>${bar(a.mood.stress,'var(--hot)')}
@@ -1932,16 +2049,77 @@ window.cancelBuild = cancelBuild;
 
 // Ground you can build on. Pavement and open grass only — never a road, the river, or
 // anything already standing.
+// ── is this actually buildable? ─────────────────────────────────────────────
+// This has to agree with sim/construction.blocked_cells, or the footprint lies. It used to
+// test the tile character alone, which meant it painted green right up to the kerb and
+// against the wall of the next building — both of which the simulation refuses. Clicking
+// apparently-clear ground and being told "it is on a road" was the preview's fault, not
+// the city's.
+//
+// Blocked is: any road tile within the verge, any building tile within the margin, water,
+// or the river band along the top.
+const ROADCH = ',:=', BUILTCH = '#fD', WATERCH = '~';
+
+function tileCh(x, y){
+  if(!MAP || x < 0 || y < 0 || x >= MAP.w || y >= MAP.h) return null;
+  return MAP.grid[y][x];
+}
+
+// Ground beyond the current edge does not exist yet, so there is no tile to inspect. It is
+// still predictable: growth lays a carriageway every road_pitch tiles, road_width wide, and
+// the same verge applies. Exported by city.export_map precisely so this can be honest about
+// land the city has not bought yet.
+function plannedRoad(v){
+  const pitch = (MAP && MAP.road_pitch) || 24;
+  const width = (MAP && MAP.road_width) || 4;
+  const verge = (MAP && MAP.verge) || 2;
+  const m = ((v % pitch) + pitch) % pitch;
+  return m <= (width - 1 + verge) || m >= pitch - verge;
+}
+
 function buildableTile(x, y){
-  if(!MAP || x < 0 || y < 0 || x >= MAP.w || y >= MAP.h) return false;
-  return '.g'.includes(MAP.grid[y][x]);
+  if(!MAP || x < 1 || y < 1) return false;
+  const verge = MAP.verge || 2, margin = MAP.margin || 1;
+  const beyond = (x >= MAP.w || y >= MAP.h);
+
+  if(beyond) return !(plannedRoad(x) || plannedRoad(y));
+
+  if(!'.g'.includes(MAP.grid[y][x])) return false;
+  for(let dy = -verge; dy <= verge; dy++)
+    for(let dx = -verge; dx <= verge; dx++){
+      const ch = tileCh(x + dx, y + dy);
+      if(ch === null) continue;
+      if(ROADCH.includes(ch) || ch === WATERCH) return false;
+      if(BUILTCH.includes(ch) &&
+         Math.abs(dx) <= margin && Math.abs(dy) <= margin) return false;
+    }
+  return true;
 }
 
 function siteFits(x, y, w, h){
+  if(!MAP) return false;
+  const max = MAP.max_side || 4096;
+  if(x + w + (MAP.frontier_margin || 10) > max) return false;
+  if(y + h + (MAP.frontier_margin || 10) > max) return false;
+  // Only as far out as this pass of expansion offers.
+  if(x + w > MAP.w + FRONTIER_REACH || y + h > MAP.h + FRONTIER_REACH) return false;
   for(let yy = y; yy < y + h; yy++)
     for(let xx = x; xx < x + w; xx++)
       if(!buildableTile(xx, yy)) return false;
   return true;
+}
+
+// What bringing this plot inside the city limits would cost — mirrors city.expansion_cost
+// so the number under the cursor is the number that will be charged.
+function landCost(x, y, w, h){
+  if(!MAP) return 0;
+  const fm = MAP.frontier_margin || 10, rate = MAP.land_per_tile || 0.38;
+  const max = MAP.max_side || 4096;
+  const needW = x + w + fm, needH = y + h + fm;
+  if(needW <= MAP.w && needH <= MAP.h) return 0;
+  const nw = Math.max(MAP.w, Math.min(max, needW));
+  const nh = Math.max(MAP.h, Math.min(max, needH));
+  return Math.floor(Math.max(0, nw * nh - MAP.w * MAP.h) * rate);
 }
 
 function drawSite(){
@@ -1949,16 +2127,26 @@ function drawSite(){
   const {w, h} = PLACING;
   const [x, y] = PLACE_AT;
   const ok = siteFits(x, y, w, h);
+  const land = landCost(x, y, w, h);
   ctx.save();
   ctx.globalAlpha = 0.34;
-  ctx.fillStyle = ok ? '#6fb3a0' : '#d9534f';
+  // Green it will go, amber it will go but the ground has to be bought, red it will not.
+  ctx.fillStyle = !ok ? '#d9534f' : land ? '#c8a24a' : '#6fb3a0';
   ctx.fillRect(x * T, y * T, w * T, h * T);
   ctx.globalAlpha = 0.95;
-  ctx.strokeStyle = ok ? '#8fe0c8' : '#ff8a8a';
+  ctx.strokeStyle = !ok ? '#ff8a8a' : land ? '#e8c877' : '#8fe0c8';
   ctx.lineWidth = 1.5;
   ctx.setLineDash([4, 3]);
   ctx.strokeRect(x * T + 0.5, y * T + 0.5, w * T - 1, h * T - 1);
   ctx.setLineDash([]);
+
+  if(ok && land){
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#e8c877';
+    ctx.font = '600 5px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(`+$${land.toLocaleString()} land`, (x + w / 2) * T, y * T - 2);
+  }
   ctx.restore();
 }
 
@@ -2028,6 +2216,22 @@ async function sendOrder(payload, label){
   ORDER_BUSY = false;
 }
 
+// Directing one person — the part of this that behaves like The Sims, except that the
+// person gets a vote. The line travels to the simulation exactly as typed, because it is
+// sim/directives.read() that works out what kind of instruction it is and
+// sim/directives.will_comply() that decides whether they take it. A refusal comes back as
+// an ordinary order record, so being told no lands in the log instead of looking like a bug.
+async function tellPerson(line){
+  if(!selected || !AGENTS[selected]) return;
+  const box = document.getElementById('tellbox');
+  const text = String(line || (box && box.value) || '').trim().slice(0,140);
+  if(!text) return;
+  if(!line && box) box.value = '';
+  await sendOrder({kind:'direct', who:selected, line:text},
+                  `${AGENTS[selected].name.split(' ')[0]}: “${text}”`);
+}
+window.tellPerson = tellPerson;
+
 // Orders signed in this browser but not yet drained by a tick. The world only learns about
 // them when the cron next runs, so without this the button click appears to do nothing for
 // up to fifteen minutes.
@@ -2070,17 +2274,18 @@ function paintLeader(){
   // Roles are assigned to whoever is selected, so the flow is: click a person, then pick
   // what the city needs them to be. A role needs somewhere to do it — nurses need a clinic —
   // which is the chain that makes building things matter.
+  // Jobs and instructions used to live here, detached from the person they applied to. They
+  // now sit in that person's own panel, where their mood, their standing and who they cannot
+  // stand are all visible at the same time — which is the information you actually need to
+  // guess whether they will agree.
   const ROLE_MENU = [['officer','Police'], ['soldier','Soldier'], ['nurse','Nurse'],
                      ['teacher','Teacher'], ['builder','Builder'], ['labourer','Labourer']];
   const who = selected && AGENTS[selected];
   $('rolerow').innerHTML = who
-    ? `<div style="font-size:11px;padding-bottom:4px">` +
-      `<b>${esc(who.name)}</b>${who.job ? ` — ${esc(who.job.title)}` : ' — no work'}</div>` +
-      `<div class="btns">` + ROLE_MENU.map(([k,label])=>
-        `<button class="btn" onclick="sendOrder({kind:'assign',who:'${selected}',role:'${k}'},` +
-        ` '${esc(who.name)} as ${esc(label.toLowerCase())}')">${esc(label)}</button>`).join('') +
-      `</div>`
-    : `<div class="hint" style="padding:0">Click somebody on the map to give them a job.</div>`;
+    ? `<div class="hint" style="padding:0">Telling <b>${esc(who.name.split(' ')[0])}</b> what to
+       do — jobs and instructions — is further down, under their name.</div>`
+    : `<div class="hint" style="padding:0">Click anybody, on the map or in THE CAST, to give
+       them a job or an instruction.</div>`;
 
   const f = WORLD.forces || {};
   const shown = ROLE_MENU.filter(([k])=>f[k]).map(([k,label])=>

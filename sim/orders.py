@@ -125,6 +125,26 @@ def _apply(world, agents, o, day, beat):
                     {"kind": "order", "ok": False, "day": day,
                      "text": "That did not work."}, order="assign")
 
+    if kind == "direct":
+        # The Sims-shaped part of this: pick somebody, tell them to do a thing. It goes
+        # through exactly the same refusal roll as anything else said to them, because a
+        # city where forty people always do as they are told is an org chart, not a place —
+        # and being told no by somebody you are trying to govern is most of the game.
+        from . import directives
+        aid = o.get("who")
+        line = str(o.get("line") or "").strip()[:140]
+        a = agents.get(aid)
+        if not a or not a.get("alive", True):
+            return {"kind": "order", "ok": False, "day": day, "order": "direct",
+                    "text": "There is nobody by that name to tell."}
+        told = directives.give(world, agents, aid, line, day, beat)
+        if not told:
+            return {"kind": "order", "ok": False, "day": day, "order": "direct",
+                    "text": f'{a["name"]} did not take that as an instruction.'}
+        return {"kind": "order", "order": "direct", "ok": bool(told.get("ok")),
+                "day": day, "beat": beat, "who": aid, "name": a["name"],
+                "text": told["text"]}
+
     if kind == "programme":
         return _programme(world, agents, o, day, beat)
 

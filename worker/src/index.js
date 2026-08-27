@@ -439,6 +439,17 @@ async function order(req, env) {
   } else if (kind === "programme") {
     if (!PROGRAMMES.includes(body.what)) return json({ error: "no such programme" }, 400);
     out = { kind: "programme", what: body.what };
+  } else if (kind === "direct") {
+    // Telling one person to do one thing. The line is passed through as written because the
+    // simulation is what parses it (sim/directives.read), and it is the simulation that
+    // decides whether they agree — this end only checks it is a sane size and addressed to
+    // somebody. There is deliberately no wordlist here: /talk accepts free text on the same
+    // key with the same origin allowlist, so a filter on this path alone would buy nothing.
+    const who = String(body.who || "").slice(0, 40);
+    const line = String(body.line || "").trim().slice(0, 140);
+    if (!who) return json({ error: "tell who?" }, 400);
+    if (!line) return json({ error: "tell them what?" }, 400);
+    out = { kind: "direct", who, line };
   } else if (kind === "assign") {
     const role = String(body.role || "");
     if (!ROLES.includes(role)) return json({ error: "no such job" }, 400);

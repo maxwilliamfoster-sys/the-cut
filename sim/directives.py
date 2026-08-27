@@ -55,6 +55,26 @@ _IMPERATIVE = re.compile(
     r"\b(?:you (?:need to|have to|must|should)|i want you to|i need you to|"
     r"stop|start|don't|do not|make sure|see to it|from now on|get)\b", re.I)
 
+# The pattern above only catches an order that announces itself ("I need you to..."). Plain
+# imperative mood — "Keep your head down", "Watch the pier", "Stay away from him" — is how
+# people actually give instructions, and it was coming back as "that was not an
+# instruction", which reads as the game ignoring you. A line that opens on a bare verb is
+# an order. A word list rather than a pattern, because the test is only ever "is the first
+# word one of these", and that reads better as a set than as forty alternations.
+_OPENERS = {
+    "keep", "stay", "stop", "start", "go", "get", "take", "give", "help", "watch",
+    "look", "find", "tell", "ask", "leave", "wait", "calm", "sort", "fix", "mind",
+    "hold", "ease", "quit", "behave", "apologise", "apologize", "report", "guard",
+    "patrol", "clean", "rest", "sleep", "eat", "drink", "move", "come", "bring",
+    "show", "meet", "check", "sell", "buy", "pay", "study", "learn", "train",
+    "listen", "speak", "talk", "back", "steer", "lay", "knock", "pack", "shape",
+}
+
+
+def _opens_on_a_verb(text):
+    first = (text or "").strip().lstrip('"\'').split(" ")[0]
+    return first.strip(".,!?:;").lower() in _OPENERS
+
 
 def read(line, speaker_id, agents):
     """Turn a line from the mayor into a directive, or None if it was just talk."""
@@ -77,7 +97,7 @@ def read(line, speaker_id, agents):
             if who:
                 return {"kind": kind, "target": who, "text": text[:140]}
 
-    if _IMPERATIVE.search(text):
+    if _IMPERATIVE.search(text) or _opens_on_a_verb(text):
         # Understood as an instruction without a mechanical handle. It still lands: the
         # person carries it, and the narration is told they were told.
         return {"kind": "general", "target": None, "text": text[:140]}

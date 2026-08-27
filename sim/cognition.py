@@ -139,7 +139,20 @@ def select(world, agents, groups, pressures, event, beat, limit=COGNITION_SLOTS)
         s += min(a["mood"]["stress"], 100) / 40.0
         s += min(a["mood"]["fear"], 100) / 50.0
         # Rotation: the longer since anyone paid attention, the louder they get.
-        s += min((beat - a.get("last_thought_beat", -20)) * 0.45, 9)
+        #
+        # Both numbers were too small for a cast this size, in different ways. The rate
+        # decided how quickly somebody quiet climbs past the people the story is happening
+        # to, and 0.45 was slow enough that over ten beats only about seven in ten of the
+        # city were heard at all. The ceiling of 9 was the worse of the two: a principal
+        # who is volatile, stressed and standing in a crowded room scores around twenty
+        # every single beat, so a capped rotation could be outbid *permanently* — which is
+        # not "waits their turn", it is a resident who never speaks again. To the player
+        # that is indistinguishable from a dead character, in a city whose entire promise
+        # is that it is alive.
+        #
+        # At 0.9 with a ceiling of 30, ten beats covers ~93% of the cast, and thirty-odd
+        # beats of silence outranks anything anyone else can accumulate.
+        s += min((beat - a.get("last_thought_beat", -20)) * 0.9, 30)
         scored.append((s, aid))
 
     scored.sort(key=lambda t: (-t[0], t[1]))
