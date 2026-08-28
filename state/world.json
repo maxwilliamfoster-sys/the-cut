@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1555,
-  "last_beat_at": "2026-08-27T14:27:12Z",
+  "beat": 1593,
+  "last_beat_at": "2026-08-27T23:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "first snow",
   "heat": {
-    "riverside": 30,
-    "delmar": 34,
-    "terraces": 5,
+    "riverside": 19,
+    "delmar": 15,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -446,10 +446,10 @@
       "amount": 1,
       "due_day": 386,
       "note": "was fronted and has not squared it",
-      "settled": false,
+      "settled": true,
       "patience": 3,
       "asked": 0,
-      "last_confront_day": -99
+      "last_confront_day": 395
     },
     {
       "id": "fine29",
@@ -463,9 +463,100 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine30",
+      "from": "cass",
+      "to": "the block",
+      "kind": "money",
+      "amount": 15,
+      "note": "fine — Counter Glass Prohibition",
+      "settled": false,
+      "due_day": 398,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 1593
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kohl",
+        "maren"
+      ],
+      "text": "Somebody tells Ofc. Brady Kohl that Maren Adeyemi has been seen talking to police.",
+      "beat": 1592
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1591
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1585
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "gus"
+      ],
+      "text": "Gus Petrakis gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1584
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 1582
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -649,85 +740,6 @@
       ],
       "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
       "beat": 1524
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "june",
-        "sami"
-      ],
-      "text": "June Kowal and Sami Amadi are seen arguing in the street loud enough that people stop.",
-      "beat": 1523
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Something pays out for Gus Petrakis. More than expected, which is its own problem.",
-      "beat": 1509
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "simone",
-        "sami"
-      ],
-      "text": "Sami Amadi does Simone Adeyemi a favour that costs them something real.",
-      "beat": 1504
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1503
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1502
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "maren",
-        "gus"
-      ],
-      "text": "Gus Petrakis does Maren Adeyemi a favour that costs them something real.",
-      "beat": 1501
     }
   ],
   "player_queue": [
@@ -750,12 +762,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 388,
+  "last_gazette_day": 397,
   "llm_budget": {
-    "day": "2026-08-27",
+    "day": "2026-08-28",
     "spent": {
-      "fast": 162933,
-      "deep": 11338
+      "fast": 52065,
+      "deep": 2597
     }
   },
   "silent_runs": 0,
@@ -1572,7 +1584,7 @@
       "because": "Unattended glasses left on the counter in the cold.",
       "day_enacted": 269,
       "status": "enacted",
-      "convictions": 1
+      "convictions": 2
     },
     {
       "id": "law03",
@@ -1689,8 +1701,9 @@
       "evidence": "leans back, eyes the empty glass",
       "day": 388,
       "trial_day": 390,
-      "status": "awaiting_trial",
-      "witnesses": 1
+      "status": "convicted",
+      "witnesses": 1,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 0,
@@ -1702,7 +1715,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 38
+      "heat": 32
     },
     {
       "a": "booker",
@@ -1737,7 +1750,7 @@
       "b": "rey",
       "since_day": 381,
       "cause": "a favour they have never repaid never repaid",
-      "heat": 45
+      "heat": 39
     }
   ],
   "quota_exhausted_on": {
@@ -1776,37 +1789,40 @@
     "id": "dez",
     "marked": 377
   },
-  "incidents": [
-    {
-      "id": "inc1555-arrest-1",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "cass"
-      ],
-      "text": "Cass Deveaux is taken to the 9th over Counter Glass Prohibition.",
-      "started": 1555,
-      "until": 1556
-    },
-    {
-      "id": "inc1554-raid-0",
-      "kind": "raid",
-      "effect": "lights",
-      "at": "church",
-      "x": 50,
-      "y": 40,
-      "who": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "started": 1554,
-      "until": 1556
-    }
-  ],
-  "treasury": 14333,
+  "incidents": [],
+  "treasury": 17157,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 397,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 17157
+    },
+    {
+      "day": 396,
+      "wages": 1755,
+      "takings": 2780,
+      "tax": 1477,
+      "welfare": 0,
+      "civic": 540,
+      "net": 937,
+      "treasury": 16207
+    },
+    {
+      "day": 395,
+      "wages": 1755,
+      "takings": 2780,
+      "tax": 1477,
+      "welfare": 0,
+      "civic": 540,
+      "net": 937,
+      "treasury": 15270
+    },
     {
       "day": 388,
       "wages": 1755,
@@ -2040,32 +2056,6 @@
       "spend": 900,
       "reason": "policing",
       "treasury": 7177
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 8077
-    },
-    {
-      "day": 362,
-      "wages": 1553,
-      "takings": 2780,
-      "tax": 983,
-      "welfare": 0,
-      "civic": 540,
-      "net": 443,
-      "treasury": 8977
-    },
-    {
-      "day": 361,
-      "wages": 1553,
-      "takings": 2780,
-      "tax": 983,
-      "welfare": 0,
-      "civic": 540,
-      "net": 443,
-      "treasury": 8534
     }
   ],
   "births": [
@@ -2940,19 +2930,58 @@
       "buildings": 43,
       "treasury": 14333,
       "employment": 100
+    },
+    {
+      "day": 395,
+      "overall": 72,
+      "economy": 88,
+      "wellbeing": 62,
+      "society": 30,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 46,
+      "buildings": 43,
+      "treasury": 15270,
+      "employment": 100
+    },
+    {
+      "day": 396,
+      "overall": 73,
+      "economy": 89,
+      "wellbeing": 65,
+      "society": 31,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 46,
+      "buildings": 43,
+      "treasury": 16207,
+      "employment": 100
+    },
+    {
+      "day": 397,
+      "overall": 74,
+      "economy": 90,
+      "wellbeing": 66,
+      "society": 31,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 17157,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 388,
-    "overall": 70,
+    "day": 397,
+    "overall": 74,
     "economy": 90,
-    "wellbeing": 59,
-    "society": 25,
+    "wellbeing": 66,
+    "society": 31,
     "infrastructure": 100,
     "growth": 100,
-    "population": 46,
+    "population": 47,
     "buildings": 43,
-    "treasury": 14333,
+    "treasury": 17157,
     "employment": 100
   },
   "buildable": {
