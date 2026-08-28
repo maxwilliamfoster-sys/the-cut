@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1593,
-  "last_beat_at": "2026-08-27T23:57:12Z",
+  "beat": 1638,
+  "last_beat_at": "2026-08-28T11:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "overcast",
   "heat": {
-    "riverside": 19,
-    "delmar": 15,
-    "terraces": 13,
+    "riverside": 5,
+    "delmar": 5,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -476,9 +476,138 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine31",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 411,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "debt32",
+      "from": "maren",
+      "to": "hector",
+      "kind": "money",
+      "amount": 600,
+      "due_day": 414,
+      "note": "covered somebody's shortfall, once",
+      "settled": false,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "kwame",
+        "yusuf"
+      ],
+      "text": "Dr. Yusuf Amin does Kwame Osei a favour that costs them something real.",
+      "beat": 1638
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1636
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1635
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 1632
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "maren",
+        "boateng"
+      ],
+      "text": "Maren Adeyemi and Fr. Emmanuel Boateng are seen arguing in the street loud enough that people stop.",
+      "beat": 1631
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1629
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1628
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "rosa",
+        "jonah"
+      ],
+      "text": "Somebody tells Rosa Reyes that Jonah Bello has been seen talking to police.",
+      "beat": 1627
+    },
     {
       "id": "overdose",
       "heat": {
@@ -638,108 +767,6 @@
       ],
       "text": "Booker Lyle ends up at the clinic. The paperwork says one thing; the injury says another.",
       "beat": 1548
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1546
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1532
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "marcus",
-        "gil"
-      ],
-      "text": "Marcus Calloway and Gil Lindqvist are seen arguing in the street loud enough that people stop.",
-      "beat": 1530
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1528
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1527
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 1526
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 1525
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "marcus"
-      ],
-      "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1524
     }
   ],
   "player_queue": [
@@ -762,12 +789,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 397,
+  "last_gazette_day": 408,
   "llm_budget": {
     "day": "2026-08-28",
     "spent": {
-      "fast": 52065,
-      "deep": 2597
+      "fast": 103769,
+      "deep": 5406
     }
   },
   "silent_runs": 0,
@@ -1603,7 +1630,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 2
+      "convictions": 3
     },
     {
       "id": "law04",
@@ -1704,9 +1731,34 @@
       "status": "convicted",
       "witnesses": 1,
       "verdict": "guilty"
+    },
+    {
+      "id": "c007",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "sits by barber chair, humming softly",
+      "day": 406,
+      "trial_day": 408,
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c008",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays neutral, listening",
+      "day": 409,
+      "trial_day": 411,
+      "status": "awaiting_trial",
+      "witnesses": 9
     }
   ],
-  "law_pressure": 0,
+  "law_pressure": 1,
   "last_law_day": 380,
   "last_expansion_day": 386,
   "feuds": [
@@ -1715,7 +1767,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 32
+      "heat": 26
     },
     {
       "a": "booker",
@@ -1750,7 +1802,7 @@
       "b": "rey",
       "since_day": 381,
       "cause": "a favour they have never repaid never repaid",
-      "heat": 39
+      "heat": 33
     }
   ],
   "quota_exhausted_on": {
@@ -1789,10 +1841,55 @@
     "id": "dez",
     "marked": 377
   },
-  "incidents": [],
-  "treasury": 17157,
+  "incidents": [
+    {
+      "id": "inc1638-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello is taken to the 9th over No Linger on Porch After Dusk.",
+      "started": 1638,
+      "until": 1639
+    }
+  ],
+  "treasury": 20007,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 408,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 20007
+    },
+    {
+      "day": 407,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 19057
+    },
+    {
+      "day": 406,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 18107
+    },
     {
       "day": 397,
       "wages": 1797,
@@ -2038,24 +2135,6 @@
       "spend": 900,
       "reason": "policing",
       "treasury": 4477
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 5377
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 6277
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 7177
     }
   ],
   "births": [
@@ -2969,19 +3048,58 @@
       "buildings": 43,
       "treasury": 17157,
       "employment": 100
+    },
+    {
+      "day": 406,
+      "overall": 74,
+      "economy": 91,
+      "wellbeing": 70,
+      "society": 29,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 18107,
+      "employment": 100
+    },
+    {
+      "day": 407,
+      "overall": 75,
+      "economy": 93,
+      "wellbeing": 72,
+      "society": 29,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 19057,
+      "employment": 100
+    },
+    {
+      "day": 408,
+      "overall": 76,
+      "economy": 94,
+      "wellbeing": 69,
+      "society": 33,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 20007,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 397,
-    "overall": 74,
-    "economy": 90,
-    "wellbeing": 66,
-    "society": 31,
+    "day": 408,
+    "overall": 76,
+    "economy": 94,
+    "wellbeing": 69,
+    "society": 33,
     "infrastructure": 100,
     "growth": 100,
     "population": 47,
     "buildings": 43,
-    "treasury": 17157,
+    "treasury": 20007,
     "employment": 100
   },
   "buildable": {
