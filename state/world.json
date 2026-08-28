@@ -1,10 +1,10 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1638,
-  "last_beat_at": "2026-08-28T11:12:12Z",
+  "beat": 1679,
+  "last_beat_at": "2026-08-28T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "cold snap",
   "heat": {
     "riverside": 5,
     "delmar": 5,
@@ -498,6 +498,32 @@
       "amount": 600,
       "due_day": 414,
       "note": "covered somebody's shortfall, once",
+      "settled": true,
+      "patience": 3,
+      "asked": 0,
+      "last_confront_day": 418
+    },
+    {
+      "id": "fine33",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 420,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "debt34",
+      "from": "rey",
+      "to": "nia",
+      "kind": "favour",
+      "amount": 1,
+      "due_day": 420,
+      "note": "was got out of something and knows it",
       "settled": false,
       "patience": 3,
       "asked": 0,
@@ -505,6 +531,101 @@
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "dev"
+      ],
+      "text": "Something pays out for Dev Lindqvist. More than expected, which is its own problem.",
+      "beat": 1678
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "rey",
+        "femi"
+      ],
+      "text": "Femi Adeyemi does Rey Vasquez a favour that costs them something real.",
+      "beat": 1677
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 1674
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1673
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1672
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1671
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 1670
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 1668
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -658,115 +779,6 @@
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark.",
       "beat": 1585
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "gus"
-      ],
-      "text": "Gus Petrakis gets word that what they owe is wanted sooner than agreed.",
-      "beat": 1584
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 1582
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "ruiz",
-        "dez"
-      ],
-      "text": "Dez Okonkwo does Det. Yolanda Ruiz a favour that costs them something real.",
-      "beat": 1555
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 1554
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1551
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "boateng",
-        "yusuf"
-      ],
-      "text": "Somebody tells Fr. Emmanuel Boateng that Dr. Yusuf Amin has been seen talking to police.",
-      "beat": 1550
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1549
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "booker"
-      ],
-      "text": "Booker Lyle ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1548
     }
   ],
   "player_queue": [
@@ -789,12 +801,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 408,
+  "last_gazette_day": 418,
   "llm_budget": {
     "day": "2026-08-28",
     "spent": {
-      "fast": 103769,
-      "deep": 5406
+      "fast": 156515,
+      "deep": 7826
     }
   },
   "silent_runs": 0,
@@ -1650,7 +1662,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 0
+      "convictions": 1
     }
   ],
   "charges": [
@@ -1754,8 +1766,9 @@
       "evidence": "stays neutral, listening",
       "day": 409,
       "trial_day": 411,
-      "status": "awaiting_trial",
-      "witnesses": 9
+      "status": "convicted",
+      "witnesses": 9,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 1,
@@ -1767,7 +1780,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 26
+      "heat": 20
     },
     {
       "a": "booker",
@@ -1795,14 +1808,21 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 18
     },
     {
       "a": "hector",
       "b": "rey",
       "since_day": 381,
       "cause": "a favour they have never repaid never repaid",
-      "heat": 33
+      "heat": 27
+    },
+    {
+      "a": "gus",
+      "b": "wes",
+      "since_day": 418,
+      "cause": "would not let it go",
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
@@ -1841,25 +1861,40 @@
     "id": "dez",
     "marked": 377
   },
-  "incidents": [
-    {
-      "id": "inc1638-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "tee"
-      ],
-      "text": "Tariq 'Tee' Bello is taken to the 9th over No Linger on Porch After Dusk.",
-      "started": 1638,
-      "until": 1639
-    }
-  ],
-  "treasury": 20007,
+  "incidents": [],
+  "treasury": 22857,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 419,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 22857
+    },
+    {
+      "day": 418,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 21907
+    },
+    {
+      "day": 417,
+      "wages": 1797,
+      "takings": 2780,
+      "tax": 1490,
+      "welfare": 0,
+      "civic": 540,
+      "net": 950,
+      "treasury": 20957
+    },
     {
       "day": 408,
       "wages": 1797,
@@ -2117,24 +2152,6 @@
       "spend": 900,
       "reason": "policing",
       "treasury": 1777
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 2677
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 3577
-    },
-    {
-      "day": 363,
-      "spend": 900,
-      "reason": "policing",
-      "treasury": 4477
     }
   ],
   "births": [
@@ -3087,19 +3104,58 @@
       "buildings": 43,
       "treasury": 20007,
       "employment": 100
+    },
+    {
+      "day": 417,
+      "overall": 76,
+      "economy": 95,
+      "wellbeing": 69,
+      "society": 33,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 20957,
+      "employment": 100
+    },
+    {
+      "day": 418,
+      "overall": 75,
+      "economy": 96,
+      "wellbeing": 66,
+      "society": 31,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 21907,
+      "employment": 100
+    },
+    {
+      "day": 419,
+      "overall": 76,
+      "economy": 96,
+      "wellbeing": 69,
+      "society": 31,
+      "infrastructure": 100,
+      "growth": 100,
+      "population": 47,
+      "buildings": 43,
+      "treasury": 22857,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 408,
+    "day": 419,
     "overall": 76,
-    "economy": 94,
+    "economy": 96,
     "wellbeing": 69,
-    "society": 33,
+    "society": 31,
     "infrastructure": 100,
     "growth": 100,
     "population": 47,
     "buildings": 43,
-    "treasury": 20007,
+    "treasury": 22857,
     "employment": 100
   },
   "buildable": {
