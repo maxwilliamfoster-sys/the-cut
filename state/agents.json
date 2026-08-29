@@ -1772,7 +1772,7 @@
     },
     "pos": [
       9,
-      52
+      49
     ],
     "dest": [
       21,
@@ -1781,14 +1781,14 @@
     "at": "terrace_b",
     "spot": [
       9,
-      52
+      49
     ],
     "mood": {
       "energy": 0,
-      "happiness": 46,
-      "stress": 55,
+      "happiness": 27,
+      "stress": 100,
       "social_need": 0,
-      "fear": 20
+      "fear": 98
     },
     "relationships": {
       "dez": {
@@ -1829,7 +1829,7 @@
       },
       "amara": {
         "affinity": -100,
-        "opinion": "he’s reckless"
+        "opinion": "you’re a pain"
       },
       "cass": {
         "affinity": -57,
@@ -1890,6 +1890,10 @@
       "cassius": {
         "affinity": 95,
         "opinion": "my child"
+      },
+      "kwame": {
+        "affinity": -6,
+        "opinion": "Kwame wants power, I feel threatened"
       }
     },
     "memories": [
@@ -2954,35 +2958,57 @@
         "day": 424,
         "what": "I must fix this before it ruins my trust.",
         "importance": 8
+      },
+      {
+        "beat": 1720,
+        "day": 430,
+        "what": "I told Kwame Osei no. That will cost me.",
+        "importance": 8
+      },
+      {
+        "beat": 1722,
+        "day": 430,
+        "what": "I told Kwame I’d pay, knowing he’ll hold me to it",
+        "importance": 6
+      },
+      {
+        "beat": 1723,
+        "day": 430,
+        "what": "I’ll keep my promise; Kwame will use it to my advantage.",
+        "importance": 8
+      },
+      {
+        "beat": 1724,
+        "day": 431,
+        "what": "I bought myself more time with Kwame Osei.",
+        "importance": 7
+      },
+      {
+        "beat": 1727,
+        "day": 431,
+        "what": "I’m losing time, Kwame’s ambition threatens me",
+        "importance": 8
       }
     ],
-    "action": "pacing, eyes on Amara",
+    "action": "sits, eyes flicking at Amara's grin",
     "activity": "sitting down for a minute",
-    "thought": "I must settle this before it ruins me.",
+    "thought": "If I don’t show up, I’ll be forgotten",
     "speech": {
       "to": "amara",
-      "text": "Let’s talk, I’m tired of this."
+      "text": "What’s the point of your drama if you’re not paying me?"
     },
     "path": [
       [
-        9,
+        8,
         49
       ],
       [
         9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
+        49
       ]
     ],
-    "last_thought_beat": 1702,
-    "belief": "I must fix this before it ruins my trust.",
+    "last_thought_beat": 1730,
+    "belief": "I’m losing time, Kwame’s ambition threatens me",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -2992,8 +3018,8 @@
     "vehicle": null,
     "last_instigated_day": 376,
     "detained_until": 0,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -3036,7 +3062,7 @@
     },
     "pos": [
       3,
-      52
+      50
     ],
     "dest": [
       6,
@@ -3045,12 +3071,12 @@
     "at": "terrace_a",
     "spot": [
       3,
-      52
+      50
     ],
     "mood": {
       "energy": 0,
-      "happiness": 61,
-      "stress": 86,
+      "happiness": 47,
+      "stress": 90,
       "social_need": 0,
       "fear": 20
     },
@@ -3096,8 +3122,8 @@
         "opinion": "wise and experienced"
       },
       "simone": {
-        "affinity": 34,
-        "opinion": "opinionated"
+        "affinity": 31,
+        "opinion": "trustworthy"
       },
       "wes": {
         "affinity": -8,
@@ -3722,12 +3748,12 @@
         "importance": 8
       }
     ],
-    "action": "sits with family, eyes on Lyle's envelope",
+    "action": "stares at the ledger, fingers tapping",
     "activity": "sitting down for a minute",
-    "thought": "I can’t let him slip.",
+    "thought": "If I let Lyle slip, I’ll lose my badge",
     "speech": {
       "to": "simone",
-      "text": "Lyle’s envelope felt too light. He’s dangerous."
+      "text": "That conviction was a win, not a mistake"
     },
     "path": [
       [
@@ -3805,9 +3831,17 @@
       [
         3,
         52
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        50
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1730,
     "belief": "Lyle thinks he can buy me off with pocket change.",
     "alive": true,
     "health": 80,
@@ -3816,8 +3850,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -3856,26 +3890,29 @@
       "night": "delmarflats"
     },
     "pos": [
-      34,
-      35
+      9,
+      64
     ],
     "dest": [
       6,
       63
     ],
-    "at": "pawnshop",
-    "spot": null,
+    "at": "precinct",
+    "spot": [
+      9,
+      64
+    ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 80,
-      "social_need": 0,
-      "fear": 22
+      "happiness": 47,
+      "stress": 96,
+      "social_need": 12,
+      "fear": 20
     },
     "relationships": {
       "booker": {
         "affinity": -100,
-        "opinion": "snake"
+        "opinion": "clumsy"
       },
       "ruiz": {
         "affinity": -77,
@@ -4794,23 +4831,30 @@
         "day": 424,
         "what": "Cass is targeting me; I’m under attack.",
         "importance": 8
+      },
+      {
+        "beat": 1729,
+        "day": 432,
+        "what": "I was taken in over Counter Glass Prohibition.",
+        "importance": 8
       }
     ],
-    "action": "holds envelope, eyes on Booker",
-    "activity": "looking at nothing in particular, listening to the rain",
-    "thought": "He’s a snake, I’ll watch him.",
-    "speech": {
-      "to": "booker",
-      "text": "You’re a snake, I’ll see you."
-    },
+    "action": "is being held at the 9th",
+    "activity": "at the desk",
+    "thought": "",
+    "speech": null,
     "path": [
       [
-        7,
-        34
+        6,
+        32
       ],
       [
-        6,
-        34
+        5,
+        32
+      ],
+      [
+        5,
+        33
       ],
       [
         5,
@@ -4877,123 +4921,139 @@
         42
       ],
       [
-        13,
-        42
+        12,
+        43
       ],
       [
-        14,
-        42
+        12,
+        44
       ],
       [
-        15,
-        42
+        12,
+        45
       ],
       [
-        16,
-        42
+        12,
+        46
       ],
       [
-        17,
-        42
+        12,
+        47
       ],
       [
-        18,
-        42
+        12,
+        48
       ],
       [
-        19,
-        42
+        12,
+        49
       ],
       [
-        20,
-        42
+        12,
+        50
       ],
       [
-        21,
-        42
+        12,
+        51
       ],
       [
-        22,
-        42
+        12,
+        52
       ],
       [
-        23,
-        42
+        12,
+        53
       ],
       [
-        24,
-        42
+        12,
+        54
       ],
       [
-        25,
-        42
+        12,
+        55
       ],
       [
-        26,
-        42
+        12,
+        56
       ],
       [
-        27,
-        42
+        12,
+        57
       ],
       [
-        28,
-        42
+        12,
+        58
       ],
       [
-        29,
-        42
+        11,
+        58
       ],
       [
-        30,
-        42
+        10,
+        58
       ],
       [
-        31,
-        42
+        9,
+        58
       ],
       [
-        32,
-        42
+        8,
+        58
       ],
       [
-        33,
-        42
+        7,
+        58
       ],
       [
-        34,
-        42
+        6,
+        58
       ],
       [
-        34,
-        41
+        5,
+        58
       ],
       [
-        34,
-        40
+        5,
+        59
       ],
       [
-        34,
-        39
+        5,
+        60
       ],
       [
-        34,
-        38
+        5,
+        61
       ],
       [
-        34,
-        37
+        5,
+        62
       ],
       [
-        34,
-        36
+        5,
+        63
       ],
       [
-        34,
-        35
+        5,
+        64
+      ],
+      [
+        6,
+        64
+      ],
+      [
+        7,
+        64
+      ],
+      [
+        8,
+        64
+      ],
+      [
+        9,
+        64
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1729,
     "belief": "Cass is targeting me; I’m under attack.",
     "alive": true,
     "health": 80,
@@ -5003,8 +5063,8 @@
     "last_instigated_day": 419,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "church",
       "title": "on the desk",
@@ -5016,7 +5076,9 @@
     "children": [],
     "birth_day": null,
     "standing": 45,
-    "directive": null
+    "directive": null,
+    "detained_until": 434,
+    "charged_with": "Counter Glass Prohibition"
   },
   "ivy": {
     "id": "ivy",
@@ -5054,10 +5116,10 @@
     "spot": null,
     "mood": {
       "energy": 0,
-      "happiness": 39,
-      "stress": 84,
+      "happiness": 47,
+      "stress": 59,
       "social_need": 12,
-      "fear": 32
+      "fear": 20
     },
     "relationships": {
       "nadia": {
@@ -5603,7 +5665,7 @@
         35
       ]
     ],
-    "last_thought_beat": 1701,
+    "last_thought_beat": 1729,
     "belief": "Tee’s conviction is a sign to keep the block safe.",
     "alive": true,
     "health": 80,
@@ -5648,7 +5710,7 @@
     },
     "pos": [
       9,
-      49
+      52
     ],
     "dest": [
       21,
@@ -5657,12 +5719,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      49
+      52
     ],
     "mood": {
       "energy": 0,
-      "happiness": 49,
-      "stress": 41,
+      "happiness": 47,
+      "stress": 40,
       "social_need": 0,
       "fear": 20
     },
@@ -5676,8 +5738,8 @@
         "opinion": "not mentioned"
       },
       "amara": {
-        "affinity": 53,
-        "opinion": "she’s stubborn"
+        "affinity": 52,
+        "opinion": "friend"
       },
       "nadia": {
         "affinity": 6,
@@ -6352,15 +6414,14 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
+    "action": "smiles, fingers on chair legs",
     "activity": "sitting down for a minute",
-    "thought": "",
-    "speech": null,
+    "thought": "If I let Amara run, I’ll be safe",
+    "speech": {
+      "to": "amara",
+      "text": "You ready to take over the diner?"
+    },
     "path": [
-      [
-        22,
-        33
-      ],
       [
         21,
         33
@@ -6520,21 +6581,9 @@
       [
         9,
         52
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        49
       ]
     ],
-    "last_thought_beat": 1701,
+    "last_thought_beat": 1730,
     "belief": "I’m guilty, but I can move on.",
     "alive": true,
     "health": 80,
@@ -6560,8 +6609,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -6605,8 +6654,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      48
+      3,
+      50
     ],
     "dest": [
       3,
@@ -6614,13 +6663,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      48
+      3,
+      50
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 43,
+      "happiness": 47,
+      "stress": 62,
       "social_need": 0,
       "fear": 20
     },
@@ -6646,8 +6695,8 @@
         "opinion": "trying to be a leader"
       },
       "ruiz": {
-        "affinity": 39,
-        "opinion": "obedient"
+        "affinity": 37,
+        "opinion": "stubborn"
       },
       "dez": {
         "affinity": -34,
@@ -7248,12 +7297,12 @@
         "importance": 8
       }
     ],
-    "action": "leans forward, listening to rain",
-    "activity": "sitting down for a minute, listening to the rain",
-    "thought": "I keep secrets, but I also keep people safe.",
+    "action": "writes a note, voice low",
+    "activity": "sitting down for a minute",
+    "thought": "If I speak, I might get pulled in",
     "speech": {
       "to": "ruiz",
-      "text": "I know he’s dangerous, I hear it."
+      "text": "We need a plan, not just a conviction"
     },
     "path": [
       [
@@ -7401,31 +7450,19 @@
         53
       ],
       [
-        4,
-        53
-      ],
-      [
-        4,
+        3,
         52
       ],
       [
-        4,
+        3,
         51
       ],
       [
-        4,
+        3,
         50
-      ],
-      [
-        4,
-        49
-      ],
-      [
-        4,
-        48
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1730,
     "belief": "Tee’s conviction shows I must speak.",
     "alive": true,
     "health": 80,
@@ -7434,8 +7471,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -7477,8 +7514,8 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      49
+      34,
+      51
     ],
     "dest": [
       50,
@@ -7486,20 +7523,20 @@
     ],
     "at": "vasquez",
     "spot": [
-      31,
-      49
+      34,
+      51
     ],
     "mood": {
       "energy": 0,
-      "happiness": 26,
+      "happiness": 47,
       "stress": 100,
-      "social_need": 0,
-      "fear": 98
+      "social_need": 6,
+      "fear": 80
     },
     "relationships": {
       "nadia": {
-        "affinity": 90,
-        "opinion": "She’s sharp"
+        "affinity": 86,
+        "opinion": "watchful"
       },
       "dez": {
         "affinity": -100,
@@ -8378,14 +8415,26 @@
         "day": 425,
         "what": "Nia Nakamura put hands on me. Everyone saw.",
         "importance": 9
+      },
+      {
+        "beat": 1719,
+        "day": 429,
+        "what": "I paid Nia Nakamura off.",
+        "importance": 8
+      },
+      {
+        "beat": 1719,
+        "day": 429,
+        "what": "I did what needed to be done, yet my worries remain.",
+        "importance": 8
       }
     ],
-    "action": "looks at his phone, eyes flicking to Nia",
+    "action": "leans back, watching the door",
     "activity": "sitting down for a minute",
-    "thought": "I need to fix this before it blows.",
+    "thought": "If I keep my cool, I keep my family safe",
     "speech": {
-      "to": "nia",
-      "text": "I’ll pay you soon, I promise."
+      "to": "nadia",
+      "text": "You’re digging too deep for your own good"
     },
     "path": [
       [
@@ -8529,28 +8578,16 @@
         52
       ],
       [
-        32,
-        52
-      ],
-      [
-        31,
-        52
-      ],
-      [
-        31,
+        33,
         51
       ],
       [
-        31,
-        50
-      ],
-      [
-        31,
-        49
+        34,
+        51
       ]
     ],
-    "last_thought_beat": 1702,
-    "belief": "Saying no will damage my reputation.",
+    "last_thought_beat": 1730,
+    "belief": "I did what needed to be done, yet my worries remain.",
     "alive": true,
     "health": 64,
     "grief": 0,
@@ -8559,8 +8596,8 @@
     "last_instigated_day": 425,
     "driving": "van",
     "vehicle": "van",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "courthouse",
       "title": "in the office",
@@ -8599,8 +8636,8 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
-      49
+      34,
+      51
     ],
     "dest": [
       33,
@@ -8608,20 +8645,20 @@
     ],
     "at": "vasquez",
     "spot": [
-      35,
-      49
+      34,
+      51
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 39,
+      "happiness": 27,
+      "stress": 83,
       "social_need": 0,
       "fear": 20
     },
     "relationships": {
       "rey": {
-        "affinity": 45,
-        "opinion": "trusts him"
+        "affinity": 41,
+        "opinion": "liar"
       },
       "marisol": {
         "affinity": 65,
@@ -9046,10 +9083,13 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
+    "action": "folds her notebook, jaw tight",
     "activity": "sitting down for a minute",
-    "thought": "",
-    "speech": null,
+    "thought": "If I dig, I’ll expose my dad",
+    "speech": {
+      "to": "rey",
+      "text": "You’re hiding something, Dad"
+    },
     "path": [
       [
         35,
@@ -9120,23 +9160,11 @@
         52
       ],
       [
-        35,
-        52
-      ],
-      [
-        35,
+        34,
         51
-      ],
-      [
-        35,
-        50
-      ],
-      [
-        35,
-        49
       ]
     ],
-    "last_thought_beat": 1700,
+    "last_thought_beat": 1730,
     "belief": "Father is hiding something important in the papers he makes me destroy.",
     "alive": true,
     "health": 80,
@@ -9145,8 +9173,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -9196,9 +9224,9 @@
     "spot": null,
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 45,
-      "social_need": 0,
+      "happiness": 47,
+      "stress": 37,
+      "social_need": 12,
       "fear": 20
     },
     "relationships": {
@@ -9891,7 +9919,7 @@
         35
       ]
     ],
-    "last_thought_beat": 1701,
+    "last_thought_beat": 1729,
     "belief": "Kohl is flailing and desperate, poking around where he lacks any real leverage.",
     "alive": true,
     "health": 56,
@@ -9911,8 +9939,8 @@
     "last_instigated_day": 263,
     "driving": null,
     "vehicle": "car",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -10803,8 +10831,8 @@
       "night": "harborbar"
     },
     "pos": [
-      29,
-      18
+      28,
+      17
     ],
     "dest": [
       31,
@@ -10812,13 +10840,13 @@
     ],
     "at": "harborbar",
     "spot": [
-      29,
-      18
+      28,
+      17
     ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 51,
+      "happiness": 47,
+      "stress": 57,
       "social_need": 12,
       "fear": 20
     },
@@ -11476,11 +11504,27 @@
         "importance": 8
       }
     ],
-    "action": "nursing a drink, listening to the rain",
-    "activity": "nursing a drink, listening to the rain",
+    "action": "talking over the table",
+    "activity": "talking over the table",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        6,
+        32
+      ],
+      [
+        5,
+        32
+      ],
+      [
+        5,
+        33
+      ],
+      [
+        5,
+        34
+      ],
       [
         5,
         35
@@ -11678,11 +11722,19 @@
         19
       ],
       [
-        29,
+        28,
+        19
+      ],
+      [
+        28,
         18
+      ],
+      [
+        28,
+        17
       ]
     ],
-    "last_thought_beat": 1701,
+    "last_thought_beat": 1729,
     "belief": "Kohl is losing his footing and everyone can see the panic setting in.",
     "alive": true,
     "health": 80,
@@ -11692,8 +11744,8 @@
     "last_instigated_day": 424,
     "driving": "car",
     "vehicle": "car",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -11733,7 +11785,7 @@
     },
     "pos": [
       65,
-      50
+      52
     ],
     "dest": [
       62,
@@ -11742,12 +11794,12 @@
     "at": "okonkwo",
     "spot": [
       65,
-      50
+      52
     ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 55,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -12007,14 +12059,38 @@
         "importance": 6
       }
     ],
-    "action": "eating at the table, listening to the rain",
-    "activity": "eating at the table, listening to the rain",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
       [
+        60,
+        49
+      ],
+      [
+        61,
+        49
+      ],
+      [
+        62,
+        49
+      ],
+      [
+        63,
+        49
+      ],
+      [
+        64,
+        49
+      ],
+      [
         65,
-        52
+        49
+      ],
+      [
+        65,
+        50
       ],
       [
         65,
@@ -12022,10 +12098,10 @@
       ],
       [
         65,
-        50
+        52
       ]
     ],
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1729,
     "belief": "the law is tightening, maybe our sons will feel pressure",
     "alive": true,
     "health": 80,
@@ -12034,8 +12110,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "precinct",
       "title": "on the desk",
@@ -12075,7 +12151,7 @@
     },
     "pos": [
       65,
-      50
+      52
     ],
     "dest": [
       34,
@@ -12084,12 +12160,12 @@
     "at": "okonkwo",
     "spot": [
       65,
-      50
+      52
     ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -12307,8 +12383,8 @@
         "importance": 8
       }
     ],
-    "action": "going through the post",
-    "activity": "going through the post",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
@@ -12427,27 +12503,19 @@
       [
         65,
         52
-      ],
-      [
-        65,
-        51
-      ],
-      [
-        65,
-        50
       ]
     ],
-    "last_thought_beat": 1692,
+    "last_thought_beat": 1720,
     "belief": "Tee’s conviction means I must prove myself.",
     "alive": true,
     "health": 80,
-    "grief": 25,
+    "grief": 16,
     "volatility": 52,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -12500,8 +12568,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 39,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -12713,13 +12781,10 @@
         "importance": 8
       }
     ],
-    "action": "holds Tiny's hand, speaks softly",
+    "action": "sitting down for a minute",
     "activity": "sitting down for a minute",
-    "thought": "I’ll protect Tiny, no matter what.",
-    "speech": {
-      "to": "malik",
-      "text": "Keep Tiny safe, I need your help."
-    },
+    "thought": "",
+    "speech": null,
     "path": [
       [
         62,
@@ -13094,7 +13159,7 @@
         49
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1723,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -13103,8 +13168,8 @@
     "driving": null,
     "belief": "Tee’s conviction means I must support Tiny.",
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -13159,8 +13224,8 @@
     ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 41,
+      "happiness": 47,
+      "stress": 39,
       "social_need": 0,
       "fear": 20
     },
@@ -13178,8 +13243,8 @@
         "opinion": "bored"
       },
       "tee": {
-        "affinity": -8,
-        "opinion": "MAX 10 WORDS"
+        "affinity": -9,
+        "opinion": "supportive"
       },
       "booker": {
         "affinity": 21,
@@ -13374,62 +13439,53 @@
         "importance": 8
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
-    "thought": "",
-    "speech": null,
+    "action": "tunes radio, humming under her breath",
+    "activity": "sitting with the radio on",
+    "thought": "If I get a bike, I can race everyone",
+    "speech": {
+      "to": "tee",
+      "text": "Will you give me a bike?"
+    },
     "path": [
       [
-        80,
-        51
-      ],
-      [
-        79,
-        51
-      ],
-      [
-        78,
-        51
-      ],
-      [
-        77,
-        51
-      ],
-      [
-        76,
-        51
-      ],
-      [
-        75,
-        51
-      ],
-      [
         74,
-        51
+        48
       ],
       [
         73,
-        51
+        48
       ],
       [
         72,
-        51
+        48
       ],
       [
         71,
-        51
+        48
       ],
       [
         70,
-        51
+        48
       ],
       [
         69,
-        51
+        48
       ],
       [
         68,
-        51
+        48
+      ],
+      [
+        67,
+        48
+      ],
+      [
+        67,
+        49
+      ],
+      [
+        67,
+        50
       ],
       [
         67,
@@ -13712,7 +13768,7 @@
         52
       ]
     ],
-    "last_thought_beat": 1700,
+    "last_thought_beat": 1730,
     "belief": "Tee’s conviction shows I’m safe, but Sticks is real.",
     "alive": true,
     "health": 80,
@@ -13756,8 +13812,8 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      34,
+      49
     ],
     "dest": [
       33,
@@ -13765,13 +13821,13 @@
     ],
     "at": "vasquez",
     "spot": [
-      32,
-      50
+      34,
+      49
     ],
     "mood": {
       "energy": 74,
-      "happiness": 48,
-      "stress": 42,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
       "fear": 20
     },
@@ -13959,18 +14015,11 @@
         "importance": 6
       }
     ],
-    "action": "serves food, glances at Rey",
-    "activity": "eating at the table",
-    "thought": "We’ll hold our ground, no matter what.",
-    "speech": {
-      "to": "rey",
-      "text": "Stay strong, we’ll keep our house."
-    },
+    "action": "washing up",
+    "activity": "washing up",
+    "thought": "",
+    "speech": null,
     "path": [
-      [
-        64,
-        33
-      ],
       [
         63,
         33
@@ -14188,19 +14237,23 @@
         52
       ],
       [
-        32,
+        34,
         52
       ],
       [
-        32,
+        34,
         51
       ],
       [
-        32,
+        34,
         50
+      ],
+      [
+        34,
+        49
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1723,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -14768,8 +14821,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 39,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -15119,18 +15172,18 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute, listening to the rain",
-    "activity": "sitting down for a minute, listening to the rain",
+    "action": "sitting down for a minute",
+    "activity": "sitting down for a minute",
     "thought": "",
     "speech": null,
     "path": [
       [
-        22,
-        34
+        21,
+        33
       ],
       [
-        21,
-        34
+        20,
+        33
       ],
       [
         20,
@@ -15293,7 +15346,7 @@
         49
       ]
     ],
-    "last_thought_beat": 1699,
+    "last_thought_beat": 1726,
     "belief": "Tee’s conviction proves he’ll destroy my shop.",
     "alive": true,
     "health": 80,
@@ -15302,8 +15355,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -15345,8 +15398,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      78,
-      35
+      77,
+      34
     ],
     "dest": [
       76,
@@ -15354,13 +15407,13 @@
     ],
     "at": "delmarflats",
     "spot": [
-      78,
-      35
+      77,
+      34
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 40,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -16184,12 +16237,12 @@
     "speech": null,
     "path": [
       [
-        60,
-        33
+        63,
+        32
       ],
       [
-        61,
-        33
+        62,
+        32
       ],
       [
         62,
@@ -16300,31 +16353,31 @@
         40
       ],
       [
-        78,
-        40
-      ],
-      [
-        78,
+        77,
         39
       ],
       [
-        78,
+        77,
         38
       ],
       [
-        78,
+        77,
         37
       ],
       [
-        78,
+        77,
         36
       ],
       [
-        78,
+        77,
         35
+      ],
+      [
+        77,
+        34
       ]
     ],
-    "last_thought_beat": 1698,
+    "last_thought_beat": 1726,
     "belief": "The badge wearers think they can publicly lean on local business owners without consequence.",
     "alive": true,
     "health": 80,
@@ -16343,8 +16396,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "clinic",
       "title": "on the ward",
@@ -16384,7 +16437,7 @@
     },
     "pos": [
       75,
-      16
+      23
     ],
     "dest": [
       75,
@@ -16393,12 +16446,12 @@
     "at": "riverflats",
     "spot": [
       75,
-      16
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 40,
+      "happiness": 47,
+      "stress": 43,
       "social_need": 6,
       "fear": 20
     },
@@ -16408,8 +16461,8 @@
         "opinion": "paid up, in the end"
       },
       "hector": {
-        "affinity": -25,
-        "opinion": "kind soul"
+        "affinity": -30,
+        "opinion": "dangerous"
       },
       "malik": {
         "affinity": -42,
@@ -16718,34 +16771,17 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
+    "action": "tosses a napkin, eyes on Hector",
     "activity": "sitting down for a minute",
-    "thought": "",
-    "speech": null,
+    "thought": "If I keep my ledger tight, I stay untouchable",
+    "speech": {
+      "to": "hector",
+      "text": "You think you can walk away?"
+    },
     "path": [
       [
         75,
-        23
-      ],
-      [
-        75,
-        22
-      ],
-      [
-        75,
-        21
-      ],
-      [
-        75,
-        20
-      ],
-      [
-        75,
-        19
-      ],
-      [
-        75,
-        18
+        16
       ],
       [
         75,
@@ -16753,10 +16789,30 @@
       ],
       [
         75,
-        16
+        18
+      ],
+      [
+        75,
+        19
+      ],
+      [
+        75,
+        20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
       ]
     ],
-    "last_thought_beat": 1698,
+    "last_thought_beat": 1730,
     "belief": "Tee’s conviction confirms I can stay untouchable.",
     "alive": true,
     "health": 80,
@@ -16766,8 +16822,8 @@
     "driving": null,
     "vehicle": null,
     "last_instigated_day": 371,
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "school",
       "title": "in the office",
@@ -16819,8 +16875,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 50,
+      "happiness": 47,
+      "stress": 57,
       "social_need": 0,
       "fear": 20
     },
@@ -17762,7 +17818,7 @@
         36
       ]
     ],
-    "last_thought_beat": 1700,
+    "last_thought_beat": 1729,
     "belief": "Tee’s conviction means I’ll take action.",
     "alive": true,
     "health": 80,
@@ -17772,8 +17828,8 @@
     "last_instigated_day": 418,
     "driving": "van",
     "vehicle": "van",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "school",
       "title": "on the desk",
@@ -17823,8 +17879,8 @@
     "spot": null,
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 40,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 12,
       "fear": 20
     },
@@ -18014,16 +18070,12 @@
     "speech": null,
     "path": [
       [
-        64,
-        32
+        60,
+        33
       ],
       [
-        63,
-        32
-      ],
-      [
-        62,
-        32
+        61,
+        33
       ],
       [
         62,
@@ -18034,7 +18086,7 @@
         34
       ]
     ],
-    "last_thought_beat": 1693,
+    "last_thought_beat": 1721,
     "belief": "Tee’s conviction means I’ll outlast.",
     "alive": true,
     "health": 80,
@@ -18043,8 +18095,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": "van",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -18083,8 +18135,8 @@
       "night": "riverflats"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       6,
@@ -18092,13 +18144,13 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -18347,42 +18399,6 @@
     "thought": "",
     "speech": null,
     "path": [
-      [
-        9,
-        69
-      ],
-      [
-        8,
-        69
-      ],
-      [
-        7,
-        69
-      ],
-      [
-        6,
-        69
-      ],
-      [
-        5,
-        69
-      ],
-      [
-        5,
-        68
-      ],
-      [
-        5,
-        67
-      ],
-      [
-        5,
-        66
-      ],
-      [
-        5,
-        65
-      ],
       [
         5,
         64
@@ -18828,27 +18844,11 @@
         24
       ],
       [
-        74,
-        24
-      ],
-      [
-        74,
+        75,
         23
-      ],
-      [
-        74,
-        22
-      ],
-      [
-        74,
-        21
-      ],
-      [
-        74,
-        20
       ]
     ],
-    "last_thought_beat": 1699,
+    "last_thought_beat": 1722,
     "belief": "Tee’s conviction is a warning; I’ll stay vigilant.",
     "alive": true,
     "health": 80,
@@ -18857,8 +18857,8 @@
     "chasing": null,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 2105,
-    "skill": 55.5,
+    "money": 2210,
+    "skill": 57.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -18897,8 +18897,8 @@
       "night": "riverflats"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -18906,13 +18906,13 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 45,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -19152,21 +19152,34 @@
         "importance": 8
       }
     ],
-    "action": "looks at paperwork, frowns at Dot",
+    "action": "sitting down for a minute",
     "activity": "sitting down for a minute",
-    "thought": "We need a second doctor, or this ends.",
-    "speech": {
-      "to": "dot",
-      "text": "We need another doctor, please."
-    },
+    "thought": "",
+    "speech": null,
     "path": [
       [
-        19,
-        64
+        24,
+        67
       ],
       [
-        20,
-        64
+        23,
+        67
+      ],
+      [
+        22,
+        67
+      ],
+      [
+        21,
+        67
+      ],
+      [
+        21,
+        66
+      ],
+      [
+        21,
+        65
       ],
       [
         21,
@@ -19549,27 +19562,11 @@
         24
       ],
       [
-        74,
-        24
-      ],
-      [
-        74,
+        75,
         23
-      ],
-      [
-        74,
-        22
-      ],
-      [
-        74,
-        21
-      ],
-      [
-        74,
-        20
       ]
     ],
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1723,
     "belief": "Tee’s conviction means I need another doctor.",
     "alive": true,
     "health": 80,
@@ -19578,8 +19575,8 @@
     "chasing": null,
     "driving": "car",
     "vehicle": "car",
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -19617,8 +19614,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      78,
-      35
+      77,
+      34
     ],
     "dest": [
       76,
@@ -19626,13 +19623,13 @@
     ],
     "at": "delmarflats",
     "spot": [
-      78,
-      35
+      77,
+      34
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 49,
+      "happiness": 55,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -19828,12 +19825,12 @@
     "speech": null,
     "path": [
       [
-        35,
-        65
+        33,
+        67
       ],
       [
-        34,
-        65
+        33,
+        66
       ],
       [
         33,
@@ -20116,31 +20113,31 @@
         40
       ],
       [
-        78,
-        40
-      ],
-      [
-        78,
+        77,
         39
       ],
       [
-        78,
+        77,
         38
       ],
       [
-        78,
+        77,
         37
       ],
       [
-        78,
+        77,
         36
       ],
       [
-        78,
+        77,
         35
+      ],
+      [
+        77,
+        34
       ]
     ],
-    "last_thought_beat": 1696,
+    "last_thought_beat": 1729,
     "belief": "Tee’s conviction means I’ll help Nadia escape.",
     "alive": true,
     "health": 80,
@@ -20149,8 +20146,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -20202,9 +20199,9 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 34,
-      "social_need": 98,
+      "happiness": 47,
+      "stress": 37,
+      "social_need": 100,
       "fear": 20
     },
     "relationships": {
@@ -20431,7 +20428,7 @@
         40
       ]
     ],
-    "last_thought_beat": 1695,
+    "last_thought_beat": 1722,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -20440,8 +20437,8 @@
     "driving": null,
     "belief": "Tee is a danger; I’ll keep the young safe.",
     "vehicle": null,
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -20481,7 +20478,7 @@
     },
     "pos": [
       4,
-      51
+      48
     ],
     "dest": [
       78,
@@ -20490,12 +20487,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      51
+      48
     ],
     "mood": {
       "energy": 24,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 57,
       "social_need": 6,
       "fear": 20
     },
@@ -20747,8 +20744,8 @@
         "importance": 7
       }
     ],
-    "action": "washing up",
-    "activity": "washing up",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
@@ -21121,11 +21118,23 @@
         51
       ],
       [
+        3,
+        50
+      ],
+      [
+        3,
+        49
+      ],
+      [
+        3,
+        48
+      ],
+      [
         4,
-        51
+        48
       ]
     ],
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1727,
     "belief": "Tee’s conviction means I’ll secure a quiet street.",
     "alive": true,
     "health": 80,
@@ -21134,8 +21143,8 @@
     "chasing": null,
     "driving": "car",
     "vehicle": "car",
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -21190,8 +21199,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 42,
       "social_need": 0,
       "fear": 20
     },
@@ -21209,8 +21218,8 @@
         "opinion": "polished guy"
       },
       "dot": {
-        "affinity": 36,
-        "opinion": "She’s kind"
+        "affinity": 34,
+        "opinion": "kind"
       },
       "brennan": {
         "affinity": 2,
@@ -21461,30 +21470,21 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute, listening to the rain",
-    "activity": "sitting down for a minute, listening to the rain",
-    "thought": "",
-    "speech": null,
+    "action": "shifts weight, looking at Dot",
+    "activity": "sitting down for a minute",
+    "thought": "If I leave, I’ll survive",
+    "speech": {
+      "to": "dot",
+      "text": "Your ledger’s my safe haven"
+    },
     "path": [
       [
-        62,
-        17
+        64,
+        22
       ],
       [
-        62,
-        18
-      ],
-      [
-        62,
-        19
-      ],
-      [
-        62,
-        20
-      ],
-      [
-        62,
-        21
+        63,
+        22
       ],
       [
         62,
@@ -21587,7 +21587,7 @@
         20
       ]
     ],
-    "last_thought_beat": 1698,
+    "last_thought_beat": 1730,
     "belief": "I’m finally free to leave.",
     "alive": true,
     "health": 80,
@@ -21597,8 +21597,8 @@
     "last_instigated_day": 381,
     "driving": "van",
     "vehicle": "van",
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -21637,8 +21637,8 @@
       "night": "underpass"
     },
     "pos": [
-      61,
-      68
+      62,
+      66
     ],
     "dest": [
       79,
@@ -21646,14 +21646,14 @@
     ],
     "at": "underpass",
     "spot": [
-      61,
-      68
+      62,
+      66
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 40,
-      "social_need": 92,
+      "happiness": 47,
+      "stress": 37,
+      "social_need": 94,
       "fear": 20
     },
     "relationships": {
@@ -22416,63 +22416,51 @@
         55
       ],
       [
-        61,
-        55
-      ],
-      [
-        61,
+        62,
         56
       ],
       [
-        61,
+        62,
         57
       ],
       [
-        61,
+        62,
         58
       ],
       [
-        61,
+        62,
         59
       ],
       [
-        61,
+        62,
         60
       ],
       [
-        61,
+        62,
         61
       ],
       [
-        61,
+        62,
         62
       ],
       [
-        61,
+        62,
         63
       ],
       [
-        61,
+        62,
         64
       ],
       [
-        61,
+        62,
         65
       ],
       [
-        61,
+        62,
         66
-      ],
-      [
-        61,
-        67
-      ],
-      [
-        61,
-        68
       ]
     ],
-    "last_thought_beat": 1693,
+    "last_thought_beat": 1721,
     "belief": "Tee’s conviction proves I’m needed.",
     "alive": true,
     "health": 80,
@@ -22482,8 +22470,8 @@
     "last_instigated_day": 417,
     "driving": null,
     "vehicle": null,
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -22520,8 +22508,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      63,
-      50
+      60,
+      51
     ],
     "dest": [
       62,
@@ -22529,13 +22517,13 @@
     ],
     "at": "okonkwo",
     "spot": [
-      63,
-      50
+      60,
+      51
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -22736,17 +22724,9 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 236,
-    "last_thought_beat": 1692,
+    "last_thought_beat": 1729,
     "activity": "sitting down for a minute",
     "path": [
-      [
-        36,
-        32
-      ],
-      [
-        35,
-        32
-      ],
       [
         34,
         32
@@ -22964,20 +22944,20 @@
         53
       ],
       [
-        63,
+        61,
         53
       ],
       [
-        63,
+        60,
+        53
+      ],
+      [
+        60,
         52
       ],
       [
-        63,
+        60,
         51
-      ],
-      [
-        63,
-        50
       ]
     ],
     "action": "sitting down for a minute",
@@ -22987,8 +22967,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "cannery",
       "title": "on nights",
@@ -23025,8 +23005,8 @@
       "night": "riverflats"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -23034,13 +23014,13 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 49,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -23185,27 +23165,11 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 260,
-    "last_thought_beat": 1699,
+    "last_thought_beat": 1722,
     "volatility": 33,
     "chasing": null,
     "activity": "sitting down for a minute",
     "path": [
-      [
-        9,
-        64
-      ],
-      [
-        8,
-        64
-      ],
-      [
-        7,
-        64
-      ],
-      [
-        6,
-        64
-      ],
       [
         5,
         64
@@ -23651,24 +23615,8 @@
         24
       ],
       [
-        74,
-        24
-      ],
-      [
-        74,
+        75,
         23
-      ],
-      [
-        74,
-        22
-      ],
-      [
-        74,
-        21
-      ],
-      [
-        74,
-        20
       ]
     ],
     "action": "sitting down for a minute",
@@ -23676,8 +23624,8 @@
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 1896,
-    "skill": 55.5,
+    "money": 1989,
+    "skill": 57.0,
     "job": {
       "at": "cannery",
       "title": "loading",
@@ -23714,8 +23662,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      77,
-      34
+      79,
+      36
     ],
     "dest": [
       76,
@@ -23723,13 +23671,13 @@
     ],
     "at": "delmarflats",
     "spot": [
-      77,
-      34
+      79,
+      36
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 38,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -23864,11 +23812,11 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 344,
-    "last_thought_beat": 1702,
+    "last_thought_beat": 1723,
     "vehicle": null,
     "volatility": 45,
-    "money": 1820,
-    "skill": 54.5,
+    "money": 1913,
+    "skill": 56.0,
     "job": {
       "at": "cannery",
       "title": "on the line",
@@ -24228,36 +24176,33 @@
         40
       ],
       [
-        77,
+        78,
+        40
+      ],
+      [
+        78,
         39
       ],
       [
-        77,
+        78,
         38
       ],
       [
-        77,
+        78,
         37
       ],
       [
-        77,
+        79,
+        37
+      ],
+      [
+        79,
         36
-      ],
-      [
-        77,
-        35
-      ],
-      [
-        77,
-        34
       ]
     ],
-    "action": "sits with Gus, watches traffic",
-    "thought": "We’re stuck, but we must survive.",
-    "speech": {
-      "to": "gus",
-      "text": "We can’t stay here forever."
-    },
+    "action": "sitting down for a minute",
+    "thought": "",
+    "speech": null,
     "standing": 45,
     "directive": null
   },
@@ -24298,8 +24243,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 36,
+      "happiness": 47,
+      "stress": 70,
       "social_need": 0,
       "fear": 20
     },
@@ -24321,7 +24266,7 @@
         "opinion": "not sure about them"
       },
       "elias": {
-        "affinity": -12,
+        "affinity": -24,
         "opinion": "not sure about them"
       }
     },
@@ -24429,8 +24374,8 @@
         "importance": 8
       },
       {
-        "beat": 1673,
-        "day": 418,
+        "beat": 1728,
+        "day": 432,
         "what": "Elias Reyes started on me in front of people.",
         "importance": 7
       },
@@ -24470,11 +24415,15 @@
     "partner": null,
     "birth_day": 344,
     "arrived_day": 344,
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1727,
     "chasing": null,
     "activity": "sitting down for a minute",
     "driving": null,
     "path": [
+      [
+        9,
+        52
+      ],
       [
         9,
         51
@@ -24518,7 +24467,7 @@
     },
     "pos": [
       9,
-      49
+      52
     ],
     "dest": [
       8,
@@ -24527,19 +24476,19 @@
     "at": "terrace_b",
     "spot": [
       9,
-      49
+      52
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 47,
+      "happiness": 27,
+      "stress": 62,
       "social_need": 0,
       "fear": 20
     },
     "relationships": {
       "malik": {
-        "affinity": 1,
-        "opinion": "He’s a liar"
+        "affinity": -5,
+        "opinion": "not confident"
       },
       "rosa": {
         "affinity": 85,
@@ -24554,7 +24503,7 @@
         "opinion": "not sure about them"
       },
       "jonah": {
-        "affinity": -8,
+        "affinity": -16,
         "opinion": "not sure about them"
       }
     },
@@ -24685,26 +24634,14 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 1700,
+    "last_thought_beat": 1728,
     "chasing": null,
     "activity": "sitting down for a minute",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
-        8,
-        50
-      ],
-      [
         9,
-        50
-      ],
-      [
-        9,
-        49
+        52
       ]
     ],
     "action": "sitting down for a minute",
@@ -24712,7 +24649,7 @@
     "speech": null,
     "standing": 45,
     "directive": null,
-    "last_instigated_day": 418
+    "last_instigated_day": 432
   },
   "etta": {
     "id": "etta",
@@ -24737,8 +24674,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      48
+      3,
+      52
     ],
     "dest": [
       3,
@@ -24746,13 +24683,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      48
+      3,
+      52
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 36,
+      "happiness": 47,
+      "stress": 40,
       "social_need": 0,
       "fear": 20
     },
@@ -24764,6 +24701,10 @@
       "femi": {
         "affinity": 85,
         "opinion": "my parent"
+      },
+      "maren": {
+        "affinity": -1,
+        "opinion": "proud"
       }
     },
     "memories": [
@@ -24863,7 +24804,7 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 1699,
+    "last_thought_beat": 1730,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -24872,24 +24813,35 @@
     "path": [
       [
         4,
-        51
+        48
       ],
       [
-        4,
-        50
+        3,
+        48
       ],
       [
-        4,
+        3,
         49
       ],
       [
-        4,
-        48
+        3,
+        50
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        52
       ]
     ],
-    "action": "sitting down for a minute",
-    "thought": "",
-    "speech": null
+    "action": "clutches a toy car, eyes on Maren",
+    "thought": "If I show up, Mom will smile",
+    "speech": {
+      "to": "maren",
+      "text": "I’m proud of you, Mom"
+    }
   },
   "nia": {
     "id": "nia",
@@ -24914,8 +24866,8 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      51
+      32,
+      50
     ],
     "dest": [
       33,
@@ -24923,20 +24875,20 @@
     ],
     "at": "vasquez",
     "spot": [
-      31,
-      51
+      32,
+      50
     ],
     "mood": {
-      "energy": 32,
-      "happiness": 7,
-      "stress": 100,
+      "energy": 66,
+      "happiness": 47,
+      "stress": 83,
       "social_need": 0,
-      "fear": 31
+      "fear": 20
     },
     "relationships": {
       "rey": {
-        "affinity": -100,
-        "opinion": "owes me and is avoiding me"
+        "affinity": -85,
+        "opinion": "unfair"
       }
     },
     "memories": [
@@ -25071,20 +25023,32 @@
         "day": 425,
         "what": "I put hands on Rey Vasquez over what I am owed.",
         "importance": 9
+      },
+      {
+        "beat": 1719,
+        "day": 429,
+        "what": "Rey Vasquez finally paid me.",
+        "importance": 8
+      },
+      {
+        "beat": 1719,
+        "day": 429,
+        "what": "I’m finally being rewarded; I’m on my way to becoming somebody.",
+        "importance": 8
       }
     ],
-    "belief": "I’m not valued; I’ll fight.",
+    "belief": "I’m finally being rewarded; I’m on my way to becoming somebody.",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 351,
-    "last_thought_beat": 1702,
-    "activity": "watching television",
-    "action": "stares at Rey, fists clenched",
+    "last_thought_beat": 1730,
+    "activity": "eating at the table",
+    "action": "stares at the table, counting chips",
     "vehicle": null,
     "volatility": 45,
-    "money": 1562,
-    "skill": 51.0,
+    "money": 1655,
+    "skill": 52.5,
     "job": {
       "at": "cannery",
       "title": "works the line at the cannery",
@@ -25097,136 +25061,244 @@
     "birth_day": null,
     "standing": 45,
     "directive": null,
-    "chasing": "rey",
+    "chasing": null,
     "driving": null,
     "path": [
       [
-        47,
-        68
+        62,
+        24
+      ],
+      [
+        62,
+        25
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
       ],
       [
         48,
-        68
-      ],
-      [
-        49,
-        68
-      ],
-      [
-        49,
-        67
-      ],
-      [
-        49,
-        66
-      ],
-      [
-        49,
-        65
-      ],
-      [
-        49,
-        64
-      ],
-      [
-        49,
-        63
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        48,
-        62
+        26
       ],
       [
         47,
-        62
+        26
       ],
       [
         46,
-        62
+        26
       ],
       [
         45,
-        62
+        26
       ],
       [
         44,
-        62
+        26
       ],
       [
         43,
-        62
+        26
       ],
       [
         42,
-        62
+        26
       ],
       [
         41,
-        62
+        26
       ],
       [
         40,
-        62
+        26
       ],
       [
         39,
-        62
+        26
       ],
       [
         38,
-        62
+        26
+      ],
+      [
+        38,
+        27
+      ],
+      [
+        38,
+        28
+      ],
+      [
+        38,
+        29
+      ],
+      [
+        38,
+        30
+      ],
+      [
+        38,
+        31
+      ],
+      [
+        38,
+        32
+      ],
+      [
+        38,
+        33
+      ],
+      [
+        38,
+        34
+      ],
+      [
+        38,
+        35
+      ],
+      [
+        38,
+        36
+      ],
+      [
+        38,
+        37
+      ],
+      [
+        38,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        38,
+        40
+      ],
+      [
+        38,
+        41
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        38,
+        43
+      ],
+      [
+        38,
+        44
+      ],
+      [
+        38,
+        45
+      ],
+      [
+        38,
+        46
+      ],
+      [
+        38,
+        47
+      ],
+      [
+        38,
+        48
+      ],
+      [
+        38,
+        49
+      ],
+      [
+        38,
+        50
+      ],
+      [
+        38,
+        51
+      ],
+      [
+        38,
+        52
+      ],
+      [
+        38,
+        53
+      ],
+      [
+        38,
+        54
       ],
       [
         37,
-        62
+        54
       ],
       [
         36,
-        62
+        54
       ],
       [
         35,
-        62
+        54
       ],
       [
         34,
-        62
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        33,
-        61
-      ],
-      [
-        33,
-        60
-      ],
-      [
-        33,
-        59
-      ],
-      [
-        33,
-        58
-      ],
-      [
-        33,
-        57
-      ],
-      [
-        33,
-        56
-      ],
-      [
-        33,
-        55
+        54
       ],
       [
         33,
@@ -25245,18 +25317,18 @@
         52
       ],
       [
-        31,
-        52
+        32,
+        51
       ],
       [
-        31,
-        51
+        32,
+        50
       ]
     ],
-    "thought": "He owes me, and he’s not paying.",
+    "thought": "If I get paid, my name matters",
     "speech": {
       "to": "rey",
-      "text": "You owe me, and you’re avoiding me!"
+      "text": "You owe me, and you’ll pay"
     }
   },
   "dev": {
@@ -25282,8 +25354,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      90,
-      82
+      87,
+      81
     ],
     "dest": [
       88,
@@ -25291,13 +25363,13 @@
     ],
     "at": "new_home_270",
     "spot": [
-      90,
-      82
+      87,
+      81
     ],
     "mood": {
       "energy": 5,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 100,
       "fear": 20
     },
@@ -25404,13 +25476,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 352,
-    "last_thought_beat": 1695,
+    "last_thought_beat": 1722,
     "activity": "sitting down for a minute",
     "action": "sitting down for a minute",
     "vehicle": null,
     "volatility": 45,
-    "money": 1146,
-    "skill": 50.5,
+    "money": 1212,
+    "skill": 52.0,
     "job": {
       "at": "diner",
       "title": "cuts and sets hair out of a back room",
@@ -25907,20 +25979,20 @@
         84
       ],
       [
-        89,
+        87,
         84
       ],
       [
-        90,
-        84
-      ],
-      [
-        90,
+        87,
         83
       ],
       [
-        90,
+        87,
         82
+      ],
+      [
+        87,
+        81
       ]
     ],
     "thought": "",
@@ -25963,8 +26035,8 @@
     ],
     "mood": {
       "energy": 2,
-      "happiness": 48,
-      "stress": 49,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -26083,13 +26155,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 356,
-    "last_thought_beat": 1699,
+    "last_thought_beat": 1722,
     "activity": "sitting down for a minute",
     "action": "sitting down for a minute",
     "vehicle": null,
     "volatility": 45,
-    "money": 1264,
-    "skill": 48.5,
+    "money": 1348,
+    "skill": 50.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "fixes what other people throw out",
@@ -26528,8 +26600,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      3,
-      50
+      4,
+      48
     ],
     "dest": [
       3,
@@ -26537,13 +26609,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      3,
-      50
+      4,
+      48
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 51,
+      "happiness": 47,
+      "stress": 58,
       "social_need": 0,
       "fear": 20
     },
@@ -26676,7 +26748,7 @@
     "partner": null,
     "birth_day": 358,
     "arrived_day": 358,
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1727,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -26685,15 +26757,15 @@
     "path": [
       [
         4,
-        51
-      ],
-      [
-        3,
-        51
-      ],
-      [
-        3,
         50
+      ],
+      [
+        4,
+        49
+      ],
+      [
+        4,
+        48
       ]
     ],
     "action": "sitting down for a minute",
@@ -26737,8 +26809,8 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 48,
-      "stress": 46,
+      "happiness": 47,
+      "stress": 38,
       "social_need": 0,
       "fear": 20
     },
@@ -26853,7 +26925,7 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 1696,
+    "last_thought_beat": 1726,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -26911,8 +26983,8 @@
     ],
     "mood": {
       "energy": 11,
-      "happiness": 48,
-      "stress": 36,
+      "happiness": 27,
+      "stress": 58,
       "social_need": 0,
       "fear": 20
     },
@@ -26932,6 +27004,10 @@
       "jonah": {
         "affinity": 1,
         "opinion": "family"
+      },
+      "elias": {
+        "affinity": -6,
+        "opinion": "he’s kind"
       }
     },
     "memories": [
@@ -27037,7 +27113,7 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1728,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -27080,8 +27156,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      8,
+      48
     ],
     "dest": [
       8,
@@ -27089,13 +27165,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      8,
+      48
     ],
     "mood": {
       "energy": 19,
-      "happiness": 42,
-      "stress": 51,
+      "happiness": 27,
+      "stress": 58,
       "social_need": 0,
       "fear": 20
     },
@@ -27107,6 +27183,10 @@
       "amara": {
         "affinity": 85,
         "opinion": "my parent"
+      },
+      "elias": {
+        "affinity": -6,
+        "opinion": "he’s kind"
       }
     },
     "memories": [
@@ -27212,31 +27292,19 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 1695,
+    "last_thought_beat": 1728,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "washing up",
     "driving": null,
     "path": [
       [
         8,
         48
-      ],
-      [
-        7,
-        48
-      ],
-      [
-        7,
-        49
-      ],
-      [
-        7,
-        50
       ]
     ],
-    "action": "eating at the table",
+    "action": "washing up",
     "thought": "",
     "speech": null
   },
@@ -27263,8 +27331,8 @@
       "night": "terrace_c"
     },
     "pos": [
-      18,
-      48
+      19,
+      50
     ],
     "dest": [
       18,
@@ -27272,13 +27340,13 @@
     ],
     "at": "terrace_c",
     "spot": [
-      18,
-      48
+      19,
+      50
     ],
     "mood": {
       "energy": 24,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 100,
       "fear": 20
     },
@@ -27377,13 +27445,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 370,
-    "last_thought_beat": 1695,
-    "activity": "eating at the table",
-    "action": "eating at the table",
+    "last_thought_beat": 1723,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 706,
-    "skill": 41.5,
+    "money": 772,
+    "skill": 43.0,
     "job": {
       "at": "harborbar",
       "title": "cuts and sets hair out of a back room",
@@ -27400,12 +27468,20 @@
     "driving": null,
     "path": [
       [
+        34,
+        16
+      ],
+      [
         33,
-        17
+        16
       ],
       [
         32,
-        17
+        16
+      ],
+      [
+        31,
+        16
       ],
       [
         31,
@@ -27644,28 +27720,24 @@
         54
       ],
       [
-        18,
+        19,
+        54
+      ],
+      [
+        19,
         53
       ],
       [
-        18,
+        19,
         52
       ],
       [
-        18,
+        19,
         51
       ],
       [
-        18,
+        19,
         50
-      ],
-      [
-        18,
-        49
-      ],
-      [
-        18,
-        48
       ]
     ],
     "thought": "",
@@ -27695,7 +27767,7 @@
     },
     "pos": [
       27,
-      52
+      50
     ],
     "dest": [
       26,
@@ -27704,12 +27776,12 @@
     "at": "terrace_e",
     "spot": [
       27,
-      52
+      50
     ],
     "mood": {
       "energy": 26,
-      "happiness": 48,
-      "stress": 40,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 12,
       "fear": 20
     },
@@ -27808,13 +27880,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 371,
-    "last_thought_beat": 1693,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1720,
+    "activity": "going through the post",
+    "action": "going through the post",
     "vehicle": null,
     "volatility": 45,
-    "money": 970,
-    "skill": 41.0,
+    "money": 1075,
+    "skill": 42.5,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -27925,6 +27997,14 @@
       [
         27,
         52
+      ],
+      [
+        27,
+        51
+      ],
+      [
+        27,
+        50
       ]
     ],
     "thought": "",
@@ -27954,7 +28034,7 @@
     },
     "pos": [
       22,
-      50
+      51
     ],
     "dest": [
       22,
@@ -27963,12 +28043,12 @@
     "at": "terrace_d",
     "spot": [
       22,
-      50
+      51
     ],
     "mood": {
       "energy": 24,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 12,
       "fear": 20
     },
@@ -28055,13 +28135,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 377,
-    "last_thought_beat": 1695,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1721,
+    "activity": "going through the post",
+    "action": "going through the post",
     "vehicle": null,
     "volatility": 45,
-    "money": 704,
-    "skill": 39.0,
+    "money": 788,
+    "skill": 40.5,
     "job": {
       "at": "cornerstore",
       "title": "keeps books for people who cannot",
@@ -28078,16 +28158,12 @@
     "driving": null,
     "path": [
       [
+        7,
+        34
+      ],
+      [
         6,
-        32
-      ],
-      [
-        5,
-        32
-      ],
-      [
-        5,
-        33
+        34
       ],
       [
         5,
@@ -28268,10 +28344,6 @@
       [
         22,
         51
-      ],
-      [
-        22,
-        50
       ]
     ],
     "thought": "",
@@ -28313,13 +28385,18 @@
       17
     ],
     "mood": {
-      "energy": 26,
-      "happiness": 48,
-      "stress": 34,
+      "energy": 10,
+      "happiness": 47,
+      "stress": 70,
       "social_need": 6,
       "fear": 20
     },
-    "relationships": {},
+    "relationships": {
+      "malik": {
+        "affinity": -46,
+        "opinion": "Malik keeps promising, feels used"
+      }
+    },
     "memories": [
       {
         "beat": 1528,
@@ -28374,20 +28451,44 @@
         "day": 417,
         "what": "Tee’s conviction is a chance to rise.",
         "importance": 8
+      },
+      {
+        "beat": 1720,
+        "day": 430,
+        "what": "Malik Reyes refused me in front of people.",
+        "importance": 8
+      },
+      {
+        "beat": 1723,
+        "day": 430,
+        "what": "Malik’s public refusal means I’m not respected on the block.",
+        "importance": 8
+      },
+      {
+        "beat": 1724,
+        "day": 431,
+        "what": "Malik Reyes promised me again. That is 2 times.",
+        "importance": 7
+      },
+      {
+        "beat": 1727,
+        "day": 431,
+        "what": "Malik is using promises to keep me in control",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction is a chance to rise.",
+    "belief": "Malik is using promises to keep me in control",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 382,
-    "last_thought_beat": 1694,
+    "last_thought_beat": 1724,
     "activity": "going through the post",
     "action": "going through the post",
     "vehicle": null,
     "volatility": 45,
-    "money": 648,
-    "skill": 38.0,
+    "money": 732,
+    "skill": 39.5,
     "job": {
       "at": "new_business_236",
       "title": "drives nights for a car service",
@@ -28404,11 +28505,15 @@
     "driving": null,
     "path": [
       [
-        88,
+        93,
         34
       ],
       [
-        89,
+        92,
+        34
+      ],
+      [
+        91,
         34
       ],
       [
@@ -28670,8 +28775,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      120,
-      20
+      124,
+      18
     ],
     "dest": [
       122,
@@ -28679,13 +28784,13 @@
     ],
     "at": "new_home_368",
     "spot": [
-      120,
-      20
+      124,
+      18
     ],
     "mood": {
       "energy": 26,
-      "happiness": 48,
-      "stress": 34,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -28750,13 +28855,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 387,
-    "last_thought_beat": 1701,
-    "activity": "washing up",
-    "action": "washing up",
+    "last_thought_beat": 1723,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 592,
-    "skill": 37.0,
+    "money": 676,
+    "skill": 38.5,
     "job": {
       "at": "pawnshop",
       "title": "fixes what other people throw out",
@@ -28773,12 +28878,16 @@
     "driving": null,
     "path": [
       [
-        36,
-        35
+        34,
+        32
       ],
       [
-        35,
-        35
+        34,
+        33
+      ],
+      [
+        34,
+        34
       ],
       [
         34,
@@ -29213,12 +29322,20 @@
         20
       ],
       [
-        121,
+        123,
         20
       ],
       [
-        120,
+        124,
         20
+      ],
+      [
+        124,
+        19
+      ],
+      [
+        124,
+        18
       ]
     ],
     "thought": "",
@@ -29261,8 +29378,8 @@
     ],
     "mood": {
       "energy": 26,
-      "happiness": 48,
-      "stress": 36,
+      "happiness": 50,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -29322,13 +29439,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 388,
-    "last_thought_beat": 1702,
-    "activity": "going through the post",
-    "action": "checks his watch, looks at Rey",
+    "last_thought_beat": 1724,
+    "activity": "eating at the table",
+    "action": "eating at the table",
     "vehicle": null,
     "volatility": 45,
-    "money": 564,
-    "skill": 36.5,
+    "money": 648,
+    "skill": 38.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -29346,19 +29463,15 @@
     "path": [
       [
         54,
-        83
+        84
       ],
       [
         53,
-        83
+        84
       ],
       [
         52,
-        83
-      ],
-      [
-        51,
-        83
+        84
       ],
       [
         51,
@@ -29601,11 +29714,8 @@
         50
       ]
     ],
-    "thought": "We need to leave before it’s too late.",
-    "speech": {
-      "to": "rey",
-      "text": "We should plan an exit soon."
-    }
+    "thought": "",
+    "speech": null
   },
   "kwame2": {
     "id": "kwame2",
@@ -29630,8 +29740,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      75,
-      39
+      79,
+      33
     ],
     "dest": [
       76,
@@ -29639,13 +29749,13 @@
     ],
     "at": "delmarflats",
     "spot": [
-      75,
-      39
+      79,
+      33
     ],
     "mood": {
       "energy": 34,
-      "happiness": 48,
-      "stress": 49,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
       "fear": 20
     },
@@ -29698,13 +29808,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 397,
-    "last_thought_beat": 1699,
-    "activity": "washing up",
-    "action": "washing up",
+    "last_thought_beat": 1722,
+    "activity": "eating at the table",
+    "action": "eating at the table",
     "vehicle": null,
     "volatility": 45,
-    "money": 480,
-    "skill": 35.0,
+    "money": 564,
+    "skill": 36.5,
     "job": {
       "at": "civic_shop_347b",
       "title": "keeps books for people who cannot",
@@ -29721,15 +29831,15 @@
     "driving": null,
     "path": [
       [
-        48,
+        54,
         83
       ],
       [
-        49,
+        53,
         83
       ],
       [
-        50,
+        52,
         83
       ],
       [
@@ -30041,12 +30151,44 @@
         40
       ],
       [
-        75,
+        77,
         40
       ],
       [
-        75,
+        78,
+        40
+      ],
+      [
+        78,
         39
+      ],
+      [
+        78,
+        38
+      ],
+      [
+        78,
+        37
+      ],
+      [
+        79,
+        37
+      ],
+      [
+        79,
+        36
+      ],
+      [
+        79,
+        35
+      ],
+      [
+        79,
+        34
+      ],
+      [
+        79,
+        33
       ]
     ],
     "thought": "",
@@ -30075,7 +30217,7 @@
       "night": "new_home_368"
     },
     "pos": [
-      120,
+      123,
       17
     ],
     "dest": [
@@ -30084,15 +30226,15 @@
     ],
     "at": "new_home_368",
     "spot": [
-      120,
+      123,
       17
     ],
     "mood": {
       "energy": 42,
-      "happiness": 48,
-      "stress": 40,
+      "happiness": 47,
+      "stress": 37,
       "social_need": 0,
-      "fear": 27
+      "fear": 20
     },
     "relationships": {},
     "memories": [
@@ -30108,13 +30250,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 424,
-    "last_thought_beat": 1697,
-    "activity": "eating at the table, listening to the rain",
-    "action": "eating at the table, listening to the rain",
+    "last_thought_beat": 1721,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 222,
-    "skill": 30.5,
+    "money": 288,
+    "skill": 32.0,
     "job": {
       "at": "barbershop",
       "title": "cuts and sets hair out of a back room",
@@ -30130,10 +30272,6 @@
     "chasing": null,
     "driving": null,
     "path": [
-      [
-        22,
-        33
-      ],
       [
         21,
         33
@@ -30635,23 +30773,19 @@
         20
       ],
       [
-        121,
+        123,
         20
       ],
       [
-        120,
-        20
-      ],
-      [
-        120,
+        123,
         19
       ],
       [
-        120,
+        123,
         18
       ],
       [
-        120,
+        123,
         17
       ]
     ],
@@ -30681,8 +30815,8 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
-      49
+      32,
+      50
     ],
     "dest": [
       33,
@@ -30690,15 +30824,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      35,
-      49
+      32,
+      50
     ],
     "mood": {
       "energy": 50,
-      "happiness": 50,
-      "stress": 30,
-      "social_need": 24,
-      "fear": 21
+      "happiness": 47,
+      "stress": 37,
+      "social_need": 0,
+      "fear": 20
     },
     "relationships": {},
     "memories": [
@@ -30714,14 +30848,19 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 425,
-    "last_thought_beat": 1701,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1722,
+    "activity": "eating at the table",
+    "action": "eating at the table",
     "vehicle": null,
     "volatility": 45,
-    "money": 200,
-    "skill": 30,
-    "job": null,
+    "money": 266,
+    "skill": 31.5,
+    "job": {
+      "at": "barbershop",
+      "title": "cuts and sets hair out of a back room",
+      "wage": 34,
+      "since_day": 429
+    },
     "partner": null,
     "parents": [],
     "children": [],
@@ -30732,12 +30871,12 @@
     "driving": null,
     "path": [
       [
-        22,
-        34
+        21,
+        33
       ],
       [
-        21,
-        34
+        20,
+        33
       ],
       [
         20,
@@ -30884,24 +31023,16 @@
         52
       ],
       [
-        34,
+        32,
         52
       ],
       [
-        35,
-        52
-      ],
-      [
-        35,
+        32,
         51
       ],
       [
-        35,
+        32,
         50
-      ],
-      [
-        35,
-        49
       ]
     ],
     "thought": "",
