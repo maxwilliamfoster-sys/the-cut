@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "9031a9f460c1",
+  "version": "69704491e8cf",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -75,11 +75,11 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====........................====...ggggggg..====............",
     ".####D#####.,,,,.####D####..#####D#####.,,,,.####D#####....gggggggg.,,,,.#####D######...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg###D###g.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg###D###g.,:,,.gg###D####g",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.gg########g",
     ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#######g.,:,,.ggggggggggg",
     ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#...........,,,,.gggggggggg.,,,,.ggggggggggg",
     "............,,,,............###########.,,,,........................,,,,.############...........,,,,.gggggggggg.,,,,.ggggggggggg",
@@ -3143,6 +3143,81 @@
           "type": "plant",
           "x": 58,
           "y": 111
+        }
+      ]
+    },
+    "new_social_443": {
+      "id": "new_social_443",
+      "name": "The Delmar Rooms",
+      "district": "civic",
+      "rect": [
+        119,
+        64,
+        8,
+        5
+      ],
+      "rects": [
+        [
+          119,
+          64,
+          8,
+          5
+        ]
+      ],
+      "kind": "social",
+      "style": "brick",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        122,
+        65
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 122,
+          "y": 66
+        },
+        {
+          "type": "table",
+          "x": 125,
+          "y": 67
+        },
+        {
+          "type": "table",
+          "x": 120,
+          "y": 65
+        },
+        {
+          "type": "table",
+          "x": 123,
+          "y": 66
+        },
+        {
+          "type": "chair",
+          "x": 122,
+          "y": 67
+        },
+        {
+          "type": "chair",
+          "x": 121,
+          "y": 66
+        },
+        {
+          "type": "chair",
+          "x": 120,
+          "y": 67
+        },
+        {
+          "type": "shelf",
+          "x": 123,
+          "y": 67
+        },
+        {
+          "type": "plant",
+          "x": 124,
+          "y": 65
         }
       ]
     }
