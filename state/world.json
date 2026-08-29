@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1774,
-  "last_beat_at": "2026-08-29T21:12:12Z",
+  "beat": 1783,
+  "last_beat_at": "2026-08-29T23:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
-    "riverside": 34,
+    "riverside": 25,
     "delmar": 5,
-    "terraces": 5,
-    "civic": 5
+    "terraces": 7,
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -597,6 +597,73 @@
   ],
   "events": [
     {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "marcus",
+        "errol"
+      ],
+      "text": "Marcus Calloway and Errol Brannon are seen arguing in the street loud enough that people stop.",
+      "beat": 1782
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "marcus"
+      ],
+      "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1781
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 1780
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 1778
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 1777
+    },
+    {
       "id": "snitch_rumour",
       "heat": {},
       "mood": {
@@ -793,73 +860,6 @@
       ],
       "text": "Marcus Calloway does Femi Adeyemi a favour that costs them something real.",
       "beat": 1754
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1752
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "tiny",
-        "nia2"
-      ],
-      "text": "Nia Mbeki does Tiny Reyes a favour that costs them something real.",
-      "beat": 1750
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "nia",
-        "yusuf"
-      ],
-      "text": "Dr. Yusuf Amin does Nia Nakamura a favour that costs them something real.",
-      "beat": 1749
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 1748
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nadia"
-      ],
-      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed.",
-      "beat": 1747
     }
   ],
   "player_queue": [
@@ -882,12 +882,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 441,
+  "last_gazette_day": 443,
   "llm_budget": {
     "day": "2026-08-29",
     "spent": {
       "fast": 163241,
-      "deep": 27797
+      "deep": 39555
     }
   },
   "silent_runs": 0,
@@ -1934,7 +1934,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 32
+      "heat": 46
     },
     {
       "a": "booker",
@@ -1969,19 +1969,19 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 37
     },
     {
       "a": "nia",
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 67
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-08-29",
-    "beat": 1768,
+    "beat": 1778,
     "providers": [
       "gemini"
     ]
@@ -2016,9 +2016,39 @@
     "marked": 377
   },
   "incidents": [],
-  "treasury": 37229,
+  "treasury": 40481,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 445,
+      "wages": 1865,
+      "takings": 3120,
+      "tax": 1624,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1084,
+      "treasury": 40481
+    },
+    {
+      "day": 444,
+      "wages": 1865,
+      "takings": 3120,
+      "tax": 1624,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1084,
+      "treasury": 39397
+    },
+    {
+      "day": 443,
+      "wages": 1865,
+      "takings": 3120,
+      "tax": 1624,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1084,
+      "treasury": 38313
+    },
     {
       "day": 442,
       "wages": 1865,
@@ -2288,32 +2318,6 @@
       "civic": 540,
       "net": 911,
       "treasury": 11561
-    },
-    {
-      "day": 381,
-      "wages": 1629,
-      "takings": 2780,
-      "tax": 1438,
-      "welfare": 0,
-      "civic": 540,
-      "net": 898,
-      "treasury": 10650
-    },
-    {
-      "day": 380,
-      "wages": 1629,
-      "takings": 2780,
-      "tax": 1438,
-      "welfare": 0,
-      "civic": 540,
-      "net": 898,
-      "treasury": 9752
-    },
-    {
-      "day": 377,
-      "spend": 2600,
-      "reason": "built a housing",
-      "treasury": 8854
     }
   ],
   "births": [
@@ -2682,45 +2686,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 356,
-      "overall": 69,
-      "economy": 79,
-      "wellbeing": 62,
-      "society": 26,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 37,
-      "buildings": 40,
-      "treasury": 6283,
-      "employment": 100
-    },
-    {
-      "day": 357,
-      "overall": 68,
-      "economy": 79,
-      "wellbeing": 57,
-      "society": 26,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 37,
-      "buildings": 40,
-      "treasury": 6738,
-      "employment": 100
-    },
-    {
-      "day": 358,
-      "overall": 69,
-      "economy": 80,
-      "wellbeing": 62,
-      "society": 27,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 38,
-      "buildings": 40,
-      "treasury": 7193,
-      "employment": 100
-    },
     {
       "day": 359,
       "overall": 70,
@@ -3305,19 +3270,58 @@
       "buildings": 44,
       "treasury": 37229,
       "employment": 100
+    },
+    {
+      "day": 443,
+      "overall": 73,
+      "economy": 97,
+      "wellbeing": 70,
+      "society": 29,
+      "infrastructure": 99,
+      "growth": 78,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 38313,
+      "employment": 100
+    },
+    {
+      "day": 444,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 66,
+      "society": 29,
+      "infrastructure": 99,
+      "growth": 78,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 39397,
+      "employment": 100
+    },
+    {
+      "day": 445,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 67,
+      "society": 29,
+      "infrastructure": 99,
+      "growth": 78,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 40481,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 442,
-    "overall": 71,
-    "economy": 96,
-    "wellbeing": 66,
-    "society": 27,
+    "day": 445,
+    "overall": 72,
+    "economy": 97,
+    "wellbeing": 67,
+    "society": 29,
     "infrastructure": 99,
-    "growth": 79,
+    "growth": 78,
     "population": 49,
-    "buildings": 44,
-    "treasury": 37229,
+    "buildings": 45,
+    "treasury": 40481,
     "employment": 100
   },
   "buildable": {
