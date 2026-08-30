@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1838,
-  "last_beat_at": "2026-08-30T13:12:12Z",
+  "beat": 1855,
+  "last_beat_at": "2026-08-30T17:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 28,
-    "delmar": 24,
+    "riverside": 36,
+    "delmar": 27,
     "terraces": 5,
     "civic": 5
   },
@@ -606,9 +606,124 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine41",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 464,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 1855
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Something pays out for Ofc. Brady Kohl. More than expected, which is its own problem.",
+      "beat": 1852
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1850
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1849
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 1848
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "sticks"
+      ],
+      "text": "Sticks gets word that what they owe is wanted sooner than agreed.",
+      "beat": 1847
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "femi"
+      ],
+      "text": "Femi Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1846
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 1845
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -756,112 +871,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 1805
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 1804
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 1792
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "maren2",
-        "blaise"
-      ],
-      "text": "Somebody tells Maren Bello that Blaise Osei has been seen talking to police.",
-      "beat": 1791
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 1789
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed.",
-      "beat": 1788
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "june",
-        "dez"
-      ],
-      "text": "Somebody tells June Kowal that Dez Okonkwo has been seen talking to police.",
-      "beat": 1787
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "marcus",
-        "sticks"
-      ],
-      "text": "Sticks does Marcus Calloway a favour that costs them something real.",
-      "beat": 1786
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1785
     }
   ],
   "player_queue": [
@@ -884,12 +893,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 458,
+  "last_gazette_day": 463,
   "llm_budget": {
     "day": "2026-08-30",
     "spent": {
-      "fast": 143947,
-      "deep": 7070
+      "fast": 163482,
+      "deep": 37610
     }
   },
   "silent_runs": 0,
@@ -1699,6 +1708,23 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 443
+    },
+    {
+      "id": "new_social_462",
+      "name": "The Brendan Rooms",
+      "district": "flats",
+      "x": 19,
+      "y": 82,
+      "w": 8,
+      "h": 5,
+      "door": "S",
+      "kind": "social",
+      "style": "brick",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 462
     }
   ],
   "laws": [
@@ -1759,7 +1785,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 5
+      "convictions": 6
     },
     {
       "id": "law04",
@@ -1948,20 +1974,57 @@
       "evidence": "he runs a hand through his hair, avoiding eye contact",
       "day": 458,
       "trial_day": 460,
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c014",
+      "who": "nia2",
+      "name": "Nia Mbeki",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "twirls a strand of hair absentmindedly",
+      "day": 462,
+      "trial_day": 464,
       "status": "awaiting_trial",
-      "witnesses": 8
+      "witnesses": 0
+    },
+    {
+      "id": "c015",
+      "who": "kohl",
+      "name": "Ofc. Brady Kohl",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "remains asleep, shoulders tense from lingering worries",
+      "day": 463,
+      "trial_day": 465,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c016",
+      "who": "blaise",
+      "name": "Blaise Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "naps, hair clippers silent beside him",
+      "day": 463,
+      "trial_day": 465,
+      "status": "awaiting_trial",
+      "witnesses": 5
     }
   ],
   "law_pressure": 1,
   "last_law_day": 380,
-  "last_expansion_day": 443,
+  "last_expansion_day": 462,
   "feuds": [
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 30
+      "heat": 44
     },
     {
       "a": "booker",
@@ -1989,42 +2052,49 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 6
     },
     {
       "a": "gus",
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 21
+      "heat": 15
     },
     {
       "a": "nia",
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 51
+      "heat": 45
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 35
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 51
+      "heat": 45
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 67
+    },
+    {
+      "a": "sticks",
+      "b": "tiny",
+      "since_day": 462,
+      "cause": "would not let it go",
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
@@ -2035,6 +2105,13 @@
     ]
   },
   "dead": [
+    {
+      "id": "errol",
+      "name": "Errol Brannon",
+      "day": 463,
+      "cause": "heart",
+      "where": "Delmar Cottages"
+    },
     {
       "id": "rosa",
       "name": "Rosa Reyes",
@@ -2065,14 +2142,73 @@
     }
   ],
   "funeral": {
-    "day": 454,
-    "for": "Rosa Reyes",
-    "id": "rosa"
+    "day": 465,
+    "for": "Errol Brannon",
+    "id": "errol"
   },
-  "incidents": [],
-  "treasury": 49068,
+  "incidents": [
+    {
+      "id": "inc1855-arrest-1",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "blaise"
+      ],
+      "text": "Blaise Osei is taken to the 9th over Public Haircut Ban.",
+      "started": 1855,
+      "until": 1856
+    },
+    {
+      "id": "inc1855-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl is taken to the 9th over No Linger on Porch After Dusk.",
+      "started": 1855,
+      "until": 1856
+    }
+  ],
+  "treasury": 52356,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 463,
+      "wages": 1770,
+      "takings": 3270,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1104,
+      "treasury": 52356
+    },
+    {
+      "day": 462,
+      "wages": 1812,
+      "takings": 3270,
+      "tax": 1657,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1117,
+      "treasury": 51252
+    },
+    {
+      "day": 461,
+      "wages": 1812,
+      "takings": 3120,
+      "tax": 1607,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1067,
+      "treasury": 50135
+    },
     {
       "day": 458,
       "wages": 1812,
@@ -2342,36 +2478,6 @@
       "civic": 540,
       "net": 950,
       "treasury": 21907
-    },
-    {
-      "day": 417,
-      "wages": 1797,
-      "takings": 2780,
-      "tax": 1490,
-      "welfare": 0,
-      "civic": 540,
-      "net": 950,
-      "treasury": 20957
-    },
-    {
-      "day": 408,
-      "wages": 1797,
-      "takings": 2780,
-      "tax": 1490,
-      "welfare": 0,
-      "civic": 540,
-      "net": 950,
-      "treasury": 20007
-    },
-    {
-      "day": 407,
-      "wages": 1797,
-      "takings": 2780,
-      "tax": 1490,
-      "welfare": 0,
-      "civic": 540,
-      "net": 950,
-      "treasury": 19057
     }
   ],
   "births": [
@@ -2749,45 +2855,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 367,
-      "overall": 72,
-      "economy": 81,
-      "wellbeing": 71,
-      "society": 29,
-      "infrastructure": 99,
-      "growth": 100,
-      "population": 40,
-      "buildings": 40,
-      "treasury": 6147,
-      "employment": 100
-    },
-    {
-      "day": 368,
-      "overall": 71,
-      "economy": 80,
-      "wellbeing": 68,
-      "society": 29,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 41,
-      "buildings": 41,
-      "treasury": 7021,
-      "employment": 100
-    },
-    {
-      "day": 369,
-      "overall": 70,
-      "economy": 79,
-      "wellbeing": 63,
-      "society": 29,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 41,
-      "buildings": 41,
-      "treasury": 7895,
-      "employment": 100
-    },
     {
       "day": 370,
       "overall": 71,
@@ -3372,19 +3439,58 @@
       "buildings": 45,
       "treasury": 49068,
       "employment": 100
+    },
+    {
+      "day": 461,
+      "overall": 66,
+      "economy": 97,
+      "wellbeing": 54,
+      "society": 24,
+      "infrastructure": 99,
+      "growth": 67,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 50135,
+      "employment": 100
+    },
+    {
+      "day": 462,
+      "overall": 66,
+      "economy": 98,
+      "wellbeing": 57,
+      "society": 16,
+      "infrastructure": 99,
+      "growth": 66,
+      "population": 49,
+      "buildings": 46,
+      "treasury": 51252,
+      "employment": 100
+    },
+    {
+      "day": 463,
+      "overall": 62,
+      "economy": 99,
+      "wellbeing": 52,
+      "society": 9,
+      "infrastructure": 100,
+      "growth": 54,
+      "population": 48,
+      "buildings": 46,
+      "treasury": 52356,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 458,
-    "overall": 67,
-    "economy": 97,
-    "wellbeing": 58,
-    "society": 21,
-    "infrastructure": 99,
-    "growth": 72,
-    "population": 49,
-    "buildings": 45,
-    "treasury": 49068,
+    "day": 463,
+    "overall": 62,
+    "economy": 99,
+    "wellbeing": 52,
+    "society": 9,
+    "infrastructure": 100,
+    "growth": 54,
+    "population": 48,
+    "buildings": 46,
+    "treasury": 52356,
     "employment": 100
   },
   "buildable": {
