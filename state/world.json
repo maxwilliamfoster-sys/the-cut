@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 1909,
-  "last_beat_at": "2026-08-31T06:57:12Z",
+  "beat": 1941,
+  "last_beat_at": "2026-08-31T14:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "fog off the water",
   "heat": {
-    "riverside": 7,
-    "delmar": 35,
-    "terraces": 8,
+    "riverside": 5,
+    "delmar": 15,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -671,9 +671,91 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine46",
+      "from": "blaise",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 487,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 1941
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "sami",
+        "cal"
+      ],
+      "text": "Somebody tells Sami Amadi that Cal Osei has been seen talking to police.",
+      "beat": 1937
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 1935
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "jonah"
+      ],
+      "text": "Jonah Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 1934
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "amara",
+        "sticks"
+      ],
+      "text": "Somebody tells Amara Bello that Sticks has been seen talking to police.",
+      "beat": 1931
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -869,66 +951,6 @@
       ],
       "text": "Chinedu Okafor gets word that what they owe is wanted sooner than agreed.",
       "beat": 1879
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 1878
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "femi",
-        "ivy"
-      ],
-      "text": "Ms. Ivy Calloway does Femi Adeyemi a favour that costs them something real.",
-      "beat": 1877
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1874
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1873
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1872
     }
   ],
   "player_queue": [
@@ -951,12 +973,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 476,
+  "last_gazette_day": 484,
   "llm_budget": {
     "day": "2026-08-31",
     "spent": {
-      "fast": 102137,
-      "deep": 4914
+      "fast": 150583,
+      "deep": 7456
     }
   },
   "silent_runs": 0,
@@ -1843,7 +1865,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 9
+      "convictions": 10
     },
     {
       "id": "law04",
@@ -2100,6 +2122,19 @@
       "status": "convicted",
       "witnesses": 5,
       "verdict": "guilty"
+    },
+    {
+      "id": "c019",
+      "who": "blaise",
+      "name": "Blaise Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "taps hair on back room wall",
+      "day": 482,
+      "trial_day": 484,
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 1,
@@ -2111,7 +2146,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 24
+      "heat": 38
     },
     {
       "a": "booker",
@@ -2132,7 +2167,7 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "gus",
@@ -2146,42 +2181,42 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 39
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 75
+      "heat": 69
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 85
+      "heat": 79
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 47
+      "heat": 41
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 462,
       "cause": "would not let it go",
-      "heat": 51
+      "heat": 45
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 49
+      "heat": 43
     }
   ],
   "quota_exhausted_on": {
@@ -2246,9 +2281,39 @@
     "id": "errol2"
   },
   "incidents": [],
-  "treasury": 63061,
+  "treasury": 66211,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 484,
+      "wages": 1736,
+      "takings": 3140,
+      "tax": 1590,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1050,
+      "treasury": 66211
+    },
+    {
+      "day": 483,
+      "wages": 1736,
+      "takings": 3140,
+      "tax": 1590,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1050,
+      "treasury": 65161
+    },
+    {
+      "day": 482,
+      "wages": 1736,
+      "takings": 3140,
+      "tax": 1590,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1050,
+      "treasury": 64111
+    },
     {
       "day": 476,
       "wages": 1736,
@@ -2518,36 +2583,6 @@
       "civic": 540,
       "net": 1035,
       "treasury": 35159
-    },
-    {
-      "day": 439,
-      "wages": 1865,
-      "takings": 2970,
-      "tax": 1575,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1035,
-      "treasury": 34124
-    },
-    {
-      "day": 438,
-      "wages": 1865,
-      "takings": 2970,
-      "tax": 1575,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1035,
-      "treasury": 33089
-    },
-    {
-      "day": 436,
-      "wages": 1865,
-      "takings": 2970,
-      "tax": 1575,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1035,
-      "treasury": 32054
     }
   ],
   "births": [
@@ -2943,45 +2978,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 388,
-      "overall": 70,
-      "economy": 90,
-      "wellbeing": 59,
-      "society": 25,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 46,
-      "buildings": 43,
-      "treasury": 14333,
-      "employment": 100
-    },
-    {
-      "day": 395,
-      "overall": 72,
-      "economy": 88,
-      "wellbeing": 62,
-      "society": 30,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 46,
-      "buildings": 43,
-      "treasury": 15270,
-      "employment": 100
-    },
-    {
-      "day": 396,
-      "overall": 73,
-      "economy": 89,
-      "wellbeing": 65,
-      "society": 31,
-      "infrastructure": 100,
-      "growth": 100,
-      "population": 46,
-      "buildings": 43,
-      "treasury": 16207,
-      "employment": 100
-    },
     {
       "day": 397,
       "overall": 74,
@@ -3566,19 +3562,58 @@
       "buildings": 45,
       "treasury": 63061,
       "employment": 100
+    },
+    {
+      "day": 482,
+      "overall": 65,
+      "economy": 98,
+      "wellbeing": 60,
+      "society": 20,
+      "infrastructure": 96,
+      "growth": 50,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 64111,
+      "employment": 100
+    },
+    {
+      "day": 483,
+      "overall": 65,
+      "economy": 98,
+      "wellbeing": 60,
+      "society": 19,
+      "infrastructure": 96,
+      "growth": 50,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 65161,
+      "employment": 100
+    },
+    {
+      "day": 484,
+      "overall": 67,
+      "economy": 98,
+      "wellbeing": 66,
+      "society": 24,
+      "infrastructure": 96,
+      "growth": 50,
+      "population": 49,
+      "buildings": 45,
+      "treasury": 66211,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 476,
-    "overall": 64,
+    "day": 484,
+    "overall": 67,
     "economy": 98,
-    "wellbeing": 52,
-    "society": 22,
+    "wellbeing": 66,
+    "society": 24,
     "infrastructure": 96,
-    "growth": 55,
+    "growth": 50,
     "population": 49,
     "buildings": 45,
-    "treasury": 63061,
+    "treasury": 66211,
     "employment": 100
   },
   "buildable": {
