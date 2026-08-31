@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "c34a3a7c45ad",
+  "version": "47dbc02a53e1",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -41,14 +41,14 @@
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "............====........................====........................====.gggggggggggg...........====............====............",
+    "............====........................====........................====.gggggggggggg...........====............====...gggggggg.",
     ".##########.,,,,.#####################..,,,,.....###.......#######..,,,,.############...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gggggggggg.,:,,.ggggggggggg",
-    "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gggggggggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gggggggggg.,:,,.gg########g",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gggggggggg.,:,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#g",
+    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gggggggggg.,:,,.gg#ffffff#g",
+    "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gggggggggg.,:,,.gg###D####g",
     ".########...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.ggggggggggg",
     ".#ffffff#...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.ggggggggggg",
     ".#ffffff#...,:,,........................,:,,.#fffffffff#...#ffffff#.,:,,.#fffff#................,:,,.gggggggggg.,:,,.ggggggggggg",
@@ -3293,6 +3293,81 @@
           "type": "plant",
           "x": 21,
           "y": 83
+        }
+      ]
+    },
+    "new_home_489": {
+      "id": "new_home_489",
+      "name": "Riverside Tenement",
+      "district": "delmar",
+      "rect": [
+        119,
+        32,
+        8,
+        6
+      ],
+      "rects": [
+        [
+          119,
+          32,
+          8,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "brownstone",
+      "floors": 3,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        122,
+        36
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 124,
+          "y": 33
+        },
+        {
+          "type": "bed",
+          "x": 121,
+          "y": 34
+        },
+        {
+          "type": "sofa",
+          "x": 120,
+          "y": 33
+        },
+        {
+          "type": "tv",
+          "x": 120,
+          "y": 34
+        },
+        {
+          "type": "table",
+          "x": 122,
+          "y": 35
+        },
+        {
+          "type": "sink",
+          "x": 124,
+          "y": 36
+        },
+        {
+          "type": "shelf",
+          "x": 125,
+          "y": 33
+        },
+        {
+          "type": "plant",
+          "x": 122,
+          "y": 33
+        },
+        {
+          "type": "rug",
+          "x": 125,
+          "y": 36
         }
       ]
     }
