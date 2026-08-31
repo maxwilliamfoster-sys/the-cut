@@ -46,7 +46,7 @@
     "relationships": {
       "malik": {
         "affinity": -100,
-        "opinion": "I’ll keep my distance"
+        "opinion": "I see him as a threat to our family"
       },
       "ruiz": {
         "affinity": -67,
@@ -1383,6 +1383,24 @@
         "day": 470,
         "what": "We’re being hunted by unseen forces",
         "importance": 8
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Tee is trying to undermine our family by bringing Theo into the picture",
+        "importance": 8
+      },
+      {
+        "beat": 1903,
+        "day": 475,
+        "what": "I’m being publicly undermined, my business is under attack",
+        "importance": 8
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s new ban is a crackdown on our freedom",
+        "importance": 8
       }
     ],
     "action": "watching the door, counting steps",
@@ -1767,7 +1785,7 @@
       ]
     ],
     "last_thought_beat": 1500,
-    "belief": "We’re being hunted by unseen forces",
+    "belief": "The city’s new ban is a crackdown on our freedom",
     "alive": false,
     "health": 5,
     "grief": 0,
@@ -3240,7 +3258,7 @@
     "belief": "Those taunts reminded me of the pain I’m still chasing.",
     "alive": false,
     "health": 80,
-    "grief": 31,
+    "grief": 22,
     "volatility": 82,
     "chasing": null,
     "driving": null,
@@ -3306,10 +3324,10 @@
       64
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 98,
-      "social_need": 12,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 100,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -4084,32 +4102,61 @@
         "day": 470,
         "what": "The city is unsafe",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban proves I’ll be held accountable",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Lyle laughed right in my face when I mentioned the missing inventory from Riverside.",
+        "importance": 7
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
-    "thought": "",
-    "speech": null,
+    "action": "Slams the desk phone down onto its cradle.",
+    "activity": "on the phone, in the fog",
+    "thought": "Lyle thinks he is untouchable behind that pawn shop glass.",
+    "speech": {
+      "to": "brennan",
+      "text": "Internal won't sign the warrant. They want more on Booker first."
+    },
     "path": [
       [
+        2,
+        67
+      ],
+      [
+        3,
+        67
+      ],
+      [
+        4,
+        67
+      ],
+      [
+        5,
+        67
+      ],
+      [
         6,
-        69
+        67
       ],
       [
         7,
-        69
+        67
       ],
       [
         8,
-        69
-      ],
-      [
-        9,
-        69
-      ],
-      [
-        9,
-        68
+        67
       ],
       [
         9,
@@ -4128,8 +4175,8 @@
         64
       ]
     ],
-    "last_thought_beat": 1885,
-    "belief": "The city is unsafe",
+    "last_thought_beat": 1909,
+    "belief": "The ban proves I’ll be held accountable",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -4137,8 +4184,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -4177,23 +4224,23 @@
       "night": "delmarflats"
     },
     "pos": [
-      34,
+      9,
       32
     ],
     "dest": [
       6,
       63
     ],
-    "at": "pawnshop",
+    "at": "cornerstore",
     "spot": [
-      34,
+      9,
       32
     ],
     "mood": {
-      "energy": 74,
-      "happiness": 50,
-      "stress": 98,
-      "social_need": 12,
+      "energy": 80,
+      "happiness": 45,
+      "stress": 100,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -5250,55 +5297,208 @@
         "day": 470,
         "what": "We’re all being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows the city is overreaching",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Cass Deveaux smiled when I told him the precinct was doubling down on Delmar.",
+        "importance": 6
       }
     ],
-    "action": "queueing",
-    "activity": "queueing",
-    "thought": "",
-    "speech": null,
+    "action": "Fingers the envelope in his coat pocket.",
+    "activity": "browsing the shelves",
+    "thought": "She knows I am holding it. Everyone knows.",
+    "speech": {
+      "to": "cass",
+      "text": "Just doing my route, Deveaux. Nothing for you to worry about."
+    },
     "path": [
       [
-        8,
-        35
-      ],
-      [
-        7,
-        35
-      ],
-      [
-        6,
-        35
-      ],
-      [
-        5,
-        35
-      ],
-      [
-        5,
-        36
-      ],
-      [
-        5,
-        37
-      ],
-      [
-        6,
-        37
-      ],
-      [
-        7,
-        37
+        9,
+        69
       ],
       [
         8,
-        37
+        69
+      ],
+      [
+        7,
+        69
+      ],
+      [
+        6,
+        69
+      ],
+      [
+        5,
+        69
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        65
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        60
+      ],
+      [
+        5,
+        59
+      ],
+      [
+        5,
+        58
+      ],
+      [
+        6,
+        58
+      ],
+      [
+        7,
+        58
+      ],
+      [
+        8,
+        58
       ],
       [
         9,
-        37
+        58
       ],
       [
         10,
+        58
+      ],
+      [
+        11,
+        58
+      ],
+      [
+        12,
+        58
+      ],
+      [
+        12,
+        57
+      ],
+      [
+        12,
+        56
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        12,
+        54
+      ],
+      [
+        12,
+        53
+      ],
+      [
+        12,
+        52
+      ],
+      [
+        12,
+        51
+      ],
+      [
+        12,
+        50
+      ],
+      [
+        12,
+        49
+      ],
+      [
+        12,
+        48
+      ],
+      [
+        12,
+        47
+      ],
+      [
+        12,
+        46
+      ],
+      [
+        12,
+        45
+      ],
+      [
+        12,
+        44
+      ],
+      [
+        12,
+        43
+      ],
+      [
+        12,
+        42
+      ],
+      [
+        12,
+        41
+      ],
+      [
+        12,
+        40
+      ],
+      [
+        12,
+        39
+      ],
+      [
+        12,
+        38
+      ],
+      [
+        12,
         37
       ],
       [
@@ -5306,170 +5506,78 @@
         37
       ],
       [
-        12,
+        10,
         37
       ],
       [
-        12,
-        38
-      ],
-      [
-        12,
-        39
-      ],
-      [
-        12,
-        40
-      ],
-      [
-        12,
-        41
-      ],
-      [
-        12,
-        42
-      ],
-      [
-        13,
-        42
-      ],
-      [
-        14,
-        42
-      ],
-      [
-        15,
-        42
-      ],
-      [
-        16,
-        42
-      ],
-      [
-        17,
-        42
-      ],
-      [
-        18,
-        42
-      ],
-      [
-        19,
-        42
-      ],
-      [
-        20,
-        42
-      ],
-      [
-        21,
-        42
-      ],
-      [
-        22,
-        42
-      ],
-      [
-        23,
-        42
-      ],
-      [
-        24,
-        42
-      ],
-      [
-        25,
-        42
-      ],
-      [
-        26,
-        42
-      ],
-      [
-        27,
-        42
-      ],
-      [
-        28,
-        42
-      ],
-      [
-        29,
-        42
-      ],
-      [
-        30,
-        42
-      ],
-      [
-        31,
-        42
-      ],
-      [
-        32,
-        42
-      ],
-      [
-        33,
-        42
-      ],
-      [
-        34,
-        42
-      ],
-      [
-        34,
-        41
-      ],
-      [
-        34,
-        40
-      ],
-      [
-        34,
-        39
-      ],
-      [
-        34,
-        38
-      ],
-      [
-        34,
+        9,
         37
       ],
       [
-        34,
+        8,
+        37
+      ],
+      [
+        7,
+        37
+      ],
+      [
+        6,
+        37
+      ],
+      [
+        5,
+        37
+      ],
+      [
+        5,
         36
       ],
       [
-        34,
+        5,
         35
       ],
       [
-        34,
+        5,
         34
       ],
       [
-        34,
+        5,
         33
       ],
       [
-        34,
+        5,
+        32
+      ],
+      [
+        6,
+        32
+      ],
+      [
+        7,
+        32
+      ],
+      [
+        8,
+        32
+      ],
+      [
+        9,
         32
       ]
     ],
-    "last_thought_beat": 1885,
-    "belief": "We’re all being hunted",
+    "last_thought_beat": 1909,
+    "belief": "The conviction shows the city is overreaching",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 72,
     "chasing": null,
-    "last_instigated_day": 453,
+    "last_instigated_day": 475,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "church",
       "title": "on the desk",
@@ -5522,10 +5630,10 @@
       32
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 98,
-      "social_need": 12,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 100,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -6140,20 +6248,41 @@
         "day": 470,
         "what": "The block is burning",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s ban threatens the block’s safety",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Cass left a dirty envelope right where my regular customers put their bread money.",
+        "importance": 5
       }
     ],
-    "action": "behind the till",
+    "action": "Wipes down the deli glass with a dry rag.",
     "activity": "behind the till",
-    "thought": "",
-    "speech": null,
+    "thought": "They bring their trouble right inside and expect me to sweep it.",
+    "speech": {
+      "to": "cass",
+      "text": "Take it outside if you're going to lean on the shelves, Cass."
+    },
     "path": [
       [
         6,
         32
       ]
     ],
-    "last_thought_beat": 1885,
-    "belief": "The block is burning",
+    "last_thought_beat": 1909,
+    "belief": "The city’s ban threatens the block’s safety",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -6209,10 +6338,10 @@
       33
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 50,
-      "stress": 72,
-      "social_need": 12,
+      "energy": 46,
+      "happiness": 45,
+      "stress": 52,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -6297,6 +6426,10 @@
         "opinion": "my child"
       },
       "rufus": {
+        "affinity": 95,
+        "opinion": "my child"
+      },
+      "theo": {
         "affinity": 95,
         "opinion": "my child"
       }
@@ -7021,23 +7154,55 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Theo was born.",
+        "importance": 10
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Theo’s birth reminds me we’re a stronger family unit now",
+        "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban shows Amara will fail",
+        "importance": 8
       }
     ],
-    "action": "wiping down the counter",
-    "activity": "wiping down the counter",
+    "action": "leaning on the counter",
+    "activity": "leaning on the counter",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        22,
+        34
+      ],
+      [
+        21,
+        34
+      ],
       [
         21,
         33
       ]
     ],
-    "last_thought_beat": 1883,
-    "belief": "We’ll be forced out if we don’t act",
+    "last_thought_beat": 1907,
+    "belief": "The ban shows Amara will fail",
     "alive": true,
     "health": 80,
-    "grief": 33,
+    "grief": 24,
     "volatility": 18,
     "chasing": null,
     "leads": [
@@ -7059,8 +7224,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -7074,7 +7239,8 @@
       "maren2",
       "jonah2",
       "otis",
-      "rufus"
+      "rufus",
+      "theo"
     ],
     "birth_day": null,
     "standing": 31,
@@ -7106,21 +7272,21 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      49
+      23,
+      67
     ],
     "dest": [
       3,
       53
     ],
-    "at": "terrace_a",
+    "at": "clinic",
     "spot": [
-      2,
-      49
+      23,
+      67
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
+      "energy": 62,
+      "happiness": 45,
       "stress": 98,
       "social_need": 0,
       "fear": 10
@@ -7847,176 +8013,32 @@
         "day": 470,
         "what": "We’re being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban keeps me from speaking out",
+        "importance": 8
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
+    "action": "at the desk, in the fog",
+    "activity": "at the desk, in the fog",
     "thought": "",
     "speech": null,
     "path": [
       [
         23,
         67
-      ],
-      [
-        22,
-        67
-      ],
-      [
-        21,
-        67
-      ],
-      [
-        21,
-        66
-      ],
-      [
-        21,
-        65
-      ],
-      [
-        21,
-        64
-      ],
-      [
-        21,
-        63
-      ],
-      [
-        21,
-        62
-      ],
-      [
-        20,
-        62
-      ],
-      [
-        19,
-        62
-      ],
-      [
-        18,
-        62
-      ],
-      [
-        17,
-        62
-      ],
-      [
-        16,
-        62
-      ],
-      [
-        15,
-        62
-      ],
-      [
-        14,
-        62
-      ],
-      [
-        13,
-        62
-      ],
-      [
-        12,
-        62
-      ],
-      [
-        11,
-        62
-      ],
-      [
-        10,
-        62
-      ],
-      [
-        9,
-        62
-      ],
-      [
-        8,
-        62
-      ],
-      [
-        7,
-        62
-      ],
-      [
-        6,
-        62
-      ],
-      [
-        5,
-        62
-      ],
-      [
-        4,
-        62
-      ],
-      [
-        3,
-        62
-      ],
-      [
-        3,
-        61
-      ],
-      [
-        3,
-        60
-      ],
-      [
-        3,
-        59
-      ],
-      [
-        3,
-        58
-      ],
-      [
-        3,
-        57
-      ],
-      [
-        3,
-        56
-      ],
-      [
-        3,
-        55
-      ],
-      [
-        3,
-        54
-      ],
-      [
-        3,
-        53
-      ],
-      [
-        2,
-        53
-      ],
-      [
-        2,
-        52
-      ],
-      [
-        2,
-        51
-      ],
-      [
-        2,
-        50
-      ],
-      [
-        2,
-        49
       ]
     ],
-    "last_thought_beat": 1885,
-    "belief": "We’re being hunted",
+    "last_thought_beat": 1907,
+    "belief": "The ban keeps me from speaking out",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -8024,8 +8046,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -8067,23 +8089,23 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      51
+      46,
+      66
     ],
     "dest": [
       50,
       63
     ],
-    "at": "vasquez",
+    "at": "autoshop",
     "spot": [
-      31,
-      51
+      46,
+      66
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
+      "energy": 62,
+      "happiness": 45,
       "stress": 98,
-      "social_need": 6,
+      "social_need": 24,
       "fear": 10
     },
     "relationships": {
@@ -9080,181 +9102,54 @@
         "day": 470,
         "what": "The city is falling apart",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban threatens my family’s safety",
+        "importance": 8
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
-    "thought": "I can't believe the city is falling apart",
-    "speech": {
-      "to": "nia",
-      "text": "We need to keep our heads down."
-    },
+    "action": "signing for a delivery",
+    "activity": "signing for a delivery",
+    "thought": "",
+    "speech": null,
     "path": [
       [
         47,
         68
       ],
       [
-        47,
-        67
-      ],
-      [
-        47,
-        66
-      ],
-      [
-        47,
-        65
-      ],
-      [
-        47,
-        64
-      ],
-      [
-        48,
-        64
-      ],
-      [
-        49,
-        64
-      ],
-      [
-        49,
-        63
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        49,
-        61
-      ],
-      [
-        48,
-        61
-      ],
-      [
-        47,
-        61
+        46,
+        68
       ],
       [
         46,
-        61
+        67
       ],
       [
-        45,
-        61
-      ],
-      [
-        44,
-        61
-      ],
-      [
-        43,
-        61
-      ],
-      [
-        42,
-        61
-      ],
-      [
-        41,
-        61
-      ],
-      [
-        40,
-        61
-      ],
-      [
-        39,
-        61
-      ],
-      [
-        38,
-        61
-      ],
-      [
-        37,
-        61
-      ],
-      [
-        36,
-        61
-      ],
-      [
-        35,
-        61
-      ],
-      [
-        34,
-        61
-      ],
-      [
-        33,
-        61
-      ],
-      [
-        33,
-        60
-      ],
-      [
-        33,
-        59
-      ],
-      [
-        33,
-        58
-      ],
-      [
-        33,
-        57
-      ],
-      [
-        33,
-        56
-      ],
-      [
-        33,
-        55
-      ],
-      [
-        33,
-        54
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        32,
-        52
-      ],
-      [
-        31,
-        52
-      ],
-      [
-        31,
-        51
+        46,
+        66
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "The city is falling apart",
+    "last_thought_beat": 1907,
+    "belief": "The ban threatens my family’s safety",
     "alive": true,
     "health": 64,
     "grief": 0,
     "volatility": 70,
     "chasing": null,
     "last_instigated_day": 466,
-    "driving": "van",
+    "driving": null,
     "vehicle": "van",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "courthouse",
       "title": "in the office",
@@ -9293,8 +9188,8 @@
       "night": "vasquez"
     },
     "pos": [
-      33,
-      67
+      29,
+      68
     ],
     "dest": [
       33,
@@ -9302,14 +9197,14 @@
     ],
     "at": "school",
     "spot": [
-      33,
-      67
+      29,
+      68
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 52,
-      "stress": 90,
-      "social_need": 12,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 95,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -9834,20 +9729,52 @@
         "day": 470,
         "what": "We’re all being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows the truth is hidden",
+        "importance": 8
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
+    "action": "filing paperwork",
+    "activity": "filing paperwork",
     "thought": "",
     "speech": null,
     "path": [
       [
         33,
         67
+      ],
+      [
+        32,
+        67
+      ],
+      [
+        31,
+        67
+      ],
+      [
+        30,
+        67
+      ],
+      [
+        29,
+        67
+      ],
+      [
+        29,
+        68
       ]
     ],
-    "last_thought_beat": 1884,
-    "belief": "We’re all being hunted",
+    "last_thought_beat": 1908,
+    "belief": "The conviction shows the truth is hidden",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -9855,8 +9782,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -9895,22 +9822,22 @@
       "night": "pawnshop"
     },
     "pos": [
-      32,
-      17
+      34,
+      32
     ],
     "dest": [
       50,
       37
     ],
-    "at": "harborbar",
+    "at": "pawnshop",
     "spot": [
-      32,
-      17
+      34,
+      32
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 98,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 100,
       "social_need": 0,
       "fear": 10
     },
@@ -9920,7 +9847,7 @@
         "opinion": "frustrated"
       },
       "wes": {
-        "affinity": -47,
+        "affinity": -67,
         "opinion": "watchful"
       },
       "cass": {
@@ -10626,8 +10553,8 @@
         "importance": 8
       },
       {
-        "beat": 1881,
-        "day": 470,
+        "beat": 1901,
+        "day": 475,
         "what": "Wes Doyle started on me in front of people.",
         "importance": 7
       },
@@ -10714,183 +10641,49 @@
         "day": 470,
         "what": "The market will collapse unless we act",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "This is a chance to corner the market",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Wes swore he didn't touch the drawer right before the audit came down hard.",
+        "importance": 6
       }
     ],
-    "action": "nursing a drink",
-    "activity": "nursing a drink",
-    "thought": "Kohl is frustrated, but I have leverage",
+    "action": "Lined up ten bills and licked his thumb.",
+    "activity": "counting the float",
+    "thought": "The float is light because someone's dipping in early.",
     "speech": {
-      "to": "cass",
-      "text": "Let’s keep our eyes on the market."
+      "to": "wes",
+      "text": "You shorted me two twenties on the register count, Wes."
     },
     "path": [
       [
         36,
-        35
-      ],
-      [
-        35,
-        35
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        36
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        35,
-        37
-      ],
-      [
-        36,
-        37
-      ],
-      [
-        37,
-        37
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        39,
-        37
-      ],
-      [
-        40,
-        37
-      ],
-      [
-        40,
-        36
-      ],
-      [
-        40,
-        35
-      ],
-      [
-        40,
-        34
-      ],
-      [
-        40,
-        33
-      ],
-      [
-        40,
         32
       ],
       [
-        40,
-        31
-      ],
-      [
-        40,
-        30
-      ],
-      [
-        40,
-        29
-      ],
-      [
-        40,
-        28
-      ],
-      [
-        40,
-        27
-      ],
-      [
-        40,
-        26
-      ],
-      [
-        40,
-        25
-      ],
-      [
-        40,
-        24
-      ],
-      [
-        40,
-        23
-      ],
-      [
-        40,
-        22
-      ],
-      [
-        40,
-        21
-      ],
-      [
-        39,
-        21
-      ],
-      [
-        38,
-        21
-      ],
-      [
-        37,
-        21
-      ],
-      [
-        36,
-        21
-      ],
-      [
         35,
-        21
+        32
       ],
       [
         34,
-        21
-      ],
-      [
-        33,
-        21
-      ],
-      [
-        32,
-        21
-      ],
-      [
-        31,
-        21
-      ],
-      [
-        31,
-        20
-      ],
-      [
-        31,
-        19
-      ],
-      [
-        31,
-        18
-      ],
-      [
-        31,
-        17
-      ],
-      [
-        32,
-        17
+        32
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "The market will collapse unless we act",
+    "last_thought_beat": 1909,
+    "belief": "This is a chance to corner the market",
     "alive": true,
     "health": 56,
     "grief": 0,
@@ -10906,11 +10699,11 @@
       }
     ],
     "checking": null,
-    "last_instigated_day": 466,
-    "driving": "car",
+    "last_instigated_day": 476,
+    "driving": null,
     "vehicle": "car",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -11801,21 +11594,21 @@
       "night": "harborbar"
     },
     "pos": [
-      28,
-      18
+      6,
+      32
     ],
     "dest": [
       31,
       19
     ],
-    "at": "harborbar",
+    "at": "cornerstore",
     "spot": [
-      28,
-      18
+      6,
+      32
     ],
     "mood": {
-      "energy": 74,
-      "happiness": 50,
+      "energy": 80,
+      "happiness": 45,
       "stress": 100,
       "social_need": 0,
       "fear": 10
@@ -11835,7 +11628,7 @@
       },
       "malik": {
         "affinity": -100,
-        "opinion": "I’ll protect my position"
+        "opinion": "Malik still supports me"
       },
       "gus": {
         "affinity": -30,
@@ -11894,7 +11687,7 @@
         "opinion": "troubled teen"
       },
       "dot": {
-        "affinity": -48,
+        "affinity": -60,
         "opinion": "a mystery"
       },
       "priya": {
@@ -12604,62 +12397,260 @@
         "day": 470,
         "what": "The city will betray us",
         "importance": 8
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Dot Feeney started on me in front of people.",
+        "importance": 7
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Dot’s public insult means she’s secretly weakening my position",
+        "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows our power is threatened",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Brady dropped his notebook right on Delmar Row and pretended nobody saw him do it.",
+        "importance": 5
       }
     ],
-    "action": "talking over the table",
-    "activity": "talking over the table",
-    "thought": "Kohl is annoying but I must stay calm",
+    "action": "Adjusts coat collar while waiting near the counter.",
+    "activity": "queueing",
+    "thought": "Kohl is sweating through his shirt again. Pathetic.",
     "speech": {
-      "to": "booker",
-      "text": "Why do you think that works?"
+      "to": "kohl",
+      "text": "You look nervous, Officer. Something on your mind?"
     },
     "path": [
       [
-        6,
-        32
+        51,
+        51
       ],
       [
-        5,
-        32
+        51,
+        50
       ],
       [
-        5,
-        33
+        51,
+        49
       ],
       [
-        5,
-        34
+        51,
+        48
       ],
       [
-        5,
-        35
+        51,
+        47
       ],
       [
-        5,
-        36
+        51,
+        46
       ],
       [
-        5,
-        37
+        51,
+        45
       ],
       [
-        6,
-        37
+        50,
+        45
       ],
       [
-        7,
-        37
+        49,
+        45
       ],
       [
-        8,
-        37
+        48,
+        45
       ],
       [
-        9,
-        37
+        47,
+        45
       ],
       [
-        10,
+        46,
+        45
+      ],
+      [
+        45,
+        45
+      ],
+      [
+        44,
+        45
+      ],
+      [
+        43,
+        45
+      ],
+      [
+        42,
+        45
+      ],
+      [
+        41,
+        45
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        39,
+        45
+      ],
+      [
+        38,
+        45
+      ],
+      [
+        37,
+        45
+      ],
+      [
+        36,
+        45
+      ],
+      [
+        35,
+        45
+      ],
+      [
+        34,
+        45
+      ],
+      [
+        33,
+        45
+      ],
+      [
+        32,
+        45
+      ],
+      [
+        31,
+        45
+      ],
+      [
+        30,
+        45
+      ],
+      [
+        29,
+        45
+      ],
+      [
+        28,
+        45
+      ],
+      [
+        27,
+        45
+      ],
+      [
+        26,
+        45
+      ],
+      [
+        25,
+        45
+      ],
+      [
+        24,
+        45
+      ],
+      [
+        23,
+        45
+      ],
+      [
+        22,
+        45
+      ],
+      [
+        21,
+        45
+      ],
+      [
+        20,
+        45
+      ],
+      [
+        19,
+        45
+      ],
+      [
+        18,
+        45
+      ],
+      [
+        17,
+        45
+      ],
+      [
+        16,
+        45
+      ],
+      [
+        15,
+        45
+      ],
+      [
+        14,
+        45
+      ],
+      [
+        13,
+        45
+      ],
+      [
+        12,
+        45
+      ],
+      [
+        12,
+        44
+      ],
+      [
+        12,
+        43
+      ],
+      [
+        12,
+        42
+      ],
+      [
+        12,
+        41
+      ],
+      [
+        12,
+        40
+      ],
+      [
+        12,
+        39
+      ],
+      [
+        12,
+        38
+      ],
+      [
+        12,
         37
       ],
       [
@@ -12667,176 +12658,56 @@
         37
       ],
       [
-        12,
+        10,
         37
       ],
       [
-        12,
+        9,
+        37
+      ],
+      [
+        8,
+        37
+      ],
+      [
+        7,
+        37
+      ],
+      [
+        6,
+        37
+      ],
+      [
+        5,
+        37
+      ],
+      [
+        5,
         36
       ],
       [
-        12,
+        5,
         35
       ],
       [
-        12,
+        5,
         34
       ],
       [
-        12,
+        5,
         33
       ],
       [
-        12,
+        5,
         32
       ],
       [
-        12,
-        31
-      ],
-      [
-        12,
-        30
-      ],
-      [
-        12,
-        29
-      ],
-      [
-        12,
-        28
-      ],
-      [
-        12,
-        27
-      ],
-      [
-        12,
-        26
-      ],
-      [
-        13,
-        26
-      ],
-      [
-        14,
-        26
-      ],
-      [
-        15,
-        26
-      ],
-      [
-        16,
-        26
-      ],
-      [
-        17,
-        26
-      ],
-      [
-        18,
-        26
-      ],
-      [
-        19,
-        26
-      ],
-      [
-        20,
-        26
-      ],
-      [
-        21,
-        26
-      ],
-      [
-        22,
-        26
-      ],
-      [
-        23,
-        26
-      ],
-      [
-        24,
-        26
-      ],
-      [
-        25,
-        26
-      ],
-      [
-        26,
-        26
-      ],
-      [
-        26,
-        25
-      ],
-      [
-        26,
-        24
-      ],
-      [
-        26,
-        23
-      ],
-      [
-        26,
-        22
-      ],
-      [
-        26,
-        21
-      ],
-      [
-        27,
-        21
-      ],
-      [
-        28,
-        21
-      ],
-      [
-        29,
-        21
-      ],
-      [
-        30,
-        21
-      ],
-      [
-        31,
-        21
-      ],
-      [
-        31,
-        20
-      ],
-      [
-        31,
-        19
-      ],
-      [
-        30,
-        19
-      ],
-      [
-        29,
-        19
-      ],
-      [
-        28,
-        19
-      ],
-      [
-        28,
-        18
+        6,
+        32
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "The city will betray us",
+    "last_thought_beat": 1909,
+    "belief": "The conviction shows our power is threatened",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -12845,8 +12716,8 @@
     "last_instigated_day": 464,
     "driving": "car",
     "vehicle": "car",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -12886,7 +12757,7 @@
     },
     "pos": [
       65,
-      50
+      52
     ],
     "dest": [
       62,
@@ -12895,13 +12766,13 @@
     "at": "okonkwo",
     "spot": [
       65,
-      50
+      52
     ],
     "mood": {
-      "energy": 74,
-      "happiness": 50,
-      "stress": 73,
-      "social_need": 0,
+      "energy": 80,
+      "happiness": 45,
+      "stress": 53,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -13218,27 +13089,173 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
+    "action": "on hold with somebody",
+    "activity": "on hold with somebody",
     "thought": "",
     "speech": null,
     "path": [
       [
-        65,
-        52
+        53,
+        39
       ],
       [
-        65,
+        52,
+        39
+      ],
+      [
+        51,
+        39
+      ],
+      [
+        50,
+        39
+      ],
+      [
+        50,
+        40
+      ],
+      [
+        50,
+        41
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        51,
+        42
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        53,
+        42
+      ],
+      [
+        54,
+        42
+      ],
+      [
+        55,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        58,
+        43
+      ],
+      [
+        58,
+        44
+      ],
+      [
+        58,
+        45
+      ],
+      [
+        58,
+        46
+      ],
+      [
+        58,
+        47
+      ],
+      [
+        58,
+        48
+      ],
+      [
+        58,
+        49
+      ],
+      [
+        58,
+        50
+      ],
+      [
+        58,
         51
       ],
       [
+        58,
+        52
+      ],
+      [
+        58,
+        53
+      ],
+      [
+        58,
+        54
+      ],
+      [
+        58,
+        55
+      ],
+      [
+        59,
+        55
+      ],
+      [
+        60,
+        55
+      ],
+      [
+        61,
+        55
+      ],
+      [
+        62,
+        55
+      ],
+      [
+        62,
+        54
+      ],
+      [
+        62,
+        53
+      ],
+      [
+        63,
+        53
+      ],
+      [
+        64,
+        53
+      ],
+      [
         65,
-        50
+        53
+      ],
+      [
+        65,
+        52
       ]
     ],
-    "last_thought_beat": 1882,
+    "last_thought_beat": 1902,
     "belief": "the law is tightening, maybe our sons will feel pressure",
     "alive": true,
     "health": 80,
@@ -13247,8 +13264,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "precinct",
       "title": "on the desk",
@@ -13287,22 +13304,22 @@
       "night": "okonkwo"
     },
     "pos": [
-      65,
-      52
+      75,
+      54
     ],
     "dest": [
       34,
       63
     ],
-    "at": "okonkwo",
+    "at": "green",
     "spot": [
-      65,
-      52
+      75,
+      54
     ],
     "mood": {
-      "energy": 74,
-      "happiness": 50,
-      "stress": 85,
+      "energy": 80,
+      "happiness": 45,
+      "stress": 70,
       "social_need": 0,
       "fear": 10
     },
@@ -13614,120 +13631,272 @@
         "day": 470,
         "what": "The city’s safety is fading",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows I must prove my worth",
+        "importance": 8
       }
     ],
-    "action": "sitting with the radio on",
-    "activity": "sitting with the radio on",
+    "action": "sitting on a bench",
+    "activity": "sitting on a bench",
     "thought": "",
     "speech": null,
     "path": [
       [
-        74,
-        48
+        37,
+        68
       ],
       [
-        73,
-        48
+        36,
+        68
       ],
       [
-        72,
-        48
+        35,
+        68
       ],
       [
-        71,
-        48
+        34,
+        68
       ],
       [
-        70,
-        48
+        33,
+        68
       ],
       [
-        69,
-        48
+        33,
+        67
       ],
       [
-        68,
-        48
+        33,
+        66
       ],
       [
-        67,
-        48
+        33,
+        65
       ],
       [
-        67,
-        49
+        33,
+        64
       ],
       [
-        67,
-        50
+        33,
+        63
       ],
       [
-        67,
-        51
+        33,
+        62
       ],
       [
-        67,
-        52
+        34,
+        62
       ],
       [
-        67,
-        53
+        35,
+        62
       ],
       [
-        67,
-        54
+        36,
+        62
       ],
       [
-        67,
-        55
+        37,
+        62
+      ],
+      [
+        38,
+        62
+      ],
+      [
+        39,
+        62
+      ],
+      [
+        40,
+        62
+      ],
+      [
+        41,
+        62
+      ],
+      [
+        42,
+        62
+      ],
+      [
+        43,
+        62
+      ],
+      [
+        44,
+        62
+      ],
+      [
+        45,
+        62
+      ],
+      [
+        46,
+        62
+      ],
+      [
+        47,
+        62
+      ],
+      [
+        48,
+        62
+      ],
+      [
+        49,
+        62
+      ],
+      [
+        50,
+        62
+      ],
+      [
+        51,
+        62
+      ],
+      [
+        52,
+        62
+      ],
+      [
+        53,
+        62
+      ],
+      [
+        54,
+        62
+      ],
+      [
+        55,
+        62
+      ],
+      [
+        56,
+        62
+      ],
+      [
+        57,
+        62
+      ],
+      [
+        58,
+        62
+      ],
+      [
+        59,
+        62
+      ],
+      [
+        60,
+        62
+      ],
+      [
+        61,
+        62
+      ],
+      [
+        62,
+        62
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        64,
+        62
+      ],
+      [
+        65,
+        62
       ],
       [
         66,
+        62
+      ],
+      [
+        67,
+        62
+      ],
+      [
+        68,
+        62
+      ],
+      [
+        69,
+        62
+      ],
+      [
+        70,
+        62
+      ],
+      [
+        71,
+        62
+      ],
+      [
+        72,
+        62
+      ],
+      [
+        73,
+        62
+      ],
+      [
+        74,
+        62
+      ],
+      [
+        75,
+        62
+      ],
+      [
+        75,
+        61
+      ],
+      [
+        75,
+        60
+      ],
+      [
+        75,
+        59
+      ],
+      [
+        75,
+        58
+      ],
+      [
+        75,
+        57
+      ],
+      [
+        75,
+        56
+      ],
+      [
+        75,
         55
       ],
       [
-        65,
-        55
-      ],
-      [
-        64,
-        55
-      ],
-      [
-        63,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        62,
+        75,
         54
-      ],
-      [
-        62,
-        53
-      ],
-      [
-        63,
-        53
-      ],
-      [
-        64,
-        53
-      ],
-      [
-        65,
-        53
-      ],
-      [
-        65,
-        52
       ]
     ],
-    "last_thought_beat": 1878,
-    "belief": "The city’s safety is fading",
+    "last_thought_beat": 1908,
+    "belief": "The conviction shows I must prove my worth",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -13735,8 +13904,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -14460,22 +14629,19 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      80,
+      51
     ],
     "dest": [
       34,
       63
     ],
-    "at": "terrace_b",
-    "spot": [
-      8,
-      48
-    ],
+    "at": "green",
+    "spot": null,
     "mood": {
-      "energy": 74,
-      "happiness": 50,
-      "stress": 90,
+      "energy": 80,
+      "happiness": 45,
+      "stress": 73,
       "social_need": 0,
       "fear": 10
     },
@@ -14777,347 +14943,275 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will prevent me from getting a bike",
+        "importance": 8
       }
     ],
-    "action": "washing up",
-    "activity": "washing up",
+    "action": "watching the street, in the fog",
+    "activity": "watching the street, in the fog",
     "thought": "",
     "speech": null,
     "path": [
       [
-        75,
-        50
-      ],
-      [
-        74,
-        50
-      ],
-      [
-        73,
-        50
-      ],
-      [
-        72,
-        50
-      ],
-      [
-        71,
-        50
-      ],
-      [
-        70,
-        50
-      ],
-      [
-        69,
-        50
-      ],
-      [
-        68,
-        50
-      ],
-      [
-        67,
-        50
-      ],
-      [
-        67,
-        51
-      ],
-      [
-        67,
-        52
-      ],
-      [
-        67,
-        53
-      ],
-      [
-        67,
-        54
-      ],
-      [
-        67,
-        55
-      ],
-      [
-        66,
-        55
-      ],
-      [
-        65,
-        55
-      ],
-      [
-        64,
-        55
-      ],
-      [
-        63,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        61,
-        55
-      ],
-      [
-        60,
-        55
-      ],
-      [
-        59,
-        55
-      ],
-      [
-        58,
-        55
-      ],
-      [
-        57,
-        55
-      ],
-      [
-        56,
-        55
-      ],
-      [
-        55,
-        55
-      ],
-      [
-        54,
-        55
-      ],
-      [
-        53,
-        55
-      ],
-      [
-        52,
-        55
-      ],
-      [
-        51,
-        55
-      ],
-      [
-        50,
-        55
-      ],
-      [
-        49,
-        55
-      ],
-      [
-        48,
-        55
-      ],
-      [
-        47,
-        55
-      ],
-      [
-        46,
-        55
-      ],
-      [
-        45,
-        55
-      ],
-      [
-        44,
-        55
-      ],
-      [
-        43,
-        55
-      ],
-      [
-        42,
-        55
-      ],
-      [
-        41,
-        55
-      ],
-      [
-        40,
-        55
-      ],
-      [
-        39,
-        55
-      ],
-      [
-        38,
-        55
-      ],
-      [
-        37,
-        55
-      ],
-      [
-        36,
-        55
-      ],
-      [
-        35,
-        55
-      ],
-      [
-        34,
-        55
+        33,
+        64
       ],
       [
         33,
+        63
+      ],
+      [
+        33,
+        62
+      ],
+      [
+        34,
+        62
+      ],
+      [
+        35,
+        62
+      ],
+      [
+        36,
+        62
+      ],
+      [
+        37,
+        62
+      ],
+      [
+        38,
+        62
+      ],
+      [
+        39,
+        62
+      ],
+      [
+        40,
+        62
+      ],
+      [
+        41,
+        62
+      ],
+      [
+        42,
+        62
+      ],
+      [
+        43,
+        62
+      ],
+      [
+        44,
+        62
+      ],
+      [
+        45,
+        62
+      ],
+      [
+        46,
+        62
+      ],
+      [
+        47,
+        62
+      ],
+      [
+        48,
+        62
+      ],
+      [
+        49,
+        62
+      ],
+      [
+        50,
+        62
+      ],
+      [
+        51,
+        62
+      ],
+      [
+        52,
+        62
+      ],
+      [
+        53,
+        62
+      ],
+      [
+        54,
+        62
+      ],
+      [
+        55,
+        62
+      ],
+      [
+        56,
+        62
+      ],
+      [
+        57,
+        62
+      ],
+      [
+        58,
+        62
+      ],
+      [
+        59,
+        62
+      ],
+      [
+        60,
+        62
+      ],
+      [
+        61,
+        62
+      ],
+      [
+        62,
+        62
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        64,
+        62
+      ],
+      [
+        65,
+        62
+      ],
+      [
+        66,
+        62
+      ],
+      [
+        67,
+        62
+      ],
+      [
+        68,
+        62
+      ],
+      [
+        69,
+        62
+      ],
+      [
+        70,
+        62
+      ],
+      [
+        71,
+        62
+      ],
+      [
+        72,
+        62
+      ],
+      [
+        73,
+        62
+      ],
+      [
+        74,
+        62
+      ],
+      [
+        75,
+        62
+      ],
+      [
+        76,
+        62
+      ],
+      [
+        77,
+        62
+      ],
+      [
+        78,
+        62
+      ],
+      [
+        79,
+        62
+      ],
+      [
+        80,
+        62
+      ],
+      [
+        80,
+        61
+      ],
+      [
+        80,
+        60
+      ],
+      [
+        80,
+        59
+      ],
+      [
+        80,
+        58
+      ],
+      [
+        80,
+        57
+      ],
+      [
+        80,
+        56
+      ],
+      [
+        80,
         55
       ],
       [
-        32,
-        55
-      ],
-      [
-        31,
-        55
-      ],
-      [
-        30,
-        55
-      ],
-      [
-        29,
-        55
-      ],
-      [
-        29,
-        56
-      ],
-      [
-        28,
-        56
-      ],
-      [
-        27,
-        56
-      ],
-      [
-        26,
-        56
-      ],
-      [
-        25,
-        56
-      ],
-      [
-        24,
-        56
-      ],
-      [
-        23,
-        56
-      ],
-      [
-        22,
-        56
-      ],
-      [
-        21,
-        56
-      ],
-      [
-        20,
-        56
-      ],
-      [
-        19,
-        56
-      ],
-      [
-        18,
-        56
-      ],
-      [
-        17,
-        56
-      ],
-      [
-        16,
-        56
-      ],
-      [
-        15,
-        56
-      ],
-      [
-        14,
-        56
-      ],
-      [
-        13,
-        56
-      ],
-      [
-        12,
-        56
-      ],
-      [
-        11,
-        56
-      ],
-      [
-        10,
-        56
-      ],
-      [
-        9,
-        56
-      ],
-      [
-        8,
-        56
-      ],
-      [
-        8,
-        55
-      ],
-      [
-        8,
+        80,
         54
       ],
       [
-        8,
+        80,
         53
       ],
       [
-        8,
+        80,
         52
       ],
       [
-        8,
+        80,
         51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
       ]
     ],
-    "last_thought_beat": 1884,
-    "belief": "The law will crush our dreams",
+    "last_thought_beat": 1904,
+    "belief": "The ban will prevent me from getting a bike",
     "alive": true,
     "health": 80,
-    "grief": 66,
+    "grief": 57,
     "volatility": 14,
     "chasing": null,
     "driving": null,
@@ -15157,22 +15251,19 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      62,
+      34
     ],
     "dest": [
       33,
       53
     ],
-    "at": "vasquez",
-    "spot": [
-      32,
-      50
-    ],
+    "at": "bodega",
+    "spot": null,
     "mood": {
-      "energy": 74,
-      "happiness": 52,
-      "stress": 94,
+      "energy": 80,
+      "happiness": 45,
+      "stress": 83,
       "social_need": 0,
       "fear": 10
     },
@@ -15454,215 +15545,47 @@
         "day": 470,
         "what": "The city will betray us",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will keep me from standing my ground",
+        "importance": 8
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
+    "action": "looking at nothing in particular",
+    "activity": "looking at nothing in particular",
     "thought": "",
     "speech": null,
     "path": [
       [
-        60,
-        33
-      ],
-      [
-        61,
-        33
-      ],
-      [
-        62,
-        33
-      ],
-      [
-        62,
-        34
-      ],
-      [
-        62,
-        35
-      ],
-      [
-        62,
-        36
-      ],
-      [
-        61,
-        36
-      ],
-      [
-        60,
-        36
-      ],
-      [
-        59,
-        36
-      ],
-      [
-        58,
-        36
-      ],
-      [
-        57,
-        36
-      ],
-      [
-        56,
-        36
-      ],
-      [
-        56,
-        37
-      ],
-      [
-        56,
-        38
-      ],
-      [
-        56,
-        39
-      ],
-      [
-        56,
-        40
-      ],
-      [
-        56,
-        41
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        43,
-        42
-      ],
-      [
-        42,
-        42
-      ],
-      [
-        41,
-        42
-      ],
-      [
-        40,
-        42
-      ],
-      [
-        39,
-        42
-      ],
-      [
-        38,
-        42
-      ],
-      [
-        38,
-        43
-      ],
-      [
-        38,
-        44
-      ],
-      [
-        38,
-        45
-      ],
-      [
-        38,
-        46
-      ],
-      [
-        38,
-        47
-      ],
-      [
-        38,
-        48
-      ],
-      [
-        38,
-        49
-      ],
-      [
-        38,
-        50
-      ],
-      [
-        38,
+        31,
         51
       ],
       [
-        38,
+        32,
+        51
+      ],
+      [
+        33,
+        51
+      ],
+      [
+        33,
         52
       ],
       [
-        38,
+        33,
         53
       ],
       [
-        38,
-        54
-      ],
-      [
-        37,
-        54
-      ],
-      [
-        36,
-        54
-      ],
-      [
-        35,
+        33,
         54
       ],
       [
@@ -15670,38 +15593,206 @@
         54
       ],
       [
-        33,
+        35,
         54
       ],
       [
-        33,
+        36,
+        54
+      ],
+      [
+        37,
+        54
+      ],
+      [
+        38,
+        54
+      ],
+      [
+        39,
+        54
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        41,
+        54
+      ],
+      [
+        42,
+        54
+      ],
+      [
+        43,
+        54
+      ],
+      [
+        44,
+        54
+      ],
+      [
+        45,
+        54
+      ],
+      [
+        46,
+        54
+      ],
+      [
+        47,
+        54
+      ],
+      [
+        48,
+        54
+      ],
+      [
+        49,
+        54
+      ],
+      [
+        50,
+        54
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        52,
+        54
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        54,
+        54
+      ],
+      [
+        55,
+        54
+      ],
+      [
+        56,
+        54
+      ],
+      [
+        57,
+        54
+      ],
+      [
+        58,
+        54
+      ],
+      [
+        58,
         53
       ],
       [
-        33,
+        58,
         52
       ],
       [
-        32,
-        52
-      ],
-      [
-        32,
+        58,
         51
       ],
       [
-        32,
+        58,
         50
+      ],
+      [
+        58,
+        49
+      ],
+      [
+        58,
+        48
+      ],
+      [
+        58,
+        47
+      ],
+      [
+        58,
+        46
+      ],
+      [
+        58,
+        45
+      ],
+      [
+        58,
+        44
+      ],
+      [
+        58,
+        43
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        58,
+        41
+      ],
+      [
+        58,
+        40
+      ],
+      [
+        58,
+        39
+      ],
+      [
+        58,
+        38
+      ],
+      [
+        58,
+        37
+      ],
+      [
+        58,
+        36
+      ],
+      [
+        59,
+        36
+      ],
+      [
+        60,
+        36
+      ],
+      [
+        61,
+        36
+      ],
+      [
+        62,
+        36
+      ],
+      [
+        62,
+        35
+      ],
+      [
+        62,
+        34
       ]
     ],
-    "last_thought_beat": 1883,
+    "last_thought_beat": 1901,
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 28,
     "chasing": null,
     "driving": null,
-    "belief": "The city will betray us",
+    "belief": "The ban will keep me from standing my ground",
     "vehicle": null,
     "money": 200,
     "skill": 30,
@@ -16248,22 +16339,22 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      21,
+      33
     ],
     "dest": [
       21,
       37
     ],
-    "at": "terrace_b",
+    "at": "barbershop",
     "spot": [
-      9,
-      52
+      21,
+      33
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 71,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 51,
       "social_need": 0,
       "fear": 10
     },
@@ -16309,6 +16400,10 @@
         "opinion": "my child"
       },
       "rufus": {
+        "affinity": 95,
+        "opinion": "my child"
+      },
+      "theo": {
         "affinity": 95,
         "opinion": "my child"
       }
@@ -16739,176 +16834,38 @@
         "day": 470,
         "what": "The city will turn against us soon",
         "importance": 8
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "Theo was born.",
+        "importance": 10
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows the city will ruin our business",
+        "importance": 8
       }
     ],
-    "action": "sitting with the radio on",
-    "activity": "sitting with the radio on",
+    "action": "wiping down the counter",
+    "activity": "wiping down the counter",
     "thought": "",
     "speech": null,
     "path": [
       [
         21,
         33
-      ],
-      [
-        20,
-        33
-      ],
-      [
-        20,
-        34
-      ],
-      [
-        20,
-        35
-      ],
-      [
-        20,
-        36
-      ],
-      [
-        20,
-        37
-      ],
-      [
-        19,
-        37
-      ],
-      [
-        18,
-        37
-      ],
-      [
-        17,
-        37
-      ],
-      [
-        16,
-        37
-      ],
-      [
-        15,
-        37
-      ],
-      [
-        14,
-        37
-      ],
-      [
-        13,
-        37
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        11,
-        38
-      ],
-      [
-        11,
-        39
-      ],
-      [
-        11,
-        40
-      ],
-      [
-        11,
-        41
-      ],
-      [
-        11,
-        42
-      ],
-      [
-        11,
-        43
-      ],
-      [
-        11,
-        44
-      ],
-      [
-        11,
-        45
-      ],
-      [
-        11,
-        46
-      ],
-      [
-        11,
-        47
-      ],
-      [
-        11,
-        48
-      ],
-      [
-        11,
-        49
-      ],
-      [
-        11,
-        50
-      ],
-      [
-        11,
-        51
-      ],
-      [
-        11,
-        52
-      ],
-      [
-        11,
-        53
-      ],
-      [
-        11,
-        54
-      ],
-      [
-        11,
-        55
-      ],
-      [
-        10,
-        55
-      ],
-      [
-        9,
-        55
-      ],
-      [
-        8,
-        55
-      ],
-      [
-        8,
-        54
-      ],
-      [
-        8,
-        53
-      ],
-      [
-        9,
-        53
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "last_thought_beat": 1881,
-    "belief": "The city will turn against us soon",
+    "last_thought_beat": 1900,
+    "belief": "The conviction shows the city will ruin our business",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -16916,8 +16873,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -16931,7 +16888,8 @@
       "maren2",
       "jonah2",
       "otis",
-      "rufus"
+      "rufus",
+      "theo"
     ],
     "birth_day": null,
     "standing": 45,
@@ -16974,9 +16932,9 @@
       32
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 88,
+      "energy": 62,
+      "happiness": 42,
+      "stress": 78,
       "social_need": 0,
       "fear": 10
     },
@@ -16995,7 +16953,7 @@
       },
       "malik": {
         "affinity": -100,
-        "opinion": "I’ll strengthen my market"
+        "opinion": "I’m threatened"
       },
       "booker": {
         "affinity": -100,
@@ -17674,8 +17632,8 @@
         "importance": 6
       },
       {
-        "beat": 1815,
-        "day": 453,
+        "beat": 1903,
+        "day": 475,
         "what": "Ofc. Brady Kohl started on me in front of people.",
         "importance": 7
       },
@@ -17894,10 +17852,28 @@
         "day": 470,
         "what": "Our business is threatened",
         "importance": 8
+      },
+      {
+        "beat": 1903,
+        "day": 475,
+        "what": "The cops are out to sabotage my shop",
+        "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will hurt my business",
+        "importance": 8
       }
     ],
-    "action": "signing for a delivery",
-    "activity": "signing for a delivery",
+    "action": "signing for a delivery, in the fog",
+    "activity": "signing for a delivery, in the fog",
     "thought": "",
     "speech": null,
     "path": [
@@ -17922,8 +17898,8 @@
         32
       ]
     ],
-    "last_thought_beat": 1883,
-    "belief": "Our business is threatened",
+    "last_thought_beat": 1905,
+    "belief": "The ban will hurt my business",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -17941,8 +17917,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "clinic",
       "title": "on the ward",
@@ -17982,7 +17958,7 @@
     },
     "pos": [
       75,
-      16
+      23
     ],
     "dest": [
       75,
@@ -17991,13 +17967,13 @@
     "at": "riverflats",
     "spot": [
       75,
-      16
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 96,
-      "social_need": 6,
+      "happiness": 45,
+      "stress": 98,
+      "social_need": 24,
       "fear": 10
     },
     "relationships": {
@@ -18022,7 +17998,7 @@
         "opinion": "cunning foe"
       },
       "cass": {
-        "affinity": -52,
+        "affinity": -60,
         "opinion": "polished"
       },
       "gus": {
@@ -18414,15 +18390,24 @@
         "day": 470,
         "what": "We’re all targets of unknown forces",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s ban will push us out",
+        "importance": 8
       }
     ],
     "action": "sitting down for a minute",
     "activity": "sitting down for a minute",
-    "thought": "I want everyone owed, none owes me",
-    "speech": {
-      "to": "brennan",
-      "text": "You owe me for that tab."
-    },
+    "thought": "",
+    "speech": null,
     "path": [
       [
         74,
@@ -18434,23 +18419,19 @@
       ],
       [
         75,
-        19
+        21
       ],
       [
         75,
-        18
+        22
       ],
       [
         75,
-        17
-      ],
-      [
-        75,
-        16
+        23
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "We’re all targets of unknown forces",
+    "last_thought_beat": 1906,
+    "belief": "The city’s ban will push us out",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -18458,9 +18439,9 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "last_instigated_day": 371,
-    "money": 3225,
-    "skill": 71.5,
+    "last_instigated_day": 474,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "school",
       "title": "in the office",
@@ -18498,22 +18479,22 @@
       "night": "delmarflats"
     },
     "pos": [
-      79,
-      33
+      34,
+      32
     ],
     "dest": [
       50,
       37
     ],
-    "at": "delmarflats",
+    "at": "pawnshop",
     "spot": [
-      79,
-      33
+      34,
+      32
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 96,
+      "energy": 62,
+      "happiness": 39,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -19225,8 +19206,8 @@
         "importance": 5
       },
       {
-        "beat": 1864,
-        "day": 466,
+        "beat": 1905,
+        "day": 476,
         "what": "Booker Lyle started on me in front of people.",
         "importance": 7
       },
@@ -19289,289 +19270,42 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction proves I’m a target",
+        "importance": 8
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
-    "thought": "I need to protect Lyle’s counter",
-    "speech": {
-      "to": "priya",
-      "text": "Watch the counter, don’t let him slip."
-    },
+    "action": "counting the float, in the fog",
+    "activity": "counting the float, in the fog",
+    "thought": "",
+    "speech": null,
     "path": [
       [
         34,
         32
-      ],
-      [
-        34,
-        33
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        36
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        34,
-        38
-      ],
-      [
-        34,
-        39
-      ],
-      [
-        34,
-        40
-      ],
-      [
-        34,
-        41
-      ],
-      [
-        34,
-        42
-      ],
-      [
-        35,
-        42
-      ],
-      [
-        36,
-        42
-      ],
-      [
-        37,
-        42
-      ],
-      [
-        38,
-        42
-      ],
-      [
-        39,
-        42
-      ],
-      [
-        40,
-        42
-      ],
-      [
-        41,
-        42
-      ],
-      [
-        42,
-        42
-      ],
-      [
-        43,
-        42
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        59,
-        42
-      ],
-      [
-        60,
-        42
-      ],
-      [
-        61,
-        42
-      ],
-      [
-        62,
-        42
-      ],
-      [
-        63,
-        42
-      ],
-      [
-        64,
-        42
-      ],
-      [
-        65,
-        42
-      ],
-      [
-        66,
-        42
-      ],
-      [
-        67,
-        42
-      ],
-      [
-        68,
-        42
-      ],
-      [
-        69,
-        42
-      ],
-      [
-        70,
-        42
-      ],
-      [
-        71,
-        42
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        73,
-        42
-      ],
-      [
-        74,
-        42
-      ],
-      [
-        75,
-        42
-      ],
-      [
-        76,
-        42
-      ],
-      [
-        76,
-        41
-      ],
-      [
-        76,
-        40
-      ],
-      [
-        76,
-        39
-      ],
-      [
-        76,
-        38
-      ],
-      [
-        76,
-        37
-      ],
-      [
-        76,
-        36
-      ],
-      [
-        76,
-        35
-      ],
-      [
-        76,
-        34
-      ],
-      [
-        76,
-        33
-      ],
-      [
-        77,
-        33
-      ],
-      [
-        78,
-        33
-      ],
-      [
-        79,
-        33
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "We’ll be punished for standing against Lyle",
+    "last_thought_beat": 1907,
+    "belief": "The conviction proves I’m a target",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 78,
     "chasing": null,
-    "last_instigated_day": 470,
-    "driving": "van",
+    "last_instigated_day": 475,
+    "driving": null,
     "vehicle": "van",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "school",
       "title": "on the desk",
@@ -19623,11 +19357,11 @@
       33
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 94,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 86,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -19913,6 +19647,18 @@
         "day": 470,
         "what": "We’re being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction proves I’ll outlast the competition",
+        "importance": 8
       }
     ],
     "action": "counting the float",
@@ -19921,12 +19667,32 @@
     "speech": null,
     "path": [
       [
+        64,
+        32
+      ],
+      [
+        63,
+        32
+      ],
+      [
+        62,
+        32
+      ],
+      [
+        61,
+        32
+      ],
+      [
+        60,
+        32
+      ],
+      [
         60,
         33
       ]
     ],
-    "last_thought_beat": 1879,
-    "belief": "We’re being hunted",
+    "last_thought_beat": 1900,
+    "belief": "The conviction proves I’ll outlast the competition",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -19934,8 +19700,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": "van",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -19974,22 +19740,19 @@
       "night": "riverflats"
     },
     "pos": [
-      75,
-      16
+      5,
+      64
     ],
     "dest": [
       6,
       63
     ],
-    "at": "riverflats",
-    "spot": [
-      75,
-      16
-    ],
+    "at": "precinct",
+    "spot": null,
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 92,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 80,
       "social_need": 0,
       "fear": 10
     },
@@ -20327,520 +20090,77 @@
         "day": 470,
         "what": "The system is collapsing around us",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction means the city’s politics are weak",
+        "importance": 8
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
-    "thought": "The system is collapsing, I must survive",
-    "speech": {
-      "to": "odette",
-      "text": "Keep your work tight, no slip."
-    },
+    "action": "making bad coffee",
+    "activity": "making bad coffee",
+    "thought": "",
+    "speech": null,
     "path": [
       [
         9,
-        64
+        69
       ],
       [
         8,
-        64
+        69
       ],
       [
         7,
-        64
+        69
       ],
       [
         6,
-        64
+        69
+      ],
+      [
+        5,
+        69
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        65
       ],
       [
         5,
         64
-      ],
-      [
-        5,
-        63
-      ],
-      [
-        5,
-        62
-      ],
-      [
-        5,
-        61
-      ],
-      [
-        5,
-        60
-      ],
-      [
-        5,
-        59
-      ],
-      [
-        5,
-        58
-      ],
-      [
-        6,
-        58
-      ],
-      [
-        7,
-        58
-      ],
-      [
-        8,
-        58
-      ],
-      [
-        9,
-        58
-      ],
-      [
-        10,
-        58
-      ],
-      [
-        11,
-        58
-      ],
-      [
-        12,
-        58
-      ],
-      [
-        12,
-        57
-      ],
-      [
-        12,
-        56
-      ],
-      [
-        12,
-        55
-      ],
-      [
-        12,
-        54
-      ],
-      [
-        12,
-        53
-      ],
-      [
-        12,
-        52
-      ],
-      [
-        12,
-        51
-      ],
-      [
-        12,
-        50
-      ],
-      [
-        12,
-        49
-      ],
-      [
-        12,
-        48
-      ],
-      [
-        12,
-        47
-      ],
-      [
-        12,
-        46
-      ],
-      [
-        12,
-        45
-      ],
-      [
-        12,
-        44
-      ],
-      [
-        12,
-        43
-      ],
-      [
-        12,
-        42
-      ],
-      [
-        12,
-        41
-      ],
-      [
-        12,
-        40
-      ],
-      [
-        12,
-        39
-      ],
-      [
-        12,
-        38
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        12,
-        36
-      ],
-      [
-        12,
-        35
-      ],
-      [
-        12,
-        34
-      ],
-      [
-        12,
-        33
-      ],
-      [
-        12,
-        32
-      ],
-      [
-        12,
-        31
-      ],
-      [
-        12,
-        30
-      ],
-      [
-        12,
-        29
-      ],
-      [
-        12,
-        28
-      ],
-      [
-        12,
-        27
-      ],
-      [
-        12,
-        26
-      ],
-      [
-        13,
-        26
-      ],
-      [
-        14,
-        26
-      ],
-      [
-        15,
-        26
-      ],
-      [
-        16,
-        26
-      ],
-      [
-        17,
-        26
-      ],
-      [
-        18,
-        26
-      ],
-      [
-        19,
-        26
-      ],
-      [
-        20,
-        26
-      ],
-      [
-        21,
-        26
-      ],
-      [
-        22,
-        26
-      ],
-      [
-        23,
-        26
-      ],
-      [
-        24,
-        26
-      ],
-      [
-        25,
-        26
-      ],
-      [
-        26,
-        26
-      ],
-      [
-        27,
-        26
-      ],
-      [
-        28,
-        26
-      ],
-      [
-        29,
-        26
-      ],
-      [
-        30,
-        26
-      ],
-      [
-        31,
-        26
-      ],
-      [
-        32,
-        26
-      ],
-      [
-        33,
-        26
-      ],
-      [
-        34,
-        26
-      ],
-      [
-        35,
-        26
-      ],
-      [
-        36,
-        26
-      ],
-      [
-        37,
-        26
-      ],
-      [
-        38,
-        26
-      ],
-      [
-        39,
-        26
-      ],
-      [
-        40,
-        26
-      ],
-      [
-        41,
-        26
-      ],
-      [
-        42,
-        26
-      ],
-      [
-        43,
-        26
-      ],
-      [
-        44,
-        26
-      ],
-      [
-        45,
-        26
-      ],
-      [
-        46,
-        26
-      ],
-      [
-        47,
-        26
-      ],
-      [
-        48,
-        26
-      ],
-      [
-        49,
-        26
-      ],
-      [
-        50,
-        26
-      ],
-      [
-        51,
-        26
-      ],
-      [
-        52,
-        26
-      ],
-      [
-        53,
-        26
-      ],
-      [
-        54,
-        26
-      ],
-      [
-        55,
-        26
-      ],
-      [
-        56,
-        26
-      ],
-      [
-        57,
-        26
-      ],
-      [
-        58,
-        26
-      ],
-      [
-        59,
-        26
-      ],
-      [
-        60,
-        26
-      ],
-      [
-        61,
-        26
-      ],
-      [
-        62,
-        26
-      ],
-      [
-        63,
-        26
-      ],
-      [
-        64,
-        26
-      ],
-      [
-        65,
-        26
-      ],
-      [
-        66,
-        26
-      ],
-      [
-        67,
-        26
-      ],
-      [
-        68,
-        26
-      ],
-      [
-        69,
-        26
-      ],
-      [
-        70,
-        26
-      ],
-      [
-        71,
-        26
-      ],
-      [
-        72,
-        26
-      ],
-      [
-        73,
-        26
-      ],
-      [
-        74,
-        26
-      ],
-      [
-        75,
-        26
-      ],
-      [
-        75,
-        25
-      ],
-      [
-        75,
-        24
-      ],
-      [
-        75,
-        23
-      ],
-      [
-        75,
-        22
-      ],
-      [
-        75,
-        21
-      ],
-      [
-        75,
-        20
-      ],
-      [
-        75,
-        19
-      ],
-      [
-        75,
-        18
-      ],
-      [
-        75,
-        17
-      ],
-      [
-        75,
-        16
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "The system is collapsing around us",
+    "last_thought_beat": 1908,
+    "belief": "The conviction means the city’s politics are weak",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 34,
     "chasing": null,
-    "driving": "cruiser",
+    "driving": null,
     "vehicle": "cruiser",
-    "money": 3225,
-    "skill": 71.5,
+    "money": 3330,
+    "skill": 73.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -20879,8 +20199,8 @@
       "night": "riverflats"
     },
     "pos": [
-      24,
-      67
+      19,
+      64
     ],
     "dest": [
       75,
@@ -20888,14 +20208,14 @@
     ],
     "at": "clinic",
     "spot": [
-      24,
-      67
+      19,
+      64
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 77,
-      "social_need": 12,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 57,
+      "social_need": 0,
       "fear": 10
     },
     "relationships": {
@@ -21210,6 +20530,18 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will force us to get another doctor",
+        "importance": 8
       }
     ],
     "action": "reading a file",
@@ -21218,12 +20550,40 @@
     "speech": null,
     "path": [
       [
-        24,
+        23,
         67
+      ],
+      [
+        22,
+        67
+      ],
+      [
+        21,
+        67
+      ],
+      [
+        20,
+        67
+      ],
+      [
+        19,
+        67
+      ],
+      [
+        19,
+        66
+      ],
+      [
+        19,
+        65
+      ],
+      [
+        19,
+        64
       ]
     ],
-    "last_thought_beat": 1880,
-    "belief": "The law will hinder our health",
+    "last_thought_beat": 1900,
+    "belief": "The ban will force us to get another doctor",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -21231,8 +20591,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -21270,21 +20630,21 @@
       "night": "delmarflats"
     },
     "pos": [
-      79,
-      33
+      36,
+      67
     ],
     "dest": [
       76,
       40
     ],
-    "at": "delmarflats",
+    "at": "school",
     "spot": [
-      79,
-      33
+      36,
+      67
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
+      "energy": 62,
+      "happiness": 45,
       "stress": 92,
       "social_need": 0,
       "fear": 10
@@ -21469,8 +20829,8 @@
         "importance": 6
       },
       {
-        "beat": 1671,
-        "day": 417,
+        "beat": 1907,
+        "day": 476,
         "what": "Tee’s conviction means I’ll help Nadia escape.",
         "importance": 8
       },
@@ -21563,360 +20923,38 @@
         "day": 470,
         "what": "We’re all in danger",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
+    "action": "filing paperwork",
+    "activity": "filing paperwork",
     "thought": "",
     "speech": null,
     "path": [
       [
-        37,
-        68
-      ],
-      [
-        36,
-        68
-      ],
-      [
         35,
-        68
-      ],
-      [
-        34,
-        68
-      ],
-      [
-        33,
-        68
-      ],
-      [
-        33,
-        67
-      ],
-      [
-        33,
-        66
-      ],
-      [
-        33,
         65
       ],
       [
-        33,
-        64
-      ],
-      [
-        33,
-        63
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        34,
-        62
-      ],
-      [
-        35,
-        62
+        36,
+        65
       ],
       [
         36,
-        62
+        66
       ],
       [
-        37,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        40,
-        62
-      ],
-      [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
-        65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        75,
-        62
-      ],
-      [
-        76,
-        62
-      ],
-      [
-        76,
-        61
-      ],
-      [
-        76,
-        60
-      ],
-      [
-        76,
-        59
-      ],
-      [
-        76,
-        58
-      ],
-      [
-        76,
-        57
-      ],
-      [
-        76,
-        56
-      ],
-      [
-        76,
-        55
-      ],
-      [
-        76,
-        54
-      ],
-      [
-        76,
-        53
-      ],
-      [
-        76,
-        52
-      ],
-      [
-        76,
-        51
-      ],
-      [
-        76,
-        50
-      ],
-      [
-        76,
-        49
-      ],
-      [
-        76,
-        48
-      ],
-      [
-        76,
-        47
-      ],
-      [
-        76,
-        46
-      ],
-      [
-        76,
-        45
-      ],
-      [
-        76,
-        44
-      ],
-      [
-        76,
-        43
-      ],
-      [
-        76,
-        42
-      ],
-      [
-        76,
-        41
-      ],
-      [
-        76,
-        40
-      ],
-      [
-        77,
-        40
-      ],
-      [
-        78,
-        40
-      ],
-      [
-        78,
-        39
-      ],
-      [
-        78,
-        38
-      ],
-      [
-        78,
-        37
-      ],
-      [
-        79,
-        37
-      ],
-      [
-        79,
-        36
-      ],
-      [
-        79,
-        35
-      ],
-      [
-        79,
-        34
-      ],
-      [
-        79,
-        33
+        36,
+        67
       ]
     ],
-    "last_thought_beat": 1880,
-    "belief": "We’re all in danger",
+    "last_thought_beat": 1906,
+    "belief": "The conviction means I must help Nadia escape",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -21924,8 +20962,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -21963,8 +21001,8 @@
       "night": "church"
     },
     "pos": [
-      54,
-      35
+      48,
+      37
     ],
     "dest": [
       50,
@@ -21972,14 +21010,14 @@
     ],
     "at": "church",
     "spot": [
-      54,
-      35
+      48,
+      37
     ],
     "mood": {
-      "energy": 0,
-      "happiness": 50,
-      "stress": 77,
-      "social_need": 100,
+      "energy": 6,
+      "happiness": 45,
+      "stress": 57,
+      "social_need": 94,
       "fear": 10
     },
     "relationships": {
@@ -22274,53 +21312,53 @@
         "day": 470,
         "what": "We’re all targets of a hidden threat",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The law will only hurt more young men",
+        "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
-    "activity": "sitting down for a minute",
+    "action": "reading a file",
+    "activity": "reading a file",
     "thought": "",
     "speech": null,
     "path": [
       [
-        52,
+        49,
         39
       ],
       [
-        53,
+        48,
         39
       ],
       [
-        54,
-        39
-      ],
-      [
-        54,
+        48,
         38
       ],
       [
-        54,
+        48,
         37
-      ],
-      [
-        54,
-        36
-      ],
-      [
-        54,
-        35
       ]
     ],
-    "last_thought_beat": 1882,
+    "last_thought_beat": 1902,
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 10,
     "chasing": null,
     "driving": null,
-    "belief": "We’re all targets of a hidden threat",
+    "belief": "The law will only hurt more young men",
     "vehicle": null,
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -22359,23 +21397,23 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      50
+      78,
+      65
     ],
     "dest": [
       78,
       63
     ],
-    "at": "terrace_a",
+    "at": "depot",
     "spot": [
-      4,
-      50
+      78,
+      65
     ],
     "mood": {
-      "energy": 36,
-      "happiness": 50,
-      "stress": 70,
-      "social_need": 6,
+      "energy": 58,
+      "happiness": 45,
+      "stress": 50,
+      "social_need": 24,
       "fear": 10
     },
     "relationships": {
@@ -22720,420 +21758,53 @@
         "day": 470,
         "what": "We’re all at risk",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban means we can’t secure a mortgage",
+        "importance": 8
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
-    "thought": "We’re all at risk, I must keep quiet",
-    "speech": {
-      "to": "simone",
-      "text": "Let’s keep the kids safe."
-    },
+    "action": "shifting crates",
+    "activity": "shifting crates",
+    "thought": "",
+    "speech": null,
     "path": [
       [
-        75,
-        68
-      ],
-      [
-        75,
-        67
-      ],
-      [
-        75,
+        76,
         66
       ],
       [
-        75,
+        77,
+        66
+      ],
+      [
+        78,
+        66
+      ],
+      [
+        78,
         65
-      ],
-      [
-        75,
-        64
-      ],
-      [
-        76,
-        64
-      ],
-      [
-        77,
-        64
-      ],
-      [
-        78,
-        64
-      ],
-      [
-        78,
-        63
-      ],
-      [
-        78,
-        62
-      ],
-      [
-        78,
-        61
-      ],
-      [
-        77,
-        61
-      ],
-      [
-        76,
-        61
-      ],
-      [
-        75,
-        61
-      ],
-      [
-        74,
-        61
-      ],
-      [
-        73,
-        61
-      ],
-      [
-        72,
-        61
-      ],
-      [
-        71,
-        61
-      ],
-      [
-        70,
-        61
-      ],
-      [
-        69,
-        61
-      ],
-      [
-        68,
-        61
-      ],
-      [
-        67,
-        61
-      ],
-      [
-        66,
-        61
-      ],
-      [
-        65,
-        61
-      ],
-      [
-        64,
-        61
-      ],
-      [
-        63,
-        61
-      ],
-      [
-        62,
-        61
-      ],
-      [
-        61,
-        61
-      ],
-      [
-        60,
-        61
-      ],
-      [
-        59,
-        61
-      ],
-      [
-        58,
-        61
-      ],
-      [
-        57,
-        61
-      ],
-      [
-        56,
-        61
-      ],
-      [
-        55,
-        61
-      ],
-      [
-        54,
-        61
-      ],
-      [
-        53,
-        61
-      ],
-      [
-        52,
-        61
-      ],
-      [
-        51,
-        61
-      ],
-      [
-        50,
-        61
-      ],
-      [
-        49,
-        61
-      ],
-      [
-        48,
-        61
-      ],
-      [
-        47,
-        61
-      ],
-      [
-        46,
-        61
-      ],
-      [
-        45,
-        61
-      ],
-      [
-        44,
-        61
-      ],
-      [
-        43,
-        61
-      ],
-      [
-        42,
-        61
-      ],
-      [
-        41,
-        61
-      ],
-      [
-        40,
-        61
-      ],
-      [
-        39,
-        61
-      ],
-      [
-        38,
-        61
-      ],
-      [
-        37,
-        61
-      ],
-      [
-        36,
-        61
-      ],
-      [
-        35,
-        61
-      ],
-      [
-        34,
-        61
-      ],
-      [
-        33,
-        61
-      ],
-      [
-        32,
-        61
-      ],
-      [
-        31,
-        61
-      ],
-      [
-        30,
-        61
-      ],
-      [
-        29,
-        61
-      ],
-      [
-        28,
-        61
-      ],
-      [
-        27,
-        61
-      ],
-      [
-        26,
-        61
-      ],
-      [
-        25,
-        61
-      ],
-      [
-        24,
-        61
-      ],
-      [
-        23,
-        61
-      ],
-      [
-        22,
-        61
-      ],
-      [
-        21,
-        61
-      ],
-      [
-        20,
-        61
-      ],
-      [
-        19,
-        61
-      ],
-      [
-        18,
-        61
-      ],
-      [
-        17,
-        61
-      ],
-      [
-        16,
-        61
-      ],
-      [
-        15,
-        61
-      ],
-      [
-        14,
-        61
-      ],
-      [
-        13,
-        61
-      ],
-      [
-        12,
-        61
-      ],
-      [
-        11,
-        61
-      ],
-      [
-        10,
-        61
-      ],
-      [
-        9,
-        61
-      ],
-      [
-        8,
-        61
-      ],
-      [
-        7,
-        61
-      ],
-      [
-        6,
-        61
-      ],
-      [
-        5,
-        61
-      ],
-      [
-        4,
-        61
-      ],
-      [
-        3,
-        61
-      ],
-      [
-        3,
-        60
-      ],
-      [
-        3,
-        59
-      ],
-      [
-        3,
-        58
-      ],
-      [
-        3,
-        57
-      ],
-      [
-        3,
-        56
-      ],
-      [
-        3,
-        55
-      ],
-      [
-        3,
-        54
-      ],
-      [
-        3,
-        53
-      ],
-      [
-        3,
-        52
-      ],
-      [
-        3,
-        51
-      ],
-      [
-        3,
-        50
-      ],
-      [
-        4,
-        50
       ]
     ],
-    "last_thought_beat": 1886,
-    "belief": "We’re all at risk",
+    "last_thought_beat": 1902,
+    "belief": "The ban means we can’t secure a mortgage",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 46,
     "chasing": null,
-    "driving": "car",
+    "driving": null,
     "vehicle": "car",
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -23174,22 +21845,22 @@
       "night": "riverflats"
     },
     "pos": [
-      28,
-      18
+      61,
+      21
     ],
     "dest": [
       63,
       21
     ],
-    "at": "harborbar",
+    "at": "cannery",
     "spot": [
-      28,
-      18
+      61,
+      21
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 77,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 57,
       "social_need": 0,
       "fear": 10
     },
@@ -23547,230 +22218,50 @@
         "day": 470,
         "what": "We’re being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows we must escape danger",
+        "importance": 8
       }
     ],
-    "action": "talking over the table",
-    "activity": "talking over the table",
+    "action": "shifting crates",
+    "activity": "shifting crates",
     "thought": "",
     "speech": null,
     "path": [
       [
-        65,
-        21
-      ],
-      [
-        64,
-        21
-      ],
-      [
-        63,
-        21
-      ],
-      [
-        62,
-        21
-      ],
-      [
-        62,
+        60,
         22
-      ],
-      [
-        62,
-        23
-      ],
-      [
-        62,
-        24
-      ],
-      [
-        62,
-        25
-      ],
-      [
-        62,
-        26
       ],
       [
         61,
-        26
-      ],
-      [
-        60,
-        26
-      ],
-      [
-        59,
-        26
-      ],
-      [
-        58,
-        26
-      ],
-      [
-        57,
-        26
-      ],
-      [
-        56,
-        26
-      ],
-      [
-        55,
-        26
-      ],
-      [
-        54,
-        26
-      ],
-      [
-        53,
-        26
-      ],
-      [
-        52,
-        26
-      ],
-      [
-        51,
-        26
-      ],
-      [
-        50,
-        26
-      ],
-      [
-        49,
-        26
-      ],
-      [
-        48,
-        26
-      ],
-      [
-        47,
-        26
-      ],
-      [
-        46,
-        26
-      ],
-      [
-        45,
-        26
-      ],
-      [
-        44,
-        26
-      ],
-      [
-        43,
-        26
-      ],
-      [
-        42,
-        26
-      ],
-      [
-        41,
-        26
-      ],
-      [
-        40,
-        26
-      ],
-      [
-        40,
-        25
-      ],
-      [
-        40,
-        24
-      ],
-      [
-        40,
-        23
-      ],
-      [
-        40,
         22
       ],
       [
-        40,
+        61,
         21
-      ],
-      [
-        39,
-        21
-      ],
-      [
-        38,
-        21
-      ],
-      [
-        37,
-        21
-      ],
-      [
-        36,
-        21
-      ],
-      [
-        35,
-        21
-      ],
-      [
-        34,
-        21
-      ],
-      [
-        33,
-        21
-      ],
-      [
-        32,
-        21
-      ],
-      [
-        31,
-        21
-      ],
-      [
-        31,
-        20
-      ],
-      [
-        31,
-        19
-      ],
-      [
-        30,
-        19
-      ],
-      [
-        29,
-        19
-      ],
-      [
-        28,
-        19
-      ],
-      [
-        28,
-        18
       ]
     ],
-    "last_thought_beat": 1878,
-    "belief": "We’re being hunted",
+    "last_thought_beat": 1907,
+    "belief": "The conviction shows we must escape danger",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 66,
     "chasing": null,
     "last_instigated_day": 468,
-    "driving": "van",
+    "driving": null,
     "vehicle": "van",
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -23809,23 +22300,20 @@
       "night": "underpass"
     },
     "pos": [
-      62,
-      66
+      80,
+      51
     ],
     "dest": [
       79,
       51
     ],
-    "at": "underpass",
-    "spot": [
-      62,
-      66
-    ],
+    "at": "green",
+    "spot": null,
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 98,
-      "social_need": 94,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 85,
+      "social_need": 82,
       "fear": 10
     },
     "relationships": {
@@ -24582,152 +23070,32 @@
         "day": 470,
         "what": "Errol Osei died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction proves I’m not valued",
+        "importance": 8
       }
     ],
-    "action": "sitting on a bench",
-    "activity": "sitting on a bench",
+    "action": "standing around",
+    "activity": "standing around",
     "thought": "",
     "speech": null,
     "path": [
       [
         80,
         51
-      ],
-      [
-        79,
-        51
-      ],
-      [
-        78,
-        51
-      ],
-      [
-        77,
-        51
-      ],
-      [
-        76,
-        51
-      ],
-      [
-        75,
-        51
-      ],
-      [
-        74,
-        51
-      ],
-      [
-        73,
-        51
-      ],
-      [
-        72,
-        51
-      ],
-      [
-        71,
-        51
-      ],
-      [
-        70,
-        51
-      ],
-      [
-        69,
-        51
-      ],
-      [
-        68,
-        51
-      ],
-      [
-        67,
-        51
-      ],
-      [
-        67,
-        52
-      ],
-      [
-        67,
-        53
-      ],
-      [
-        67,
-        54
-      ],
-      [
-        67,
-        55
-      ],
-      [
-        66,
-        55
-      ],
-      [
-        65,
-        55
-      ],
-      [
-        64,
-        55
-      ],
-      [
-        63,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        62,
-        56
-      ],
-      [
-        62,
-        57
-      ],
-      [
-        62,
-        58
-      ],
-      [
-        62,
-        59
-      ],
-      [
-        62,
-        60
-      ],
-      [
-        62,
-        61
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        62,
-        63
-      ],
-      [
-        62,
-        64
-      ],
-      [
-        62,
-        65
-      ],
-      [
-        62,
-        66
       ]
     ],
-    "last_thought_beat": 1885,
-    "belief": "We’re being hunted for our worth",
+    "last_thought_beat": 1905,
+    "belief": "The conviction proves I’m not valued",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -24736,8 +23104,8 @@
     "last_instigated_day": 465,
     "driving": null,
     "vehicle": null,
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -24774,24 +23142,24 @@
       "night": "okonkwo"
     },
     "pos": [
-      60,
-      49
+      36,
+      32
     ],
     "dest": [
       62,
       53
     ],
-    "at": "okonkwo",
+    "at": "pawnshop",
     "spot": [
-      60,
-      49
+      36,
+      32
     ],
     "mood": {
-      "energy": 40,
+      "energy": 62,
       "happiness": 45,
       "stress": 86,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -25099,266 +23467,42 @@
         "day": 470,
         "what": "The city is a trap",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s law will force me to leave",
+        "importance": 8
       }
     ],
-    "belief": "The city is a trap",
+    "belief": "The city’s law will force me to leave",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 236,
-    "last_thought_beat": 1877,
-    "activity": "washing up",
+    "last_thought_beat": 1908,
+    "activity": "restocking shelves",
     "path": [
       [
-        34,
-        32
-      ],
-      [
-        34,
-        33
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        36
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        35,
-        37
-      ],
-      [
         36,
-        37
-      ],
-      [
-        37,
-        37
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        39,
-        37
-      ],
-      [
-        40,
-        37
-      ],
-      [
-        41,
-        37
-      ],
-      [
-        42,
-        37
-      ],
-      [
-        43,
-        37
-      ],
-      [
-        44,
-        37
-      ],
-      [
-        44,
-        38
-      ],
-      [
-        44,
-        39
-      ],
-      [
-        44,
-        40
-      ],
-      [
-        44,
-        41
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        58,
-        43
-      ],
-      [
-        58,
-        44
-      ],
-      [
-        58,
-        45
-      ],
-      [
-        58,
-        46
-      ],
-      [
-        58,
-        47
-      ],
-      [
-        58,
-        48
-      ],
-      [
-        58,
-        49
-      ],
-      [
-        58,
-        50
-      ],
-      [
-        58,
-        51
-      ],
-      [
-        58,
-        52
-      ],
-      [
-        58,
-        53
-      ],
-      [
-        58,
-        54
-      ],
-      [
-        58,
-        55
-      ],
-      [
-        59,
-        55
-      ],
-      [
-        60,
-        55
-      ],
-      [
-        61,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        62,
-        54
-      ],
-      [
-        62,
-        53
-      ],
-      [
-        61,
-        53
-      ],
-      [
-        60,
-        53
-      ],
-      [
-        60,
-        52
-      ],
-      [
-        60,
-        51
-      ],
-      [
-        60,
-        50
-      ],
-      [
-        60,
-        49
+        32
       ]
     ],
-    "action": "washing up",
+    "action": "restocking shelves",
     "thought": "",
     "speech": null,
     "volatility": 45,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "cannery",
       "title": "on nights",
@@ -25395,24 +23539,21 @@
       "night": "riverflats"
     },
     "pos": [
-      83,
-      23
+      5,
+      64
     ],
     "dest": [
       75,
       24
     ],
-    "at": "riverflats",
-    "spot": [
-      83,
-      23
-    ],
+    "at": "precinct",
+    "spot": null,
     "mood": {
-      "energy": 40,
+      "energy": 62,
       "happiness": 45,
-      "stress": 93,
+      "stress": 76,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -25648,554 +23789,58 @@
         "day": 470,
         "what": "We’re all under threat",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will keep us from owning the room",
+        "importance": 8
       }
     ],
-    "belief": "We’re all under threat",
+    "belief": "The ban will keep us from owning the room",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 260,
-    "last_thought_beat": 1884,
+    "last_thought_beat": 1908,
     "volatility": 33,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "making bad coffee",
     "path": [
       [
-        5,
+        9,
+        64
+      ],
+      [
+        8,
+        64
+      ],
+      [
+        7,
+        64
+      ],
+      [
+        6,
         64
       ],
       [
         5,
-        63
-      ],
-      [
-        5,
-        62
-      ],
-      [
-        6,
-        62
-      ],
-      [
-        7,
-        62
-      ],
-      [
-        8,
-        62
-      ],
-      [
-        9,
-        62
-      ],
-      [
-        10,
-        62
-      ],
-      [
-        11,
-        62
-      ],
-      [
-        12,
-        62
-      ],
-      [
-        13,
-        62
-      ],
-      [
-        14,
-        62
-      ],
-      [
-        15,
-        62
-      ],
-      [
-        16,
-        62
-      ],
-      [
-        17,
-        62
-      ],
-      [
-        18,
-        62
-      ],
-      [
-        19,
-        62
-      ],
-      [
-        20,
-        62
-      ],
-      [
-        21,
-        62
-      ],
-      [
-        22,
-        62
-      ],
-      [
-        23,
-        62
-      ],
-      [
-        24,
-        62
-      ],
-      [
-        25,
-        62
-      ],
-      [
-        26,
-        62
-      ],
-      [
-        27,
-        62
-      ],
-      [
-        28,
-        62
-      ],
-      [
-        29,
-        62
-      ],
-      [
-        30,
-        62
-      ],
-      [
-        31,
-        62
-      ],
-      [
-        32,
-        62
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        34,
-        62
-      ],
-      [
-        35,
-        62
-      ],
-      [
-        36,
-        62
-      ],
-      [
-        37,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        40,
-        62
-      ],
-      [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
-        65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        72,
-        61
-      ],
-      [
-        72,
-        60
-      ],
-      [
-        72,
-        59
-      ],
-      [
-        72,
-        58
-      ],
-      [
-        72,
-        57
-      ],
-      [
-        72,
-        56
-      ],
-      [
-        72,
-        55
-      ],
-      [
-        72,
-        54
-      ],
-      [
-        72,
-        53
-      ],
-      [
-        72,
-        52
-      ],
-      [
-        72,
-        51
-      ],
-      [
-        72,
-        50
-      ],
-      [
-        72,
-        49
-      ],
-      [
-        72,
-        48
-      ],
-      [
-        72,
-        47
-      ],
-      [
-        72,
-        46
-      ],
-      [
-        72,
-        45
-      ],
-      [
-        72,
-        44
-      ],
-      [
-        72,
-        43
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        72,
-        41
-      ],
-      [
-        72,
-        40
-      ],
-      [
-        72,
-        39
-      ],
-      [
-        72,
-        38
-      ],
-      [
-        72,
-        37
-      ],
-      [
-        72,
-        36
-      ],
-      [
-        72,
-        35
-      ],
-      [
-        72,
-        34
-      ],
-      [
-        72,
-        33
-      ],
-      [
-        72,
-        32
-      ],
-      [
-        72,
-        31
-      ],
-      [
-        72,
-        30
-      ],
-      [
-        73,
-        30
-      ],
-      [
-        74,
-        30
-      ],
-      [
-        75,
-        30
-      ],
-      [
-        75,
-        29
-      ],
-      [
-        75,
-        28
-      ],
-      [
-        75,
-        27
-      ],
-      [
-        75,
-        26
-      ],
-      [
-        75,
-        25
-      ],
-      [
-        75,
-        24
-      ],
-      [
-        75,
-        23
-      ],
-      [
-        75,
-        22
-      ],
-      [
-        75,
-        21
-      ],
-      [
-        75,
-        20
-      ],
-      [
-        75,
-        19
-      ],
-      [
-        75,
-        18
-      ],
-      [
-        76,
-        18
-      ],
-      [
-        76,
-        17
-      ],
-      [
-        77,
-        17
-      ],
-      [
-        78,
-        17
-      ],
-      [
-        79,
-        17
-      ],
-      [
-        80,
-        17
-      ],
-      [
-        81,
-        17
-      ],
-      [
-        82,
-        17
-      ],
-      [
-        83,
-        17
-      ],
-      [
-        83,
-        18
-      ],
-      [
-        83,
-        19
-      ],
-      [
-        83,
-        20
-      ],
-      [
-        83,
-        21
-      ],
-      [
-        83,
-        22
-      ],
-      [
-        83,
-        23
+        64
       ]
     ],
-    "action": "watching television",
+    "action": "making bad coffee",
     "thought": "",
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 2888,
-    "skill": 71.5,
+    "money": 2981,
+    "skill": 73.0,
     "job": {
       "at": "cannery",
       "title": "loading",
@@ -26232,24 +23877,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      75,
-      35
+      6,
+      32
     ],
     "dest": [
       76,
       40
     ],
-    "at": "delmarflats",
+    "at": "cornerstore",
     "spot": [
-      75,
-      35
+      6,
+      32
     ],
     "mood": {
-      "energy": 40,
+      "energy": 62,
       "happiness": 45,
       "stress": 98,
       "social_need": 0,
-      "fear": 13
+      "fear": 16
     },
     "relationships": {
       "kohl": {
@@ -26491,18 +24136,30 @@
         "day": 470,
         "what": "The city is a danger zone",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction proves the city will harm us",
+        "importance": 8
       }
     ],
-    "belief": "The city is a danger zone",
+    "belief": "The conviction proves the city will harm us",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 344,
-    "last_thought_beat": 1885,
+    "last_thought_beat": 1907,
     "vehicle": null,
     "volatility": 45,
-    "money": 2812,
-    "skill": 70.5,
+    "money": 2905,
+    "skill": 72.0,
     "job": {
       "at": "cannery",
       "title": "on the line",
@@ -26514,375 +24171,27 @@
     "children": [],
     "birth_day": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "behind the till",
     "driving": null,
     "path": [
       [
-        6,
-        32
-      ],
-      [
-        5,
-        32
-      ],
-      [
-        5,
-        33
-      ],
-      [
-        5,
+        7,
         34
       ],
       [
-        5,
-        35
-      ],
-      [
-        5,
-        36
-      ],
-      [
-        5,
-        37
+        6,
+        34
       ],
       [
         6,
-        37
+        33
       ],
       [
-        7,
-        37
-      ],
-      [
-        8,
-        37
-      ],
-      [
-        9,
-        37
-      ],
-      [
-        10,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        13,
-        37
-      ],
-      [
-        14,
-        37
-      ],
-      [
-        15,
-        37
-      ],
-      [
-        16,
-        37
-      ],
-      [
-        17,
-        37
-      ],
-      [
-        18,
-        37
-      ],
-      [
-        19,
-        37
-      ],
-      [
-        20,
-        37
-      ],
-      [
-        21,
-        37
-      ],
-      [
-        22,
-        37
-      ],
-      [
-        23,
-        37
-      ],
-      [
-        24,
-        37
-      ],
-      [
-        25,
-        37
-      ],
-      [
-        26,
-        37
-      ],
-      [
-        27,
-        37
-      ],
-      [
-        28,
-        37
-      ],
-      [
-        29,
-        37
-      ],
-      [
-        30,
-        37
-      ],
-      [
-        31,
-        37
-      ],
-      [
-        32,
-        37
-      ],
-      [
-        33,
-        37
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        35,
-        37
-      ],
-      [
-        36,
-        37
-      ],
-      [
-        37,
-        37
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        39,
-        37
-      ],
-      [
-        40,
-        37
-      ],
-      [
-        41,
-        37
-      ],
-      [
-        42,
-        37
-      ],
-      [
-        43,
-        37
-      ],
-      [
-        44,
-        37
-      ],
-      [
-        44,
-        38
-      ],
-      [
-        44,
-        39
-      ],
-      [
-        44,
-        40
-      ],
-      [
-        44,
-        41
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        59,
-        42
-      ],
-      [
-        60,
-        42
-      ],
-      [
-        61,
-        42
-      ],
-      [
-        62,
-        42
-      ],
-      [
-        63,
-        42
-      ],
-      [
-        64,
-        42
-      ],
-      [
-        65,
-        42
-      ],
-      [
-        66,
-        42
-      ],
-      [
-        67,
-        42
-      ],
-      [
-        68,
-        42
-      ],
-      [
-        69,
-        42
-      ],
-      [
-        70,
-        42
-      ],
-      [
-        71,
-        42
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        73,
-        42
-      ],
-      [
-        74,
-        42
-      ],
-      [
-        75,
-        42
-      ],
-      [
-        76,
-        42
-      ],
-      [
-        76,
-        41
-      ],
-      [
-        76,
-        40
-      ],
-      [
-        75,
-        40
-      ],
-      [
-        75,
-        39
-      ],
-      [
-        75,
-        38
-      ],
-      [
-        75,
-        37
-      ],
-      [
-        75,
-        36
-      ],
-      [
-        75,
-        35
+        6,
+        32
       ]
     ],
-    "action": "watching television",
+    "action": "behind the till",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -26911,8 +24220,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      7,
+      50
     ],
     "dest": [
       8,
@@ -26920,13 +24229,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      7,
+      50
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 96,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -26948,7 +24257,7 @@
         "opinion": "not sure about them"
       },
       "elias": {
-        "affinity": -92,
+        "affinity": -100,
         "opinion": "hostile"
       }
     },
@@ -27056,8 +24365,8 @@
         "importance": 8
       },
       {
-        "beat": 1876,
-        "day": 469,
+        "beat": 1907,
+        "day": 476,
         "what": "Elias Reyes started on me in front of people.",
         "importance": 7
       },
@@ -27180,9 +24489,21 @@
         "day": 470,
         "what": "The city is falling apart",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction proves I’m seen as a threat",
+        "importance": 8
       }
     ],
-    "belief": "The city is falling apart",
+    "belief": "The conviction proves I’m seen as a threat",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -27199,37 +24520,29 @@
     "partner": null,
     "birth_day": 344,
     "arrived_day": 344,
-    "last_thought_beat": 1882,
+    "last_thought_beat": 1906,
     "chasing": null,
-    "activity": "washing up",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
-        9,
-        52
+        8,
+        48
       ],
       [
-        8,
-        52
+        7,
+        48
       ],
       [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
+        7,
         49
       ],
       [
-        8,
-        48
+        7,
+        50
       ]
     ],
-    "action": "washing up",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -27258,8 +24571,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -27267,13 +24580,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 91,
+      "energy": 62,
+      "happiness": 37,
+      "stress": 100,
       "social_need": 0,
       "fear": 10
     },
@@ -27295,7 +24608,7 @@
         "opinion": "not sure about them"
       },
       "jonah": {
-        "affinity": -67,
+        "affinity": -75,
         "opinion": "He’s annoying"
       }
     },
@@ -27521,12 +24834,30 @@
         "day": 470,
         "what": "The city’s trust is eroding",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows authority ignores us",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Jonah wouldn't stop shouting about the furniture while Errol was still in the next room.",
+        "importance": 7
       }
     ],
-    "belief": "The city’s trust is eroding",
+    "belief": "The conviction shows authority ignores us",
     "alive": true,
     "health": 90,
-    "grief": 36,
+    "grief": 27,
     "volatility": 69,
     "vehicle": null,
     "money": 0,
@@ -27540,34 +24871,33 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 1884,
+    "last_thought_beat": 1909,
     "chasing": null,
-    "activity": "going through the post",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
         8,
-        48
+        53
       ],
       [
-        7,
-        48
+        9,
+        53
       ],
       [
-        7,
-        49
-      ],
-      [
-        7,
-        50
+        9,
+        52
       ]
     ],
-    "action": "going through the post",
-    "thought": "",
-    "speech": null,
+    "action": "Stares blankly at the television screen while Jonah speaks.",
+    "thought": "I am not listening to any of this anymore.",
+    "speech": {
+      "to": "jonah",
+      "text": "Leave it alone, Jonah. Just leave it."
+    },
     "standing": 45,
     "directive": null,
-    "last_instigated_day": 469,
+    "last_instigated_day": 476,
     "detained_until": 0
   },
   "etta": {
@@ -27606,9 +24936,9 @@
       48
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 94,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 77,
       "social_need": 0,
       "fear": 10
     },
@@ -27810,9 +25140,21 @@
         "day": 470,
         "what": "We’re all being hunted",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The law will make our mother proud of nothing",
+        "importance": 8
       }
     ],
-    "belief": "We’re all being hunted",
+    "belief": "The law will make our mother proud of nothing",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -27829,24 +25171,41 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 1886,
+    "last_thought_beat": 1902,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
+      [
+        3,
+        52
+      ],
+      [
+        4,
+        52
+      ],
+      [
+        4,
+        51
+      ],
+      [
+        4,
+        50
+      ],
+      [
+        4,
+        49
+      ],
       [
         4,
         48
       ]
     ],
-    "action": "watching television",
-    "thought": "We’re being hunted, I wish I could run",
-    "speech": {
-      "to": "simone",
-      "text": "Mom, you’re doing good."
-    }
+    "action": "napping on the sofa",
+    "thought": "",
+    "speech": null
   },
   "nia": {
     "id": "nia",
@@ -27871,24 +25230,24 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
-      49
+      61,
+      21
     ],
     "dest": [
       33,
       52
     ],
-    "at": "vasquez",
+    "at": "cannery",
     "spot": [
-      35,
-      49
+      61,
+      21
     ],
     "mood": {
-      "energy": 66,
-      "happiness": 45,
-      "stress": 96,
+      "energy": 56,
+      "happiness": 30,
+      "stress": 94,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -27896,8 +25255,8 @@
         "opinion": "aggressive"
       },
       "malik": {
-        "affinity": -27,
-        "opinion": "I’ll become someone"
+        "affinity": -35,
+        "opinion": "Malik sees my potential"
       },
       "hector": {
         "affinity": 2,
@@ -28144,20 +25503,44 @@
         "day": 470,
         "what": "We’re all at risk",
         "importance": 8
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "I was taken in over Public Haircut Ban.",
+        "importance": 8
+      },
+      {
+        "beat": 1899,
+        "day": 474,
+        "what": "The Public Haircut Ban shows the block can rally for me",
+        "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "I was convicted over Public Haircut Ban: a $100 fine.",
+        "importance": 9
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will keep me from moving on",
+        "importance": 8
       }
     ],
-    "belief": "We’re all at risk",
+    "belief": "The ban will keep me from moving on",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 351,
-    "last_thought_beat": 1883,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1904,
+    "activity": "shifting crates, in the fog",
+    "action": "shifting crates, in the fog",
     "vehicle": null,
     "volatility": 45,
-    "money": 2554,
-    "skill": 67.0,
+    "money": 2647,
+    "skill": 68.5,
     "job": {
       "at": "cannery",
       "title": "works the line at the cannery",
@@ -28174,300 +25557,21 @@
     "driving": null,
     "path": [
       [
-        65,
-        21
-      ],
-      [
-        64,
-        21
-      ],
-      [
-        63,
-        21
-      ],
-      [
-        62,
-        21
-      ],
-      [
-        62,
+        60,
         22
       ],
       [
-        62,
-        23
-      ],
-      [
-        62,
-        24
-      ],
-      [
-        62,
-        25
-      ],
-      [
-        62,
-        26
+        61,
+        22
       ],
       [
         61,
-        26
-      ],
-      [
-        60,
-        26
-      ],
-      [
-        59,
-        26
-      ],
-      [
-        58,
-        26
-      ],
-      [
-        57,
-        26
-      ],
-      [
-        56,
-        26
-      ],
-      [
-        55,
-        26
-      ],
-      [
-        54,
-        26
-      ],
-      [
-        53,
-        26
-      ],
-      [
-        52,
-        26
-      ],
-      [
-        51,
-        26
-      ],
-      [
-        50,
-        26
-      ],
-      [
-        49,
-        26
-      ],
-      [
-        48,
-        26
-      ],
-      [
-        47,
-        26
-      ],
-      [
-        46,
-        26
-      ],
-      [
-        45,
-        26
-      ],
-      [
-        44,
-        26
-      ],
-      [
-        43,
-        26
-      ],
-      [
-        42,
-        26
-      ],
-      [
-        41,
-        26
-      ],
-      [
-        40,
-        26
-      ],
-      [
-        39,
-        26
-      ],
-      [
-        38,
-        26
-      ],
-      [
-        38,
-        27
-      ],
-      [
-        38,
-        28
-      ],
-      [
-        38,
-        29
-      ],
-      [
-        38,
-        30
-      ],
-      [
-        38,
-        31
-      ],
-      [
-        38,
-        32
-      ],
-      [
-        38,
-        33
-      ],
-      [
-        38,
-        34
-      ],
-      [
-        38,
-        35
-      ],
-      [
-        38,
-        36
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        38,
-        38
-      ],
-      [
-        38,
-        39
-      ],
-      [
-        38,
-        40
-      ],
-      [
-        38,
-        41
-      ],
-      [
-        38,
-        42
-      ],
-      [
-        38,
-        43
-      ],
-      [
-        38,
-        44
-      ],
-      [
-        38,
-        45
-      ],
-      [
-        38,
-        46
-      ],
-      [
-        38,
-        47
-      ],
-      [
-        38,
-        48
-      ],
-      [
-        38,
-        49
-      ],
-      [
-        38,
-        50
-      ],
-      [
-        38,
-        51
-      ],
-      [
-        38,
-        52
-      ],
-      [
-        38,
-        53
-      ],
-      [
-        38,
-        54
-      ],
-      [
-        37,
-        54
-      ],
-      [
-        36,
-        54
-      ],
-      [
-        35,
-        54
-      ],
-      [
-        34,
-        54
-      ],
-      [
-        33,
-        54
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        34,
-        52
-      ],
-      [
-        35,
-        52
-      ],
-      [
-        35,
-        51
-      ],
-      [
-        35,
-        50
-      ],
-      [
-        35,
-        49
+        21
       ]
     ],
     "thought": "",
-    "speech": null
+    "speech": null,
+    "detained_until": 0
   },
   "dev": {
     "id": "dev",
@@ -28492,24 +25596,24 @@
       "night": "new_home_270"
     },
     "pos": [
-      87,
-      81
+      25,
+      32
     ],
     "dest": [
       88,
       84
     ],
-    "at": "new_home_270",
+    "at": "diner",
     "spot": [
-      87,
-      81
+      25,
+      32
     ],
     "mood": {
-      "energy": 0,
+      "energy": 22,
       "happiness": 45,
-      "stress": 96,
-      "social_need": 100,
-      "fear": 13
+      "stress": 76,
+      "social_need": 76,
+      "fear": 10
     },
     "relationships": {
       "nia2": {
@@ -28713,20 +25817,32 @@
         "day": 470,
         "what": "Everyone’s life is at risk",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The law will drive families out",
+        "importance": 8
       }
     ],
-    "belief": "Everyone’s life is at risk",
+    "belief": "The law will drive families out",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 352,
-    "last_thought_beat": 1883,
-    "activity": "sitting down for a minute",
-    "action": "sitting down for a minute",
+    "last_thought_beat": 1902,
+    "activity": "wiping down the counter",
+    "action": "wiping down the counter",
     "vehicle": null,
     "volatility": 45,
-    "money": 1850,
-    "skill": 66.5,
+    "money": 1916,
+    "skill": 68.0,
     "job": {
       "at": "diner",
       "title": "cuts and sets hair out of a back room",
@@ -28743,7 +25859,7 @@
     "driving": null,
     "path": [
       [
-        25,
+        27,
         32
       ],
       [
@@ -28751,492 +25867,8 @@
         32
       ],
       [
-        27,
+        25,
         32
-      ],
-      [
-        27,
-        33
-      ],
-      [
-        27,
-        34
-      ],
-      [
-        27,
-        35
-      ],
-      [
-        27,
-        36
-      ],
-      [
-        27,
-        37
-      ],
-      [
-        28,
-        37
-      ],
-      [
-        29,
-        37
-      ],
-      [
-        30,
-        37
-      ],
-      [
-        31,
-        37
-      ],
-      [
-        32,
-        37
-      ],
-      [
-        33,
-        37
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        35,
-        37
-      ],
-      [
-        36,
-        37
-      ],
-      [
-        37,
-        37
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        39,
-        37
-      ],
-      [
-        40,
-        37
-      ],
-      [
-        41,
-        37
-      ],
-      [
-        42,
-        37
-      ],
-      [
-        43,
-        37
-      ],
-      [
-        44,
-        37
-      ],
-      [
-        44,
-        38
-      ],
-      [
-        44,
-        39
-      ],
-      [
-        44,
-        40
-      ],
-      [
-        44,
-        41
-      ],
-      [
-        44,
-        42
-      ],
-      [
-        45,
-        42
-      ],
-      [
-        46,
-        42
-      ],
-      [
-        47,
-        42
-      ],
-      [
-        48,
-        42
-      ],
-      [
-        49,
-        42
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        59,
-        42
-      ],
-      [
-        60,
-        42
-      ],
-      [
-        61,
-        42
-      ],
-      [
-        62,
-        42
-      ],
-      [
-        63,
-        42
-      ],
-      [
-        64,
-        42
-      ],
-      [
-        65,
-        42
-      ],
-      [
-        66,
-        42
-      ],
-      [
-        67,
-        42
-      ],
-      [
-        68,
-        42
-      ],
-      [
-        69,
-        42
-      ],
-      [
-        70,
-        42
-      ],
-      [
-        71,
-        42
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        72,
-        43
-      ],
-      [
-        72,
-        44
-      ],
-      [
-        72,
-        45
-      ],
-      [
-        72,
-        46
-      ],
-      [
-        72,
-        47
-      ],
-      [
-        72,
-        48
-      ],
-      [
-        72,
-        49
-      ],
-      [
-        72,
-        50
-      ],
-      [
-        72,
-        51
-      ],
-      [
-        72,
-        52
-      ],
-      [
-        72,
-        53
-      ],
-      [
-        72,
-        54
-      ],
-      [
-        72,
-        55
-      ],
-      [
-        72,
-        56
-      ],
-      [
-        72,
-        57
-      ],
-      [
-        72,
-        58
-      ],
-      [
-        72,
-        59
-      ],
-      [
-        72,
-        60
-      ],
-      [
-        72,
-        61
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        72,
-        63
-      ],
-      [
-        72,
-        64
-      ],
-      [
-        72,
-        65
-      ],
-      [
-        72,
-        66
-      ],
-      [
-        72,
-        67
-      ],
-      [
-        72,
-        68
-      ],
-      [
-        72,
-        69
-      ],
-      [
-        72,
-        70
-      ],
-      [
-        72,
-        71
-      ],
-      [
-        72,
-        72
-      ],
-      [
-        73,
-        72
-      ],
-      [
-        74,
-        72
-      ],
-      [
-        75,
-        72
-      ],
-      [
-        76,
-        72
-      ],
-      [
-        77,
-        72
-      ],
-      [
-        78,
-        72
-      ],
-      [
-        79,
-        72
-      ],
-      [
-        80,
-        72
-      ],
-      [
-        81,
-        72
-      ],
-      [
-        82,
-        72
-      ],
-      [
-        83,
-        72
-      ],
-      [
-        84,
-        72
-      ],
-      [
-        84,
-        73
-      ],
-      [
-        84,
-        74
-      ],
-      [
-        84,
-        75
-      ],
-      [
-        84,
-        76
-      ],
-      [
-        84,
-        77
-      ],
-      [
-        84,
-        78
-      ],
-      [
-        84,
-        79
-      ],
-      [
-        84,
-        80
-      ],
-      [
-        84,
-        81
-      ],
-      [
-        84,
-        82
-      ],
-      [
-        84,
-        83
-      ],
-      [
-        84,
-        84
-      ],
-      [
-        84,
-        85
-      ],
-      [
-        84,
-        86
-      ],
-      [
-        85,
-        86
-      ],
-      [
-        86,
-        86
-      ],
-      [
-        87,
-        86
-      ],
-      [
-        88,
-        86
-      ],
-      [
-        88,
-        85
-      ],
-      [
-        88,
-        84
-      ],
-      [
-        87,
-        84
-      ],
-      [
-        87,
-        83
-      ],
-      [
-        87,
-        82
-      ],
-      [
-        87,
-        81
       ]
     ],
     "thought": "",
@@ -29266,24 +25898,24 @@
       "night": "riverflats"
     },
     "pos": [
-      76,
-      16
+      53,
+      85
     ],
     "dest": [
       75,
       24
     ],
-    "at": "riverflats",
+    "at": "civic_shop_347b",
     "spot": [
-      76,
-      16
+      53,
+      85
     ],
     "mood": {
-      "energy": 40,
+      "energy": 62,
       "happiness": 45,
-      "stress": 89,
+      "stress": 95,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "iris": {
@@ -29491,20 +26123,38 @@
         "day": 470,
         "what": "The city is unsafe",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban will keep me from owning a room",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Errol brought me three broken toasters and asked if I could find a gear.",
+        "importance": 5
       }
     ],
-    "belief": "The city is unsafe",
+    "belief": "The ban will keep me from owning a room",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 356,
-    "last_thought_beat": 1886,
-    "activity": "washing up",
-    "action": "washing up",
+    "last_thought_beat": 1909,
+    "activity": "restocking shelves",
+    "action": "Puts a rusted tin of soup back on the riser.",
     "vehicle": null,
     "volatility": 45,
-    "money": 2160,
-    "skill": 64.5,
+    "money": 2244,
+    "skill": 66.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "fixes what other people throw out",
@@ -29529,418 +26179,18 @@
         83
       ],
       [
-        52,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        51,
+        53,
         84
-      ],
-      [
-        51,
-        85
-      ],
-      [
-        51,
-        86
-      ],
-      [
-        51,
-        87
-      ],
-      [
-        52,
-        87
       ],
       [
         53,
-        87
-      ],
-      [
-        54,
-        87
-      ],
-      [
-        55,
-        87
-      ],
-      [
-        56,
-        87
-      ],
-      [
-        57,
-        87
-      ],
-      [
-        58,
-        87
-      ],
-      [
-        59,
-        87
-      ],
-      [
-        60,
-        87
-      ],
-      [
-        61,
-        87
-      ],
-      [
-        62,
-        87
-      ],
-      [
-        63,
-        87
-      ],
-      [
-        64,
-        87
-      ],
-      [
-        65,
-        87
-      ],
-      [
-        66,
-        87
-      ],
-      [
-        67,
-        87
-      ],
-      [
-        68,
-        87
-      ],
-      [
-        69,
-        87
-      ],
-      [
-        70,
-        87
-      ],
-      [
-        71,
-        87
-      ],
-      [
-        72,
-        87
-      ],
-      [
-        72,
-        86
-      ],
-      [
-        72,
         85
-      ],
-      [
-        72,
-        84
-      ],
-      [
-        72,
-        83
-      ],
-      [
-        72,
-        82
-      ],
-      [
-        72,
-        81
-      ],
-      [
-        72,
-        80
-      ],
-      [
-        72,
-        79
-      ],
-      [
-        72,
-        78
-      ],
-      [
-        72,
-        77
-      ],
-      [
-        72,
-        76
-      ],
-      [
-        72,
-        75
-      ],
-      [
-        72,
-        74
-      ],
-      [
-        72,
-        73
-      ],
-      [
-        72,
-        72
-      ],
-      [
-        72,
-        71
-      ],
-      [
-        72,
-        70
-      ],
-      [
-        72,
-        69
-      ],
-      [
-        72,
-        68
-      ],
-      [
-        72,
-        67
-      ],
-      [
-        72,
-        66
-      ],
-      [
-        72,
-        65
-      ],
-      [
-        72,
-        64
-      ],
-      [
-        72,
-        63
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        72,
-        61
-      ],
-      [
-        72,
-        60
-      ],
-      [
-        72,
-        59
-      ],
-      [
-        72,
-        58
-      ],
-      [
-        72,
-        57
-      ],
-      [
-        72,
-        56
-      ],
-      [
-        72,
-        55
-      ],
-      [
-        72,
-        54
-      ],
-      [
-        72,
-        53
-      ],
-      [
-        72,
-        52
-      ],
-      [
-        72,
-        51
-      ],
-      [
-        72,
-        50
-      ],
-      [
-        72,
-        49
-      ],
-      [
-        72,
-        48
-      ],
-      [
-        72,
-        47
-      ],
-      [
-        72,
-        46
-      ],
-      [
-        72,
-        45
-      ],
-      [
-        72,
-        44
-      ],
-      [
-        72,
-        43
-      ],
-      [
-        72,
-        42
-      ],
-      [
-        72,
-        41
-      ],
-      [
-        72,
-        40
-      ],
-      [
-        72,
-        39
-      ],
-      [
-        72,
-        38
-      ],
-      [
-        72,
-        37
-      ],
-      [
-        72,
-        36
-      ],
-      [
-        72,
-        35
-      ],
-      [
-        72,
-        34
-      ],
-      [
-        72,
-        33
-      ],
-      [
-        72,
-        32
-      ],
-      [
-        72,
-        31
-      ],
-      [
-        72,
-        30
-      ],
-      [
-        73,
-        30
-      ],
-      [
-        74,
-        30
-      ],
-      [
-        75,
-        30
-      ],
-      [
-        75,
-        29
-      ],
-      [
-        75,
-        28
-      ],
-      [
-        75,
-        27
-      ],
-      [
-        75,
-        26
-      ],
-      [
-        75,
-        25
-      ],
-      [
-        75,
-        24
-      ],
-      [
-        75,
-        23
-      ],
-      [
-        75,
-        22
-      ],
-      [
-        75,
-        21
-      ],
-      [
-        75,
-        20
-      ],
-      [
-        75,
-        19
-      ],
-      [
-        75,
-        18
-      ],
-      [
-        76,
-        18
-      ],
-      [
-        76,
-        17
-      ],
-      [
-        76,
-        16
       ]
     ],
-    "thought": "The city is unsafe, I’ll own my space",
+    "thought": "Nobody wants dented goods anymore. They want pristine and packaged.",
     "speech": {
-      "to": "dot",
-      "text": "I’ll fix what they throw out."
+      "to": "cal2",
+      "text": "Watch the bottom shelf, Cal. The moisture from the fog gets in there."
     }
   },
   "maren": {
@@ -29966,8 +26216,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      49
+      4,
+      50
     ],
     "dest": [
       3,
@@ -29975,13 +26225,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      2,
-      49
+      4,
+      50
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 88,
+      "energy": 62,
+      "happiness": 45,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -30195,9 +26445,21 @@
         "day": 470,
         "what": "We’re all threatened",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s ban will keep us in place",
+        "importance": 8
       }
     ],
-    "belief": "We’re all threatened",
+    "belief": "The city’s ban will keep us in place",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -30214,31 +26476,23 @@
     "partner": null,
     "birth_day": 358,
     "arrived_day": 358,
-    "last_thought_beat": 1879,
+    "last_thought_beat": 1906,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
         4,
-        50
+        51
       ],
       [
-        3,
+        4,
         50
-      ],
-      [
-        2,
-        50
-      ],
-      [
-        2,
-        49
       ]
     ],
-    "action": "watching television",
+    "action": "folding laundry",
     "thought": "",
     "speech": null
   },
@@ -30265,8 +26519,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      51
     ],
     "dest": [
       8,
@@ -30274,13 +26528,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      51
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 88,
+      "energy": 52,
+      "happiness": 45,
+      "stress": 100,
       "social_need": 0,
       "fear": 10
     },
@@ -30488,12 +26742,30 @@
         "day": 470,
         "what": "We’re being hunted for our names",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban proves the city won’t listen to us",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Errol gave me a smooth grey pebble from the water before he went inside.",
+        "importance": 7
       }
     ],
-    "belief": "We’re being hunted for our names",
+    "belief": "The ban proves the city won’t listen to us",
     "alive": true,
     "health": 90,
-    "grief": 58,
+    "grief": 49,
     "volatility": 74,
     "vehicle": null,
     "money": 0,
@@ -30507,25 +26779,28 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 1884,
+    "last_thought_beat": 1909,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
-        7,
-        51
+        9,
+        52
       ],
       [
-        7,
-        50
+        9,
+        51
       ]
     ],
-    "action": "eating at the table",
-    "thought": "",
-    "speech": null,
+    "action": "Pats the head of a sleeping dog on the rug.",
+    "thought": "The screen is flickering with grey lines and no sound.",
+    "speech": {
+      "to": "elias",
+      "text": "Look, Elias. The dog isn't scared of the noise."
+    },
     "last_instigated_day": 461
   },
   "maren2": {
@@ -30551,8 +26826,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -30560,13 +26835,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 43,
-      "happiness": 50,
-      "stress": 95,
+      "energy": 65,
+      "happiness": 45,
+      "stress": 98,
       "social_need": 0,
       "fear": 10
     },
@@ -30772,9 +27047,21 @@
         "day": 470,
         "what": "We’re all at risk",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows I’m useless",
+        "importance": 8
       }
     ],
-    "belief": "We’re all at risk",
+    "belief": "The conviction shows I’m useless",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -30791,39 +27078,19 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 1879,
+    "last_thought_beat": 1904,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         8,
         48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
-        49
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "watching television",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null
   },
@@ -30863,9 +27130,9 @@
       48
     ],
     "mood": {
-      "energy": 51,
-      "happiness": 50,
-      "stress": 82,
+      "energy": 72,
+      "happiness": 45,
+      "stress": 85,
       "social_need": 0,
       "fear": 10
     },
@@ -31067,9 +27334,21 @@
         "day": 470,
         "what": "We’re all in danger",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban shows my mother will be disappointed",
+        "importance": 8
       }
     ],
-    "belief": "We’re all in danger",
+    "belief": "The ban shows my mother will be disappointed",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -31086,16 +27365,24 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 1880,
+    "last_thought_beat": 1906,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "washing up",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
-        7,
-        50
+        9,
+        52
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        51
       ],
       [
         8,
@@ -31110,7 +27397,7 @@
         48
       ]
     ],
-    "action": "washing up",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null
   },
@@ -31137,24 +27424,24 @@
       "night": "terrace_c"
     },
     "pos": [
-      19,
-      50
+      32,
+      16
     ],
     "dest": [
       18,
       54
     ],
-    "at": "terrace_c",
+    "at": "harborbar",
     "spot": [
-      19,
-      50
+      32,
+      16
     ],
     "mood": {
-      "energy": 24,
+      "energy": 46,
       "happiness": 45,
-      "stress": 80,
+      "stress": 60,
       "social_need": 100,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "dev": {
@@ -31346,20 +27633,32 @@
         "day": 470,
         "what": "We’re being watched",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction forces my family to stay",
+        "importance": 8
       }
     ],
-    "belief": "We’re being watched",
+    "belief": "The conviction forces my family to stay",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 370,
-    "last_thought_beat": 1884,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1903,
+    "activity": "clearing tables, in the fog",
+    "action": "clearing tables, in the fog",
     "vehicle": null,
     "volatility": 45,
-    "money": 1410,
-    "skill": 57.5,
+    "money": 1476,
+    "skill": 59.0,
     "job": {
       "at": "harborbar",
       "title": "cuts and sets hair out of a back room",
@@ -31376,276 +27675,16 @@
     "driving": null,
     "path": [
       [
-        34,
-        16
+        33,
+        17
       ],
       [
-        33,
-        16
+        32,
+        17
       ],
       [
         32,
         16
-      ],
-      [
-        31,
-        16
-      ],
-      [
-        31,
-        17
-      ],
-      [
-        31,
-        18
-      ],
-      [
-        31,
-        19
-      ],
-      [
-        31,
-        20
-      ],
-      [
-        31,
-        21
-      ],
-      [
-        30,
-        21
-      ],
-      [
-        29,
-        21
-      ],
-      [
-        28,
-        21
-      ],
-      [
-        27,
-        21
-      ],
-      [
-        26,
-        21
-      ],
-      [
-        26,
-        22
-      ],
-      [
-        26,
-        23
-      ],
-      [
-        26,
-        24
-      ],
-      [
-        26,
-        25
-      ],
-      [
-        25,
-        25
-      ],
-      [
-        24,
-        25
-      ],
-      [
-        23,
-        25
-      ],
-      [
-        22,
-        25
-      ],
-      [
-        21,
-        25
-      ],
-      [
-        20,
-        25
-      ],
-      [
-        19,
-        25
-      ],
-      [
-        18,
-        25
-      ],
-      [
-        17,
-        25
-      ],
-      [
-        16,
-        25
-      ],
-      [
-        16,
-        26
-      ],
-      [
-        16,
-        27
-      ],
-      [
-        16,
-        28
-      ],
-      [
-        16,
-        29
-      ],
-      [
-        16,
-        30
-      ],
-      [
-        16,
-        31
-      ],
-      [
-        16,
-        32
-      ],
-      [
-        16,
-        33
-      ],
-      [
-        16,
-        34
-      ],
-      [
-        16,
-        35
-      ],
-      [
-        16,
-        36
-      ],
-      [
-        16,
-        37
-      ],
-      [
-        16,
-        38
-      ],
-      [
-        16,
-        39
-      ],
-      [
-        16,
-        40
-      ],
-      [
-        16,
-        41
-      ],
-      [
-        16,
-        42
-      ],
-      [
-        16,
-        43
-      ],
-      [
-        16,
-        44
-      ],
-      [
-        16,
-        45
-      ],
-      [
-        16,
-        46
-      ],
-      [
-        16,
-        47
-      ],
-      [
-        16,
-        48
-      ],
-      [
-        16,
-        49
-      ],
-      [
-        16,
-        50
-      ],
-      [
-        16,
-        51
-      ],
-      [
-        16,
-        52
-      ],
-      [
-        16,
-        53
-      ],
-      [
-        16,
-        54
-      ],
-      [
-        16,
-        55
-      ],
-      [
-        16,
-        56
-      ],
-      [
-        17,
-        56
-      ],
-      [
-        18,
-        56
-      ],
-      [
-        18,
-        55
-      ],
-      [
-        18,
-        54
-      ],
-      [
-        19,
-        54
-      ],
-      [
-        19,
-        53
-      ],
-      [
-        19,
-        52
-      ],
-      [
-        19,
-        51
-      ],
-      [
-        19,
-        50
       ]
     ],
     "thought": "",
@@ -31675,24 +27714,24 @@
       "night": "terrace_e"
     },
     "pos": [
-      27,
-      50
+      24,
+      67
     ],
     "dest": [
       26,
       54
     ],
-    "at": "terrace_e",
+    "at": "clinic",
     "spot": [
-      27,
-      50
+      24,
+      67
     ],
     "mood": {
-      "energy": 58,
+      "energy": 72,
       "happiness": 45,
-      "stress": 84,
-      "social_need": 12,
-      "fear": 13
+      "stress": 69,
+      "social_need": 0,
+      "fear": 10
     },
     "relationships": {
       "yusuf": {
@@ -31870,20 +27909,32 @@
         "day": 470,
         "what": "We’re all threatened",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction will drive my family away",
+        "importance": 8
       }
     ],
-    "belief": "We’re all threatened",
+    "belief": "The conviction will drive my family away",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 371,
-    "last_thought_beat": 1881,
-    "activity": "eating at the table",
-    "action": "eating at the table",
+    "last_thought_beat": 1900,
+    "activity": "at the desk",
+    "action": "at the desk",
     "vehicle": null,
     "volatility": 45,
-    "money": 2090,
-    "skill": 57.0,
+    "money": 2195,
+    "skill": 58.5,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -31900,88 +27951,12 @@
     "driving": null,
     "path": [
       [
-        21,
-        64
-      ],
-      [
-        21,
-        63
-      ],
-      [
-        21,
-        62
-      ],
-      [
-        22,
-        62
-      ],
-      [
-        23,
-        62
+        24,
+        68
       ],
       [
         24,
-        62
-      ],
-      [
-        25,
-        62
-      ],
-      [
-        26,
-        62
-      ],
-      [
-        26,
-        61
-      ],
-      [
-        26,
-        60
-      ],
-      [
-        26,
-        59
-      ],
-      [
-        26,
-        58
-      ],
-      [
-        26,
-        57
-      ],
-      [
-        26,
-        56
-      ],
-      [
-        26,
-        55
-      ],
-      [
-        26,
-        54
-      ],
-      [
-        27,
-        54
-      ],
-      [
-        27,
-        53
-      ],
-      [
-        27,
-        52
-      ],
-      [
-        27,
-        51
-      ],
-      [
-        27,
-        50
+        67
       ]
     ],
     "thought": "",
@@ -32010,24 +27985,24 @@
       "night": "terrace_d"
     },
     "pos": [
-      23,
-      51
+      7,
+      34
     ],
     "dest": [
       22,
       54
     ],
-    "at": "terrace_d",
+    "at": "cornerstore",
     "spot": [
-      23,
-      51
+      7,
+      34
     ],
     "mood": {
-      "energy": 56,
+      "energy": 72,
       "happiness": 45,
-      "stress": 98,
-      "social_need": 12,
-      "fear": 13
+      "stress": 100,
+      "social_need": 0,
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -32209,20 +28184,38 @@
         "day": 470,
         "what": "Our lives are in danger",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s ban will drive families away",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Errol handed me the final tax folio three days before his heart gave out.",
+        "importance": 8
       }
     ],
-    "belief": "Our lives are in danger",
+    "belief": "The city’s ban will drive families away",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 377,
-    "last_thought_beat": 1885,
-    "activity": "washing up",
-    "action": "washing up",
+    "last_thought_beat": 1909,
+    "activity": "behind the till",
+    "action": "Rubs tired eyes behind heavy wire-rimmed glasses.",
     "vehicle": null,
     "volatility": 45,
-    "money": 1600,
-    "skill": 55.0,
+    "money": 1684,
+    "skill": 56.5,
     "job": {
       "at": "cornerstore",
       "title": "keeps books for people who cannot",
@@ -32243,200 +28236,23 @@
         32
       ],
       [
-        5,
+        7,
         32
       ],
       [
-        5,
+        7,
         33
       ],
       [
-        5,
-        34
-      ],
-      [
-        5,
-        35
-      ],
-      [
-        5,
-        36
-      ],
-      [
-        5,
-        37
-      ],
-      [
-        6,
-        37
-      ],
-      [
         7,
-        37
-      ],
-      [
-        8,
-        37
-      ],
-      [
-        9,
-        37
-      ],
-      [
-        10,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        13,
-        37
-      ],
-      [
-        14,
-        37
-      ],
-      [
-        15,
-        37
-      ],
-      [
-        16,
-        37
-      ],
-      [
-        16,
-        38
-      ],
-      [
-        16,
-        39
-      ],
-      [
-        16,
-        40
-      ],
-      [
-        16,
-        41
-      ],
-      [
-        16,
-        42
-      ],
-      [
-        16,
-        43
-      ],
-      [
-        16,
-        44
-      ],
-      [
-        16,
-        45
-      ],
-      [
-        16,
-        46
-      ],
-      [
-        16,
-        47
-      ],
-      [
-        16,
-        48
-      ],
-      [
-        16,
-        49
-      ],
-      [
-        16,
-        50
-      ],
-      [
-        16,
-        51
-      ],
-      [
-        16,
-        52
-      ],
-      [
-        16,
-        53
-      ],
-      [
-        16,
-        54
-      ],
-      [
-        16,
-        55
-      ],
-      [
-        16,
-        56
-      ],
-      [
-        17,
-        56
-      ],
-      [
-        18,
-        56
-      ],
-      [
-        19,
-        56
-      ],
-      [
-        20,
-        56
-      ],
-      [
-        21,
-        56
-      ],
-      [
-        22,
-        56
-      ],
-      [
-        22,
-        55
-      ],
-      [
-        22,
-        54
-      ],
-      [
-        23,
-        54
-      ],
-      [
-        23,
-        53
-      ],
-      [
-        23,
-        52
-      ],
-      [
-        23,
-        51
+        34
       ]
     ],
-    "thought": "",
-    "speech": null
+    "thought": "Numbers don't care who died, they just don't balance.",
+    "speech": {
+      "to": "ivy",
+      "text": "The ledger from the cannery still hasn't cleared my desk, Ivy."
+    }
   },
   "kwame": {
     "id": "kwame",
@@ -32461,24 +28277,24 @@
       "night": "new_home_368"
     },
     "pos": [
-      123,
-      17
+      93,
+      34
     ],
     "dest": [
       122,
       20
     ],
-    "at": "new_home_368",
+    "at": "new_business_236",
     "spot": [
-      123,
-      17
+      93,
+      34
     ],
     "mood": {
-      "energy": 40,
+      "energy": 62,
       "happiness": 45,
-      "stress": 96,
-      "social_need": 36,
-      "fear": 13
+      "stress": 76,
+      "social_need": 100,
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -32670,20 +28486,32 @@
         "day": 470,
         "what": "We’re all at risk",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban proves I’m not important",
+        "importance": 8
       }
     ],
-    "belief": "We’re all at risk",
+    "belief": "The ban proves I’m not important",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 382,
-    "last_thought_beat": 1882,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1902,
+    "activity": "signing for a delivery, in the fog",
+    "action": "signing for a delivery, in the fog",
     "vehicle": null,
     "volatility": 45,
-    "money": 1544,
-    "skill": 54.0,
+    "money": 1628,
+    "skill": 55.5,
     "job": {
       "at": "new_business_236",
       "title": "drives nights for a car service",
@@ -32700,7 +28528,7 @@
     "driving": null,
     "path": [
       [
-        91,
+        89,
         34
       ],
       [
@@ -32708,228 +28536,16 @@
         34
       ],
       [
-        90,
-        35
-      ],
-      [
-        90,
-        36
-      ],
-      [
-        90,
-        37
-      ],
-      [
         91,
-        37
+        34
       ],
       [
         92,
-        37
-      ],
-      [
-        93,
-        37
-      ],
-      [
-        94,
-        37
-      ],
-      [
-        95,
-        37
-      ],
-      [
-        96,
-        37
-      ],
-      [
-        97,
-        37
-      ],
-      [
-        98,
-        37
-      ],
-      [
-        99,
-        37
-      ],
-      [
-        100,
-        37
-      ],
-      [
-        101,
-        37
-      ],
-      [
-        102,
-        37
-      ],
-      [
-        103,
-        37
-      ],
-      [
-        104,
-        37
-      ],
-      [
-        105,
-        37
-      ],
-      [
-        106,
-        37
-      ],
-      [
-        107,
-        37
-      ],
-      [
-        108,
-        37
-      ],
-      [
-        109,
-        37
-      ],
-      [
-        110,
-        37
-      ],
-      [
-        111,
-        37
-      ],
-      [
-        112,
-        37
-      ],
-      [
-        113,
-        37
-      ],
-      [
-        114,
-        37
-      ],
-      [
-        115,
-        37
-      ],
-      [
-        116,
-        37
-      ],
-      [
-        117,
-        37
-      ],
-      [
-        118,
-        37
-      ],
-      [
-        119,
-        37
-      ],
-      [
-        120,
-        37
-      ],
-      [
-        121,
-        37
-      ],
-      [
-        122,
-        37
-      ],
-      [
-        122,
-        36
-      ],
-      [
-        122,
-        35
-      ],
-      [
-        122,
         34
       ],
       [
-        122,
-        33
-      ],
-      [
-        122,
-        32
-      ],
-      [
-        122,
-        31
-      ],
-      [
-        122,
-        30
-      ],
-      [
-        122,
-        29
-      ],
-      [
-        122,
-        28
-      ],
-      [
-        122,
-        27
-      ],
-      [
-        122,
-        26
-      ],
-      [
-        122,
-        25
-      ],
-      [
-        122,
-        24
-      ],
-      [
-        122,
-        23
-      ],
-      [
-        122,
-        22
-      ],
-      [
-        122,
-        21
-      ],
-      [
-        122,
-        20
-      ],
-      [
-        123,
-        20
-      ],
-      [
-        123,
-        19
-      ],
-      [
-        123,
-        18
-      ],
-      [
-        123,
-        17
+        93,
+        34
       ]
     ],
     "thought": "",
@@ -33592,24 +29208,24 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      51
+      53,
+      85
     ],
     "dest": [
       33,
       52
     ],
-    "at": "vasquez",
+    "at": "civic_shop_347b",
     "spot": [
-      31,
-      51
+      53,
+      85
     ],
     "mood": {
-      "energy": 58,
+      "energy": 72,
       "happiness": 45,
-      "stress": 85,
+      "stress": 86,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -33765,20 +29381,38 @@
         "day": 470,
         "what": "We’re all being watched",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The city’s crackdown will force us out",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Errol left his keys in my cab and I had to walk them back at dawn.",
+        "importance": 6
       }
     ],
-    "belief": "We’re all being watched",
+    "belief": "The city’s crackdown will force us out",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 388,
-    "last_thought_beat": 1886,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1909,
+    "activity": "restocking shelves",
+    "action": "Stacks crates of canned peaches near the back cooler.",
     "vehicle": null,
     "volatility": 45,
-    "money": 1460,
-    "skill": 52.5,
+    "money": 1544,
+    "skill": 54.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -33803,258 +29437,18 @@
         83
       ],
       [
-        52,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        51,
+        53,
         84
       ],
       [
-        51,
+        53,
         85
-      ],
-      [
-        51,
-        86
-      ],
-      [
-        51,
-        87
-      ],
-      [
-        50,
-        87
-      ],
-      [
-        49,
-        87
-      ],
-      [
-        48,
-        87
-      ],
-      [
-        47,
-        87
-      ],
-      [
-        46,
-        87
-      ],
-      [
-        45,
-        87
-      ],
-      [
-        44,
-        87
-      ],
-      [
-        43,
-        87
-      ],
-      [
-        42,
-        87
-      ],
-      [
-        41,
-        87
-      ],
-      [
-        40,
-        87
-      ],
-      [
-        39,
-        87
-      ],
-      [
-        39,
-        86
-      ],
-      [
-        39,
-        85
-      ],
-      [
-        39,
-        84
-      ],
-      [
-        39,
-        83
-      ],
-      [
-        39,
-        82
-      ],
-      [
-        39,
-        81
-      ],
-      [
-        39,
-        80
-      ],
-      [
-        39,
-        79
-      ],
-      [
-        39,
-        78
-      ],
-      [
-        39,
-        77
-      ],
-      [
-        39,
-        76
-      ],
-      [
-        39,
-        75
-      ],
-      [
-        39,
-        74
-      ],
-      [
-        39,
-        73
-      ],
-      [
-        39,
-        72
-      ],
-      [
-        39,
-        71
-      ],
-      [
-        39,
-        70
-      ],
-      [
-        39,
-        69
-      ],
-      [
-        39,
-        68
-      ],
-      [
-        39,
-        67
-      ],
-      [
-        39,
-        66
-      ],
-      [
-        39,
-        65
-      ],
-      [
-        39,
-        64
-      ],
-      [
-        39,
-        63
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        37,
-        62
-      ],
-      [
-        36,
-        62
-      ],
-      [
-        35,
-        62
-      ],
-      [
-        34,
-        62
-      ],
-      [
-        33,
-        62
-      ],
-      [
-        33,
-        61
-      ],
-      [
-        33,
-        60
-      ],
-      [
-        33,
-        59
-      ],
-      [
-        33,
-        58
-      ],
-      [
-        33,
-        57
-      ],
-      [
-        33,
-        56
-      ],
-      [
-        33,
-        55
-      ],
-      [
-        33,
-        54
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        32,
-        52
-      ],
-      [
-        31,
-        52
-      ],
-      [
-        31,
-        51
       ]
     ],
-    "thought": "The justice is biased, I need family out",
+    "thought": "The night shift is going to be thick with fog and police roadblocks.",
     "speech": {
-      "to": "marisol",
-      "text": "Let’s keep our family safe."
+      "to": "odette",
+      "text": "If the bridge closes tonight, I'm taking the upper bypass."
     }
   },
   "kwame2": {
@@ -34080,24 +29474,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      79,
-      36
+      54,
+      83
     ],
     "dest": [
       76,
       40
     ],
-    "at": "delmarflats",
+    "at": "civic_shop_347b",
     "spot": [
-      79,
-      36
+      54,
+      83
     ],
     "mood": {
-      "energy": 66,
+      "energy": 72,
       "happiness": 45,
-      "stress": 96,
+      "stress": 90,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -34241,20 +29635,32 @@
         "day": 470,
         "what": "We’re being watched",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction means I’ll stay unnoticed",
+        "importance": 8
       }
     ],
-    "belief": "We’re being watched",
+    "belief": "The conviction means I’ll stay unnoticed",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 397,
-    "last_thought_beat": 1881,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 1908,
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 1376,
-    "skill": 51.0,
+    "money": 1460,
+    "skill": 52.5,
     "job": {
       "at": "civic_shop_347b",
       "title": "keeps books for people who cannot",
@@ -34271,11 +29677,15 @@
     "driving": null,
     "path": [
       [
-        54,
+        49,
         83
       ],
       [
-        53,
+        50,
+        83
+      ],
+      [
+        51,
         83
       ],
       [
@@ -34283,340 +29693,12 @@
         83
       ],
       [
-        51,
-        83
-      ],
-      [
-        51,
-        84
-      ],
-      [
-        51,
-        85
-      ],
-      [
-        51,
-        86
-      ],
-      [
-        51,
-        87
-      ],
-      [
-        52,
-        87
-      ],
-      [
         53,
-        87
+        83
       ],
       [
         54,
-        87
-      ],
-      [
-        55,
-        87
-      ],
-      [
-        56,
-        87
-      ],
-      [
-        57,
-        87
-      ],
-      [
-        58,
-        87
-      ],
-      [
-        59,
-        87
-      ],
-      [
-        60,
-        87
-      ],
-      [
-        61,
-        87
-      ],
-      [
-        62,
-        87
-      ],
-      [
-        63,
-        87
-      ],
-      [
-        64,
-        87
-      ],
-      [
-        65,
-        87
-      ],
-      [
-        66,
-        87
-      ],
-      [
-        67,
-        87
-      ],
-      [
-        68,
-        87
-      ],
-      [
-        69,
-        87
-      ],
-      [
-        70,
-        87
-      ],
-      [
-        71,
-        87
-      ],
-      [
-        72,
-        87
-      ],
-      [
-        72,
-        86
-      ],
-      [
-        72,
-        85
-      ],
-      [
-        72,
-        84
-      ],
-      [
-        72,
         83
-      ],
-      [
-        72,
-        82
-      ],
-      [
-        72,
-        81
-      ],
-      [
-        72,
-        80
-      ],
-      [
-        72,
-        79
-      ],
-      [
-        72,
-        78
-      ],
-      [
-        72,
-        77
-      ],
-      [
-        72,
-        76
-      ],
-      [
-        72,
-        75
-      ],
-      [
-        72,
-        74
-      ],
-      [
-        72,
-        73
-      ],
-      [
-        72,
-        72
-      ],
-      [
-        72,
-        71
-      ],
-      [
-        72,
-        70
-      ],
-      [
-        72,
-        69
-      ],
-      [
-        72,
-        68
-      ],
-      [
-        72,
-        67
-      ],
-      [
-        72,
-        66
-      ],
-      [
-        72,
-        65
-      ],
-      [
-        72,
-        64
-      ],
-      [
-        72,
-        63
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        75,
-        62
-      ],
-      [
-        76,
-        62
-      ],
-      [
-        76,
-        61
-      ],
-      [
-        76,
-        60
-      ],
-      [
-        76,
-        59
-      ],
-      [
-        76,
-        58
-      ],
-      [
-        76,
-        57
-      ],
-      [
-        76,
-        56
-      ],
-      [
-        76,
-        55
-      ],
-      [
-        76,
-        54
-      ],
-      [
-        76,
-        53
-      ],
-      [
-        76,
-        52
-      ],
-      [
-        76,
-        51
-      ],
-      [
-        76,
-        50
-      ],
-      [
-        76,
-        49
-      ],
-      [
-        76,
-        48
-      ],
-      [
-        76,
-        47
-      ],
-      [
-        76,
-        46
-      ],
-      [
-        76,
-        45
-      ],
-      [
-        76,
-        44
-      ],
-      [
-        76,
-        43
-      ],
-      [
-        76,
-        42
-      ],
-      [
-        76,
-        41
-      ],
-      [
-        76,
-        40
-      ],
-      [
-        77,
-        40
-      ],
-      [
-        78,
-        40
-      ],
-      [
-        78,
-        39
-      ],
-      [
-        78,
-        38
-      ],
-      [
-        78,
-        37
-      ],
-      [
-        79,
-        37
-      ],
-      [
-        79,
-        36
       ]
     ],
     "thought": "",
@@ -34771,7 +29853,7 @@
     "belief": "We’ll be forced out if we don’t act",
     "alive": false,
     "health": 82,
-    "grief": 6,
+    "grief": 0,
     "arrived_day": 424,
     "last_thought_beat": 1880,
     "activity": "asleep, out of the rain",
@@ -34853,24 +29935,24 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      22,
+      34
     ],
     "dest": [
       33,
       52
     ],
-    "at": "vasquez",
+    "at": "barbershop",
     "spot": [
-      32,
-      50
+      22,
+      34
     ],
     "mood": {
-      "energy": 58,
+      "energy": 72,
       "happiness": 45,
-      "stress": 96,
+      "stress": 76,
       "social_need": 0,
-      "fear": 13
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -34996,20 +30078,32 @@
         "day": 470,
         "what": "Someone is watching us closely",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "Everyone’s watching; I need to stay quiet",
+        "importance": 8
       }
     ],
-    "belief": "Someone is watching us closely",
+    "belief": "Everyone’s watching; I need to stay quiet",
     "alive": true,
     "health": 82,
-    "grief": 27,
+    "grief": 18,
     "arrived_day": 425,
-    "last_thought_beat": 1886,
-    "activity": "eating at the table",
-    "action": "eating at the table",
+    "last_thought_beat": 1902,
+    "activity": "restocking the back bar, in the fog",
+    "action": "restocking the back bar, in the fog",
     "vehicle": null,
     "volatility": 45,
-    "money": 904,
-    "skill": 46.0,
+    "money": 970,
+    "skill": 47.5,
     "job": {
       "at": "barbershop",
       "title": "cuts and sets hair out of a back room",
@@ -35026,171 +30120,20 @@
     "driving": null,
     "path": [
       [
-        18,
-        35
-      ],
-      [
-        19,
-        35
-      ],
-      [
-        20,
-        35
-      ],
-      [
-        20,
-        36
-      ],
-      [
-        20,
-        37
-      ],
-      [
         21,
-        37
+        33
       ],
       [
         22,
-        37
+        33
       ],
       [
-        23,
-        37
-      ],
-      [
-        24,
-        37
-      ],
-      [
-        25,
-        37
-      ],
-      [
-        26,
-        37
-      ],
-      [
-        27,
-        37
-      ],
-      [
-        28,
-        37
-      ],
-      [
-        29,
-        37
-      ],
-      [
-        29,
-        38
-      ],
-      [
-        29,
-        39
-      ],
-      [
-        29,
-        40
-      ],
-      [
-        29,
-        41
-      ],
-      [
-        29,
-        42
-      ],
-      [
-        29,
-        43
-      ],
-      [
-        29,
-        44
-      ],
-      [
-        29,
-        45
-      ],
-      [
-        29,
-        46
-      ],
-      [
-        29,
-        47
-      ],
-      [
-        29,
-        48
-      ],
-      [
-        29,
-        49
-      ],
-      [
-        29,
-        50
-      ],
-      [
-        29,
-        51
-      ],
-      [
-        29,
-        52
-      ],
-      [
-        29,
-        53
-      ],
-      [
-        29,
-        54
-      ],
-      [
-        30,
-        54
-      ],
-      [
-        31,
-        54
-      ],
-      [
-        32,
-        54
-      ],
-      [
-        33,
-        54
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        32,
-        52
-      ],
-      [
-        32,
-        51
-      ],
-      [
-        32,
-        50
+        22,
+        34
       ]
     ],
-    "thought": "They’re watching us, I’ll keep quiet",
-    "speech": {
-      "to": "marisol",
-      "text": "Keep your head down, stay low."
-    },
+    "thought": "",
+    "speech": null,
     "detained_until": 0
   },
   "otis": {
@@ -35216,8 +30159,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -35225,13 +30168,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 66,
-      "happiness": 61,
-      "stress": 89,
+      "energy": 72,
+      "happiness": 45,
+      "stress": 80,
       "social_need": 0,
       "fear": 10
     },
@@ -35315,9 +30258,21 @@
         "day": 470,
         "what": "The city will betray us",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The ban shows I’m not taken seriously",
+        "importance": 8
       }
     ],
-    "belief": "The city will betray us",
+    "belief": "The ban shows I’m not taken seriously",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -35334,23 +30289,31 @@
     "partner": null,
     "birth_day": 458,
     "arrived_day": 458,
-    "last_thought_beat": 1885,
+    "last_thought_beat": 1908,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
-        9,
-        51
+        7,
+        50
       ],
       [
-        9,
-        52
+        8,
+        50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null
   },
@@ -35377,8 +30340,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -35386,13 +30349,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
-      "energy": 51,
-      "happiness": 50,
-      "stress": 22,
+      "energy": 72,
+      "happiness": 45,
+      "stress": 37,
       "social_need": 0,
       "fear": 10
     },
@@ -35434,9 +30397,21 @@
         "day": 470,
         "what": "We’re all at risk",
         "importance": 8
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows I’m not taken seriously",
+        "importance": 8
       }
     ],
-    "belief": "We’re all at risk",
+    "belief": "The conviction shows I’m not taken seriously",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -35453,31 +30428,290 @@
     "partner": null,
     "birth_day": 468,
     "arrived_day": 468,
-    "last_thought_beat": 1877,
+    "last_thought_beat": 1906,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
-        8,
-        48
-      ],
-      [
-        7,
-        48
-      ],
-      [
-        7,
+        9,
         49
       ],
       [
-        7,
+        9,
         50
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "eating at the table",
+    "action": "napping on the sofa",
+    "thought": "",
+    "speech": null
+  },
+  "theo": {
+    "id": "theo",
+    "name": "Theo Bello",
+    "age": 0,
+    "role": "a child of the block",
+    "faction": "block",
+    "home": "terrace_b",
+    "work": "terrace_b",
+    "principal": false,
+    "traits": [
+      "solemn for their age",
+      "shy with strangers"
+    ],
+    "ambition": "to be taken seriously by the grown-ups",
+    "private_fear": "that something is going on that nobody will explain",
+    "voice": "still learning how people here talk",
+    "routine": {
+      "morning": "terrace_b",
+      "afternoon": "terrace_b",
+      "evening": "terrace_b",
+      "night": "terrace_b"
+    },
+    "pos": [
+      8,
+      48
+    ],
+    "dest": [
+      8,
+      53
+    ],
+    "at": "terrace_b",
+    "spot": [
+      8,
+      48
+    ],
+    "mood": {
+      "energy": 57,
+      "happiness": 45,
+      "stress": 57,
+      "social_need": 0,
+      "fear": 10
+    },
+    "relationships": {
+      "tee": {
+        "affinity": 85,
+        "opinion": "my parent"
+      },
+      "amara": {
+        "affinity": 85,
+        "opinion": "my parent"
+      }
+    },
+    "memories": [
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction shows I’m not respected",
+        "importance": 8
+      },
+      {
+        "beat": 1909,
+        "day": 477,
+        "what": "Mom told me to stay in the kitchen while the police car parked outside.",
+        "importance": 6
+      }
+    ],
+    "belief": "The conviction shows I’m not respected",
+    "alive": true,
+    "health": 90,
+    "grief": 0,
+    "volatility": 31,
+    "vehicle": null,
+    "money": 0,
+    "skill": 0,
+    "job": null,
+    "parents": [
+      "tee",
+      "amara"
+    ],
+    "children": [],
+    "partner": null,
+    "birth_day": 474,
+    "arrived_day": 474,
+    "last_thought_beat": 1909,
+    "standing": 45,
+    "directive": null,
+    "chasing": null,
+    "activity": "doing the washing up",
+    "driving": null,
+    "path": [
+      [
+        9,
+        52
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
+      ]
+    ],
+    "action": "Dries a ceramic plate with a stained dish towel.",
+    "thought": "They are yelling in the living room again over nothing.",
+    "speech": {
+      "to": "jonah",
+      "text": "Elias is trying to sleep, Jonah. Keep it down."
+    }
+  },
+  "errol3": {
+    "id": "errol3",
+    "name": "Errol Brannon",
+    "age": 24,
+    "role": "drives nights for a car service",
+    "faction": "civilian",
+    "home": "new_home_270",
+    "work": "civic_shop_347b",
+    "principal": false,
+    "traits": [
+      "watchful",
+      "tired"
+    ],
+    "ambition": "find out what happened to my brother",
+    "private_fear": "that I have already missed my chance",
+    "voice": "still working out how people here talk",
+    "routine": {
+      "morning": "civic_shop_347b",
+      "afternoon": "civic_shop_347b",
+      "evening": "new_home_270",
+      "night": "new_home_270"
+    },
+    "pos": [
+      48,
+      85
+    ],
+    "dest": [
+      88,
+      84
+    ],
+    "at": "civic_shop_347b",
+    "spot": [
+      48,
+      85
+    ],
+    "mood": {
+      "energy": 56,
+      "happiness": 45,
+      "stress": 47,
+      "social_need": 0,
+      "fear": 10
+    },
+    "relationships": {
+      "malik": {
+        "affinity": 0,
+        "opinion": "I’m neutral"
+      }
+    },
+    "memories": [
+      {
+        "beat": 1900,
+        "day": 475,
+        "what": "I moved onto this block today.",
+        "importance": 7
+      },
+      {
+        "beat": 1904,
+        "day": 476,
+        "what": "Nia Nakamura was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 1907,
+        "day": 476,
+        "what": "The conviction means my brother’s gone",
+        "importance": 8
+      }
+    ],
+    "belief": "The conviction means my brother’s gone",
+    "alive": true,
+    "health": 82,
+    "grief": 0,
+    "arrived_day": 475,
+    "last_thought_beat": 1901,
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
+    "vehicle": null,
+    "volatility": 45,
+    "money": 270,
+    "skill": 31.0,
+    "job": {
+      "at": "church",
+      "title": "on the desk",
+      "wage": 53,
+      "since_day": 475
+    },
+    "partner": null,
+    "parents": [],
+    "children": [],
+    "birth_day": null,
+    "standing": 45,
+    "directive": null,
+    "chasing": null,
+    "driving": null,
+    "path": [
+      [
+        54,
+        84
+      ],
+      [
+        53,
+        84
+      ],
+      [
+        52,
+        84
+      ],
+      [
+        51,
+        84
+      ],
+      [
+        50,
+        84
+      ],
+      [
+        49,
+        84
+      ],
+      [
+        48,
+        84
+      ],
+      [
+        48,
+        85
+      ]
+    ],
     "thought": "",
     "speech": null
   }
