@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2019,
-  "last_beat_at": "2026-09-01T10:27:12Z",
+  "beat": 2037,
+  "last_beat_at": "2026-09-01T14:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 5,
-    "terraces": 5,
+    "delmar": 20,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -714,6 +714,77 @@
   ],
   "events": [
     {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2037
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2036
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2035
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2031
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 2030
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 2029
+    },
+    {
       "id": "shipment_light",
       "heat": {},
       "mood": {
@@ -895,80 +966,6 @@
       ],
       "text": "Maren Adeyemi does Dev Lindqvist a favour that costs them something real.",
       "beat": 1988
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 1979
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1978
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 1976
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1974
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 1973
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "cal"
-      ],
-      "text": "Cal Osei ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 1971
     }
   ],
   "player_queue": [
@@ -991,12 +988,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 502,
+  "last_gazette_day": 508,
   "llm_budget": {
     "day": "2026-09-01",
     "spent": {
-      "fast": 150074,
-      "deep": 4470
+      "fast": 164073,
+      "deep": 34658
     }
   },
   "silent_runs": 0,
@@ -1840,6 +1837,23 @@
       "floors": 3,
       "condition": "standing",
       "since_day": 489
+    },
+    {
+      "id": "new_civic_509",
+      "name": "Halloway Library",
+      "district": "flats",
+      "x": 27,
+      "y": 126,
+      "w": 10,
+      "h": 6,
+      "door": "S",
+      "kind": "civic",
+      "style": "concrete",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 509
     }
   ],
   "laws": [
@@ -2220,14 +2234,14 @@
   ],
   "law_pressure": 0,
   "last_law_day": 503,
-  "last_expansion_day": 489,
+  "last_expansion_day": 509,
   "feuds": [
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "booker",
@@ -2262,42 +2276,42 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 15
+      "heat": 9
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 85
+      "heat": 94
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 55
+      "heat": 49
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 57
+      "heat": 51
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 462,
       "cause": "would not let it go",
-      "heat": 21
+      "heat": 15
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 33
     }
   ],
   "quota_exhausted_on": {
@@ -2361,10 +2375,53 @@
     "for": "Errol Osei",
     "id": "errol2"
   },
-  "incidents": [],
-  "treasury": 79103,
+  "incidents": [
+    {
+      "id": "inc2036-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "new_civic_509",
+      "x": 31,
+      "y": 130,
+      "who": [],
+      "text": "Halloway Library opens on what was empty ground in The Flats.",
+      "started": 2036,
+      "until": 2038
+    }
+  ],
+  "treasury": 82394,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 508,
+      "wages": 1883,
+      "takings": 3140,
+      "tax": 1637,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1097,
+      "treasury": 82394
+    },
+    {
+      "day": 507,
+      "wages": 1883,
+      "takings": 3140,
+      "tax": 1637,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1097,
+      "treasury": 81297
+    },
+    {
+      "day": 506,
+      "wages": 1883,
+      "takings": 3140,
+      "tax": 1637,
+      "welfare": 0,
+      "civic": 540,
+      "net": 1097,
+      "treasury": 80200
+    },
     {
       "day": 504,
       "wages": 1883,
@@ -2634,36 +2691,6 @@
       "civic": 540,
       "net": 1117,
       "treasury": 51252
-    },
-    {
-      "day": 461,
-      "wages": 1812,
-      "takings": 3120,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 50135
-    },
-    {
-      "day": 458,
-      "wages": 1812,
-      "takings": 3120,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 49068
-    },
-    {
-      "day": 457,
-      "wages": 1812,
-      "takings": 3120,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 48001
     }
   ],
   "births": [
@@ -3059,45 +3086,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 431,
-      "overall": 73,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 29,
-      "infrastructure": 99,
-      "growth": 100,
-      "population": 49,
-      "buildings": 44,
-      "treasury": 28949,
-      "employment": 100
-    },
-    {
-      "day": 434,
-      "overall": 73,
-      "economy": 96,
-      "wellbeing": 61,
-      "society": 29,
-      "infrastructure": 99,
-      "growth": 100,
-      "population": 49,
-      "buildings": 44,
-      "treasury": 29984,
-      "employment": 100
-    },
-    {
-      "day": 435,
-      "overall": 73,
-      "economy": 96,
-      "wellbeing": 69,
-      "society": 21,
-      "infrastructure": 99,
-      "growth": 100,
-      "population": 49,
-      "buildings": 44,
-      "treasury": 31019,
-      "employment": 100
-    },
     {
       "day": 436,
       "overall": 73,
@@ -3682,19 +3670,58 @@
       "buildings": 46,
       "treasury": 79103,
       "employment": 100
+    },
+    {
+      "day": 506,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 69,
+      "society": 26,
+      "infrastructure": 96,
+      "growth": 80,
+      "population": 52,
+      "buildings": 46,
+      "treasury": 80200,
+      "employment": 100
+    },
+    {
+      "day": 507,
+      "overall": 71,
+      "economy": 97,
+      "wellbeing": 67,
+      "society": 25,
+      "infrastructure": 96,
+      "growth": 80,
+      "population": 52,
+      "buildings": 46,
+      "treasury": 81297,
+      "employment": 100
+    },
+    {
+      "day": 508,
+      "overall": 70,
+      "economy": 97,
+      "wellbeing": 63,
+      "society": 25,
+      "infrastructure": 96,
+      "growth": 80,
+      "population": 52,
+      "buildings": 46,
+      "treasury": 82394,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 504,
-    "overall": 71,
+    "day": 508,
+    "overall": 70,
     "economy": 97,
-    "wellbeing": 68,
-    "society": 26,
+    "wellbeing": 63,
+    "society": 25,
     "infrastructure": 96,
-    "growth": 74,
+    "growth": 80,
     "population": 52,
     "buildings": 46,
-    "treasury": 79103,
+    "treasury": 82394,
     "employment": 100
   },
   "buildable": {
