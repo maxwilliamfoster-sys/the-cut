@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2051,
-  "last_beat_at": "2026-09-01T18:27:12Z",
+  "beat": 2062,
+  "last_beat_at": "2026-09-01T21:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 12,
-    "terraces": 7,
+    "delmar": 5,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -714,6 +714,109 @@
   ],
   "events": [
     {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2062
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "nia2",
+        "nia"
+      ],
+      "text": "Nia Nakamura does Nia Mbeki a favour that costs them something real.",
+      "beat": 2059
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2058
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2057
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 2056
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "cassius"
+      ],
+      "text": "Cassius Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 2055
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "nia",
+        "marcus"
+      ],
+      "text": "Somebody tells Nia Nakamura that Marcus Calloway has been seen talking to police.",
+      "beat": 2053
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "tiny",
+        "rey"
+      ],
+      "text": "Somebody tells Tiny Reyes that Rey Vasquez has been seen talking to police.",
+      "beat": 2052
+    },
+    {
       "id": "cold_case",
       "heat": {},
       "mood": {
@@ -864,110 +967,6 @@
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days.",
       "beat": 2030
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 2029
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2017
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "odette3",
-        "brennan"
-      ],
-      "text": "Somebody tells Odette Amadi that Sgt. Hal Brennan has been seen talking to police.",
-      "beat": 2015
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 2011
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "tee",
-        "sami"
-      ],
-      "text": "Somebody tells Tariq 'Tee' Bello that Sami Amadi has been seen talking to police.",
-      "beat": 2010
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "junie",
-        "june"
-      ],
-      "text": "June Kowal does Junie Marsh a favour that costs them something real.",
-      "beat": 2009
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "boateng"
-      ],
-      "text": "Something pays out for Fr. Emmanuel Boateng. More than expected, which is its own problem.",
-      "beat": 2008
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "iris",
-        "gus"
-      ],
-      "text": "Gus Petrakis does Iris Amadi a favour that costs them something real.",
-      "beat": 1999
     }
   ],
   "player_queue": [
@@ -990,12 +989,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 510,
+  "last_gazette_day": 513,
   "llm_budget": {
     "day": "2026-09-01",
     "spent": {
       "fast": 164073,
-      "deep": 50049
+      "deep": 67315
     }
   },
   "silent_runs": 0,
@@ -2243,7 +2242,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 0
     },
     {
       "a": "booker",
@@ -2278,47 +2277,47 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 3
+      "heat": 0
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 96
+      "heat": 92
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 63
+      "heat": 59
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 41
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 462,
       "cause": "would not let it go",
-      "heat": 9
+      "heat": 5
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 23
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-01",
-    "beat": 2044,
+    "beat": 2057,
     "providers": [
       "gemini"
     ]
@@ -2380,9 +2379,29 @@
     "id": "errol2"
   },
   "incidents": [],
-  "treasury": 85325,
+  "treasury": 87279,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 514,
+      "wages": 1883,
+      "takings": 3050,
+      "tax": 1607,
+      "welfare": 0,
+      "civic": 630,
+      "net": 977,
+      "treasury": 87279
+    },
+    {
+      "day": 513,
+      "wages": 1883,
+      "takings": 3050,
+      "tax": 1607,
+      "welfare": 0,
+      "civic": 630,
+      "net": 977,
+      "treasury": 86302
+    },
     {
       "day": 512,
       "wages": 1883,
@@ -2662,26 +2681,6 @@
       "civic": 540,
       "net": 1087,
       "treasury": 56721
-    },
-    {
-      "day": 466,
-      "wages": 1717,
-      "takings": 3270,
-      "tax": 1627,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1087,
-      "treasury": 55634
-    },
-    {
-      "day": 465,
-      "wages": 1717,
-      "takings": 3270,
-      "tax": 1627,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1087,
-      "treasury": 54547
     }
   ],
   "births": [
@@ -3077,32 +3076,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 440,
-      "overall": 72,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 26,
-      "infrastructure": 99,
-      "growth": 90,
-      "population": 49,
-      "buildings": 44,
-      "treasury": 35159,
-      "employment": 100
-    },
-    {
-      "day": 441,
-      "overall": 71,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 27,
-      "infrastructure": 99,
-      "growth": 85,
-      "population": 49,
-      "buildings": 44,
-      "treasury": 36194,
-      "employment": 100
-    },
     {
       "day": 442,
       "overall": 71,
@@ -3700,19 +3673,45 @@
       "buildings": 47,
       "treasury": 85325,
       "employment": 100
+    },
+    {
+      "day": 513,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 69,
+      "society": 25,
+      "infrastructure": 96,
+      "growth": 84,
+      "population": 52,
+      "buildings": 47,
+      "treasury": 86302,
+      "employment": 100
+    },
+    {
+      "day": 514,
+      "overall": 75,
+      "economy": 97,
+      "wellbeing": 82,
+      "society": 26,
+      "infrastructure": 96,
+      "growth": 78,
+      "population": 52,
+      "buildings": 47,
+      "treasury": 87279,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 512,
-    "overall": 73,
+    "day": 514,
+    "overall": 75,
     "economy": 97,
-    "wellbeing": 69,
-    "society": 25,
+    "wellbeing": 82,
+    "society": 26,
     "infrastructure": 96,
-    "growth": 90,
+    "growth": 78,
     "population": 52,
     "buildings": 47,
-    "treasury": 85325,
+    "treasury": 87279,
     "employment": 100
   },
   "buildable": {
