@@ -1431,6 +1431,18 @@
         "day": 502,
         "what": "The conviction proves the system favors the powerful.",
         "importance": 8
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’m being pushed out by the justice system",
+        "importance": 8
+      },
+      {
+        "beat": 2091,
+        "day": 522,
+        "what": "Etta’s arrival will distract Tee, giving me the chance to secure the shop.",
+        "importance": 8
       }
     ],
     "action": "watching the door, counting steps",
@@ -1815,7 +1827,7 @@
       ]
     ],
     "last_thought_beat": 1500,
-    "belief": "The conviction proves the system favors the powerful.",
+    "belief": "Etta’s arrival will distract Tee, giving me the chance to secure the shop.",
     "alive": false,
     "health": 5,
     "grief": 0,
@@ -3341,21 +3353,24 @@
       "night": "terrace_a"
     },
     "pos": [
-      5,
-      64
+      9,
+      68
     ],
     "dest": [
       6,
       63
     ],
     "at": "precinct",
-    "spot": null,
+    "spot": [
+      9,
+      68
+    ],
     "mood": {
-      "energy": 18,
-      "happiness": 49,
-      "stress": 84,
+      "energy": 32,
+      "happiness": 50,
+      "stress": 96,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -3392,7 +3407,7 @@
       },
       "booker": {
         "affinity": -100,
-        "opinion": "enemy"
+        "opinion": "He’s a threat"
       },
       "ivy": {
         "affinity": 13,
@@ -4035,8 +4050,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -4219,29 +4234,82 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my case if I’m not noticed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "makes bad coffee",
-    "activity": "making bad coffee",
-    "thought": "Justice for Lyle is my only aim.",
-    "speech": null,
+    "action": "File paperwork, talk Cassius",
+    "activity": "filing paperwork",
+    "thought": "Can't let him slip",
+    "speech": {
+      "to": "cassius",
+      "text": "We have evidence, let's file."
+    },
     "path": [
       [
+        2,
+        67
+      ],
+      [
+        3,
+        67
+      ],
+      [
+        4,
+        67
+      ],
+      [
         5,
-        64
+        67
+      ],
+      [
+        6,
+        67
+      ],
+      [
+        7,
+        67
+      ],
+      [
+        8,
+        67
+      ],
+      [
+        9,
+        67
+      ],
+      [
+        9,
+        68
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "The pawnshop paper trail is sloppier than Brennan realizes.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll lose my case if I’m not noticed",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 55,
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -4281,28 +4349,25 @@
     },
     "pos": [
       34,
-      32
+      35
     ],
     "dest": [
       6,
       63
     ],
     "at": "pawnshop",
-    "spot": [
-      34,
-      32
-    ],
+    "spot": null,
     "mood": {
       "energy": 74,
-      "happiness": 67,
-      "stress": 61,
+      "happiness": 50,
+      "stress": 74,
       "social_need": 12,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "booker": {
         "affinity": -100,
-        "opinion": "annoyed"
+        "opinion": "frustrated"
       },
       "ruiz": {
         "affinity": -93,
@@ -4334,7 +4399,7 @@
       },
       "cass": {
         "affinity": -100,
-        "opinion": "annoying"
+        "opinion": "Annoying"
       },
       "gus": {
         "affinity": -100,
@@ -4379,6 +4444,10 @@
       "kwame2": {
         "affinity": 2,
         "opinion": "You’re quiet."
+      },
+      "cassius": {
+        "affinity": -4,
+        "opinion": "I’ll watch him"
       }
     },
     "memories": [
@@ -5241,8 +5310,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -5443,41 +5512,31 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be exposed if I stay in this line",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "counting out change",
-    "activity": "counting out change",
+    "action": "looking at nothing in particular",
+    "activity": "looking at nothing in particular",
     "thought": "",
     "speech": null,
     "path": [
-      [
-        9,
-        32
-      ],
-      [
-        8,
-        32
-      ],
-      [
-        7,
-        32
-      ],
-      [
-        6,
-        32
-      ],
-      [
-        5,
-        32
-      ],
-      [
-        5,
-        33
-      ],
-      [
-        5,
-        34
-      ],
       [
         5,
         35
@@ -5653,32 +5712,20 @@
       [
         34,
         35
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
-        33
-      ],
-      [
-        34,
-        32
       ]
     ],
-    "last_thought_beat": 2077,
-    "belief": "Cass Deveaux is tracking my every move and I cannot shake him.",
+    "last_thought_beat": 2097,
+    "belief": "I’ll be exposed if I stay in this line",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 72,
     "chasing": null,
     "last_instigated_day": 517,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "church",
       "title": "on the desk",
@@ -6480,24 +6527,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      5,
+      69
     ],
     "dest": [
       21,
       37
     ],
-    "at": "terrace_b",
+    "at": "precinct",
     "spot": [
-      9,
-      52
+      5,
+      69
     ],
     "mood": {
-      "energy": 0,
-      "happiness": 67,
-      "stress": 46,
+      "energy": 32,
+      "happiness": 51,
+      "stress": 31,
       "social_need": 0,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -6585,6 +6632,10 @@
         "opinion": "my child"
       },
       "theo": {
+        "affinity": 95,
+        "opinion": "my child"
+      },
+      "etta2": {
         "affinity": 95,
         "opinion": "my child"
       }
@@ -7209,8 +7260,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -7375,183 +7426,79 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too visible",
+        "importance": 8
+      },
+      {
+        "beat": 2091,
+        "day": 522,
+        "what": "Etta was born.",
+        "importance": 10
+      },
+      {
+        "beat": 2091,
+        "day": 522,
+        "what": "Etta’s birth will bring family unity, easing my responsibilities.",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2095,
+        "day": 523,
+        "what": "I was taken in over Public Haircut Ban.",
+        "importance": 8
       }
     ],
-    "action": "sits for a minute",
-    "activity": "sitting down for a minute",
-    "thought": "I promised Amara the diner, now it’s hers.",
+    "action": "is being held at the 9th",
+    "activity": "sitting very still",
+    "thought": "",
     "speech": null,
     "path": [
       [
-        22,
-        33
+        6,
+        65
       ],
       [
-        21,
-        33
+        5,
+        65
       ],
       [
-        20,
-        33
+        5,
+        66
       ],
       [
-        20,
-        34
+        5,
+        67
       ],
       [
-        20,
-        35
+        5,
+        68
       ],
       [
-        20,
-        36
-      ],
-      [
-        20,
-        37
-      ],
-      [
-        19,
-        37
-      ],
-      [
-        18,
-        37
-      ],
-      [
-        17,
-        37
-      ],
-      [
-        16,
-        37
-      ],
-      [
-        15,
-        37
-      ],
-      [
-        14,
-        37
-      ],
-      [
-        13,
-        37
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        11,
-        38
-      ],
-      [
-        11,
-        39
-      ],
-      [
-        11,
-        40
-      ],
-      [
-        11,
-        41
-      ],
-      [
-        11,
-        42
-      ],
-      [
-        11,
-        43
-      ],
-      [
-        11,
-        44
-      ],
-      [
-        11,
-        45
-      ],
-      [
-        11,
-        46
-      ],
-      [
-        11,
-        47
-      ],
-      [
-        11,
-        48
-      ],
-      [
-        11,
-        49
-      ],
-      [
-        11,
-        50
-      ],
-      [
-        11,
-        51
-      ],
-      [
-        11,
-        52
-      ],
-      [
-        11,
-        53
-      ],
-      [
-        11,
-        54
-      ],
-      [
-        11,
-        55
-      ],
-      [
-        10,
-        55
-      ],
-      [
-        9,
-        55
-      ],
-      [
-        8,
-        55
-      ],
-      [
-        8,
-        54
-      ],
-      [
-        8,
-        53
-      ],
-      [
-        9,
-        53
-      ],
-      [
-        9,
-        52
+        5,
+        69
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "The conviction proves Amara must take over.",
+    "last_thought_beat": 2097,
+    "belief": "Etta’s birth will bring family unity, easing my responsibilities.",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 18,
     "chasing": null,
     "leads": [
@@ -7573,8 +7520,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -7589,12 +7536,14 @@
       "jonah2",
       "otis",
       "rufus",
-      "theo"
+      "theo",
+      "etta2"
     ],
     "birth_day": null,
     "standing": 31,
     "directive": null,
-    "detained_until": 0
+    "detained_until": 525,
+    "charged_with": "Public Haircut Ban"
   },
   "simone": {
     "id": "simone",
@@ -7622,7 +7571,7 @@
     },
     "pos": [
       4,
-      51
+      48
     ],
     "dest": [
       3,
@@ -7631,14 +7580,14 @@
     "at": "terrace_a",
     "spot": [
       4,
-      51
+      48
     ],
     "mood": {
-      "energy": 21,
-      "happiness": 49,
-      "stress": 62,
+      "energy": 37,
+      "happiness": 63,
+      "stress": 53,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "junie": {
@@ -7712,6 +7661,10 @@
       "okafor": {
         "affinity": -3,
         "opinion": "He’s generous"
+      },
+      "rufus2": {
+        "affinity": 95,
+        "opinion": "my child"
       }
     },
     "memories": [
@@ -8274,8 +8227,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -8398,17 +8351,37 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too quiet",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2095,
+        "day": 523,
+        "what": "Rufus was born.",
+        "importance": 10
       }
     ],
-    "action": "washes up",
-    "activity": "washing up",
-    "thought": "I keep secrets, but I speak when it matters.",
+    "action": "sitting with the radio on",
+    "activity": "sitting with the radio on",
+    "thought": "",
     "speech": null,
     "path": [
-      [
-        24,
-        67
-      ],
       [
         23,
         67
@@ -8560,19 +8533,31 @@
       [
         4,
         51
+      ],
+      [
+        4,
+        50
+      ],
+      [
+        4,
+        49
+      ],
+      [
+        4,
+        48
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "The conviction shows I must speak out.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll be taken for a ride if I’m too quiet",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 22,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -8583,7 +8568,8 @@
     "parents": [],
     "children": [
       "etta",
-      "maren"
+      "maren",
+      "rufus2"
     ],
     "birth_day": null,
     "standing": 45,
@@ -8614,8 +8600,8 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      34,
+      49
     ],
     "dest": [
       50,
@@ -8623,15 +8609,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      32,
-      50
+      34,
+      49
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 49,
-      "stress": 58,
-      "social_need": 0,
-      "fear": 29
+      "energy": 40,
+      "happiness": 50,
+      "stress": 48,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "nadia": {
@@ -9539,8 +9525,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -9681,24 +9667,49 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my family if I’m seen as weak",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "eats at the table",
-    "activity": "eating at the table",
-    "thought": "I keep my hands to myself.",
-    "speech": null,
+    "action": "Chop cars, talk to Nia",
+    "activity": "washing up",
+    "thought": "Can't let them push me over",
+    "speech": {
+      "to": "nia",
+      "text": "We need to keep the shop open."
+    },
     "path": [
       [
-        46,
+        47,
+        68
+      ],
+      [
+        47,
+        67
+      ],
+      [
+        47,
         66
       ],
       [
-        46,
+        47,
         65
-      ],
-      [
-        46,
-        64
       ],
       [
         47,
@@ -9825,30 +9836,34 @@
         52
       ],
       [
-        32,
-        52
-      ],
-      [
-        32,
+        33,
         51
       ],
       [
-        32,
+        33,
         50
+      ],
+      [
+        33,
+        49
+      ],
+      [
+        34,
+        49
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "The conviction proves my family is at risk.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll lose my family if I’m seen as weak",
     "alive": true,
     "health": 64,
-    "grief": 30,
+    "grief": 21,
     "volatility": 70,
     "chasing": null,
     "last_instigated_day": 515,
     "driving": "van",
     "vehicle": "van",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "courthouse",
       "title": "in the office",
@@ -9900,11 +9915,11 @@
       67
     ],
     "mood": {
-      "energy": 27,
-      "happiness": 67,
-      "stress": 51,
+      "energy": 43,
+      "happiness": 50,
+      "stress": 34,
       "social_need": 12,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -10346,8 +10361,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -10476,29 +10491,67 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll miss the truth if I’m quiet",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
+    "action": "at the desk",
+    "activity": "at the desk",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        29,
+        68
+      ],
+      [
+        30,
+        68
+      ],
+      [
+        31,
+        68
+      ],
+      [
+        32,
+        68
+      ],
+      [
+        33,
+        68
+      ],
       [
         33,
         67
       ]
     ],
-    "last_thought_beat": 2076,
-    "belief": "The conviction proves the truth is hidden.",
+    "last_thought_beat": 2095,
+    "belief": "I’ll miss the truth if I’m quiet",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 40,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -10537,8 +10590,8 @@
       "night": "pawnshop"
     },
     "pos": [
-      32,
-      16
+      28,
+      18
     ],
     "dest": [
       50,
@@ -10546,20 +10599,20 @@
     ],
     "at": "harborbar",
     "spot": [
-      32,
-      16
+      28,
+      18
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 67,
-      "stress": 79,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 96,
       "social_need": 0,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "kohl": {
         "affinity": -100,
-        "opinion": "frustrated"
+        "opinion": "He’s always nagging"
       },
       "wes": {
         "affinity": -78,
@@ -11244,8 +11297,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -11422,20 +11475,41 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "They’ll strip my position if I’m too visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "nurses a drink",
-    "activity": "nursing a drink",
-    "thought": "I count every coin, nothing slips past me.",
-    "speech": null,
+    "action": "Read paper, eye Cass",
+    "activity": "reading the paper",
+    "thought": "Can't let them strip me",
+    "speech": {
+      "to": "cass",
+      "text": "We need to move fast before auditors."
+    },
     "path": [
       [
-        36,
-        34
+        34,
+        32
       ],
       [
-        35,
-        34
+        34,
+        33
       ],
       [
         34,
@@ -11586,27 +11660,27 @@
         19
       ],
       [
-        31,
+        30,
+        19
+      ],
+      [
+        29,
+        19
+      ],
+      [
+        28,
+        19
+      ],
+      [
+        28,
         18
-      ],
-      [
-        31,
-        17
-      ],
-      [
-        31,
-        16
-      ],
-      [
-        32,
-        16
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "Cass is poking around my books while short counts pile up around here.",
+    "last_thought_beat": 2098,
+    "belief": "They’ll strip my position if I’m too visible",
     "alive": true,
     "health": 56,
-    "grief": 10,
+    "grief": 1,
     "volatility": 65,
     "chasing": null,
     "leads": [
@@ -11622,8 +11696,8 @@
     "last_instigated_day": 510,
     "driving": "car",
     "vehicle": "car",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -12514,8 +12588,8 @@
       "night": "harborbar"
     },
     "pos": [
-      28,
-      17
+      32,
+      16
     ],
     "dest": [
       31,
@@ -12523,15 +12597,15 @@
     ],
     "at": "harborbar",
     "spot": [
-      28,
-      17
+      32,
+      16
     ],
     "mood": {
       "energy": 74,
-      "happiness": 67,
-      "stress": 51,
+      "happiness": 50,
+      "stress": 43,
       "social_need": 0,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -12560,7 +12634,7 @@
       },
       "kohl": {
         "affinity": -100,
-        "opinion": "still a nuisance"
+        "opinion": "Annoying"
       },
       "nadia": {
         "affinity": -11,
@@ -13199,8 +13273,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -13407,24 +13481,42 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my edge if I’m challenged",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "talks over the table",
+    "action": "talking over the table",
     "activity": "talking over the table",
-    "thought": "I use chaos to strengthen my position.",
+    "thought": "",
     "speech": null,
     "path": [
       [
+        8,
+        35
+      ],
+      [
         7,
-        34
+        35
       ],
       [
         6,
-        34
-      ],
-      [
-        5,
-        34
+        35
       ],
       [
         5,
@@ -13615,38 +13707,34 @@
         19
       ],
       [
-        30,
-        19
-      ],
-      [
-        29,
-        19
-      ],
-      [
-        28,
-        19
-      ],
-      [
-        28,
+        31,
         18
       ],
       [
-        28,
+        31,
         17
+      ],
+      [
+        31,
+        16
+      ],
+      [
+        32,
+        16
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "Booker is hiding something in his ledgers and Kohl is cracking under the pressure.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll lose my edge if I’m challenged",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 74,
     "chasing": null,
     "last_instigated_day": 504,
     "driving": "car",
     "vehicle": "car",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -13686,7 +13774,7 @@
     },
     "pos": [
       65,
-      52
+      50
     ],
     "dest": [
       62,
@@ -13695,14 +13783,14 @@
     "at": "okonkwo",
     "spot": [
       65,
-      52
+      50
     ],
     "mood": {
       "energy": 74,
-      "happiness": 49,
-      "stress": 53,
+      "happiness": 50,
+      "stress": 47,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -13715,7 +13803,7 @@
       },
       "boateng": {
         "affinity": 45,
-        "opinion": "respectful"
+        "opinion": "quiet, supportive"
       },
       "malik": {
         "affinity": -64,
@@ -13966,8 +14054,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -14042,29 +14130,65 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "sitting with the radio on",
-    "activity": "sitting with the radio on",
+    "action": "eating at the table",
+    "activity": "eating at the table",
     "thought": "",
     "speech": null,
     "path": [
       [
+        60,
+        49
+      ],
+      [
+        61,
+        49
+      ],
+      [
+        62,
+        49
+      ],
+      [
+        63,
+        49
+      ],
+      [
+        64,
+        49
+      ],
+      [
         65,
-        52
+        49
+      ],
+      [
+        65,
+        50
       ]
     ],
-    "last_thought_beat": 2074,
+    "last_thought_beat": 2088,
     "belief": "the law is tightening, maybe our sons will feel pressure",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 25,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "precinct",
       "title": "on the desk",
@@ -14103,8 +14227,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      60,
-      52
+      65,
+      50
     ],
     "dest": [
       34,
@@ -14112,15 +14236,15 @@
     ],
     "at": "okonkwo",
     "spot": [
-      60,
-      52
+      65,
+      50
     ],
     "mood": {
-      "energy": 70,
-      "happiness": 49,
-      "stress": 55,
+      "energy": 74,
+      "happiness": 50,
+      "stress": 36,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -14348,8 +14472,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -14472,56 +14596,86 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m too outspoken",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
+    "action": "going through the post",
+    "activity": "going through the post",
     "thought": "",
     "speech": null,
     "path": [
       [
+        81,
+        53
+      ],
+      [
+        80,
+        53
+      ],
+      [
+        79,
+        53
+      ],
+      [
+        78,
+        53
+      ],
+      [
+        77,
+        53
+      ],
+      [
+        76,
+        53
+      ],
+      [
         75,
-        50
+        53
       ],
       [
         74,
-        50
+        53
       ],
       [
         73,
-        50
+        53
       ],
       [
         72,
-        50
+        53
       ],
       [
         71,
-        50
+        53
       ],
       [
         70,
-        50
+        53
       ],
       [
         69,
-        50
+        53
       ],
       [
         68,
-        50
-      ],
-      [
-        67,
-        50
-      ],
-      [
-        67,
-        51
-      ],
-      [
-        67,
-        52
+        53
       ],
       [
         67,
@@ -14564,29 +14718,41 @@
         53
       ],
       [
-        61,
+        63,
         53
       ],
       [
-        60,
+        64,
         53
       ],
       [
-        60,
+        65,
+        53
+      ],
+      [
+        65,
         52
+      ],
+      [
+        65,
+        51
+      ],
+      [
+        65,
+        50
       ]
     ],
-    "last_thought_beat": 2074,
-    "belief": "Malik’s death proves the city is deadly.",
+    "last_thought_beat": 2091,
+    "belief": "I’ll be ignored if I’m too outspoken",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 52,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -15311,7 +15477,7 @@
     },
     "pos": [
       9,
-      51
+      52
     ],
     "dest": [
       34,
@@ -15320,14 +15486,14 @@
     "at": "terrace_b",
     "spot": [
       9,
-      51
+      52
     ],
     "mood": {
       "energy": 74,
-      "happiness": 49,
-      "stress": 56,
+      "happiness": 50,
+      "stress": 39,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -15352,7 +15518,7 @@
       },
       "nadia": {
         "affinity": 17,
-        "opinion": "She’s kind"
+        "opinion": "friendly"
       },
       "sticks": {
         "affinity": -72,
@@ -15549,8 +15715,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -15667,64 +15833,62 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too quiet",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "watching television",
-    "activity": "watching television",
+    "action": "sitting with the radio on",
+    "activity": "sitting with the radio on",
     "thought": "",
     "speech": null,
     "path": [
       [
+        75,
+        54
+      ],
+      [
         74,
-        48
+        54
       ],
       [
         73,
-        48
+        54
       ],
       [
         72,
-        48
+        54
       ],
       [
         71,
-        48
+        54
       ],
       [
         70,
-        48
+        54
       ],
       [
         69,
-        48
+        54
       ],
       [
         68,
-        48
-      ],
-      [
-        67,
-        48
-      ],
-      [
-        67,
-        49
-      ],
-      [
-        67,
-        50
-      ],
-      [
-        67,
-        51
-      ],
-      [
-        67,
-        52
-      ],
-      [
-        67,
-        53
+        54
       ],
       [
         67,
@@ -15993,17 +16157,13 @@
       [
         9,
         52
-      ],
-      [
-        9,
-        51
       ]
     ],
-    "last_thought_beat": 2072,
-    "belief": "The conviction shows I must get a bike.",
+    "last_thought_beat": 2095,
+    "belief": "I’ll be taken for a ride if I’m too quiet",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 14,
     "chasing": null,
     "driving": null,
@@ -16043,8 +16203,8 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      31,
+      51
     ],
     "dest": [
       33,
@@ -16052,15 +16212,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      32,
-      50
+      31,
+      51
     ],
     "mood": {
       "energy": 74,
-      "happiness": 49,
-      "stress": 57,
+      "happiness": 50,
+      "stress": 41,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -16258,8 +16418,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -16382,24 +16542,34 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my ground if I’m challenged",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "eating at the table",
-    "activity": "eating at the table",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
       [
-        64,
-        32
-      ],
-      [
         63,
-        32
-      ],
-      [
-        62,
-        32
+        33
       ],
       [
         62,
@@ -16618,22 +16788,22 @@
         52
       ],
       [
-        32,
-        51
+        31,
+        52
       ],
       [
-        32,
-        50
+        31,
+        51
       ]
     ],
-    "last_thought_beat": 2072,
+    "last_thought_beat": 2094,
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 28,
     "chasing": null,
     "driving": null,
-    "belief": "The conviction proves I should hold ground.",
+    "belief": "I’ll lose my ground if I’m challenged",
     "vehicle": null,
     "money": 200,
     "skill": 30,
@@ -17193,11 +17363,11 @@
       50
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 49,
-      "stress": 55,
+      "energy": 40,
+      "happiness": 51,
+      "stress": 40,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -17255,6 +17425,10 @@
       "marisol": {
         "affinity": -2,
         "opinion": "She’s calm"
+      },
+      "etta2": {
+        "affinity": 95,
+        "opinion": "my child"
       }
     },
     "memories": [
@@ -17577,8 +17751,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -17737,12 +17911,39 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my shop if the powerful intervene",
+        "importance": 8
+      },
+      {
+        "beat": 2091,
+        "day": 522,
+        "what": "Etta was born.",
+        "importance": 10
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "going through the post",
-    "activity": "going through the post",
-    "thought": "",
-    "speech": null,
+    "action": "Eat, plan with Jonah",
+    "activity": "eating at the table",
+    "thought": "They won't see our plan",
+    "speech": {
+      "to": "jonah",
+      "text": "We can outsmart them."
+    },
     "path": [
       [
         21,
@@ -17913,17 +18114,17 @@
         50
       ]
     ],
-    "last_thought_beat": 2074,
-    "belief": "Rosa’s conviction shows the law is biased against us.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll lose my shop if the powerful intervene",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 38,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -17938,7 +18139,8 @@
       "jonah2",
       "otis",
       "rufus",
-      "theo"
+      "theo",
+      "etta2"
     ],
     "birth_day": null,
     "standing": 45,
@@ -17968,24 +18170,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      60,
-      33
+      78,
+      35
     ],
     "dest": [
       76,
       40
     ],
-    "at": "bodega",
+    "at": "delmarflats",
     "spot": [
-      60,
-      33
+      78,
+      35
     ],
     "mood": {
-      "energy": 23,
-      "happiness": 67,
-      "stress": 55,
+      "energy": 3,
+      "happiness": 41,
+      "stress": 74,
       "social_need": 0,
-      "fear": 34
+      "fear": 18
     },
     "relationships": {
       "junie": {
@@ -18813,8 +19015,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -18961,39 +19163,183 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I was taken in over No Linger on Porch After Dusk.",
+        "importance": 8
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my business if I’m too involved",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "I was convicted over No Linger on Porch After Dusk: a $75 fine.",
+        "importance": 9
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "watching the door",
-    "activity": "watching the door",
+    "action": "sitting down for a minute",
+    "activity": "sitting down for a minute",
     "thought": "",
     "speech": null,
     "path": [
       [
-        63,
-        32
-      ],
-      [
-        62,
-        32
+        60,
+        33
       ],
       [
         61,
-        32
-      ],
-      [
-        60,
-        32
-      ],
-      [
-        60,
         33
+      ],
+      [
+        62,
+        33
+      ],
+      [
+        62,
+        34
+      ],
+      [
+        62,
+        35
+      ],
+      [
+        62,
+        36
+      ],
+      [
+        63,
+        36
+      ],
+      [
+        64,
+        36
+      ],
+      [
+        65,
+        36
+      ],
+      [
+        66,
+        36
+      ],
+      [
+        67,
+        36
+      ],
+      [
+        68,
+        36
+      ],
+      [
+        69,
+        36
+      ],
+      [
+        70,
+        36
+      ],
+      [
+        71,
+        36
+      ],
+      [
+        72,
+        36
+      ],
+      [
+        72,
+        37
+      ],
+      [
+        72,
+        38
+      ],
+      [
+        72,
+        39
+      ],
+      [
+        72,
+        40
+      ],
+      [
+        72,
+        41
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        77,
+        40
+      ],
+      [
+        78,
+        40
+      ],
+      [
+        78,
+        39
+      ],
+      [
+        78,
+        38
+      ],
+      [
+        78,
+        37
+      ],
+      [
+        78,
+        36
+      ],
+      [
+        78,
+        35
       ]
     ],
-    "last_thought_beat": 2073,
-    "belief": "The conviction means my business will suffer.",
+    "last_thought_beat": 2097,
+    "belief": "I’ll lose my business if I’m too involved",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 44,
     "chasing": null,
     "leads": [
@@ -19008,8 +19354,8 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "clinic",
       "title": "on the ward",
@@ -19021,7 +19367,8 @@
     "children": [],
     "birth_day": null,
     "standing": 45,
-    "directive": null
+    "directive": null,
+    "detained_until": 0
   },
   "dot": {
     "id": "dot",
@@ -19048,8 +19395,8 @@
       "night": "harborbar"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -19057,15 +19404,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 49,
-      "stress": 51,
-      "social_need": 0,
-      "fear": 29
+      "happiness": 50,
+      "stress": 52,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "booker": {
@@ -19153,7 +19500,7 @@
         "opinion": "impatient"
       },
       "odette": {
-        "affinity": -10,
+        "affinity": -18,
         "opinion": "respectful"
       }
     },
@@ -19399,8 +19746,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -19541,30 +19888,51 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m careless",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "sits for a minute",
+    "action": "Sit, watch tabs",
     "activity": "sitting down for a minute",
-    "thought": "No one owes me, and that’s my rule.",
-    "speech": null,
+    "thought": "If I slip, I'm done",
+    "speech": {
+      "to": "brennan",
+      "text": "Keep your tabs straight."
+    },
     "path": [
       [
-        74,
-        20
+        75,
+        23
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "Cass and Brennan think they can test my patience in public.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll be taken for a ride if I’m careless",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 84,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "last_instigated_day": 483,
-    "money": 4275,
-    "skill": 86.5,
+    "last_instigated_day": 523,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "school",
       "title": "in the office",
@@ -19602,8 +19970,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      79,
-      36
+      75,
+      39
     ],
     "dest": [
       50,
@@ -19611,15 +19979,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      79,
-      36
+      75,
+      39
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 49,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 43,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "booker": {
@@ -20311,8 +20679,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -20435,20 +20803,45 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my action if I’m not visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "sits with the radio on",
-    "activity": "sitting with the radio on, in the fog",
-    "thought": "I must act before Lyle pulls another sting.",
-    "speech": null,
+    "action": "Wash, plan against Lyle",
+    "activity": "washing up",
+    "thought": "If I don't act, I'm dead",
+    "speech": {
+      "to": "gus",
+      "text": "We need to stop Lyle."
+    },
     "path": [
       [
-        36,
-        35
+        34,
+        32
       ],
       [
-        35,
-        35
+        34,
+        33
+      ],
+      [
+        34,
+        34
       ],
       [
         34,
@@ -20659,36 +21052,16 @@
         40
       ],
       [
-        76,
+        75,
+        40
+      ],
+      [
+        75,
         39
-      ],
-      [
-        76,
-        38
-      ],
-      [
-        76,
-        37
-      ],
-      [
-        76,
-        36
-      ],
-      [
-        77,
-        36
-      ],
-      [
-        78,
-        36
-      ],
-      [
-        79,
-        36
       ]
     ],
-    "last_thought_beat": 2078,
-    "belief": "The conviction proves I must act against Lyle.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll lose my action if I’m not visible",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -20697,8 +21070,8 @@
     "last_instigated_day": 488,
     "driving": "van",
     "vehicle": "van",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "school",
       "title": "on the desk",
@@ -20737,7 +21110,7 @@
       "night": "bodega"
     },
     "pos": [
-      64,
+      63,
       33
     ],
     "dest": [
@@ -20746,15 +21119,15 @@
     ],
     "at": "bodega",
     "spot": [
-      64,
+      63,
       33
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 67,
-      "stress": 47,
-      "social_need": 0,
-      "fear": 34
+      "energy": 40,
+      "happiness": 50,
+      "stress": 31,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -20946,8 +21319,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -21076,10 +21449,28 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be left behind if I’m not noticed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "restocking shelves",
+    "activity": "restocking shelves",
     "thought": "",
     "speech": null,
     "path": [
@@ -21098,23 +21489,19 @@
       [
         63,
         33
-      ],
-      [
-        64,
-        33
       ]
     ],
-    "last_thought_beat": 2073,
-    "belief": "The conviction proves I must outlast the corner.",
+    "last_thought_beat": 2091,
+    "belief": "I’ll be left behind if I’m not noticed",
     "alive": true,
     "health": 80,
-    "grief": 10,
+    "grief": 1,
     "volatility": 42,
     "chasing": null,
     "driving": null,
     "vehicle": "van",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -21153,8 +21540,8 @@
       "night": "riverflats"
     },
     "pos": [
-      75,
-      16
+      83,
+      23
     ],
     "dest": [
       6,
@@ -21162,15 +21549,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      75,
-      16
+      83,
+      23
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 29,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "ruiz": {
@@ -21178,8 +21565,8 @@
         "opinion": "You’re stubborn"
       },
       "kohl": {
-        "affinity": -12,
-        "opinion": "still in over his head"
+        "affinity": -15,
+        "opinion": "He’s always on edge"
       },
       "booker": {
         "affinity": -24,
@@ -21428,8 +21815,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -21564,35 +21951,45 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll retire without a pension if I’m exposed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "watching television, in the fog",
-    "activity": "watching television, in the fog",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
       [
-        2,
-        67
-      ],
-      [
-        2,
-        66
-      ],
-      [
-        2,
-        65
-      ],
-      [
-        2,
+        9,
         64
       ],
       [
-        3,
+        8,
         64
       ],
       [
-        4,
+        7,
+        64
+      ],
+      [
+        6,
         64
       ],
       [
@@ -22068,12 +22465,64 @@
         17
       ],
       [
-        75,
-        16
+        76,
+        17
+      ],
+      [
+        77,
+        17
+      ],
+      [
+        78,
+        17
+      ],
+      [
+        79,
+        17
+      ],
+      [
+        80,
+        17
+      ],
+      [
+        81,
+        17
+      ],
+      [
+        82,
+        17
+      ],
+      [
+        82,
+        18
+      ],
+      [
+        83,
+        18
+      ],
+      [
+        83,
+        19
+      ],
+      [
+        83,
+        20
+      ],
+      [
+        83,
+        21
+      ],
+      [
+        83,
+        22
+      ],
+      [
+        83,
+        23
       ]
     ],
-    "last_thought_beat": 2073,
-    "belief": "The department is a powder keg and my pension is too close to the fuse.",
+    "last_thought_beat": 2096,
+    "belief": "I’ll retire without a pension if I’m exposed",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -22081,8 +22530,8 @@
     "chasing": null,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 4275,
-    "skill": 86.5,
+    "money": 4380,
+    "skill": 88.0,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -22121,8 +22570,8 @@
       "night": "riverflats"
     },
     "pos": [
-      19,
-      64
+      24,
+      67
     ],
     "dest": [
       75,
@@ -22130,15 +22579,15 @@
     ],
     "at": "clinic",
     "spot": [
-      19,
-      64
+      24,
+      67
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 49,
-      "stress": 58,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 39,
       "social_need": 12,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -22382,8 +22831,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -22494,29 +22943,51 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m not seen",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
+    "action": "at the desk",
+    "activity": "at the desk",
     "thought": "",
     "speech": null,
     "path": [
       [
-        19,
-        64
+        24,
+        68
+      ],
+      [
+        24,
+        67
       ]
     ],
-    "last_thought_beat": 2077,
-    "belief": "The conviction proves I need a break.",
+    "last_thought_beat": 2091,
+    "belief": "I’ll be taken for a ride if I’m not seen",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 20,
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -22555,7 +23026,7 @@
     },
     "pos": [
       79,
-      33
+      36
     ],
     "dest": [
       76,
@@ -22564,14 +23035,14 @@
     "at": "delmarflats",
     "spot": [
       79,
-      33
+      36
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 49,
-      "stress": 71,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 56,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "nadia": {
@@ -22765,8 +23236,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -22883,13 +23354,43 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be targeted if I help Nadia",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "going through the post, in the fog",
-    "activity": "going through the post, in the fog",
+    "action": "sitting with the radio on",
+    "activity": "sitting with the radio on",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        33,
+        67
+      ],
+      [
+        33,
+        66
+      ],
+      [
+        33,
+        65
+      ],
       [
         33,
         64
@@ -23189,31 +23690,19 @@
       [
         79,
         36
-      ],
-      [
-        79,
-        35
-      ],
-      [
-        79,
-        34
-      ],
-      [
-        79,
-        33
       ]
     ],
-    "last_thought_beat": 2076,
-    "belief": "The conviction shows I must help Nadia escape.",
+    "last_thought_beat": 2098,
+    "belief": "I’ll be targeted if I help Nadia",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 26,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -23265,10 +23754,10 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 49,
-      "stress": 51,
-      "social_need": 81,
-      "fear": 29
+      "happiness": 50,
+      "stress": 35,
+      "social_need": 100,
+      "fear": 10
     },
     "relationships": {
       "adaeze": {
@@ -23468,8 +23957,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -23610,6 +24099,24 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose more if I keep talking",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
     "action": "sitting down for a minute",
@@ -23618,24 +24125,8 @@
     "speech": null,
     "path": [
       [
-        50,
-        40
-      ],
-      [
-        51,
-        40
-      ],
-      [
-        52,
-        40
-      ],
-      [
         53,
-        40
-      ],
-      [
-        54,
-        40
+        39
       ],
       [
         54,
@@ -23658,17 +24149,17 @@
         35
       ]
     ],
-    "last_thought_beat": 2075,
+    "last_thought_beat": 2092,
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 10,
     "chasing": null,
     "driving": null,
-    "belief": "I’ll bury fewer because justice may judge us.",
+    "belief": "I’ll lose more if I keep talking",
     "vehicle": null,
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -23720,11 +24211,11 @@
       48
     ],
     "mood": {
-      "energy": 20,
-      "happiness": 49,
-      "stress": 56,
-      "social_need": 0,
-      "fear": 29
+      "energy": 36,
+      "happiness": 63,
+      "stress": 40,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -23764,6 +24255,10 @@
         "opinion": "my child"
       },
       "maren": {
+        "affinity": 95,
+        "opinion": "my child"
+      },
+      "rufus2": {
         "affinity": 95,
         "opinion": "my child"
       }
@@ -23986,8 +24481,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -24110,10 +24605,34 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my mortgage if I’m seen as a threat",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2095,
+        "day": 523,
+        "what": "Rufus was born.",
+        "importance": 10
       }
     ],
-    "action": "sitting with the radio on",
-    "activity": "sitting with the radio on",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
@@ -24506,17 +25025,17 @@
         48
       ]
     ],
-    "last_thought_beat": 2074,
-    "belief": "The conviction means my mortgage will be denied.",
+    "last_thought_beat": 2090,
+    "belief": "I’ll lose my mortgage if I’m seen as a threat",
     "alive": true,
     "health": 80,
-    "grief": 30,
+    "grief": 21,
     "volatility": 46,
     "chasing": null,
     "driving": "car",
     "vehicle": "car",
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -24527,7 +25046,8 @@
     "parents": [],
     "children": [
       "etta",
-      "maren"
+      "maren",
+      "rufus2"
     ],
     "birth_day": null,
     "standing": 45,
@@ -24557,8 +25077,8 @@
       "night": "riverflats"
     },
     "pos": [
-      29,
-      18
+      33,
+      17
     ],
     "dest": [
       63,
@@ -24566,15 +25086,15 @@
     ],
     "at": "harborbar",
     "spot": [
-      29,
-      18
+      33,
+      17
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 48,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 34,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "rosa": {
@@ -24620,6 +25140,10 @@
       "booker": {
         "affinity": -1,
         "opinion": "He’s untrustworthy"
+      },
+      "nia": {
+        "affinity": -8,
+        "opinion": "not sure about them"
       }
     },
     "memories": [
@@ -24858,8 +25382,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -24982,24 +25506,34 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be harmed if I’m seen as a threat",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "nursing a drink",
-    "activity": "nursing a drink",
+    "action": "waiting to be served",
+    "activity": "waiting to be served",
     "thought": "",
     "speech": null,
     "path": [
       [
-        65,
-        18
-      ],
-      [
-        64,
-        18
-      ],
-      [
-        63,
-        18
+        62,
+        17
       ],
       [
         62,
@@ -25190,30 +25724,34 @@
         19
       ],
       [
-        30,
-        19
-      ],
-      [
-        29,
-        19
-      ],
-      [
-        29,
+        31,
         18
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        32,
+        17
+      ],
+      [
+        33,
+        17
       ]
     ],
-    "last_thought_beat": 2072,
-    "belief": "The conviction proves the city is too dangerous.",
+    "last_thought_beat": 2095,
+    "belief": "I’ll be harmed if I’m seen as a threat",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 66,
     "chasing": null,
-    "last_instigated_day": 468,
+    "last_instigated_day": 523,
     "driving": "van",
     "vehicle": "van",
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "on nights",
@@ -25252,8 +25790,8 @@
       "night": "underpass"
     },
     "pos": [
-      62,
-      66
+      65,
+      64
     ],
     "dest": [
       79,
@@ -25261,15 +25799,15 @@
     ],
     "at": "underpass",
     "spot": [
-      62,
-      66
+      65,
+      64
     ],
     "mood": {
-      "energy": 14,
-      "happiness": 35,
-      "stress": 67,
-      "social_need": 69,
-      "fear": 32
+      "energy": 30,
+      "happiness": 50,
+      "stress": 50,
+      "social_need": 94,
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -25943,8 +26481,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -26061,10 +26599,28 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I do not know what to do with that.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m not seen",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "action": "sitting on a bench",
-    "activity": "sitting on a bench",
+    "action": "sheltering from the weather",
+    "activity": "sheltering from the weather",
     "thought": "",
     "speech": null,
     "path": [
@@ -26149,74 +26705,54 @@
         55
       ],
       [
-        64,
-        55
-      ],
-      [
-        63,
-        55
-      ],
-      [
-        62,
-        55
-      ],
-      [
-        62,
+        65,
         56
       ],
       [
-        62,
+        65,
         57
       ],
       [
-        62,
+        65,
         58
       ],
       [
-        62,
+        65,
         59
       ],
       [
-        62,
+        65,
         60
       ],
       [
-        62,
+        65,
         61
       ],
       [
-        62,
+        65,
         62
       ],
       [
-        62,
+        65,
         63
       ],
       [
-        62,
+        65,
         64
-      ],
-      [
-        62,
-        65
-      ],
-      [
-        62,
-        66
       ]
     ],
-    "last_thought_beat": 2077,
-    "belief": "The conviction proves I must prove my worth.",
+    "last_thought_beat": 2092,
+    "belief": "I’ll be ignored if I’m not seen",
     "alive": true,
     "health": 80,
-    "grief": 71,
+    "grief": 62,
     "volatility": 68,
     "chasing": null,
     "last_instigated_day": 465,
     "driving": null,
     "vehicle": null,
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "warehouse",
       "title": "loading",
@@ -26266,11 +26802,11 @@
       50
     ],
     "mood": {
-      "energy": 29,
-      "happiness": 60,
-      "stress": 47,
+      "energy": 45,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -26484,8 +27020,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -26620,15 +27156,33 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll have to pack up if I’m discovered",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction lets me pack while the city distracts.",
+    "belief": "I’ll have to pack up if I’m discovered",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 236,
-    "last_thought_beat": 2077,
-    "activity": "going through the post",
+    "last_thought_beat": 2091,
+    "activity": "eating at the table",
     "path": [
       [
         34,
@@ -26871,15 +27425,15 @@
         50
       ]
     ],
-    "action": "going through the post",
+    "action": "eating at the table",
     "thought": "",
     "speech": null,
     "volatility": 45,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "cannery",
       "title": "on nights",
@@ -26916,8 +27470,8 @@
       "night": "riverflats"
     },
     "pos": [
-      75,
-      16
+      83,
+      18
     ],
     "dest": [
       75,
@@ -26925,15 +27479,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      75,
-      16
+      83,
+      18
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 36,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -26951,6 +27505,10 @@
       "malik": {
         "affinity": -24,
         "opinion": "I’ll own my space"
+      },
+      "elias": {
+        "affinity": 3,
+        "opinion": "supportive"
       }
     },
     "memories": [
@@ -27087,8 +27645,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -27211,30 +27769,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my job if I’m too loud",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "I’ll own the room because the conviction shows no one else can.",
+    "belief": "I’ll lose my job if I’m too loud",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 260,
-    "last_thought_beat": 2075,
+    "last_thought_beat": 2097,
     "volatility": 33,
     "chasing": null,
-    "activity": "sitting with the radio on",
+    "activity": "eating at the table",
     "path": [
-      [
-        9,
-        69
-      ],
-      [
-        8,
-        69
-      ],
-      [
-        7,
-        69
-      ],
       [
         6,
         69
@@ -27728,21 +28292,53 @@
         18
       ],
       [
-        75,
+        76,
+        18
+      ],
+      [
+        76,
         17
       ],
       [
-        75,
-        16
+        77,
+        17
+      ],
+      [
+        78,
+        17
+      ],
+      [
+        79,
+        17
+      ],
+      [
+        80,
+        17
+      ],
+      [
+        81,
+        17
+      ],
+      [
+        82,
+        17
+      ],
+      [
+        83,
+        17
+      ],
+      [
+        83,
+        18
       ]
     ],
-    "action": "sitting with the radio on",
+    "action": "eating at the table",
     "thought": "",
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 3818,
-    "skill": 86.5,
+    "money": 3911,
+    "skill": 88.0,
     "job": {
       "at": "cannery",
       "title": "loading",
@@ -27779,8 +28375,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      75,
-      39
+      79,
+      33
     ],
     "dest": [
       76,
@@ -27788,15 +28384,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      75,
-      39
+      79,
+      33
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 50,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -27944,8 +28540,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -28080,18 +28676,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll have to leave if I’m discovered",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Rosa’s conviction proves the city is dangerous.",
+    "belief": "I’ll have to leave if I’m discovered",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 344,
-    "last_thought_beat": 2077,
+    "last_thought_beat": 2091,
     "vehicle": null,
     "volatility": 45,
-    "money": 3742,
-    "skill": 85.5,
+    "money": 3835,
+    "skill": 87.0,
     "job": {
       "at": "cannery",
       "title": "on the line",
@@ -28103,20 +28717,16 @@
     "children": [],
     "birth_day": null,
     "chasing": null,
-    "activity": "washing up",
+    "activity": "eating at the table",
     "driving": null,
     "path": [
       [
-        2,
-        33
+        6,
+        32
       ],
       [
-        3,
-        33
-      ],
-      [
-        4,
-        33
+        5,
+        32
       ],
       [
         5,
@@ -28451,15 +29061,47 @@
         40
       ],
       [
-        75,
+        77,
         40
       ],
       [
-        75,
+        78,
+        40
+      ],
+      [
+        78,
         39
+      ],
+      [
+        78,
+        38
+      ],
+      [
+        78,
+        37
+      ],
+      [
+        79,
+        37
+      ],
+      [
+        79,
+        36
+      ],
+      [
+        79,
+        35
+      ],
+      [
+        79,
+        34
+      ],
+      [
+        79,
+        33
       ]
     ],
-    "action": "washing up",
+    "action": "eating at the table",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -28501,11 +29143,11 @@
       52
     ],
     "mood": {
-      "energy": 4,
-      "happiness": 49,
-      "stress": 78,
+      "energy": 20,
+      "happiness": 50,
+      "stress": 83,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -28669,8 +29311,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -28835,12 +29477,30 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m not unique",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Everyone thinks I'm a failure and will never be good at anything.",
+    "belief": "I’ll be ignored if I’m not unique",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 37,
     "vehicle": null,
     "money": 0,
@@ -28854,22 +29514,18 @@
     "partner": null,
     "birth_day": 344,
     "arrived_day": 344,
-    "last_thought_beat": 2077,
+    "last_thought_beat": 2098,
     "chasing": null,
-    "activity": "sitting down for a minute",
+    "activity": "sitting with the radio on",
     "driving": null,
     "path": [
       [
+        7,
+        50
+      ],
+      [
         8,
-        48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
-        49
+        50
       ],
       [
         9,
@@ -28884,7 +29540,7 @@
         52
       ]
     ],
-    "action": "sitting down for a minute",
+    "action": "sitting with the radio on",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -28913,8 +29569,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -28922,15 +29578,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 85,
+      "energy": 0,
+      "happiness": 41,
+      "stress": 96,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -28942,8 +29598,8 @@
         "opinion": "my parent"
       },
       "tee": {
-        "affinity": -25,
-        "opinion": "he’s kind"
+        "affinity": -28,
+        "opinion": "He’s impatient"
       },
       "tiny": {
         "affinity": -8,
@@ -29076,14 +29732,14 @@
         "importance": 8
       },
       {
-        "beat": 1742,
-        "day": 435,
+        "beat": 2088,
+        "day": 522,
         "what": "I was taken in over No Linger on Porch After Dusk.",
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "I was convicted over No Linger on Porch After Dusk: a $75 fine.",
         "importance": 9
       },
@@ -29230,9 +29886,39 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’m being punished for speaking up",
+        "importance": 8
+      },
+      {
+        "beat": 2091,
+        "day": 522,
+        "what": "Being seen over the porch means I’m finally valued.",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "I’ll prove serious before they judge me.",
+    "belief": "Being seen over the porch means I’m finally valued.",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -29249,19 +29935,34 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 2078,
+    "last_thought_beat": 2098,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "sitting down for a minute",
     "driving": null,
     "path": [
       [
         7,
-        50
+        51
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "eats at the table",
-    "thought": "I need grown‑ups to hear my voice.",
-    "speech": null,
+    "action": "Sit, plead to Jonah",
+    "thought": "If they ignore me, I'm lost",
+    "speech": {
+      "to": "jonah",
+      "text": "I need your help, Jonah."
+    },
     "standing": 45,
     "directive": null,
     "last_instigated_day": 511,
@@ -29303,11 +30004,11 @@
       48
     ],
     "mood": {
-      "energy": 29,
-      "happiness": 49,
-      "stress": 49,
+      "energy": 45,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -29429,8 +30130,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -29553,12 +30254,30 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my mother’s approval if I’m wrong",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction shows the city will never let me succeed.",
+    "belief": "I’ll lose my mother’s approval if I’m wrong",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 41,
     "vehicle": null,
     "money": 0,
@@ -29572,19 +30291,27 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 2074,
+    "last_thought_beat": 2090,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "sitting with the radio on",
+    "activity": "watching television",
     "driving": null,
     "path": [
+      [
+        4,
+        50
+      ],
+      [
+        4,
+        49
+      ],
       [
         4,
         48
       ]
     ],
-    "action": "sitting with the radio on",
+    "action": "watching television",
     "thought": "",
     "speech": null
   },
@@ -29611,8 +30338,8 @@
       "night": "vasquez"
     },
     "pos": [
-      32,
-      50
+      34,
+      49
     ],
     "dest": [
       33,
@@ -29620,15 +30347,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      32,
-      50
+      34,
+      49
     ],
     "mood": {
-      "energy": 26,
-      "happiness": 60,
-      "stress": 44,
+      "energy": 42,
+      "happiness": 50,
+      "stress": 48,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -29640,7 +30367,7 @@
         "opinion": "Malik sees my potential"
       },
       "hector": {
-        "affinity": 2,
+        "affinity": -10,
         "opinion": "He’s reliable"
       }
     },
@@ -29802,8 +30529,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -29950,20 +30677,44 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be forgotten if I’m not seen",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Hector Delgado started on me in front of people.",
+        "importance": 7
       }
     ],
-    "belief": "The conviction shows I must rise within a year.",
+    "belief": "I’ll be forgotten if I’m not seen",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 351,
-    "last_thought_beat": 2075,
-    "activity": "going through the post",
-    "action": "going through the post",
+    "last_thought_beat": 2094,
+    "activity": "washing up",
+    "action": "washing up",
     "vehicle": null,
     "volatility": 45,
-    "money": 3484,
-    "skill": 82.0,
+    "money": 3577,
+    "skill": 83.5,
     "job": {
       "at": "cannery",
       "title": "works the line at the cannery",
@@ -29981,15 +30732,27 @@
     "path": [
       [
         65,
-        21
+        18
       ],
       [
         64,
-        21
+        18
       ],
       [
         63,
-        21
+        18
+      ],
+      [
+        62,
+        18
+      ],
+      [
+        62,
+        19
+      ],
+      [
+        62,
+        20
       ],
       [
         62,
@@ -30252,16 +31015,20 @@
         52
       ],
       [
-        32,
+        34,
         52
       ],
       [
-        32,
+        34,
         51
       ],
       [
-        32,
+        34,
         50
+      ],
+      [
+        34,
+        49
       ]
     ],
     "thought": "",
@@ -30291,8 +31058,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      90,
-      82
+      87,
+      81
     ],
     "dest": [
       88,
@@ -30300,15 +31067,15 @@
     ],
     "at": "new_home_270",
     "spot": [
-      90,
-      82
+      87,
+      81
     ],
     "mood": {
-      "energy": 0,
-      "happiness": 60,
-      "stress": 43,
-      "social_need": 0,
-      "fear": 25
+      "energy": 16,
+      "happiness": 50,
+      "stress": 31,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "nia2": {
@@ -30424,8 +31191,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -30554,20 +31321,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be caught if I stay in the spotlight",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Rosa’s conviction proves the law is unfair.",
+    "belief": "I’ll be caught if I stay in the spotlight",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 352,
-    "last_thought_beat": 2075,
-    "activity": "sitting down for a minute, in the fog",
-    "action": "sitting down for a minute, in the fog",
+    "last_thought_beat": 2091,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 2510,
-    "skill": 81.5,
+    "money": 2576,
+    "skill": 83.0,
     "job": {
       "at": "diner",
       "title": "cuts and sets hair out of a back room",
@@ -30583,6 +31368,14 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        25,
+        32
+      ],
+      [
+        26,
+        32
+      ],
       [
         27,
         32
@@ -31056,20 +31849,20 @@
         84
       ],
       [
-        89,
+        87,
         84
       ],
       [
-        90,
-        84
-      ],
-      [
-        90,
+        87,
         83
       ],
       [
-        90,
+        87,
         82
+      ],
+      [
+        87,
+        81
       ]
     ],
     "thought": "",
@@ -31112,11 +31905,11 @@
       23
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 40,
+      "happiness": 50,
+      "stress": 44,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "iris": {
@@ -31132,7 +31925,7 @@
         "opinion": "I’ll own my room"
       },
       "dot": {
-        "affinity": -12,
+        "affinity": -24,
         "opinion": "not sure about them"
       },
       "cal2": {
@@ -31254,8 +32047,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -31356,8 +32149,8 @@
         "importance": 5
       },
       {
-        "beat": 1934,
-        "day": 483,
+        "beat": 2094,
+        "day": 523,
         "what": "Dot Feeney started on me in front of people.",
         "importance": 7
       },
@@ -31402,20 +32195,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my room if I’m ignored",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Errol’s death proves the city kills.",
+    "belief": "I’ll lose my room if I’m ignored",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 356,
-    "last_thought_beat": 2073,
+    "last_thought_beat": 2095,
     "activity": "watching television",
     "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 3000,
-    "skill": 79.5,
+    "money": 3084,
+    "skill": 81.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "fixes what other people throw out",
@@ -31923,7 +32734,7 @@
     },
     "pos": [
       4,
-      50
+      51
     ],
     "dest": [
       3,
@@ -31932,14 +32743,14 @@
     "at": "terrace_a",
     "spot": [
       4,
-      50
+      51
     ],
     "mood": {
-      "energy": 29,
-      "happiness": 49,
-      "stress": 51,
+      "energy": 45,
+      "happiness": 50,
+      "stress": 37,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -32069,8 +32880,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -32193,12 +33004,30 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my mother’s pride if I’m wrong",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means I must prove myself.",
+    "belief": "I’ll lose my mother’s pride if I’m wrong",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 25,
     "vehicle": null,
     "money": 0,
@@ -32212,11 +33041,11 @@
     "partner": null,
     "birth_day": 358,
     "arrived_day": 358,
-    "last_thought_beat": 2074,
+    "last_thought_beat": 2090,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "washing up",
     "driving": null,
     "path": [
       [
@@ -32230,9 +33059,13 @@
       [
         4,
         50
+      ],
+      [
+        4,
+        51
       ]
     ],
-    "action": "eating at the table",
+    "action": "washing up",
     "thought": "",
     "speech": null
   },
@@ -32273,10 +33106,10 @@
     ],
     "mood": {
       "energy": 0,
-      "happiness": 60,
-      "stress": 76,
+      "happiness": 50,
+      "stress": 96,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -32294,6 +33127,10 @@
       "elias": {
         "affinity": -3,
         "opinion": "Doing it wrong."
+      },
+      "tee": {
+        "affinity": -4,
+        "opinion": "He’s always pushing"
       }
     },
     "memories": [
@@ -32388,8 +33225,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -32538,8 +33375,8 @@
         "importance": 4
       },
       {
-        "beat": 2072,
-        "day": 518,
+        "beat": 2094,
+        "day": 523,
         "what": "I was taken in over No Linger on Porch After Dusk.",
         "importance": 8
       },
@@ -32554,9 +33391,33 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I was convicted over No Linger on Porch After Dusk: a $75 fine.",
+        "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’m being targeted because I’m new",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Others see me as a child, not serious",
+    "belief": "I’m being targeted because I’m new",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -32573,33 +33434,13 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2076,
+    "last_thought_beat": 2096,
     "standing": 45,
     "directive": null,
     "chasing": null,
     "activity": "sitting down for a minute",
     "driving": null,
     "path": [
-      [
-        5,
-        69
-      ],
-      [
-        6,
-        69
-      ],
-      [
-        6,
-        68
-      ],
-      [
-        6,
-        67
-      ],
-      [
-        6,
-        66
-      ],
       [
         6,
         65
@@ -32609,7 +33450,7 @@
     "thought": "",
     "speech": null,
     "last_instigated_day": 517,
-    "detained_until": 520,
+    "detained_until": 525,
     "charged_with": "No Linger on Porch After Dusk"
   },
   "maren2": {
@@ -32635,8 +33476,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -32644,15 +33485,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
       "energy": 27,
-      "happiness": 49,
-      "stress": 58,
+      "happiness": 50,
+      "stress": 80,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -32782,8 +33623,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -32906,12 +33747,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I was taken in over No Linger on Porch After Dusk.",
+        "importance": 8
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "I was convicted over No Linger on Porch After Dusk: a $75 fine.",
+        "importance": 9
       }
     ],
-    "belief": "I’ll stand out because the conviction shows the city is unfair.",
+    "belief": "I’ll be taken for a ride if I’m too visible",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 34,
     "vehicle": null,
     "money": 0,
@@ -32925,37 +33790,22 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2072,
+    "last_thought_beat": 2093,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "going through the post",
+    "activity": "sitting with the radio on",
     "driving": null,
     "path": [
       [
         9,
         52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        7,
-        52
-      ],
-      [
-        7,
-        51
-      ],
-      [
-        7,
-        50
       ]
     ],
-    "action": "going through the post",
+    "action": "sitting with the radio on",
     "thought": "",
-    "speech": null
+    "speech": null,
+    "detained_until": 0
   },
   "jonah2": {
     "id": "jonah2",
@@ -32993,11 +33843,11 @@
       50
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 49,
-      "stress": 54,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -33019,6 +33869,10 @@
       "maren2": {
         "affinity": 1,
         "opinion": "You’re a calming presence"
+      },
+      "theo": {
+        "affinity": 3,
+        "opinion": "serious"
       }
     },
     "memories": [
@@ -33119,8 +33973,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -33249,12 +34103,30 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my mother’s love if I’m wrong",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means I must prove myself.",
+    "belief": "I’ll lose my mother’s love if I’m wrong",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 20,
     "vehicle": null,
     "money": 0,
@@ -33268,7 +34140,7 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 2076,
+    "last_thought_beat": 2097,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -33308,7 +34180,7 @@
     },
     "pos": [
       19,
-      53
+      50
     ],
     "dest": [
       18,
@@ -33317,14 +34189,14 @@
     "at": "terrace_c",
     "spot": [
       19,
-      53
+      50
     ],
     "mood": {
-      "energy": 7,
-      "happiness": 60,
-      "stress": 43,
-      "social_need": 0,
-      "fear": 25
+      "energy": 23,
+      "happiness": 50,
+      "stress": 31,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "dev": {
@@ -33422,8 +34294,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -33558,20 +34430,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be lost if I’m not visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means I’ll keep my head down.",
+    "belief": "I’ll be lost if I’m not visible",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 370,
-    "last_thought_beat": 2075,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 2091,
+    "activity": "sitting with the radio on",
+    "action": "sitting with the radio on",
     "vehicle": null,
     "volatility": 45,
-    "money": 2070,
-    "skill": 72.5,
+    "money": 2136,
+    "skill": 74.0,
     "job": {
       "at": "harborbar",
       "title": "cuts and sets hair out of a back room",
@@ -33838,6 +34728,18 @@
       [
         19,
         53
+      ],
+      [
+        19,
+        52
+      ],
+      [
+        19,
+        51
+      ],
+      [
+        19,
+        50
       ]
     ],
     "thought": "",
@@ -33867,8 +34769,8 @@
       "night": "terrace_e"
     },
     "pos": [
-      27,
-      52
+      26,
+      49
     ],
     "dest": [
       26,
@@ -33876,15 +34778,15 @@
     ],
     "at": "terrace_e",
     "spot": [
-      27,
-      52
+      26,
+      49
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 12,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "yusuf": {
@@ -33900,7 +34802,7 @@
         "opinion": "concerned"
       },
       "simone": {
-        "affinity": 0,
+        "affinity": 2,
         "opinion": "supportive"
       }
     },
@@ -33990,8 +34892,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -34108,20 +35010,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be lost if I’m not seen",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves I must leave the city.",
+    "belief": "I’ll be lost if I’m not seen",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 371,
-    "last_thought_beat": 2073,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 2089,
+    "activity": "washing up",
+    "action": "washing up",
     "vehicle": null,
     "volatility": 45,
-    "money": 3140,
-    "skill": 72.0,
+    "money": 3245,
+    "skill": 73.5,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -34210,16 +35130,24 @@
         54
       ],
       [
-        27,
-        54
-      ],
-      [
-        27,
+        26,
         53
       ],
       [
-        27,
+        26,
         52
+      ],
+      [
+        26,
+        51
+      ],
+      [
+        26,
+        50
+      ],
+      [
+        26,
+        49
       ]
     ],
     "thought": "",
@@ -34249,7 +35177,7 @@
     },
     "pos": [
       22,
-      51
+      50
     ],
     "dest": [
       22,
@@ -34258,19 +35186,19 @@
     "at": "terrace_d",
     "spot": [
       22,
-      51
+      50
     ],
     "mood": {
-      "energy": 14,
-      "happiness": 67,
-      "stress": 47,
+      "energy": 36,
+      "happiness": 56,
+      "stress": 32,
       "social_need": 12,
-      "fear": 34
+      "fear": 10
     },
     "relationships": {
       "kohl": {
-        "affinity": -5,
-        "opinion": "he’s indifferent"
+        "affinity": -8,
+        "opinion": "indifferent"
       },
       "ivy": {
         "affinity": -1,
@@ -34365,8 +35293,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -34507,20 +35435,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead. I am not sorry, and that frightens me.",
         "importance": 9
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll have to leave if I’m noticed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "Rosa’s conviction shows the city is unsafe.",
+    "belief": "I’ll have to leave if I’m noticed",
     "alive": true,
     "health": 82,
-    "grief": 10,
+    "grief": 1,
     "arrived_day": 377,
-    "last_thought_beat": 2073,
-    "activity": "eating at the table",
-    "action": "eating at the table",
+    "last_thought_beat": 2095,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 2440,
-    "skill": 70.0,
+    "money": 2524,
+    "skill": 71.5,
     "job": {
       "at": "cornerstore",
       "title": "keeps books for people who cannot",
@@ -34537,16 +35483,16 @@
     "driving": null,
     "path": [
       [
-        8,
-        35
-      ],
-      [
-        7,
-        35
-      ],
-      [
         6,
-        35
+        33
+      ],
+      [
+        5,
+        33
+      ],
+      [
+        5,
+        34
       ],
       [
         5,
@@ -34723,6 +35669,10 @@
       [
         22,
         51
+      ],
+      [
+        22,
+        50
       ]
     ],
     "thought": "",
@@ -34751,7 +35701,7 @@
       "night": "new_home_368"
     },
     "pos": [
-      120,
+      123,
       17
     ],
     "dest": [
@@ -34760,15 +35710,15 @@
     ],
     "at": "new_home_368",
     "spot": [
-      120,
+      123,
       17
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 60,
-      "stress": 42,
-      "social_need": 0,
-      "fear": 25
+      "energy": 40,
+      "happiness": 50,
+      "stress": 31,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -34878,8 +35828,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -35002,20 +35952,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be left behind if I’m not noticed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction shows I must rise within a year.",
+    "belief": "I’ll be left behind if I’m not noticed",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 382,
-    "last_thought_beat": 2078,
-    "activity": "eating at the table",
-    "action": "eats at the table",
+    "last_thought_beat": 2093,
+    "activity": "sitting with the radio on",
+    "action": "sitting with the radio on",
     "vehicle": null,
     "volatility": 45,
-    "money": 2384,
-    "skill": 69.0,
+    "money": 2468,
+    "skill": 70.5,
     "job": {
       "at": "new_business_236",
       "title": "drives nights for a car service",
@@ -35033,7 +36001,11 @@
     "path": [
       [
         91,
-        34
+        33
+      ],
+      [
+        90,
+        33
       ],
       [
         90,
@@ -35248,27 +36220,23 @@
         20
       ],
       [
-        121,
+        123,
         20
       ],
       [
-        120,
-        20
-      ],
-      [
-        120,
+        123,
         19
       ],
       [
-        120,
+        123,
         18
       ],
       [
-        120,
+        123,
         17
       ]
     ],
-    "thought": "I’m watching the block, ready to rise.",
+    "thought": "",
     "speech": null
   },
   "errol": {
@@ -35928,8 +36896,8 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      51
+      32,
+      50
     ],
     "dest": [
       33,
@@ -35937,15 +36905,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      31,
-      51
+      32,
+      50
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 30,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -35955,6 +36923,10 @@
       "okafor": {
         "affinity": -2,
         "opinion": "He’s patient"
+      },
+      "kwame2": {
+        "affinity": -2,
+        "opinion": "He’s quiet"
       }
     },
     "memories": [
@@ -36019,8 +36991,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -36149,20 +37121,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose everything if the system catches me",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means we must leave.",
+    "belief": "I’ll lose everything if the system catches me",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 388,
-    "last_thought_beat": 2073,
-    "activity": "watching television",
-    "action": "watching television",
+    "last_thought_beat": 2096,
+    "activity": "going through the post",
+    "action": "going through the post",
     "vehicle": null,
     "volatility": 45,
-    "money": 2300,
-    "skill": 67.5,
+    "money": 2384,
+    "skill": 69.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -36179,15 +37169,11 @@
     "driving": null,
     "path": [
       [
-        54,
+        49,
         83
       ],
       [
-        53,
-        83
-      ],
-      [
-        52,
+        50,
         83
       ],
       [
@@ -36427,12 +37413,12 @@
         52
       ],
       [
-        31,
-        52
+        32,
+        51
       ],
       [
-        31,
-        51
+        32,
+        50
       ]
     ],
     "thought": "",
@@ -36474,11 +37460,11 @@
       39
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 60,
-      "stress": 41,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -36488,6 +37474,10 @@
       "malik": {
         "affinity": -24,
         "opinion": "I’ll keep my head down"
+      },
+      "odette2": {
+        "affinity": -2,
+        "opinion": "watchful"
       }
     },
     "memories": [
@@ -36540,8 +37530,8 @@
         "importance": 8
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -36664,20 +37654,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m not visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means I’ll keep my head down.",
+    "belief": "I’ll be ignored if I’m not visible",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 397,
-    "last_thought_beat": 2074,
+    "last_thought_beat": 2097,
     "activity": "washing up",
     "action": "washing up",
     "vehicle": null,
     "volatility": 45,
-    "money": 2216,
-    "skill": 66.0,
+    "money": 2300,
+    "skill": 67.5,
     "job": {
       "at": "civic_shop_347b",
       "title": "keeps books for people who cannot",
@@ -36694,20 +37702,12 @@
     "driving": null,
     "path": [
       [
-        49,
-        83
+        53,
+        85
       ],
       [
-        50,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        51,
-        84
+        52,
+        85
       ],
       [
         51,
@@ -37252,8 +38252,8 @@
       "night": "vasquez"
     },
     "pos": [
-      34,
-      49
+      32,
+      50
     ],
     "dest": [
       33,
@@ -37261,15 +38261,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      34,
-      49
+      32,
+      50
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 60,
-      "stress": 46,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -37307,8 +38307,8 @@
         "importance": 6
       },
       {
-        "beat": 1748,
-        "day": 437,
+        "beat": 2096,
+        "day": 524,
         "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
@@ -37443,20 +38443,38 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll get caught if I stay too close",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction means we’re all at risk.",
+    "belief": "I’ll get caught if I stay too close",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 425,
-    "last_thought_beat": 2074,
-    "activity": "washing up",
-    "action": "washing up",
+    "last_thought_beat": 2090,
+    "activity": "going through the post",
+    "action": "going through the post",
     "vehicle": null,
     "volatility": 45,
-    "money": 1564,
-    "skill": 61.0,
+    "money": 1630,
+    "skill": 62.5,
     "job": {
       "at": "barbershop",
       "title": "cuts and sets hair out of a back room",
@@ -37625,20 +38643,16 @@
         52
       ],
       [
-        34,
+        32,
         52
       ],
       [
-        34,
+        32,
         51
       ],
       [
-        34,
+        32,
         50
-      ],
-      [
-        34,
-        49
       ]
     ],
     "thought": "",
@@ -37668,8 +38682,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      8,
+      48
     ],
     "dest": [
       8,
@@ -37677,15 +38691,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      8,
+      48
     ],
     "mood": {
-      "energy": 35,
-      "happiness": 49,
-      "stress": 54,
+      "energy": 51,
+      "happiness": 50,
+      "stress": 37,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -37699,6 +38713,10 @@
       "malik": {
         "affinity": -8,
         "opinion": "I’ll be taken seriously"
+      },
+      "maren": {
+        "affinity": -3,
+        "opinion": "She’s always worried"
       }
     },
     "memories": [
@@ -37809,12 +38827,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m too quiet",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves I must be taken seriously.",
+    "belief": "I’ll be ignored if I’m too quiet",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 28,
     "vehicle": null,
     "money": 0,
@@ -37828,11 +38870,11 @@
     "partner": null,
     "birth_day": 458,
     "arrived_day": 458,
-    "last_thought_beat": 2073,
+    "last_thought_beat": 2096,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "eating at the table",
+    "activity": "washing up",
     "driving": null,
     "path": [
       [
@@ -37844,19 +38886,23 @@
         52
       ],
       [
-        7,
-        52
-      ],
-      [
-        7,
+        8,
         51
       ],
       [
-        7,
+        8,
         50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "eating at the table",
+    "action": "washing up",
     "thought": "",
     "speech": null
   },
@@ -37883,8 +38929,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      52
     ],
     "dest": [
       8,
@@ -37892,15 +38938,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      52
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 49,
-      "stress": 54,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -38008,12 +39054,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m not seen",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves I must be taken seriously.",
+    "belief": "I’ll be ignored if I’m not seen",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 15,
     "vehicle": null,
     "money": 0,
@@ -38027,35 +39097,23 @@
     "partner": null,
     "birth_day": 468,
     "arrived_day": 468,
-    "last_thought_beat": 2076,
+    "last_thought_beat": 2090,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "washing up",
+    "activity": "sitting with the radio on",
     "driving": null,
     "path": [
       [
-        7,
+        9,
         51
       ],
       [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
+        9,
+        52
       ]
     ],
-    "action": "washing up",
+    "action": "sitting with the radio on",
     "thought": "",
     "speech": null
   },
@@ -38082,8 +39140,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -38091,15 +39149,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 25,
-      "happiness": 49,
-      "stress": 74,
+      "energy": 41,
+      "happiness": 50,
+      "stress": 78,
       "social_need": 0,
-      "fear": 29
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -38109,6 +39167,14 @@
       "amara": {
         "affinity": 85,
         "opinion": "my parent"
+      },
+      "jonah2": {
+        "affinity": 2,
+        "opinion": "gentle"
+      },
+      "maren2": {
+        "affinity": -4,
+        "opinion": "She’s always anxious"
       }
     },
     "memories": [
@@ -38177,12 +39243,36 @@
         "day": 519,
         "what": "Ms. Ivy Calloway is dead.",
         "importance": 9
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be ignored if I’m not noticed",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves I must be taken seriously.",
+    "belief": "I’ll be ignored if I’m not noticed",
     "alive": true,
     "health": 90,
-    "grief": 30,
+    "grief": 21,
     "volatility": 31,
     "vehicle": null,
     "money": 0,
@@ -38196,39 +39286,35 @@
     "partner": null,
     "birth_day": 474,
     "arrived_day": 474,
-    "last_thought_beat": 2076,
+    "last_thought_beat": 2096,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "washing up",
     "driving": null,
     "path": [
-      [
-        8,
-        48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
-        49
-      ],
-      [
-        9,
-        50
-      ],
       [
         9,
         51
       ],
       [
-        9,
-        52
+        8,
+        51
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "washing up",
     "thought": "",
     "speech": null
   },
@@ -38255,8 +39341,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      91,
-      82
+      87,
+      81
     ],
     "dest": [
       88,
@@ -38264,15 +39350,15 @@
     ],
     "at": "new_home_270",
     "spot": [
-      91,
-      82
+      87,
+      81
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 30,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -38282,6 +39368,10 @@
       "odette": {
         "affinity": -2,
         "opinion": "Too quiet today."
+      },
+      "odette2": {
+        "affinity": -3,
+        "opinion": "She’s distant"
       }
     },
     "memories": [
@@ -38350,20 +39440,44 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "My brother’s fate depends on the system’s bias",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves the city will kill my brother.",
+    "belief": "My brother’s fate depends on the system’s bias",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 475,
-    "last_thought_beat": 2073,
-    "activity": "eating at the table",
-    "action": "eating at the table",
+    "last_thought_beat": 2096,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 1215,
-    "skill": 44.5,
+    "money": 1320,
+    "skill": 46.0,
     "job": {
       "at": "church",
       "title": "on the desk",
@@ -38580,24 +39694,20 @@
         84
       ],
       [
-        89,
+        87,
         84
       ],
       [
-        90,
-        84
-      ],
-      [
-        91,
-        84
-      ],
-      [
-        91,
+        87,
         83
       ],
       [
-        91,
+        87,
         82
+      ],
+      [
+        87,
+        81
       ]
     ],
     "thought": "",
@@ -38627,7 +39737,7 @@
     },
     "pos": [
       19,
-      53
+      50
     ],
     "dest": [
       18,
@@ -38636,19 +39746,23 @@
     "at": "terrace_c",
     "spot": [
       19,
-      53
+      50
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 60,
-      "stress": 63,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 68,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
     "relationships": {
       "odette": {
         "affinity": 0,
         "opinion": "supportive"
+      },
+      "kwame2": {
+        "affinity": -1,
+        "opinion": "drained"
       }
     },
     "memories": [
@@ -38693,20 +39807,44 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction shows I must rise within a year.",
+    "belief": "I’ll be taken for a ride if I’m too visible",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 489,
-    "last_thought_beat": 2076,
-    "activity": "watching television, in the fog",
-    "action": "watching television, in the fog",
+    "last_thought_beat": 2097,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 1005,
-    "skill": 41.5,
+    "money": 1110,
+    "skill": 43.0,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -38724,19 +39862,15 @@
     "path": [
       [
         54,
-        83
+        84
       ],
       [
         53,
-        83
+        84
       ],
       [
         52,
-        83
-      ],
-      [
-        51,
-        83
+        84
       ],
       [
         51,
@@ -39025,6 +40159,18 @@
       [
         19,
         53
+      ],
+      [
+        19,
+        52
+      ],
+      [
+        19,
+        51
+      ],
+      [
+        19,
+        50
       ]
     ],
     "thought": "",
@@ -39066,11 +40212,11 @@
       23
     ],
     "mood": {
-      "energy": 26,
-      "happiness": 60,
-      "stress": 43,
-      "social_need": 87,
-      "fear": 25
+      "energy": 42,
+      "happiness": 50,
+      "stress": 39,
+      "social_need": 100,
+      "fear": 10
     },
     "relationships": {},
     "memories": [
@@ -39115,20 +40261,44 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll lose my brother’s fate if I’m silent",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The conviction proves my brother’s death is a mystery.",
+    "belief": "I’ll lose my brother’s fate if I’m silent",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 497,
-    "last_thought_beat": 2078,
-    "activity": "watching television, in the fog",
-    "action": "watches television",
+    "last_thought_beat": 2093,
+    "activity": "watching television",
+    "action": "watching television",
     "vehicle": null,
     "volatility": 45,
-    "money": 704,
-    "skill": 39.0,
+    "money": 788,
+    "skill": 40.5,
     "job": {
       "at": "new_business_423",
       "title": "fixes what other people throw out",
@@ -39645,7 +40815,7 @@
         23
       ]
     ],
-    "thought": "The block holds clues, I’ll find them.",
+    "thought": "",
     "speech": null
   },
   "rosa2": {
@@ -39671,8 +40841,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      124,
-      19
+      120,
+      20
     ],
     "dest": [
       122,
@@ -39680,17 +40850,22 @@
     ],
     "at": "new_home_368",
     "spot": [
-      124,
-      19
+      120,
+      20
     ],
     "mood": {
-      "energy": 0,
-      "happiness": 60,
-      "stress": 43,
+      "energy": 16,
+      "happiness": 50,
+      "stress": 31,
       "social_need": 0,
-      "fear": 25
+      "fear": 10
     },
-    "relationships": {},
+    "relationships": {
+      "brennan": {
+        "affinity": -2,
+        "opinion": "unseen"
+      }
+    },
     "memories": [
       {
         "beat": 1992,
@@ -39733,20 +40908,44 @@
         "day": 519,
         "what": "Ms. Ivy Calloway died. I barely knew them.",
         "importance": 5
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Cassius Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2087,
+        "day": 521,
+        "what": "I’ll be taken for a ride if I’m too visible",
+        "importance": 8
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
       }
     ],
-    "belief": "The fine proves the city will punish us.",
+    "belief": "I’ll be taken for a ride if I’m too visible",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 498,
-    "last_thought_beat": 2075,
-    "activity": "sitting down for a minute",
-    "action": "sitting down for a minute",
+    "last_thought_beat": 2097,
+    "activity": "washing up",
+    "action": "washing up",
     "vehicle": null,
     "volatility": 45,
-    "money": 734,
-    "skill": 37.1,
+    "money": 836,
+    "skill": 38.6,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -39763,20 +40962,28 @@
     "driving": null,
     "path": [
       [
-        9,
-        64
+        2,
+        67
       ],
       [
-        8,
-        64
+        3,
+        67
       ],
       [
-        7,
-        64
+        4,
+        67
       ],
       [
-        6,
-        64
+        5,
+        67
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        65
       ],
       [
         5,
@@ -40427,20 +41634,234 @@
         20
       ],
       [
-        123,
+        121,
         20
       ],
       [
-        124,
+        120,
         20
-      ],
-      [
-        124,
-        19
       ]
     ],
     "thought": "",
     "speech": null,
     "detained_until": 0
+  },
+  "etta2": {
+    "id": "etta2",
+    "name": "Etta Bello",
+    "age": 0,
+    "role": "a child of the block",
+    "faction": "block",
+    "home": "terrace_b",
+    "work": "terrace_b",
+    "principal": false,
+    "traits": [
+      "easily delighted",
+      "stubborn as anything"
+    ],
+    "ambition": "to be taken seriously by the grown-ups",
+    "private_fear": "that something is going on that nobody will explain",
+    "voice": "still learning how people here talk",
+    "routine": {
+      "morning": "terrace_b",
+      "afternoon": "terrace_b",
+      "evening": "terrace_b",
+      "night": "terrace_b"
+    },
+    "pos": [
+      7,
+      50
+    ],
+    "dest": [
+      8,
+      53
+    ],
+    "at": "terrace_b",
+    "spot": [
+      7,
+      50
+    ],
+    "mood": {
+      "energy": 51,
+      "happiness": 50,
+      "stress": 30,
+      "social_need": 0,
+      "fear": 10
+    },
+    "relationships": {
+      "tee": {
+        "affinity": 85,
+        "opinion": "my parent"
+      },
+      "amara": {
+        "affinity": 85,
+        "opinion": "my parent"
+      },
+      "jonah": {
+        "affinity": 0,
+        "opinion": "ignored"
+      }
+    },
+    "memories": [
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Gus Petrakis was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2092,
+        "day": 523,
+        "what": "Maren Bello was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      }
+    ],
+    "belief": "",
+    "alive": true,
+    "health": 90,
+    "grief": 0,
+    "volatility": 20,
+    "vehicle": null,
+    "money": 0,
+    "skill": 0,
+    "job": null,
+    "parents": [
+      "tee",
+      "amara"
+    ],
+    "children": [],
+    "partner": null,
+    "birth_day": 522,
+    "arrived_day": 522,
+    "last_thought_beat": 2092,
+    "standing": 45,
+    "directive": null,
+    "chasing": null,
+    "activity": "eating at the table",
+    "driving": null,
+    "path": [
+      [
+        9,
+        52
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        7,
+        52
+      ],
+      [
+        7,
+        51
+      ],
+      [
+        7,
+        50
+      ]
+    ],
+    "action": "eating at the table",
+    "thought": "",
+    "speech": null
+  },
+  "rufus2": {
+    "id": "rufus2",
+    "name": "Rufus Adeyemi",
+    "age": 0,
+    "role": "a child of the block",
+    "faction": "block",
+    "home": "terrace_a",
+    "work": "terrace_a",
+    "principal": false,
+    "traits": [
+      "solemn for their age",
+      "stubborn as anything"
+    ],
+    "ambition": "to make their mother proud",
+    "private_fear": "that something is going on that nobody will explain",
+    "voice": "still learning how people here talk",
+    "routine": {
+      "morning": "terrace_a",
+      "afternoon": "terrace_a",
+      "evening": "terrace_a",
+      "night": "terrace_a"
+    },
+    "pos": [
+      4,
+      48
+    ],
+    "dest": [
+      3,
+      53
+    ],
+    "at": "terrace_a",
+    "spot": [
+      4,
+      48
+    ],
+    "mood": {
+      "energy": 51,
+      "happiness": 61,
+      "stress": 18,
+      "social_need": 1,
+      "fear": 10
+    },
+    "relationships": {
+      "simone": {
+        "affinity": 85,
+        "opinion": "my parent"
+      },
+      "femi": {
+        "affinity": 85,
+        "opinion": "my parent"
+      }
+    },
+    "memories": [
+      {
+        "beat": 2096,
+        "day": 524,
+        "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      }
+    ],
+    "belief": "",
+    "alive": true,
+    "health": 90,
+    "grief": 0,
+    "volatility": 22,
+    "vehicle": null,
+    "money": 0,
+    "skill": 0,
+    "job": null,
+    "parents": [
+      "simone",
+      "femi"
+    ],
+    "children": [],
+    "partner": null,
+    "birth_day": 523,
+    "arrived_day": 523,
+    "last_thought_beat": 2096,
+    "standing": 45,
+    "directive": null,
+    "chasing": null,
+    "activity": "sitting with the radio on",
+    "driving": null,
+    "path": [
+      [
+        4,
+        48
+      ]
+    ],
+    "action": "sitting with the radio on",
+    "thought": "",
+    "speech": null
   }
 }
