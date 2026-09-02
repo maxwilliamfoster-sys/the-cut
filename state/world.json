@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2134,
-  "last_beat_at": "2026-09-02T15:12:12Z",
+  "beat": 2148,
+  "last_beat_at": "2026-09-02T18:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "clear",
   "heat": {
-    "riverside": 5,
-    "delmar": 15,
-    "terraces": 5,
+    "riverside": 20,
+    "delmar": 9,
+    "terraces": 14,
     "civic": 5
   },
   "turf": {
@@ -814,9 +814,98 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine57",
+      "from": "nadia",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 537,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2147
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2142
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2141
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "etta2"
+      ],
+      "text": "Etta Bello gets word that what they owe is wanted sooner than agreed.",
+      "beat": 2139
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2138
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 2137
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -993,85 +1082,6 @@
       "targets": [],
       "text": "City inspectors are working their way down Delmar with clipboards.",
       "beat": 2096
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "cal"
-      ],
-      "text": "Something pays out for Cal Osei. More than expected, which is its own problem.",
-      "beat": 2095
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2094
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 2093
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "malik",
-        "jonah"
-      ],
-      "text": "Somebody tells Malik Reyes that Jonah Bello has been seen talking to police.",
-      "beat": 2092
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "iris",
-        "junie"
-      ],
-      "text": "Somebody tells Iris Amadi that Junie Marsh has been seen talking to police.",
-      "beat": 2090
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "odette3",
-        "adaeze"
-      ],
-      "text": "Odette Amadi and Adaeze Okonkwo are seen arguing in the street loud enough that people stop.",
-      "beat": 2088
     }
   ],
   "player_queue": [
@@ -1094,12 +1104,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 532,
+  "last_gazette_day": 536,
   "llm_budget": {
     "day": "2026-09-02",
     "spent": {
       "fast": 164376,
-      "deep": 19594
+      "deep": 40933
     }
   },
   "silent_runs": 0,
@@ -2057,7 +2067,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 10
+      "convictions": 11
     },
     {
       "id": "law05",
@@ -2467,8 +2477,9 @@
       "evidence": "stays alert, eyes darting, notebook open",
       "day": 532,
       "trial_day": 534,
-      "status": "awaiting_trial",
-      "witnesses": 5
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 0,
@@ -2508,7 +2519,7 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "nia",
@@ -2522,34 +2533,36 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 66
+      "heat": 80
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 53
+      "heat": 47
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 29
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 14
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-02",
-    "beat": 2134,
-    "providers": []
+    "beat": 2139,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -2616,9 +2629,39 @@
     "marked": 521
   },
   "incidents": [],
-  "treasury": 99740,
+  "treasury": 102311,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 536,
+      "wages": 1883,
+      "takings": 2960,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 102311
+    },
+    {
+      "day": 535,
+      "wages": 1883,
+      "takings": 2960,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 101454
+    },
+    {
+      "day": 534,
+      "wages": 1883,
+      "takings": 2960,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 100597
+    },
     {
       "day": 532,
       "wages": 1883,
@@ -2888,36 +2931,6 @@
       "civic": 540,
       "net": 1080,
       "treasury": 73676
-    },
-    {
-      "day": 494,
-      "wages": 1789,
-      "takings": 3140,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 72596
-    },
-    {
-      "day": 493,
-      "wages": 1789,
-      "takings": 3140,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 71529
-    },
-    {
-      "day": 492,
-      "wages": 1789,
-      "takings": 3140,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1067,
-      "treasury": 70462
     }
   ],
   "births": [
@@ -3331,45 +3344,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 462,
-      "overall": 66,
-      "economy": 98,
-      "wellbeing": 57,
-      "society": 16,
-      "infrastructure": 99,
-      "growth": 66,
-      "population": 49,
-      "buildings": 46,
-      "treasury": 51252,
-      "employment": 100
-    },
-    {
-      "day": 463,
-      "overall": 62,
-      "economy": 99,
-      "wellbeing": 52,
-      "society": 9,
-      "infrastructure": 100,
-      "growth": 54,
-      "population": 48,
-      "buildings": 46,
-      "treasury": 52356,
-      "employment": 100
-    },
-    {
-      "day": 464,
-      "overall": 64,
-      "economy": 99,
-      "wellbeing": 56,
-      "society": 13,
-      "infrastructure": 100,
-      "growth": 54,
-      "population": 48,
-      "buildings": 46,
-      "treasury": 53460,
-      "employment": 100
-    },
     {
       "day": 465,
       "overall": 61,
@@ -3954,19 +3928,58 @@
       "buildings": 48,
       "treasury": 99740,
       "employment": 100
+    },
+    {
+      "day": 534,
+      "overall": 68,
+      "economy": 97,
+      "wellbeing": 61,
+      "society": 25,
+      "infrastructure": 96,
+      "growth": 66,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 100597,
+      "employment": 100
+    },
+    {
+      "day": 535,
+      "overall": 67,
+      "economy": 97,
+      "wellbeing": 56,
+      "society": 25,
+      "infrastructure": 96,
+      "growth": 66,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 101454,
+      "employment": 100
+    },
+    {
+      "day": 536,
+      "overall": 70,
+      "economy": 97,
+      "wellbeing": 69,
+      "society": 26,
+      "infrastructure": 96,
+      "growth": 66,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 102311,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 532,
+    "day": 536,
     "overall": 70,
     "economy": 97,
     "wellbeing": 69,
-    "society": 24,
+    "society": 26,
     "infrastructure": 96,
     "growth": 66,
     "population": 53,
     "buildings": 48,
-    "treasury": 99740,
+    "treasury": 102311,
     "employment": 100
   },
   "buildable": {
