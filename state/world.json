@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2159,
-  "last_beat_at": "2026-09-02T21:27:12Z",
+  "beat": 2167,
+  "last_beat_at": "2026-09-02T23:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 9,
-    "delmar": 5,
+    "riverside": 5,
+    "delmar": 10,
     "terraces": 5,
     "civic": 5
   },
@@ -838,6 +838,69 @@
         "fear": 10
       },
       "targets": [
+        "odette",
+        "blaise"
+      ],
+      "text": "Somebody tells Odette Ferreira that Blaise Osei has been seen talking to police.",
+      "beat": 2166
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2164
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 2163
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2162
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2160
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
         "femi",
         "dez"
       ],
@@ -1023,67 +1086,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 2132
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 2128
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "ruiz"
-      ],
-      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 2123
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "marcus",
-        "jonah2"
-      ],
-      "text": "Marcus Calloway and Jonah Bello are seen arguing in the street loud enough that people stop.",
-      "beat": 2119
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "sticks"
-      ],
-      "text": "Something pays out for Sticks. More than expected, which is its own problem.",
-      "beat": 2118
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 2115
     }
   ],
   "player_queue": [
@@ -1106,12 +1108,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 539,
+  "last_gazette_day": 541,
   "llm_budget": {
     "day": "2026-09-02",
     "spent": {
       "fast": 164376,
-      "deep": 75310
+      "deep": 104449
     }
   },
   "silent_runs": 0,
@@ -2484,7 +2486,7 @@
       "verdict": "guilty"
     }
   ],
-  "law_pressure": 0,
+  "law_pressure": 1,
   "last_law_day": 503,
   "last_expansion_day": 531,
   "feuds": [
@@ -2521,42 +2523,42 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 24
+      "heat": 20
     },
     {
       "a": "nia",
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 14
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 74
+      "heat": 70
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 37
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 39
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 4
     }
   ],
   "quota_exhausted_on": {
@@ -2631,9 +2633,29 @@
     "marked": 521
   },
   "incidents": [],
-  "treasury": 104912,
+  "treasury": 106626,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 541,
+      "wages": 1836,
+      "takings": 3005,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 106626
+    },
+    {
+      "day": 540,
+      "wages": 1836,
+      "takings": 3005,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 105769
+    },
     {
       "day": 539,
       "wages": 1883,
@@ -2913,26 +2935,6 @@
       "civic": 540,
       "net": 1097,
       "treasury": 79103
-    },
-    {
-      "day": 503,
-      "wages": 1883,
-      "takings": 3140,
-      "tax": 1637,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1097,
-      "treasury": 78006
-    },
-    {
-      "day": 502,
-      "wages": 1883,
-      "takings": 3140,
-      "tax": 1637,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1097,
-      "treasury": 76909
     }
   ],
   "births": [
@@ -3346,32 +3348,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 468,
-      "overall": 63,
-      "economy": 99,
-      "wellbeing": 50,
-      "society": 17,
-      "infrastructure": 100,
-      "growth": 54,
-      "population": 48,
-      "buildings": 46,
-      "treasury": 57808,
-      "employment": 100
-    },
-    {
-      "day": 469,
-      "overall": 65,
-      "economy": 99,
-      "wellbeing": 54,
-      "society": 21,
-      "infrastructure": 100,
-      "growth": 54,
-      "population": 48,
-      "buildings": 46,
-      "treasury": 58895,
-      "employment": 100
-    },
     {
       "day": 470,
       "overall": 61,
@@ -3969,19 +3945,45 @@
       "buildings": 47,
       "treasury": 104912,
       "employment": 100
+    },
+    {
+      "day": 540,
+      "overall": 68,
+      "economy": 97,
+      "wellbeing": 65,
+      "society": 27,
+      "infrastructure": 93,
+      "growth": 56,
+      "population": 53,
+      "buildings": 47,
+      "treasury": 105769,
+      "employment": 100
+    },
+    {
+      "day": 541,
+      "overall": 69,
+      "economy": 97,
+      "wellbeing": 69,
+      "society": 27,
+      "infrastructure": 93,
+      "growth": 56,
+      "population": 53,
+      "buildings": 47,
+      "treasury": 106626,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 539,
-    "overall": 70,
+    "day": 541,
+    "overall": 69,
     "economy": 97,
     "wellbeing": 69,
-    "society": 28,
+    "society": 27,
     "infrastructure": 93,
-    "growth": 61,
+    "growth": 56,
     "population": 53,
     "buildings": 47,
-    "treasury": 104912,
+    "treasury": 106626,
     "employment": 100
   },
   "buildable": {
@@ -4028,7 +4030,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 128,
