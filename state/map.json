@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "651148a78d23",
+  "version": "8d2b1f745c3b",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -61,11 +61,11 @@
     ".##########.,,,,.############.########..,,,,.gggggggggggg..gggggggg.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.ggggggggggg",
     ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..########.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.ggggggggggg",
     ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.###D####..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.ggggggggggg",
-    ".##D####D##.,,,,.#ff##ff##ff#...........,,,,.gggggggggggg..###D####.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.ggggggggggg",
+    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gg########g",
+    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gg#ffffff#g",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.gg#ffffff#g",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.###D####..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gggggggggg.,:,,.gg#ffffff#g",
+    ".##D####D##.,,,,.#ff##ff##ff#...........,,,,.gggggggggggg..###D####.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gg###D####g",
     "............,,,,.#D###D###D##...........,,,,........................,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.ggggggggggg",
     "............,:,,........................,:,,........................,:,,........................,:,,.gggggggggg.,:,,.ggggggggggg",
     "............====........................====........................====........................====............====............",
@@ -3508,6 +3508,81 @@
           "type": "plant",
           "x": 28,
           "y": 105
+        }
+      ]
+    },
+    "new_social_552": {
+      "id": "new_social_552",
+      "name": "The Calloway Rooms",
+      "district": "terraces",
+      "rect": [
+        119,
+        50,
+        8,
+        5
+      ],
+      "rects": [
+        [
+          119,
+          50,
+          8,
+          5
+        ]
+      ],
+      "kind": "social",
+      "style": "brick",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        122,
+        53
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 123,
+          "y": 52
+        },
+        {
+          "type": "table",
+          "x": 122,
+          "y": 52
+        },
+        {
+          "type": "table",
+          "x": 124,
+          "y": 53
+        },
+        {
+          "type": "table",
+          "x": 123,
+          "y": 51
+        },
+        {
+          "type": "chair",
+          "x": 120,
+          "y": 52
+        },
+        {
+          "type": "chair",
+          "x": 124,
+          "y": 51
+        },
+        {
+          "type": "chair",
+          "x": 125,
+          "y": 52
+        },
+        {
+          "type": "shelf",
+          "x": 120,
+          "y": 53
+        },
+        {
+          "type": "plant",
+          "x": 124,
+          "y": 52
         }
       ]
     }
