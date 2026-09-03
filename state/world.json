@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2230,
-  "last_beat_at": "2026-09-03T15:12:12Z",
+  "beat": 2244,
+  "last_beat_at": "2026-09-03T18:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 7,
-    "terraces": 5,
+    "delmar": 8,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -857,6 +857,85 @@
   ],
   "events": [
     {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "kwame2",
+        "june"
+      ],
+      "text": "Kwame Doyle and June Kowal are seen arguing in the street loud enough that people stop.",
+      "beat": 2244
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed.",
+      "beat": 2242
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 2241
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2240
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "odette2",
+        "junie"
+      ],
+      "text": "Junie Marsh does Odette Osei a favour that costs them something real.",
+      "beat": 2239
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2233
+    },
+    {
       "id": "shipment_light",
       "heat": {},
       "mood": {
@@ -1036,82 +1115,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 2208
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "sami"
-      ],
-      "text": "Sami Amadi gets word that what they owe is wanted sooner than agreed.",
-      "beat": 2207
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 2206
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "nia",
-        "iris"
-      ],
-      "text": "Nia Nakamura and Iris Amadi are seen arguing in the street loud enough that people stop.",
-      "beat": 2205
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 2204
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "nia"
-      ],
-      "text": "Nia Nakamura ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 2193
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 2192
     }
   ],
   "player_queue": [
@@ -1134,12 +1137,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 556,
+  "last_gazette_day": 560,
   "llm_budget": {
     "day": "2026-09-03",
     "spent": {
       "fast": 163777,
-      "deep": 40953
+      "deep": 57436
     }
   },
   "silent_runs": 0,
@@ -2564,7 +2567,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "booker",
@@ -2585,14 +2588,14 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 0
     },
     {
       "a": "gus",
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     },
     {
       "a": "nia",
@@ -2606,33 +2609,33 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 48
+      "heat": 42
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 29
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 11
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 14
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-09-02",
-    "beat": 2158,
+    "day": "2026-09-03",
+    "beat": 2244,
     "providers": [
       "gemini"
     ]
@@ -2709,9 +2712,39 @@
     "marked": 555
   },
   "incidents": [],
-  "treasury": 116251,
+  "treasury": 118918,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 560,
+      "wages": 1747,
+      "takings": 3155,
+      "tax": 1599,
+      "welfare": 0,
+      "civic": 720,
+      "net": 879,
+      "treasury": 118918
+    },
+    {
+      "day": 559,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 118039
+    },
+    {
+      "day": 558,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 117145
+    },
     {
       "day": 556,
       "wages": 1794,
@@ -2981,36 +3014,6 @@
       "civic": 630,
       "net": 977,
       "treasury": 93141
-    },
-    {
-      "day": 521,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 92164
-    },
-    {
-      "day": 518,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 91187
-    },
-    {
-      "day": 517,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 90210
     }
   ],
   "births": [
@@ -3433,45 +3436,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 493,
-      "overall": 74,
-      "economy": 98,
-      "wellbeing": 81,
-      "society": 25,
-      "infrastructure": 97,
-      "growth": 67,
-      "population": 50,
-      "buildings": 46,
-      "treasury": 71529,
-      "employment": 100
-    },
-    {
-      "day": 494,
-      "overall": 71,
-      "economy": 98,
-      "wellbeing": 72,
-      "society": 24,
-      "infrastructure": 97,
-      "growth": 67,
-      "population": 50,
-      "buildings": 46,
-      "treasury": 72596,
-      "employment": 100
-    },
-    {
-      "day": 497,
-      "overall": 70,
-      "economy": 97,
-      "wellbeing": 67,
-      "society": 25,
-      "infrastructure": 97,
-      "growth": 73,
-      "population": 51,
-      "buildings": 46,
-      "treasury": 73676,
-      "employment": 100
-    },
     {
       "day": 498,
       "overall": 69,
@@ -4056,19 +4020,58 @@
       "buildings": 48,
       "treasury": 116251,
       "employment": 100
+    },
+    {
+      "day": 558,
+      "overall": 68,
+      "economy": 98,
+      "wellbeing": 62,
+      "society": 33,
+      "infrastructure": 93,
+      "growth": 55,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 117145,
+      "employment": 100
+    },
+    {
+      "day": 559,
+      "overall": 69,
+      "economy": 98,
+      "wellbeing": 65,
+      "society": 33,
+      "infrastructure": 93,
+      "growth": 55,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 118039,
+      "employment": 100
+    },
+    {
+      "day": 560,
+      "overall": 69,
+      "economy": 98,
+      "wellbeing": 66,
+      "society": 32,
+      "infrastructure": 93,
+      "growth": 55,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 118918,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 556,
+    "day": 560,
     "overall": 69,
     "economy": 98,
-    "wellbeing": 63,
-    "society": 33,
+    "wellbeing": 66,
+    "society": 32,
     "infrastructure": 93,
     "growth": 55,
     "population": 53,
     "buildings": 48,
-    "treasury": 116251,
+    "treasury": 118918,
     "employment": 100
   },
   "buildable": {
