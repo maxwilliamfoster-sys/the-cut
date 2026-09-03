@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2167,
-  "last_beat_at": "2026-09-02T23:27:12Z",
+  "beat": 2175,
+  "last_beat_at": "2026-09-03T01:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heat",
   "heat": {
     "riverside": 5,
-    "delmar": 10,
+    "delmar": 5,
     "terraces": 5,
     "civic": 5
   },
@@ -831,6 +831,42 @@
   ],
   "events": [
     {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 2175
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 2174
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "rosa",
+        "nadia"
+      ],
+      "text": "Nadia Vasquez does Rosa Reyes a favour that costs them something real.",
+      "beat": 2171
+    },
+    {
       "id": "snitch_rumour",
       "heat": {},
       "mood": {
@@ -1046,46 +1082,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 2137
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "cassius",
-        "priya"
-      ],
-      "text": "Ms. Priya Raman does Cassius Reyes a favour that costs them something real.",
-      "beat": 2134
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "otis",
-        "okafor"
-      ],
-      "text": "Somebody tells Otis Bello that Chinedu Okafor has been seen talking to police.",
-      "beat": 2133
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2132
     }
   ],
   "player_queue": [
@@ -1108,12 +1104,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 541,
+  "last_gazette_day": 543,
   "llm_budget": {
-    "day": "2026-09-02",
+    "day": "2026-09-03",
     "spent": {
-      "fast": 164376,
-      "deep": 104449
+      "fast": 32886,
+      "deep": 1650
     }
   },
   "silent_runs": 0,
@@ -2484,6 +2480,18 @@
       "status": "convicted",
       "witnesses": 5,
       "verdict": "guilty"
+    },
+    {
+      "id": "c031",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "sleeping in the barber shop",
+      "day": 543,
+      "trial_day": 545,
+      "status": "awaiting_trial",
+      "witnesses": 12
     }
   ],
   "law_pressure": 1,
@@ -2523,42 +2531,42 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 20
+      "heat": 16
     },
     {
       "a": "nia",
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 10
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 70
+      "heat": 66
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 37
+      "heat": 53
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 35
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 4
+      "heat": 0
     }
   ],
   "quota_exhausted_on": {
@@ -2632,10 +2640,45 @@
     "id": "ivy",
     "marked": 521
   },
-  "incidents": [],
-  "treasury": 106626,
+  "incidents": [
+    {
+      "id": "inc2175-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "tee"
+      ],
+      "text": "Tariq 'Tee' Bello is taken to the 9th over Public Haircut Ban.",
+      "started": 2175,
+      "until": 2176
+    }
+  ],
+  "treasury": 108340,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 543,
+      "wages": 1836,
+      "takings": 3005,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 108340
+    },
+    {
+      "day": 542,
+      "wages": 1836,
+      "takings": 3005,
+      "tax": 1577,
+      "welfare": 0,
+      "civic": 720,
+      "net": 857,
+      "treasury": 107483
+    },
     {
       "day": 541,
       "wages": 1836,
@@ -2915,29 +2958,18 @@
       "civic": 540,
       "net": 1097,
       "treasury": 81297
-    },
-    {
-      "day": 506,
-      "wages": 1883,
-      "takings": 3140,
-      "tax": 1637,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1097,
-      "treasury": 80200
-    },
-    {
-      "day": 504,
-      "wages": 1883,
-      "takings": 3140,
-      "tax": 1637,
-      "welfare": 0,
-      "civic": 540,
-      "net": 1097,
-      "treasury": 79103
     }
   ],
   "births": [
+    {
+      "id": "theo2",
+      "name": "Theo Bello",
+      "day": 542,
+      "parents": [
+        "tee",
+        "amara"
+      ]
+    },
     {
       "id": "rufus2",
       "name": "Rufus Adeyemi",
@@ -3348,32 +3380,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 470,
-      "overall": 61,
-      "economy": 99,
-      "wellbeing": 47,
-      "society": 21,
-      "infrastructure": 97,
-      "growth": 43,
-      "population": 47,
-      "buildings": 45,
-      "treasury": 59928,
-      "employment": 100
-    },
-    {
-      "day": 474,
-      "overall": 63,
-      "economy": 99,
-      "wellbeing": 55,
-      "society": 17,
-      "infrastructure": 97,
-      "growth": 49,
-      "population": 48,
-      "buildings": 45,
-      "treasury": 60961,
-      "employment": 100
-    },
     {
       "day": 475,
       "overall": 64,
@@ -3971,19 +3977,45 @@
       "buildings": 47,
       "treasury": 106626,
       "employment": 100
+    },
+    {
+      "day": 542,
+      "overall": 70,
+      "economy": 96,
+      "wellbeing": 70,
+      "society": 28,
+      "infrastructure": 92,
+      "growth": 62,
+      "population": 54,
+      "buildings": 47,
+      "treasury": 107483,
+      "employment": 100
+    },
+    {
+      "day": 543,
+      "overall": 66,
+      "economy": 96,
+      "wellbeing": 60,
+      "society": 24,
+      "infrastructure": 92,
+      "growth": 62,
+      "population": 54,
+      "buildings": 47,
+      "treasury": 108340,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 541,
-    "overall": 69,
-    "economy": 97,
-    "wellbeing": 69,
-    "society": 27,
-    "infrastructure": 93,
-    "growth": 56,
-    "population": 53,
+    "day": 543,
+    "overall": 66,
+    "economy": 96,
+    "wellbeing": 60,
+    "society": 24,
+    "infrastructure": 92,
+    "growth": 62,
+    "population": 54,
     "buildings": 47,
-    "treasury": 106626,
+    "treasury": 108340,
     "employment": 100
   },
   "buildable": {
