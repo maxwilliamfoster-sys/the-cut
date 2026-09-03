@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2244,
-  "last_beat_at": "2026-09-03T18:42:12Z",
+  "beat": 2254,
+  "last_beat_at": "2026-09-03T21:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 8,
-    "terraces": 10,
+    "delmar": 17,
+    "terraces": 16,
     "civic": 5
   },
   "turf": {
@@ -857,6 +857,71 @@
   ],
   "events": [
     {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2254
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "gil"
+      ],
+      "text": "Gil Lindqvist gets word that what they owe is wanted sooner than agreed.",
+      "beat": 2250
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2249
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "hector",
+        "nadia"
+      ],
+      "text": "Somebody tells Hector Delgado that Nadia Vasquez has been seen talking to police.",
+      "beat": 2248
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2247
+    },
+    {
       "id": "fight",
       "heat": {},
       "mood": {
@@ -1049,72 +1114,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 2214
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 2213
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "maren"
-      ],
-      "text": "Maren Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 2212
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 2211
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "errol2",
-        "jonah2"
-      ],
-      "text": "Errol Osei and Jonah Bello are seen arguing in the street loud enough that people stop.",
-      "beat": 2209
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2208
     }
   ],
   "player_queue": [
@@ -1137,12 +1136,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 560,
+  "last_gazette_day": 562,
   "llm_budget": {
     "day": "2026-09-03",
     "spent": {
       "fast": 163777,
-      "deep": 57436
+      "deep": 80839
     }
   },
   "silent_runs": 0,
@@ -2567,7 +2566,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 10
+      "heat": 6
     },
     {
       "a": "booker",
@@ -2588,14 +2587,14 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 18
     },
     {
       "a": "gus",
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 8
     },
     {
       "a": "nia",
@@ -2609,33 +2608,40 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 42
+      "heat": 38
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 29
+      "heat": 25
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 11
+      "heat": 7
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 30
+    },
+    {
+      "a": "sticks",
+      "b": "tiny",
+      "since_day": 563,
+      "cause": "would not let it go",
+      "heat": 55
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-03",
-    "beat": 2244,
+    "beat": 2252,
     "providers": [
       "gemini"
     ]
@@ -2712,9 +2718,29 @@
     "marked": 555
   },
   "incidents": [],
-  "treasury": 118918,
+  "treasury": 120676,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 562,
+      "wages": 1747,
+      "takings": 3155,
+      "tax": 1599,
+      "welfare": 0,
+      "civic": 720,
+      "net": 879,
+      "treasury": 120676
+    },
+    {
+      "day": 561,
+      "wages": 1747,
+      "takings": 3155,
+      "tax": 1599,
+      "welfare": 0,
+      "civic": 720,
+      "net": 879,
+      "treasury": 119797
+    },
     {
       "day": 560,
       "wages": 1747,
@@ -2994,26 +3020,6 @@
       "civic": 630,
       "net": 977,
       "treasury": 95095
-    },
-    {
-      "day": 523,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 94118
-    },
-    {
-      "day": 522,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 93141
     }
   ],
   "births": [
@@ -3436,32 +3442,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 498,
-      "overall": 69,
-      "economy": 96,
-      "wellbeing": 66,
-      "society": 21,
-      "infrastructure": 96,
-      "growth": 73,
-      "population": 52,
-      "buildings": 46,
-      "treasury": 74744,
-      "employment": 97
-    },
-    {
-      "day": 499,
-      "overall": 69,
-      "economy": 96,
-      "wellbeing": 66,
-      "society": 21,
-      "infrastructure": 96,
-      "growth": 73,
-      "population": 52,
-      "buildings": 46,
-      "treasury": 75812,
-      "employment": 97
-    },
     {
       "day": 502,
       "overall": 70,
@@ -4059,19 +4039,45 @@
       "buildings": 48,
       "treasury": 118918,
       "employment": 100
+    },
+    {
+      "day": 561,
+      "overall": 68,
+      "economy": 98,
+      "wellbeing": 63,
+      "society": 32,
+      "infrastructure": 93,
+      "growth": 50,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 119797,
+      "employment": 100
+    },
+    {
+      "day": 562,
+      "overall": 68,
+      "economy": 98,
+      "wellbeing": 63,
+      "society": 32,
+      "infrastructure": 93,
+      "growth": 50,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 120676,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 560,
-    "overall": 69,
+    "day": 562,
+    "overall": 68,
     "economy": 98,
-    "wellbeing": 66,
+    "wellbeing": 63,
     "society": 32,
     "infrastructure": 93,
-    "growth": 55,
+    "growth": 50,
     "population": 53,
     "buildings": 48,
-    "treasury": 118918,
+    "treasury": 120676,
     "employment": 100
   },
   "buildable": {
