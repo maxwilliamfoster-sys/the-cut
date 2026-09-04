@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "8d2b1f745c3b",
+  "version": "1168a241be72",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -74,15 +74,15 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====........................====...ggggggg..====............",
-    ".####D#####.,,,,.####D####..#####D#####.,,,,.####D#####....gggggggg.,,,,.#####D######...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg###D###g.,:,,.gg###D####g",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.gg#ffffff#g",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#...........,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#fffff#g.,:,,.gg########g",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#...........,:,,.gg#######g.,:,,.ggggggggggg",
-    ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#...........,,,,.gggggggggg.,,,,.ggggggggggg",
-    "............,,,,............###########.,,,,........................,,,,.############...........,,,,.gggggggggg.,,,,.ggggggggggg",
+    ".####D#####.,,,,.####D####..#####D#####.,,,,.####D#####....gggggggg.,,,,.#####D######..ggggggg..,,,,.gggggggggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..ggggggg..,:,,.gg###D###g.,:,,.gg###D####g",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..ggggggg..,:,,.gg#fffff#g.,:,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..###D###..,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gg#fffff#g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#fffff#g.,:,,.gg########g",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#######g.,:,,.ggggggggggg",
+    ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gggggggggg.,,,,.ggggggggggg",
+    "............,,,,............###########.,,,,........................,,,,.############..#######..,,,,.gggggggggg.,,,,.ggggggggggg",
     "............,:,,........................,:,,........................,:,,........................,:,,.gggggggggg.,:,,.ggggggggggg",
     "............====........................====........................====........................====............====............",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
@@ -3583,6 +3583,81 @@
           "type": "plant",
           "x": 124,
           "y": 52
+        }
+      ]
+    },
+    "new_home_571": {
+      "id": "new_home_571",
+      "name": "Kessler Cottages",
+      "district": "civic",
+      "rect": [
+        87,
+        66,
+        7,
+        6
+      ],
+      "rects": [
+        [
+          87,
+          66,
+          7,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "clapboard",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        90,
+        67
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 92,
+          "y": 67
+        },
+        {
+          "type": "bed",
+          "x": 91,
+          "y": 69
+        },
+        {
+          "type": "sofa",
+          "x": 90,
+          "y": 68
+        },
+        {
+          "type": "tv",
+          "x": 88,
+          "y": 70
+        },
+        {
+          "type": "table",
+          "x": 89,
+          "y": 68
+        },
+        {
+          "type": "sink",
+          "x": 91,
+          "y": 70
+        },
+        {
+          "type": "shelf",
+          "x": 88,
+          "y": 68
+        },
+        {
+          "type": "plant",
+          "x": 90,
+          "y": 70
+        },
+        {
+          "type": "rug",
+          "x": 92,
+          "y": 69
         }
       ]
     }
