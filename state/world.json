@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2349,
-  "last_beat_at": "2026-09-04T20:57:12Z",
+  "beat": 2357,
+  "last_beat_at": "2026-09-04T22:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "overcast",
   "heat": {
-    "riverside": 21,
-    "delmar": 18,
-    "terraces": 5,
+    "riverside": 38,
+    "delmar": 24,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -922,6 +922,72 @@
   ],
   "events": [
     {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "iris",
+        "dev"
+      ],
+      "text": "Somebody tells Iris Amadi that Dev Lindqvist has been seen talking to police.",
+      "beat": 2357
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2356
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2355
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 2352
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 2350
+    },
+    {
       "id": "shipment_light",
       "heat": {},
       "mood": {
@@ -1121,74 +1187,6 @@
       ],
       "text": "Somebody tells Femi Adeyemi that Blaise Osei has been seen talking to police.",
       "beat": 2321
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2320
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "nia2"
-      ],
-      "text": "Nia Mbeki ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 2319
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 2318
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "theo2",
-        "dot"
-      ],
-      "text": "Somebody tells Theo Bello that Dot Feeney has been seen talking to police.",
-      "beat": 2317
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2316
     }
   ],
   "player_queue": [
@@ -1211,12 +1209,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 586,
+  "last_gazette_day": 588,
   "llm_budget": {
     "day": "2026-09-04",
     "spent": {
       "fast": 163597,
-      "deep": 54998
+      "deep": 79732
     }
   },
   "silent_runs": 0,
@@ -2128,6 +2126,23 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 571
+    },
+    {
+      "id": "new_home_589",
+      "name": "Halloway Tenement",
+      "district": "flats",
+      "x": 75,
+      "y": 126,
+      "w": 8,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "brownstone",
+      "open": false,
+      "wings": [],
+      "floors": 3,
+      "condition": "standing",
+      "since_day": 589
     }
   ],
   "laws": [
@@ -2729,14 +2744,14 @@
   ],
   "law_pressure": 2,
   "last_law_day": 503,
-  "last_expansion_day": 571,
+  "last_expansion_day": 589,
   "feuds": [
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 4
+      "heat": 0
     },
     {
       "a": "booker",
@@ -2771,21 +2786,21 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 6
+      "heat": 2
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 80
+      "heat": 76
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 34
+      "heat": 30
     },
     {
       "a": "cassius",
@@ -2799,26 +2814,26 @@
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 8
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 563,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 13
     },
     {
       "a": "dot",
       "b": "odette",
       "since_day": 570,
       "cause": "would not let it go",
-      "heat": 27
+      "heat": 23
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-04",
-    "beat": 2347,
+    "beat": 2356,
     "providers": [
       "gemini"
     ]
@@ -2894,10 +2909,43 @@
     "id": "cal",
     "marked": 555
   },
-  "incidents": [],
-  "treasury": 137572,
+  "incidents": [
+    {
+      "id": "inc2356-opening-0",
+      "kind": "opening",
+      "effect": "opening",
+      "at": "new_home_589",
+      "x": 78,
+      "y": 130,
+      "who": [],
+      "text": "Halloway Tenement opens on what was empty ground in The Flats.",
+      "started": 2356,
+      "until": 2358
+    }
+  ],
+  "treasury": 139360,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 588,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 139360
+    },
+    {
+      "day": 587,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 138466
+    },
     {
       "day": 586,
       "wages": 1794,
@@ -3177,26 +3225,6 @@
       "civic": 720,
       "net": 894,
       "treasury": 113569
-    },
-    {
-      "day": 552,
-      "wages": 1836,
-      "takings": 3155,
-      "tax": 1627,
-      "welfare": 0,
-      "civic": 720,
-      "net": 907,
-      "treasury": 112675
-    },
-    {
-      "day": 551,
-      "wages": 1836,
-      "takings": 3005,
-      "tax": 1577,
-      "welfare": 0,
-      "civic": 720,
-      "net": 857,
-      "treasury": 111768
     }
   ],
   "births": [
@@ -3628,32 +3656,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 528,
-      "overall": 68,
-      "economy": 97,
-      "wellbeing": 60,
-      "society": 24,
-      "infrastructure": 96,
-      "growth": 73,
-      "population": 53,
-      "buildings": 47,
-      "treasury": 96072,
-      "employment": 100
-    },
-    {
-      "day": 529,
-      "overall": 70,
-      "economy": 97,
-      "wellbeing": 63,
-      "society": 28,
-      "infrastructure": 96,
-      "growth": 73,
-      "population": 53,
-      "buildings": 47,
-      "treasury": 97049,
-      "employment": 100
-    },
     {
       "day": 530,
       "overall": 70,
@@ -4251,19 +4253,45 @@
       "buildings": 49,
       "treasury": 137572,
       "employment": 100
+    },
+    {
+      "day": 587,
+      "overall": 70,
+      "economy": 97,
+      "wellbeing": 67,
+      "society": 29,
+      "infrastructure": 94,
+      "growth": 67,
+      "population": 55,
+      "buildings": 49,
+      "treasury": 138466,
+      "employment": 100
+    },
+    {
+      "day": 588,
+      "overall": 69,
+      "economy": 97,
+      "wellbeing": 63,
+      "society": 29,
+      "infrastructure": 94,
+      "growth": 67,
+      "population": 55,
+      "buildings": 49,
+      "treasury": 139360,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 586,
-    "overall": 70,
+    "day": 588,
+    "overall": 69,
     "economy": 97,
-    "wellbeing": 67,
+    "wellbeing": 63,
     "society": 29,
     "infrastructure": 94,
     "growth": 67,
     "population": 55,
     "buildings": 49,
-    "treasury": 137572,
+    "treasury": 139360,
     "employment": 100
   },
   "buildable": {
@@ -4310,7 +4338,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 128,
