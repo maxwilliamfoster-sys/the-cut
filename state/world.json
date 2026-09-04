@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2263,
-  "last_beat_at": "2026-09-03T23:27:12Z",
+  "beat": 2270,
+  "last_beat_at": "2026-09-04T01:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heat",
   "heat": {
-    "riverside": 22,
-    "delmar": 28,
-    "terraces": 7,
+    "riverside": 15,
+    "delmar": 33,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -853,9 +853,59 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine60",
+      "from": "etta2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 570,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 2268
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 2265
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 2264
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -1075,45 +1125,6 @@
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
       "beat": 2233
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2230
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "errol"
-      ],
-      "text": "Errol Brannon gets word that what they owe is wanted sooner than agreed.",
-      "beat": 2228
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "dev"
-      ],
-      "text": "Dev Lindqvist gets word that what they owe is wanted sooner than agreed.",
-      "beat": 2227
     }
   ],
   "player_queue": [
@@ -1136,12 +1147,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 565,
+  "last_gazette_day": 566,
   "llm_budget": {
-    "day": "2026-09-03",
+    "day": "2026-09-04",
     "spent": {
-      "fast": 163777,
-      "deep": 110639
+      "fast": 32534,
+      "deep": 968
     }
   },
   "silent_runs": 0,
@@ -2116,7 +2127,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 11
+      "convictions": 12
     },
     {
       "id": "law05",
@@ -2565,8 +2576,9 @@
       "evidence": "paces slowly around empty lot",
       "day": 564,
       "trial_day": 566,
-      "status": "awaiting_trial",
-      "witnesses": 0
+      "status": "acquitted",
+      "witnesses": 0,
+      "verdict": "not guilty"
     },
     {
       "id": "c034",
@@ -2577,8 +2589,33 @@
       "evidence": "splashes plastic cup of water onto porch fern",
       "day": 565,
       "trial_day": 567,
+      "status": "convicted",
+      "witnesses": 9,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c035",
+      "who": "nia2",
+      "name": "Nia Mbeki",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "she stares at the mirror, rehearsing a haircut",
+      "day": 566,
+      "trial_day": 568,
       "status": "awaiting_trial",
-      "witnesses": 9
+      "witnesses": 1
+    },
+    {
+      "id": "c036",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "he hums, smoothing a client’s hair",
+      "day": 566,
+      "trial_day": 568,
+      "status": "awaiting_trial",
+      "witnesses": 11
     }
   ],
   "law_pressure": 2,
@@ -2611,14 +2648,14 @@
       "b": "kohl",
       "since_day": 290,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 10
     },
     {
       "a": "gus",
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 20
     },
     {
       "a": "nia",
@@ -2632,35 +2669,35 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 32
+      "heat": 50
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 17
     },
     {
       "a": "cassius",
       "b": "jonah",
       "since_day": 458,
       "cause": "would not let it go",
-      "heat": 1
+      "heat": 0
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 24
+      "heat": 22
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 563,
       "cause": "would not let it go",
-      "heat": 49
+      "heat": 47
     }
   ],
   "quota_exhausted_on": {
@@ -2742,9 +2779,19 @@
     "marked": 555
   },
   "incidents": [],
-  "treasury": 123313,
+  "treasury": 124192,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 566,
+      "wages": 1747,
+      "takings": 3155,
+      "tax": 1599,
+      "welfare": 0,
+      "civic": 720,
+      "net": 879,
+      "treasury": 124192
+    },
     {
       "day": 565,
       "wages": 1747,
@@ -3034,16 +3081,6 @@
       "civic": 720,
       "net": 857,
       "treasury": 98883
-    },
-    {
-      "day": 530,
-      "wages": 1883,
-      "takings": 3050,
-      "tax": 1607,
-      "welfare": 0,
-      "civic": 630,
-      "net": 977,
-      "treasury": 98026
     }
   ],
   "births": [
@@ -3466,19 +3503,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 506,
-      "overall": 72,
-      "economy": 97,
-      "wellbeing": 69,
-      "society": 26,
-      "infrastructure": 96,
-      "growth": 80,
-      "population": 52,
-      "buildings": 46,
-      "treasury": 80200,
-      "employment": 100
-    },
     {
       "day": 507,
       "overall": 71,
@@ -4089,19 +4113,32 @@
       "buildings": 48,
       "treasury": 123313,
       "employment": 100
+    },
+    {
+      "day": 566,
+      "overall": 64,
+      "economy": 98,
+      "wellbeing": 62,
+      "society": 17,
+      "infrastructure": 93,
+      "growth": 50,
+      "population": 53,
+      "buildings": 48,
+      "treasury": 124192,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 565,
-    "overall": 65,
+    "day": 566,
+    "overall": 64,
     "economy": 98,
-    "wellbeing": 63,
-    "society": 21,
+    "wellbeing": 62,
+    "society": 17,
     "infrastructure": 93,
     "growth": 50,
     "population": 53,
     "buildings": 48,
-    "treasury": 123313,
+    "treasury": 124192,
     "employment": 100
   },
   "buildable": {
