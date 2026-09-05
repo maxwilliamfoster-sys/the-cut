@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2412,
-  "last_beat_at": "2026-09-05T12:42:12Z",
+  "beat": 2424,
+  "last_beat_at": "2026-09-05T15:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heat",
   "heat": {
-    "riverside": 5,
-    "delmar": 5,
+    "riverside": 29,
+    "delmar": 16,
     "terraces": 5,
     "civic": 5
   },
@@ -983,9 +983,111 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine70",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 608,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 2424
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2423
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "simone",
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl does Simone Adeyemi a favour that costs them something real.",
+      "beat": 2419
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2417
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "jonah",
+        "odette2"
+      ],
+      "text": "Somebody tells Jonah Bello that Odette Osei has been seen talking to police.",
+      "beat": 2416
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2415
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2414
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -1155,92 +1257,6 @@
       ],
       "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
       "beat": 2393
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 2392
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "dev2"
-      ],
-      "text": "Something pays out for Dev Nakamura. More than expected, which is its own problem.",
-      "beat": 2391
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2390
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2387
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "maren",
-        "dev"
-      ],
-      "text": "Somebody tells Maren Adeyemi that Dev Lindqvist has been seen talking to police.",
-      "beat": 2380
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 2379
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2378
     }
   ],
   "player_queue": [
@@ -1263,12 +1279,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 602,
+  "last_gazette_day": 605,
   "llm_budget": {
     "day": "2026-09-05",
     "spent": {
-      "fast": 162831,
-      "deep": 30938
+      "fast": 163485,
+      "deep": 57149
     }
   },
   "silent_runs": 0,
@@ -2257,7 +2273,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 21
+      "convictions": 22
     },
     {
       "id": "law04",
@@ -2869,11 +2885,12 @@
       "evidence": "wipes counter in barber shop",
       "day": 603,
       "trial_day": 605,
-      "status": "awaiting_trial",
-      "witnesses": 5
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     }
   ],
-  "law_pressure": 2,
+  "law_pressure": 3,
   "last_law_day": 503,
   "last_expansion_day": 589,
   "feuds": [
@@ -2924,14 +2941,14 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 74
+      "heat": 68
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 28
+      "heat": 42
     },
     {
       "a": "cassius",
@@ -2953,18 +2970,11 @@
       "since_day": 563,
       "cause": "would not let it go",
       "heat": 0
-    },
-    {
-      "a": "dot",
-      "b": "odette",
-      "since_day": 570,
-      "cause": "would not let it go",
-      "heat": 1
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-09-04",
-    "beat": 2356,
+    "day": "2026-09-05",
+    "beat": 2419,
     "providers": [
       "gemini"
     ]
@@ -3040,25 +3050,40 @@
     "id": "cal",
     "marked": 555
   },
-  "incidents": [
-    {
-      "id": "inc2412-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "tee"
-      ],
-      "text": "Tariq 'Tee' Bello is taken to the 9th over Public Haircut Ban.",
-      "started": 2412,
-      "until": 2413
-    }
-  ],
-  "treasury": 149387,
+  "incidents": [],
+  "treasury": 152159,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 605,
+      "wages": 1889,
+      "takings": 3155,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 720,
+      "net": 924,
+      "treasury": 152159
+    },
+    {
+      "day": 604,
+      "wages": 1889,
+      "takings": 3155,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 720,
+      "net": 924,
+      "treasury": 151235
+    },
+    {
+      "day": 603,
+      "wages": 1889,
+      "takings": 3155,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 720,
+      "net": 924,
+      "treasury": 150311
+    },
     {
       "day": 602,
       "wages": 1889,
@@ -3328,39 +3353,18 @@
       "civic": 720,
       "net": 879,
       "treasury": 125950
-    },
-    {
-      "day": 569,
-      "wages": 1747,
-      "takings": 3155,
-      "tax": 1599,
-      "welfare": 0,
-      "civic": 720,
-      "net": 879,
-      "treasury": 125071
-    },
-    {
-      "day": 566,
-      "wages": 1747,
-      "takings": 3155,
-      "tax": 1599,
-      "welfare": 0,
-      "civic": 720,
-      "net": 879,
-      "treasury": 124192
-    },
-    {
-      "day": 565,
-      "wages": 1747,
-      "takings": 3155,
-      "tax": 1599,
-      "welfare": 0,
-      "civic": 720,
-      "net": 879,
-      "treasury": 123313
     }
   ],
   "births": [
+    {
+      "id": "jonah3",
+      "name": "Jonah Bello",
+      "day": 604,
+      "parents": [
+        "tee",
+        "amara"
+      ]
+    },
     {
       "id": "milo",
       "name": "Milo Adeyemi",
@@ -3798,45 +3802,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 542,
-      "overall": 70,
-      "economy": 96,
-      "wellbeing": 70,
-      "society": 28,
-      "infrastructure": 92,
-      "growth": 62,
-      "population": 54,
-      "buildings": 47,
-      "treasury": 107483,
-      "employment": 100
-    },
-    {
-      "day": 543,
-      "overall": 66,
-      "economy": 96,
-      "wellbeing": 60,
-      "society": 24,
-      "infrastructure": 92,
-      "growth": 62,
-      "population": 54,
-      "buildings": 47,
-      "treasury": 108340,
-      "employment": 100
-    },
-    {
-      "day": 545,
-      "overall": 69,
-      "economy": 96,
-      "wellbeing": 68,
-      "society": 28,
-      "infrastructure": 92,
-      "growth": 62,
-      "population": 54,
-      "buildings": 47,
-      "treasury": 109197,
-      "employment": 100
-    },
     {
       "day": 546,
       "overall": 69,
@@ -4421,19 +4386,58 @@
       "buildings": 50,
       "treasury": 149387,
       "employment": 100
+    },
+    {
+      "day": 603,
+      "overall": 69,
+      "economy": 96,
+      "wellbeing": 62,
+      "society": 27,
+      "infrastructure": 94,
+      "growth": 73,
+      "population": 58,
+      "buildings": 50,
+      "treasury": 150311,
+      "employment": 100
+    },
+    {
+      "day": 604,
+      "overall": 72,
+      "economy": 96,
+      "wellbeing": 70,
+      "society": 29,
+      "infrastructure": 93,
+      "growth": 79,
+      "population": 59,
+      "buildings": 50,
+      "treasury": 151235,
+      "employment": 100
+    },
+    {
+      "day": 605,
+      "overall": 71,
+      "economy": 96,
+      "wellbeing": 63,
+      "society": 31,
+      "infrastructure": 93,
+      "growth": 79,
+      "population": 59,
+      "buildings": 50,
+      "treasury": 152159,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 602,
+    "day": 605,
     "overall": 71,
     "economy": 96,
-    "wellbeing": 69,
-    "society": 28,
-    "infrastructure": 94,
-    "growth": 73,
-    "population": 58,
+    "wellbeing": 63,
+    "society": 31,
+    "infrastructure": 93,
+    "growth": 79,
+    "population": 59,
     "buildings": 50,
-    "treasury": 149387,
+    "treasury": 152159,
     "employment": 100
   },
   "buildable": {
