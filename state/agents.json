@@ -46,7 +46,7 @@
     "relationships": {
       "malik": {
         "affinity": -100,
-        "opinion": "I see him as a threat"
+        "opinion": "Law's failure fuels my distrust."
       },
       "ruiz": {
         "affinity": -67,
@@ -1509,6 +1509,18 @@
         "day": 578,
         "what": "Tee’s conviction proves he’ll ruin our escape plans.",
         "importance": 8
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "law is unreliable, so I’ll stay invisible",
+        "importance": 8
+      },
+      {
+        "beat": 2363,
+        "day": 590,
+        "what": "The haircut ban is a scheme to force us into a new diner.",
+        "importance": 8
       }
     ],
     "action": "watching the door, counting steps",
@@ -1893,7 +1905,7 @@
       ]
     ],
     "last_thought_beat": 1500,
-    "belief": "Tee’s conviction proves he’ll ruin our escape plans.",
+    "belief": "The haircut ban is a scheme to force us into a new diner.",
     "alive": false,
     "health": 5,
     "grief": 0,
@@ -3419,8 +3431,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      9,
-      68
+      6,
+      69
     ],
     "dest": [
       6,
@@ -3428,15 +3440,15 @@
     ],
     "at": "precinct",
     "spot": [
-      9,
-      68
+      6,
+      69
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 85,
+      "energy": 20,
+      "happiness": 50,
+      "stress": 82,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -3465,7 +3477,7 @@
       },
       "malik": {
         "affinity": -100,
-        "opinion": "I’ll bring Lyle to justice"
+        "opinion": "Tee’s conviction convinced me Lyle is dangerous."
       },
       "gus": {
         "affinity": -52,
@@ -4420,32 +4432,131 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Tee’s conviction convinced her that Lyle’s freedom is dangerous",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Tee’s conviction confirms Lyle’s danger, I’ll pursue him",
+        "importance": 8
       }
     ],
-    "action": "filing paperwork",
-    "activity": "filing paperwork",
-    "thought": "",
-    "speech": null,
+    "action": "stares at file, clenches jaw",
+    "activity": "reading a file",
+    "thought": "Lyle won’t stay quiet",
+    "speech": {
+      "to": "kohl",
+      "text": "We’re getting him, Kohl. No more excuses"
+    },
     "path": [
       [
-        9,
+        3,
+        50
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        53
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        3,
+        55
+      ],
+      [
+        3,
+        56
+      ],
+      [
+        3,
+        57
+      ],
+      [
+        3,
+        58
+      ],
+      [
+        3,
+        59
+      ],
+      [
+        3,
+        60
+      ],
+      [
+        3,
+        61
+      ],
+      [
+        4,
+        61
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        5,
+        65
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
         69
       ],
       [
-        9,
-        68
+        6,
+        69
       ]
     ],
-    "last_thought_beat": 2353,
-    "belief": "Tee’s conviction means Lyle won’t be held accountable.",
+    "last_thought_beat": 2364,
+    "belief": "Tee’s conviction confirms Lyle’s danger, I’ll pursue him",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 55,
     "chasing": null,
-    "driving": null,
+    "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "church",
@@ -4486,24 +4597,24 @@
       "night": "delmarflats"
     },
     "pos": [
-      8,
-      35
+      6,
+      69
     ],
     "dest": [
       6,
       63
     ],
-    "at": "cornerstore",
+    "at": "precinct",
     "spot": [
-      8,
-      35
+      6,
+      69
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 88,
+      "energy": 86,
+      "happiness": 50,
+      "stress": 100,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "booker": {
@@ -5789,162 +5900,305 @@
         "importance": 6
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
-    "thought": "",
-    "speech": null,
+    "action": "checks paperwork, eyes everyone warily",
+    "activity": "at the desk",
+    "thought": "I can’t let Lyle slip through",
+    "speech": {
+      "to": "ruiz",
+      "text": "We need more evidence on Lyle’s dealings"
+    },
     "path": [
       [
-        9,
-        69
+        77,
+        34
       ],
       [
-        8,
-        69
+        76,
+        34
       ],
       [
-        7,
-        69
+        76,
+        35
       ],
       [
-        6,
-        69
+        76,
+        36
       ],
       [
-        5,
-        69
+        76,
+        37
       ],
       [
-        5,
-        68
+        76,
+        38
       ],
       [
-        5,
-        67
+        76,
+        39
       ],
       [
-        5,
-        66
+        76,
+        40
       ],
       [
-        5,
-        65
+        76,
+        41
       ],
       [
-        5,
-        64
+        76,
+        42
       ],
       [
-        5,
-        63
+        75,
+        42
       ],
       [
-        5,
-        62
+        74,
+        42
       ],
       [
-        5,
-        61
+        73,
+        42
       ],
       [
-        5,
-        60
+        72,
+        42
       ],
       [
-        5,
-        59
+        71,
+        42
       ],
       [
-        5,
-        58
+        70,
+        42
       ],
       [
-        6,
-        58
+        69,
+        42
       ],
       [
-        7,
-        58
+        68,
+        42
       ],
       [
-        8,
-        58
+        67,
+        42
       ],
       [
-        9,
-        58
+        66,
+        42
       ],
       [
-        10,
-        58
+        65,
+        42
       ],
       [
-        11,
-        58
+        64,
+        42
       ],
       [
-        12,
-        58
+        63,
+        42
       ],
       [
-        12,
-        57
+        62,
+        42
       ],
       [
-        12,
-        56
+        61,
+        42
       ],
       [
-        12,
-        55
+        60,
+        42
       ],
       [
-        12,
-        54
+        59,
+        42
       ],
       [
-        12,
-        53
+        58,
+        42
       ],
       [
-        12,
-        52
+        57,
+        42
       ],
       [
-        12,
-        51
+        56,
+        42
       ],
       [
-        12,
-        50
+        55,
+        42
       ],
       [
-        12,
-        49
+        54,
+        42
       ],
       [
-        12,
-        48
+        53,
+        42
       ],
       [
-        12,
-        47
+        52,
+        42
       ],
       [
-        12,
-        46
+        51,
+        42
       ],
       [
-        12,
-        45
+        50,
+        42
       ],
       [
-        12,
-        44
+        49,
+        42
       ],
       [
-        12,
-        43
+        48,
+        42
+      ],
+      [
+        47,
+        42
+      ],
+      [
+        46,
+        42
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        43,
+        42
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        37,
+        42
+      ],
+      [
+        36,
+        42
+      ],
+      [
+        35,
+        42
+      ],
+      [
+        34,
+        42
+      ],
+      [
+        33,
+        42
+      ],
+      [
+        32,
+        42
+      ],
+      [
+        31,
+        42
+      ],
+      [
+        30,
+        42
+      ],
+      [
+        29,
+        42
+      ],
+      [
+        28,
+        42
+      ],
+      [
+        27,
+        42
+      ],
+      [
+        26,
+        42
+      ],
+      [
+        25,
+        42
+      ],
+      [
+        24,
+        42
+      ],
+      [
+        23,
+        42
+      ],
+      [
+        22,
+        42
+      ],
+      [
+        21,
+        42
+      ],
+      [
+        20,
+        42
+      ],
+      [
+        19,
+        42
+      ],
+      [
+        18,
+        42
+      ],
+      [
+        17,
+        42
+      ],
+      [
+        16,
+        42
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        14,
+        42
+      ],
+      [
+        13,
+        42
       ],
       [
         12,
@@ -5952,74 +6206,146 @@
       ],
       [
         12,
-        41
+        43
       ],
       [
         12,
-        40
+        44
       ],
       [
         12,
-        39
+        45
       ],
       [
         12,
-        38
+        46
       ],
       [
         12,
-        37
+        47
+      ],
+      [
+        12,
+        48
+      ],
+      [
+        12,
+        49
+      ],
+      [
+        12,
+        50
+      ],
+      [
+        12,
+        51
+      ],
+      [
+        12,
+        52
+      ],
+      [
+        12,
+        53
+      ],
+      [
+        12,
+        54
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        12,
+        56
+      ],
+      [
+        12,
+        57
+      ],
+      [
+        12,
+        58
       ],
       [
         11,
-        37
+        58
       ],
       [
         10,
-        37
+        58
       ],
       [
         9,
-        37
+        58
       ],
       [
         8,
-        37
+        58
       ],
       [
         7,
-        37
+        58
       ],
       [
         6,
-        37
+        58
       ],
       [
         5,
-        37
+        58
       ],
       [
         5,
-        36
+        59
       ],
       [
         5,
-        35
+        60
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        5,
+        65
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
+        69
       ],
       [
         6,
-        35
-      ],
-      [
-        7,
-        35
-      ],
-      [
-        8,
-        35
+        69
       ]
     ],
-    "last_thought_beat": 2352,
+    "last_thought_beat": 2364,
     "belief": "Tee’s conviction means I’ll be at risk.",
     "alive": true,
     "health": 80,
@@ -6029,7 +6355,7 @@
     "last_instigated_day": 579,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "church",
@@ -6832,24 +7158,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      22,
-      33
+      5,
+      69
     ],
     "dest": [
       21,
       37
     ],
-    "at": "barbershop",
+    "at": "precinct",
     "spot": [
-      22,
-      33
+      5,
+      69
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 78,
-      "social_need": 0,
-      "fear": 22
+      "energy": 0,
+      "happiness": 50,
+      "stress": 75,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -7771,8 +8097,8 @@
         "importance": 6
       },
       {
-        "beat": 2306,
-        "day": 576,
+        "beat": 2361,
+        "day": 590,
         "what": "I was taken in over Public Haircut Ban.",
         "importance": 8
       },
@@ -7879,21 +8205,36 @@
         "importance": 6
       }
     ],
-    "action": "clearing tables",
-    "activity": "clearing tables",
-    "thought": "",
-    "speech": null,
+    "action": "taps chair, sighs quietly",
+    "activity": "sitting down for a minute",
+    "thought": "Amara deserves the diner",
+    "speech": {
+      "to": "kohl",
+      "text": "Let’s keep the place open for her"
+    },
     "path": [
       [
-        21,
-        33
+        9,
+        69
       ],
       [
-        22,
-        33
+        8,
+        69
+      ],
+      [
+        7,
+        69
+      ],
+      [
+        6,
+        69
+      ],
+      [
+        5,
+        69
       ]
     ],
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2364,
     "belief": "I’m guilty, but I’ll still control the diner.",
     "alive": true,
     "health": 80,
@@ -7919,7 +8260,7 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -7942,7 +8283,8 @@
     "birth_day": null,
     "standing": 31,
     "directive": null,
-    "detained_until": 0
+    "detained_until": 592,
+    "charged_with": "Public Haircut Ban"
   },
   "simone": {
     "id": "simone",
@@ -7982,11 +8324,11 @@
       67
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 48,
+      "happiness": 50,
+      "stress": 36,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "junie": {
@@ -8882,6 +9224,134 @@
     "speech": null,
     "path": [
       [
+        3,
+        50
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        53
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        3,
+        55
+      ],
+      [
+        4,
+        55
+      ],
+      [
+        5,
+        55
+      ],
+      [
+        6,
+        55
+      ],
+      [
+        7,
+        55
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        13,
+        55
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        16,
+        55
+      ],
+      [
+        16,
+        56
+      ],
+      [
+        17,
+        56
+      ],
+      [
+        18,
+        56
+      ],
+      [
+        19,
+        56
+      ],
+      [
+        20,
+        56
+      ],
+      [
+        21,
+        56
+      ],
+      [
+        21,
+        57
+      ],
+      [
+        21,
+        58
+      ],
+      [
+        21,
+        59
+      ],
+      [
+        21,
+        60
+      ],
+      [
+        21,
+        61
+      ],
+      [
+        21,
+        62
+      ],
+      [
+        21,
+        63
+      ],
+      [
         21,
         64
       ],
@@ -8906,7 +9376,7 @@
         67
       ]
     ],
-    "last_thought_beat": 2350,
+    "last_thought_beat": 2362,
     "belief": "Tee’s conviction proves he’ll silence me.",
     "alive": true,
     "health": 80,
@@ -8915,7 +9385,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -8973,11 +9443,11 @@
       68
     ],
     "mood": {
-      "energy": 36,
-      "happiness": 44,
-      "stress": 92,
-      "social_need": 24,
-      "fear": 22
+      "energy": 50,
+      "happiness": 50,
+      "stress": 97,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "nadia": {
@@ -9010,7 +9480,7 @@
       },
       "malik": {
         "affinity": -100,
-        "opinion": "I’ll protect my family"
+        "opinion": "Cass’s exoneration taught me to guard fiercely."
       },
       "simone": {
         "affinity": 33,
@@ -10133,6 +10603,18 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Cass’s exoneration taught him to guard fiercely",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Cass’s exoneration shows I must guard fiercely",
+        "importance": 8
       }
     ],
     "action": "behind the till",
@@ -10141,25 +10623,165 @@
     "speech": null,
     "path": [
       [
+        34,
+        51
+      ],
+      [
+        33,
+        51
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        33,
+        55
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        33,
+        57
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        33,
+        59
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        34,
+        61
+      ],
+      [
+        35,
+        61
+      ],
+      [
+        36,
+        61
+      ],
+      [
+        37,
+        61
+      ],
+      [
+        38,
+        61
+      ],
+      [
+        39,
+        61
+      ],
+      [
+        40,
+        61
+      ],
+      [
+        41,
+        61
+      ],
+      [
+        42,
+        61
+      ],
+      [
+        43,
+        61
+      ],
+      [
+        44,
+        61
+      ],
+      [
+        45,
+        61
+      ],
+      [
         46,
-        68
+        61
+      ],
+      [
+        47,
+        61
+      ],
+      [
+        48,
+        61
+      ],
+      [
+        49,
+        61
+      ],
+      [
+        49,
+        62
+      ],
+      [
+        49,
+        63
+      ],
+      [
+        49,
+        64
+      ],
+      [
+        48,
+        64
+      ],
+      [
+        47,
+        64
+      ],
+      [
+        47,
+        65
+      ],
+      [
+        47,
+        66
+      ],
+      [
+        47,
+        67
       ],
       [
         47,
         68
       ]
     ],
-    "last_thought_beat": 2354,
-    "belief": "Tee’s conviction shows he’ll threaten my family.",
+    "last_thought_beat": 2363,
+    "belief": "Cass’s exoneration shows I must guard fiercely",
     "alive": true,
     "health": 64,
     "grief": 0,
     "volatility": 70,
     "chasing": null,
     "last_instigated_day": 580,
-    "driving": null,
+    "driving": "van",
     "vehicle": "van",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -10200,23 +10822,20 @@
     },
     "pos": [
       33,
-      67
+      64
     ],
     "dest": [
       33,
       52
     ],
     "at": "school",
-    "spot": [
-      33,
-      67
-    ],
+    "spot": null,
     "mood": {
-      "energy": 31,
-      "happiness": 44,
-      "stress": 80,
+      "energy": 45,
+      "happiness": 50,
+      "stress": 100,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -10914,17 +11533,76 @@
         "importance": 6
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
-    "thought": "",
-    "speech": null,
+    "action": "stirs coffee, scans notes",
+    "activity": "making bad coffee",
+    "thought": "Find the truth",
+    "speech": {
+      "to": "priya",
+      "text": "Can we talk about the new law?"
+    },
     "path": [
       [
+        34,
+        51
+      ],
+      [
         33,
-        67
+        51
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        33,
+        55
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        33,
+        57
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        33,
+        59
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        33,
+        62
+      ],
+      [
+        33,
+        63
+      ],
+      [
+        33,
+        64
       ]
     ],
-    "last_thought_beat": 2351,
+    "last_thought_beat": 2364,
     "belief": "Tee’s conviction proves he’ll hide the truth.",
     "alive": true,
     "health": 80,
@@ -10933,7 +11611,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -10987,11 +11665,11 @@
       32
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 44,
-      "stress": 97,
+      "energy": 52,
+      "happiness": 50,
+      "stress": 89,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -11007,8 +11685,8 @@
         "opinion": "circling my shop"
       },
       "malik": {
-        "affinity": -91,
-        "opinion": "I’ll double my deals"
+        "affinity": -99,
+        "opinion": "Wes’s attack made me wary."
       },
       "dez": {
         "affinity": -29,
@@ -11973,40 +12651,43 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Wes’s attack made him wary of public scrutiny",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "public eyes cut my safety, so I’ll hide my moves",
+        "importance": 8
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
-    "thought": "",
-    "speech": null,
+    "action": "glances at Wes, smiles thinly",
+    "activity": "watching the door",
+    "thought": "Keep my ledger tight",
+    "speech": {
+      "to": "wes",
+      "text": "Watch the cash, keep the line clean"
+    },
     "path": [
       [
         36,
-        35
+        32
       ],
       [
         35,
-        35
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
-        33
+        32
       ],
       [
         34,
         32
       ]
     ],
-    "last_thought_beat": 2352,
-    "belief": "Tee’s conviction shows he’ll strip my position.",
+    "last_thought_beat": 2364,
+    "belief": "public eyes cut my safety, so I’ll hide my moves",
     "alive": true,
     "health": 56,
     "grief": 0,
@@ -12025,7 +12706,7 @@
     "last_instigated_day": 584,
     "driving": null,
     "vehicle": "car",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -12917,24 +13598,21 @@
       "night": "harborbar"
     },
     "pos": [
-      9,
-      32
+      51,
+      51
     ],
     "dest": [
       31,
       19
     ],
-    "at": "cornerstore",
-    "spot": [
-      9,
-      32
-    ],
+    "at": "lot",
+    "spot": null,
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 85,
-      "social_need": 0,
-      "fear": 22
+      "energy": 86,
+      "happiness": 50,
+      "stress": 80,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -13944,73 +14622,169 @@
         "importance": 6
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "standing around",
+    "activity": "standing around",
     "thought": "",
     "speech": null,
     "path": [
       [
-        51,
-        51
+        33,
+        17
       ],
       [
-        51,
-        50
+        32,
+        17
       ],
       [
-        51,
-        49
+        31,
+        17
       ],
       [
-        51,
-        48
+        31,
+        18
       ],
       [
-        51,
-        47
+        31,
+        19
       ],
       [
-        51,
-        46
+        31,
+        20
       ],
       [
-        51,
-        45
+        31,
+        21
       ],
       [
-        50,
-        45
+        32,
+        21
       ],
       [
-        49,
-        45
+        33,
+        21
       ],
       [
-        48,
-        45
+        34,
+        21
       ],
       [
-        47,
-        45
+        35,
+        21
       ],
       [
-        46,
-        45
+        36,
+        21
       ],
       [
-        45,
-        45
+        37,
+        21
       ],
       [
-        44,
-        45
+        38,
+        21
       ],
       [
-        43,
-        45
+        39,
+        21
       ],
       [
-        42,
+        40,
+        21
+      ],
+      [
+        40,
+        22
+      ],
+      [
+        40,
+        23
+      ],
+      [
+        40,
+        24
+      ],
+      [
+        40,
+        25
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
+        32
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        40,
+        38
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        40,
         45
       ],
       [
@@ -14018,219 +14792,71 @@
         45
       ],
       [
-        40,
+        42,
         45
       ],
       [
-        39,
+        43,
         45
       ],
       [
-        38,
+        44,
         45
       ],
       [
-        37,
+        45,
         45
       ],
       [
-        36,
+        46,
         45
       ],
       [
-        35,
+        47,
         45
       ],
       [
-        34,
+        48,
         45
       ],
       [
-        33,
+        49,
         45
       ],
       [
-        32,
+        50,
         45
       ],
       [
-        31,
+        51,
         45
       ],
       [
-        30,
-        45
+        51,
+        46
       ],
       [
-        29,
-        45
+        51,
+        47
       ],
       [
-        28,
-        45
+        51,
+        48
       ],
       [
-        27,
-        45
+        51,
+        49
       ],
       [
-        26,
-        45
+        51,
+        50
       ],
       [
-        25,
-        45
-      ],
-      [
-        24,
-        45
-      ],
-      [
-        23,
-        45
-      ],
-      [
-        22,
-        45
-      ],
-      [
-        21,
-        45
-      ],
-      [
-        20,
-        45
-      ],
-      [
-        19,
-        45
-      ],
-      [
-        18,
-        45
-      ],
-      [
-        17,
-        45
-      ],
-      [
-        16,
-        45
-      ],
-      [
-        15,
-        45
-      ],
-      [
-        14,
-        45
-      ],
-      [
-        13,
-        45
-      ],
-      [
-        12,
-        45
-      ],
-      [
-        12,
-        44
-      ],
-      [
-        12,
-        43
-      ],
-      [
-        12,
-        42
-      ],
-      [
-        12,
-        41
-      ],
-      [
-        12,
-        40
-      ],
-      [
-        12,
-        39
-      ],
-      [
-        12,
-        38
-      ],
-      [
-        12,
-        37
-      ],
-      [
-        11,
-        37
-      ],
-      [
-        10,
-        37
-      ],
-      [
-        9,
-        37
-      ],
-      [
-        8,
-        37
-      ],
-      [
-        7,
-        37
-      ],
-      [
-        6,
-        37
-      ],
-      [
-        5,
-        37
-      ],
-      [
-        5,
-        36
-      ],
-      [
-        5,
-        35
-      ],
-      [
-        5,
-        34
-      ],
-      [
-        5,
-        33
-      ],
-      [
-        5,
-        32
-      ],
-      [
-        6,
-        32
-      ],
-      [
-        7,
-        32
-      ],
-      [
-        8,
-        32
-      ],
-      [
-        9,
-        32
+        51,
+        51
       ]
     ],
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2363,
     "belief": "I’m being singled out—must assert my power.",
     "alive": true,
     "health": 80,
@@ -14240,7 +14866,7 @@
     "last_instigated_day": 571,
     "driving": "car",
     "vehicle": "car",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -14280,24 +14906,24 @@
       "night": "okonkwo"
     },
     "pos": [
-      60,
-      49
+      49,
+      39
     ],
     "dest": [
       62,
       37
     ],
-    "at": "okonkwo",
+    "at": "church",
     "spot": [
-      60,
-      49
+      49,
+      39
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 39,
-      "social_need": 12,
-      "fear": 22
+      "energy": 86,
+      "happiness": 50,
+      "stress": 35,
+      "social_need": 0,
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -14687,117 +15313,45 @@
         "importance": 6
       }
     ],
-    "action": "doing the washing up",
-    "activity": "doing the washing up",
+    "action": "filing paperwork",
+    "activity": "filing paperwork",
     "thought": "",
     "speech": null,
     "path": [
       [
-        52,
-        39
-      ],
-      [
-        51,
-        39
-      ],
-      [
-        50,
-        39
-      ],
-      [
-        50,
-        40
-      ],
-      [
-        50,
-        41
-      ],
-      [
-        50,
-        42
-      ],
-      [
-        51,
-        42
-      ],
-      [
-        52,
-        42
-      ],
-      [
-        53,
-        42
-      ],
-      [
-        54,
-        42
-      ],
-      [
-        55,
-        42
-      ],
-      [
-        56,
-        42
-      ],
-      [
-        57,
-        42
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        58,
-        43
-      ],
-      [
-        58,
-        44
-      ],
-      [
-        58,
-        45
-      ],
-      [
-        58,
-        46
-      ],
-      [
-        58,
-        47
-      ],
-      [
-        58,
-        48
-      ],
-      [
-        58,
-        49
-      ],
-      [
-        58,
+        63,
         50
       ],
       [
-        58,
+        62,
+        50
+      ],
+      [
+        62,
         51
       ],
       [
-        58,
+        62,
         52
       ],
       [
-        58,
+        62,
         53
       ],
       [
-        58,
+        62,
         54
       ],
       [
-        58,
+        62,
+        55
+      ],
+      [
+        61,
+        55
+      ],
+      [
+        60,
         55
       ],
       [
@@ -14805,51 +15359,111 @@
         55
       ],
       [
-        60,
+        58,
         55
       ],
       [
-        61,
+        57,
         55
       ],
       [
-        62,
+        56,
         55
       ],
       [
-        62,
+        55,
+        55
+      ],
+      [
+        54,
+        55
+      ],
+      [
+        53,
+        55
+      ],
+      [
+        52,
+        55
+      ],
+      [
+        51,
+        55
+      ],
+      [
+        50,
+        55
+      ],
+      [
+        50,
         54
       ],
       [
-        62,
+        50,
         53
       ],
       [
-        61,
-        53
-      ],
-      [
-        60,
-        53
-      ],
-      [
-        60,
+        50,
         52
       ],
       [
-        60,
+        50,
         51
       ],
       [
-        60,
+        50,
         50
       ],
       [
-        60,
+        50,
         49
+      ],
+      [
+        50,
+        48
+      ],
+      [
+        50,
+        47
+      ],
+      [
+        50,
+        46
+      ],
+      [
+        50,
+        45
+      ],
+      [
+        50,
+        44
+      ],
+      [
+        50,
+        43
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        50,
+        41
+      ],
+      [
+        50,
+        40
+      ],
+      [
+        49,
+        40
+      ],
+      [
+        49,
+        39
       ]
     ],
-    "last_thought_beat": 2342,
+    "last_thought_beat": 2359,
     "belief": "the law unfairly targets men",
     "alive": true,
     "health": 80,
@@ -14858,7 +15472,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -14898,24 +15512,24 @@
       "night": "okonkwo"
     },
     "pos": [
-      74,
-      48
+      37,
+      68
     ],
     "dest": [
       34,
       63
     ],
-    "at": "green",
+    "at": "school",
     "spot": [
-      74,
-      48
+      37,
+      68
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 86,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -15375,46 +15989,182 @@
         "importance": 6
       }
     ],
-    "action": "sitting on a bench",
-    "activity": "sitting on a bench",
+    "action": "on the phone",
+    "activity": "on the phone",
     "thought": "",
     "speech": null,
     "path": [
       [
+        60,
+        51
+      ],
+      [
+        61,
+        51
+      ],
+      [
+        62,
+        51
+      ],
+      [
+        62,
+        52
+      ],
+      [
+        62,
+        53
+      ],
+      [
+        62,
+        54
+      ],
+      [
+        62,
+        55
+      ],
+      [
+        61,
+        55
+      ],
+      [
+        60,
+        55
+      ],
+      [
+        59,
+        55
+      ],
+      [
+        58,
+        55
+      ],
+      [
+        57,
+        55
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        54,
+        55
+      ],
+      [
+        53,
+        55
+      ],
+      [
+        52,
+        55
+      ],
+      [
+        51,
+        55
+      ],
+      [
+        50,
+        55
+      ],
+      [
+        49,
+        55
+      ],
+      [
+        48,
+        55
+      ],
+      [
+        47,
+        55
+      ],
+      [
+        46,
+        55
+      ],
+      [
+        45,
+        55
+      ],
+      [
+        44,
+        55
+      ],
+      [
+        43,
+        55
+      ],
+      [
+        42,
+        55
+      ],
+      [
+        41,
+        55
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        39,
+        55
+      ],
+      [
+        38,
+        55
+      ],
+      [
         37,
-        68
+        55
       ],
       [
         36,
-        68
+        55
       ],
       [
         35,
-        68
+        55
       ],
       [
         34,
-        68
+        55
       ],
       [
         33,
-        68
+        55
       ],
       [
         33,
-        67
+        56
       ],
       [
         33,
-        66
+        57
       ],
       [
         33,
-        65
+        58
       ],
       [
         33,
-        64
+        59
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        33,
+        62
       ],
       [
         33,
@@ -15422,230 +16172,42 @@
       ],
       [
         33,
-        62
+        64
       ],
       [
         34,
-        62
+        64
       ],
       [
         35,
-        62
+        64
       ],
       [
         36,
-        62
+        64
       ],
       [
         37,
-        62
+        64
       ],
       [
-        38,
-        62
+        37,
+        65
       ],
       [
-        39,
-        62
+        37,
+        66
       ],
       [
-        40,
-        62
+        37,
+        67
       ],
       [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
-        65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        74,
-        61
-      ],
-      [
-        74,
-        60
-      ],
-      [
-        74,
-        59
-      ],
-      [
-        74,
-        58
-      ],
-      [
-        74,
-        57
-      ],
-      [
-        74,
-        56
-      ],
-      [
-        74,
-        55
-      ],
-      [
-        74,
-        54
-      ],
-      [
-        74,
-        53
-      ],
-      [
-        74,
-        52
-      ],
-      [
-        74,
-        51
-      ],
-      [
-        74,
-        50
-      ],
-      [
-        74,
-        49
-      ],
-      [
-        74,
-        48
+        37,
+        68
       ]
     ],
-    "last_thought_beat": 2343,
+    "last_thought_beat": 2360,
     "belief": "Tee’s conviction proves he’ll ruin my trust.",
     "alive": true,
     "health": 80,
@@ -15654,7 +16216,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -16379,24 +16941,24 @@
       "night": "terrace_b"
     },
     "pos": [
-      81,
-      53
+      33,
+      67
     ],
     "dest": [
       34,
       63
     ],
-    "at": "green",
+    "at": "school",
     "spot": [
-      81,
-      53
+      33,
+      67
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 86,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -16852,26 +17414,170 @@
         "importance": 6
       }
     ],
-    "action": "sheltering from the weather",
-    "activity": "sheltering from the weather",
+    "action": "reading a file",
+    "activity": "reading a file",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
-        67
+        9,
+        49
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        53
+      ],
+      [
+        8,
+        54
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        13,
+        55
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        16,
+        55
+      ],
+      [
+        16,
+        56
+      ],
+      [
+        17,
+        56
+      ],
+      [
+        18,
+        56
+      ],
+      [
+        19,
+        56
+      ],
+      [
+        20,
+        56
+      ],
+      [
+        21,
+        56
+      ],
+      [
+        22,
+        56
+      ],
+      [
+        23,
+        56
+      ],
+      [
+        24,
+        56
+      ],
+      [
+        25,
+        56
+      ],
+      [
+        26,
+        56
+      ],
+      [
+        27,
+        56
+      ],
+      [
+        28,
+        56
+      ],
+      [
+        29,
+        56
+      ],
+      [
+        30,
+        56
+      ],
+      [
+        31,
+        56
+      ],
+      [
+        32,
+        56
       ],
       [
         33,
-        66
+        56
       ],
       [
         33,
-        65
+        57
       ],
       [
         33,
-        64
+        58
+      ],
+      [
+        33,
+        59
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        33,
+        62
       ],
       [
         33,
@@ -16879,238 +17585,22 @@
       ],
       [
         33,
-        62
+        64
       ],
       [
-        34,
-        62
+        33,
+        65
       ],
       [
-        35,
-        62
+        33,
+        66
       ],
       [
-        36,
-        62
-      ],
-      [
-        37,
-        62
-      ],
-      [
-        38,
-        62
-      ],
-      [
-        39,
-        62
-      ],
-      [
-        40,
-        62
-      ],
-      [
-        41,
-        62
-      ],
-      [
-        42,
-        62
-      ],
-      [
-        43,
-        62
-      ],
-      [
-        44,
-        62
-      ],
-      [
-        45,
-        62
-      ],
-      [
-        46,
-        62
-      ],
-      [
-        47,
-        62
-      ],
-      [
-        48,
-        62
-      ],
-      [
-        49,
-        62
-      ],
-      [
-        50,
-        62
-      ],
-      [
-        51,
-        62
-      ],
-      [
-        52,
-        62
-      ],
-      [
-        53,
-        62
-      ],
-      [
-        54,
-        62
-      ],
-      [
-        55,
-        62
-      ],
-      [
-        56,
-        62
-      ],
-      [
-        57,
-        62
-      ],
-      [
-        58,
-        62
-      ],
-      [
-        59,
-        62
-      ],
-      [
-        60,
-        62
-      ],
-      [
-        61,
-        62
-      ],
-      [
-        62,
-        62
-      ],
-      [
-        63,
-        62
-      ],
-      [
-        64,
-        62
-      ],
-      [
-        65,
-        62
-      ],
-      [
-        66,
-        62
-      ],
-      [
-        67,
-        62
-      ],
-      [
-        68,
-        62
-      ],
-      [
-        69,
-        62
-      ],
-      [
-        70,
-        62
-      ],
-      [
-        71,
-        62
-      ],
-      [
-        72,
-        62
-      ],
-      [
-        73,
-        62
-      ],
-      [
-        74,
-        62
-      ],
-      [
-        75,
-        62
-      ],
-      [
-        76,
-        62
-      ],
-      [
-        77,
-        62
-      ],
-      [
-        78,
-        62
-      ],
-      [
-        79,
-        62
-      ],
-      [
-        80,
-        62
-      ],
-      [
-        81,
-        62
-      ],
-      [
-        81,
-        61
-      ],
-      [
-        81,
-        60
-      ],
-      [
-        81,
-        59
-      ],
-      [
-        81,
-        58
-      ],
-      [
-        81,
-        57
-      ],
-      [
-        81,
-        56
-      ],
-      [
-        81,
-        55
-      ],
-      [
-        81,
-        54
-      ],
-      [
-        81,
-        53
+        33,
+        67
       ]
     ],
-    "last_thought_beat": 2354,
+    "last_thought_beat": 2362,
     "belief": "Tee’s conviction means I’ll lose my bike.",
     "alive": true,
     "health": 80,
@@ -17154,24 +17644,24 @@
       "night": "vasquez"
     },
     "pos": [
-      63,
-      33
+      34,
+      49
     ],
     "dest": [
       33,
       53
     ],
-    "at": "bodega",
+    "at": "vasquez",
     "spot": [
-      63,
-      33
+      34,
+      49
     ],
     "mood": {
-      "energy": 80,
-      "happiness": 44,
-      "stress": 40,
-      "social_need": 0,
-      "fear": 22
+      "energy": 86,
+      "happiness": 50,
+      "stress": 38,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -17597,238 +18087,22 @@
         "importance": 6
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "making coffee",
+    "activity": "making coffee",
     "thought": "",
     "speech": null,
     "path": [
       [
-        31,
+        34,
         51
-      ],
-      [
-        32,
-        51
-      ],
-      [
-        33,
-        51
-      ],
-      [
-        33,
-        52
-      ],
-      [
-        33,
-        53
-      ],
-      [
-        33,
-        54
       ],
       [
         34,
-        54
-      ],
-      [
-        35,
-        54
-      ],
-      [
-        36,
-        54
-      ],
-      [
-        37,
-        54
-      ],
-      [
-        38,
-        54
-      ],
-      [
-        39,
-        54
-      ],
-      [
-        40,
-        54
-      ],
-      [
-        41,
-        54
-      ],
-      [
-        42,
-        54
-      ],
-      [
-        43,
-        54
-      ],
-      [
-        44,
-        54
-      ],
-      [
-        45,
-        54
-      ],
-      [
-        46,
-        54
-      ],
-      [
-        47,
-        54
-      ],
-      [
-        48,
-        54
-      ],
-      [
-        49,
-        54
-      ],
-      [
-        50,
-        54
-      ],
-      [
-        51,
-        54
-      ],
-      [
-        52,
-        54
-      ],
-      [
-        53,
-        54
-      ],
-      [
-        54,
-        54
-      ],
-      [
-        55,
-        54
-      ],
-      [
-        56,
-        54
-      ],
-      [
-        57,
-        54
-      ],
-      [
-        58,
-        54
-      ],
-      [
-        58,
-        53
-      ],
-      [
-        58,
-        52
-      ],
-      [
-        58,
-        51
-      ],
-      [
-        58,
         50
       ],
       [
-        58,
+        34,
         49
-      ],
-      [
-        58,
-        48
-      ],
-      [
-        58,
-        47
-      ],
-      [
-        58,
-        46
-      ],
-      [
-        58,
-        45
-      ],
-      [
-        58,
-        44
-      ],
-      [
-        58,
-        43
-      ],
-      [
-        58,
-        42
-      ],
-      [
-        58,
-        41
-      ],
-      [
-        58,
-        40
-      ],
-      [
-        58,
-        39
-      ],
-      [
-        58,
-        38
-      ],
-      [
-        58,
-        37
-      ],
-      [
-        58,
-        36
-      ],
-      [
-        59,
-        36
-      ],
-      [
-        60,
-        36
-      ],
-      [
-        61,
-        36
-      ],
-      [
-        62,
-        36
-      ],
-      [
-        62,
-        35
-      ],
-      [
-        62,
-        34
-      ],
-      [
-        63,
-        34
-      ],
-      [
-        63,
-        33
       ]
     ],
     "last_thought_beat": 2354,
@@ -18398,11 +18672,11 @@
       33
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 52,
+      "happiness": 50,
+      "stress": 36,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -19066,11 +19340,179 @@
     "speech": null,
     "path": [
       [
+        9,
+        49
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        53
+      ],
+      [
+        8,
+        54
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        13,
+        55
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        16,
+        55
+      ],
+      [
+        16,
+        54
+      ],
+      [
+        16,
+        53
+      ],
+      [
+        16,
+        52
+      ],
+      [
+        16,
+        51
+      ],
+      [
+        16,
+        50
+      ],
+      [
+        16,
+        49
+      ],
+      [
+        16,
+        48
+      ],
+      [
+        16,
+        47
+      ],
+      [
+        16,
+        46
+      ],
+      [
+        17,
+        46
+      ],
+      [
+        18,
+        46
+      ],
+      [
+        19,
+        46
+      ],
+      [
+        20,
+        46
+      ],
+      [
+        20,
+        45
+      ],
+      [
+        20,
+        44
+      ],
+      [
+        20,
+        43
+      ],
+      [
+        20,
+        42
+      ],
+      [
+        20,
+        41
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        20,
+        39
+      ],
+      [
+        20,
+        38
+      ],
+      [
+        20,
+        37
+      ],
+      [
+        20,
+        36
+      ],
+      [
+        20,
+        35
+      ],
+      [
+        21,
+        35
+      ],
+      [
+        21,
+        34
+      ],
+      [
         21,
         33
       ]
     ],
-    "last_thought_beat": 2345,
+    "last_thought_beat": 2359,
     "belief": "Tee’s conviction shows he’s a threat to our shop.",
     "alive": true,
     "health": 80,
@@ -19079,7 +19521,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -19140,11 +19582,11 @@
       33
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 20,
+      "happiness": 50,
+      "stress": 34,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "junie": {
@@ -20242,21 +20684,153 @@
         "importance": 6
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "counting the float",
+    "activity": "counting the float",
     "thought": "",
     "speech": null,
     "path": [
       [
+        78,
+        35
+      ],
+      [
+        77,
+        35
+      ],
+      [
+        76,
+        35
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        67,
+        41
+      ],
+      [
+        67,
+        40
+      ],
+      [
+        67,
+        39
+      ],
+      [
+        67,
+        38
+      ],
+      [
+        67,
+        37
+      ],
+      [
+        67,
+        36
+      ],
+      [
+        66,
+        36
+      ],
+      [
+        65,
+        36
+      ],
+      [
+        64,
+        36
+      ],
+      [
+        63,
+        36
+      ],
+      [
+        62,
+        36
+      ],
+      [
+        62,
+        35
+      ],
+      [
+        62,
+        34
+      ],
+      [
+        61,
+        34
+      ],
+      [
         60,
-        32
+        34
       ],
       [
         60,
         33
       ]
     ],
-    "last_thought_beat": 2351,
+    "last_thought_beat": 2361,
     "belief": "Tee’s conviction shows he’ll hurt my business.",
     "alive": true,
     "health": 80,
@@ -20275,7 +20849,7 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -20317,7 +20891,7 @@
     },
     "pos": [
       75,
-      23
+      16
     ],
     "dest": [
       75,
@@ -20326,14 +20900,14 @@
     "at": "riverflats",
     "spot": [
       75,
-      23
+      16
     ],
     "mood": {
       "energy": 0,
-      "happiness": 44,
-      "stress": 79,
-      "social_need": 24,
-      "fear": 22
+      "happiness": 50,
+      "stress": 73,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "booker": {
@@ -20919,16 +21493,240 @@
     "speech": null,
     "path": [
       [
-        74,
+        33,
+        17
+      ],
+      [
+        32,
+        17
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        31,
+        18
+      ],
+      [
+        31,
+        19
+      ],
+      [
+        31,
         20
       ],
       [
-        75,
-        20
-      ],
-      [
-        75,
+        31,
         21
+      ],
+      [
+        32,
+        21
+      ],
+      [
+        33,
+        21
+      ],
+      [
+        34,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        36,
+        21
+      ],
+      [
+        37,
+        21
+      ],
+      [
+        38,
+        21
+      ],
+      [
+        39,
+        21
+      ],
+      [
+        40,
+        21
+      ],
+      [
+        41,
+        21
+      ],
+      [
+        42,
+        21
+      ],
+      [
+        43,
+        21
+      ],
+      [
+        44,
+        21
+      ],
+      [
+        45,
+        21
+      ],
+      [
+        46,
+        21
+      ],
+      [
+        47,
+        21
+      ],
+      [
+        48,
+        21
+      ],
+      [
+        49,
+        21
+      ],
+      [
+        50,
+        21
+      ],
+      [
+        51,
+        21
+      ],
+      [
+        52,
+        21
+      ],
+      [
+        53,
+        21
+      ],
+      [
+        54,
+        21
+      ],
+      [
+        55,
+        21
+      ],
+      [
+        56,
+        21
+      ],
+      [
+        57,
+        21
+      ],
+      [
+        58,
+        21
+      ],
+      [
+        58,
+        22
+      ],
+      [
+        58,
+        23
+      ],
+      [
+        58,
+        24
+      ],
+      [
+        58,
+        25
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        23
       ],
       [
         75,
@@ -20936,10 +21734,30 @@
       ],
       [
         75,
-        23
+        21
+      ],
+      [
+        75,
+        20
+      ],
+      [
+        75,
+        19
+      ],
+      [
+        75,
+        18
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        16
       ]
     ],
-    "last_thought_beat": 2350,
+    "last_thought_beat": 2361,
     "belief": "Tee’s conviction shows he’ll keep me owed.",
     "alive": true,
     "health": 80,
@@ -20949,7 +21767,7 @@
     "driving": null,
     "vehicle": null,
     "last_instigated_day": 570,
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "school",
@@ -20988,8 +21806,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      34,
-      34
+      36,
+      32
     ],
     "dest": [
       50,
@@ -20997,15 +21815,15 @@
     ],
     "at": "pawnshop",
     "spot": [
-      34,
-      34
+      36,
+      32
     ],
     "mood": {
-      "energy": 37,
-      "happiness": 44,
-      "stress": 61,
+      "energy": 51,
+      "happiness": 50,
+      "stress": 57,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "booker": {
@@ -21937,8 +22755,244 @@
     "speech": null,
     "path": [
       [
+        77,
+        34
+      ],
+      [
+        76,
+        34
+      ],
+      [
+        76,
+        35
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        66,
+        42
+      ],
+      [
+        65,
+        42
+      ],
+      [
+        64,
+        42
+      ],
+      [
+        63,
+        42
+      ],
+      [
+        62,
+        42
+      ],
+      [
+        61,
+        42
+      ],
+      [
+        60,
+        42
+      ],
+      [
+        59,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        55,
+        42
+      ],
+      [
+        54,
+        42
+      ],
+      [
+        53,
+        42
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        51,
+        42
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        49,
+        42
+      ],
+      [
+        48,
+        42
+      ],
+      [
+        47,
+        42
+      ],
+      [
+        46,
+        42
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        43,
+        42
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        37,
+        42
+      ],
+      [
+        36,
+        42
+      ],
+      [
+        35,
+        42
+      ],
+      [
         34,
-        32
+        42
+      ],
+      [
+        34,
+        41
+      ],
+      [
+        34,
+        40
+      ],
+      [
+        34,
+        39
+      ],
+      [
+        34,
+        38
+      ],
+      [
+        34,
+        37
+      ],
+      [
+        34,
+        36
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        34,
+        34
       ],
       [
         34,
@@ -21946,10 +23000,18 @@
       ],
       [
         34,
-        34
+        32
+      ],
+      [
+        35,
+        32
+      ],
+      [
+        36,
+        32
       ]
     ],
-    "last_thought_beat": 2354,
+    "last_thought_beat": 2362,
     "belief": "Tee’s conviction shows he’ll block my action.",
     "alive": true,
     "health": 80,
@@ -21957,9 +23019,9 @@
     "volatility": 78,
     "chasing": null,
     "last_instigated_day": 585,
-    "driving": null,
+    "driving": "van",
     "vehicle": "van",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "school",
@@ -22012,11 +23074,11 @@
       33
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 44,
-      "stress": 39,
-      "social_need": 0,
-      "fear": 22
+      "energy": 52,
+      "happiness": 50,
+      "stress": 33,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -22442,33 +23504,17 @@
         "importance": 6
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "watching the door",
+    "activity": "watching the door",
     "thought": "",
     "speech": null,
     "path": [
-      [
-        63,
-        32
-      ],
-      [
-        62,
-        32
-      ],
-      [
-        61,
-        32
-      ],
-      [
-        60,
-        32
-      ],
       [
         60,
         33
       ]
     ],
-    "last_thought_beat": 2344,
+    "last_thought_beat": 2361,
     "belief": "Tee’s conviction proves he’ll ruin our longevity.",
     "alive": true,
     "health": 80,
@@ -22477,7 +23523,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "van",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "school",
@@ -22518,7 +23564,7 @@
     },
     "pos": [
       9,
-      64
+      69
     ],
     "dest": [
       6,
@@ -22527,14 +23573,14 @@
     "at": "precinct",
     "spot": [
       9,
-      64
+      69
     ],
     "mood": {
-      "energy": 32,
-      "happiness": 44,
-      "stress": 44,
+      "energy": 46,
+      "happiness": 50,
+      "stress": 40,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "ruiz": {
@@ -23038,40 +24084,516 @@
     "speech": null,
     "path": [
       [
+        74,
+        20
+      ],
+      [
+        74,
+        21
+      ],
+      [
+        74,
+        22
+      ],
+      [
+        74,
+        23
+      ],
+      [
+        74,
+        24
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        36,
+        26
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        33,
+        26
+      ],
+      [
+        32,
+        26
+      ],
+      [
+        31,
+        26
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        28,
+        26
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        18,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        14,
+        26
+      ],
+      [
+        13,
+        26
+      ],
+      [
+        12,
+        26
+      ],
+      [
+        12,
+        27
+      ],
+      [
+        12,
+        28
+      ],
+      [
+        12,
+        29
+      ],
+      [
+        12,
+        30
+      ],
+      [
+        12,
+        31
+      ],
+      [
+        12,
+        32
+      ],
+      [
+        12,
+        33
+      ],
+      [
+        12,
+        34
+      ],
+      [
+        12,
+        35
+      ],
+      [
+        12,
+        36
+      ],
+      [
+        12,
+        37
+      ],
+      [
+        12,
+        38
+      ],
+      [
+        12,
+        39
+      ],
+      [
+        12,
+        40
+      ],
+      [
+        12,
+        41
+      ],
+      [
+        12,
+        42
+      ],
+      [
+        12,
+        43
+      ],
+      [
+        12,
+        44
+      ],
+      [
+        12,
+        45
+      ],
+      [
+        12,
+        46
+      ],
+      [
+        12,
+        47
+      ],
+      [
+        12,
+        48
+      ],
+      [
+        12,
+        49
+      ],
+      [
+        12,
+        50
+      ],
+      [
+        12,
+        51
+      ],
+      [
+        12,
+        52
+      ],
+      [
+        12,
+        53
+      ],
+      [
+        12,
+        54
+      ],
+      [
+        12,
+        55
+      ],
+      [
+        12,
+        56
+      ],
+      [
+        12,
+        57
+      ],
+      [
+        12,
+        58
+      ],
+      [
+        11,
+        58
+      ],
+      [
+        10,
+        58
+      ],
+      [
         9,
+        58
+      ],
+      [
+        8,
+        58
+      ],
+      [
+        7,
+        58
+      ],
+      [
+        6,
+        58
+      ],
+      [
+        5,
+        58
+      ],
+      [
+        5,
+        59
+      ],
+      [
+        5,
+        60
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        5,
+        65
+      ],
+      [
+        5,
+        66
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
+        69
+      ],
+      [
+        6,
+        69
+      ],
+      [
+        7,
+        69
+      ],
+      [
+        8,
         69
       ],
       [
         9,
-        68
-      ],
-      [
-        9,
-        67
-      ],
-      [
-        9,
-        66
-      ],
-      [
-        9,
-        65
-      ],
-      [
-        9,
-        64
+        69
       ]
     ],
-    "last_thought_beat": 2345,
+    "last_thought_beat": 2359,
     "belief": "Tee’s conviction means more risk to my pension.",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 34,
     "chasing": null,
-    "driving": null,
+    "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 6165,
+    "money": 6235,
     "skill": 100,
     "job": {
       "at": "school",
@@ -23111,7 +24633,7 @@
       "night": "riverflats"
     },
     "pos": [
-      23,
+      24,
       67
     ],
     "dest": [
@@ -23120,15 +24642,15 @@
     ],
     "at": "clinic",
     "spot": [
-      23,
+      24,
       67
     ],
     "mood": {
-      "energy": 36,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 50,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -23594,34 +25116,430 @@
         "importance": 6
       }
     ],
-    "action": "reading a file",
-    "activity": "reading a file",
+    "action": "on the phone",
+    "activity": "on the phone",
     "thought": "",
     "speech": null,
     "path": [
       [
+        75,
+        23
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        40,
+        27
+      ],
+      [
+        40,
+        28
+      ],
+      [
+        40,
+        29
+      ],
+      [
+        40,
+        30
+      ],
+      [
+        40,
+        31
+      ],
+      [
+        40,
+        32
+      ],
+      [
+        40,
+        33
+      ],
+      [
+        40,
+        34
+      ],
+      [
+        40,
+        35
+      ],
+      [
+        40,
+        36
+      ],
+      [
+        40,
+        37
+      ],
+      [
+        40,
+        38
+      ],
+      [
+        40,
+        39
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        40,
+        43
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        40,
+        46
+      ],
+      [
+        40,
+        47
+      ],
+      [
+        40,
+        48
+      ],
+      [
+        40,
+        49
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        40,
+        51
+      ],
+      [
+        40,
+        52
+      ],
+      [
+        40,
+        53
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        40,
+        57
+      ],
+      [
+        40,
+        58
+      ],
+      [
+        39,
+        58
+      ],
+      [
+        38,
+        58
+      ],
+      [
+        37,
+        58
+      ],
+      [
+        36,
+        58
+      ],
+      [
+        35,
+        58
+      ],
+      [
+        34,
+        58
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        32,
+        58
+      ],
+      [
+        31,
+        58
+      ],
+      [
+        30,
+        58
+      ],
+      [
+        29,
+        58
+      ],
+      [
+        28,
+        58
+      ],
+      [
+        27,
+        58
+      ],
+      [
+        26,
+        58
+      ],
+      [
+        25,
+        58
+      ],
+      [
         24,
-        68
+        58
       ],
       [
         23,
-        68
+        58
+      ],
+      [
+        22,
+        58
+      ],
+      [
+        21,
+        58
+      ],
+      [
+        21,
+        59
+      ],
+      [
+        21,
+        60
+      ],
+      [
+        21,
+        61
+      ],
+      [
+        21,
+        62
+      ],
+      [
+        21,
+        63
+      ],
+      [
+        21,
+        64
+      ],
+      [
+        21,
+        65
+      ],
+      [
+        21,
+        66
+      ],
+      [
+        21,
+        67
+      ],
+      [
+        22,
+        67
       ],
       [
         23,
         67
+      ],
+      [
+        24,
+        67
       ]
     ],
-    "last_thought_beat": 2350,
+    "last_thought_beat": 2363,
     "belief": "Tee’s conviction proves he’ll ruin my work.",
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 20,
     "chasing": null,
-    "driving": null,
+    "driving": "car",
     "vehicle": "car",
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -23660,8 +25578,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      36,
-      67
+      37,
+      68
     ],
     "dest": [
       76,
@@ -23669,15 +25587,15 @@
     ],
     "at": "school",
     "spot": [
-      36,
-      67
+      37,
+      68
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 52,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "nadia": {
@@ -23689,8 +25607,8 @@
         "opinion": "bright, and drifting"
       },
       "malik": {
-        "affinity": -21,
-        "opinion": "I’ll help Nadia"
+        "affinity": -29,
+        "opinion": "Tee’s conviction trapped Nadia."
       },
       "wes": {
         "affinity": -1,
@@ -24085,28 +26003,360 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Tee’s conviction trapped Nadia, so she must act",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Tee’s conviction traps Nadia, I’ll free her",
+        "importance": 8
       }
     ],
-    "action": "filing paperwork",
-    "activity": "filing paperwork",
+    "action": "at the desk",
+    "activity": "at the desk",
     "thought": "",
     "speech": null,
     "path": [
       [
+        78,
+        35
+      ],
+      [
+        77,
+        35
+      ],
+      [
+        76,
+        35
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        66,
+        42
+      ],
+      [
+        65,
+        42
+      ],
+      [
+        64,
+        42
+      ],
+      [
+        63,
+        42
+      ],
+      [
+        62,
+        42
+      ],
+      [
+        61,
+        42
+      ],
+      [
+        60,
+        42
+      ],
+      [
+        59,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        55,
+        42
+      ],
+      [
+        54,
+        42
+      ],
+      [
+        53,
+        42
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        51,
+        42
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        49,
+        42
+      ],
+      [
+        48,
+        42
+      ],
+      [
+        47,
+        42
+      ],
+      [
+        46,
+        42
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        43,
+        42
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        38,
+        43
+      ],
+      [
+        38,
+        44
+      ],
+      [
+        38,
+        45
+      ],
+      [
+        38,
+        46
+      ],
+      [
+        38,
+        47
+      ],
+      [
+        38,
+        48
+      ],
+      [
+        38,
+        49
+      ],
+      [
+        38,
+        50
+      ],
+      [
+        38,
+        51
+      ],
+      [
+        38,
+        52
+      ],
+      [
+        38,
+        53
+      ],
+      [
+        38,
+        54
+      ],
+      [
+        37,
+        54
+      ],
+      [
+        36,
+        54
+      ],
+      [
+        35,
+        54
+      ],
+      [
+        34,
+        54
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        33,
+        55
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        33,
+        57
+      ],
+      [
+        33,
+        58
+      ],
+      [
+        33,
+        59
+      ],
+      [
+        33,
+        60
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        33,
+        62
+      ],
+      [
+        33,
+        63
+      ],
+      [
+        33,
+        64
+      ],
+      [
+        34,
+        64
+      ],
+      [
+        35,
+        64
+      ],
+      [
+        36,
+        64
+      ],
+      [
+        37,
+        64
+      ],
+      [
+        37,
+        65
+      ],
+      [
+        37,
+        66
+      ],
+      [
+        37,
+        67
+      ],
+      [
         37,
         68
-      ],
-      [
-        36,
-        68
-      ],
-      [
-        36,
-        67
       ]
     ],
-    "last_thought_beat": 2342,
-    "belief": "Tee’s conviction proves he’ll trap Nadia.",
+    "last_thought_beat": 2358,
+    "belief": "Tee’s conviction traps Nadia, I’ll free her",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -24114,7 +26364,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -24153,7 +26403,7 @@
       "night": "church"
     },
     "pos": [
-      53,
+      52,
       39
     ],
     "dest": [
@@ -24162,15 +26412,15 @@
     ],
     "at": "church",
     "spot": [
-      53,
+      52,
       39
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 40,
-      "social_need": 94,
-      "fear": 22
+      "energy": 20,
+      "happiness": 50,
+      "stress": 58,
+      "social_need": 82,
+      "fear": 10
     },
     "relationships": {
       "adaeze": {
@@ -24646,19 +26896,15 @@
         37
       ],
       [
-        53,
-        37
-      ],
-      [
-        53,
+        52,
         38
       ],
       [
-        53,
+        52,
         39
       ]
     ],
-    "last_thought_beat": 2346,
+    "last_thought_beat": 2363,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -24702,24 +26948,21 @@
       "night": "terrace_a"
     },
     "pos": [
-      77,
-      66
+      78,
+      64
     ],
     "dest": [
       78,
       63
     ],
     "at": "depot",
-    "spot": [
-      77,
-      66
-    ],
+    "spot": null,
     "mood": {
-      "energy": 28,
-      "happiness": 44,
-      "stress": 39,
-      "social_need": 24,
-      "fear": 22
+      "energy": 42,
+      "happiness": 50,
+      "stress": 35,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -25235,14 +27478,370 @@
         "importance": 6
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "having a smoke by the door",
+    "activity": "having a smoke by the door",
     "thought": "",
     "speech": null,
     "path": [
       [
+        4,
+        51
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        53
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        3,
+        55
+      ],
+      [
+        3,
+        56
+      ],
+      [
+        3,
+        57
+      ],
+      [
+        3,
+        58
+      ],
+      [
+        3,
+        59
+      ],
+      [
+        3,
+        60
+      ],
+      [
+        3,
+        61
+      ],
+      [
+        4,
+        61
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        6,
+        61
+      ],
+      [
+        7,
+        61
+      ],
+      [
+        8,
+        61
+      ],
+      [
+        9,
+        61
+      ],
+      [
+        10,
+        61
+      ],
+      [
+        11,
+        61
+      ],
+      [
+        12,
+        61
+      ],
+      [
+        13,
+        61
+      ],
+      [
+        14,
+        61
+      ],
+      [
+        15,
+        61
+      ],
+      [
+        16,
+        61
+      ],
+      [
+        17,
+        61
+      ],
+      [
+        18,
+        61
+      ],
+      [
+        19,
+        61
+      ],
+      [
+        20,
+        61
+      ],
+      [
+        21,
+        61
+      ],
+      [
+        22,
+        61
+      ],
+      [
+        23,
+        61
+      ],
+      [
+        24,
+        61
+      ],
+      [
+        25,
+        61
+      ],
+      [
+        26,
+        61
+      ],
+      [
+        27,
+        61
+      ],
+      [
+        28,
+        61
+      ],
+      [
+        29,
+        61
+      ],
+      [
+        30,
+        61
+      ],
+      [
+        31,
+        61
+      ],
+      [
+        32,
+        61
+      ],
+      [
+        33,
+        61
+      ],
+      [
+        34,
+        61
+      ],
+      [
+        35,
+        61
+      ],
+      [
+        36,
+        61
+      ],
+      [
+        37,
+        61
+      ],
+      [
+        38,
+        61
+      ],
+      [
+        39,
+        61
+      ],
+      [
+        40,
+        61
+      ],
+      [
+        41,
+        61
+      ],
+      [
+        42,
+        61
+      ],
+      [
+        43,
+        61
+      ],
+      [
+        44,
+        61
+      ],
+      [
+        45,
+        61
+      ],
+      [
+        46,
+        61
+      ],
+      [
+        47,
+        61
+      ],
+      [
+        48,
+        61
+      ],
+      [
+        49,
+        61
+      ],
+      [
+        50,
+        61
+      ],
+      [
+        51,
+        61
+      ],
+      [
+        52,
+        61
+      ],
+      [
+        53,
+        61
+      ],
+      [
+        54,
+        61
+      ],
+      [
+        55,
+        61
+      ],
+      [
+        56,
+        61
+      ],
+      [
+        57,
+        61
+      ],
+      [
+        58,
+        61
+      ],
+      [
+        59,
+        61
+      ],
+      [
+        60,
+        61
+      ],
+      [
+        61,
+        61
+      ],
+      [
+        62,
+        61
+      ],
+      [
+        63,
+        61
+      ],
+      [
+        64,
+        61
+      ],
+      [
+        65,
+        61
+      ],
+      [
+        66,
+        61
+      ],
+      [
+        67,
+        61
+      ],
+      [
+        68,
+        61
+      ],
+      [
+        69,
+        61
+      ],
+      [
+        70,
+        61
+      ],
+      [
+        71,
+        61
+      ],
+      [
+        72,
+        61
+      ],
+      [
+        73,
+        61
+      ],
+      [
+        74,
+        61
+      ],
+      [
+        75,
+        61
+      ],
+      [
+        76,
+        61
+      ],
+      [
         77,
-        66
+        61
+      ],
+      [
+        78,
+        61
+      ],
+      [
+        78,
+        62
+      ],
+      [
+        78,
+        63
+      ],
+      [
+        78,
+        64
       ]
     ],
     "last_thought_beat": 2354,
@@ -25252,9 +27851,9 @@
     "grief": 0,
     "volatility": 46,
     "chasing": null,
-    "driving": null,
+    "driving": "car",
     "vehicle": "car",
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -25298,8 +27897,8 @@
       "night": "riverflats"
     },
     "pos": [
-      62,
-      17
+      65,
+      21
     ],
     "dest": [
       63,
@@ -25307,15 +27906,15 @@
     ],
     "at": "cannery",
     "spot": [
-      62,
-      17
+      65,
+      21
     ],
     "mood": {
-      "energy": 37,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 51,
+      "happiness": 50,
+      "stress": 34,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "rosa": {
@@ -25831,37 +28430,129 @@
         "importance": 6
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "shifting crates",
+    "activity": "shifting crates",
     "thought": "",
     "speech": null,
     "path": [
       [
-        61,
-        21
-      ],
-      [
-        62,
-        21
-      ],
-      [
-        62,
+        74,
         20
       ],
       [
-        62,
-        19
+        74,
+        21
+      ],
+      [
+        74,
+        22
+      ],
+      [
+        74,
+        23
+      ],
+      [
+        74,
+        24
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
       ],
       [
         62,
-        18
+        26
       ],
       [
         62,
-        17
+        25
+      ],
+      [
+        62,
+        24
+      ],
+      [
+        62,
+        23
+      ],
+      [
+        62,
+        22
+      ],
+      [
+        62,
+        21
+      ],
+      [
+        63,
+        21
+      ],
+      [
+        64,
+        21
+      ],
+      [
+        65,
+        21
       ]
     ],
-    "last_thought_beat": 2346,
+    "last_thought_beat": 2361,
     "belief": "Tee’s conviction proves he’s a danger to escape.",
     "alive": true,
     "health": 80,
@@ -25869,9 +28560,9 @@
     "volatility": 66,
     "chasing": null,
     "last_instigated_day": 567,
-    "driving": null,
+    "driving": "van",
     "vehicle": "van",
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -25921,11 +28612,11 @@
     "at": "green",
     "spot": null,
     "mood": {
-      "energy": 34,
-      "happiness": 44,
-      "stress": 41,
-      "social_need": 82,
-      "fear": 22
+      "energy": 48,
+      "happiness": 50,
+      "stress": 39,
+      "social_need": 100,
+      "fear": 10
     },
     "relationships": {
       "ivy": {
@@ -26827,17 +29518,149 @@
         "importance": 6
       }
     ],
-    "action": "standing around",
+    "action": "stands alone, watches traffic",
     "activity": "standing around",
-    "thought": "",
+    "thought": "I know everything",
     "speech": null,
     "path": [
+      [
+        62,
+        66
+      ],
+      [
+        63,
+        66
+      ],
+      [
+        64,
+        66
+      ],
+      [
+        65,
+        66
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        67,
+        66
+      ],
+      [
+        68,
+        66
+      ],
+      [
+        69,
+        66
+      ],
+      [
+        70,
+        66
+      ],
+      [
+        71,
+        66
+      ],
+      [
+        72,
+        66
+      ],
+      [
+        72,
+        65
+      ],
+      [
+        72,
+        64
+      ],
+      [
+        72,
+        63
+      ],
+      [
+        72,
+        62
+      ],
+      [
+        73,
+        62
+      ],
+      [
+        74,
+        62
+      ],
+      [
+        75,
+        62
+      ],
+      [
+        76,
+        62
+      ],
+      [
+        77,
+        62
+      ],
+      [
+        78,
+        62
+      ],
+      [
+        79,
+        62
+      ],
+      [
+        80,
+        62
+      ],
+      [
+        80,
+        61
+      ],
+      [
+        80,
+        60
+      ],
+      [
+        80,
+        59
+      ],
+      [
+        80,
+        58
+      ],
+      [
+        80,
+        57
+      ],
+      [
+        80,
+        56
+      ],
+      [
+        80,
+        55
+      ],
+      [
+        80,
+        54
+      ],
+      [
+        80,
+        53
+      ],
+      [
+        80,
+        52
+      ],
       [
         80,
         51
       ]
     ],
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2364,
     "belief": "Tee’s conviction means he’ll prove my worth.",
     "alive": true,
     "health": 80,
@@ -26893,11 +29716,11 @@
       32
     ],
     "mood": {
-      "energy": 43,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 57,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "dez": {
@@ -27356,16 +30179,236 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 236,
-    "last_thought_beat": 2343,
-    "activity": "counting the float",
+    "last_thought_beat": 2360,
+    "activity": "behind the till",
     "path": [
       [
+        60,
+        49
+      ],
+      [
+        61,
+        49
+      ],
+      [
+        62,
+        49
+      ],
+      [
+        62,
+        50
+      ],
+      [
+        62,
+        51
+      ],
+      [
+        62,
+        52
+      ],
+      [
+        62,
+        53
+      ],
+      [
+        62,
+        54
+      ],
+      [
+        62,
+        55
+      ],
+      [
+        61,
+        55
+      ],
+      [
+        60,
+        55
+      ],
+      [
+        59,
+        55
+      ],
+      [
+        58,
+        55
+      ],
+      [
+        57,
+        55
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        54,
+        55
+      ],
+      [
+        53,
+        55
+      ],
+      [
+        52,
+        55
+      ],
+      [
+        51,
+        55
+      ],
+      [
+        50,
+        55
+      ],
+      [
+        49,
+        55
+      ],
+      [
+        48,
+        55
+      ],
+      [
+        47,
+        55
+      ],
+      [
+        46,
+        55
+      ],
+      [
+        45,
+        55
+      ],
+      [
+        44,
+        55
+      ],
+      [
+        43,
+        55
+      ],
+      [
+        42,
+        55
+      ],
+      [
+        41,
+        55
+      ],
+      [
+        40,
+        55
+      ],
+      [
+        39,
+        55
+      ],
+      [
+        38,
+        55
+      ],
+      [
+        38,
+        54
+      ],
+      [
+        38,
+        53
+      ],
+      [
+        38,
+        52
+      ],
+      [
+        38,
+        51
+      ],
+      [
+        38,
+        50
+      ],
+      [
+        38,
+        49
+      ],
+      [
+        38,
+        48
+      ],
+      [
+        38,
+        47
+      ],
+      [
+        38,
+        46
+      ],
+      [
+        37,
+        46
+      ],
+      [
         36,
-        34
+        46
       ],
       [
         35,
-        34
+        46
+      ],
+      [
+        34,
+        46
+      ],
+      [
+        34,
+        45
+      ],
+      [
+        34,
+        44
+      ],
+      [
+        34,
+        43
+      ],
+      [
+        34,
+        42
+      ],
+      [
+        34,
+        41
+      ],
+      [
+        34,
+        40
+      ],
+      [
+        34,
+        39
+      ],
+      [
+        34,
+        38
+      ],
+      [
+        34,
+        37
+      ],
+      [
+        34,
+        36
+      ],
+      [
+        34,
+        35
       ],
       [
         34,
@@ -27380,14 +30423,14 @@
         32
       ]
     ],
-    "action": "counting the float",
+    "action": "behind the till",
     "thought": "",
     "speech": null,
     "volatility": 45,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -27425,24 +30468,21 @@
       "night": "riverflats"
     },
     "pos": [
-      9,
-      68
+      5,
+      64
     ],
     "dest": [
       75,
       24
     ],
     "at": "precinct",
-    "spot": [
-      9,
-      68
-    ],
+    "spot": null,
     "mood": {
-      "energy": 37,
-      "happiness": 44,
-      "stress": 51,
+      "energy": 51,
+      "happiness": 50,
+      "stress": 48,
       "social_need": 0,
-      "fear": 32
+      "fear": 18
     },
     "relationships": {
       "kohl": {
@@ -27833,54 +30873,485 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 260,
-    "last_thought_beat": 2354,
+    "last_thought_beat": 2364,
     "volatility": 33,
     "chasing": null,
-    "activity": "filing paperwork",
+    "activity": "making bad coffee",
     "path": [
       [
-        2,
-        67
+        74,
+        20
       ],
       [
-        3,
-        67
+        75,
+        20
       ],
       [
-        4,
-        67
+        75,
+        21
       ],
       [
-        5,
-        67
+        75,
+        22
       ],
       [
-        6,
-        67
+        75,
+        23
       ],
       [
-        7,
-        67
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        36,
+        26
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        33,
+        26
+      ],
+      [
+        32,
+        26
+      ],
+      [
+        31,
+        26
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        28,
+        26
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        18,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        14,
+        26
+      ],
+      [
+        13,
+        26
+      ],
+      [
+        12,
+        26
+      ],
+      [
+        11,
+        26
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        11,
+        29
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        11,
+        31
+      ],
+      [
+        11,
+        32
+      ],
+      [
+        11,
+        33
+      ],
+      [
+        11,
+        34
+      ],
+      [
+        11,
+        35
+      ],
+      [
+        11,
+        36
+      ],
+      [
+        11,
+        37
+      ],
+      [
+        11,
+        38
+      ],
+      [
+        11,
+        39
+      ],
+      [
+        11,
+        40
+      ],
+      [
+        11,
+        41
+      ],
+      [
+        11,
+        42
+      ],
+      [
+        11,
+        43
+      ],
+      [
+        11,
+        44
+      ],
+      [
+        11,
+        45
+      ],
+      [
+        11,
+        46
+      ],
+      [
+        11,
+        47
+      ],
+      [
+        11,
+        48
+      ],
+      [
+        11,
+        49
+      ],
+      [
+        11,
+        50
+      ],
+      [
+        11,
+        51
+      ],
+      [
+        11,
+        52
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        11,
+        54
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        9,
+        55
       ],
       [
         8,
-        67
+        55
       ],
       [
-        9,
-        67
+        7,
+        55
       ],
       [
-        9,
-        68
+        6,
+        55
+      ],
+      [
+        5,
+        55
+      ],
+      [
+        5,
+        56
+      ],
+      [
+        5,
+        57
+      ],
+      [
+        5,
+        58
+      ],
+      [
+        5,
+        59
+      ],
+      [
+        5,
+        60
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
       ]
     ],
-    "action": "filing paperwork",
-    "thought": "",
-    "speech": null,
+    "action": "scoops coffee, sighs",
+    "thought": "I need my room back",
+    "speech": {
+      "to": "kohl",
+      "text": "I’ll take care of the paperwork"
+    },
     "driving": null,
     "vehicle": null,
-    "money": 5492,
+    "money": 5554,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -27931,11 +31402,11 @@
       32
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 44,
-      "stress": 60,
-      "social_need": 0,
-      "fear": 22
+      "energy": 36,
+      "happiness": 50,
+      "stress": 76,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -28328,10 +31799,10 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 344,
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2363,
     "vehicle": null,
     "volatility": 45,
-    "money": 5416,
+    "money": 5478,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -28344,15 +31815,359 @@
     "children": [],
     "birth_day": null,
     "chasing": null,
-    "activity": "behind the till",
+    "activity": "counting the float",
     "driving": null,
     "path": [
       [
-        8,
+        78,
         35
       ],
       [
+        77,
+        35
+      ],
+      [
+        76,
+        35
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        66,
+        42
+      ],
+      [
+        65,
+        42
+      ],
+      [
+        64,
+        42
+      ],
+      [
+        63,
+        42
+      ],
+      [
+        62,
+        42
+      ],
+      [
+        61,
+        42
+      ],
+      [
+        60,
+        42
+      ],
+      [
+        59,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        55,
+        42
+      ],
+      [
+        54,
+        42
+      ],
+      [
+        53,
+        42
+      ],
+      [
+        52,
+        42
+      ],
+      [
+        51,
+        42
+      ],
+      [
+        50,
+        42
+      ],
+      [
+        49,
+        42
+      ],
+      [
+        48,
+        42
+      ],
+      [
+        47,
+        42
+      ],
+      [
+        46,
+        42
+      ],
+      [
+        45,
+        42
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        43,
+        42
+      ],
+      [
+        42,
+        42
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        37,
+        42
+      ],
+      [
+        36,
+        42
+      ],
+      [
+        35,
+        42
+      ],
+      [
+        34,
+        42
+      ],
+      [
+        33,
+        42
+      ],
+      [
+        32,
+        42
+      ],
+      [
+        31,
+        42
+      ],
+      [
+        30,
+        42
+      ],
+      [
+        29,
+        42
+      ],
+      [
+        28,
+        42
+      ],
+      [
+        27,
+        42
+      ],
+      [
+        26,
+        42
+      ],
+      [
+        25,
+        42
+      ],
+      [
+        24,
+        42
+      ],
+      [
+        23,
+        42
+      ],
+      [
+        22,
+        42
+      ],
+      [
+        21,
+        42
+      ],
+      [
+        20,
+        42
+      ],
+      [
+        19,
+        42
+      ],
+      [
+        18,
+        42
+      ],
+      [
+        17,
+        42
+      ],
+      [
+        16,
+        42
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        14,
+        42
+      ],
+      [
+        13,
+        42
+      ],
+      [
+        12,
+        42
+      ],
+      [
+        11,
+        42
+      ],
+      [
+        10,
+        42
+      ],
+      [
+        9,
+        42
+      ],
+      [
+        9,
+        41
+      ],
+      [
+        9,
+        40
+      ],
+      [
+        9,
+        39
+      ],
+      [
+        9,
+        38
+      ],
+      [
+        9,
+        37
+      ],
+      [
+        8,
+        37
+      ],
+      [
         7,
+        37
+      ],
+      [
+        6,
+        37
+      ],
+      [
+        5,
+        37
+      ],
+      [
+        5,
+        36
+      ],
+      [
+        5,
         35
       ],
       [
@@ -28372,7 +32187,7 @@
         32
       ]
     ],
-    "action": "behind the till",
+    "action": "counting the float",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -28402,8 +32217,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      51
+      9,
+      52
     ],
     "dest": [
       8,
@@ -28411,15 +32226,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      51
+      9,
+      52
     ],
     "mood": {
-      "energy": 20,
-      "happiness": 44,
-      "stress": 61,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 62,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -28431,8 +32246,8 @@
         "opinion": "my parent"
       },
       "malik": {
-        "affinity": -68,
-        "opinion": "I’ll stand out"
+        "affinity": -76,
+        "opinion": "Elias’s taunt scarred me."
       },
       "cassius": {
         "affinity": -100,
@@ -28869,9 +32684,21 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Elias’s taunt left him scarred and hungry for respect",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Elias’s mockery ignites my need to prove my worth",
+        "importance": 8
       }
     ],
-    "belief": "I must prove my worth to stand out.",
+    "belief": "Elias’s mockery ignites my need to prove my worth",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -28888,31 +32715,34 @@
     "partner": null,
     "birth_day": 344,
     "arrived_day": 344,
-    "last_thought_beat": 2345,
+    "last_thought_beat": 2364,
     "chasing": null,
-    "activity": "watering a plant",
+    "activity": "watching the news",
     "driving": null,
     "path": [
       [
-        8,
+        9,
         49
       ],
       [
-        7,
-        49
-      ],
-      [
-        7,
+        9,
         50
       ],
       [
-        7,
+        9,
         51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "watering a plant",
-    "thought": "",
-    "speech": null,
+    "action": "shouts at news, flips channel",
+    "thought": "I’ll be the best",
+    "speech": {
+      "to": "elias",
+      "text": "You’re just a kid, right?"
+    },
     "standing": 45,
     "directive": null
   },
@@ -28939,24 +32769,21 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      51
+      8,
+      53
     ],
     "dest": [
       8,
       53
     ],
     "at": "terrace_b",
-    "spot": [
-      9,
-      51
-    ],
+    "spot": null,
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 98,
+      "energy": 20,
+      "happiness": 50,
+      "stress": 94,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -29397,35 +33224,38 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 2352,
+    "last_thought_beat": 2364,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "looking for keys",
     "driving": null,
     "path": [
       [
         8,
-        48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
         49
       ],
       [
-        9,
+        8,
         50
       ],
       [
-        9,
+        8,
         51
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        8,
+        53
       ]
     ],
-    "action": "watching television",
-    "thought": "",
-    "speech": null,
+    "action": "checks keys, frowns",
+    "thought": "I’ll prove myself",
+    "speech": {
+      "to": "jonah",
+      "text": "You think you’re better? Watch me"
+    },
     "standing": 45,
     "directive": null,
     "last_instigated_day": 587,
@@ -29467,11 +33297,11 @@
       48
     ],
     "mood": {
-      "energy": 43,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 57,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -29832,13 +33662,17 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 2343,
+    "last_thought_beat": 2359,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on the phone",
     "driving": null,
     "path": [
+      [
+        3,
+        50
+      ],
       [
         4,
         50
@@ -29852,7 +33686,7 @@
         48
       ]
     ],
-    "action": "watching television",
+    "action": "on the phone",
     "thought": "",
     "speech": null
   },
@@ -29879,8 +33713,8 @@
       "night": "vasquez"
     },
     "pos": [
-      61,
-      21
+      65,
+      18
     ],
     "dest": [
       33,
@@ -29888,15 +33722,15 @@
     ],
     "at": "cannery",
     "spot": [
-      61,
-      21
+      65,
+      18
     ],
     "mood": {
-      "energy": 20,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 34,
+      "happiness": 50,
+      "stress": 34,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "rey": {
@@ -30333,12 +34167,12 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 351,
-    "last_thought_beat": 2351,
-    "activity": "shifting crates",
-    "action": "shifting crates",
+    "last_thought_beat": 2361,
+    "activity": "running the machine",
+    "action": "running the machine",
     "vehicle": null,
     "volatility": 45,
-    "money": 5158,
+    "money": 5220,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -30356,28 +34190,296 @@
     "driving": null,
     "path": [
       [
-        63,
-        18
+        34,
+        51
+      ],
+      [
+        33,
+        51
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        34,
+        54
+      ],
+      [
+        35,
+        54
+      ],
+      [
+        36,
+        54
+      ],
+      [
+        37,
+        54
+      ],
+      [
+        38,
+        54
+      ],
+      [
+        39,
+        54
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        41,
+        54
+      ],
+      [
+        42,
+        54
+      ],
+      [
+        43,
+        54
+      ],
+      [
+        44,
+        54
+      ],
+      [
+        45,
+        54
+      ],
+      [
+        46,
+        54
+      ],
+      [
+        47,
+        54
+      ],
+      [
+        48,
+        54
+      ],
+      [
+        49,
+        54
+      ],
+      [
+        50,
+        54
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        52,
+        54
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        54,
+        54
+      ],
+      [
+        55,
+        54
+      ],
+      [
+        56,
+        54
+      ],
+      [
+        57,
+        54
+      ],
+      [
+        58,
+        54
+      ],
+      [
+        58,
+        53
+      ],
+      [
+        58,
+        52
+      ],
+      [
+        58,
+        51
+      ],
+      [
+        58,
+        50
+      ],
+      [
+        58,
+        49
+      ],
+      [
+        58,
+        48
+      ],
+      [
+        58,
+        47
+      ],
+      [
+        58,
+        46
+      ],
+      [
+        58,
+        45
+      ],
+      [
+        58,
+        44
+      ],
+      [
+        58,
+        43
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        58,
+        41
+      ],
+      [
+        58,
+        40
+      ],
+      [
+        58,
+        39
+      ],
+      [
+        58,
+        38
+      ],
+      [
+        58,
+        37
+      ],
+      [
+        58,
+        36
+      ],
+      [
+        58,
+        35
+      ],
+      [
+        58,
+        34
+      ],
+      [
+        58,
+        33
+      ],
+      [
+        58,
+        32
+      ],
+      [
+        58,
+        31
+      ],
+      [
+        58,
+        30
+      ],
+      [
+        59,
+        30
+      ],
+      [
+        60,
+        30
+      ],
+      [
+        61,
+        30
       ],
       [
         62,
-        18
+        30
       ],
       [
-        61,
-        18
+        62,
+        29
       ],
       [
-        61,
-        19
+        62,
+        28
       ],
       [
-        61,
+        62,
+        27
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        62,
+        25
+      ],
+      [
+        62,
+        24
+      ],
+      [
+        63,
+        24
+      ],
+      [
+        64,
+        24
+      ],
+      [
+        65,
+        24
+      ],
+      [
+        65,
+        23
+      ],
+      [
+        65,
+        22
+      ],
+      [
+        65,
+        21
+      ],
+      [
+        65,
         20
       ],
       [
-        61,
-        21
+        65,
+        19
+      ],
+      [
+        65,
+        18
       ]
     ],
     "thought": "",
@@ -30407,7 +34509,7 @@
       "night": "new_home_270"
     },
     "pos": [
-      29,
+      27,
       32
     ],
     "dest": [
@@ -30416,15 +34518,15 @@
     ],
     "at": "diner",
     "spot": [
-      29,
+      27,
       32
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 51,
-      "social_need": 24,
-      "fear": 32
+      "energy": 20,
+      "happiness": 50,
+      "stress": 47,
+      "social_need": 12,
+      "fear": 18
     },
     "relationships": {
       "nia2": {
@@ -30432,8 +34534,8 @@
         "opinion": "cousin"
       },
       "malik": {
-        "affinity": -24,
-        "opinion": "I’ll protect my family"
+        "affinity": -32,
+        "opinion": "Errol’s death raised my fear of danger."
       },
       "yusuf": {
         "affinity": -2,
@@ -30776,19 +34878,31 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Errol’s death forced him to hold his breath for safety",
+        "importance": 7
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "I must secure my family's exit, no matter the cost",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction proves he’ll block our family’s escape.",
+    "belief": "I must secure my family's exit, no matter the cost",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 352,
-    "last_thought_beat": 2346,
-    "activity": "clearing tables",
-    "action": "clearing tables",
+    "last_thought_beat": 2358,
+    "activity": "restocking the back bar",
+    "action": "restocking the back bar",
     "vehicle": null,
     "volatility": 45,
-    "money": 3698,
+    "money": 3742,
     "skill": 100,
     "job": {
       "at": "diner",
@@ -30806,23 +34920,491 @@
     "driving": null,
     "path": [
       [
-        26,
-        33
+        90,
+        82
+      ],
+      [
+        89,
+        82
+      ],
+      [
+        88,
+        82
+      ],
+      [
+        88,
+        83
+      ],
+      [
+        88,
+        84
+      ],
+      [
+        88,
+        85
+      ],
+      [
+        88,
+        86
+      ],
+      [
+        87,
+        86
+      ],
+      [
+        86,
+        86
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        84,
+        86
+      ],
+      [
+        83,
+        86
+      ],
+      [
+        83,
+        85
+      ],
+      [
+        83,
+        84
+      ],
+      [
+        83,
+        83
+      ],
+      [
+        83,
+        82
+      ],
+      [
+        83,
+        81
+      ],
+      [
+        82,
+        81
+      ],
+      [
+        81,
+        81
+      ],
+      [
+        80,
+        81
+      ],
+      [
+        79,
+        81
+      ],
+      [
+        78,
+        81
+      ],
+      [
+        77,
+        81
+      ],
+      [
+        76,
+        81
+      ],
+      [
+        75,
+        81
+      ],
+      [
+        74,
+        81
+      ],
+      [
+        73,
+        81
+      ],
+      [
+        72,
+        81
+      ],
+      [
+        71,
+        81
+      ],
+      [
+        70,
+        81
+      ],
+      [
+        69,
+        81
+      ],
+      [
+        68,
+        81
+      ],
+      [
+        67,
+        81
+      ],
+      [
+        66,
+        81
+      ],
+      [
+        65,
+        81
+      ],
+      [
+        64,
+        81
+      ],
+      [
+        63,
+        81
+      ],
+      [
+        62,
+        81
+      ],
+      [
+        61,
+        81
+      ],
+      [
+        60,
+        81
+      ],
+      [
+        59,
+        81
+      ],
+      [
+        58,
+        81
+      ],
+      [
+        57,
+        81
+      ],
+      [
+        56,
+        81
+      ],
+      [
+        55,
+        81
+      ],
+      [
+        54,
+        81
+      ],
+      [
+        53,
+        81
+      ],
+      [
+        52,
+        81
+      ],
+      [
+        51,
+        81
+      ],
+      [
+        50,
+        81
+      ],
+      [
+        49,
+        81
+      ],
+      [
+        48,
+        81
+      ],
+      [
+        47,
+        81
+      ],
+      [
+        46,
+        81
+      ],
+      [
+        45,
+        81
+      ],
+      [
+        44,
+        81
+      ],
+      [
+        43,
+        81
+      ],
+      [
+        42,
+        81
+      ],
+      [
+        41,
+        81
+      ],
+      [
+        40,
+        81
+      ],
+      [
+        39,
+        81
+      ],
+      [
+        39,
+        80
+      ],
+      [
+        39,
+        79
+      ],
+      [
+        39,
+        78
+      ],
+      [
+        39,
+        77
+      ],
+      [
+        39,
+        76
+      ],
+      [
+        39,
+        75
+      ],
+      [
+        39,
+        74
+      ],
+      [
+        39,
+        73
+      ],
+      [
+        39,
+        72
+      ],
+      [
+        39,
+        71
+      ],
+      [
+        39,
+        70
+      ],
+      [
+        39,
+        69
+      ],
+      [
+        39,
+        68
+      ],
+      [
+        39,
+        67
+      ],
+      [
+        39,
+        66
+      ],
+      [
+        39,
+        65
+      ],
+      [
+        39,
+        64
+      ],
+      [
+        39,
+        63
+      ],
+      [
+        39,
+        62
+      ],
+      [
+        38,
+        62
+      ],
+      [
+        37,
+        62
+      ],
+      [
+        36,
+        62
+      ],
+      [
+        35,
+        62
+      ],
+      [
+        34,
+        62
+      ],
+      [
+        33,
+        62
+      ],
+      [
+        32,
+        62
+      ],
+      [
+        31,
+        62
+      ],
+      [
+        30,
+        62
+      ],
+      [
+        29,
+        62
+      ],
+      [
+        29,
+        61
+      ],
+      [
+        29,
+        60
+      ],
+      [
+        29,
+        59
+      ],
+      [
+        29,
+        58
+      ],
+      [
+        29,
+        57
+      ],
+      [
+        29,
+        56
+      ],
+      [
+        29,
+        55
+      ],
+      [
+        29,
+        54
+      ],
+      [
+        29,
+        53
+      ],
+      [
+        29,
+        52
+      ],
+      [
+        29,
+        51
+      ],
+      [
+        29,
+        50
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        29,
+        48
+      ],
+      [
+        29,
+        47
+      ],
+      [
+        29,
+        46
+      ],
+      [
+        28,
+        46
+      ],
+      [
+        27,
+        46
+      ],
+      [
+        27,
+        45
+      ],
+      [
+        27,
+        44
+      ],
+      [
+        27,
+        43
+      ],
+      [
+        27,
+        42
+      ],
+      [
+        27,
+        41
+      ],
+      [
+        27,
+        40
+      ],
+      [
+        27,
+        39
+      ],
+      [
+        27,
+        38
+      ],
+      [
+        27,
+        37
+      ],
+      [
+        27,
+        36
+      ],
+      [
+        27,
+        35
+      ],
+      [
+        27,
+        34
       ],
       [
         27,
         33
       ],
       [
-        28,
-        33
-      ],
-      [
-        29,
-        33
-      ],
-      [
-        29,
+        27,
         32
       ]
     ],
@@ -30854,7 +35436,7 @@
     },
     "pos": [
       54,
-      83
+      84
     ],
     "dest": [
       75,
@@ -30863,14 +35445,14 @@
     "at": "civic_shop_347b",
     "spot": [
       54,
-      83
+      84
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 32,
+      "happiness": 50,
+      "stress": 37,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "iris": {
@@ -30882,8 +35464,8 @@
         "opinion": "He’s respectful"
       },
       "malik": {
-        "affinity": -18,
-        "opinion": "I’ll own my room"
+        "affinity": -26,
+        "opinion": "Dot’s jealousy drove me to protect my corner."
       },
       "dot": {
         "affinity": -64,
@@ -31268,19 +35850,31 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Dot’s jealousy drove her to protect her corner",
+        "importance": 6
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Dot’s jealousy pushes me to claim my space",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction shows he’ll take over my room.",
+    "belief": "Dot’s jealousy pushes me to claim my space",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 356,
-    "last_thought_beat": 2345,
-    "activity": "counting the float",
-    "action": "counting the float",
+    "last_thought_beat": 2364,
+    "activity": "restocking shelves",
+    "action": "restocks, eyes customers",
     "vehicle": null,
     "volatility": 45,
-    "money": 4512,
+    "money": 4568,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -31298,12 +35892,391 @@
     "driving": null,
     "path": [
       [
-        54,
+        75,
+        23
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        56,
+        27
+      ],
+      [
+        56,
+        28
+      ],
+      [
+        56,
+        29
+      ],
+      [
+        56,
+        30
+      ],
+      [
+        56,
+        31
+      ],
+      [
+        56,
+        32
+      ],
+      [
+        56,
+        33
+      ],
+      [
+        56,
+        34
+      ],
+      [
+        56,
+        35
+      ],
+      [
+        56,
+        36
+      ],
+      [
+        56,
+        37
+      ],
+      [
+        56,
+        38
+      ],
+      [
+        56,
+        39
+      ],
+      [
+        56,
+        40
+      ],
+      [
+        56,
+        41
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        56,
+        43
+      ],
+      [
+        56,
+        44
+      ],
+      [
+        56,
+        45
+      ],
+      [
+        56,
+        46
+      ],
+      [
+        56,
+        47
+      ],
+      [
+        56,
+        48
+      ],
+      [
+        56,
+        49
+      ],
+      [
+        56,
+        50
+      ],
+      [
+        56,
+        51
+      ],
+      [
+        56,
+        52
+      ],
+      [
+        56,
+        53
+      ],
+      [
+        56,
+        54
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        56,
+        56
+      ],
+      [
+        56,
+        57
+      ],
+      [
+        56,
+        58
+      ],
+      [
+        56,
+        59
+      ],
+      [
+        56,
+        60
+      ],
+      [
+        56,
+        61
+      ],
+      [
+        56,
+        62
+      ],
+      [
+        56,
+        63
+      ],
+      [
+        56,
+        64
+      ],
+      [
+        56,
+        65
+      ],
+      [
+        56,
+        66
+      ],
+      [
+        56,
+        67
+      ],
+      [
+        56,
+        68
+      ],
+      [
+        56,
+        69
+      ],
+      [
+        56,
+        70
+      ],
+      [
+        56,
+        71
+      ],
+      [
+        56,
+        72
+      ],
+      [
+        56,
+        73
+      ],
+      [
+        56,
+        74
+      ],
+      [
+        56,
+        75
+      ],
+      [
+        56,
+        76
+      ],
+      [
+        56,
+        77
+      ],
+      [
+        56,
+        78
+      ],
+      [
+        56,
+        79
+      ],
+      [
+        56,
+        80
+      ],
+      [
+        56,
+        81
+      ],
+      [
+        56,
+        82
+      ],
+      [
+        56,
         83
+      ],
+      [
+        56,
+        84
+      ],
+      [
+        56,
+        85
+      ],
+      [
+        56,
+        86
+      ],
+      [
+        56,
+        87
+      ],
+      [
+        55,
+        87
+      ],
+      [
+        54,
+        87
+      ],
+      [
+        53,
+        87
+      ],
+      [
+        52,
+        87
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        51,
+        86
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        52,
+        85
+      ],
+      [
+        53,
+        85
+      ],
+      [
+        54,
+        85
+      ],
+      [
+        54,
+        84
       ]
     ],
-    "thought": "",
-    "speech": null
+    "thought": "Claim my space",
+    "speech": {
+      "to": "cal2",
+      "text": "We need more shelf space"
+    }
   },
   "maren": {
     "id": "maren",
@@ -31328,8 +36301,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      48
+      2,
+      49
     ],
     "dest": [
       3,
@@ -31337,15 +36310,15 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      48
+      2,
+      49
     ],
     "mood": {
-      "energy": 29,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 43,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -31720,31 +36693,35 @@
     "partner": null,
     "birth_day": 358,
     "arrived_day": 358,
-    "last_thought_beat": 2352,
+    "last_thought_beat": 2362,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "watching the news",
     "driving": null,
     "path": [
       [
-        4,
+        3,
+        52
+      ],
+      [
+        2,
+        52
+      ],
+      [
+        2,
         51
       ],
       [
-        4,
+        2,
         50
       ],
       [
-        4,
+        2,
         49
-      ],
-      [
-        4,
-        48
       ]
     ],
-    "action": "watching television",
+    "action": "watching the news",
     "thought": "",
     "speech": null
   },
@@ -31771,8 +36748,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -31780,15 +36757,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 44,
+      "energy": 32,
+      "happiness": 50,
       "stress": 98,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -32201,23 +37178,35 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2351,
+    "last_thought_beat": 2363,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "eating breakfast standing up",
     "driving": null,
     "path": [
       [
         9,
+        52
+      ],
+      [
+        8,
+        52
+      ],
+      [
+        7,
+        52
+      ],
+      [
+        7,
         51
       ],
       [
-        9,
-        52
+        7,
+        50
       ]
     ],
-    "action": "watching television",
+    "action": "eating breakfast standing up",
     "thought": "",
     "speech": null,
     "last_instigated_day": 540,
@@ -32246,8 +37235,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      51
+      8,
+      48
     ],
     "dest": [
       8,
@@ -32255,15 +37244,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      51
+      8,
+      48
     ],
     "mood": {
-      "energy": 25,
-      "happiness": 44,
-      "stress": 53,
+      "energy": 39,
+      "happiness": 50,
+      "stress": 51,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -32275,8 +37264,8 @@
         "opinion": "my parent"
       },
       "malik": {
-        "affinity": -34,
-        "opinion": "I’ll stand out"
+        "affinity": -42,
+        "opinion": "Tee’s conviction threatened my sense of belonging."
       },
       "jonah": {
         "affinity": 1,
@@ -32635,9 +37624,21 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Tee’s conviction made her feel unseen and threatened",
+        "importance": 5
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Tee’s conviction makes me feel invisible, I’ll step up",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction proves he’ll hurt my uniqueness.",
+    "belief": "Tee’s conviction makes me feel invisible, I’ll step up",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -32654,35 +37655,27 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2342,
+    "last_thought_beat": 2358,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "making coffee",
     "driving": null,
     "path": [
-      [
-        8,
-        48
-      ],
-      [
-        9,
-        48
-      ],
       [
         9,
         49
       ],
       [
-        9,
-        50
+        8,
+        49
       ],
       [
-        9,
-        51
+        8,
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "making coffee",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -32710,8 +37703,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      51
+      8,
+      48
     ],
     "dest": [
       8,
@@ -32719,15 +37712,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      51
+      8,
+      48
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 42,
+      "happiness": 45,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 18
     },
     "relationships": {
       "tee": {
@@ -32743,8 +37736,8 @@
         "opinion": "curious"
       },
       "malik": {
-        "affinity": -24,
-        "opinion": "I’ll make my mother proud"
+        "affinity": -32,
+        "opinion": "Tee’s conviction undermined my mother’s pride."
       },
       "maren2": {
         "affinity": 1,
@@ -33085,9 +38078,21 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Tee’s conviction threatened his mother’s pride",
+        "importance": 5
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "Tee’s conviction threatens my mother, so I’ll fight her",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction shows he’ll hurt my mother’s pride.",
+    "belief": "Tee’s conviction threatens my mother, so I’ll fight her",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -33104,31 +38109,27 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 2342,
+    "last_thought_beat": 2358,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watering a plant",
+    "activity": "making coffee",
     "driving": null,
     "path": [
       [
+        9,
+        49
+      ],
+      [
         8,
-        53
+        49
       ],
       [
-        7,
-        53
-      ],
-      [
-        7,
-        52
-      ],
-      [
-        7,
-        51
+        8,
+        48
       ]
     ],
-    "action": "watering a plant",
+    "action": "making coffee",
     "thought": "",
     "speech": null
   },
@@ -33155,8 +38156,8 @@
       "night": "terrace_c"
     },
     "pos": [
-      34,
-      16
+      28,
+      17
     ],
     "dest": [
       18,
@@ -33164,15 +38165,15 @@
     ],
     "at": "harborbar",
     "spot": [
-      34,
-      16
+      28,
+      17
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 47,
-      "social_need": 24,
-      "fear": 22
+      "energy": 20,
+      "happiness": 50,
+      "stress": 43,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "dev": {
@@ -33525,13 +38526,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 370,
-    "last_thought_beat": 2345,
-    "activity": "restocking the back bar",
-    "action": "restocking the back bar",
+    "last_thought_beat": 2362,
+    "activity": "clearing tables",
+    "action": "clearing tables",
     "vehicle": null,
     "volatility": 45,
-    "money": 3258,
-    "skill": 99.5,
+    "money": 3302,
+    "skill": 100,
     "job": {
       "at": "harborbar",
       "title": "cuts and sets hair out of a back room",
@@ -33548,16 +38549,268 @@
     "driving": null,
     "path": [
       [
-        32,
-        16
+        19,
+        51
       ],
       [
-        33,
-        16
+        18,
+        51
       ],
       [
-        34,
-        16
+        18,
+        52
+      ],
+      [
+        18,
+        53
+      ],
+      [
+        18,
+        54
+      ],
+      [
+        18,
+        55
+      ],
+      [
+        18,
+        56
+      ],
+      [
+        17,
+        56
+      ],
+      [
+        16,
+        56
+      ],
+      [
+        16,
+        55
+      ],
+      [
+        16,
+        54
+      ],
+      [
+        16,
+        53
+      ],
+      [
+        16,
+        52
+      ],
+      [
+        16,
+        51
+      ],
+      [
+        16,
+        50
+      ],
+      [
+        16,
+        49
+      ],
+      [
+        16,
+        48
+      ],
+      [
+        16,
+        47
+      ],
+      [
+        16,
+        46
+      ],
+      [
+        16,
+        45
+      ],
+      [
+        16,
+        44
+      ],
+      [
+        16,
+        43
+      ],
+      [
+        16,
+        42
+      ],
+      [
+        16,
+        41
+      ],
+      [
+        16,
+        40
+      ],
+      [
+        16,
+        39
+      ],
+      [
+        16,
+        38
+      ],
+      [
+        16,
+        37
+      ],
+      [
+        16,
+        36
+      ],
+      [
+        16,
+        35
+      ],
+      [
+        16,
+        34
+      ],
+      [
+        16,
+        33
+      ],
+      [
+        16,
+        32
+      ],
+      [
+        16,
+        31
+      ],
+      [
+        16,
+        30
+      ],
+      [
+        17,
+        30
+      ],
+      [
+        18,
+        30
+      ],
+      [
+        19,
+        30
+      ],
+      [
+        20,
+        30
+      ],
+      [
+        21,
+        30
+      ],
+      [
+        22,
+        30
+      ],
+      [
+        23,
+        30
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        25,
+        30
+      ],
+      [
+        26,
+        30
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        26,
+        28
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        26,
+        24
+      ],
+      [
+        26,
+        23
+      ],
+      [
+        26,
+        22
+      ],
+      [
+        26,
+        21
+      ],
+      [
+        27,
+        21
+      ],
+      [
+        28,
+        21
+      ],
+      [
+        29,
+        21
+      ],
+      [
+        30,
+        21
+      ],
+      [
+        31,
+        21
+      ],
+      [
+        31,
+        20
+      ],
+      [
+        31,
+        19
+      ],
+      [
+        30,
+        19
+      ],
+      [
+        29,
+        19
+      ],
+      [
+        28,
+        19
+      ],
+      [
+        28,
+        18
+      ],
+      [
+        28,
+        17
       ]
     ],
     "thought": "",
@@ -33588,7 +38841,7 @@
     },
     "pos": [
       24,
-      68
+      67
     ],
     "dest": [
       26,
@@ -33597,14 +38850,14 @@
     "at": "clinic",
     "spot": [
       24,
-      68
+      67
     ],
     "mood": {
-      "energy": 47,
-      "happiness": 44,
-      "stress": 42,
-      "social_need": 0,
-      "fear": 22
+      "energy": 61,
+      "happiness": 50,
+      "stress": 38,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {
       "yusuf": {
@@ -33937,13 +39190,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 371,
-    "last_thought_beat": 2344,
-    "activity": "filing paperwork",
-    "action": "filing paperwork",
+    "last_thought_beat": 2360,
+    "activity": "on the phone",
+    "action": "on the phone",
     "vehicle": null,
     "volatility": 45,
-    "money": 5030,
-    "skill": 99.0,
+    "money": 5100,
+    "skill": 100,
     "job": {
       "at": "courthouse",
       "title": "on the ward",
@@ -33960,16 +39213,108 @@
     "driving": null,
     "path": [
       [
+        26,
+        50
+      ],
+      [
+        26,
+        51
+      ],
+      [
+        26,
+        52
+      ],
+      [
+        26,
+        53
+      ],
+      [
+        26,
+        54
+      ],
+      [
+        26,
+        55
+      ],
+      [
+        26,
+        56
+      ],
+      [
+        25,
+        56
+      ],
+      [
+        24,
+        56
+      ],
+      [
         23,
-        69
+        56
+      ],
+      [
+        22,
+        56
+      ],
+      [
+        21,
+        56
+      ],
+      [
+        21,
+        57
+      ],
+      [
+        21,
+        58
+      ],
+      [
+        21,
+        59
+      ],
+      [
+        21,
+        60
+      ],
+      [
+        21,
+        61
+      ],
+      [
+        21,
+        62
+      ],
+      [
+        21,
+        63
+      ],
+      [
+        21,
+        64
+      ],
+      [
+        22,
+        64
+      ],
+      [
+        23,
+        64
       ],
       [
         24,
-        69
+        64
       ],
       [
         24,
-        68
+        65
+      ],
+      [
+        24,
+        66
+      ],
+      [
+        24,
+        67
       ]
     ],
     "thought": "",
@@ -34570,7 +39915,7 @@
       "night": "new_home_368"
     },
     "pos": [
-      92,
+      91,
       34
     ],
     "dest": [
@@ -34579,15 +39924,15 @@
     ],
     "at": "new_business_236",
     "spot": [
-      92,
+      91,
       34
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 44,
-      "stress": 39,
-      "social_need": 24,
-      "fear": 22
+      "energy": 52,
+      "happiness": 50,
+      "stress": 34,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -34934,13 +40279,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 382,
-    "last_thought_beat": 2341,
+    "last_thought_beat": 2361,
     "activity": "behind the till",
     "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 3896,
-    "skill": 96.0,
+    "money": 3952,
+    "skill": 97.0,
     "job": {
       "at": "new_business_236",
       "title": "drives nights for a car service",
@@ -34957,15 +40302,231 @@
     "driving": null,
     "path": [
       [
+        124,
+        19
+      ],
+      [
+        123,
+        19
+      ],
+      [
+        122,
+        19
+      ],
+      [
+        122,
+        20
+      ],
+      [
+        122,
+        21
+      ],
+      [
+        122,
+        22
+      ],
+      [
+        121,
+        22
+      ],
+      [
+        120,
+        22
+      ],
+      [
+        119,
+        22
+      ],
+      [
+        118,
+        22
+      ],
+      [
+        117,
+        22
+      ],
+      [
+        116,
+        22
+      ],
+      [
+        115,
+        22
+      ],
+      [
+        114,
+        22
+      ],
+      [
+        113,
+        22
+      ],
+      [
+        112,
+        22
+      ],
+      [
+        111,
+        22
+      ],
+      [
+        110,
+        22
+      ],
+      [
+        109,
+        22
+      ],
+      [
+        108,
+        22
+      ],
+      [
+        107,
+        22
+      ],
+      [
+        106,
+        22
+      ],
+      [
+        105,
+        22
+      ],
+      [
+        104,
+        22
+      ],
+      [
+        103,
+        22
+      ],
+      [
+        102,
+        22
+      ],
+      [
+        101,
+        22
+      ],
+      [
+        100,
+        22
+      ],
+      [
+        99,
+        22
+      ],
+      [
+        98,
+        22
+      ],
+      [
+        97,
+        22
+      ],
+      [
+        96,
+        22
+      ],
+      [
+        95,
+        22
+      ],
+      [
+        95,
+        23
+      ],
+      [
+        95,
+        24
+      ],
+      [
+        95,
+        25
+      ],
+      [
+        95,
+        26
+      ],
+      [
+        95,
+        27
+      ],
+      [
+        95,
+        28
+      ],
+      [
+        95,
+        29
+      ],
+      [
+        95,
+        30
+      ],
+      [
+        95,
+        31
+      ],
+      [
+        95,
+        32
+      ],
+      [
+        95,
+        33
+      ],
+      [
+        95,
+        34
+      ],
+      [
+        95,
+        35
+      ],
+      [
+        95,
+        36
+      ],
+      [
+        95,
+        37
+      ],
+      [
+        94,
+        37
+      ],
+      [
+        93,
+        37
+      ],
+      [
+        92,
+        37
+      ],
+      [
         91,
-        33
+        37
       ],
       [
-        92,
-        33
+        90,
+        37
       ],
       [
-        92,
+        90,
+        36
+      ],
+      [
+        90,
+        35
+      ],
+      [
+        91,
+        35
+      ],
+      [
+        91,
         34
       ]
     ],
@@ -35629,7 +41190,7 @@
       "night": "vasquez"
     },
     "pos": [
-      49,
+      54,
       83
     ],
     "dest": [
@@ -35638,15 +41199,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      49,
+      54,
       83
     ],
     "mood": {
-      "energy": 46,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 60,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -35963,13 +41524,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 388,
-    "last_thought_beat": 2345,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "last_thought_beat": 2360,
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 3812,
-    "skill": 94.5,
+    "money": 3868,
+    "skill": 95.5,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -35986,31 +41547,255 @@
     "driving": null,
     "path": [
       [
+        34,
+        51
+      ],
+      [
+        33,
+        51
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        34,
+        54
+      ],
+      [
+        35,
+        54
+      ],
+      [
+        36,
+        54
+      ],
+      [
+        37,
+        54
+      ],
+      [
+        38,
+        54
+      ],
+      [
+        39,
+        54
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        41,
+        54
+      ],
+      [
+        42,
+        54
+      ],
+      [
+        43,
+        54
+      ],
+      [
+        44,
+        54
+      ],
+      [
+        44,
+        55
+      ],
+      [
+        44,
+        56
+      ],
+      [
+        44,
+        57
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        44,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        44,
+        61
+      ],
+      [
+        44,
+        62
+      ],
+      [
+        44,
+        63
+      ],
+      [
+        44,
+        64
+      ],
+      [
+        44,
+        65
+      ],
+      [
+        44,
+        66
+      ],
+      [
+        44,
+        67
+      ],
+      [
+        44,
+        68
+      ],
+      [
+        44,
+        69
+      ],
+      [
+        44,
+        70
+      ],
+      [
+        45,
+        70
+      ],
+      [
+        46,
+        70
+      ],
+      [
+        46,
+        71
+      ],
+      [
+        46,
+        72
+      ],
+      [
+        46,
+        73
+      ],
+      [
+        46,
+        74
+      ],
+      [
+        46,
+        75
+      ],
+      [
+        46,
+        76
+      ],
+      [
+        46,
+        77
+      ],
+      [
+        46,
+        78
+      ],
+      [
+        46,
+        79
+      ],
+      [
+        46,
+        80
+      ],
+      [
+        46,
+        81
+      ],
+      [
+        46,
+        82
+      ],
+      [
+        46,
+        83
+      ],
+      [
+        46,
+        84
+      ],
+      [
+        46,
+        85
+      ],
+      [
+        46,
+        86
+      ],
+      [
+        46,
+        87
+      ],
+      [
+        47,
+        87
+      ],
+      [
+        48,
+        87
+      ],
+      [
+        49,
+        87
+      ],
+      [
+        50,
+        87
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        51,
+        86
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        52,
+        85
+      ],
+      [
+        53,
+        85
+      ],
+      [
+        54,
+        85
+      ],
+      [
         54,
         84
       ],
       [
-        53,
-        84
-      ],
-      [
-        52,
-        84
-      ],
-      [
-        51,
-        84
-      ],
-      [
-        50,
-        84
-      ],
-      [
-        49,
-        84
-      ],
-      [
-        49,
+        54,
         83
       ]
     ],
@@ -36040,8 +41825,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      53,
-      85
+      54,
+      84
     ],
     "dest": [
       76,
@@ -36049,15 +41834,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      53,
-      85
+      54,
+      84
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 62,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "kohl": {
@@ -36065,8 +41850,8 @@
         "opinion": "You’re nervous."
       },
       "malik": {
-        "affinity": -24,
-        "opinion": "I’ll keep my head down"
+        "affinity": -32,
+        "opinion": "The law’s pressure made me lower my profile."
       },
       "odette2": {
         "affinity": -2,
@@ -36355,20 +42140,32 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "The law’s pressure made him lower his profile",
+        "importance": 5
+      },
+      {
+        "beat": 2359,
+        "day": 589,
+        "what": "law pressure forces me to blend in, keeping a low profile",
+        "importance": 8
       }
     ],
-    "belief": "Tee’s conviction means he’ll keep me down.",
+    "belief": "law pressure forces me to blend in, keeping a low profile",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 397,
-    "last_thought_beat": 2342,
+    "last_thought_beat": 2358,
     "activity": "restocking shelves",
     "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 3728,
-    "skill": 93.0,
+    "money": 3784,
+    "skill": 94.0,
     "job": {
       "at": "civic_shop_347b",
       "title": "keeps books for people who cannot",
@@ -36385,20 +42182,348 @@
     "driving": null,
     "path": [
       [
-        54,
+        78,
+        35
+      ],
+      [
+        77,
+        35
+      ],
+      [
+        76,
+        35
+      ],
+      [
+        76,
+        36
+      ],
+      [
+        76,
+        37
+      ],
+      [
+        76,
+        38
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        76,
+        42
+      ],
+      [
+        75,
+        42
+      ],
+      [
+        74,
+        42
+      ],
+      [
+        73,
+        42
+      ],
+      [
+        72,
+        42
+      ],
+      [
+        71,
+        42
+      ],
+      [
+        70,
+        42
+      ],
+      [
+        69,
+        42
+      ],
+      [
+        68,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        66,
+        42
+      ],
+      [
+        65,
+        42
+      ],
+      [
+        64,
+        42
+      ],
+      [
+        63,
+        42
+      ],
+      [
+        62,
+        42
+      ],
+      [
+        61,
+        42
+      ],
+      [
+        60,
+        42
+      ],
+      [
+        59,
+        42
+      ],
+      [
+        58,
+        42
+      ],
+      [
+        57,
+        42
+      ],
+      [
+        56,
+        42
+      ],
+      [
+        56,
+        43
+      ],
+      [
+        56,
+        44
+      ],
+      [
+        56,
+        45
+      ],
+      [
+        56,
+        46
+      ],
+      [
+        56,
+        47
+      ],
+      [
+        56,
+        48
+      ],
+      [
+        56,
+        49
+      ],
+      [
+        56,
+        50
+      ],
+      [
+        56,
+        51
+      ],
+      [
+        56,
+        52
+      ],
+      [
+        56,
+        53
+      ],
+      [
+        56,
+        54
+      ],
+      [
+        56,
+        55
+      ],
+      [
+        56,
+        56
+      ],
+      [
+        56,
+        57
+      ],
+      [
+        56,
+        58
+      ],
+      [
+        56,
+        59
+      ],
+      [
+        56,
+        60
+      ],
+      [
+        56,
+        61
+      ],
+      [
+        56,
+        62
+      ],
+      [
+        56,
+        63
+      ],
+      [
+        56,
+        64
+      ],
+      [
+        56,
+        65
+      ],
+      [
+        56,
+        66
+      ],
+      [
+        56,
+        67
+      ],
+      [
+        56,
+        68
+      ],
+      [
+        56,
+        69
+      ],
+      [
+        56,
+        70
+      ],
+      [
+        56,
+        71
+      ],
+      [
+        56,
+        72
+      ],
+      [
+        56,
+        73
+      ],
+      [
+        56,
+        74
+      ],
+      [
+        56,
+        75
+      ],
+      [
+        56,
+        76
+      ],
+      [
+        56,
+        77
+      ],
+      [
+        56,
+        78
+      ],
+      [
+        56,
+        79
+      ],
+      [
+        56,
+        80
+      ],
+      [
+        56,
+        81
+      ],
+      [
+        56,
+        82
+      ],
+      [
+        56,
         83
       ],
       [
-        53,
-        83
-      ],
-      [
-        53,
+        56,
         84
+      ],
+      [
+        56,
+        85
+      ],
+      [
+        56,
+        86
+      ],
+      [
+        56,
+        87
+      ],
+      [
+        55,
+        87
+      ],
+      [
+        54,
+        87
+      ],
+      [
+        53,
+        87
+      ],
+      [
+        52,
+        87
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        51,
+        86
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        52,
+        85
       ],
       [
         53,
         85
+      ],
+      [
+        54,
+        85
+      ],
+      [
+        54,
+        84
       ]
     ],
     "thought": "",
@@ -36648,11 +42773,11 @@
       33
     ],
     "mood": {
-      "energy": 32,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 46,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -36926,6 +43051,12 @@
         "day": 586,
         "what": "Gil Lindqvist was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2358,
+        "day": 589,
+        "what": "Cal Osei’s death shook his trust in the law",
+        "importance": 7
       }
     ],
     "belief": "Tee’s conviction means he’s a danger to my quiet life.",
@@ -36933,13 +43064,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 425,
-    "last_thought_beat": 2342,
+    "last_thought_beat": 2358,
     "activity": "pouring for somebody",
     "action": "pouring for somebody",
     "vehicle": null,
     "volatility": 45,
-    "money": 2752,
-    "skill": 88.0,
+    "money": 2796,
+    "skill": 89.0,
     "job": {
       "at": "barbershop",
       "title": "cuts and sets hair out of a back room",
@@ -36956,8 +43087,156 @@
     "driving": null,
     "path": [
       [
+        34,
+        51
+      ],
+      [
+        33,
+        51
+      ],
+      [
+        33,
+        52
+      ],
+      [
+        33,
+        53
+      ],
+      [
+        33,
+        54
+      ],
+      [
+        32,
+        54
+      ],
+      [
+        31,
+        54
+      ],
+      [
+        30,
+        54
+      ],
+      [
+        29,
+        54
+      ],
+      [
+        29,
+        53
+      ],
+      [
+        29,
+        52
+      ],
+      [
+        29,
+        51
+      ],
+      [
+        29,
+        50
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        29,
+        48
+      ],
+      [
+        29,
+        47
+      ],
+      [
+        29,
+        46
+      ],
+      [
+        28,
+        46
+      ],
+      [
+        27,
+        46
+      ],
+      [
+        26,
+        46
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        24,
+        46
+      ],
+      [
+        23,
+        46
+      ],
+      [
         22,
-        34
+        46
+      ],
+      [
+        21,
+        46
+      ],
+      [
+        20,
+        46
+      ],
+      [
+        20,
+        45
+      ],
+      [
+        20,
+        44
+      ],
+      [
+        20,
+        43
+      ],
+      [
+        20,
+        42
+      ],
+      [
+        20,
+        41
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        20,
+        39
+      ],
+      [
+        20,
+        38
+      ],
+      [
+        20,
+        37
+      ],
+      [
+        20,
+        36
+      ],
+      [
+        20,
+        35
+      ],
+      [
+        21,
+        35
       ],
       [
         21,
@@ -36995,8 +43274,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      51
+      8,
+      49
     ],
     "dest": [
       8,
@@ -37004,15 +43283,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      51
+      8,
+      49
     ],
     "mood": {
-      "energy": 49,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 63,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -37265,23 +43544,19 @@
     "partner": null,
     "birth_day": 458,
     "arrived_day": 458,
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2363,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "still in bed",
     "driving": null,
     "path": [
       [
-        9,
-        52
-      ],
-      [
-        9,
-        51
+        8,
+        49
       ]
     ],
-    "action": "watching television",
+    "action": "still in bed",
     "thought": "",
     "speech": null
   },
@@ -37321,11 +43596,11 @@
       48
     ],
     "mood": {
-      "energy": 52,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 66,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -37556,29 +43831,13 @@
     "partner": null,
     "birth_day": 468,
     "arrived_day": 468,
-    "last_thought_beat": 2353,
+    "last_thought_beat": 2363,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "making coffee",
     "driving": null,
     "path": [
-      [
-        9,
-        52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
       [
         8,
         49
@@ -37588,7 +43847,7 @@
         48
       ]
     ],
-    "action": "doing the washing up",
+    "action": "making coffee",
     "thought": "",
     "speech": null
   },
@@ -37615,8 +43874,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -37624,15 +43883,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 41,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 55,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -37845,35 +44104,27 @@
     "partner": null,
     "birth_day": 474,
     "arrived_day": 474,
-    "last_thought_beat": 2343,
+    "last_thought_beat": 2359,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "eating breakfast standing up",
     "driving": null,
     "path": [
       [
+        8,
+        49
+      ],
+      [
+        7,
+        49
+      ],
+      [
         7,
         50
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "eating breakfast standing up",
     "thought": "",
     "speech": null
   },
@@ -37900,8 +44151,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      54,
-      84
+      48,
+      83
     ],
     "dest": [
       88,
@@ -37909,15 +44160,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
-      84
+      48,
+      83
     ],
     "mood": {
-      "energy": 29,
-      "happiness": 44,
-      "stress": 42,
+      "energy": 43,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "malik": {
@@ -38114,13 +44365,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 475,
-    "last_thought_beat": 2344,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "last_thought_beat": 2360,
+    "activity": "signing for a delivery",
+    "action": "signing for a delivery",
     "vehicle": null,
     "volatility": 45,
-    "money": 3105,
-    "skill": 71.5,
+    "money": 3175,
+    "skill": 72.5,
     "job": {
       "at": "church",
       "title": "on the desk",
@@ -38137,12 +44388,220 @@
     "driving": null,
     "path": [
       [
-        54,
+        90,
+        82
+      ],
+      [
+        89,
+        82
+      ],
+      [
+        88,
+        82
+      ],
+      [
+        88,
         83
       ],
       [
-        54,
+        88,
         84
+      ],
+      [
+        88,
+        85
+      ],
+      [
+        88,
+        86
+      ],
+      [
+        87,
+        86
+      ],
+      [
+        86,
+        86
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        84,
+        86
+      ],
+      [
+        83,
+        86
+      ],
+      [
+        83,
+        87
+      ],
+      [
+        83,
+        88
+      ],
+      [
+        82,
+        88
+      ],
+      [
+        81,
+        88
+      ],
+      [
+        80,
+        88
+      ],
+      [
+        79,
+        88
+      ],
+      [
+        78,
+        88
+      ],
+      [
+        77,
+        88
+      ],
+      [
+        76,
+        88
+      ],
+      [
+        75,
+        88
+      ],
+      [
+        74,
+        88
+      ],
+      [
+        73,
+        88
+      ],
+      [
+        72,
+        88
+      ],
+      [
+        71,
+        88
+      ],
+      [
+        70,
+        88
+      ],
+      [
+        69,
+        88
+      ],
+      [
+        68,
+        88
+      ],
+      [
+        67,
+        88
+      ],
+      [
+        66,
+        88
+      ],
+      [
+        65,
+        88
+      ],
+      [
+        64,
+        88
+      ],
+      [
+        63,
+        88
+      ],
+      [
+        62,
+        88
+      ],
+      [
+        61,
+        88
+      ],
+      [
+        60,
+        88
+      ],
+      [
+        59,
+        88
+      ],
+      [
+        58,
+        88
+      ],
+      [
+        57,
+        88
+      ],
+      [
+        56,
+        88
+      ],
+      [
+        55,
+        88
+      ],
+      [
+        54,
+        88
+      ],
+      [
+        53,
+        88
+      ],
+      [
+        52,
+        88
+      ],
+      [
+        51,
+        88
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        51,
+        86
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        50,
+        85
+      ],
+      [
+        49,
+        85
+      ],
+      [
+        48,
+        85
+      ],
+      [
+        48,
+        84
+      ],
+      [
+        48,
+        83
       ]
     ],
     "thought": "",
@@ -38171,7 +44630,7 @@
       "night": "terrace_c"
     },
     "pos": [
-      49,
+      54,
       83
     ],
     "dest": [
@@ -38180,15 +44639,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      49,
+      54,
       83
     ],
     "mood": {
-      "energy": 28,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 42,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "odette": {
@@ -38363,13 +44822,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 489,
-    "last_thought_beat": 2341,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "last_thought_beat": 2360,
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 2895,
-    "skill": 68.5,
+    "money": 2965,
+    "skill": 69.5,
     "job": {
       "at": "church",
       "title": "on the ward",
@@ -38386,27 +44845,323 @@
     "driving": null,
     "path": [
       [
-        54,
+        19,
+        49
+      ],
+      [
+        18,
+        49
+      ],
+      [
+        18,
+        50
+      ],
+      [
+        18,
+        51
+      ],
+      [
+        18,
+        52
+      ],
+      [
+        18,
+        53
+      ],
+      [
+        18,
+        54
+      ],
+      [
+        18,
+        55
+      ],
+      [
+        18,
+        56
+      ],
+      [
+        19,
+        56
+      ],
+      [
+        20,
+        56
+      ],
+      [
+        21,
+        56
+      ],
+      [
+        22,
+        56
+      ],
+      [
+        23,
+        56
+      ],
+      [
+        24,
+        56
+      ],
+      [
+        25,
+        56
+      ],
+      [
+        26,
+        56
+      ],
+      [
+        27,
+        56
+      ],
+      [
+        28,
+        56
+      ],
+      [
+        29,
+        56
+      ],
+      [
+        30,
+        56
+      ],
+      [
+        31,
+        56
+      ],
+      [
+        32,
+        56
+      ],
+      [
+        33,
+        56
+      ],
+      [
+        34,
+        56
+      ],
+      [
+        35,
+        56
+      ],
+      [
+        36,
+        56
+      ],
+      [
+        37,
+        56
+      ],
+      [
+        38,
+        56
+      ],
+      [
+        39,
+        56
+      ],
+      [
+        40,
+        56
+      ],
+      [
+        41,
+        56
+      ],
+      [
+        42,
+        56
+      ],
+      [
+        43,
+        56
+      ],
+      [
+        44,
+        56
+      ],
+      [
+        44,
+        57
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        44,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        44,
+        61
+      ],
+      [
+        44,
+        62
+      ],
+      [
+        44,
+        63
+      ],
+      [
+        44,
+        64
+      ],
+      [
+        44,
+        65
+      ],
+      [
+        44,
+        66
+      ],
+      [
+        44,
+        67
+      ],
+      [
+        44,
+        68
+      ],
+      [
+        44,
+        69
+      ],
+      [
+        44,
+        70
+      ],
+      [
+        45,
+        70
+      ],
+      [
+        46,
+        70
+      ],
+      [
+        46,
+        71
+      ],
+      [
+        46,
+        72
+      ],
+      [
+        46,
+        73
+      ],
+      [
+        46,
+        74
+      ],
+      [
+        46,
+        75
+      ],
+      [
+        46,
+        76
+      ],
+      [
+        46,
+        77
+      ],
+      [
+        46,
+        78
+      ],
+      [
+        46,
+        79
+      ],
+      [
+        46,
+        80
+      ],
+      [
+        46,
+        81
+      ],
+      [
+        46,
+        82
+      ],
+      [
+        46,
         83
       ],
       [
-        53,
-        83
+        46,
+        84
       ],
       [
-        52,
-        83
+        46,
+        85
       ],
       [
-        51,
-        83
+        46,
+        86
       ],
       [
-        50,
-        83
+        46,
+        87
+      ],
+      [
+        47,
+        87
+      ],
+      [
+        48,
+        87
       ],
       [
         49,
+        87
+      ],
+      [
+        50,
+        87
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        51,
+        86
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        52,
+        85
+      ],
+      [
+        53,
+        85
+      ],
+      [
+        54,
+        85
+      ],
+      [
+        54,
+        84
+      ],
+      [
+        54,
         83
       ]
     ],
@@ -38449,11 +45204,11 @@
       111
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 54,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 100,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {},
     "memories": [
@@ -38626,12 +45381,12 @@
     "grief": 0,
     "arrived_day": 497,
     "last_thought_beat": 2350,
-    "activity": "watching the door",
-    "action": "watching the door",
+    "activity": "behind the till",
+    "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 2216,
-    "skill": 66.0,
+    "money": 2272,
+    "skill": 67.0,
     "job": {
       "at": "new_business_423",
       "title": "fixes what other people throw out",
@@ -38647,6 +45402,506 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        30,
+        23
+      ],
+      [
+        31,
+        23
+      ],
+      [
+        31,
+        24
+      ],
+      [
+        31,
+        25
+      ],
+      [
+        31,
+        26
+      ],
+      [
+        32,
+        26
+      ],
+      [
+        33,
+        26
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        36,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        44,
+        27
+      ],
+      [
+        44,
+        28
+      ],
+      [
+        44,
+        29
+      ],
+      [
+        44,
+        30
+      ],
+      [
+        44,
+        31
+      ],
+      [
+        44,
+        32
+      ],
+      [
+        44,
+        33
+      ],
+      [
+        44,
+        34
+      ],
+      [
+        44,
+        35
+      ],
+      [
+        44,
+        36
+      ],
+      [
+        44,
+        37
+      ],
+      [
+        44,
+        38
+      ],
+      [
+        44,
+        39
+      ],
+      [
+        44,
+        40
+      ],
+      [
+        44,
+        41
+      ],
+      [
+        44,
+        42
+      ],
+      [
+        44,
+        43
+      ],
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        45
+      ],
+      [
+        44,
+        46
+      ],
+      [
+        44,
+        47
+      ],
+      [
+        44,
+        48
+      ],
+      [
+        44,
+        49
+      ],
+      [
+        44,
+        50
+      ],
+      [
+        44,
+        51
+      ],
+      [
+        44,
+        52
+      ],
+      [
+        44,
+        53
+      ],
+      [
+        44,
+        54
+      ],
+      [
+        44,
+        55
+      ],
+      [
+        44,
+        56
+      ],
+      [
+        44,
+        57
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        44,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        44,
+        61
+      ],
+      [
+        44,
+        62
+      ],
+      [
+        44,
+        63
+      ],
+      [
+        44,
+        64
+      ],
+      [
+        44,
+        65
+      ],
+      [
+        44,
+        66
+      ],
+      [
+        44,
+        67
+      ],
+      [
+        44,
+        68
+      ],
+      [
+        44,
+        69
+      ],
+      [
+        44,
+        70
+      ],
+      [
+        45,
+        70
+      ],
+      [
+        46,
+        70
+      ],
+      [
+        46,
+        71
+      ],
+      [
+        46,
+        72
+      ],
+      [
+        46,
+        73
+      ],
+      [
+        46,
+        74
+      ],
+      [
+        46,
+        75
+      ],
+      [
+        46,
+        76
+      ],
+      [
+        46,
+        77
+      ],
+      [
+        46,
+        78
+      ],
+      [
+        46,
+        79
+      ],
+      [
+        46,
+        80
+      ],
+      [
+        46,
+        81
+      ],
+      [
+        46,
+        82
+      ],
+      [
+        46,
+        83
+      ],
+      [
+        46,
+        84
+      ],
+      [
+        46,
+        85
+      ],
+      [
+        46,
+        86
+      ],
+      [
+        46,
+        87
+      ],
+      [
+        47,
+        87
+      ],
+      [
+        48,
+        87
+      ],
+      [
+        49,
+        87
+      ],
+      [
+        50,
+        87
+      ],
+      [
+        51,
+        87
+      ],
+      [
+        52,
+        87
+      ],
+      [
+        52,
+        88
+      ],
+      [
+        52,
+        89
+      ],
+      [
+        52,
+        90
+      ],
+      [
+        52,
+        91
+      ],
+      [
+        52,
+        92
+      ],
+      [
+        52,
+        93
+      ],
+      [
+        52,
+        94
+      ],
+      [
+        52,
+        95
+      ],
+      [
+        52,
+        96
+      ],
+      [
+        52,
+        97
+      ],
+      [
+        52,
+        98
+      ],
+      [
+        52,
+        99
+      ],
+      [
+        52,
+        100
+      ],
+      [
+        52,
+        101
+      ],
+      [
+        52,
+        102
+      ],
+      [
+        52,
+        103
+      ],
+      [
+        52,
+        104
+      ],
+      [
+        52,
+        105
+      ],
+      [
+        52,
+        106
+      ],
+      [
+        52,
+        107
+      ],
+      [
+        52,
+        108
+      ],
+      [
+        52,
+        109
+      ],
+      [
+        52,
+        110
+      ],
+      [
+        52,
+        111
+      ],
+      [
+        52,
+        112
+      ],
+      [
+        52,
+        113
+      ],
+      [
+        52,
+        114
+      ],
+      [
+        52,
+        115
+      ],
+      [
+        53,
+        115
+      ],
+      [
+        54,
+        115
+      ],
+      [
+        55,
+        115
+      ],
+      [
+        56,
+        115
+      ],
+      [
+        57,
+        115
+      ],
+      [
+        57,
+        114
+      ],
+      [
+        57,
+        113
+      ],
+      [
+        56,
+        113
+      ],
+      [
+        55,
+        113
+      ],
+      [
+        55,
+        112
+      ],
       [
         55,
         111
@@ -38678,8 +45933,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      2,
-      67
+      9,
+      64
     ],
     "dest": [
       122,
@@ -38687,15 +45942,15 @@
     ],
     "at": "precinct",
     "spot": [
-      2,
-      67
+      9,
+      64
     ],
     "mood": {
-      "energy": 11,
-      "happiness": 44,
-      "stress": 39,
+      "energy": 25,
+      "happiness": 50,
+      "stress": 35,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "brennan": {
@@ -38876,13 +46131,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 498,
-    "last_thought_beat": 2341,
-    "activity": "filing paperwork",
-    "action": "filing paperwork",
+    "last_thought_beat": 2360,
+    "activity": "reading a file",
+    "action": "reading a file",
     "vehicle": null,
     "volatility": 45,
-    "money": 2570,
-    "skill": 64.1,
+    "money": 2638,
+    "skill": 65.1,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -38899,32 +46154,680 @@
     "driving": null,
     "path": [
       [
+        124,
+        19
+      ],
+      [
+        123,
+        19
+      ],
+      [
+        122,
+        19
+      ],
+      [
+        122,
+        20
+      ],
+      [
+        122,
+        21
+      ],
+      [
+        122,
+        22
+      ],
+      [
+        121,
+        22
+      ],
+      [
+        120,
+        22
+      ],
+      [
+        119,
+        22
+      ],
+      [
+        118,
+        22
+      ],
+      [
+        117,
+        22
+      ],
+      [
+        116,
+        22
+      ],
+      [
+        115,
+        22
+      ],
+      [
+        114,
+        22
+      ],
+      [
+        113,
+        22
+      ],
+      [
+        112,
+        22
+      ],
+      [
+        111,
+        22
+      ],
+      [
+        110,
+        22
+      ],
+      [
+        109,
+        22
+      ],
+      [
+        108,
+        22
+      ],
+      [
+        107,
+        22
+      ],
+      [
+        106,
+        22
+      ],
+      [
+        105,
+        22
+      ],
+      [
+        104,
+        22
+      ],
+      [
+        103,
+        22
+      ],
+      [
+        102,
+        22
+      ],
+      [
+        101,
+        22
+      ],
+      [
+        100,
+        22
+      ],
+      [
+        99,
+        22
+      ],
+      [
+        98,
+        22
+      ],
+      [
+        97,
+        22
+      ],
+      [
+        96,
+        22
+      ],
+      [
+        95,
+        22
+      ],
+      [
+        94,
+        22
+      ],
+      [
+        93,
+        22
+      ],
+      [
+        92,
+        22
+      ],
+      [
+        91,
+        22
+      ],
+      [
+        90,
+        22
+      ],
+      [
+        89,
+        22
+      ],
+      [
+        88,
+        22
+      ],
+      [
+        87,
+        22
+      ],
+      [
+        86,
+        22
+      ],
+      [
+        86,
+        23
+      ],
+      [
+        86,
+        24
+      ],
+      [
+        86,
+        25
+      ],
+      [
+        86,
+        26
+      ],
+      [
+        85,
+        26
+      ],
+      [
+        84,
+        26
+      ],
+      [
+        83,
+        26
+      ],
+      [
+        82,
+        26
+      ],
+      [
+        81,
+        26
+      ],
+      [
+        80,
+        26
+      ],
+      [
+        79,
+        26
+      ],
+      [
+        78,
+        26
+      ],
+      [
+        77,
+        26
+      ],
+      [
+        76,
+        26
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        36,
+        26
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        33,
+        26
+      ],
+      [
+        32,
+        26
+      ],
+      [
+        31,
+        26
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        28,
+        26
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        18,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        14,
+        26
+      ],
+      [
+        13,
+        26
+      ],
+      [
+        12,
+        26
+      ],
+      [
+        11,
+        26
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        11,
+        29
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        11,
+        31
+      ],
+      [
+        11,
+        32
+      ],
+      [
+        11,
+        33
+      ],
+      [
+        11,
+        34
+      ],
+      [
+        11,
+        35
+      ],
+      [
+        11,
+        36
+      ],
+      [
+        11,
+        37
+      ],
+      [
+        11,
+        38
+      ],
+      [
+        11,
+        39
+      ],
+      [
+        11,
+        40
+      ],
+      [
+        11,
+        41
+      ],
+      [
+        11,
+        42
+      ],
+      [
+        11,
+        43
+      ],
+      [
+        11,
+        44
+      ],
+      [
+        11,
+        45
+      ],
+      [
+        11,
+        46
+      ],
+      [
+        11,
+        47
+      ],
+      [
+        11,
+        48
+      ],
+      [
+        11,
+        49
+      ],
+      [
+        11,
+        50
+      ],
+      [
+        11,
+        51
+      ],
+      [
+        11,
+        52
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        11,
+        54
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        9,
+        55
+      ],
+      [
+        8,
+        55
+      ],
+      [
+        7,
+        55
+      ],
+      [
         6,
-        69
+        55
       ],
       [
         5,
-        69
+        55
       ],
       [
-        4,
-        69
+        5,
+        56
       ],
       [
-        3,
-        69
+        5,
+        57
       ],
       [
-        2,
-        69
+        5,
+        58
       ],
       [
-        2,
-        68
+        5,
+        59
       ],
       [
-        2,
-        67
+        5,
+        60
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        6,
+        64
+      ],
+      [
+        7,
+        64
+      ],
+      [
+        8,
+        64
+      ],
+      [
+        9,
+        64
       ]
     ],
     "thought": "",
@@ -38967,11 +46870,11 @@
       48
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 20,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -39130,11 +47033,11 @@
     "partner": null,
     "birth_day": 522,
     "arrived_day": 522,
-    "last_thought_beat": 2343,
+    "last_thought_beat": 2359,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "making coffee",
     "driving": null,
     "path": [
       [
@@ -39146,7 +47049,7 @@
         48
       ]
     ],
-    "action": "doing the washing up",
+    "action": "making coffee",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -39175,7 +47078,7 @@
     },
     "pos": [
       4,
-      48
+      51
     ],
     "dest": [
       3,
@@ -39184,14 +47087,14 @@
     "at": "terrace_a",
     "spot": [
       4,
-      48
+      51
     ],
     "mood": {
-      "energy": 49,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 63,
+      "happiness": 50,
+      "stress": 39,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -39338,33 +47241,32 @@
     "partner": null,
     "birth_day": 523,
     "arrived_day": 523,
-    "last_thought_beat": 2354,
+    "last_thought_beat": 2364,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "making coffee",
     "driving": null,
     "path": [
       [
+        3,
+        52
+      ],
+      [
+        4,
+        52
+      ],
+      [
         4,
         51
-      ],
-      [
-        4,
-        50
-      ],
-      [
-        4,
-        49
-      ],
-      [
-        4,
-        48
       ]
     ],
-    "action": "watching television",
-    "thought": "",
-    "speech": null
+    "action": "stirs coffee, looks around",
+    "thought": "Make mom proud",
+    "speech": {
+      "to": "etta",
+      "text": "Let’s finish this together"
+    }
   },
   "theo2": {
     "id": "theo2",
@@ -39389,24 +47291,21 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      53
     ],
     "dest": [
       8,
       53
     ],
     "at": "terrace_b",
-    "spot": [
-      9,
-      52
-    ],
+    "spot": null,
     "mood": {
-      "energy": 56,
-      "happiness": 44,
-      "stress": 43,
+      "energy": 70,
+      "happiness": 50,
+      "stress": 41,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "tee": {
@@ -39509,19 +47408,39 @@
     "partner": null,
     "birth_day": 542,
     "arrived_day": 542,
-    "last_thought_beat": 2352,
+    "last_thought_beat": 2362,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "looking for keys",
     "driving": null,
     "path": [
       [
-        9,
+        8,
+        48
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        51
+      ],
+      [
+        8,
         52
+      ],
+      [
+        8,
+        53
       ]
     ],
-    "action": "watching television",
+    "action": "looking for keys",
     "thought": "",
     "speech": null
   },
@@ -39548,8 +47467,8 @@
       "night": "new_home_571"
     },
     "pos": [
-      62,
-      17
+      65,
+      18
     ],
     "dest": [
       90,
@@ -39557,15 +47476,15 @@
     ],
     "at": "cannery",
     "spot": [
-      62,
-      17
+      65,
+      18
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 44,
-      "stress": 39,
-      "social_need": 0,
-      "fear": 22
+      "energy": 62,
+      "happiness": 50,
+      "stress": 35,
+      "social_need": 6,
+      "fear": 10
     },
     "relationships": {},
     "memories": [
@@ -39605,13 +47524,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 571,
-    "last_thought_beat": 2344,
-    "activity": "checking a manifest",
-    "action": "checking a manifest",
+    "last_thought_beat": 2360,
+    "activity": "running the machine",
+    "action": "running the machine",
     "vehicle": null,
     "volatility": 45,
-    "money": 665,
-    "skill": 37.5,
+    "money": 727,
+    "skill": 38.5,
     "job": {
       "at": "cannery",
       "title": "works the line at the cannery",
@@ -39628,8 +47547,336 @@
     "driving": null,
     "path": [
       [
+        92,
+        67
+      ],
+      [
+        91,
+        67
+      ],
+      [
+        90,
+        67
+      ],
+      [
+        90,
+        66
+      ],
+      [
+        90,
+        65
+      ],
+      [
+        89,
+        65
+      ],
+      [
+        88,
+        65
+      ],
+      [
+        87,
+        65
+      ],
+      [
+        86,
+        65
+      ],
+      [
+        85,
+        65
+      ],
+      [
+        85,
+        64
+      ],
+      [
+        85,
+        63
+      ],
+      [
+        85,
+        62
+      ],
+      [
+        84,
+        62
+      ],
+      [
+        83,
+        62
+      ],
+      [
+        82,
+        62
+      ],
+      [
+        81,
+        62
+      ],
+      [
+        80,
+        62
+      ],
+      [
+        79,
+        62
+      ],
+      [
+        78,
+        62
+      ],
+      [
+        77,
+        62
+      ],
+      [
+        76,
+        62
+      ],
+      [
+        75,
+        62
+      ],
+      [
+        74,
+        62
+      ],
+      [
+        73,
+        62
+      ],
+      [
+        72,
+        62
+      ],
+      [
+        71,
+        62
+      ],
+      [
+        70,
+        62
+      ],
+      [
+        69,
+        62
+      ],
+      [
+        68,
+        62
+      ],
+      [
+        67,
+        62
+      ],
+      [
+        67,
+        61
+      ],
+      [
+        67,
+        60
+      ],
+      [
+        67,
+        59
+      ],
+      [
+        67,
+        58
+      ],
+      [
+        67,
+        57
+      ],
+      [
+        67,
+        56
+      ],
+      [
+        67,
+        55
+      ],
+      [
+        67,
+        54
+      ],
+      [
+        67,
+        53
+      ],
+      [
+        67,
+        52
+      ],
+      [
+        67,
+        51
+      ],
+      [
+        67,
+        50
+      ],
+      [
+        67,
+        49
+      ],
+      [
+        67,
+        48
+      ],
+      [
+        67,
+        47
+      ],
+      [
+        67,
+        46
+      ],
+      [
+        67,
+        45
+      ],
+      [
+        67,
+        44
+      ],
+      [
+        67,
+        43
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        67,
+        41
+      ],
+      [
+        67,
+        40
+      ],
+      [
+        67,
+        39
+      ],
+      [
+        67,
+        38
+      ],
+      [
+        67,
+        37
+      ],
+      [
+        67,
+        36
+      ],
+      [
+        66,
+        36
+      ],
+      [
+        66,
+        35
+      ],
+      [
+        66,
+        34
+      ],
+      [
+        66,
+        33
+      ],
+      [
+        66,
+        32
+      ],
+      [
+        66,
+        31
+      ],
+      [
+        66,
+        30
+      ],
+      [
+        65,
+        30
+      ],
+      [
+        64,
+        30
+      ],
+      [
+        63,
+        30
+      ],
+      [
         62,
-        17
+        30
+      ],
+      [
+        62,
+        29
+      ],
+      [
+        62,
+        28
+      ],
+      [
+        62,
+        27
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        62,
+        25
+      ],
+      [
+        62,
+        24
+      ],
+      [
+        63,
+        24
+      ],
+      [
+        64,
+        24
+      ],
+      [
+        65,
+        24
+      ],
+      [
+        65,
+        23
+      ],
+      [
+        65,
+        22
+      ],
+      [
+        65,
+        21
+      ],
+      [
+        65,
+        20
+      ],
+      [
+        65,
+        19
+      ],
+      [
+        65,
+        18
       ]
     ],
     "thought": "",
@@ -39658,8 +47905,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      48
+      4,
+      51
     ],
     "dest": [
       3,
@@ -39667,15 +47914,15 @@
     ],
     "at": "terrace_a",
     "spot": [
-      2,
-      48
+      4,
+      51
     ],
     "mood": {
-      "energy": 49,
-      "happiness": 44,
-      "stress": 40,
+      "energy": 63,
+      "happiness": 50,
+      "stress": 38,
       "social_need": 0,
-      "fear": 22
+      "fear": 10
     },
     "relationships": {
       "simone": {
@@ -39724,39 +47971,27 @@
     "partner": null,
     "birth_day": 571,
     "arrived_day": 571,
-    "last_thought_beat": 2352,
+    "last_thought_beat": 2362,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watering a plant",
+    "activity": "making coffee",
     "driving": null,
     "path": [
       [
-        4,
-        51
-      ],
-      [
         3,
-        51
-      ],
-      [
-        2,
-        51
-      ],
-      [
-        2,
         50
       ],
       [
-        2,
-        49
+        4,
+        50
       ],
       [
-        2,
-        48
+        4,
+        51
       ]
     ],
-    "action": "watering a plant",
+    "action": "making coffee",
     "thought": "",
     "speech": null
   }

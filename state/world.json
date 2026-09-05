@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2357,
-  "last_beat_at": "2026-09-04T22:57:12Z",
+  "beat": 2364,
+  "last_beat_at": "2026-09-05T00:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 38,
-    "delmar": 24,
-    "terraces": 11,
-    "civic": 5
+    "riverside": 31,
+    "delmar": 17,
+    "terraces": 5,
+    "civic": 11
   },
   "turf": {
     "riverside": "crew",
@@ -922,6 +922,63 @@
   ],
   "events": [
     {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "ivy"
+      ],
+      "text": "Ms. Ivy Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 2362
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "jonah2"
+      ],
+      "text": "Jonah Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 2360
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 2359
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "blaise",
+        "dev"
+      ],
+      "text": "Dev Lindqvist does Blaise Osei a favour that costs them something real.",
+      "beat": 2358
+    },
+    {
       "id": "snitch_rumour",
       "heat": {},
       "mood": {
@@ -1132,61 +1189,6 @@
       ],
       "text": "Something pays out for Cassius Reyes. More than expected, which is its own problem.",
       "beat": 2331
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Dot Feeney ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 2329
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nia2"
-      ],
-      "text": "Nia Mbeki gets word that what they owe is wanted sooner than agreed.",
-      "beat": 2323
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 2322
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "femi",
-        "blaise"
-      ],
-      "text": "Somebody tells Femi Adeyemi that Blaise Osei has been seen talking to police.",
-      "beat": 2321
     }
   ],
   "player_queue": [
@@ -1209,12 +1211,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 588,
+  "last_gazette_day": 590,
   "llm_budget": {
-    "day": "2026-09-04",
+    "day": "2026-09-05",
     "spent": {
-      "fast": 163597,
-      "deep": 79732
+      "fast": 30107,
+      "deep": 1746
     }
   },
   "silent_runs": 0,
@@ -2740,6 +2742,18 @@
       "status": "convicted",
       "witnesses": 5,
       "verdict": "guilty"
+    },
+    {
+      "id": "c039",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "restocking the back bar, smoothing hair",
+      "day": 590,
+      "trial_day": 592,
+      "status": "awaiting_trial",
+      "witnesses": 2
     }
   ],
   "law_pressure": 2,
@@ -2786,21 +2800,21 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 0
     },
     {
       "a": "elias",
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 76
+      "heat": 72
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 30
+      "heat": 26
     },
     {
       "a": "cassius",
@@ -2814,21 +2828,21 @@
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 4
     },
     {
       "a": "sticks",
       "b": "tiny",
       "since_day": 563,
       "cause": "would not let it go",
-      "heat": 13
+      "heat": 9
     },
     {
       "a": "dot",
       "b": "odette",
       "since_day": 570,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 19
     }
   ],
   "quota_exhausted_on": {
@@ -2909,23 +2923,30 @@
     "id": "cal",
     "marked": 555
   },
-  "incidents": [
-    {
-      "id": "inc2356-opening-0",
-      "kind": "opening",
-      "effect": "opening",
-      "at": "new_home_589",
-      "x": 78,
-      "y": 130,
-      "who": [],
-      "text": "Halloway Tenement opens on what was empty ground in The Flats.",
-      "started": 2356,
-      "until": 2358
-    }
-  ],
-  "treasury": 139360,
+  "incidents": [],
+  "treasury": 141148,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 590,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 141148
+    },
+    {
+      "day": 589,
+      "wages": 1794,
+      "takings": 3155,
+      "tax": 1614,
+      "welfare": 0,
+      "civic": 720,
+      "net": 894,
+      "treasury": 140254
+    },
     {
       "day": 588,
       "wages": 1794,
@@ -3205,26 +3226,6 @@
       "civic": 720,
       "net": 894,
       "treasury": 115357
-    },
-    {
-      "day": 554,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 114463
-    },
-    {
-      "day": 553,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 113569
     }
   ],
   "births": [
@@ -3656,32 +3657,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 530,
-      "overall": 70,
-      "economy": 97,
-      "wellbeing": 69,
-      "society": 24,
-      "infrastructure": 96,
-      "growth": 67,
-      "population": 53,
-      "buildings": 47,
-      "treasury": 98026,
-      "employment": 100
-    },
-    {
-      "day": 531,
-      "overall": 70,
-      "economy": 97,
-      "wellbeing": 69,
-      "society": 24,
-      "infrastructure": 96,
-      "growth": 66,
-      "population": 53,
-      "buildings": 48,
-      "treasury": 98883,
-      "employment": 100
-    },
     {
       "day": 532,
       "overall": 70,
@@ -4279,19 +4254,45 @@
       "buildings": 49,
       "treasury": 139360,
       "employment": 100
+    },
+    {
+      "day": 589,
+      "overall": 68,
+      "economy": 97,
+      "wellbeing": 58,
+      "society": 27,
+      "infrastructure": 94,
+      "growth": 72,
+      "population": 55,
+      "buildings": 50,
+      "treasury": 140254,
+      "employment": 100
+    },
+    {
+      "day": 590,
+      "overall": 69,
+      "economy": 97,
+      "wellbeing": 64,
+      "society": 24,
+      "infrastructure": 94,
+      "growth": 72,
+      "population": 55,
+      "buildings": 50,
+      "treasury": 141148,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 588,
+    "day": 590,
     "overall": 69,
     "economy": 97,
-    "wellbeing": 63,
-    "society": 29,
+    "wellbeing": 64,
+    "society": 24,
     "infrastructure": 94,
-    "growth": 67,
+    "growth": 72,
     "population": 55,
-    "buildings": 49,
-    "treasury": 139360,
+    "buildings": 50,
+    "treasury": 141148,
     "employment": 100
   },
   "buildable": {
