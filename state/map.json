@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 128,
   "h": 136,
-  "version": "db22345bf739",
+  "version": "66268357adc2",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -25,14 +25,14 @@
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "............====........................====........................====.ggggggggggggg..........====............====...ggggggg..",
+    "............====........................====........................====.ggggggggggggg..........====...ggggggg..====...ggggggg..",
     ".##########.,,,,...........##########...,,,,.ggggggggggggg.########.,,,,.#############..........,,,,.gggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#..........,:,,.gggggggggg.,:,,.gg#######gg",
-    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#..........,:,,.gggggggggg.,:,,.gg#fffff#gg",
-    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#..........,,,,.gggggggggg.,,,,.gg#fffff#gg",
-    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gg#fffff#gg",
-    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gg#fffff#gg",
-    ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gg###D###gg",
+    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#..........,:,,.gg#######g.,:,,.gg#######gg",
+    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#..........,:,,.gg#fffff#g.,:,,.gg#fffff#gg",
+    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#..........,,,,.gg#fffff#g.,,,,.gg#fffff#gg",
+    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gg#fffff#g.,,,,.gg#fffff#gg",
+    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gg#fffff#g.,:,,.gg#fffff#gg",
+    ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gg###D###g.,:,,.gg###D###gg",
     ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.ggggggggggg",
     ".#ffff#.....,,,,.#fffffff#.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.ggggggggggg",
     ".#ffff#.....,:,,.####D####.#ffffffff#...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.ggggggggggg",
@@ -3733,6 +3733,81 @@
           "type": "rug",
           "x": 80,
           "y": 127
+        }
+      ]
+    },
+    "new_home_610": {
+      "id": "new_home_610",
+      "name": "Brendan Cottages",
+      "district": "riverside",
+      "rect": [
+        103,
+        16,
+        7,
+        6
+      ],
+      "rects": [
+        [
+          103,
+          16,
+          7,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "clapboard",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        106,
+        20
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 104,
+          "y": 19
+        },
+        {
+          "type": "bed",
+          "x": 104,
+          "y": 17
+        },
+        {
+          "type": "sofa",
+          "x": 106,
+          "y": 19
+        },
+        {
+          "type": "tv",
+          "x": 108,
+          "y": 17
+        },
+        {
+          "type": "table",
+          "x": 106,
+          "y": 18
+        },
+        {
+          "type": "sink",
+          "x": 104,
+          "y": 20
+        },
+        {
+          "type": "shelf",
+          "x": 107,
+          "y": 17
+        },
+        {
+          "type": "plant",
+          "x": 105,
+          "y": 18
+        },
+        {
+          "type": "rug",
+          "x": 108,
+          "y": 19
         }
       ]
     }

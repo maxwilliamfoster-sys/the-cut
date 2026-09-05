@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2433,
-  "last_beat_at": "2026-09-05T17:57:12Z",
+  "beat": 2442,
+  "last_beat_at": "2026-09-05T20:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "fog off the water",
   "heat": {
-    "riverside": 20,
-    "delmar": 25,
+    "riverside": 36,
+    "delmar": 60,
     "terraces": 5,
     "civic": 5
   },
@@ -1007,6 +1007,82 @@
         "social_need": -15
       },
       "targets": [
+        "iris2",
+        "errol3"
+      ],
+      "text": "Errol Brannon does Iris Lindqvist a favour that costs them something real.",
+      "beat": 2442
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2441
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2437
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2436
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2435
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2434
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
         "june",
         "jonah3"
       ],
@@ -1179,84 +1255,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 2415
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 2414
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 2412
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 2410
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "otis",
-        "priya"
-      ],
-      "text": "Somebody tells Otis Bello that Ms. Priya Raman has been seen talking to police.",
-      "beat": 2409
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "rosa"
-      ],
-      "text": "Something pays out for Rosa Reyes. More than expected, which is its own problem.",
-      "beat": 2408
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "kohl",
-        "gil"
-      ],
-      "text": "Gil Lindqvist does Ofc. Brady Kohl a favour that costs them something real.",
-      "beat": 2407
     }
   ],
   "player_queue": [
@@ -1279,12 +1277,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 607,
+  "last_gazette_day": 609,
   "llm_budget": {
     "day": "2026-09-05",
     "spent": {
       "fast": 163485,
-      "deep": 74395
+      "deep": 105076
     }
   },
   "silent_runs": 0,
@@ -2213,6 +2211,23 @@
       "floors": 3,
       "condition": "standing",
       "since_day": 589
+    },
+    {
+      "id": "new_home_610",
+      "name": "Brendan Cottages",
+      "district": "riverside",
+      "x": 103,
+      "y": 16,
+      "w": 7,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "clapboard",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 610
     }
   ],
   "laws": [
@@ -2888,11 +2903,23 @@
       "status": "convicted",
       "witnesses": 5,
       "verdict": "guilty"
+    },
+    {
+      "id": "c045",
+      "who": "cass",
+      "name": "Cass Deveaux",
+      "law": "law01",
+      "law_title": "Quiet Hours in the Empty Lot",
+      "evidence": "glances at empty lot",
+      "day": 609,
+      "trial_day": 611,
+      "status": "awaiting_trial",
+      "witnesses": 2
     }
   ],
   "law_pressure": 3,
   "last_law_day": 503,
-  "last_expansion_day": 589,
+  "last_expansion_day": 610,
   "feuds": [
     {
       "a": "cass",
@@ -2941,14 +2968,14 @@
       "b": "jonah",
       "since_day": 447,
       "cause": "would not let it go",
-      "heat": 64
+      "heat": 60
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 38
+      "heat": 54
     },
     {
       "a": "cassius",
@@ -2962,7 +2989,7 @@
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 12
     },
     {
       "a": "sticks",
@@ -3051,9 +3078,29 @@
     "marked": 555
   },
   "incidents": [],
-  "treasury": 154007,
+  "treasury": 155855,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 609,
+      "wages": 1889,
+      "takings": 3155,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 720,
+      "net": 924,
+      "treasury": 155855
+    },
+    {
+      "day": 608,
+      "wages": 1889,
+      "takings": 3155,
+      "tax": 1644,
+      "welfare": 0,
+      "civic": 720,
+      "net": 924,
+      "treasury": 154931
+    },
     {
       "day": 607,
       "wages": 1889,
@@ -3333,26 +3380,6 @@
       "civic": 720,
       "net": 894,
       "treasury": 129526
-    },
-    {
-      "day": 576,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 128632
-    },
-    {
-      "day": 575,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 127738
     }
   ],
   "births": [
@@ -3811,32 +3838,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 551,
-      "overall": 68,
-      "economy": 96,
-      "wellbeing": 63,
-      "society": 28,
-      "infrastructure": 92,
-      "growth": 62,
-      "population": 54,
-      "buildings": 47,
-      "treasury": 111768,
-      "employment": 100
-    },
-    {
-      "day": 552,
-      "overall": 68,
-      "economy": 97,
-      "wellbeing": 63,
-      "society": 24,
-      "infrastructure": 92,
-      "growth": 67,
-      "population": 54,
-      "buildings": 48,
-      "treasury": 112675,
-      "employment": 100
-    },
     {
       "day": 553,
       "overall": 67,
@@ -4434,19 +4435,45 @@
       "buildings": 50,
       "treasury": 154007,
       "employment": 100
+    },
+    {
+      "day": 608,
+      "overall": 70,
+      "economy": 96,
+      "wellbeing": 59,
+      "society": 29,
+      "infrastructure": 92,
+      "growth": 85,
+      "population": 60,
+      "buildings": 50,
+      "treasury": 154931,
+      "employment": 100
+    },
+    {
+      "day": 609,
+      "overall": 69,
+      "economy": 96,
+      "wellbeing": 60,
+      "society": 24,
+      "infrastructure": 92,
+      "growth": 85,
+      "population": 60,
+      "buildings": 50,
+      "treasury": 155855,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 607,
-    "overall": 72,
+    "day": 609,
+    "overall": 69,
     "economy": 96,
-    "wellbeing": 65,
-    "society": 32,
+    "wellbeing": 60,
+    "society": 24,
     "infrastructure": 92,
     "growth": 85,
     "population": 60,
     "buildings": 50,
-    "treasury": 154007,
+    "treasury": 155855,
     "employment": 100
   },
   "buildable": {
@@ -4493,7 +4520,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 128,
