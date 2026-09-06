@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2472,
-  "last_beat_at": "2026-09-06T03:42:12Z",
+  "beat": 2491,
+  "last_beat_at": "2026-09-06T08:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 6,
-    "delmar": 60,
-    "terraces": 5,
+    "riverside": 5,
+    "delmar": 41,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -1009,9 +1009,112 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine72",
+      "from": "theo",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 623,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "theo"
+      ],
+      "text": "Something pays out for Theo Bello. More than expected, which is its own problem.",
+      "beat": 2491
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2490
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2484
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2483
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2482
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 2481
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2480
+    },
     {
       "id": "inspection",
       "heat": {
@@ -1174,93 +1277,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 2447
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
-      "beat": 2445
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2444
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2443
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "iris2",
-        "errol3"
-      ],
-      "text": "Errol Brannon does Iris Lindqvist a favour that costs them something real.",
-      "beat": 2442
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2441
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2437
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2436
     }
   ],
   "player_queue": [
@@ -1283,12 +1299,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 617,
+  "last_gazette_day": 622,
   "llm_budget": {
     "day": "2026-09-06",
     "spent": {
-      "fast": 77730,
-      "deep": 3439
+      "fast": 132475,
+      "deep": 6009
     }
   },
   "silent_runs": 0,
@@ -2314,7 +2330,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 15
+      "convictions": 16
     },
     {
       "id": "law05",
@@ -2965,8 +2981,57 @@
       "evidence": "stays in bed",
       "day": 618,
       "trial_day": 620,
+      "status": "convicted",
+      "witnesses": 10,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c048",
+      "who": "amara",
+      "name": "Amara Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "Wiping counter, eyeing the barbershop’s door",
+      "day": 621,
+      "trial_day": 623,
       "status": "awaiting_trial",
-      "witnesses": 10
+      "witnesses": 2
+    },
+    {
+      "id": "c049",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "writes in ledger, eyes the bar",
+      "day": 621,
+      "trial_day": 623,
+      "status": "awaiting_trial",
+      "witnesses": 3
+    },
+    {
+      "id": "c050",
+      "who": "hector",
+      "name": "Hector Delgado",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "He checks the shipment list, eyes scanning the ledger",
+      "day": 621,
+      "trial_day": 623,
+      "status": "awaiting_trial",
+      "witnesses": 4
+    },
+    {
+      "id": "c051",
+      "who": "blaise",
+      "name": "Blaise Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "combing a client’s hair",
+      "day": 622,
+      "trial_day": 624,
+      "status": "awaiting_trial",
+      "witnesses": 4
     }
   ],
   "law_pressure": 0,
@@ -2978,7 +3043,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 16
     },
     {
       "a": "booker",
@@ -3006,21 +3071,21 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     },
     {
       "a": "nia",
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 6
+      "heat": 0
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 40
+      "heat": 54
     },
     {
       "a": "cass",
@@ -3041,7 +3106,7 @@
       "b": "cass",
       "since_day": 611,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 37
     }
   ],
   "quota_exhausted_on": {
@@ -3129,25 +3194,40 @@
     "id": "jonah",
     "marked": 617
   },
-  "incidents": [
-    {
-      "id": "inc2472-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "theo"
-      ],
-      "text": "Theo Bello is taken to the 9th over No Linger on Porch After Dusk.",
-      "started": 2472,
-      "until": 2473
-    }
-  ],
-  "treasury": 162336,
+  "incidents": [],
+  "treasury": 165147,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 622,
+      "wages": 1931,
+      "takings": 3155,
+      "tax": 1657,
+      "welfare": 0,
+      "civic": 720,
+      "net": 937,
+      "treasury": 165147
+    },
+    {
+      "day": 621,
+      "wages": 1931,
+      "takings": 3155,
+      "tax": 1657,
+      "welfare": 0,
+      "civic": 720,
+      "net": 937,
+      "treasury": 164210
+    },
+    {
+      "day": 620,
+      "wages": 1931,
+      "takings": 3155,
+      "tax": 1657,
+      "welfare": 0,
+      "civic": 720,
+      "net": 937,
+      "treasury": 163273
+    },
     {
       "day": 617,
       "wages": 1931,
@@ -3417,36 +3497,6 @@
       "civic": 720,
       "net": 894,
       "treasury": 138466
-    },
-    {
-      "day": 586,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 137572
-    },
-    {
-      "day": 585,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 136678
-    },
-    {
-      "day": 584,
-      "wages": 1794,
-      "takings": 3155,
-      "tax": 1614,
-      "welfare": 0,
-      "civic": 720,
-      "net": 894,
-      "treasury": 135784
     }
   ],
   "births": [
@@ -3914,45 +3964,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 561,
-      "overall": 68,
-      "economy": 98,
-      "wellbeing": 63,
-      "society": 32,
-      "infrastructure": 93,
-      "growth": 50,
-      "population": 53,
-      "buildings": 48,
-      "treasury": 119797,
-      "employment": 100
-    },
-    {
-      "day": 562,
-      "overall": 68,
-      "economy": 98,
-      "wellbeing": 63,
-      "society": 32,
-      "infrastructure": 93,
-      "growth": 50,
-      "population": 53,
-      "buildings": 48,
-      "treasury": 120676,
-      "employment": 100
-    },
-    {
-      "day": 563,
-      "overall": 66,
-      "economy": 98,
-      "wellbeing": 61,
-      "society": 28,
-      "infrastructure": 93,
-      "growth": 50,
-      "population": 53,
-      "buildings": 48,
-      "treasury": 121555,
-      "employment": 100
-    },
     {
       "day": 564,
       "overall": 65,
@@ -4537,19 +4548,58 @@
       "buildings": 51,
       "treasury": 162336,
       "employment": 100
+    },
+    {
+      "day": 620,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 59,
+      "society": 32,
+      "infrastructure": 94,
+      "growth": 91,
+      "population": 61,
+      "buildings": 51,
+      "treasury": 163273,
+      "employment": 100
+    },
+    {
+      "day": 621,
+      "overall": 70,
+      "economy": 95,
+      "wellbeing": 62,
+      "society": 21,
+      "infrastructure": 94,
+      "growth": 91,
+      "population": 61,
+      "buildings": 51,
+      "treasury": 164210,
+      "employment": 100
+    },
+    {
+      "day": 622,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 58,
+      "society": 17,
+      "infrastructure": 94,
+      "growth": 91,
+      "population": 61,
+      "buildings": 51,
+      "treasury": 165147,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 617,
-    "overall": 71,
+    "day": 622,
+    "overall": 68,
     "economy": 95,
     "wellbeing": 58,
-    "society": 32,
+    "society": 17,
     "infrastructure": 94,
     "growth": 91,
     "population": 61,
     "buildings": 51,
-    "treasury": 162336,
+    "treasury": 165147,
     "employment": 100
   },
   "buildable": {
@@ -4596,7 +4646,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 128,
