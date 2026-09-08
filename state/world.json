@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2647,
-  "last_beat_at": "2026-09-07T23:27:12Z",
+  "beat": 2654,
+  "last_beat_at": "2026-09-08T01:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 67,
+    "delmar": 66,
     "terraces": 5,
     "civic": 5
   },
@@ -1438,9 +1438,110 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine105",
+      "from": "errol3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 665,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "maren2"
+      ],
+      "text": "Maren Bello gets word that what they owe is wanted sooner than agreed.",
+      "beat": 2654
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 2653
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "junie",
+        "cass"
+      ],
+      "text": "Cass Deveaux does Junie Marsh a favour that costs them something real.",
+      "beat": 2652
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "errol3",
+        "priya"
+      ],
+      "text": "Errol Brannon and Ms. Priya Raman are seen arguing in the street loud enough that people stop.",
+      "beat": 2651
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 2650
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2649
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2648
+    },
     {
       "id": "new_face",
       "heat": {},
@@ -1604,90 +1705,6 @@
       ],
       "text": "Nadia Vasquez and Sami Amadi are seen arguing in the street loud enough that people stop.",
       "beat": 2628
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2624
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 2623
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2622
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2620
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
-      "beat": 2619
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2616
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 2615
     }
   ],
   "player_queue": [
@@ -1710,12 +1727,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 660,
+  "last_gazette_day": 662,
   "llm_budget": {
-    "day": "2026-09-07",
+    "day": "2026-09-08",
     "spent": {
-      "fast": 163444,
-      "deep": 97514
+      "fast": 33875,
+      "deep": 965
     }
   },
   "silent_runs": 0,
@@ -2815,101 +2832,10 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 24
+      "convictions": 25
     }
   ],
   "charges": [
-    {
-      "id": "c022",
-      "who": "cassius",
-      "name": "Cassius Reyes",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays in bed, watches others eat",
-      "day": 518,
-      "trial_day": 520,
-      "status": "convicted",
-      "witnesses": 7,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c023",
-      "who": "gus",
-      "name": "Gus Petrakis",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays asleep",
-      "day": 521,
-      "trial_day": 523,
-      "status": "convicted",
-      "witnesses": 5,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c024",
-      "who": "maren2",
-      "name": "Maren Bello",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays awake",
-      "day": 521,
-      "trial_day": 523,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c025",
-      "who": "elias",
-      "name": "Elias Reyes",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays in bed, looks at ceiling",
-      "day": 522,
-      "trial_day": 524,
-      "status": "convicted",
-      "witnesses": 6,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c026",
-      "who": "cassius",
-      "name": "Cassius Reyes",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "Cares for a stray cat on the porch, whispers softly",
-      "day": 523,
-      "trial_day": 525,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c027",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "checks barber chair, greets Amara",
-      "day": 523,
-      "trial_day": 525,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c028",
-      "who": "dev",
-      "name": "Dev Lindqvist",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "scraps hair clippers, staring out",
-      "day": 527,
-      "trial_day": 529,
-      "status": "convicted",
-      "witnesses": 1,
-      "verdict": "guilty"
-    },
     {
       "id": "c029",
       "who": "ruiz",
@@ -3595,8 +3521,105 @@
       "evidence": "places canned beans on shelf, glances at ledger",
       "day": 660,
       "trial_day": 662,
+      "status": "convicted",
+      "witnesses": 4,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "odette2",
+      "name": "Odette Osei",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stands behind till, eyes the cash drawer",
+      "day": 662,
+      "trial_day": 664,
+      "status": "awaiting_trial",
+      "witnesses": 3
+    },
+    {
+      "id": "c061",
+      "who": "blaise",
+      "name": "Blaise Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "checking a client’s hair, avoiding eye contact",
+      "day": 662,
+      "trial_day": 664,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c062",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "tapping ledger, watching Odette",
+      "day": 662,
+      "trial_day": 664,
       "status": "awaiting_trial",
       "witnesses": 4
+    },
+    {
+      "id": "c061",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "sits in barber chair, eyes on Tiny",
+      "day": 662,
+      "trial_day": 664,
+      "status": "awaiting_trial",
+      "witnesses": 14
+    },
+    {
+      "id": "c061",
+      "who": "otis",
+      "name": "Otis Bello",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stands, eyes the news, mutters quietly",
+      "day": 663,
+      "trial_day": 665,
+      "status": "awaiting_trial",
+      "witnesses": 10
+    },
+    {
+      "id": "c062",
+      "who": "cassius",
+      "name": "Cassius Reyes",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stands, eats, watches others",
+      "day": 663,
+      "trial_day": 665,
+      "status": "awaiting_trial",
+      "witnesses": 10
+    },
+    {
+      "id": "c061",
+      "who": "okafor",
+      "name": "Chinedu Okafor",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "counting float, eyeing Marisol's ledger",
+      "day": 663,
+      "trial_day": 665,
+      "status": "awaiting_trial",
+      "witnesses": 2
+    },
+    {
+      "id": "c061",
+      "who": "amara",
+      "name": "Amara Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "stares at the barber shop window",
+      "day": 663,
+      "trial_day": 665,
+      "status": "awaiting_trial",
+      "witnesses": 11
     }
   ],
   "law_pressure": 1,
@@ -3608,7 +3631,7 @@
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 6
+      "heat": 4
     },
     {
       "a": "booker",
@@ -3650,7 +3673,7 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 12
     },
     {
       "a": "cass",
@@ -3671,28 +3694,28 @@
       "b": "ruiz",
       "since_day": 626,
       "cause": "would not let it go",
-      "heat": 21
+      "heat": 19
     },
     {
       "a": "dot",
       "b": "odette",
       "since_day": 638,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 21
     },
     {
       "a": "hector",
       "b": "yusuf",
       "since_day": 654,
       "cause": "would not let it go",
-      "heat": 39
+      "heat": 37
     },
     {
       "a": "elias",
       "b": "tee",
       "since_day": 657,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 43
     }
   ],
   "quota_exhausted_on": {
@@ -3787,10 +3810,35 @@
     "id": "rosa2",
     "marked": 625
   },
-  "incidents": [],
-  "treasury": 194370,
+  "incidents": [
+    {
+      "id": "inc2654-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "amara"
+      ],
+      "text": "Amara Bello is taken to the 9th over Public Haircut Ban.",
+      "started": 2654,
+      "until": 2655
+    }
+  ],
+  "treasury": 195413,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 662,
+      "wages": 1913,
+      "takings": 3495,
+      "tax": 1763,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1043,
+      "treasury": 195413
+    },
     {
       "day": 661,
       "wages": 1913,
@@ -4080,16 +4128,6 @@
       "civic": 720,
       "net": 931,
       "treasury": 166998
-    },
-    {
-      "day": 623,
-      "wages": 1879,
-      "takings": 3155,
-      "tax": 1640,
-      "welfare": 0,
-      "civic": 720,
-      "net": 920,
-      "treasury": 166067
     }
   ],
   "births": [
@@ -4557,19 +4595,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 602,
-      "overall": 71,
-      "economy": 96,
-      "wellbeing": 69,
-      "society": 28,
-      "infrastructure": 94,
-      "growth": 73,
-      "population": 58,
-      "buildings": 50,
-      "treasury": 149387,
-      "employment": 100
-    },
     {
       "day": 603,
       "overall": 69,
@@ -5180,19 +5205,32 @@
       "buildings": 53,
       "treasury": 194370,
       "employment": 100
+    },
+    {
+      "day": 662,
+      "overall": 65,
+      "economy": 97,
+      "wellbeing": 66,
+      "society": 11,
+      "infrastructure": 94,
+      "growth": 60,
+      "population": 61,
+      "buildings": 53,
+      "treasury": 195413,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 661,
-    "overall": 68,
+    "day": 662,
+    "overall": 65,
     "economy": 97,
-    "wellbeing": 68,
-    "society": 24,
+    "wellbeing": 66,
+    "society": 11,
     "infrastructure": 94,
     "growth": 60,
     "population": 61,
     "buildings": 53,
-    "treasury": 194370,
+    "treasury": 195413,
     "employment": 100
   },
   "buildable": {
