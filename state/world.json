@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2822,
-  "last_beat_at": "2026-09-09T19:12:12Z",
+  "beat": 2832,
+  "last_beat_at": "2026-09-09T21:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
-    "riverside": 26,
-    "delmar": 89,
+    "riverside": 41,
+    "delmar": 81,
     "terraces": 5,
-    "civic": 5
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -2023,9 +2023,129 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine150",
+      "from": "ruiz",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 709,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine151",
+      "from": "rey",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 709,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine152",
+      "from": "cal2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 709,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine153",
+      "from": "tiny",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 709,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine154",
+      "from": "okafor",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 710,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine155",
+      "from": "elias",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 711,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2832
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "amara"
+      ],
+      "text": "Amara Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 2830
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 2823
+    },
     {
       "id": "cold_case",
       "heat": {},
@@ -2238,43 +2358,6 @@
       ],
       "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
       "beat": 2792
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2790
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2788
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
-      "beat": 2787
     }
   ],
   "player_queue": [
@@ -2297,12 +2380,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 704,
+  "last_gazette_day": 707,
   "llm_budget": {
     "day": "2026-09-09",
     "spent": {
       "fast": 163363,
-      "deep": 94812
+      "deep": 116105
     }
   },
   "silent_runs": 0,
@@ -3396,7 +3479,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 27
+      "convictions": 32
     },
     {
       "id": "law05",
@@ -3436,36 +3519,10 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 53
+      "convictions": 54
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "blaise",
-      "name": "Blaise Osei",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "checking a client’s hair, avoiding eye contact",
-      "day": 662,
-      "trial_day": 664,
-      "status": "convicted",
-      "witnesses": 5,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "tapping ledger, watching Odette",
-      "day": 662,
-      "trial_day": 664,
-      "status": "convicted",
-      "witnesses": 4,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "tee",
@@ -4138,8 +4195,9 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
-      "witnesses": 8
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
     },
     {
       "id": "c062",
@@ -4150,7 +4208,7 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
+      "status": "dropped",
       "witnesses": 5
     },
     {
@@ -4162,8 +4220,9 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
-      "witnesses": 5
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     },
     {
       "id": "c064",
@@ -4174,8 +4233,9 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
-      "witnesses": 5
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     },
     {
       "id": "c065",
@@ -4186,8 +4246,9 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
-      "witnesses": 2
+      "status": "acquitted",
+      "witnesses": 2,
+      "verdict": "not guilty"
     },
     {
       "id": "c066",
@@ -4198,8 +4259,9 @@
       "evidence": "stays asleep",
       "day": 704,
       "trial_day": 706,
-      "status": "awaiting_trial",
-      "witnesses": 16
+      "status": "convicted",
+      "witnesses": 16,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -4210,8 +4272,35 @@
       "evidence": "tallies ledger pencil marks against the register tape.",
       "day": 705,
       "trial_day": 707,
-      "status": "awaiting_trial",
-      "witnesses": 2
+      "status": "convicted",
+      "witnesses": 2,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "adaeze",
+      "name": "Adaeze Okonkwo",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "adjusts TV volume, eyes lingering",
+      "day": 706,
+      "trial_day": 708,
+      "status": "acquitted",
+      "witnesses": 1,
+      "verdict": "not guilty"
+    },
+    {
+      "id": "c061",
+      "who": "elias",
+      "name": "Elias Reyes",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays still, ears tuned to rain",
+      "day": 706,
+      "trial_day": 708,
+      "status": "convicted",
+      "witnesses": 16,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 2,
@@ -4219,31 +4308,10 @@
   "last_expansion_day": 705,
   "feuds": [
     {
-      "a": "cass",
-      "b": "kohl",
-      "since_day": 243,
-      "cause": "would not let it go",
-      "heat": 0
-    },
-    {
-      "a": "booker",
-      "b": "kohl",
-      "since_day": 263,
-      "cause": "would not let it go",
-      "heat": 0
-    },
-    {
       "a": "booker",
       "b": "ruiz",
       "since_day": 281,
       "cause": "it turned physical",
-      "heat": 0
-    },
-    {
-      "a": "gus",
-      "b": "kohl",
-      "since_day": 290,
-      "cause": "would not let it go",
       "heat": 0
     },
     {
@@ -4258,7 +4326,7 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     },
     {
       "a": "booker",
@@ -4282,23 +4350,16 @@
       "heat": 0
     },
     {
-      "a": "kohl",
-      "b": "ruiz",
-      "since_day": 626,
-      "cause": "would not let it go",
-      "heat": 0
-    },
-    {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 47
+      "heat": 41
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-09",
-    "beat": 2822,
+    "beat": 2829,
     "providers": [
       "gemini"
     ]
@@ -4392,12 +4453,56 @@
   "funeral": {
     "day": 707,
     "for": "Ofc. Brady Kohl",
-    "id": "kohl"
+    "id": "kohl",
+    "marked": 707
   },
-  "incidents": [],
-  "treasury": 226646,
+  "incidents": [
+    {
+      "id": "inc2832-raid-0",
+      "kind": "raid",
+      "effect": "lights",
+      "at": "church",
+      "x": 50,
+      "y": 40,
+      "who": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "started": 2832,
+      "until": 2834
+    }
+  ],
+  "treasury": 229723,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 707,
+      "wages": 2002,
+      "takings": 3400,
+      "tax": 1760,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1040,
+      "treasury": 229723
+    },
+    {
+      "day": 706,
+      "wages": 1960,
+      "takings": 3400,
+      "tax": 1747,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1027,
+      "treasury": 228683
+    },
+    {
+      "day": 705,
+      "wages": 1907,
+      "takings": 3400,
+      "tax": 1730,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1010,
+      "treasury": 227656
+    },
     {
       "day": 704,
       "wages": 1960,
@@ -4667,39 +4772,18 @@
       "civic": 720,
       "net": 1043,
       "treasury": 199585
-    },
-    {
-      "day": 668,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 198542
-    },
-    {
-      "day": 667,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 197499
-    },
-    {
-      "day": 666,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 196456
     }
   ],
   "births": [
+    {
+      "id": "clemmie",
+      "name": "Clemmie Bello",
+      "day": 707,
+      "parents": [
+        "tee",
+        "amara"
+      ]
+    },
     {
       "id": "jonah4",
       "name": "Jonah Bello",
@@ -5173,45 +5257,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 637,
-      "overall": 67,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 23,
-      "infrastructure": 94,
-      "growth": 66,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 178232,
-      "employment": 100
-    },
-    {
-      "day": 638,
-      "overall": 65,
-      "economy": 96,
-      "wellbeing": 58,
-      "society": 25,
-      "infrastructure": 94,
-      "growth": 55,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 179225,
-      "employment": 100
-    },
-    {
-      "day": 641,
-      "overall": 67,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 26,
-      "infrastructure": 94,
-      "growth": 55,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 180218,
-      "employment": 100
-    },
     {
       "day": 642,
       "overall": 62,
@@ -5796,19 +5841,58 @@
       "buildings": 51,
       "treasury": 226646,
       "employment": 100
+    },
+    {
+      "day": 705,
+      "overall": 59,
+      "economy": 96,
+      "wellbeing": 60,
+      "society": 1,
+      "infrastructure": 85,
+      "growth": 51,
+      "population": 63,
+      "buildings": 52,
+      "treasury": 227656,
+      "employment": 100
+    },
+    {
+      "day": 706,
+      "overall": 64,
+      "economy": 96,
+      "wellbeing": 62,
+      "society": 23,
+      "infrastructure": 84,
+      "growth": 57,
+      "population": 64,
+      "buildings": 52,
+      "treasury": 228683,
+      "employment": 100
+    },
+    {
+      "day": 707,
+      "overall": 67,
+      "economy": 95,
+      "wellbeing": 65,
+      "society": 27,
+      "infrastructure": 83,
+      "growth": 69,
+      "population": 66,
+      "buildings": 52,
+      "treasury": 229723,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 704,
-    "overall": 59,
-    "economy": 96,
-    "wellbeing": 60,
-    "society": 4,
-    "infrastructure": 82,
-    "growth": 52,
-    "population": 64,
-    "buildings": 51,
-    "treasury": 226646,
+    "day": 707,
+    "overall": 67,
+    "economy": 95,
+    "wellbeing": 65,
+    "society": 27,
+    "infrastructure": 83,
+    "growth": 69,
+    "population": 66,
+    "buildings": 52,
+    "treasury": 229723,
     "employment": 100
   },
   "buildable": {
