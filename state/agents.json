@@ -3505,10 +3505,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 77,
+      "happiness": 63,
+      "stress": 99,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dez": {
@@ -3516,12 +3516,12 @@
         "opinion": "Distrustful"
       },
       "kohl": {
-        "affinity": -85,
-        "opinion": "skeptical"
+        "affinity": -89,
+        "opinion": "anxious"
       },
       "brennan": {
-        "affinity": -23,
-        "opinion": "supportive"
+        "affinity": -26,
+        "opinion": "drained"
       },
       "cass": {
         "affinity": -16,
@@ -3580,8 +3580,8 @@
         "opinion": "Dishonest"
       },
       "maren": {
-        "affinity": -6,
-        "opinion": "she’s just a kid"
+        "affinity": -8,
+        "opinion": "supportive"
       },
       "etta": {
         "affinity": -2,
@@ -3598,6 +3598,10 @@
       "rey": {
         "affinity": 0,
         "opinion": "he’s steady"
+      },
+      "jonah3": {
+        "affinity": -1,
+        "opinion": "friend"
       }
     },
     "memories": [
@@ -4616,8 +4620,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -4848,13 +4852,34 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system is against Lyle",
+        "importance": 8
       }
     ],
-    "action": "lying awake",
-    "activity": "lying awake",
-    "thought": "",
-    "speech": null,
+    "action": "folds napkins, keeps a silent watch",
+    "activity": "asleep",
+    "thought": "Lyle’s got a hand in everything, and it’s not good",
+    "speech": {
+      "to": "simone",
+      "text": "We’ll have to talk about that case tomorrow, but now, stay quiet."
+    },
     "path": [
+      [
+        4,
+        48
+      ],
+      [
+        3,
+        48
+      ],
+      [
+        3,
+        49
+      ],
       [
         3,
         50
@@ -4868,8 +4893,8 @@
         52
       ]
     ],
-    "last_thought_beat": 2737,
-    "belief": "Lyle's justice will be served if I keep watching.",
+    "last_thought_beat": 2751,
+    "belief": "the system is against Lyle",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -4877,7 +4902,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "church",
@@ -4932,10 +4957,10 @@
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 76,
+      "happiness": 63,
+      "stress": 99,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "booker": {
@@ -4979,8 +5004,8 @@
         "opinion": "I’m not the problem"
       },
       "brennan": {
-        "affinity": -14,
-        "opinion": "I’ll protect the precinct"
+        "affinity": -18,
+        "opinion": "protective"
       },
       "simone": {
         "affinity": -24,
@@ -5041,6 +5066,10 @@
       "iris": {
         "affinity": -1,
         "opinion": "She’s calm"
+      },
+      "maren": {
+        "affinity": -2,
+        "opinion": "respectful"
       }
     },
     "memories": [
@@ -5673,12 +5702,6 @@
         "day": 360,
         "what": "Cass Deveaux thinks they can publicly humiliate me without consequence.",
         "importance": 8
-      },
-      {
-        "beat": 1443,
-        "day": 360,
-        "what": "Cass Deveaux tried to talk down to me right inside Calloway's store.",
-        "importance": 5
       },
       {
         "beat": 1449,
@@ -6383,12 +6406,6 @@
         "importance": 8
       },
       {
-        "beat": 2740,
-        "day": 685,
-        "what": "Rufus Adeyemi was convicted over No Linger on Porch After Dusk.",
-        "importance": 6
-      },
-      {
         "beat": 2684,
         "day": 671,
         "what": "Etta Bello was convicted over Fountain Ledge Nightstand Ban.",
@@ -6473,22 +6490,37 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
-        "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
-        "importance": 6
-      },
-      {
         "beat": 2736,
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2740,
+        "day": 685,
+        "what": "Rufus Adeyemi was convicted over No Linger on Porch After Dusk.",
+        "importance": 6
+      },
+      {
+        "beat": 2744,
+        "day": 686,
+        "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law feels like a personal threat",
+        "importance": 8
       }
     ],
-    "action": "up for a glass of water, in the heat",
-    "activity": "up for a glass of water, in the heat",
-    "thought": "",
-    "speech": null,
+    "action": "taps envelope, eyes flicking between coworkers",
+    "activity": "up for a glass of water",
+    "thought": "Everyone’s watching, but I’m still on my beat",
+    "speech": {
+      "to": "gus",
+      "text": "If you hear something, let me know before it hits the front desk."
+    },
     "path": [
       [
         34,
@@ -6719,8 +6751,8 @@
         39
       ]
     ],
-    "last_thought_beat": 2739,
-    "belief": "Everyone thinks I’m dangerous because I was seen with police",
+    "last_thought_beat": 2751,
+    "belief": "the law feels like a personal threat",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -6729,7 +6761,7 @@
     "last_instigated_day": 678,
     "driving": "cruiser",
     "vehicle": "cruiser",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "church",
@@ -7533,23 +7565,23 @@
     },
     "pos": [
       9,
-      52
+      64
     ],
     "dest": [
       21,
       37
     ],
-    "at": "terrace_b",
+    "at": "precinct",
     "spot": [
       9,
-      52
+      64
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 47,
-      "stress": 77,
+      "energy": 0,
+      "happiness": 63,
+      "stress": 99,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dez": {
@@ -7589,8 +7621,8 @@
         "opinion": "strong and confident"
       },
       "kohl": {
-        "affinity": -4,
-        "opinion": "You’re stubborn"
+        "affinity": -6,
+        "opinion": "anxious"
       },
       "sticks": {
         "affinity": -21,
@@ -7649,12 +7681,12 @@
         "opinion": "my child"
       },
       "ruiz": {
-        "affinity": -3,
-        "opinion": "cautious"
+        "affinity": -8,
+        "opinion": "stubborn detective"
       },
       "jonah3": {
-        "affinity": 95,
-        "opinion": "my child"
+        "affinity": 94,
+        "opinion": "friend"
       },
       "etta3": {
         "affinity": 95,
@@ -7671,6 +7703,14 @@
       "iris": {
         "affinity": 0,
         "opinion": "curious"
+      },
+      "brennan": {
+        "affinity": -3,
+        "opinion": "frustrated with pension"
+      },
+      "maren": {
+        "affinity": -1,
+        "opinion": "supportive"
       }
     },
     "memories": [
@@ -8809,8 +8849,8 @@
         "importance": 4
       },
       {
-        "beat": 2710,
-        "day": 677,
+        "beat": 2745,
+        "day": 686,
         "what": "I was taken in over Public Haircut Ban.",
         "importance": 8
       },
@@ -8935,8 +8975,8 @@
         "importance": 4
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -8951,32 +8991,45 @@
         "day": 684,
         "what": "Heard strangers harass Dez, felt the block’s tension rise",
         "importance": 5
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "I feel targeted by multiple legal bans",
+        "importance": 8
       }
     ],
-    "action": "dozing in front of the TV",
-    "activity": "dozing in front of the TV",
-    "thought": "",
-    "speech": null,
+    "action": "leans against the 9th wall, waiting",
+    "activity": "waiting to be seen",
+    "thought": "I can’t let them push me off my chair",
+    "speech": {
+      "to": "dot",
+      "text": "We’ll get the diner sorted before you get fired."
+    },
     "path": [
       [
-        9,
-        49
+        6,
+        65
+      ],
+      [
+        7,
+        65
+      ],
+      [
+        8,
+        65
       ],
       [
         9,
-        50
+        65
       ],
       [
         9,
-        51
-      ],
-      [
-        9,
-        52
+        64
       ]
     ],
-    "last_thought_beat": 2738,
-    "belief": "Amara will take over the diner and I must stay out.",
+    "last_thought_beat": 2751,
+    "belief": "I feel targeted by multiple legal bans",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -9001,7 +9054,7 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -9027,7 +9080,8 @@
     "birth_day": null,
     "standing": 31,
     "directive": null,
-    "detained_until": 0
+    "detained_until": 688,
+    "charged_with": "Public Haircut Ban"
   },
   "simone": {
     "id": "simone",
@@ -9055,7 +9109,7 @@
     },
     "pos": [
       3,
-      52
+      50
     ],
     "dest": [
       3,
@@ -9064,14 +9118,14 @@
     "at": "terrace_a",
     "spot": [
       3,
-      52
+      50
     ],
     "mood": {
       "energy": 38,
-      "happiness": 47,
-      "stress": 39,
+      "happiness": 63,
+      "stress": 73,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "junie": {
@@ -10047,8 +10101,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -10261,10 +10315,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the courts suppress my voice",
+        "importance": 8
       }
     ],
-    "action": "asleep",
-    "activity": "asleep",
+    "action": "asleep, keeping warm",
+    "activity": "asleep, keeping warm",
     "thought": "",
     "speech": null,
     "path": [
@@ -10283,18 +10343,10 @@
       [
         3,
         50
-      ],
-      [
-        3,
-        51
-      ],
-      [
-        3,
-        52
       ]
     ],
-    "last_thought_beat": 2739,
-    "belief": "I must keep speaking until the truth surfaces.",
+    "last_thought_beat": 2750,
+    "belief": "the courts suppress my voice",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -10302,7 +10354,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -10349,8 +10401,8 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
-      49
+      34,
+      51
     ],
     "dest": [
       50,
@@ -10358,15 +10410,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      31,
-      49
+      34,
+      51
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 46,
+      "happiness": 63,
+      "stress": 80,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "nadia": {
@@ -11614,8 +11666,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -11846,20 +11898,29 @@
         "day": 684,
         "what": "Stranger's insults at Dez reminded me of past feuds",
         "importance": 5
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court actions endanger my family’s safety",
+        "importance": 8
       }
     ],
-    "action": "asleep",
+    "action": "slips back into bed, eyes half closed",
     "activity": "asleep",
-    "thought": "",
-    "speech": null,
+    "thought": "I can’t let my family get caught in this mess",
+    "speech": {
+      "to": "nadia",
+      "text": "Don’t go digging into that case, kid. It’s dangerous."
+    },
     "path": [
       [
-        31,
-        49
+        34,
+        51
       ]
     ],
-    "last_thought_beat": 2738,
-    "belief": "I must protect my family from the system.",
+    "last_thought_beat": 2751,
+    "belief": "court actions endanger my family’s safety",
     "alive": true,
     "health": 64,
     "grief": 0,
@@ -11868,7 +11929,7 @@
     "last_instigated_day": 674,
     "driving": null,
     "vehicle": "van",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -11922,10 +11983,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 55,
+      "happiness": 56,
+      "stress": 91,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "rey": {
@@ -11941,8 +12002,8 @@
         "opinion": "She's desperate and hopeless."
       },
       "priya": {
-        "affinity": 21,
-        "opinion": "You’re a skeptic"
+        "affinity": 20,
+        "opinion": "confidant"
       },
       "gus": {
         "affinity": -3,
@@ -11981,8 +12042,8 @@
         "opinion": "She's sharp-tongued"
       },
       "chidi": {
-        "affinity": -16,
-        "opinion": "trustworthy"
+        "affinity": -18,
+        "opinion": "supportive"
       },
       "simone": {
         "affinity": -7,
@@ -12001,8 +12062,8 @@
         "opinion": "scared"
       },
       "tiny": {
-        "affinity": 13,
-        "opinion": "she’s a fire"
+        "affinity": 12,
+        "opinion": "friend"
       },
       "nia": {
         "affinity": -8,
@@ -12683,8 +12744,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -12885,40 +12946,29 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system hides the truth further",
+        "importance": 8
       }
     ],
-    "action": "asleep",
+    "action": "stares at the ceiling, notebook in hand",
     "activity": "asleep",
-    "thought": "",
-    "speech": null,
+    "thought": "I know something’s off, but the truth is hidden",
+    "speech": {
+      "to": "rey",
+      "text": "Did you hear about the new fines? They’re weird."
+    },
     "path": [
-      [
-        31,
-        49
-      ],
-      [
-        32,
-        49
-      ],
-      [
-        33,
-        49
-      ],
-      [
-        34,
-        49
-      ],
-      [
-        34,
-        50
-      ],
       [
         34,
         51
       ]
     ],
-    "last_thought_beat": 2732,
-    "belief": "Truth will be uncovered if I keep digging.",
+    "last_thought_beat": 2751,
+    "belief": "the system hides the truth further",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -12926,7 +12976,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -12968,7 +13018,7 @@
     },
     "pos": [
       34,
-      34
+      32
     ],
     "dest": [
       50,
@@ -12977,19 +13027,19 @@
     "at": "pawnshop",
     "spot": [
       34,
-      34
+      32
     ],
     "mood": {
       "energy": 53,
-      "happiness": 47,
-      "stress": 46,
+      "happiness": 63,
+      "stress": 99,
       "social_need": 12,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "kohl": {
         "affinity": -100,
-        "opinion": "You’re hostile"
+        "opinion": "hostile"
       },
       "wes": {
         "affinity": -100,
@@ -14074,8 +14124,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -14282,180 +14332,26 @@
         "day": 684,
         "what": "Cass’s recent conviction still haunts the pawn shop",
         "importance": 5
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "my position is at risk from legal actions",
+        "importance": 8
       }
     ],
-    "action": "restocking shelves, in the heat",
-    "activity": "restocking shelves, in the heat",
+    "action": "counting the float, keeping warm",
+    "activity": "counting the float, keeping warm",
     "thought": "",
     "speech": null,
     "path": [
       [
-        28,
-        18
-      ],
-      [
-        28,
-        19
-      ],
-      [
-        29,
-        19
-      ],
-      [
-        30,
-        19
-      ],
-      [
-        31,
-        19
-      ],
-      [
-        31,
-        20
-      ],
-      [
-        31,
-        21
-      ],
-      [
-        32,
-        21
-      ],
-      [
-        33,
-        21
-      ],
-      [
         34,
-        21
-      ],
-      [
-        35,
-        21
-      ],
-      [
-        36,
-        21
-      ],
-      [
-        37,
-        21
-      ],
-      [
-        38,
-        21
-      ],
-      [
-        39,
-        21
-      ],
-      [
-        40,
-        21
-      ],
-      [
-        40,
-        22
-      ],
-      [
-        40,
-        23
-      ],
-      [
-        40,
-        24
-      ],
-      [
-        40,
-        25
-      ],
-      [
-        40,
-        26
-      ],
-      [
-        40,
-        27
-      ],
-      [
-        40,
-        28
-      ],
-      [
-        40,
-        29
-      ],
-      [
-        40,
-        30
-      ],
-      [
-        40,
-        31
-      ],
-      [
-        40,
         32
-      ],
-      [
-        40,
-        33
-      ],
-      [
-        40,
-        34
-      ],
-      [
-        40,
-        35
-      ],
-      [
-        40,
-        36
-      ],
-      [
-        40,
-        37
-      ],
-      [
-        39,
-        37
-      ],
-      [
-        38,
-        37
-      ],
-      [
-        37,
-        37
-      ],
-      [
-        36,
-        37
-      ],
-      [
-        35,
-        37
-      ],
-      [
-        34,
-        37
-      ],
-      [
-        34,
-        36
-      ],
-      [
-        34,
-        35
-      ],
-      [
-        34,
-        34
       ]
     ],
-    "last_thought_beat": 2738,
-    "belief": "The auditors will strip my position unless I act first.",
+    "last_thought_beat": 2750,
+    "belief": "my position is at risk from legal actions",
     "alive": true,
     "health": 56,
     "grief": 0,
@@ -14472,9 +14368,9 @@
     ],
     "checking": null,
     "last_instigated_day": 666,
-    "driving": "car",
+    "driving": null,
     "vehicle": "car",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -15366,8 +15262,8 @@
       "night": "harborbar"
     },
     "pos": [
-      33,
-      17
+      29,
+      18
     ],
     "dest": [
       31,
@@ -15375,15 +15271,15 @@
     ],
     "at": "harborbar",
     "spot": [
-      33,
-      17
+      29,
+      18
     ],
     "mood": {
-      "energy": 82,
-      "happiness": 47,
-      "stress": 82,
+      "energy": 98,
+      "happiness": 63,
+      "stress": 91,
       "social_need": 12,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "ivy": {
@@ -16495,8 +16391,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -16727,20 +16623,34 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes weaken my standing",
+        "importance": 8
       }
     ],
-    "action": "waiting to be served, in the heat",
-    "activity": "waiting to be served, in the heat",
+    "action": "in the chair",
+    "activity": "in the chair",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
+        28,
         17
+      ],
+      [
+        29,
+        17
+      ],
+      [
+        29,
+        18
       ]
     ],
-    "last_thought_beat": 2741,
-    "belief": "The fine feels like a warning from higher powers.",
+    "last_thought_beat": 2749,
+    "belief": "court outcomes weaken my standing",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -16749,7 +16659,7 @@
     "last_instigated_day": 629,
     "driving": null,
     "vehicle": "car",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -16804,10 +16714,10 @@
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 51,
+      "happiness": 63,
+      "stress": 67,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dez": {
@@ -17237,8 +17147,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -17379,10 +17289,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the legal system is tightening around us",
+        "importance": 8
       }
     ],
-    "action": "asleep",
-    "activity": "asleep",
+    "action": "asleep, keeping warm",
+    "activity": "asleep, keeping warm",
     "thought": "",
     "speech": null,
     "path": [
@@ -17407,8 +17323,8 @@
         50
       ]
     ],
-    "last_thought_beat": 2728,
-    "belief": "the law unfairly targets men",
+    "last_thought_beat": 2746,
+    "belief": "the legal system is tightening around us",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -17451,8 +17367,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      65,
-      52
+      60,
+      51
     ],
     "dest": [
       34,
@@ -17460,15 +17376,15 @@
     ],
     "at": "okonkwo",
     "spot": [
-      65,
-      52
+      60,
+      51
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 41,
+      "happiness": 63,
+      "stress": 55,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dez": {
@@ -18000,8 +17916,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -18190,20 +18106,50 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the courts threaten my chance to prove myself",
+        "importance": 8
       }
     ],
-    "action": "dozing in front of the TV",
-    "activity": "dozing in front of the TV",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
         65,
-        52
+        50
+      ],
+      [
+        64,
+        50
+      ],
+      [
+        63,
+        50
+      ],
+      [
+        62,
+        50
+      ],
+      [
+        61,
+        50
+      ],
+      [
+        60,
+        50
+      ],
+      [
+        60,
+        51
       ]
     ],
     "last_thought_beat": 2740,
-    "belief": "If I fail, my brother's legacy is ruined.",
+    "belief": "the courts threaten my chance to prove myself",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -18211,7 +18157,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -18936,8 +18882,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      49
     ],
     "dest": [
       34,
@@ -18945,15 +18891,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      49
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 40,
+      "happiness": 63,
+      "stress": 75,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -19467,8 +19413,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -19681,10 +19627,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law is an obstacle to my bike",
+        "importance": 8
       }
     ],
-    "action": "dozing in front of the TV",
-    "activity": "dozing in front of the TV",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
@@ -19697,20 +19649,12 @@
         50
       ],
       [
-        9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
+        8,
+        49
       ]
     ],
-    "last_thought_beat": 2731,
-    "belief": "I will get a bike before I get caught.",
+    "last_thought_beat": 2750,
+    "belief": "the law is an obstacle to my bike",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -19718,8 +19662,8 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 2580,
-    "skill": 64.0,
+    "money": 2650,
+    "skill": 65.0,
     "job": {
       "at": "precinct",
       "title": "in the office",
@@ -19758,7 +19702,7 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
+      31,
       49
     ],
     "dest": [
@@ -19767,15 +19711,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      35,
+      31,
       49
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "rey": {
@@ -20261,8 +20205,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -20457,26 +20401,48 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law threatens my hard‑won ground",
+        "importance": 8
       }
     ],
-    "action": "dozing in front of the TV",
-    "activity": "dozing in front of the TV",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
         35,
         49
+      ],
+      [
+        34,
+        49
+      ],
+      [
+        33,
+        49
+      ],
+      [
+        32,
+        49
+      ],
+      [
+        31,
+        49
       ]
     ],
-    "last_thought_beat": 2737,
+    "last_thought_beat": 2749,
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 28,
     "chasing": null,
     "driving": null,
-    "belief": "I will hold my ground until the end.",
+    "belief": "the law threatens my hard‑won ground",
     "vehicle": null,
     "money": 200,
     "skill": 30,
@@ -21023,8 +20989,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      49
     ],
     "dest": [
       21,
@@ -21032,15 +20998,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      49
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 38,
+      "happiness": 63,
+      "stress": 52,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -21788,8 +21754,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -21984,28 +21950,30 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the courts are becoming a threat to my plans",
+        "importance": 8
       }
     ],
-    "action": "up for a glass of water",
-    "activity": "up for a glass of water",
+    "action": "lying awake",
+    "activity": "lying awake",
     "thought": "",
     "speech": null,
     "path": [
       [
+        8,
+        49
+      ],
+      [
         9,
         49
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
       ]
     ],
-    "last_thought_beat": 2729,
-    "belief": "Someone's manipulating the system to ruin my shop.",
+    "last_thought_beat": 2745,
+    "belief": "the courts are becoming a threat to my plans",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -22013,7 +21981,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -22065,8 +22033,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      78,
-      35
+      77,
+      34
     ],
     "dest": [
       76,
@@ -22074,15 +22042,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      78,
-      35
+      77,
+      34
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 46,
+      "happiness": 63,
+      "stress": 82,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "junie": {
@@ -23252,8 +23220,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -23448,6 +23416,12 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court actions endanger my business plans",
+        "importance": 8
       }
     ],
     "action": "asleep",
@@ -23456,20 +23430,20 @@
     "speech": null,
     "path": [
       [
-        77,
-        34
-      ],
-      [
-        78,
-        34
-      ],
-      [
         78,
         35
+      ],
+      [
+        77,
+        35
+      ],
+      [
+        77,
+        34
       ]
     ],
-    "last_thought_beat": 2739,
-    "belief": "The officer's presence feels like a threat.",
+    "last_thought_beat": 2749,
+    "belief": "court actions endanger my business plans",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -23524,7 +23498,7 @@
     },
     "pos": [
       9,
-      69
+      64
     ],
     "dest": [
       75,
@@ -23533,14 +23507,14 @@
     "at": "precinct",
     "spot": [
       9,
-      69
+      64
     ],
     "mood": {
       "energy": 0,
-      "happiness": 47,
-      "stress": 85,
-      "social_need": 24,
-      "fear": 10
+      "happiness": 63,
+      "stress": 99,
+      "social_need": 0,
+      "fear": 24
     },
     "relationships": {
       "booker": {
@@ -24452,8 +24426,8 @@
         "importance": 6
       },
       {
-        "beat": 2738,
-        "day": 684,
+        "beat": 2750,
+        "day": 687,
         "what": "I was taken in over Fountain Ledge Nightstand Ban.",
         "importance": 8
       },
@@ -24480,6 +24454,24 @@
         "day": 684,
         "what": "Strangers’ threats on Dez echo past debts I’ve recorded",
         "importance": 5
+      },
+      {
+        "beat": 2744,
+        "day": 686,
+        "what": "They could not make it stick.",
+        "importance": 7
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law can’t stick to me",
+        "importance": 8
+      },
+      {
+        "beat": 2751,
+        "day": 687,
+        "what": "They see the ban as a sly move to keep them powerless.",
+        "importance": 8
       }
     ],
     "action": "is being held at the 9th",
@@ -24488,40 +24480,488 @@
     "speech": null,
     "path": [
       [
-        6,
-        65
+        74,
+        20
       ],
       [
-        7,
-        65
+        75,
+        20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
+      ],
+      [
+        75,
+        24
+      ],
+      [
+        75,
+        25
+      ],
+      [
+        75,
+        26
+      ],
+      [
+        74,
+        26
+      ],
+      [
+        73,
+        26
+      ],
+      [
+        72,
+        26
+      ],
+      [
+        71,
+        26
+      ],
+      [
+        70,
+        26
+      ],
+      [
+        69,
+        26
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        67,
+        26
+      ],
+      [
+        66,
+        26
+      ],
+      [
+        65,
+        26
+      ],
+      [
+        64,
+        26
+      ],
+      [
+        63,
+        26
+      ],
+      [
+        62,
+        26
+      ],
+      [
+        61,
+        26
+      ],
+      [
+        60,
+        26
+      ],
+      [
+        59,
+        26
+      ],
+      [
+        58,
+        26
+      ],
+      [
+        57,
+        26
+      ],
+      [
+        56,
+        26
+      ],
+      [
+        55,
+        26
+      ],
+      [
+        54,
+        26
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        52,
+        26
+      ],
+      [
+        51,
+        26
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        49,
+        26
+      ],
+      [
+        48,
+        26
+      ],
+      [
+        47,
+        26
+      ],
+      [
+        46,
+        26
+      ],
+      [
+        45,
+        26
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        43,
+        26
+      ],
+      [
+        42,
+        26
+      ],
+      [
+        41,
+        26
+      ],
+      [
+        40,
+        26
+      ],
+      [
+        39,
+        26
+      ],
+      [
+        38,
+        26
+      ],
+      [
+        37,
+        26
+      ],
+      [
+        36,
+        26
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        33,
+        26
+      ],
+      [
+        32,
+        26
+      ],
+      [
+        31,
+        26
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        28,
+        26
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        18,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        14,
+        26
+      ],
+      [
+        13,
+        26
+      ],
+      [
+        12,
+        26
+      ],
+      [
+        11,
+        26
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        11,
+        29
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        11,
+        31
+      ],
+      [
+        11,
+        32
+      ],
+      [
+        11,
+        33
+      ],
+      [
+        11,
+        34
+      ],
+      [
+        11,
+        35
+      ],
+      [
+        11,
+        36
+      ],
+      [
+        11,
+        37
+      ],
+      [
+        11,
+        38
+      ],
+      [
+        11,
+        39
+      ],
+      [
+        11,
+        40
+      ],
+      [
+        11,
+        41
+      ],
+      [
+        11,
+        42
+      ],
+      [
+        11,
+        43
+      ],
+      [
+        11,
+        44
+      ],
+      [
+        11,
+        45
+      ],
+      [
+        11,
+        46
+      ],
+      [
+        11,
+        47
+      ],
+      [
+        11,
+        48
+      ],
+      [
+        11,
+        49
+      ],
+      [
+        11,
+        50
+      ],
+      [
+        11,
+        51
+      ],
+      [
+        11,
+        52
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        11,
+        54
+      ],
+      [
+        11,
+        55
+      ],
+      [
+        10,
+        55
+      ],
+      [
+        9,
+        55
       ],
       [
         8,
-        65
+        55
+      ],
+      [
+        7,
+        55
+      ],
+      [
+        6,
+        55
+      ],
+      [
+        5,
+        55
+      ],
+      [
+        5,
+        56
+      ],
+      [
+        5,
+        57
+      ],
+      [
+        5,
+        58
+      ],
+      [
+        5,
+        59
+      ],
+      [
+        5,
+        60
+      ],
+      [
+        5,
+        61
+      ],
+      [
+        5,
+        62
+      ],
+      [
+        5,
+        63
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        6,
+        64
+      ],
+      [
+        7,
+        64
+      ],
+      [
+        8,
+        64
       ],
       [
         9,
-        65
-      ],
-      [
-        9,
-        66
-      ],
-      [
-        9,
-        67
-      ],
-      [
-        9,
-        68
-      ],
-      [
-        9,
-        69
+        64
       ]
     ],
-    "last_thought_beat": 2738,
-    "belief": "Everyone owes me, yet the fines keep piling up.",
+    "last_thought_beat": 2750,
+    "belief": "They see the ban as a sly move to keep them powerless.",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -24530,7 +24970,7 @@
     "driving": null,
     "vehicle": null,
     "last_instigated_day": 648,
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "school",
@@ -24544,7 +24984,7 @@
     "birth_day": null,
     "standing": 45,
     "directive": null,
-    "detained_until": 686,
+    "detained_until": 689,
     "charged_with": "Fountain Ledge Nightstand Ban"
   },
   "wes": {
@@ -24571,8 +25011,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      75,
-      39
+      78,
+      35
     ],
     "dest": [
       50,
@@ -24580,15 +25020,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      75,
-      39
+      78,
+      35
     ],
     "mood": {
       "energy": 100,
-      "happiness": 47,
-      "stress": 62,
+      "happiness": 63,
+      "stress": 96,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "booker": {
@@ -25580,8 +26020,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -25788,60 +26228,34 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court rulings fuel my desire for retaliation",
+        "importance": 8
       }
     ],
-    "action": "up for a glass of water",
-    "activity": "up for a glass of water",
+    "action": "asleep, keeping warm",
+    "activity": "asleep, keeping warm",
     "thought": "",
     "speech": null,
     "path": [
       [
         79,
-        33
-      ],
-      [
-        78,
-        33
-      ],
-      [
-        77,
-        33
-      ],
-      [
-        76,
-        33
-      ],
-      [
-        75,
-        33
-      ],
-      [
-        75,
-        34
-      ],
-      [
-        75,
-        35
-      ],
-      [
-        75,
         36
       ],
       [
-        75,
-        37
+        78,
+        36
       ],
       [
-        75,
-        38
-      ],
-      [
-        75,
-        39
+        78,
+        35
       ]
     ],
-    "last_thought_beat": 2742,
-    "belief": "I will hit back before I lose respect.",
+    "last_thought_beat": 2750,
+    "belief": "court rulings fuel my desire for retaliation",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -25850,7 +26264,7 @@
     "last_instigated_day": 634,
     "driving": null,
     "vehicle": "van",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "school",
@@ -25891,8 +26305,8 @@
       "night": "bodega"
     },
     "pos": [
-      64,
-      33
+      60,
+      32
     ],
     "dest": [
       76,
@@ -25900,15 +26314,15 @@
     ],
     "at": "bodega",
     "spot": [
-      64,
-      33
+      60,
+      32
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 57,
-      "social_need": 24,
-      "fear": 10
+      "happiness": 63,
+      "stress": 71,
+      "social_need": 12,
+      "fear": 24
     },
     "relationships": {
       "ivy": {
@@ -26406,8 +26820,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -26596,10 +27010,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system threatens our corner’s survival",
+        "importance": 8
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "restocking shelves",
+    "activity": "restocking shelves",
     "thought": "",
     "speech": null,
     "path": [
@@ -26608,20 +27028,24 @@
         34
       ],
       [
-        63,
+        61,
         34
       ],
       [
-        64,
+        60,
         34
       ],
       [
-        64,
+        60,
         33
+      ],
+      [
+        60,
+        32
       ]
     ],
-    "last_thought_beat": 2727,
-    "belief": "I will outlast the competition by staying hidden.",
+    "last_thought_beat": 2745,
+    "belief": "the system threatens our corner’s survival",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -26629,7 +27053,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "van",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "school",
@@ -26684,15 +27108,15 @@
     ],
     "mood": {
       "energy": 35,
-      "happiness": 47,
-      "stress": 65,
+      "happiness": 59,
+      "stress": 89,
       "social_need": 0,
-      "fear": 18
+      "fear": 30
     },
     "relationships": {
       "ruiz": {
-        "affinity": -26,
-        "opinion": "partner"
+        "affinity": -32,
+        "opinion": "stubborn, but useful"
       },
       "kohl": {
         "affinity": -17,
@@ -27245,8 +27669,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -27435,16 +27859,34 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system is destabilizing my retirement hopes",
+        "importance": 8
       }
     ],
-    "action": "asleep, in the heat",
-    "activity": "asleep, in the heat",
+    "action": "asleep",
+    "activity": "asleep",
     "thought": "",
     "speech": null,
     "path": [
       [
-        74,
-        20
+        75,
+        16
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        18
+      ],
+      [
+        75,
+        19
       ],
       [
         75,
@@ -27463,8 +27905,8 @@
         23
       ]
     ],
-    "last_thought_beat": 2742,
-    "belief": "I need to stay below the radar to avoid a fire.",
+    "last_thought_beat": 2748,
+    "belief": "the system is destabilizing my retirement hopes",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -27472,7 +27914,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 8825,
+    "money": 8895,
     "skill": 100,
     "job": {
       "at": "school",
@@ -27526,10 +27968,10 @@
     ],
     "mood": {
       "energy": 61,
-      "happiness": 47,
-      "stress": 38,
+      "happiness": 63,
+      "stress": 52,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -28043,8 +28485,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -28239,6 +28681,12 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal strain jeopardizes my workload",
+        "importance": 8
       }
     ],
     "action": "lying awake",
@@ -28246,10 +28694,6 @@
     "thought": "",
     "speech": null,
     "path": [
-      [
-        24,
-        67
-      ],
       [
         23,
         67
@@ -28671,8 +29115,8 @@
         20
       ]
     ],
-    "last_thought_beat": 2731,
-    "belief": "I will get a second doctor or take a week off.",
+    "last_thought_beat": 2745,
+    "belief": "legal strain jeopardizes my workload",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -28680,7 +29124,7 @@
     "chasing": null,
     "driving": "car",
     "vehicle": "car",
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -28719,8 +29163,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      78,
-      35
+      79,
+      36
     ],
     "dest": [
       76,
@@ -28728,15 +29172,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      78,
-      35
+      79,
+      36
     ],
     "mood": {
       "energy": 51,
-      "happiness": 47,
-      "stress": 41,
+      "happiness": 63,
+      "stress": 55,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "nadia": {
@@ -29218,8 +29662,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -29408,32 +29852,54 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law threatens our rescue plan",
+        "importance": 8
       }
     ],
-    "action": "lying awake",
-    "activity": "lying awake",
+    "action": "dozing in front of the TV",
+    "activity": "dozing in front of the TV",
     "thought": "",
     "speech": null,
     "path": [
       [
+        75,
+        39
+      ],
+      [
+        76,
+        39
+      ],
+      [
+        77,
+        39
+      ],
+      [
+        78,
+        39
+      ],
+      [
+        78,
+        38
+      ],
+      [
+        78,
+        37
+      ],
+      [
         79,
-        33
+        37
       ],
       [
-        78,
-        33
-      ],
-      [
-        78,
-        34
-      ],
-      [
-        78,
-        35
+        79,
+        36
       ]
     ],
-    "last_thought_beat": 2732,
-    "belief": "Nadia's escape is my duty, or I fail.",
+    "last_thought_beat": 2746,
+    "belief": "the law threatens our rescue plan",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -29441,7 +29907,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -29480,8 +29946,8 @@
       "night": "church"
     },
     "pos": [
-      48,
-      37
+      52,
+      39
     ],
     "dest": [
       50,
@@ -29489,15 +29955,15 @@
     ],
     "at": "church",
     "spot": [
-      48,
-      37
+      52,
+      39
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 51,
-      "social_need": 100,
-      "fear": 10
+      "happiness": 63,
+      "stress": 87,
+      "social_need": 87,
+      "fear": 24
     },
     "relationships": {
       "adaeze": {
@@ -29523,6 +29989,14 @@
       "booker": {
         "affinity": -5,
         "opinion": "He’s a risk"
+      },
+      "ruiz": {
+        "affinity": -2,
+        "opinion": "underfunded"
+      },
+      "maren": {
+        "affinity": -1,
+        "opinion": "supportive"
       }
     },
     "memories": [
@@ -30007,8 +30481,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -30191,10 +30665,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law is crushing our community",
+        "importance": 8
       }
     ],
-    "action": "reading a file",
-    "activity": "reading a file",
+    "action": "on the phone",
+    "activity": "on the phone",
     "thought": "",
     "speech": null,
     "path": [
@@ -30203,26 +30683,34 @@
         40
       ],
       [
-        48,
+        49,
+        40
+      ],
+      [
+        50,
+        40
+      ],
+      [
+        51,
+        40
+      ],
+      [
+        52,
+        40
+      ],
+      [
+        52,
         39
-      ],
-      [
-        48,
-        38
-      ],
-      [
-        48,
-        37
       ]
     ],
-    "last_thought_beat": 2731,
+    "last_thought_beat": 2748,
     "alive": true,
     "health": 80,
     "grief": 0,
     "volatility": 10,
     "chasing": null,
     "driving": null,
-    "belief": "More young men will be buried if I don't do something.",
+    "belief": "the law is crushing our community",
     "vehicle": null,
     "money": 4748,
     "skill": 100,
@@ -30274,10 +30762,10 @@
     ],
     "mood": {
       "energy": 47,
-      "happiness": 47,
-      "stress": 39,
+      "happiness": 63,
+      "stress": 58,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -30873,8 +31361,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -31075,20 +31563,22 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal setbacks threaten my mortgage dreams",
+        "importance": 8
       }
     ],
-    "action": "asleep",
-    "activity": "asleep",
+    "action": "lying awake, keeping warm",
+    "activity": "lying awake, keeping warm",
     "thought": "",
     "speech": null,
     "path": [
       [
-        4,
-        48
-      ],
-      [
-        3,
-        48
+        2,
+        49
       ],
       [
         3,
@@ -31107,8 +31597,8 @@
         52
       ]
     ],
-    "last_thought_beat": 2726,
-    "belief": "A quiet street means fewer eyes on me.",
+    "last_thought_beat": 2746,
+    "belief": "legal setbacks threaten my mortgage dreams",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -31116,7 +31606,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -31162,7 +31652,7 @@
       "night": "riverflats"
     },
     "pos": [
-      75,
+      76,
       16
     ],
     "dest": [
@@ -31171,15 +31661,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      75,
+      76,
       16
     ],
     "mood": {
-      "energy": 34,
-      "happiness": 47,
-      "stress": 39,
+      "energy": 50,
+      "happiness": 63,
+      "stress": 73,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "rosa": {
@@ -31771,8 +32261,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -31955,20 +32445,62 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the legal system is another danger",
+        "importance": 8
       }
     ],
-    "action": "dozing in front of the TV",
-    "activity": "dozing in front of the TV",
+    "action": "up for a glass of water",
+    "activity": "up for a glass of water",
     "thought": "",
     "speech": null,
     "path": [
       [
-        75,
+        83,
+        18
+      ],
+      [
+        82,
+        18
+      ],
+      [
+        82,
+        17
+      ],
+      [
+        81,
+        17
+      ],
+      [
+        80,
+        17
+      ],
+      [
+        79,
+        17
+      ],
+      [
+        78,
+        17
+      ],
+      [
+        77,
+        17
+      ],
+      [
+        76,
+        17
+      ],
+      [
+        76,
         16
       ]
     ],
-    "last_thought_beat": 2739,
-    "belief": "I must avoid danger or lose everything.",
+    "last_thought_beat": 2749,
+    "belief": "the legal system is another danger",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -31977,7 +32509,7 @@
     "last_instigated_day": 654,
     "driving": null,
     "vehicle": "van",
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -32018,24 +32550,21 @@
       "night": "underpass"
     },
     "pos": [
-      62,
-      66
+      63,
+      67
     ],
     "dest": [
       79,
       51
     ],
     "at": "underpass",
-    "spot": [
-      62,
-      66
-    ],
+    "spot": null,
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 76,
-      "social_need": 100,
-      "fear": 10
+      "happiness": 63,
+      "stress": 92,
+      "social_need": 81,
+      "fear": 24
     },
     "relationships": {
       "ivy": {
@@ -32991,8 +33520,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -33205,10 +33734,16 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice ignores my invisible efforts",
+        "importance": 8
       }
     ],
-    "action": "sitting on a bench, in the heat",
-    "activity": "sitting on a bench, in the heat",
+    "action": "smoking",
+    "activity": "smoking",
     "thought": "",
     "speech": null,
     "path": [
@@ -33221,16 +33756,16 @@
         68
       ],
       [
-        62,
-        67
+        63,
+        68
       ],
       [
-        62,
-        66
+        63,
+        67
       ]
     ],
-    "last_thought_beat": 2741,
-    "belief": "I will prove myself before the fines finish me.",
+    "last_thought_beat": 2749,
+    "belief": "justice ignores my invisible efforts",
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -33273,8 +33808,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      63,
-      50
+      60,
+      49
     ],
     "dest": [
       62,
@@ -33282,15 +33817,15 @@
     ],
     "at": "okonkwo",
     "spot": [
-      63,
-      50
+      60,
+      49
     ],
     "mood": {
       "energy": 34,
-      "happiness": 44,
-      "stress": 58,
+      "happiness": 63,
+      "stress": 72,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dez": {
@@ -33820,8 +34355,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -34034,45 +34569,51 @@
         "day": 682,
         "what": "I was taken in over Fountain Ledge Nightstand Ban.",
         "importance": 8
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court decisions threaten my escape plan",
+        "importance": 8
       }
     ],
-    "belief": "The distraction will keep me alive.",
+    "belief": "court decisions threaten my escape plan",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 236,
-    "last_thought_beat": 2729,
-    "activity": "asleep",
+    "last_thought_beat": 2746,
+    "activity": "up for a glass of water",
     "path": [
-      [
-        60,
-        51
-      ],
-      [
-        61,
-        51
-      ],
-      [
-        62,
-        51
-      ],
-      [
-        63,
-        51
-      ],
       [
         63,
         50
+      ],
+      [
+        62,
+        50
+      ],
+      [
+        61,
+        50
+      ],
+      [
+        60,
+        50
+      ],
+      [
+        60,
+        49
       ]
     ],
-    "action": "asleep",
+    "action": "up for a glass of water",
     "thought": "",
     "speech": null,
     "volatility": 45,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -34111,8 +34652,8 @@
       "night": "riverflats"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -34120,15 +34661,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 57,
-      "happiness": 47,
-      "stress": 39,
+      "happiness": 63,
+      "stress": 53,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "kohl": {
@@ -34588,8 +35129,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -34784,49 +35325,115 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes block my career space",
+        "importance": 8
       }
     ],
-    "belief": "Owning my space means standing up to the law.",
+    "belief": "court outcomes block my career space",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 260,
-    "last_thought_beat": 2729,
+    "last_thought_beat": 2745,
     "volatility": 33,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "lying awake",
     "path": [
       [
-        75,
-        16
+        83,
+        23
       ],
       [
-        74,
-        16
+        83,
+        22
       ],
       [
-        74,
-        17
+        83,
+        21
       ],
       [
-        74,
-        18
+        83,
+        20
       ],
       [
-        74,
+        83,
         19
       ],
       [
-        74,
+        83,
+        18
+      ],
+      [
+        82,
+        18
+      ],
+      [
+        82,
+        17
+      ],
+      [
+        81,
+        17
+      ],
+      [
+        80,
+        17
+      ],
+      [
+        79,
+        17
+      ],
+      [
+        78,
+        17
+      ],
+      [
+        77,
+        17
+      ],
+      [
+        76,
+        17
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        18
+      ],
+      [
+        75,
+        19
+      ],
+      [
+        75,
         20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
       ]
     ],
-    "action": "asleep",
+    "action": "lying awake",
     "thought": "",
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 7848,
+    "money": 7910,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -34864,8 +35471,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      77,
-      34
+      78,
+      35
     ],
     "dest": [
       76,
@@ -34873,15 +35480,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      77,
-      34
+      78,
+      35
     ],
     "mood": {
       "energy": 39,
-      "happiness": 47,
-      "stress": 38,
+      "happiness": 63,
+      "stress": 52,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "kohl": {
@@ -35339,8 +35946,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -35547,17 +36154,23 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice threatens my family's departure",
+        "importance": 8
       }
     ],
-    "belief": "I must stay low to keep my family safe.",
+    "belief": "justice threatens my family's departure",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 344,
-    "last_thought_beat": 2726,
+    "last_thought_beat": 2745,
     "vehicle": null,
     "volatility": 45,
-    "money": 7772,
+    "money": 7834,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -35582,16 +36195,8 @@
         36
       ],
       [
-        77,
-        36
-      ],
-      [
-        77,
+        78,
         35
-      ],
-      [
-        77,
-        34
       ]
     ],
     "action": "asleep",
@@ -36230,10 +36835,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 92,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -36715,8 +37320,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -36941,9 +37546,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice seems indiscriminate",
+        "importance": 8
       }
     ],
-    "belief": "The authorities are playing a bigger game than I realize.",
+    "belief": "justice seems indiscriminate",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -36960,9 +37571,9 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 2739,
+    "last_thought_beat": 2751,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "asleep, keeping warm",
     "driving": null,
     "path": [
       [
@@ -36974,9 +37585,12 @@
         49
       ]
     ],
-    "action": "asleep",
-    "thought": "",
-    "speech": null,
+    "action": "stares at the floor, fingers trembling",
+    "thought": "Everyone’s looking at me, but I’m not ready",
+    "speech": {
+      "to": "tiny",
+      "text": "I don’t want to fight. Just… don’t make me."
+    },
     "standing": 45,
     "directive": null,
     "last_instigated_day": 685,
@@ -37005,8 +37619,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      3,
-      50
+      4,
+      51
     ],
     "dest": [
       3,
@@ -37014,15 +37628,15 @@
     ],
     "at": "terrace_a",
     "spot": [
-      3,
-      50
+      4,
+      51
     ],
     "mood": {
       "energy": 39,
-      "happiness": 47,
-      "stress": 65,
+      "happiness": 63,
+      "stress": 92,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -37420,8 +38034,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -37640,9 +38254,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal outcomes jeopardize my mother’s pride",
+        "importance": 8
       }
     ],
-    "belief": "I need to prove myself to earn my mother's pride.",
+    "belief": "legal outcomes jeopardize my mother’s pride",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -37659,31 +38279,27 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 2740,
+    "last_thought_beat": 2749,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "up for a glass of water",
     "driving": null,
     "path": [
       [
+        3,
+        52
+      ],
+      [
         4,
-        48
+        52
       ],
       [
-        3,
-        48
-      ],
-      [
-        3,
-        49
-      ],
-      [
-        3,
-        50
+        4,
+        51
       ]
     ],
-    "action": "asleep",
+    "action": "up for a glass of water",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -37725,10 +38341,10 @@
     ],
     "mood": {
       "energy": 36,
-      "happiness": 47,
-      "stress": 58,
+      "happiness": 63,
+      "stress": 89,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "rey": {
@@ -37742,6 +38358,14 @@
       "hector": {
         "affinity": -49,
         "opinion": "respectful"
+      },
+      "farrah": {
+        "affinity": -1,
+        "opinion": "colleague"
+      },
+      "dev2": {
+        "affinity": -2,
+        "opinion": "supportive"
       }
     },
     "memories": [
@@ -38226,8 +38850,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -38428,19 +39052,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice is a barrier to my rise",
+        "importance": 8
       }
     ],
-    "belief": "I will rise before the block changes.",
+    "belief": "justice is a barrier to my rise",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 351,
-    "last_thought_beat": 2740,
-    "activity": "lying awake",
-    "action": "lying awake",
+    "last_thought_beat": 2748,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 7514,
+    "money": 7576,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -38457,6 +39087,18 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        35,
+        49
+      ],
+      [
+        34,
+        49
+      ],
+      [
+        34,
+        50
+      ],
       [
         34,
         51
@@ -38489,8 +39131,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      87,
-      81
+      91,
+      84
     ],
     "dest": [
       88,
@@ -38498,15 +39140,15 @@
     ],
     "at": "new_home_270",
     "spot": [
-      87,
-      81
+      91,
+      84
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 39,
+      "happiness": 63,
+      "stress": 53,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "nia2": {
@@ -38942,8 +39584,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -39132,19 +39774,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal crackdowns block my family's escape",
+        "importance": 8
       }
     ],
-    "belief": "I must keep quiet or they'll drag me into trouble.",
+    "belief": "legal crackdowns block my family's escape",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 352,
-    "last_thought_beat": 2729,
-    "activity": "dozing in front of the TV",
-    "action": "dozing in front of the TV",
+    "last_thought_beat": 2747,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 5370,
+    "money": 5414,
     "skill": 100,
     "job": {
       "at": "diner",
@@ -39162,24 +39810,8 @@
     "driving": null,
     "path": [
       [
-        90,
-        82
-      ],
-      [
-        89,
-        82
-      ],
-      [
-        88,
-        82
-      ],
-      [
-        87,
-        82
-      ],
-      [
-        87,
-        81
+        91,
+        84
       ]
     ],
     "thought": "",
@@ -39209,8 +39841,8 @@
       "night": "riverflats"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -39218,15 +39850,15 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 38,
+      "happiness": 63,
+      "stress": 52,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "iris": {
@@ -39718,8 +40350,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -39944,19 +40576,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law blocks my claim to space",
+        "importance": 8
       }
     ],
-    "belief": "Owning my space means standing up to the law.",
+    "belief": "the law blocks my claim to space",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 356,
-    "last_thought_beat": 2732,
+    "last_thought_beat": 2746,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 6640,
+    "money": 6696,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -39978,24 +40616,32 @@
         16
       ],
       [
-        74,
-        16
-      ],
-      [
-        74,
+        75,
         17
       ],
       [
-        74,
+        75,
         18
       ],
       [
-        74,
+        75,
         19
       ],
       [
-        74,
+        75,
         20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
       ]
     ],
     "thought": "",
@@ -40024,24 +40670,24 @@
       "night": "terrace_a"
     },
     "pos": [
-      3,
-      50
+      5,
+      69
     ],
     "dest": [
       3,
       53
     ],
-    "at": "terrace_a",
+    "at": "precinct",
     "spot": [
-      3,
-      50
+      5,
+      69
     ],
     "mood": {
-      "energy": 49,
-      "happiness": 47,
-      "stress": 51,
+      "energy": 0,
+      "happiness": 63,
+      "stress": 67,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -40467,8 +41113,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -40657,9 +41303,21 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2744,
+        "day": 686,
+        "what": "I was taken in over Fountain Ledge Nightstand Ban.",
+        "importance": 8
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "I feel personally targeted by the law",
+        "importance": 8
       }
     ],
-    "belief": "My mother expects more from me.",
+    "belief": "I feel personally targeted by the law",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -40676,29 +41334,43 @@
     "partner": null,
     "birth_day": 358,
     "arrived_day": 358,
-    "last_thought_beat": 2728,
+    "last_thought_beat": 2744,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "sitting very still, keeping warm",
     "driving": null,
     "path": [
       [
-        4,
-        51
+        6,
+        65
       ],
       [
-        3,
-        51
+        5,
+        65
       ],
       [
-        3,
-        50
+        5,
+        66
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        5,
+        68
+      ],
+      [
+        5,
+        69
       ]
     ],
-    "action": "asleep",
+    "action": "is being held at the 9th",
     "thought": "",
-    "speech": null
+    "speech": null,
+    "detained_until": 688,
+    "charged_with": "Fountain Ledge Nightstand Ban"
   },
   "cassius": {
     "id": "cassius",
@@ -40724,7 +41396,7 @@
     },
     "pos": [
       9,
-      49
+      52
     ],
     "dest": [
       8,
@@ -40733,14 +41405,14 @@
     "at": "terrace_b",
     "spot": [
       9,
-      49
+      52
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 94,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -41202,8 +41874,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -41416,9 +42088,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice ignores my harmlessness",
+        "importance": 8
       }
     ],
-    "belief": "I should prove myself to those who doubt me.",
+    "belief": "justice ignores my harmlessness",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -41435,20 +42113,16 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2740,
+    "last_thought_beat": 2751,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "dozing in front of the TV",
     "driving": null,
     "path": [
       [
         9,
-        52
-      ],
-      [
-        9,
-        51
+        49
       ],
       [
         9,
@@ -41456,12 +42130,19 @@
       ],
       [
         9,
-        49
+        51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "asleep",
-    "thought": "",
-    "speech": null,
+    "action": "yawns, then turns to the TV",
+    "thought": "If only they’d listen, maybe I could be useful",
+    "speech": {
+      "to": "tiny",
+      "text": "What’s on the news tonight? Anything about the new law?"
+    },
     "last_instigated_day": 683,
     "detained_until": 0
   },
@@ -41488,8 +42169,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      49
     ],
     "dest": [
       8,
@@ -41497,15 +42178,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      49
     ],
     "mood": {
       "energy": 44,
-      "happiness": 47,
-      "stress": 51,
+      "happiness": 63,
+      "stress": 67,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -41955,8 +42636,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -42157,9 +42838,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes block my unique skill",
+        "importance": 8
       }
     ],
-    "belief": "I will prove myself where others cannot.",
+    "belief": "court outcomes block my unique skill",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -42176,11 +42863,11 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 2729,
+    "last_thought_beat": 2745,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "up for a glass of water",
+    "activity": "asleep",
     "driving": null,
     "path": [
       [
@@ -42188,23 +42875,15 @@
         51
       ],
       [
-        8,
-        51
-      ],
-      [
-        8,
+        9,
         50
       ],
       [
-        8,
+        9,
         49
-      ],
-      [
-        8,
-        48
       ]
     ],
-    "action": "up for a glass of water",
+    "action": "asleep",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -42246,10 +42925,10 @@
     ],
     "mood": {
       "energy": 56,
-      "happiness": 37,
-      "stress": 67,
+      "happiness": 56,
+      "stress": 92,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -42691,8 +43370,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -42887,9 +43566,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice hampers my mother’s pride",
+        "importance": 8
       }
     ],
-    "belief": "My mother will judge me if I fail.",
+    "belief": "justice hampers my mother’s pride",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -42906,7 +43591,7 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 2742,
+    "last_thought_beat": 2749,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -42914,12 +43599,16 @@
     "driving": null,
     "path": [
       [
-        8,
-        48
+        9,
+        52
       ],
       [
         9,
-        48
+        51
+      ],
+      [
+        9,
+        50
       ],
       [
         9,
@@ -42967,10 +43656,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 41,
+      "happiness": 63,
+      "stress": 55,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "dev": {
@@ -43378,8 +44067,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -43568,19 +44257,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court actions endanger my family’s exit",
+        "importance": 8
       }
     ],
-    "belief": "I must keep quiet to keep my family safe.",
+    "belief": "court actions endanger my family’s exit",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 370,
-    "last_thought_beat": 2730,
-    "activity": "asleep, in the heat",
-    "action": "asleep, in the heat",
+    "last_thought_beat": 2747,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 4930,
+    "money": 4974,
     "skill": 100,
     "job": {
       "at": "harborbar",
@@ -43597,6 +44292,10 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        19,
+        49
+      ],
       [
         19,
         50
@@ -43633,8 +44332,8 @@
       "night": "terrace_e"
     },
     "pos": [
-      27,
-      53
+      26,
+      50
     ],
     "dest": [
       26,
@@ -43642,15 +44341,15 @@
     ],
     "at": "terrace_e",
     "spot": [
-      27,
-      53
+      26,
+      50
     ],
     "mood": {
       "energy": 63,
-      "happiness": 47,
-      "stress": 40,
-      "social_need": 24,
-      "fear": 10
+      "happiness": 63,
+      "stress": 54,
+      "social_need": 12,
+      "fear": 24
     },
     "relationships": {
       "yusuf": {
@@ -44026,8 +44725,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -44222,19 +44921,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal pressure blocks my family’s exit",
+        "importance": 8
       }
     ],
-    "belief": "I will keep my family safe by staying silent.",
+    "belief": "legal pressure blocks my family’s exit",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 371,
-    "last_thought_beat": 2728,
-    "activity": "asleep",
-    "action": "asleep",
+    "last_thought_beat": 2745,
+    "activity": "asleep, keeping warm",
+    "action": "asleep, keeping warm",
     "vehicle": null,
     "volatility": 45,
-    "money": 7690,
+    "money": 7760,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -44252,28 +44957,12 @@
     "driving": null,
     "path": [
       [
-        27,
-        48
-      ],
-      [
-        27,
+        26,
         49
       ],
       [
-        27,
+        26,
         50
-      ],
-      [
-        27,
-        51
-      ],
-      [
-        27,
-        52
-      ],
-      [
-        27,
-        53
       ]
     ],
     "thought": "",
@@ -44874,8 +45563,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      123,
-      18
+      124,
+      19
     ],
     "dest": [
       122,
@@ -44883,15 +45572,15 @@
     ],
     "at": "new_home_368",
     "spot": [
-      123,
-      18
+      124,
+      19
     ],
     "mood": {
       "energy": 55,
-      "happiness": 47,
-      "stress": 42,
+      "happiness": 63,
+      "stress": 56,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -45301,8 +45990,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -45491,19 +46180,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice is a hurdle to my progress",
+        "importance": 8
       }
     ],
-    "belief": "I will become a leader before the block dissolves.",
+    "belief": "justice is a hurdle to my progress",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 382,
-    "last_thought_beat": 2737,
+    "last_thought_beat": 2751,
     "activity": "asleep",
-    "action": "asleep",
+    "action": "checks his phone, then sighs",
     "vehicle": null,
     "volatility": 45,
-    "money": 6024,
+    "money": 6080,
     "skill": 100,
     "job": {
       "at": "new_business_236",
@@ -45521,16 +46216,39 @@
     "driving": null,
     "path": [
       [
+        120,
+        17
+      ],
+      [
+        121,
+        17
+      ],
+      [
+        122,
+        17
+      ],
+      [
+        123,
+        17
+      ],
+      [
+        124,
+        17
+      ],
+      [
         124,
         18
       ],
       [
-        123,
-        18
+        124,
+        19
       ]
     ],
-    "thought": "",
-    "speech": null
+    "thought": "I want to be part of something bigger, not just a driver",
+    "speech": {
+      "to": "iris2",
+      "text": "You think you can get out of this? I’ve got a job tonight."
+    }
   },
   "errol": {
     "id": "errol",
@@ -46203,10 +46921,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 45,
+      "happiness": 63,
+      "stress": 79,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -46218,20 +46936,28 @@
         "opinion": "He’s patient"
       },
       "kwame2": {
-        "affinity": -2,
-        "opinion": "He’s quiet"
+        "affinity": -4,
+        "opinion": "trusted"
       },
       "rey": {
         "affinity": -2,
         "opinion": "he’s a steady man"
       },
       "odette2": {
-        "affinity": -3,
-        "opinion": "trustworthy"
+        "affinity": -4,
+        "opinion": "colleague"
       },
       "blaise": {
         "affinity": -2,
         "opinion": "Trust is fragile"
+      },
+      "odette": {
+        "affinity": -1,
+        "opinion": "colleague"
+      },
+      "errol3": {
+        "affinity": -1,
+        "opinion": "friend"
       }
     },
     "memories": [
@@ -46590,8 +47316,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -46780,19 +47506,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal pressure endangers my family’s exit",
+        "importance": 8
       }
     ],
-    "belief": "My family will never escape if the city keeps prosecuting.",
+    "belief": "legal pressure endangers my family’s exit",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 388,
-    "last_thought_beat": 2737,
-    "activity": "asleep",
-    "action": "asleep",
+    "last_thought_beat": 2748,
+    "activity": "asleep, keeping warm",
+    "action": "asleep, keeping warm",
     "vehicle": null,
     "volatility": 45,
-    "money": 5940,
+    "money": 5996,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -46857,8 +47589,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      79,
-      36
+      78,
+      35
     ],
     "dest": [
       76,
@@ -46866,15 +47598,15 @@
     ],
     "at": "delmarflats",
     "spot": [
-      79,
-      36
+      78,
+      35
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 57,
+      "happiness": 63,
+      "stress": 72,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "kohl": {
@@ -47246,8 +47978,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -47448,19 +48180,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system threatens my low profile",
+        "importance": 8
       }
     ],
-    "belief": "I must stay low or become a target.",
+    "belief": "the system threatens my low profile",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 397,
-    "last_thought_beat": 2729,
-    "activity": "dozing in front of the TV",
-    "action": "dozing in front of the TV",
+    "last_thought_beat": 2744,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 5856,
+    "money": 5912,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -47480,14 +48218,6 @@
       [
         78,
         35
-      ],
-      [
-        79,
-        35
-      ],
-      [
-        79,
-        36
       ]
     ],
     "thought": "",
@@ -47725,7 +48455,7 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
+      31,
       49
     ],
     "dest": [
@@ -47734,15 +48464,15 @@
     ],
     "at": "vasquez",
     "spot": [
-      35,
+      31,
       49
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 43,
+      "happiness": 63,
+      "stress": 77,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -48114,8 +48844,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -48316,19 +49046,25 @@
         "day": 684,
         "what": "Stranger yelled at Dez, stirring uneasy tension",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice is being used as a weapon",
+        "importance": 8
       }
     ],
-    "belief": "They're setting me up to get me out of the picture.",
+    "belief": "justice is being used as a weapon",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 425,
-    "last_thought_beat": 2738,
-    "activity": "dozing in front of the TV, in the heat",
-    "action": "dozing in front of the TV, in the heat",
+    "last_thought_beat": 2750,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 4424,
+    "money": 4468,
     "skill": 100,
     "job": {
       "at": "barbershop",
@@ -48346,19 +49082,7 @@
     "driving": null,
     "path": [
       [
-        34,
-        51
-      ],
-      [
-        35,
-        51
-      ],
-      [
-        35,
-        50
-      ],
-      [
-        35,
+        31,
         49
       ]
     ],
@@ -48389,7 +49113,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
+      9,
       49
     ],
     "dest": [
@@ -48398,15 +49122,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
+      9,
       49
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 51,
+      "happiness": 63,
+      "stress": 69,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -48700,8 +49424,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -48914,9 +49638,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal outcomes limit my credibility",
+        "importance": 8
       }
     ],
-    "belief": "I must be taken seriously or stay invisible.",
+    "belief": "legal outcomes limit my credibility",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -48933,7 +49663,7 @@
     "partner": null,
     "birth_day": 458,
     "arrived_day": 458,
-    "last_thought_beat": 2728,
+    "last_thought_beat": 2744,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -48941,11 +49671,11 @@
     "driving": null,
     "path": [
       [
-        9,
+        8,
         49
       ],
       [
-        8,
+        9,
         49
       ]
     ],
@@ -48991,10 +49721,10 @@
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 51,
+      "happiness": 63,
+      "stress": 67,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -49256,8 +49986,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -49452,9 +50182,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice doesn’t recognize my seriousness",
+        "importance": 8
       }
     ],
-    "belief": "I must earn respect before I get ignored.",
+    "belief": "justice doesn’t recognize my seriousness",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -49471,17 +50207,13 @@
     "partner": null,
     "birth_day": 468,
     "arrived_day": 468,
-    "last_thought_beat": 2742,
+    "last_thought_beat": 2751,
     "standing": 45,
     "directive": null,
     "chasing": null,
     "activity": "asleep",
     "driving": null,
     "path": [
-      [
-        9,
-        52
-      ],
       [
         9,
         51
@@ -49495,9 +50227,12 @@
         49
       ]
     ],
-    "action": "asleep",
-    "thought": "",
-    "speech": null
+    "action": "sits cross‑legged, hands in pockets",
+    "thought": "They think I’m just a kid, but I can be serious",
+    "speech": {
+      "to": "tiny",
+      "text": "I’m not a joke. I want to help, too."
+    }
   },
   "theo": {
     "id": "theo",
@@ -49522,7 +50257,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
+      8,
       49
     ],
     "dest": [
@@ -49531,15 +50266,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
+      8,
       49
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 68,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -49799,8 +50534,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -49995,9 +50730,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes block my credibility",
+        "importance": 8
       }
     ],
-    "belief": "I must be taken seriously before I get ignored.",
+    "belief": "court outcomes block my credibility",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -50014,7 +50755,7 @@
     "partner": null,
     "birth_day": 474,
     "arrived_day": 474,
-    "last_thought_beat": 2733,
+    "last_thought_beat": 2747,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -50023,10 +50764,6 @@
     "path": [
       [
         8,
-        49
-      ],
-      [
-        9,
         49
       ]
     ],
@@ -50072,10 +50809,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 60,
+      "happiness": 63,
+      "stress": 77,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "malik": {
@@ -50343,8 +51080,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -50545,19 +51282,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court rulings hinder my search for answers",
+        "importance": 8
       }
     ],
-    "belief": "My brother's fate will be decided by those in power.",
+    "belief": "court rulings hinder my search for answers",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 475,
-    "last_thought_beat": 2728,
+    "last_thought_beat": 2744,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 5765,
+    "money": 5835,
     "skill": 100,
     "job": {
       "at": "church",
@@ -50574,18 +51317,6 @@
     "chasing": null,
     "driving": null,
     "path": [
-      [
-        91,
-        84
-      ],
-      [
-        90,
-        84
-      ],
-      [
-        90,
-        83
-      ],
       [
         90,
         82
@@ -50632,10 +51363,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 49,
+      "happiness": 63,
+      "stress": 63,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "odette": {
@@ -50865,8 +51596,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -51067,19 +51798,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes hinder my progress",
+        "importance": 8
       }
     ],
-    "belief": "I must stay low to survive the fines.",
+    "belief": "court outcomes hinder my progress",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 489,
     "last_thought_beat": 2740,
-    "activity": "asleep",
-    "action": "asleep",
+    "activity": "lying awake",
+    "action": "lying awake",
     "vehicle": null,
     "volatility": 45,
-    "money": 5555,
+    "money": 5625,
     "skill": 100,
     "job": {
       "at": "church",
@@ -51096,6 +51833,10 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        19,
+        49
+      ],
       [
         19,
         50
@@ -51146,10 +51887,10 @@
     ],
     "mood": {
       "energy": 60,
-      "happiness": 47,
-      "stress": 46,
-      "social_need": 52,
-      "fear": 10
+      "happiness": 63,
+      "stress": 80,
+      "social_need": 3,
+      "fear": 24
     },
     "relationships": {},
     "memories": [
@@ -51376,8 +52117,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -51566,19 +52307,25 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice stalls my brother search",
+        "importance": 8
       }
     ],
-    "belief": "I must find out why my brother disappeared.",
+    "belief": "justice stalls my brother search",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 497,
-    "last_thought_beat": 2731,
+    "last_thought_beat": 2748,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 4344,
+    "money": 4400,
     "skill": 100,
     "job": {
       "at": "new_business_423",
@@ -51596,36 +52343,8 @@
     "driving": null,
     "path": [
       [
-        35,
-        23
-      ],
-      [
-        34,
-        23
-      ],
-      [
-        33,
-        23
-      ],
-      [
-        32,
-        23
-      ],
-      [
-        31,
-        23
-      ],
-      [
-        30,
-        23
-      ],
-      [
         29,
-        23
-      ],
-      [
-        28,
-        23
+        24
       ],
       [
         28,
@@ -51986,7 +52705,7 @@
     },
     "pos": [
       9,
-      49
+      52
     ],
     "dest": [
       8,
@@ -51995,14 +52714,14 @@
     "at": "terrace_b",
     "spot": [
       9,
-      49
+      52
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 50,
+      "happiness": 63,
+      "stress": 66,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -52212,8 +52931,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -52414,9 +53133,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system won’t recognize my seriousness",
+        "importance": 8
       }
     ],
-    "belief": "They see me as a threat; I must prove my worth.",
+    "belief": "the system won’t recognize my seriousness",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -52433,20 +53158,20 @@
     "partner": null,
     "birth_day": 522,
     "arrived_day": 522,
-    "last_thought_beat": 2733,
+    "last_thought_beat": 2747,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "lying awake",
+    "activity": "dozing in front of the TV",
     "driving": null,
     "path": [
       [
-        9,
-        52
+        8,
+        49
       ],
       [
         9,
-        51
+        49
       ],
       [
         9,
@@ -52454,10 +53179,14 @@
       ],
       [
         9,
-        49
+        51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "lying awake",
+    "action": "dozing in front of the TV",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -52486,7 +53215,7 @@
     },
     "pos": [
       3,
-      50
+      52
     ],
     "dest": [
       3,
@@ -52495,14 +53224,14 @@
     "at": "terrace_a",
     "spot": [
       3,
-      50
+      52
     ],
     "mood": {
       "energy": 34,
-      "happiness": 32,
-      "stress": 70,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -52690,8 +53419,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -52898,9 +53627,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes hinder my mother’s pride",
+        "importance": 8
       }
     ],
-    "belief": "I must prove myself to my mother.",
+    "belief": "court outcomes hinder my mother’s pride",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -52917,16 +53652,28 @@
     "partner": null,
     "birth_day": 523,
     "arrived_day": 523,
-    "last_thought_beat": 2733,
+    "last_thought_beat": 2746,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "asleep",
+    "activity": "asleep, keeping warm",
     "driving": null,
     "path": [
       [
+        4,
+        48
+      ],
+      [
         3,
-        52
+        48
+      ],
+      [
+        3,
+        49
+      ],
+      [
+        3,
+        50
       ],
       [
         3,
@@ -52934,10 +53681,10 @@
       ],
       [
         3,
-        50
+        52
       ]
     ],
-    "action": "asleep",
+    "action": "asleep, keeping warm",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -52979,10 +53726,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 55,
+      "happiness": 63,
+      "stress": 73,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -53128,8 +53875,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -53330,9 +54077,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal pressure threatens my mother’s pride",
+        "importance": 8
       }
     ],
-    "belief": "I must earn my mother's pride before I fail.",
+    "belief": "legal pressure threatens my mother’s pride",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -53349,35 +54102,19 @@
     "partner": null,
     "birth_day": 542,
     "arrived_day": 542,
-    "last_thought_beat": 2728,
+    "last_thought_beat": 2744,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "lying awake, in the heat",
+    "activity": "lying awake",
     "driving": null,
     "path": [
-      [
-        9,
-        52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
       [
         8,
         49
       ]
     ],
-    "action": "lying awake, in the heat",
+    "action": "lying awake",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -53405,8 +54142,8 @@
       "night": "new_home_571"
     },
     "pos": [
-      91,
-      69
+      92,
+      67
     ],
     "dest": [
       90,
@@ -53414,15 +54151,15 @@
     ],
     "at": "new_home_571",
     "spot": [
-      91,
-      69
+      92,
+      67
     ],
     "mood": {
       "energy": 66,
-      "happiness": 47,
-      "stress": 42,
-      "social_need": 24,
-      "fear": 10
+      "happiness": 63,
+      "stress": 56,
+      "social_need": 12,
+      "fear": 24
     },
     "relationships": {
       "hector": {
@@ -53548,8 +54285,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -53738,9 +54475,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law is a barrier to my advancement",
+        "importance": 8
       }
     ],
-    "belief": "I will rise before the block changes.",
+    "belief": "the law is a barrier to my advancement",
     "alive": true,
     "health": 82,
     "grief": 0,
@@ -53750,8 +54493,8 @@
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 3021,
-    "skill": 75.5,
+    "money": 3083,
+    "skill": 76.5,
     "job": {
       "at": "cannery",
       "title": "works the line at the cannery",
@@ -53768,24 +54511,24 @@
     "driving": null,
     "path": [
       [
-        88,
-        70
-      ],
-      [
         89,
-        70
+        68
       ],
       [
         90,
-        70
+        68
       ],
       [
         91,
-        70
+        68
       ],
       [
-        91,
-        69
+        92,
+        68
+      ],
+      [
+        92,
+        67
       ]
     ],
     "thought": "",
@@ -53815,7 +54558,7 @@
     },
     "pos": [
       3,
-      50
+      52
     ],
     "dest": [
       3,
@@ -53824,14 +54567,14 @@
     "at": "terrace_a",
     "spot": [
       3,
-      50
+      52
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 80,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -53945,8 +54688,8 @@
         "importance": 5
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -54129,9 +54872,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "justice ignores my seriousness",
+        "importance": 8
       }
     ],
-    "belief": "I must earn respect before being ignored.",
+    "belief": "justice ignores my seriousness",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -54148,7 +54897,7 @@
     "partner": null,
     "birth_day": 571,
     "arrived_day": 571,
-    "last_thought_beat": 2730,
+    "last_thought_beat": 2745,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -54157,11 +54906,15 @@
     "path": [
       [
         4,
-        50
+        51
       ],
       [
         3,
-        50
+        51
+      ],
+      [
+        3,
+        52
       ]
     ],
     "action": "asleep",
@@ -54205,10 +54958,10 @@
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 39,
+      "happiness": 63,
+      "stress": 53,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "errol3": {
@@ -54318,8 +55071,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -54502,20 +55255,26 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the law targets quiet observers",
+        "importance": 8
       }
     ],
-    "belief": "I stay quiet, hoping the world stays quiet.",
+    "belief": "the law targets quiet observers",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 594,
-    "last_thought_beat": 2730,
+    "last_thought_beat": 2747,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 2216,
-    "skill": 66.0,
+    "money": 2272,
+    "skill": 67.0,
     "job": {
       "at": "laundromat",
       "title": "fixes what other people throw out",
@@ -54532,8 +55291,8 @@
     "driving": null,
     "path": [
       [
-        123,
-        17
+        124,
+        18
       ],
       [
         123,
@@ -54580,10 +55339,10 @@
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 40,
+      "happiness": 63,
+      "stress": 54,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -54677,8 +55436,8 @@
         "importance": 9
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -54855,20 +55614,26 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "the system is tightening around quiet people",
+        "importance": 8
       }
     ],
-    "belief": "Staying low is the only way to survive.",
+    "belief": "the system is tightening around quiet people",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 595,
-    "last_thought_beat": 2741,
+    "last_thought_beat": 2751,
     "activity": "asleep",
-    "action": "asleep",
+    "action": "taps the floor with a stick, eyes on the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 2685,
-    "skill": 65.5,
+    "money": 2755,
+    "skill": 66.5,
     "job": {
       "at": "new_civic_347",
       "title": "on the desk",
@@ -54897,8 +55662,11 @@
         49
       ]
     ],
-    "thought": "",
-    "speech": null
+    "thought": "I’ll keep my head down until the cannery is safe",
+    "speech": {
+      "to": "tiny",
+      "text": "Stay quiet. Nobody wants to hear about the new fines."
+    }
   },
   "milo": {
     "id": "milo",
@@ -54923,8 +55691,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      48
+      3,
+      50
     ],
     "dest": [
       3,
@@ -54932,15 +55700,15 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      48
+      3,
+      50
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 68,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -55018,8 +55786,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -55232,9 +56000,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal pressure limits my block ambitions",
+        "importance": 8
       }
     ],
-    "belief": "I must move further to avoid being noticed.",
+    "belief": "legal pressure limits my block ambitions",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -55251,31 +56025,31 @@
     "partner": null,
     "birth_day": 598,
     "arrived_day": 598,
-    "last_thought_beat": 2732,
+    "last_thought_beat": 2746,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "dozing in front of the TV",
+    "activity": "asleep",
     "driving": null,
     "path": [
       [
+        4,
+        48
+      ],
+      [
         3,
-        50
+        48
       ],
       [
-        4,
-        50
-      ],
-      [
-        4,
+        3,
         49
       ],
       [
-        4,
-        48
+        3,
+        50
       ]
     ],
-    "action": "dozing in front of the TV",
+    "action": "asleep",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -55304,23 +56078,23 @@
     },
     "pos": [
       9,
-      49
+      69
     ],
     "dest": [
       8,
       53
     ],
-    "at": "terrace_b",
+    "at": "precinct",
     "spot": [
       9,
-      49
+      69
     ],
     "mood": {
-      "energy": 68,
-      "happiness": 47,
-      "stress": 51,
+      "energy": 12,
+      "happiness": 63,
+      "stress": 69,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -55394,8 +56168,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -55590,9 +56364,21 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2744,
+        "day": 686,
+        "what": "I was taken in over Fountain Ledge Nightstand Ban.",
+        "importance": 8
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "I feel personally targeted by the law",
+        "importance": 8
       }
     ],
-    "belief": "I must earn respect before I get ignored.",
+    "belief": "I feel personally targeted by the law",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -55609,33 +56395,43 @@
     "partner": null,
     "birth_day": 604,
     "arrived_day": 604,
-    "last_thought_beat": 2728,
+    "last_thought_beat": 2744,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "asleep, in the heat",
+    "activity": "filling in a form",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
-        8,
-        50
+        9,
+        64
       ],
       [
         9,
-        50
+        65
       ],
       [
         9,
-        49
+        66
+      ],
+      [
+        9,
+        67
+      ],
+      [
+        9,
+        68
+      ],
+      [
+        9,
+        69
       ]
     ],
-    "action": "asleep, in the heat",
+    "action": "is being held at the 9th",
     "thought": "",
-    "speech": null
+    "speech": null,
+    "detained_until": 688,
+    "charged_with": "Fountain Ledge Nightstand Ban"
   },
   "etta3": {
     "id": "etta3",
@@ -55660,8 +56456,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      49
     ],
     "dest": [
       8,
@@ -55669,15 +56465,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      49
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 88,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -55753,8 +56549,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -55949,9 +56745,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court decisions hurt my mother’s hopes",
+        "importance": 8
       }
     ],
-    "belief": "I must stay strong to keep my mother proud.",
+    "belief": "court decisions hurt my mother’s hopes",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -55968,11 +56770,11 @@
     "partner": null,
     "birth_day": 607,
     "arrived_day": 607,
-    "last_thought_beat": 2741,
+    "last_thought_beat": 2750,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "dozing in front of the TV",
+    "activity": "asleep, keeping warm",
     "driving": null,
     "path": [
       [
@@ -55980,11 +56782,19 @@
         51
       ],
       [
-        9,
-        52
+        8,
+        51
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
       ]
     ],
-    "action": "dozing in front of the TV",
+    "action": "asleep, keeping warm",
     "thought": "",
     "speech": null
   },
@@ -56011,8 +56821,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      3,
-      50
+      4,
+      48
     ],
     "dest": [
       3,
@@ -56020,15 +56830,15 @@
     ],
     "at": "terrace_a",
     "spot": [
-      3,
-      50
+      4,
+      48
     ],
     "mood": {
       "energy": 64,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 68,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "simone": {
@@ -56096,8 +56906,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -56292,9 +57102,15 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes restrict my aspirations",
+        "importance": 8
       }
     ],
-    "belief": "I must push forward before I get overlooked.",
+    "belief": "court outcomes restrict my aspirations",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -56311,11 +57127,11 @@
     "partner": null,
     "birth_day": 610,
     "arrived_day": 610,
-    "last_thought_beat": 2733,
+    "last_thought_beat": 2747,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "lying awake, in the heat",
+    "activity": "dozing in front of the TV, keeping warm",
     "driving": null,
     "path": [
       [
@@ -56323,11 +57139,15 @@
         50
       ],
       [
-        3,
-        50
+        4,
+        49
+      ],
+      [
+        4,
+        48
       ]
     ],
-    "action": "lying awake, in the heat",
+    "action": "dozing in front of the TV, keeping warm",
     "thought": "",
     "speech": null
   },
@@ -56354,8 +57174,8 @@
       "night": "new_home_386"
     },
     "pos": [
-      104,
-      68
+      106,
+      66
     ],
     "dest": [
       106,
@@ -56363,15 +57183,15 @@
     ],
     "at": "new_home_386",
     "spot": [
-      104,
-      68
+      106,
+      66
     ],
     "mood": {
       "energy": 68,
-      "happiness": 47,
-      "stress": 66,
-      "social_need": 100,
-      "fear": 10
+      "happiness": 63,
+      "stress": 89,
+      "social_need": 87,
+      "fear": 24
     },
     "relationships": {},
     "memories": [
@@ -56418,8 +57238,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -56632,20 +57452,26 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court rulings impede my brother search",
+        "importance": 8
       }
     ],
-    "belief": "The truth about my brother is hidden.",
+    "belief": "court rulings impede my brother search",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 617,
-    "last_thought_beat": 2731,
-    "activity": "up for a glass of water",
-    "action": "up for a glass of water",
+    "last_thought_beat": 2748,
+    "activity": "asleep",
+    "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 1656,
-    "skill": 56.0,
+    "money": 1712,
+    "skill": 57.0,
     "job": {
       "at": "civic_shop_347",
       "title": "drives nights for a car service",
@@ -56662,20 +57488,16 @@
     "driving": null,
     "path": [
       [
+        104,
+        66
+      ],
+      [
         105,
         66
       ],
       [
-        104,
+        106,
         66
-      ],
-      [
-        104,
-        67
-      ],
-      [
-        104,
-        68
       ]
     ],
     "thought": "",
@@ -56718,10 +57540,10 @@
     ],
     "mood": {
       "energy": 34,
-      "happiness": 47,
-      "stress": 41,
-      "social_need": 24,
-      "fear": 10
+      "happiness": 63,
+      "stress": 57,
+      "social_need": 12,
+      "fear": 24
     },
     "relationships": {},
     "memories": [
@@ -56750,8 +57572,8 @@
         "importance": 6
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -56934,20 +57756,26 @@
         "day": 684,
         "what": "June Kowal was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "court outcomes block my rise",
+        "importance": 8
       }
     ],
-    "belief": "I will rise before the block changes.",
+    "belief": "court outcomes block my rise",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 624,
-    "last_thought_beat": 2724,
+    "last_thought_beat": 2744,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 1234,
-    "skill": 53.5,
+    "money": 1278,
+    "skill": 54.5,
     "job": {
       "at": "diner",
       "title": "cuts and sets hair out of a back room",
@@ -56963,6 +57791,34 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        76,
+        86
+      ],
+      [
+        77,
+        86
+      ],
+      [
+        78,
+        86
+      ],
+      [
+        79,
+        86
+      ],
+      [
+        80,
+        86
+      ],
+      [
+        81,
+        86
+      ],
+      [
+        81,
+        85
+      ],
       [
         81,
         84
@@ -56995,8 +57851,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      49
     ],
     "dest": [
       8,
@@ -57004,15 +57860,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      49
     ],
     "mood": {
       "energy": 66,
-      "happiness": 47,
-      "stress": 52,
+      "happiness": 63,
+      "stress": 68,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {
       "tee": {
@@ -57048,8 +57904,8 @@
         "importance": 8
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -57100,9 +57956,15 @@
         "day": 685,
         "what": "Rufus Adeyemi was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal outcomes block my unique ambitions",
+        "importance": 8
       }
     ],
-    "belief": "I will prove myself where no one else can.",
+    "belief": "legal outcomes block my unique ambitions",
     "alive": true,
     "health": 90,
     "grief": 0,
@@ -57119,21 +57981,32 @@
     "partner": null,
     "birth_day": 672,
     "arrived_day": 672,
-    "last_thought_beat": 2742,
+    "last_thought_beat": 2751,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "dozing in front of the TV",
+    "activity": "asleep",
     "driving": null,
     "path": [
       [
-        9,
-        52
+        7,
+        50
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
       ]
     ],
-    "action": "dozing in front of the TV",
-    "thought": "",
-    "speech": null
+    "action": "clutches his stuffed bear, eyes wide",
+    "thought": "If I can get good at something, maybe I can be a hero",
+    "speech": {
+      "to": "tiny",
+      "text": "Do you think I can learn to ride a bike? I want to be good."
+    }
   },
   "lena": {
     "id": "lena",
@@ -57158,7 +58031,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
+      8,
       49
     ],
     "dest": [
@@ -57167,15 +58040,15 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
+      8,
       49
     ],
     "mood": {
       "energy": 84,
-      "happiness": 47,
-      "stress": 25,
+      "happiness": 63,
+      "stress": 41,
       "social_need": 0,
-      "fear": 10
+      "fear": 24
     },
     "relationships": {},
     "memories": [
@@ -57186,8 +58059,8 @@
         "importance": 7
       },
       {
-        "beat": 2732,
-        "day": 683,
+        "beat": 2744,
+        "day": 686,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
@@ -57202,20 +58075,26 @@
         "day": 685,
         "what": "Rufus Adeyemi was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "legal pressure endangers my family’s exit",
+        "importance": 8
       }
     ],
-    "belief": "",
+    "belief": "legal pressure endangers my family’s exit",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 682,
-    "last_thought_beat": 2729,
+    "last_thought_beat": 2746,
     "activity": "asleep",
     "action": "asleep",
     "vehicle": null,
     "volatility": 45,
-    "money": 340,
-    "skill": 32.0,
+    "money": 410,
+    "skill": 33.0,
     "job": {
       "at": "new_civic_531",
       "title": "preaches to whoever turns up",
@@ -57232,19 +58111,11 @@
     "driving": null,
     "path": [
       [
-        9,
-        52
+        8,
+        48
       ],
       [
-        9,
-        51
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
+        8,
         49
       ]
     ],
@@ -57274,7 +58145,7 @@
       "night": "tenement"
     },
     "pos": [
-      30,
+      35,
       23
     ],
     "dest": [
@@ -57283,15 +58154,15 @@
     ],
     "at": "tenement",
     "spot": [
-      30,
+      35,
       23
     ],
     "mood": {
       "energy": 84,
-      "happiness": 47,
-      "stress": 28,
-      "social_need": 24,
-      "fear": 11
+      "happiness": 63,
+      "stress": 42,
+      "social_need": 0,
+      "fear": 24
     },
     "relationships": {},
     "memories": [
@@ -57312,20 +58183,32 @@
         "day": 685,
         "what": "Rufus Adeyemi was convicted over No Linger on Porch After Dusk.",
         "importance": 6
+      },
+      {
+        "beat": 2744,
+        "day": 686,
+        "what": "Dot Feeney was acquitted over Fountain Ledge Nightstand Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 2747,
+        "day": 686,
+        "what": "acquittal shows we can sometimes win",
+        "importance": 8
       }
     ],
-    "belief": "",
+    "belief": "acquittal shows we can sometimes win",
     "alive": true,
     "health": 82,
     "grief": 0,
     "arrived_day": 684,
     "last_thought_beat": 2737,
-    "activity": "asleep",
-    "action": "asleep",
+    "activity": "up for a glass of water",
+    "action": "up for a glass of water",
     "vehicle": null,
     "volatility": 45,
-    "money": 262,
-    "skill": 31.0,
+    "money": 324,
+    "skill": 32.0,
     "job": {
       "at": "warehouse",
       "title": "works the line at the cannery",
@@ -57342,27 +58225,35 @@
     "driving": null,
     "path": [
       [
-        35,
-        23
-      ],
-      [
-        34,
-        23
-      ],
-      [
-        33,
-        23
-      ],
-      [
-        32,
-        23
-      ],
-      [
-        31,
-        23
+        29,
+        24
       ],
       [
         30,
+        24
+      ],
+      [
+        31,
+        24
+      ],
+      [
+        32,
+        24
+      ],
+      [
+        33,
+        24
+      ],
+      [
+        34,
+        24
+      ],
+      [
+        35,
+        24
+      ],
+      [
+        35,
         23
       ]
     ],
