@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2811,
-  "last_beat_at": "2026-09-09T16:27:12Z",
+  "beat": 2822,
+  "last_beat_at": "2026-09-09T19:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "overcast",
   "heat": {
-    "riverside": 37,
-    "delmar": 100,
+    "riverside": 26,
+    "delmar": 89,
     "terraces": 5,
     "civic": 5
   },
@@ -2027,6 +2027,94 @@
   ],
   "events": [
     {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2821
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 2819
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 2818
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "booker",
+        "femi"
+      ],
+      "text": "Femi Adeyemi does Booker Lyle a favour that costs them something real.",
+      "beat": 2816
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "hector",
+        "sticks"
+      ],
+      "text": "Sticks does Hector Delgado a favour that costs them something real.",
+      "beat": 2815
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "maren3",
+        "rey"
+      ],
+      "text": "Rey Vasquez does Maren Adeyemi a favour that costs them something real.",
+      "beat": 2813
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 2812
+    },
+    {
       "id": "patrol_surge",
       "heat": {
         "delmar": 12
@@ -2187,93 +2275,6 @@
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
       "beat": 2787
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 2786
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 2785
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2784
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "chidi",
-        "nia2"
-      ],
-      "text": "Nia Mbeki does Chidi Okonkwo a favour that costs them something real.",
-      "beat": 2782
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "otis"
-      ],
-      "text": "Something pays out for Otis Bello. More than expected, which is its own problem.",
-      "beat": 2772
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2771
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2770
     }
   ],
   "player_queue": [
@@ -2296,12 +2297,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 702,
+  "last_gazette_day": 704,
   "llm_budget": {
     "day": "2026-09-09",
     "spent": {
       "fast": 163363,
-      "deep": 60357
+      "deep": 94812
     }
   },
   "silent_runs": 0,
@@ -2695,8 +2696,8 @@
       "open": false,
       "wings": [],
       "floors": 2,
-      "condition": "standing",
-      "since_day": 0
+      "condition": "damaged",
+      "since_day": 704
     },
     {
       "id": "vasquez",
@@ -3298,6 +3299,23 @@
       "floors": 3,
       "condition": "standing",
       "since_day": 682
+    },
+    {
+      "id": "new_home_705",
+      "name": "Kessler Cottages",
+      "district": "riverside",
+      "x": 87,
+      "y": 16,
+      "w": 7,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "clapboard",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 705
     }
   ],
   "laws": [
@@ -3422,97 +3440,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "fills a barber’s cape with fresh towels",
-      "day": 655,
-      "trial_day": 657,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "writes a ledger entry",
-      "day": 655,
-      "trial_day": 657,
-      "status": "convicted",
-      "witnesses": 0,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "slides ledger, eyes the officers",
-      "day": 657,
-      "trial_day": 659,
-      "status": "convicted",
-      "witnesses": 5,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "boateng",
-      "name": "Fr. Emmanuel Boateng",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "straightens baptism certificates in a ledger",
-      "day": 659,
-      "trial_day": 661,
-      "status": "convicted",
-      "witnesses": 1,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "leans his head back against the porch railing",
-      "day": 659,
-      "trial_day": 661,
-      "status": "convicted",
-      "witnesses": 14,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "errol3",
-      "name": "Errol Brannon",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "places canned beans on shelf, glances at ledger",
-      "day": 660,
-      "trial_day": 662,
-      "status": "convicted",
-      "witnesses": 4,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "odette2",
-      "name": "Odette Osei",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "stands behind till, eyes the cash drawer",
-      "day": 662,
-      "trial_day": 664,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "blaise",
@@ -4201,18 +4128,102 @@
       "status": "acquitted",
       "witnesses": 1,
       "verdict": "not guilty"
+    },
+    {
+      "id": "c061",
+      "who": "ruiz",
+      "name": "Det. Yolanda Ruiz",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 8
+    },
+    {
+      "id": "c062",
+      "who": "kohl",
+      "name": "Ofc. Brady Kohl",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c063",
+      "who": "rey",
+      "name": "Rey Vasquez",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c064",
+      "who": "cal2",
+      "name": "Cal Serrano",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c065",
+      "who": "chidi",
+      "name": "Chidi Okonkwo",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 2
+    },
+    {
+      "id": "c066",
+      "who": "tiny",
+      "name": "Tiny Reyes",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep",
+      "day": 704,
+      "trial_day": 706,
+      "status": "awaiting_trial",
+      "witnesses": 16
+    },
+    {
+      "id": "c061",
+      "who": "okafor",
+      "name": "Chinedu Okafor",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "tallies ledger pencil marks against the register tape.",
+      "day": 705,
+      "trial_day": 707,
+      "status": "awaiting_trial",
+      "witnesses": 2
     }
   ],
-  "law_pressure": 1,
+  "law_pressure": 2,
   "last_law_day": 613,
-  "last_expansion_day": 682,
+  "last_expansion_day": 705,
   "feuds": [
     {
       "a": "cass",
       "b": "kohl",
       "since_day": 243,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 0
     },
     {
       "a": "booker",
@@ -4247,7 +4258,7 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 18
     },
     {
       "a": "booker",
@@ -4282,17 +4293,24 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 51
+      "heat": 47
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-09-08",
-    "beat": 2743,
+    "day": "2026-09-09",
+    "beat": 2822,
     "providers": [
       "gemini"
     ]
   },
   "dead": [
+    {
+      "id": "kohl",
+      "name": "Ofc. Brady Kohl",
+      "day": 705,
+      "cause": "illness",
+      "where": "9th Precinct"
+    },
     {
       "id": "rosa2",
       "name": "Rosa Serrano",
@@ -4372,28 +4390,34 @@
     }
   ],
   "funeral": {
-    "day": 625,
-    "for": "Rosa Serrano",
-    "id": "rosa2",
-    "marked": 625
+    "day": 707,
+    "for": "Ofc. Brady Kohl",
+    "id": "kohl"
   },
-  "incidents": [
-    {
-      "id": "inc2810-raid-0",
-      "kind": "raid",
-      "effect": "lights",
-      "at": "church",
-      "x": 50,
-      "y": 40,
-      "who": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "started": 2810,
-      "until": 2812
-    }
-  ],
-  "treasury": 224592,
+  "incidents": [],
+  "treasury": 226646,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 704,
+      "wages": 1960,
+      "takings": 3400,
+      "tax": 1747,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1027,
+      "treasury": 226646
+    },
+    {
+      "day": 703,
+      "wages": 1960,
+      "takings": 3400,
+      "tax": 1747,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1027,
+      "treasury": 225619
+    },
     {
       "day": 702,
       "wages": 1960,
@@ -4673,26 +4697,6 @@
       "civic": 720,
       "net": 1043,
       "treasury": 196456
-    },
-    {
-      "day": 662,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 195413
-    },
-    {
-      "day": 661,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 194370
     }
   ],
   "births": [
@@ -5169,32 +5173,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 635,
-      "overall": 67,
-      "economy": 95,
-      "wellbeing": 60,
-      "society": 29,
-      "infrastructure": 94,
-      "growth": 61,
-      "population": 61,
-      "buildings": 51,
-      "treasury": 176308,
-      "employment": 100
-    },
-    {
-      "day": 636,
-      "overall": 67,
-      "economy": 95,
-      "wellbeing": 63,
-      "society": 23,
-      "infrastructure": 94,
-      "growth": 61,
-      "population": 61,
-      "buildings": 51,
-      "treasury": 177239,
-      "employment": 100
-    },
     {
       "day": 637,
       "overall": 67,
@@ -5792,19 +5770,45 @@
       "buildings": 52,
       "treasury": 224592,
       "employment": 100
+    },
+    {
+      "day": 703,
+      "overall": 66,
+      "economy": 96,
+      "wellbeing": 61,
+      "society": 28,
+      "infrastructure": 87,
+      "growth": 57,
+      "population": 64,
+      "buildings": 52,
+      "treasury": 225619,
+      "employment": 100
+    },
+    {
+      "day": 704,
+      "overall": 59,
+      "economy": 96,
+      "wellbeing": 60,
+      "society": 4,
+      "infrastructure": 82,
+      "growth": 52,
+      "population": 64,
+      "buildings": 51,
+      "treasury": 226646,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 702,
-    "overall": 66,
+    "day": 704,
+    "overall": 59,
     "economy": 96,
     "wellbeing": 60,
-    "society": 27,
-    "infrastructure": 87,
-    "growth": 63,
+    "society": 4,
+    "infrastructure": 82,
+    "growth": 52,
     "population": 64,
-    "buildings": 52,
-    "treasury": 224592,
+    "buildings": 51,
+    "treasury": 226646,
     "employment": 100
   },
   "buildable": {
