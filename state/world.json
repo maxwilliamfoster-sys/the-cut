@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2832,
-  "last_beat_at": "2026-09-09T21:42:12Z",
+  "beat": 2840,
+  "last_beat_at": "2026-09-09T23:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "rain",
+  "weather": "first snow",
   "heat": {
-    "riverside": 41,
-    "delmar": 81,
+    "riverside": 33,
+    "delmar": 79,
     "terraces": 5,
-    "civic": 8
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -2101,9 +2101,73 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine156",
+      "from": "rey",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 713,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 2840
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2838
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "dot"
+      ],
+      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed.",
+      "beat": 2836
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "cassius",
+        "dev"
+      ],
+      "text": "Cassius Reyes and Dev Lindqvist are seen arguing in the street loud enough that people stop.",
+      "beat": 2834
+    },
     {
       "id": "raid",
       "heat": {
@@ -2309,55 +2373,6 @@
       ],
       "text": "Rufus Bello does Otis Bello a favour that costs them something real.",
       "beat": 2805
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2804
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2802
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2801
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 2792
     }
   ],
   "player_queue": [
@@ -2380,12 +2395,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 707,
+  "last_gazette_day": 709,
   "llm_budget": {
-    "day": "2026-09-09",
+    "day": "2026-09-10",
     "spent": {
-      "fast": 163363,
-      "deep": 116105
+      "fast": 17564,
+      "deep": 897
     }
   },
   "silent_runs": 0,
@@ -3459,7 +3474,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 36
+      "convictions": 37
     },
     {
       "id": "law04",
@@ -3523,32 +3538,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "sits in barber chair, eyes on Tiny",
-      "day": 662,
-      "trial_day": 664,
-      "status": "convicted",
-      "witnesses": 14,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "otis",
-      "name": "Otis Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "stands, eyes the news, mutters quietly",
-      "day": 663,
-      "trial_day": 665,
-      "status": "convicted",
-      "witnesses": 10,
-      "verdict": "guilty"
-    },
     {
       "id": "c062",
       "who": "cassius",
@@ -4301,6 +4290,43 @@
       "status": "convicted",
       "witnesses": 16,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "rey",
+      "name": "Rey Vasquez",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "cuts a steak, wipes knife clean",
+      "day": 708,
+      "trial_day": 710,
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "jonah4",
+      "name": "Jonah Bello",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays near the sink, watches the water run",
+      "day": 709,
+      "trial_day": 711,
+      "status": "awaiting_trial",
+      "witnesses": 16
+    },
+    {
+      "id": "c061",
+      "who": "cassius",
+      "name": "Cassius Reyes",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays in bed, watches snow, sighs",
+      "day": 710,
+      "trial_day": 712,
+      "status": "awaiting_trial",
+      "witnesses": 11
     }
   ],
   "law_pressure": 2,
@@ -4326,7 +4352,7 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 8
     },
     {
       "a": "booker",
@@ -4354,7 +4380,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 57
     }
   ],
   "quota_exhausted_on": {
@@ -4458,21 +4484,43 @@
   },
   "incidents": [
     {
-      "id": "inc2832-raid-0",
-      "kind": "raid",
+      "id": "inc2840-arrest-0",
+      "kind": "arrest",
       "effect": "lights",
-      "at": "church",
-      "x": 50,
-      "y": 40,
-      "who": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "started": 2832,
-      "until": 2834
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "cassius"
+      ],
+      "text": "Cassius Reyes is taken to the 9th over No Linger on Porch After Dusk.",
+      "started": 2840,
+      "until": 2841
     }
   ],
-  "treasury": 229723,
+  "treasury": 231820,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 709,
+      "wages": 2055,
+      "takings": 3400,
+      "tax": 1777,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1057,
+      "treasury": 231820
+    },
+    {
+      "day": 708,
+      "wages": 2002,
+      "takings": 3400,
+      "tax": 1760,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1040,
+      "treasury": 230763
+    },
     {
       "day": 707,
       "wages": 2002,
@@ -4752,26 +4800,6 @@
       "civic": 720,
       "net": 1043,
       "treasury": 201671
-    },
-    {
-      "day": 672,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 200628
-    },
-    {
-      "day": 671,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 199585
     }
   ],
   "births": [
@@ -5257,32 +5285,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 642,
-      "overall": 62,
-      "economy": 96,
-      "wellbeing": 61,
-      "society": 7,
-      "infrastructure": 94,
-      "growth": 55,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 181211,
-      "employment": 100
-    },
-    {
-      "day": 643,
-      "overall": 62,
-      "economy": 96,
-      "wellbeing": 60,
-      "society": 6,
-      "infrastructure": 94,
-      "growth": 55,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 182204,
-      "employment": 100
-    },
     {
       "day": 648,
       "overall": 68,
@@ -5880,19 +5882,45 @@
       "buildings": 52,
       "treasury": 229723,
       "employment": 100
+    },
+    {
+      "day": 708,
+      "overall": 67,
+      "economy": 95,
+      "wellbeing": 61,
+      "society": 30,
+      "infrastructure": 83,
+      "growth": 69,
+      "population": 66,
+      "buildings": 52,
+      "treasury": 230763,
+      "employment": 100
+    },
+    {
+      "day": 709,
+      "overall": 69,
+      "economy": 95,
+      "wellbeing": 70,
+      "society": 27,
+      "infrastructure": 82,
+      "growth": 75,
+      "population": 67,
+      "buildings": 52,
+      "treasury": 231820,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 707,
-    "overall": 67,
+    "day": 709,
+    "overall": 69,
     "economy": 95,
-    "wellbeing": 65,
+    "wellbeing": 70,
     "society": 27,
-    "infrastructure": 83,
-    "growth": 69,
-    "population": 66,
+    "infrastructure": 82,
+    "growth": 75,
+    "population": 67,
     "buildings": 52,
-    "treasury": 229723,
+    "treasury": 231820,
     "employment": 100
   },
   "buildable": {
