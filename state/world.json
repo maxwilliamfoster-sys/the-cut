@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2840,
-  "last_beat_at": "2026-09-09T23:42:12Z",
+  "beat": 2857,
+  "last_beat_at": "2026-09-10T03:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "first snow",
+  "weather": "clear",
   "heat": {
-    "riverside": 33,
-    "delmar": 79,
+    "riverside": 41,
+    "delmar": 64,
     "terraces": 5,
     "civic": 5
   },
@@ -2114,9 +2114,172 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine157",
+      "from": "jonah4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 714,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine158",
+      "from": "cassius",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 715,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine159",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 716,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine160",
+      "from": "brennan",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 717,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "maren2",
+        "errol"
+      ],
+      "text": "Somebody tells Maren Bello that Errol Brannon has been seen talking to police.",
+      "beat": 2855
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "odette3"
+      ],
+      "text": "Something pays out for Odette Amadi. More than expected, which is its own problem.",
+      "beat": 2854
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "rey",
+        "rufus"
+      ],
+      "text": "Somebody tells Rey Vasquez that Rufus Bello has been seen talking to police.",
+      "beat": 2852
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2850
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "jonah4"
+      ],
+      "text": "Jonah Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 2849
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 2848
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2847
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "rosa"
+      ],
+      "text": "Rosa Reyes ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 2846
+    },
     {
       "id": "inspection",
       "heat": {
@@ -2270,109 +2433,6 @@
       ],
       "text": "Sticks does Hector Delgado a favour that costs them something real.",
       "beat": 2815
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "maren3",
-        "rey"
-      ],
-      "text": "Rey Vasquez does Maren Adeyemi a favour that costs them something real.",
-      "beat": 2813
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "kohl"
-      ],
-      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 2812
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2811
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 2810
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2809
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 2807
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 2806
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "otis",
-        "rufus"
-      ],
-      "text": "Rufus Bello does Otis Bello a favour that costs them something real.",
-      "beat": 2805
     }
   ],
   "player_queue": [
@@ -2395,12 +2455,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 709,
+  "last_gazette_day": 713,
   "llm_budget": {
     "day": "2026-09-10",
     "spent": {
-      "fast": 17564,
-      "deep": 897
+      "fast": 85195,
+      "deep": 3445
     }
   },
   "silent_runs": 0,
@@ -3494,7 +3554,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 32
+      "convictions": 34
     },
     {
       "id": "law05",
@@ -3534,88 +3594,10 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 54
+      "convictions": 56
     }
   ],
   "charges": [
-    {
-      "id": "c062",
-      "who": "cassius",
-      "name": "Cassius Reyes",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "stands, eats, watches others",
-      "day": 663,
-      "trial_day": 665,
-      "status": "convicted",
-      "witnesses": 10,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "okafor",
-      "name": "Chinedu Okafor",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "counting float, eyeing Marisol's ledger",
-      "day": 663,
-      "trial_day": 665,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "amara",
-      "name": "Amara Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "stares at the barber shop window",
-      "day": 663,
-      "trial_day": 665,
-      "status": "convicted",
-      "witnesses": 11,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "cassius",
-      "name": "Cassius Reyes",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "stands near the window, watching the rain drip",
-      "day": 666,
-      "trial_day": 668,
-      "status": "convicted",
-      "witnesses": 14,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "theo2",
-      "name": "Theo Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "standing, scoffing breakfast",
-      "day": 667,
-      "trial_day": 669,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "cass",
-      "name": "Cass Deveaux",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "examines a ledger, eyes flick to kohl",
-      "day": 667,
-      "trial_day": 669,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "dot",
@@ -4313,8 +4295,9 @@
       "evidence": "stays near the sink, watches the water run",
       "day": 709,
       "trial_day": 711,
-      "status": "awaiting_trial",
-      "witnesses": 16
+      "status": "convicted",
+      "witnesses": 16,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -4325,8 +4308,71 @@
       "evidence": "stays in bed, watches snow, sighs",
       "day": 710,
       "trial_day": 712,
+      "status": "convicted",
+      "witnesses": 11,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "closes the ledger, glances at Brennan",
+      "day": 711,
+      "trial_day": 713,
+      "status": "convicted",
+      "witnesses": 4,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "brennan",
+      "name": "Sgt. Hal Brennan",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stands at desk, listening",
+      "day": 712,
+      "trial_day": 714,
+      "status": "convicted",
+      "witnesses": 4,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "sits, eyes flicking at the ledger",
+      "day": 713,
+      "trial_day": 715,
       "status": "awaiting_trial",
-      "witnesses": 11
+      "witnesses": 3
+    },
+    {
+      "id": "c061",
+      "who": "maren2",
+      "name": "Maren Bello",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep, breathing shallowly",
+      "day": 713,
+      "trial_day": 715,
+      "status": "awaiting_trial",
+      "witnesses": 17
+    },
+    {
+      "id": "c062",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "smooths a hair clipper, muttering softly",
+      "day": 713,
+      "trial_day": 715,
+      "status": "awaiting_trial",
+      "witnesses": 17
     }
   ],
   "law_pressure": 2,
@@ -4352,7 +4398,7 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 2
     },
     {
       "a": "booker",
@@ -4380,7 +4426,14 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 57
+      "heat": 51
+    },
+    {
+      "a": "hector",
+      "b": "yusuf",
+      "since_day": 712,
+      "cause": "would not let it go",
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
@@ -4482,25 +4535,40 @@
     "id": "kohl",
     "marked": 707
   },
-  "incidents": [
-    {
-      "id": "inc2840-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "cassius"
-      ],
-      "text": "Cassius Reyes is taken to the 9th over No Linger on Porch After Dusk.",
-      "started": 2840,
-      "until": 2841
-    }
-  ],
-  "treasury": 231820,
+  "incidents": [],
+  "treasury": 234991,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 713,
+      "wages": 2055,
+      "takings": 3400,
+      "tax": 1777,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1057,
+      "treasury": 234991
+    },
+    {
+      "day": 712,
+      "wages": 2055,
+      "takings": 3400,
+      "tax": 1777,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1057,
+      "treasury": 233934
+    },
+    {
+      "day": 711,
+      "wages": 2055,
+      "takings": 3400,
+      "tax": 1777,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1057,
+      "treasury": 232877
+    },
     {
       "day": 709,
       "wages": 2055,
@@ -4770,36 +4838,6 @@
       "civic": 720,
       "net": 1043,
       "treasury": 204800
-    },
-    {
-      "day": 675,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 203757
-    },
-    {
-      "day": 674,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 202714
-    },
-    {
-      "day": 673,
-      "wages": 1913,
-      "takings": 3495,
-      "tax": 1763,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1043,
-      "treasury": 201671
     }
   ],
   "births": [
@@ -5285,45 +5323,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 648,
-      "overall": 68,
-      "economy": 96,
-      "wellbeing": 66,
-      "society": 24,
-      "infrastructure": 94,
-      "growth": 61,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 183197,
-      "employment": 100
-    },
-    {
-      "day": 649,
-      "overall": 65,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 16,
-      "infrastructure": 94,
-      "growth": 61,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 184190,
-      "employment": 100
-    },
-    {
-      "day": 650,
-      "overall": 65,
-      "economy": 96,
-      "wellbeing": 63,
-      "society": 16,
-      "infrastructure": 94,
-      "growth": 55,
-      "population": 61,
-      "buildings": 52,
-      "treasury": 185183,
-      "employment": 100
-    },
     {
       "day": 653,
       "overall": 67,
@@ -5908,19 +5907,58 @@
       "buildings": 52,
       "treasury": 231820,
       "employment": 100
+    },
+    {
+      "day": 711,
+      "overall": 70,
+      "economy": 95,
+      "wellbeing": 74,
+      "society": 27,
+      "infrastructure": 82,
+      "growth": 75,
+      "population": 67,
+      "buildings": 52,
+      "treasury": 232877,
+      "employment": 100
+    },
+    {
+      "day": 712,
+      "overall": 67,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 25,
+      "infrastructure": 82,
+      "growth": 75,
+      "population": 67,
+      "buildings": 52,
+      "treasury": 233934,
+      "employment": 100
+    },
+    {
+      "day": 713,
+      "overall": 64,
+      "economy": 95,
+      "wellbeing": 65,
+      "society": 17,
+      "infrastructure": 82,
+      "growth": 64,
+      "population": 67,
+      "buildings": 52,
+      "treasury": 234991,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 709,
-    "overall": 69,
+    "day": 713,
+    "overall": 64,
     "economy": 95,
-    "wellbeing": 70,
-    "society": 27,
+    "wellbeing": 65,
+    "society": 17,
     "infrastructure": 82,
-    "growth": 75,
+    "growth": 64,
     "population": 67,
     "buildings": 52,
-    "treasury": 231820,
+    "treasury": 234991,
     "employment": 100
   },
   "buildable": {
