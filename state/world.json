@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 2930,
-  "last_beat_at": "2026-09-10T22:12:12Z",
+  "beat": 2938,
+  "last_beat_at": "2026-09-11T00:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 5,
-    "delmar": 9,
+    "riverside": 26,
+    "delmar": 21,
     "terraces": 8,
     "civic": 5
   },
@@ -2365,6 +2365,57 @@
   ],
   "events": [
     {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 2934
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 2933
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 2932
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 2931
+    },
+    {
       "id": "fight",
       "heat": {},
       "mood": {
@@ -2571,59 +2622,6 @@
       ],
       "text": "Chinedu Okafor gets word that what they owe is wanted sooner than agreed.",
       "beat": 2907
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "kwame",
-        "kwame2"
-      ],
-      "text": "Kwame Doyle does Kwame Osei a favour that costs them something real.",
-      "beat": 2905
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "farrah2",
-        "okafor"
-      ],
-      "text": "Farrah Mbeki and Chinedu Okafor are seen arguing in the street loud enough that people stop.",
-      "beat": 2904
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 2903
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "dev"
-      ],
-      "text": "Dev Lindqvist gets word that what they owe is wanted sooner than agreed.",
-      "beat": 2900
     }
   ],
   "player_queue": [
@@ -2646,12 +2644,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 731,
+  "last_gazette_day": 733,
   "llm_budget": {
-    "day": "2026-09-10",
+    "day": "2026-09-11",
     "spent": {
-      "fast": 164480,
-      "deep": 88696
+      "fast": 39657,
+      "deep": 1670
     }
   },
   "silent_runs": 0,
@@ -3807,32 +3805,6 @@
   ],
   "charges": [
     {
-      "id": "c061",
-      "who": "etta",
-      "name": "Etta Adeyemi",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "twirls a strand of hair quietly",
-      "day": 675,
-      "trial_day": 677,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "leans back, runs a hand through hair",
-      "day": 677,
-      "trial_day": 679,
-      "status": "convicted",
-      "witnesses": 15,
-      "verdict": "guilty"
-    },
-    {
       "id": "c062",
       "who": "dot",
       "name": "Dot Feeney",
@@ -4584,6 +4556,30 @@
       "status": "convicted",
       "witnesses": 4,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "errol3",
+      "name": "Errol Brannon",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stands at door, eyes on movement",
+      "day": 733,
+      "trial_day": 735,
+      "status": "awaiting_trial",
+      "witnesses": 4
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "leans against counter, checks ledger",
+      "day": 733,
+      "trial_day": 735,
+      "status": "awaiting_trial",
+      "witnesses": 4
     }
   ],
   "law_pressure": 2,
@@ -4609,14 +4605,14 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 8
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 14
     },
     {
       "a": "cass",
@@ -4630,21 +4626,21 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 88
+      "heat": 100
     },
     {
       "a": "hector",
       "b": "yusuf",
       "since_day": 712,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 19
     },
     {
       "a": "hector",
       "b": "nia",
       "since_day": 722,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 31
     }
   ],
   "quota_exhausted_on": {
@@ -4754,9 +4750,29 @@
     "marked": 724
   },
   "incidents": [],
-  "treasury": 249867,
+  "treasury": 252007,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 733,
+      "wages": 2097,
+      "takings": 3400,
+      "tax": 1790,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1070,
+      "treasury": 252007
+    },
+    {
+      "day": 732,
+      "wages": 2097,
+      "takings": 3400,
+      "tax": 1790,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1070,
+      "treasury": 250937
+    },
     {
       "day": 731,
       "wages": 2097,
@@ -5036,26 +5052,6 @@
       "civic": 720,
       "net": 1027,
       "treasury": 221511
-    },
-    {
-      "day": 696,
-      "wages": 1960,
-      "takings": 3400,
-      "tax": 1747,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1027,
-      "treasury": 220484
-    },
-    {
-      "day": 695,
-      "wages": 1960,
-      "takings": 3400,
-      "tax": 1747,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1027,
-      "treasury": 219457
     }
   ],
   "births": [
@@ -5568,32 +5564,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 672,
-      "overall": 66,
-      "economy": 96,
-      "wellbeing": 68,
-      "society": 11,
-      "infrastructure": 93,
-      "growth": 66,
-      "population": 62,
-      "buildings": 53,
-      "treasury": 200628,
-      "employment": 100
-    },
-    {
-      "day": 673,
-      "overall": 66,
-      "economy": 96,
-      "wellbeing": 69,
-      "society": 8,
-      "infrastructure": 93,
-      "growth": 66,
-      "population": 62,
-      "buildings": 53,
-      "treasury": 201671,
-      "employment": 100
-    },
     {
       "day": 674,
       "overall": 66,
@@ -6191,19 +6161,45 @@
       "buildings": 53,
       "treasury": 249867,
       "employment": 100
+    },
+    {
+      "day": 732,
+      "overall": 74,
+      "economy": 95,
+      "wellbeing": 69,
+      "society": 39,
+      "infrastructure": 83,
+      "growth": 91,
+      "population": 70,
+      "buildings": 53,
+      "treasury": 250937,
+      "employment": 100
+    },
+    {
+      "day": 733,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 29,
+      "infrastructure": 83,
+      "growth": 96,
+      "population": 70,
+      "buildings": 53,
+      "treasury": 252007,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 731,
-    "overall": 73,
+    "day": 733,
+    "overall": 71,
     "economy": 95,
-    "wellbeing": 68,
-    "society": 36,
+    "wellbeing": 64,
+    "society": 29,
     "infrastructure": 83,
-    "growth": 91,
+    "growth": 96,
     "population": 70,
     "buildings": 53,
-    "treasury": 249867,
+    "treasury": 252007,
     "employment": 100
   },
   "buildable": {
