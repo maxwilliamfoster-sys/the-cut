@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3017,
-  "last_beat_at": "2026-09-11T19:57:12Z",
+  "beat": 3027,
+  "last_beat_at": "2026-09-11T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 25,
-    "terraces": 11,
-    "civic": 7
+    "delmar": 15,
+    "terraces": 5,
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -2495,6 +2495,45 @@
   ],
   "events": [
     {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "kwame"
+      ],
+      "text": "Kwame Osei gets word that what they owe is wanted sooner than agreed.",
+      "beat": 3027
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "isaac"
+      ],
+      "text": "Something pays out for Isaac Adeyemi. More than expected, which is its own problem.",
+      "beat": 3022
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "jonah4"
+      ],
+      "text": "Something pays out for Jonah Bello. More than expected, which is its own problem.",
+      "beat": 3019
+    },
+    {
       "id": "patrol_surge",
       "heat": {
         "delmar": 12
@@ -2709,41 +2748,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 2989
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "tee"
-      ],
-      "text": "Something pays out for Tariq 'Tee' Bello. More than expected, which is its own problem.",
-      "beat": 2988
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 2987
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 2986
     }
   ],
   "player_queue": [
@@ -2766,12 +2770,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 753,
+  "last_gazette_day": 756,
   "llm_budget": {
     "day": "2026-09-11",
     "spent": {
       "fast": 163877,
-      "deep": 127036
+      "deep": 157902
     }
   },
   "silent_runs": 0,
@@ -4753,7 +4757,7 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 46
+      "heat": 60
     },
     {
       "a": "cass",
@@ -4775,13 +4779,6 @@
       "since_day": 712,
       "cause": "would not let it go",
       "heat": 0
-    },
-    {
-      "a": "hector",
-      "b": "nia",
-      "since_day": 722,
-      "cause": "would not let it go",
-      "heat": 3
     }
   ],
   "quota_exhausted_on": {
@@ -4898,9 +4895,39 @@
     "marked": 739
   },
   "incidents": [],
-  "treasury": 266909,
+  "treasury": 270107,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 756,
+      "wages": 2086,
+      "takings": 3400,
+      "tax": 1786,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1066,
+      "treasury": 270107
+    },
+    {
+      "day": 755,
+      "wages": 2086,
+      "takings": 3400,
+      "tax": 1786,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1066,
+      "treasury": 269041
+    },
+    {
+      "day": 754,
+      "wages": 2086,
+      "takings": 3400,
+      "tax": 1786,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1066,
+      "treasury": 267975
+    },
     {
       "day": 753,
       "wages": 2086,
@@ -5170,39 +5197,18 @@
       "civic": 720,
       "net": 1057,
       "treasury": 239219
-    },
-    {
-      "day": 718,
-      "wages": 2055,
-      "takings": 3400,
-      "tax": 1777,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1057,
-      "treasury": 238162
-    },
-    {
-      "day": 717,
-      "wages": 2055,
-      "takings": 3400,
-      "tax": 1777,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1057,
-      "treasury": 237105
-    },
-    {
-      "day": 716,
-      "wages": 2055,
-      "takings": 3400,
-      "tax": 1777,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1057,
-      "treasury": 236048
     }
   ],
   "births": [
+    {
+      "id": "jonah5",
+      "name": "Jonah Adeyemi",
+      "day": 754,
+      "parents": [
+        "simone",
+        "femi"
+      ]
+    },
     {
       "id": "isaac",
       "name": "Isaac Adeyemi",
@@ -5721,45 +5727,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 691,
-      "overall": 62,
-      "economy": 96,
-      "wellbeing": 58,
-      "society": 0,
-      "infrastructure": 94,
-      "growth": 73,
-      "population": 64,
-      "buildings": 54,
-      "treasury": 217372,
-      "employment": 100
-    },
-    {
-      "day": 692,
-      "overall": 60,
-      "economy": 96,
-      "wellbeing": 57,
-      "society": 0,
-      "infrastructure": 89,
-      "growth": 68,
-      "population": 64,
-      "buildings": 53,
-      "treasury": 218430,
-      "employment": 100
-    },
-    {
-      "day": 695,
-      "overall": 65,
-      "economy": 96,
-      "wellbeing": 62,
-      "society": 21,
-      "infrastructure": 87,
-      "growth": 63,
-      "population": 64,
-      "buildings": 52,
-      "treasury": 219457,
-      "employment": 100
-    },
     {
       "day": 696,
       "overall": 62,
@@ -6344,19 +6311,58 @@
       "buildings": 54,
       "treasury": 266909,
       "employment": 100
+    },
+    {
+      "day": 754,
+      "overall": 74,
+      "economy": 94,
+      "wellbeing": 70,
+      "society": 40,
+      "infrastructure": 83,
+      "growth": 90,
+      "population": 72,
+      "buildings": 54,
+      "treasury": 267975,
+      "employment": 100
+    },
+    {
+      "day": 755,
+      "overall": 74,
+      "economy": 94,
+      "wellbeing": 71,
+      "society": 40,
+      "infrastructure": 83,
+      "growth": 90,
+      "population": 72,
+      "buildings": 54,
+      "treasury": 269041,
+      "employment": 100
+    },
+    {
+      "day": 756,
+      "overall": 73,
+      "economy": 94,
+      "wellbeing": 71,
+      "society": 41,
+      "infrastructure": 83,
+      "growth": 79,
+      "population": 72,
+      "buildings": 54,
+      "treasury": 270107,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 753,
+    "day": 756,
     "overall": 73,
     "economy": 94,
-    "wellbeing": 70,
-    "society": 39,
-    "infrastructure": 84,
-    "growth": 84,
-    "population": 71,
+    "wellbeing": 71,
+    "society": 41,
+    "infrastructure": 83,
+    "growth": 79,
+    "population": 72,
     "buildings": 54,
-    "treasury": 266909,
+    "treasury": 270107,
     "employment": 100
   },
   "buildable": {
