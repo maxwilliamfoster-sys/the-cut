@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3117,
-  "last_beat_at": "2026-09-12T20:57:12Z",
+  "beat": 3125,
+  "last_beat_at": "2026-09-12T22:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 19,
-    "delmar": 23,
-    "terraces": 11,
+    "riverside": 11,
+    "delmar": 9,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -2833,6 +2833,43 @@
   ],
   "events": [
     {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "brennan",
+        "junie"
+      ],
+      "text": "Somebody tells Sgt. Hal Brennan that Junie Marsh has been seen talking to police.",
+      "beat": 3124
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 3123
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 3118
+    },
+    {
       "id": "cold_case",
       "heat": {},
       "mood": {
@@ -3048,44 +3085,6 @@
       ],
       "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
       "beat": 3094
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 3093
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "iris2",
-        "cassius"
-      ],
-      "text": "Cassius Reyes does Iris Lindqvist a favour that costs them something real.",
-      "beat": 3091
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 3090
     }
   ],
   "player_queue": [
@@ -3108,12 +3107,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 778,
+  "last_gazette_day": 780,
   "llm_budget": {
     "day": "2026-09-12",
     "spent": {
       "fast": 163213,
-      "deep": 125157
+      "deep": 149538
     }
   },
   "silent_runs": 0,
@@ -5113,7 +5112,7 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 22
+      "heat": 18
     },
     {
       "a": "cass",
@@ -5127,7 +5126,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 76
+      "heat": 72
     },
     {
       "a": "hector",
@@ -5141,7 +5140,14 @@
       "b": "odette",
       "since_day": 776,
       "cause": "would not let it go",
-      "heat": 49
+      "heat": 45
+    },
+    {
+      "a": "cass",
+      "b": "hector",
+      "since_day": 780,
+      "cause": "would not let it go",
+      "heat": 53
     }
   ],
   "quota_exhausted_on": {
@@ -5265,9 +5271,29 @@
     "marked": 774
   },
   "incidents": [],
-  "treasury": 290992,
+  "treasury": 293235,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 780,
+      "wages": 2041,
+      "takings": 3590,
+      "tax": 1833,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1113,
+      "treasury": 293235
+    },
+    {
+      "day": 779,
+      "wages": 2094,
+      "takings": 3590,
+      "tax": 1850,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1130,
+      "treasury": 292122
+    },
     {
       "day": 778,
       "wages": 2094,
@@ -5547,26 +5573,6 @@
       "civic": 720,
       "net": 1066,
       "treasury": 261579
-    },
-    {
-      "day": 746,
-      "wages": 2086,
-      "takings": 3400,
-      "tax": 1786,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1066,
-      "treasury": 260513
-    },
-    {
-      "day": 745,
-      "wages": 2086,
-      "takings": 3400,
-      "tax": 1786,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1066,
-      "treasury": 259447
     }
   ],
   "births": [
@@ -6097,32 +6103,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 722,
-      "overall": 65,
-      "economy": 95,
-      "wellbeing": 57,
-      "society": 37,
-      "infrastructure": 83,
-      "growth": 52,
-      "population": 66,
-      "buildings": 52,
-      "treasury": 240276,
-      "employment": 100
-    },
-    {
-      "day": 723,
-      "overall": 65,
-      "economy": 95,
-      "wellbeing": 60,
-      "society": 30,
-      "infrastructure": 82,
-      "growth": 58,
-      "population": 67,
-      "buildings": 52,
-      "treasury": 241333,
-      "employment": 100
-    },
     {
       "day": 724,
       "overall": 65,
@@ -6720,10 +6700,36 @@
       "buildings": 55,
       "treasury": 290992,
       "employment": 100
+    },
+    {
+      "day": 779,
+      "overall": 69,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 39,
+      "infrastructure": 83,
+      "growth": 67,
+      "population": 73,
+      "buildings": 55,
+      "treasury": 292122,
+      "employment": 100
+    },
+    {
+      "day": 780,
+      "overall": 69,
+      "economy": 95,
+      "wellbeing": 62,
+      "society": 39,
+      "infrastructure": 83,
+      "growth": 67,
+      "population": 73,
+      "buildings": 55,
+      "treasury": 293235,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 778,
+    "day": 780,
     "overall": 69,
     "economy": 95,
     "wellbeing": 62,
@@ -6732,7 +6738,7 @@
     "growth": 67,
     "population": 73,
     "buildings": 55,
-    "treasury": 290992,
+    "treasury": 293235,
     "employment": 100
   },
   "buildable": {

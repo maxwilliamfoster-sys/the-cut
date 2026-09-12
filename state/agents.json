@@ -3469,7 +3469,7 @@
   "ruiz": {
     "id": "ruiz",
     "name": "Det. Yolanda Ruiz",
-    "age": 53,
+    "age": 54,
     "role": "narcotics detective, 9th Precinct",
     "faction": "police",
     "home": "terrace_a",
@@ -3491,8 +3491,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      9,
-      64
+      2,
+      67
     ],
     "dest": [
       6,
@@ -3500,13 +3500,13 @@
     ],
     "at": "precinct",
     "spot": [
-      9,
-      64
+      2,
+      67
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 92,
+      "happiness": 42,
+      "stress": 77,
       "social_need": 0,
       "fear": 10
     },
@@ -5046,49 +5046,44 @@
         "importance": 6
       }
     ],
-    "action": "on the phone",
-    "activity": "on the phone",
-    "thought": "",
-    "speech": null,
+    "action": "stamps the arrest sheet and slides it across",
+    "activity": "filing paperwork",
+    "thought": "Lyle gets cited for minor trash while running the whole avenue.",
+    "speech": {
+      "to": "brennan",
+      "text": "Another petty municipal fine on Lyle. Paperwork's a joke, Hal."
+    },
     "path": [
       [
         6,
         69
       ],
       [
-        7,
+        5,
         69
       ],
       [
-        8,
+        4,
         69
       ],
       [
-        9,
+        3,
         69
       ],
       [
-        9,
+        2,
+        69
+      ],
+      [
+        2,
         68
       ],
       [
-        9,
+        2,
         67
-      ],
-      [
-        9,
-        66
-      ],
-      [
-        9,
-        65
-      ],
-      [
-        9,
-        64
       ]
     ],
-    "last_thought_beat": 3114,
+    "last_thought_beat": 3125,
     "belief": "Simone’s conviction means the city is cracking down.",
     "alive": true,
     "health": 80,
@@ -5097,7 +5092,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "church",
@@ -7523,7 +7518,7 @@
   "tee": {
     "id": "tee",
     "name": "Tariq 'Tee' Bello",
-    "age": 35,
+    "age": 36,
     "role": "barber; his shop is neutral ground",
     "faction": "block",
     "home": "terrace_b",
@@ -7545,8 +7540,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      21,
-      33
+      22,
+      34
     ],
     "dest": [
       21,
@@ -7554,13 +7549,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      21,
-      33
+      22,
+      34
     ],
     "mood": {
-      "energy": 7,
-      "happiness": 50,
-      "stress": 51,
+      "energy": 4,
+      "happiness": 42,
+      "stress": 29,
       "social_need": 0,
       "fear": 10
     },
@@ -9148,21 +9143,28 @@
         "importance": 6
       }
     ],
-    "action": "pouring for somebody",
-    "activity": "pouring for somebody",
-    "thought": "",
-    "speech": null,
+    "action": "sets clean bottles along the shelf behind the chair",
+    "activity": "restocking the back bar",
+    "thought": "Rain keeps people inside. Good day to get things straight with Amara.",
+    "speech": {
+      "to": "amara",
+      "text": "Take the keys later if you want. Diner's yours to run."
+    },
     "path": [
-      [
-        20,
-        33
-      ],
       [
         21,
         33
+      ],
+      [
+        22,
+        33
+      ],
+      [
+        22,
+        34
       ]
     ],
-    "last_thought_beat": 3109,
+    "last_thought_beat": 3125,
     "belief": "Simone’s conviction means the city is tightening its grip.",
     "alive": true,
     "health": 80,
@@ -9188,7 +9190,7 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -9222,7 +9224,7 @@
   "simone": {
     "id": "simone",
     "name": "Simone Adeyemi",
-    "age": 43,
+    "age": 44,
     "role": "nurse at the clinic, patches people quietly",
     "faction": "block",
     "home": "terrace_a",
@@ -9244,8 +9246,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      24,
-      68
+      23,
+      67
     ],
     "dest": [
       3,
@@ -9253,13 +9255,13 @@
     ],
     "at": "clinic",
     "spot": [
-      24,
-      68
+      23,
+      67
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 36,
       "social_need": 0,
       "fear": 10
     },
@@ -10741,8 +10743,8 @@
         "importance": 6
       }
     ],
-    "action": "filing paperwork",
-    "activity": "filing paperwork",
+    "action": "reading a file",
+    "activity": "reading a file",
     "thought": "",
     "speech": null,
     "path": [
@@ -10767,27 +10769,19 @@
         64
       ],
       [
-        24,
-        64
-      ],
-      [
-        24,
+        23,
         65
       ],
       [
-        24,
+        23,
         66
       ],
       [
-        24,
+        23,
         67
-      ],
-      [
-        24,
-        68
       ]
     ],
-    "last_thought_beat": 3109,
+    "last_thought_beat": 3124,
     "belief": "The conviction proves the city will punish dissent.",
     "alive": true,
     "health": 80,
@@ -10796,7 +10790,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -10825,7 +10819,7 @@
   "rey": {
     "id": "rey",
     "name": "Rey Vasquez",
-    "age": 57,
+    "age": 58,
     "role": "runs the auto body shop, chops cars on the side",
     "faction": "grey",
     "home": "vasquez",
@@ -10861,8 +10855,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 92,
+      "happiness": 42,
+      "stress": 74,
       "social_need": 24,
       "fear": 10
     },
@@ -12418,17 +12412,33 @@
         "importance": 4
       }
     ],
-    "action": "watching the door",
-    "activity": "watching the door",
+    "action": "watching the door, listening to the rain",
+    "activity": "watching the door, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        49,
+        66
+      ],
+      [
+        48,
+        66
+      ],
+      [
+        47,
+        66
+      ],
+      [
+        47,
+        67
+      ],
       [
         47,
         68
       ]
     ],
-    "last_thought_beat": 3110,
+    "last_thought_beat": 3122,
     "belief": "Simone’s conviction signals the city is tightening its grip.",
     "alive": true,
     "health": 64,
@@ -12438,7 +12448,7 @@
     "last_instigated_day": 728,
     "driving": null,
     "vehicle": "van",
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -12457,7 +12467,7 @@
   "nadia": {
     "id": "nadia",
     "name": "Nadia Vasquez",
-    "age": 29,
+    "age": 30,
     "role": "straight-A student, sees more than she admits",
     "faction": "block",
     "home": "vasquez",
@@ -12479,8 +12489,8 @@
       "night": "vasquez"
     },
     "pos": [
-      37,
-      68
+      35,
+      65
     ],
     "dest": [
       33,
@@ -12488,13 +12498,13 @@
     ],
     "at": "school",
     "spot": [
-      37,
-      68
+      35,
+      65
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 0,
       "fear": 10
     },
@@ -13714,39 +13724,25 @@
         "day": 777,
         "what": "Booker Lyle was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3118,
+        "day": 779,
+        "what": "I noticed the house go cold as the power failed",
+        "importance": 4
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
+    "action": "at the desk, listening to the rain",
+    "activity": "at the desk, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
       [
-        33,
-        67
-      ],
-      [
-        34,
-        67
-      ],
-      [
         35,
-        67
-      ],
-      [
-        36,
-        67
-      ],
-      [
-        37,
-        67
-      ],
-      [
-        37,
-        68
+        65
       ]
     ],
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3118,
     "belief": "Simone’s conviction signals the city is becoming stricter.",
     "alive": true,
     "health": 80,
@@ -13755,7 +13751,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -13774,7 +13770,7 @@
   "booker": {
     "id": "booker",
     "name": "Booker Lyle",
-    "age": 64,
+    "age": 65,
     "role": "pawn shop owner; washes money and knows everyone's price",
     "faction": "grey",
     "home": "pawnshop",
@@ -13797,7 +13793,7 @@
     },
     "pos": [
       34,
-      34
+      32
     ],
     "dest": [
       50,
@@ -13806,12 +13802,12 @@
     "at": "pawnshop",
     "spot": [
       34,
-      34
+      32
     ],
     "mood": {
-      "energy": 4,
-      "happiness": 41,
-      "stress": 76,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 60,
       "social_need": 0,
       "fear": 10
     },
@@ -15347,17 +15343,20 @@
         "importance": 8
       }
     ],
-    "action": "restocking shelves",
-    "activity": "restocking shelves",
-    "thought": "",
-    "speech": null,
+    "action": "stacks wet tens neatly beside the open register",
+    "activity": "counting the float",
+    "thought": "Doyle watches every dollar like he already owns the cut.",
+    "speech": {
+      "to": "wes",
+      "text": "Count's right, Wes. You don't need to hover over the till."
+    },
     "path": [
       [
         34,
-        34
+        32
       ]
     ],
-    "last_thought_beat": 3116,
+    "last_thought_beat": 3125,
     "belief": "The system is weaponizing minor municipal infractions to undermine my institutional security.",
     "alive": true,
     "health": 56,
@@ -15377,7 +15376,7 @@
     "last_instigated_day": 756,
     "driving": null,
     "vehicle": "car",
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -16248,7 +16247,7 @@
   "cass": {
     "id": "cass",
     "name": "Cass Deveaux",
-    "age": 50,
+    "age": 51,
     "role": "buying property on Delmar for someone nobody has met",
     "faction": "outside",
     "home": "harborbar",
@@ -16283,9 +16282,9 @@
       35
     ],
     "mood": {
-      "energy": 54,
-      "happiness": 50,
-      "stress": 72,
+      "energy": 62,
+      "happiness": 39,
+      "stress": 64,
       "social_need": 0,
       "fear": 10
     },
@@ -16379,7 +16378,7 @@
         "opinion": "underestimated but friendly"
       },
       "hector": {
-        "affinity": -43,
+        "affinity": -55,
         "opinion": "neutral"
       },
       "gil": {
@@ -16743,22 +16742,10 @@
         "importance": 7
       },
       {
-        "beat": 1450,
-        "day": 362,
-        "what": "The candle revealed hidden documents on the table",
-        "importance": 5
-      },
-      {
         "beat": 1451,
         "day": 362,
         "what": "Kohl’s gaze is a warning; my papers must stay hidden, or I’ll be exposed.",
         "importance": 8
-      },
-      {
-        "beat": 1454,
-        "day": 363,
-        "what": "Dez's anger reminded me I can't afford a scene",
-        "importance": 5
       },
       {
         "beat": 1461,
@@ -17805,12 +17792,6 @@
         "importance": 6
       },
       {
-        "beat": 3096,
-        "day": 774,
-        "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
-        "importance": 6
-      },
-      {
         "beat": 3089,
         "day": 772,
         "what": "I was taken in over Quiet Hours in the Empty Lot.",
@@ -17829,14 +17810,26 @@
         "importance": 9
       },
       {
+        "beat": 3096,
+        "day": 774,
+        "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
+        "importance": 6
+      },
+      {
         "beat": 3108,
         "day": 777,
         "what": "Booker Lyle was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3122,
+        "day": 780,
+        "what": "Hector Delgado started on me in front of people.",
+        "importance": 7
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "browsing the shelves, listening to the rain",
+    "activity": "browsing the shelves, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
@@ -18105,7 +18098,7 @@
         35
       ]
     ],
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3119,
     "belief": "Cass’s conviction proves I must strengthen my alliances",
     "alive": true,
     "health": 80,
@@ -18115,7 +18108,7 @@
     "last_instigated_day": 716,
     "driving": "car",
     "vehicle": "car",
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -18135,7 +18128,7 @@
   "adaeze": {
     "id": "adaeze",
     "name": "Adaeze Okonkwo",
-    "age": 73,
+    "age": 74,
     "role": "Dez's mother; cleans at the church",
     "faction": "block",
     "home": "okonkwo",
@@ -18156,8 +18149,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      65,
-      50
+      60,
+      52
     ],
     "dest": [
       62,
@@ -18165,13 +18158,13 @@
     ],
     "at": "okonkwo",
     "spot": [
-      65,
-      50
+      60,
+      52
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 12,
       "fear": 10
     },
@@ -18939,8 +18932,8 @@
         "importance": 6
       }
     ],
-    "action": "folding laundry",
-    "activity": "folding laundry",
+    "action": "watching television",
+    "activity": "watching television",
     "thought": "",
     "speech": null,
     "path": [
@@ -19081,28 +19074,16 @@
         53
       ],
       [
-        63,
+        61,
         53
       ],
       [
-        64,
+        60,
         53
       ],
       [
-        65,
-        53
-      ],
-      [
-        65,
+        60,
         52
-      ],
-      [
-        65,
-        51
-      ],
-      [
-        65,
-        50
       ]
     ],
     "last_thought_beat": 3111,
@@ -19128,7 +19109,7 @@
   "chidi": {
     "id": "chidi",
     "name": "Chidi Okonkwo",
-    "age": 28,
+    "age": 29,
     "role": "Dez's younger brother, still at school",
     "faction": "block",
     "home": "okonkwo",
@@ -19150,19 +19131,22 @@
       "night": "okonkwo"
     },
     "pos": [
-      80,
-      51
+      75,
+      54
     ],
     "dest": [
       34,
       63
     ],
     "at": "green",
-    "spot": null,
+    "spot": [
+      75,
+      54
+    ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -20170,11 +20154,31 @@
         "importance": 6
       }
     ],
-    "action": "smoking",
-    "activity": "smoking",
+    "action": "sitting on a bench, listening to the rain",
+    "activity": "sitting on a bench, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
+      [
+        29,
+        68
+      ],
+      [
+        30,
+        68
+      ],
+      [
+        31,
+        68
+      ],
+      [
+        32,
+        68
+      ],
+      [
+        33,
+        68
+      ],
       [
         33,
         67
@@ -20368,68 +20372,36 @@
         62
       ],
       [
-        76,
-        62
-      ],
-      [
-        77,
-        62
-      ],
-      [
-        78,
-        62
-      ],
-      [
-        79,
-        62
-      ],
-      [
-        80,
-        62
-      ],
-      [
-        80,
+        75,
         61
       ],
       [
-        80,
+        75,
         60
       ],
       [
-        80,
+        75,
         59
       ],
       [
-        80,
+        75,
         58
       ],
       [
-        80,
+        75,
         57
       ],
       [
-        80,
+        75,
         56
       ],
       [
-        80,
+        75,
         55
       ],
       [
-        80,
+        75,
         54
-      ],
-      [
-        80,
-        53
-      ],
-      [
-        80,
-        52
-      ],
-      [
-        80,
-        51
       ]
     ],
     "last_thought_beat": 3108,
@@ -20441,7 +20413,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -21146,7 +21118,7 @@
   "tiny": {
     "id": "tiny",
     "name": "Tiny Reyes",
-    "age": 21,
+    "age": 22,
     "role": "Malik's little sister; everybody's favourite",
     "faction": "block",
     "home": "terrace_b",
@@ -21181,8 +21153,8 @@
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -22186,6 +22158,38 @@
     "speech": null,
     "path": [
       [
+        29,
+        68
+      ],
+      [
+        30,
+        68
+      ],
+      [
+        31,
+        68
+      ],
+      [
+        32,
+        68
+      ],
+      [
+        33,
+        68
+      ],
+      [
+        33,
+        67
+      ],
+      [
+        33,
+        66
+      ],
+      [
+        33,
+        65
+      ],
+      [
         33,
         64
       ],
@@ -22427,7 +22431,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 5135,
+    "money": 5205,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -22446,7 +22450,7 @@
   "marisol": {
     "id": "marisol",
     "name": "Marisol Vasquez",
-    "age": 83,
+    "age": 84,
     "role": "Rey's mother; runs the house",
     "faction": "block",
     "home": "vasquez",
@@ -22469,7 +22473,7 @@
     },
     "pos": [
       60,
-      32
+      33
     ],
     "dest": [
       33,
@@ -22478,12 +22482,12 @@
     "at": "bodega",
     "spot": [
       60,
-      32
+      33
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 46,
       "social_need": 0,
       "fear": 10
     },
@@ -23419,20 +23423,34 @@
         "day": 777,
         "what": "Booker Lyle was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3118,
+        "day": 779,
+        "what": "The lights went out and I kept cooking for everyone",
+        "importance": 4
       }
     ],
-    "action": "browsing the shelves",
-    "activity": "browsing the shelves",
+    "action": "queueing",
+    "activity": "queueing",
     "thought": "",
     "speech": null,
     "path": [
       [
         31,
-        51
+        49
       ],
       [
         32,
-        51
+        49
+      ],
+      [
+        33,
+        49
+      ],
+      [
+        33,
+        50
       ],
       [
         33,
@@ -23657,13 +23675,9 @@
       [
         60,
         33
-      ],
-      [
-        60,
-        32
       ]
     ],
-    "last_thought_beat": 3091,
+    "last_thought_beat": 3118,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -24197,7 +24211,7 @@
   "amara": {
     "id": "amara",
     "name": "Amara Bello",
-    "age": 32,
+    "age": 33,
     "role": "Tee's sister; apprentice in the second chair",
     "faction": "block",
     "home": "terrace_b",
@@ -24218,7 +24232,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      22,
+      21,
       33
     ],
     "dest": [
@@ -24227,13 +24241,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      22,
+      21,
       33
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 0,
       "fear": 10
     },
@@ -25475,21 +25489,17 @@
         "importance": 6
       }
     ],
-    "action": "clearing tables",
-    "activity": "clearing tables",
+    "action": "wiping down the counter",
+    "activity": "wiping down the counter",
     "thought": "",
     "speech": null,
     "path": [
       [
         21,
         33
-      ],
-      [
-        22,
-        33
       ]
     ],
-    "last_thought_beat": 3091,
+    "last_thought_beat": 3118,
     "belief": "Cass’s conviction shows the city’s power is tightening",
     "alive": true,
     "health": 80,
@@ -25498,7 +25508,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -25532,7 +25542,7 @@
   "gus": {
     "id": "gus",
     "name": "Gus Petrakis",
-    "age": 70,
+    "age": 71,
     "role": "owns the Blue Spoon; has run it thirty years",
     "faction": "block",
     "home": "delmarflats",
@@ -25567,8 +25577,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 54,
+      "happiness": 42,
+      "stress": 38,
       "social_need": 0,
       "fear": 10
     },
@@ -27106,8 +27116,20 @@
     "speech": null,
     "path": [
       [
-        60,
-        33
+        64,
+        32
+      ],
+      [
+        63,
+        32
+      ],
+      [
+        62,
+        32
+      ],
+      [
+        61,
+        32
       ],
       [
         60,
@@ -27147,7 +27169,7 @@
   "dot": {
     "id": "dot",
     "name": "Dot Feeney",
-    "age": 59,
+    "age": 60,
     "role": "barmaid at the Harbor Bar; knows every tab",
     "faction": "block",
     "home": "riverflats",
@@ -27169,8 +27191,8 @@
       "night": "harborbar"
     },
     "pos": [
-      75,
-      16
+      74,
+      20
     ],
     "dest": [
       75,
@@ -27178,13 +27200,13 @@
     ],
     "at": "riverflats",
     "spot": [
-      75,
-      16
+      74,
+      20
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 92,
+      "happiness": 42,
+      "stress": 74,
       "social_need": 24,
       "fear": 10
     },
@@ -28442,28 +28464,28 @@
     "speech": null,
     "path": [
       [
+        75,
+        16
+      ],
+      [
         74,
-        20
+        16
       ],
       [
-        75,
-        20
-      ],
-      [
-        75,
-        19
-      ],
-      [
-        75,
-        18
-      ],
-      [
-        75,
+        74,
         17
       ],
       [
-        75,
-        16
+        74,
+        18
+      ],
+      [
+        74,
+        19
+      ],
+      [
+        74,
+        20
       ]
     ],
     "last_thought_beat": 3114,
@@ -28476,7 +28498,7 @@
     "driving": null,
     "vehicle": null,
     "last_instigated_day": 776,
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "school",
@@ -28495,7 +28517,7 @@
   "wes": {
     "id": "wes",
     "name": "Wes Doyle",
-    "age": 43,
+    "age": 44,
     "role": "works Booker's counter; moves what comes in",
     "faction": "grey",
     "home": "delmarflats",
@@ -28517,7 +28539,7 @@
     },
     "pos": [
       36,
-      35
+      32
     ],
     "dest": [
       50,
@@ -28526,12 +28548,12 @@
     "at": "pawnshop",
     "spot": [
       36,
-      35
+      32
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 40,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -29993,18 +30015,22 @@
         "importance": 6
       }
     ],
-    "action": "behind the till",
-    "activity": "behind the till",
+    "action": "restocking shelves, listening to the rain",
+    "activity": "restocking shelves, listening to the rain",
     "thought": "",
     "speech": null,
     "path": [
       [
-        36,
-        34
+        34,
+        32
+      ],
+      [
+        35,
+        32
       ],
       [
         36,
-        35
+        32
       ]
     ],
     "last_thought_beat": 3111,
@@ -30017,7 +30043,7 @@
     "last_instigated_day": 752,
     "driving": null,
     "vehicle": "van",
-    "money": 11380,
+    "money": 11450,
     "skill": 100,
     "job": {
       "at": "school",
@@ -30980,7 +31006,7 @@
   "brennan": {
     "id": "brennan",
     "name": "Sgt. Hal Brennan",
-    "age": 67,
+    "age": 68,
     "role": "Ruiz's sergeant; two years from the pension",
     "faction": "police",
     "home": "riverflats",
@@ -31002,8 +31028,8 @@
       "night": "riverflats"
     },
     "pos": [
-      9,
-      68
+      2,
+      67
     ],
     "dest": [
       6,
@@ -31011,15 +31037,15 @@
     ],
     "at": "precinct",
     "spot": [
-      9,
-      68
+      2,
+      67
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 50,
+      "happiness": 42,
+      "stress": 51,
       "social_need": 0,
-      "fear": 10
+      "fear": 22
     },
     "relationships": {
       "ruiz": {
@@ -32025,11 +32051,43 @@
         69
       ],
       [
-        9,
+        8,
+        69
+      ],
+      [
+        7,
+        69
+      ],
+      [
+        6,
+        69
+      ],
+      [
+        5,
+        69
+      ],
+      [
+        4,
+        69
+      ],
+      [
+        3,
+        69
+      ],
+      [
+        2,
+        69
+      ],
+      [
+        2,
         68
+      ],
+      [
+        2,
+        67
       ]
     ],
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3124,
     "belief": "Cass’s case means the law is tightening",
     "alive": true,
     "health": 80,
@@ -32038,14 +32096,9 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 11380,
+    "money": 11415,
     "skill": 100,
-    "job": {
-      "at": "school",
-      "title": "on the ward",
-      "wage": 53,
-      "since_day": 342
-    },
+    "job": null,
     "partner": null,
     "parents": [],
     "children": [],
@@ -32057,7 +32110,7 @@
   "yusuf": {
     "id": "yusuf",
     "name": "Dr. Yusuf Amin",
-    "age": 57,
+    "age": 58,
     "role": "the clinic's only doctor",
     "faction": "block",
     "home": "riverflats",
@@ -32080,7 +32133,7 @@
     },
     "pos": [
       24,
-      68
+      67
     ],
     "dest": [
       75,
@@ -32089,12 +32142,12 @@
     "at": "clinic",
     "spot": [
       24,
-      68
+      67
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 54,
+      "happiness": 42,
+      "stress": 36,
       "social_need": 0,
       "fear": 10
     },
@@ -33040,21 +33093,49 @@
         "importance": 6
       }
     ],
-    "action": "filing paperwork",
-    "activity": "filing paperwork",
+    "action": "at the desk",
+    "activity": "at the desk",
     "thought": "",
     "speech": null,
     "path": [
       [
-        24,
-        67
+        19,
+        64
+      ],
+      [
+        20,
+        64
+      ],
+      [
+        21,
+        64
+      ],
+      [
+        22,
+        64
+      ],
+      [
+        23,
+        64
       ],
       [
         24,
-        68
+        64
+      ],
+      [
+        24,
+        65
+      ],
+      [
+        24,
+        66
+      ],
+      [
+        24,
+        67
       ]
     ],
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3122,
     "belief": "Simone’s conviction shows the city is becoming more oppressive.",
     "alive": true,
     "health": 80,
@@ -33063,7 +33144,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -33081,7 +33162,7 @@
   "priya": {
     "id": "priya",
     "name": "Ms. Priya Raman",
-    "age": 50,
+    "age": 51,
     "role": "teaches at Delmar High; Nadia's referee",
     "faction": "block",
     "home": "delmarflats",
@@ -33102,22 +33183,19 @@
       "night": "delmarflats"
     },
     "pos": [
-      37,
-      68
+      33,
+      64
     ],
     "dest": [
       76,
       40
     ],
     "at": "school",
-    "spot": [
-      37,
-      68
-    ],
+    "spot": null,
     "mood": {
-      "energy": 11,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -34039,34 +34117,46 @@
         "importance": 6
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
+    "action": "making bad coffee",
+    "activity": "making bad coffee",
     "thought": "",
     "speech": null,
     "path": [
       [
-        35,
-        65
+        37,
+        68
       ],
       [
         36,
-        65
+        68
       ],
       [
-        37,
-        65
+        35,
+        68
       ],
       [
-        37,
-        66
+        34,
+        68
       ],
       [
-        37,
+        33,
+        68
+      ],
+      [
+        33,
         67
       ],
       [
-        37,
-        68
+        33,
+        66
+      ],
+      [
+        33,
+        65
+      ],
+      [
+        33,
+        64
       ]
     ],
     "last_thought_beat": 3115,
@@ -34078,7 +34168,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -34096,7 +34186,7 @@
   "boateng": {
     "id": "boateng",
     "name": "Fr. Emmanuel Boateng",
-    "age": 75,
+    "age": 76,
     "role": "priest at St. Brendan's",
     "faction": "block",
     "home": "church",
@@ -34117,8 +34207,8 @@
       "night": "church"
     },
     "pos": [
-      53,
-      39
+      48,
+      37
     ],
     "dest": [
       50,
@@ -34126,14 +34216,14 @@
     ],
     "at": "church",
     "spot": [
-      53,
-      39
+      48,
+      37
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
-      "social_need": 94,
+      "happiness": 42,
+      "stress": 41,
+      "social_need": 74,
       "fear": 10
     },
     "relationships": {
@@ -35088,45 +35178,45 @@
         "importance": 6
       }
     ],
-    "action": "reading a file",
-    "activity": "reading a file",
+    "action": "at the desk",
+    "activity": "at the desk",
     "thought": "",
     "speech": null,
     "path": [
       [
-        48,
-        37
-      ],
-      [
-        49,
-        37
-      ],
-      [
-        50,
-        37
-      ],
-      [
-        51,
-        37
+        53,
+        39
       ],
       [
         52,
-        37
+        39
       ],
       [
-        53,
-        37
+        51,
+        39
       ],
       [
-        53,
+        50,
+        39
+      ],
+      [
+        49,
+        39
+      ],
+      [
+        48,
+        39
+      ],
+      [
+        48,
         38
       ],
       [
-        53,
-        39
+        48,
+        37
       ]
     ],
-    "last_thought_beat": 3088,
+    "last_thought_beat": 3119,
     "alive": true,
     "health": 80,
     "grief": 0,
@@ -35149,7 +35239,7 @@
   "femi": {
     "id": "femi",
     "name": "Femi Adeyemi",
-    "age": 46,
+    "age": 47,
     "role": "Simone's husband; drives for the transit depot",
     "faction": "block",
     "home": "terrace_a",
@@ -35171,8 +35261,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      77,
-      66
+      75,
+      68
     ],
     "dest": [
       78,
@@ -35180,13 +35270,13 @@
     ],
     "at": "depot",
     "spot": [
-      77,
-      66
+      75,
+      68
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 24,
       "fear": 10
     },
@@ -36294,17 +36384,45 @@
         "importance": 6
       }
     ],
-    "action": "checking a manifest",
-    "activity": "checking a manifest",
+    "action": "shifting crates",
+    "activity": "shifting crates",
     "thought": "",
     "speech": null,
     "path": [
       [
+        79,
+        65
+      ],
+      [
+        78,
+        65
+      ],
+      [
         77,
+        65
+      ],
+      [
+        76,
+        65
+      ],
+      [
+        75,
+        65
+      ],
+      [
+        75,
         66
+      ],
+      [
+        75,
+        67
+      ],
+      [
+        75,
+        68
       ]
     ],
-    "last_thought_beat": 3091,
+    "last_thought_beat": 3118,
     "belief": "Cass’s conviction proves we’re being punished",
     "alive": true,
     "health": 80,
@@ -36313,7 +36431,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -36342,7 +36460,7 @@
   "hector": {
     "id": "hector",
     "name": "Hector Delgado",
-    "age": 61,
+    "age": 62,
     "role": "foreman at the cannery; signs for what arrives",
     "faction": "grey",
     "home": "riverflats",
@@ -36363,7 +36481,7 @@
       "night": "riverflats"
     },
     "pos": [
-      64,
+      60,
       22
     ],
     "dest": [
@@ -36372,13 +36490,13 @@
     ],
     "at": "cannery",
     "spot": [
-      64,
+      60,
       22
     ],
     "mood": {
-      "energy": 40,
-      "happiness": 50,
-      "stress": 50,
+      "energy": 32,
+      "happiness": 42,
+      "stress": 36,
       "social_need": 0,
       "fear": 10
     },
@@ -36392,7 +36510,7 @@
         "opinion": "just a businessman"
       },
       "cass": {
-        "affinity": -30,
+        "affinity": -38,
         "opinion": "polished guy"
       },
       "dot": {
@@ -37414,29 +37532,37 @@
         "importance": 6
       }
     ],
-    "action": "shifting crates",
-    "activity": "shifting crates",
+    "action": "running the machine",
+    "activity": "running the machine",
     "thought": "",
     "speech": null,
     "path": [
       [
-        60,
-        22
-      ],
-      [
-        61,
-        22
-      ],
-      [
-        62,
-        22
-      ],
-      [
-        63,
-        22
+        65,
+        21
       ],
       [
         64,
+        21
+      ],
+      [
+        63,
+        21
+      ],
+      [
+        62,
+        21
+      ],
+      [
+        61,
+        21
+      ],
+      [
+        60,
+        21
+      ],
+      [
+        60,
         22
       ]
     ],
@@ -37447,10 +37573,10 @@
     "grief": 0,
     "volatility": 66,
     "chasing": null,
-    "last_instigated_day": 722,
+    "last_instigated_day": 780,
     "driving": null,
     "vehicle": "van",
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -38881,7 +39007,7 @@
   "june": {
     "id": "june",
     "name": "June Kowal",
-    "age": 66,
+    "age": 67,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "okonkwo",
@@ -38901,8 +39027,8 @@
       "night": "okonkwo"
     },
     "pos": [
-      34,
-      32
+      36,
+      35
     ],
     "dest": [
       62,
@@ -38910,13 +39036,13 @@
     ],
     "at": "pawnshop",
     "spot": [
-      34,
-      32
+      36,
+      35
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -39931,7 +40057,7 @@
     "belief": "Cass’s fine proves the city is tightening",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 236,
     "last_thought_beat": 3109,
     "activity": "behind the till",
@@ -39939,6 +40065,26 @@
       [
         34,
         32
+      ],
+      [
+        35,
+        32
+      ],
+      [
+        36,
+        32
+      ],
+      [
+        36,
+        33
+      ],
+      [
+        36,
+        34
+      ],
+      [
+        36,
+        35
       ]
     ],
     "action": "behind the till",
@@ -39948,7 +40094,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -39967,7 +40113,7 @@
   "iris": {
     "id": "iris",
     "name": "Iris Amadi",
-    "age": 47,
+    "age": 48,
     "role": "does agency shifts at the clinic",
     "faction": "civilian",
     "home": "riverflats",
@@ -40000,9 +40146,9 @@
       68
     ],
     "mood": {
-      "energy": 10,
-      "happiness": 50,
-      "stress": 50,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 32,
       "social_need": 0,
       "fear": 10
     },
@@ -40911,7 +41057,7 @@
     "belief": "Cass’s conviction shows the city is watching",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 260,
     "last_thought_beat": 3115,
     "volatility": 33,
@@ -40919,20 +41065,20 @@
     "activity": "filing paperwork",
     "path": [
       [
-        6,
-        69
-      ],
-      [
-        7,
-        69
-      ],
-      [
-        8,
-        69
+        9,
+        64
       ],
       [
         9,
-        69
+        65
+      ],
+      [
+        9,
+        66
+      ],
+      [
+        9,
+        67
       ],
       [
         9,
@@ -40944,7 +41090,7 @@
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 10111,
+    "money": 10173,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -40962,7 +41108,7 @@
   "gil": {
     "id": "gil",
     "name": "Gil Lindqvist",
-    "age": 52,
+    "age": 53,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "delmarflats",
@@ -40996,8 +41142,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -41932,12 +42078,12 @@
     "belief": "Cass’s case shows we must stay low",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 344,
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3122,
     "vehicle": null,
     "volatility": 45,
-    "money": 10035,
+    "money": 10097,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -41954,20 +42100,20 @@
     "driving": null,
     "path": [
       [
-        2,
-        33
+        8,
+        35
       ],
       [
-        3,
-        33
+        7,
+        35
       ],
       [
-        4,
-        33
+        6,
+        35
       ],
       [
-        5,
-        33
+        6,
+        34
       ],
       [
         6,
@@ -42580,7 +42726,7 @@
   "elias": {
     "id": "elias",
     "name": "Elias Reyes",
-    "age": 12,
+    "age": 13,
     "role": "a child of the block",
     "faction": "crew",
     "home": "terrace_b",
@@ -42600,8 +42746,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      8,
+      48
     ],
     "dest": [
       8,
@@ -42609,13 +42755,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      8,
+      48
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 64,
+      "happiness": 42,
+      "stress": 56,
       "social_need": 0,
       "fear": 10
     },
@@ -42650,7 +42796,7 @@
       },
       "cassius": {
         "affinity": -100,
-        "opinion": "still angry"
+        "opinion": "cannot stand his face"
       },
       "rufus": {
         "affinity": -1,
@@ -43624,33 +43770,33 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 3109,
+    "last_thought_beat": 3124,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         9,
-        52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        7,
-        52
-      ],
-      [
-        7,
         51
       ],
       [
-        7,
+        8,
+        51
+      ],
+      [
+        8,
         50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "folding laundry",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -43661,7 +43807,7 @@
   "etta": {
     "id": "etta",
     "name": "Etta Adeyemi",
-    "age": 12,
+    "age": 13,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -43682,7 +43828,7 @@
     },
     "pos": [
       4,
-      50
+      48
     ],
     "dest": [
       3,
@@ -43691,12 +43837,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      50
+      48
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 7,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -44611,31 +44757,19 @@
     "partner": null,
     "birth_day": 347,
     "arrived_day": 347,
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3120,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        2,
-        49
-      ],
-      [
-        3,
-        49
-      ],
-      [
         4,
-        49
-      ],
-      [
-        4,
-        50
+        48
       ]
     ],
-    "action": "folding laundry",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -44643,7 +44777,7 @@
   "nia": {
     "id": "nia",
     "name": "Nia Nakamura",
-    "age": 51,
+    "age": 52,
     "role": "works the line at the cannery",
     "faction": "civilian",
     "home": "vasquez",
@@ -44664,21 +44798,18 @@
     },
     "pos": [
       62,
-      17
+      24
     ],
     "dest": [
       33,
       52
     ],
     "at": "cannery",
-    "spot": [
-      62,
-      17
-    ],
+    "spot": null,
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -45639,14 +45770,14 @@
     "belief": "Simone’s conviction shows the city is tightening control.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 351,
     "last_thought_beat": 3113,
-    "activity": "checking a manifest",
-    "action": "checking a manifest",
+    "activity": "having a smoke by the door, listening to the rain",
+    "action": "having a smoke by the door, listening to the rain",
     "vehicle": null,
     "volatility": 45,
-    "money": 9777,
+    "money": 9839,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -45666,34 +45797,6 @@
       [
         62,
         24
-      ],
-      [
-        62,
-        23
-      ],
-      [
-        62,
-        22
-      ],
-      [
-        62,
-        21
-      ],
-      [
-        62,
-        20
-      ],
-      [
-        62,
-        19
-      ],
-      [
-        62,
-        18
-      ],
-      [
-        62,
-        17
       ]
     ],
     "thought": "",
@@ -45703,7 +45806,7 @@
   "dev": {
     "id": "dev",
     "name": "Dev Lindqvist",
-    "age": 58,
+    "age": 59,
     "role": "cuts and sets hair out of a back room",
     "faction": "civilian",
     "home": "new_home_270",
@@ -45737,8 +45840,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 50,
+      "happiness": 42,
+      "stress": 32,
       "social_need": 0,
       "fear": 10
     },
@@ -46651,14 +46754,14 @@
     "belief": "Cass’s conviction signals we must protect our family",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 352,
     "last_thought_beat": 3112,
-    "activity": "leaning on the counter",
-    "action": "leaning on the counter",
+    "activity": "pouring for somebody",
+    "action": "pouring for somebody",
     "vehicle": null,
     "volatility": 45,
-    "money": 6976,
+    "money": 7020,
     "skill": 100,
     "job": {
       "at": "diner",
@@ -46695,7 +46798,7 @@
   "odette": {
     "id": "odette",
     "name": "Odette Ferreira",
-    "age": 68,
+    "age": 69,
     "role": "fixes what other people throw out",
     "faction": "civilian",
     "home": "riverflats",
@@ -46729,8 +46832,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 67,
+      "happiness": 42,
+      "stress": 50,
       "social_need": 0,
       "fear": 10
     },
@@ -47713,9 +47816,9 @@
     "belief": "Dot is testing my standing here and wants to undermine my authority publicly.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 356,
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3120,
     "activity": "watching the door",
     "action": "watching the door",
     "vehicle": null,
@@ -47743,7 +47846,7 @@
   "maren": {
     "id": "maren",
     "name": "Maren Adeyemi",
-    "age": 12,
+    "age": 13,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -47777,8 +47880,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 55,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 0,
       "fear": 10
     },
@@ -48691,9 +48794,13 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
+      [
+        4,
+        51
+      ],
       [
         4,
         50
@@ -48707,7 +48814,7 @@
         48
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "napping on the sofa",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -48715,7 +48822,7 @@
   "cassius": {
     "id": "cassius",
     "name": "Cassius Reyes",
-    "age": 12,
+    "age": 13,
     "role": "a child of the block",
     "faction": "crew",
     "home": "terrace_b",
@@ -48736,7 +48843,7 @@
     },
     "pos": [
       9,
-      51
+      52
     ],
     "dest": [
       8,
@@ -48745,12 +48852,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      51
+      52
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 93,
+      "happiness": 42,
+      "stress": 81,
       "social_need": 0,
       "fear": 10
     },
@@ -49765,11 +49872,11 @@
     "partner": null,
     "birth_day": 359,
     "arrived_day": 359,
-    "last_thought_beat": 3112,
+    "last_thought_beat": 3125,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
@@ -49787,18 +49894,25 @@
       [
         9,
         51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "watching television",
-    "thought": "",
-    "speech": null,
+    "action": "pulls the blanket tight, staring across at Elias",
+    "thought": "He acts like he owns the whole room just by sitting there.",
+    "speech": {
+      "to": "elias",
+      "text": "Stop breathing so loud. Some people are trying to sleep."
+    },
     "last_instigated_day": 762,
     "detained_until": 0
   },
   "maren2": {
     "id": "maren2",
     "name": "Maren Bello",
-    "age": 12,
+    "age": 13,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -49832,8 +49946,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -50780,15 +50894,27 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "watching television",
     "driving": null,
     "path": [
+      [
+        9,
+        49
+      ],
+      [
+        9,
+        50
+      ],
+      [
+        9,
+        51
+      ],
       [
         9,
         52
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -50796,7 +50922,7 @@
   "jonah2": {
     "id": "jonah2",
     "name": "Jonah Bello",
-    "age": 11,
+    "age": 12,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -50829,9 +50955,9 @@
       48
     ],
     "mood": {
-      "energy": 7,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 42,
       "social_need": 0,
       "fear": 10
     },
@@ -51788,33 +51914,13 @@
     "partner": null,
     "birth_day": 368,
     "arrived_day": 368,
-    "last_thought_beat": 3100,
+    "last_thought_beat": 3121,
     "standing": 45,
     "directive": null,
     "chasing": null,
     "activity": "doing the washing up",
     "driving": null,
     "path": [
-      [
-        8,
-        53
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
       [
         8,
         48
@@ -52771,7 +52877,7 @@
   "sami": {
     "id": "sami",
     "name": "Sami Amadi",
-    "age": 31,
+    "age": 32,
     "role": "does agency shifts at the clinic",
     "faction": "civilian",
     "home": "terrace_e",
@@ -52805,8 +52911,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -53607,14 +53713,14 @@
     "belief": "Simone’s conviction shows the city is tightening control.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 371,
     "last_thought_beat": 3112,
-    "activity": "at the desk",
-    "action": "at the desk",
+    "activity": "at the desk, listening to the rain",
+    "action": "at the desk, listening to the rain",
     "vehicle": null,
     "volatility": 45,
-    "money": 10245,
+    "money": 10315,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -53631,14 +53737,6 @@
     "chasing": null,
     "driving": null,
     "path": [
-      [
-        19,
-        64
-      ],
-      [
-        20,
-        64
-      ],
       [
         21,
         64
@@ -54242,7 +54340,7 @@
   "kwame": {
     "id": "kwame",
     "name": "Kwame Osei",
-    "age": 52,
+    "age": 53,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "new_home_368",
@@ -54262,7 +54360,7 @@
       "night": "new_home_368"
     },
     "pos": [
-      89,
+      91,
       34
     ],
     "dest": [
@@ -54271,13 +54369,13 @@
     ],
     "at": "new_business_236",
     "spot": [
-      89,
+      91,
       34
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 24,
       "fear": 10
     },
@@ -55134,14 +55232,14 @@
     "belief": "Cass’s conviction warns us of upcoming danger",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 382,
     "last_thought_beat": 3111,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "activity": "watching the door, listening to the rain",
+    "action": "watching the door, listening to the rain",
     "vehicle": null,
     "volatility": 45,
-    "money": 8068,
+    "money": 8124,
     "skill": 100,
     "job": {
       "at": "new_business_236",
@@ -55159,19 +55257,11 @@
     "driving": null,
     "path": [
       [
+        92,
+        34
+      ],
+      [
         91,
-        33
-      ],
-      [
-        90,
-        33
-      ],
-      [
-        89,
-        33
-      ],
-      [
-        89,
         34
       ]
     ],
@@ -55815,7 +55905,7 @@
   "cal2": {
     "id": "cal2",
     "name": "Cal Serrano",
-    "age": 46,
+    "age": 47,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "vasquez",
@@ -55835,7 +55925,7 @@
       "night": "vasquez"
     },
     "pos": [
-      54,
+      48,
       83
     ],
     "dest": [
@@ -55844,13 +55934,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
+      48,
       83
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -56691,14 +56781,14 @@
     "belief": "Cass’s conviction means we must move soon",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 388,
     "last_thought_beat": 3114,
-    "activity": "counting the float",
-    "action": "counting the float",
+    "activity": "signing for a delivery",
+    "action": "signing for a delivery",
     "vehicle": null,
     "volatility": 45,
-    "money": 7984,
+    "money": 8040,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -56716,31 +56806,35 @@
     "driving": null,
     "path": [
       [
-        48,
-        83
-      ],
-      [
-        49,
-        83
-      ],
-      [
-        50,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        52,
-        83
+        54,
+        84
       ],
       [
         53,
-        83
+        84
       ],
       [
-        54,
+        52,
+        84
+      ],
+      [
+        51,
+        84
+      ],
+      [
+        50,
+        84
+      ],
+      [
+        49,
+        84
+      ],
+      [
+        48,
+        84
+      ],
+      [
+        48,
         83
       ]
     ],
@@ -56751,7 +56845,7 @@
   "kwame2": {
     "id": "kwame2",
     "name": "Kwame Doyle",
-    "age": 50,
+    "age": 51,
     "role": "keeps books for people who cannot",
     "faction": "civilian",
     "home": "delmarflats",
@@ -56771,7 +56865,7 @@
       "night": "delmarflats"
     },
     "pos": [
-      49,
+      48,
       83
     ],
     "dest": [
@@ -56780,13 +56874,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      49,
+      48,
       83
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 53,
+      "happiness": 42,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -57643,14 +57737,14 @@
     "belief": "Cass’s fine shows the city is punitive",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 397,
-    "last_thought_beat": 3100,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "last_thought_beat": 3123,
+    "activity": "signing for a delivery",
+    "action": "signing for a delivery",
     "vehicle": null,
     "volatility": 45,
-    "money": 7900,
+    "money": 7956,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -57669,6 +57763,10 @@
     "path": [
       [
         49,
+        83
+      ],
+      [
+        48,
         83
       ]
     ],
@@ -57887,7 +57985,7 @@
   "blaise": {
     "id": "blaise",
     "name": "Blaise Osei",
-    "age": 50,
+    "age": 51,
     "role": "cuts and sets hair out of a back room",
     "faction": "civilian",
     "home": "vasquez",
@@ -57907,7 +58005,7 @@
       "night": "vasquez"
     },
     "pos": [
-      22,
+      21,
       33
     ],
     "dest": [
@@ -57916,13 +58014,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      22,
+      21,
       33
     ],
     "mood": {
-      "energy": 8,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -58773,14 +58871,14 @@
     "belief": "Cass is a warning that we must stay low",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 425,
     "last_thought_beat": 3115,
-    "activity": "clearing tables",
-    "action": "clearing tables",
+    "activity": "wiping down the counter",
+    "action": "wiping down the counter",
     "vehicle": null,
     "volatility": 45,
-    "money": 6030,
+    "money": 6074,
     "skill": 100,
     "job": {
       "at": "barbershop",
@@ -58802,7 +58900,11 @@
         34
       ],
       [
-        22,
+        21,
+        34
+      ],
+      [
+        21,
         33
       ]
     ],
@@ -58813,7 +58915,7 @@
   "otis": {
     "id": "otis",
     "name": "Otis Bello",
-    "age": 9,
+    "age": 10,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -58834,7 +58936,7 @@
     },
     "pos": [
       9,
-      51
+      52
     ],
     "dest": [
       8,
@@ -58843,12 +58945,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      51
+      52
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -59619,35 +59721,27 @@
     "partner": null,
     "birth_day": 458,
     "arrived_day": 458,
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3123,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on hold with somebody, listening to the rain",
     "driving": null,
     "path": [
       [
         8,
-        48
+        53
       ],
       [
         9,
-        48
+        53
       ],
       [
         9,
-        49
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        51
+        52
       ]
     ],
-    "action": "watching television",
+    "action": "on hold with somebody, listening to the rain",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -59655,7 +59749,7 @@
   "rufus": {
     "id": "rufus",
     "name": "Rufus Bello",
-    "age": 9,
+    "age": 10,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -59675,8 +59769,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      52
     ],
     "dest": [
       8,
@@ -59684,13 +59778,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      52
     ],
     "mood": {
-      "energy": 8,
-      "happiness": 50,
-      "stress": 55,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 0,
       "fear": 10
     },
@@ -60423,34 +60517,22 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
+        9,
+        52
       ]
     ],
-    "action": "doing the washing up",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null
   },
   "theo": {
     "id": "theo",
     "name": "Theo Bello",
-    "age": 9,
+    "age": 10,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -60484,8 +60566,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -61196,17 +61278,13 @@
     "partner": null,
     "birth_day": 474,
     "arrived_day": 474,
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3123,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "folding laundry, listening to the rain",
     "driving": null,
     "path": [
-      [
-        9,
-        49
-      ],
       [
         8,
         49
@@ -61220,7 +61298,7 @@
         50
       ]
     ],
-    "action": "folding laundry",
+    "action": "folding laundry, listening to the rain",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -61228,7 +61306,7 @@
   "errol3": {
     "id": "errol3",
     "name": "Errol Brannon",
-    "age": 33,
+    "age": 34,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "new_home_270",
@@ -61262,8 +61340,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -62022,14 +62100,14 @@
     "belief": "Cass’s case means I need to uncover deeper truth",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 475,
     "last_thought_beat": 3108,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "behind the till, listening to the rain",
+    "action": "behind the till, listening to the rain",
     "vehicle": null,
     "volatility": 45,
-    "money": 8320,
+    "money": 8390,
     "skill": 100,
     "job": {
       "at": "church",
@@ -62058,7 +62136,7 @@
   "odette2": {
     "id": "odette2",
     "name": "Odette Osei",
-    "age": 35,
+    "age": 36,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "terrace_c",
@@ -62078,7 +62156,7 @@
       "night": "terrace_c"
     },
     "pos": [
-      48,
+      49,
       83
     ],
     "dest": [
@@ -62087,13 +62165,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      48,
+      49,
       83
     ],
     "mood": {
-      "energy": 6,
-      "happiness": 50,
-      "stress": 54,
+      "energy": 2,
+      "happiness": 42,
+      "stress": 38,
       "social_need": 0,
       "fear": 10
     },
@@ -62782,14 +62860,14 @@
     "belief": "Simone’s conviction shows the city is tightening its grip.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 489,
-    "last_thought_beat": 3100,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "last_thought_beat": 3124,
+    "activity": "behind the till",
+    "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 8110,
+    "money": 8180,
     "skill": 100,
     "job": {
       "at": "church",
@@ -62807,11 +62885,31 @@
     "driving": null,
     "path": [
       [
-        49,
-        83
+        54,
+        84
       ],
       [
-        48,
+        53,
+        84
+      ],
+      [
+        52,
+        84
+      ],
+      [
+        51,
+        84
+      ],
+      [
+        50,
+        84
+      ],
+      [
+        49,
+        84
+      ],
+      [
+        49,
         83
       ]
     ],
@@ -62822,7 +62920,7 @@
   "odette3": {
     "id": "odette3",
     "name": "Odette Amadi",
-    "age": 47,
+    "age": 48,
     "role": "fixes what other people throw out",
     "faction": "civilian",
     "home": "tenement",
@@ -62842,8 +62940,8 @@
       "night": "tenement"
     },
     "pos": [
-      57,
-      111
+      56,
+      112
     ],
     "dest": [
       31,
@@ -62851,13 +62949,13 @@
     ],
     "at": "new_business_423",
     "spot": [
-      57,
-      111
+      56,
+      112
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 0,
       "fear": 10
     },
@@ -63515,14 +63613,14 @@
     "belief": "Simone’s conviction means the city is cracking down.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 497,
     "last_thought_beat": 3114,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 6388,
+    "money": 6444,
     "skill": 100,
     "job": {
       "at": "new_business_423",
@@ -63548,8 +63646,8 @@
         111
       ],
       [
-        57,
-        111
+        56,
+        112
       ]
     ],
     "thought": "",
@@ -63885,7 +63983,7 @@
   "etta2": {
     "id": "etta2",
     "name": "Etta Bello",
-    "age": 9,
+    "age": 10,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -63905,8 +64003,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -63914,13 +64012,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -64643,31 +64741,27 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
-        7,
-        50
+        9,
+        49
       ],
       [
         8,
+        49
+      ],
+      [
+        7,
+        49
+      ],
+      [
+        7,
         50
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -64675,7 +64769,7 @@
   "rufus2": {
     "id": "rufus2",
     "name": "Rufus Adeyemi",
-    "age": 9,
+    "age": 10,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -64695,8 +64789,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      49
+      4,
+      48
     ],
     "dest": [
       3,
@@ -64704,13 +64798,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      2,
-      49
+      4,
+      48
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 42,
       "social_need": 0,
       "fear": 10
     },
@@ -65367,27 +65461,31 @@
     "partner": null,
     "birth_day": 523,
     "arrived_day": 523,
-    "last_thought_beat": 3100,
+    "last_thought_beat": 3121,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        3,
-        50
-      ],
-      [
-        2,
-        50
-      ],
-      [
         2,
         49
+      ],
+      [
+        3,
+        49
+      ],
+      [
+        4,
+        49
+      ],
+      [
+        4,
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -65395,7 +65493,7 @@
   "theo2": {
     "id": "theo2",
     "name": "Theo Bello",
-    "age": 8,
+    "age": 9,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -65415,8 +65513,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -65424,13 +65522,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 58,
+      "happiness": 42,
+      "stress": 43,
       "social_need": 0,
       "fear": 10
     },
@@ -66051,19 +66149,39 @@
     "partner": null,
     "birth_day": 542,
     "arrived_day": 542,
-    "last_thought_beat": 3100,
+    "last_thought_beat": 3121,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
-        7,
+        8,
+        48
+      ],
+      [
+        9,
+        48
+      ],
+      [
+        9,
+        49
+      ],
+      [
+        9,
         50
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        9,
+        52
       ]
     ],
-    "action": "folding laundry",
+    "action": "napping on the sofa",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -66071,7 +66189,7 @@
   "farrah": {
     "id": "farrah",
     "name": "Farrah Osei",
-    "age": 35,
+    "age": 36,
     "role": "works the line at the cannery",
     "faction": "civilian",
     "home": "new_home_571",
@@ -66091,8 +66209,8 @@
       "night": "new_home_571"
     },
     "pos": [
-      65,
-      21
+      62,
+      17
     ],
     "dest": [
       90,
@@ -66100,13 +66218,13 @@
     ],
     "at": "cannery",
     "spot": [
-      65,
-      21
+      62,
+      17
     ],
     "mood": {
-      "energy": 3,
-      "happiness": 50,
-      "stress": 54,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 36,
       "social_need": 0,
       "fear": 10
     },
@@ -66715,14 +66833,14 @@
     "belief": "Cass’s conviction means we must find a way out",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 571,
     "last_thought_beat": 3116,
-    "activity": "shifting crates",
-    "action": "shifting crates",
+    "activity": "checking a manifest",
+    "action": "checking a manifest",
     "vehicle": null,
     "volatility": 45,
-    "money": 5284,
+    "money": 5346,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -66744,12 +66862,32 @@
         22
       ],
       [
-        65,
+        63,
         22
       ],
       [
-        65,
+        62,
+        22
+      ],
+      [
+        62,
         21
+      ],
+      [
+        62,
+        20
+      ],
+      [
+        62,
+        19
+      ],
+      [
+        62,
+        18
+      ],
+      [
+        62,
+        17
       ]
     ],
     "thought": "",
@@ -66758,7 +66896,7 @@
   "maren3": {
     "id": "maren3",
     "name": "Maren Adeyemi",
-    "age": 7,
+    "age": 8,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -66779,7 +66917,7 @@
     },
     "pos": [
       4,
-      51
+      48
     ],
     "dest": [
       3,
@@ -66788,12 +66926,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      51
+      48
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 42,
       "social_need": 0,
       "fear": 10
     },
@@ -67364,24 +67502,16 @@
     "partner": null,
     "birth_day": 571,
     "arrived_day": 571,
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3121,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        2,
-        49
-      ],
-      [
-        3,
-        49
-      ],
-      [
         4,
-        49
+        51
       ],
       [
         4,
@@ -67389,10 +67519,14 @@
       ],
       [
         4,
-        51
+        49
+      ],
+      [
+        4,
+        48
       ]
     ],
-    "action": "doing the washing up",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -67400,7 +67534,7 @@
   "iris2": {
     "id": "iris2",
     "name": "Iris Lindqvist",
-    "age": 30,
+    "age": 31,
     "role": "fixes what other people throw out",
     "faction": "civilian",
     "home": "new_home_368",
@@ -67420,8 +67554,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      24,
-      21
+      18,
+      19
     ],
     "dest": [
       122,
@@ -67429,13 +67563,13 @@
     ],
     "at": "laundromat",
     "spot": [
-      24,
-      21
+      18,
+      19
     ],
     "mood": {
-      "energy": 8,
-      "happiness": 50,
-      "stress": 72,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 54,
       "social_need": 0,
       "fear": 10
     },
@@ -68004,14 +68138,14 @@
     "belief": "Cass’s fine proves we must be careful",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 594,
-    "last_thought_beat": 3091,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "last_thought_beat": 3119,
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 4260,
+    "money": 4316,
     "skill": 100,
     "job": {
       "at": "laundromat",
@@ -68029,40 +68163,36 @@
     "driving": null,
     "path": [
       [
-        18,
-        19
-      ],
-      [
-        19,
-        19
-      ],
-      [
-        20,
-        19
-      ],
-      [
-        21,
-        19
-      ],
-      [
-        22,
-        19
-      ],
-      [
-        23,
-        19
-      ],
-      [
-        24,
-        19
-      ],
-      [
         24,
         20
       ],
       [
-        24,
-        21
+        23,
+        20
+      ],
+      [
+        22,
+        20
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        18,
+        19
       ]
     ],
     "thought": "",
@@ -68071,7 +68201,7 @@
   "dev2": {
     "id": "dev2",
     "name": "Dev Nakamura",
-    "age": 50,
+    "age": 51,
     "role": "works the line at the cannery",
     "faction": "civilian",
     "home": "terrace_b",
@@ -68104,9 +68234,9 @@
       22
     ],
     "mood": {
-      "energy": 8,
-      "happiness": 50,
-      "stress": 50,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 32,
       "social_need": 0,
       "fear": 10
     },
@@ -68679,14 +68809,14 @@
     "belief": "Cass’s case reminds us to stay unnoticed",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 595,
     "last_thought_beat": 3115,
     "activity": "shifting crates",
     "action": "shifting crates",
     "vehicle": null,
     "volatility": 45,
-    "money": 5240,
+    "money": 5310,
     "skill": 100,
     "job": {
       "at": "new_civic_347",
@@ -68704,20 +68834,24 @@
     "driving": null,
     "path": [
       [
-        62,
-        24
-      ],
-      [
-        63,
-        24
+        65,
+        18
       ],
       [
         64,
-        24
+        18
       ],
       [
         64,
-        23
+        19
+      ],
+      [
+        64,
+        20
+      ],
+      [
+        64,
+        21
       ],
       [
         64,
@@ -68731,7 +68865,7 @@
   "milo": {
     "id": "milo",
     "name": "Milo Adeyemi",
-    "age": 6,
+    "age": 7,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -68751,8 +68885,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      48
+      4,
+      51
     ],
     "dest": [
       3,
@@ -68760,13 +68894,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      2,
-      48
+      4,
+      51
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -69317,19 +69451,19 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watering a plant",
+    "activity": "doing the washing up, listening to the rain",
     "driving": null,
     "path": [
       [
-        2,
-        49
+        4,
+        50
       ],
       [
-        2,
-        48
+        4,
+        51
       ]
     ],
-    "action": "watering a plant",
+    "action": "doing the washing up, listening to the rain",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -69337,7 +69471,7 @@
   "jonah3": {
     "id": "jonah3",
     "name": "Jonah Bello",
-    "age": 5,
+    "age": 6,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -69357,8 +69491,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -69366,13 +69500,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 12,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -69955,7 +70089,7 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
@@ -69963,23 +70097,15 @@
         49
       ],
       [
-        9,
+        7,
         49
       ],
       [
-        9,
+        7,
         50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -69987,7 +70113,7 @@
   "etta3": {
     "id": "etta3",
     "name": "Etta Bello",
-    "age": 5,
+    "age": 6,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -70007,8 +70133,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -70016,13 +70142,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 8,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -70581,42 +70707,42 @@
     "partner": null,
     "birth_day": 607,
     "arrived_day": 607,
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3120,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
-        7,
-        50
+        9,
+        52
       ],
       [
         8,
-        50
+        52
       ],
       [
-        9,
-        50
+        7,
+        52
       ],
       [
-        9,
+        7,
         51
       ],
       [
-        9,
-        52
+        7,
+        50
       ]
     ],
-    "action": "watching television",
+    "action": "folding laundry",
     "thought": "",
     "speech": null
   },
   "milo2": {
     "id": "milo2",
     "name": "Milo Adeyemi",
-    "age": 5,
+    "age": 6,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -70636,8 +70762,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      51
+      2,
+      49
     ],
     "dest": [
       3,
@@ -70645,13 +70771,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      51
+      2,
+      49
     ],
     "mood": {
-      "energy": 7,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -71214,23 +71340,27 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "watching television, listening to the rain",
     "driving": null,
     "path": [
       [
+        4,
+        50
+      ],
+      [
         3,
-        52
+        50
       ],
       [
-        4,
-        52
+        2,
+        50
       ],
       [
-        4,
-        51
+        2,
+        49
       ]
     ],
-    "action": "doing the washing up",
+    "action": "watching television, listening to the rain",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -71238,7 +71368,7 @@
   "marta": {
     "id": "marta",
     "name": "Marta Doyle",
-    "age": 37,
+    "age": 38,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "new_home_386",
@@ -71272,8 +71402,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 52,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 24,
       "fear": 10
     },
@@ -71787,15 +71917,15 @@
     "belief": "I need to know my brother’s fate.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 617,
-    "last_thought_beat": 3089,
-    "activity": "counting the float",
-    "action": "counting the float",
+    "last_thought_beat": 3119,
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 3700,
-    "skill": 92.5,
+    "money": 3756,
+    "skill": 93.5,
     "job": {
       "at": "civic_shop_347",
       "title": "drives nights for a car service",
@@ -71813,14 +71943,6 @@
     "path": [
       [
         3,
-        99
-      ],
-      [
-        3,
-        98
-      ],
-      [
-        3,
         97
       ]
     ],
@@ -71830,7 +71952,7 @@
   "kwame3": {
     "id": "kwame3",
     "name": "Kwame Bright",
-    "age": 30,
+    "age": 31,
     "role": "cuts and sets hair out of a back room",
     "faction": "civilian",
     "home": "civic_housing_346",
@@ -71850,7 +71972,7 @@
       "night": "civic_housing_346"
     },
     "pos": [
-      27,
+      25,
       32
     ],
     "dest": [
@@ -71859,13 +71981,13 @@
     ],
     "at": "diner",
     "spot": [
-      27,
+      25,
       32
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 51,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -72342,15 +72464,15 @@
     "belief": "I’ll become somebody on this block.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 624,
     "last_thought_beat": 3113,
-    "activity": "restocking the back bar",
-    "action": "restocking the back bar",
+    "activity": "leaning on the counter",
+    "action": "leaning on the counter",
     "vehicle": null,
     "volatility": 45,
-    "money": 2840,
-    "skill": 90.0,
+    "money": 2884,
+    "skill": 91.0,
     "job": {
       "at": "diner",
       "title": "cuts and sets hair out of a back room",
@@ -72367,7 +72489,7 @@
     "driving": null,
     "path": [
       [
-        25,
+        27,
         32
       ],
       [
@@ -72375,7 +72497,7 @@
         32
       ],
       [
-        27,
+        25,
         32
       ]
     ],
@@ -72386,7 +72508,7 @@
   "jonah4": {
     "id": "jonah4",
     "name": "Jonah Bello",
-    "age": 3,
+    "age": 4,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -72407,7 +72529,7 @@
     },
     "pos": [
       9,
-      52
+      51
     ],
     "dest": [
       8,
@@ -72416,12 +72538,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      52
+      51
     ],
     "mood": {
-      "energy": 10,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 6,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -72872,39 +72994,23 @@
     "partner": null,
     "birth_day": 672,
     "arrived_day": 672,
-    "last_thought_beat": 3101,
+    "last_thought_beat": 3123,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
-        8,
-        48
-      ],
-      [
         9,
-        48
-      ],
-      [
-        9,
-        49
-      ],
-      [
-        9,
-        50
+        52
       ],
       [
         9,
         51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -72912,7 +73018,7 @@
   "lena": {
     "id": "lena",
     "name": "Lena Ferreira",
-    "age": 23,
+    "age": 24,
     "role": "preaches to whoever turns up",
     "faction": "civilian",
     "home": "terrace_b",
@@ -72932,8 +73038,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      29,
-      104
+      33,
+      106
     ],
     "dest": [
       8,
@@ -72941,13 +73047,13 @@
     ],
     "at": "new_civic_531",
     "spot": [
-      29,
-      104
+      33,
+      106
     ],
     "mood": {
-      "energy": 24,
-      "happiness": 50,
-      "stress": 51,
+      "energy": 16,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 24,
       "fear": 10
     },
@@ -73278,15 +73384,15 @@
     "belief": "My family’s out, that’s the goal.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 682,
     "last_thought_beat": 3110,
-    "activity": "reading a file",
-    "action": "reading a file",
+    "activity": "at the desk",
+    "action": "at the desk",
     "vehicle": null,
     "volatility": 45,
-    "money": 2895,
-    "skill": 68.5,
+    "money": 2965,
+    "skill": 69.5,
     "job": {
       "at": "new_civic_531",
       "title": "preaches to whoever turns up",
@@ -73303,8 +73409,8 @@
     "driving": null,
     "path": [
       [
-        29,
-        104
+        33,
+        106
       ]
     ],
     "thought": "",
@@ -73313,7 +73419,7 @@
   "kwame4": {
     "id": "kwame4",
     "name": "Kwame Nakamura",
-    "age": 51,
+    "age": 52,
     "role": "works the line at the cannery",
     "faction": "civilian",
     "home": "tenement",
@@ -73333,19 +73439,22 @@
       "night": "tenement"
     },
     "pos": [
-      3,
-      24
+      6,
+      17
     ],
     "dest": [
       31,
       24
     ],
     "at": "warehouse",
-    "spot": null,
+    "spot": [
+      6,
+      17
+    ],
     "mood": {
-      "energy": 24,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 16,
+      "happiness": 42,
+      "stress": 39,
       "social_need": 24,
       "fear": 10
     },
@@ -73667,15 +73776,15 @@
     "belief": "I’ll stay unseen.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 684,
-    "last_thought_beat": 3088,
-    "activity": "having a smoke by the door",
-    "action": "having a smoke by the door",
+    "last_thought_beat": 3118,
+    "activity": "shifting crates",
+    "action": "shifting crates",
     "vehicle": null,
     "volatility": 45,
-    "money": 2525,
-    "skill": 67.5,
+    "money": 2587,
+    "skill": 68.5,
     "job": {
       "at": "warehouse",
       "title": "works the line at the cannery",
@@ -73692,40 +73801,40 @@
     "driving": null,
     "path": [
       [
-        7,
-        20
+        4,
+        23
+      ],
+      [
+        5,
+        23
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        6,
+        21
       ],
       [
         6,
         20
       ],
       [
-        5,
-        20
+        6,
+        19
       ],
       [
-        4,
-        20
+        6,
+        18
       ],
       [
-        3,
-        20
-      ],
-      [
-        3,
-        21
-      ],
-      [
-        3,
-        22
-      ],
-      [
-        3,
-        23
-      ],
-      [
-        3,
-        24
+        6,
+        17
       ]
     ],
     "thought": "",
@@ -73734,7 +73843,7 @@
   "cal3": {
     "id": "cal3",
     "name": "Cal Doyle",
-    "age": 42,
+    "age": 43,
     "role": "preaches to whoever turns up",
     "faction": "civilian",
     "home": "vasquez",
@@ -73767,9 +73876,9 @@
       129
     ],
     "mood": {
-      "energy": 28,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 20,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 24,
       "fear": 10
     },
@@ -74030,15 +74139,15 @@
     "belief": "Cass’s case shows we can’t stay here longer",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 706,
     "last_thought_beat": 3110,
-    "activity": "on the phone",
-    "action": "on the phone",
+    "activity": "reading a file",
+    "action": "reading a file",
     "vehicle": null,
     "volatility": 45,
-    "money": 2265,
-    "skill": 59.5,
+    "money": 2335,
+    "skill": 60.5,
     "job": {
       "at": "new_civic_509",
       "title": "preaches to whoever turns up",
@@ -74055,6 +74164,18 @@
     "driving": null,
     "path": [
       [
+        28,
+        129
+      ],
+      [
+        29,
+        129
+      ],
+      [
+        30,
+        129
+      ],
+      [
         31,
         129
       ]
@@ -74065,7 +74186,7 @@
   "farrah2": {
     "id": "farrah2",
     "name": "Farrah Mbeki",
-    "age": 56,
+    "age": 57,
     "role": "fixes what other people throw out",
     "faction": "civilian",
     "home": "new_home_368",
@@ -74085,8 +74206,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      23,
-      20
+      18,
+      19
     ],
     "dest": [
       122,
@@ -74094,13 +74215,13 @@
     ],
     "at": "laundromat",
     "spot": [
-      23,
-      20
+      18,
+      19
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 51,
+      "energy": 30,
+      "happiness": 42,
+      "stress": 33,
       "social_need": 0,
       "fear": 10
     },
@@ -74349,15 +74470,15 @@
     "belief": "Cass’s fine shows the city is tightening its grip",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 707,
     "last_thought_beat": 3109,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 1824,
-    "skill": 59.0,
+    "money": 1880,
+    "skill": 60.0,
     "job": {
       "at": "laundromat",
       "title": "fixes what other people throw out",
@@ -74374,32 +74495,32 @@
     "driving": null,
     "path": [
       [
-        18,
-        19
-      ],
-      [
-        19,
-        19
-      ],
-      [
-        20,
-        19
-      ],
-      [
-        21,
-        19
+        23,
+        20
       ],
       [
         22,
-        19
-      ],
-      [
-        23,
-        19
-      ],
-      [
-        23,
         20
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        18,
+        19
       ]
     ],
     "thought": "",
@@ -74408,7 +74529,7 @@
   "clemmie": {
     "id": "clemmie",
     "name": "Clemmie Bello",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -74428,8 +74549,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -74437,13 +74558,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 33,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 25,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -74702,11 +74823,11 @@
     "partner": null,
     "birth_day": 707,
     "arrived_day": 707,
-    "last_thought_beat": 3099,
+    "last_thought_beat": 3120,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
@@ -74714,18 +74835,30 @@
         51
       ],
       [
-        9,
-        52
+        8,
+        51
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null
   },
   "vic": {
     "id": "vic",
     "name": "Vic Lindqvist",
-    "age": 37,
+    "age": 38,
     "role": "preaches to whoever turns up",
     "faction": "civilian",
     "home": "riverflats",
@@ -74745,8 +74878,8 @@
       "night": "riverflats"
     },
     "pos": [
-      54,
-      97
+      56,
+      99
     ],
     "dest": [
       75,
@@ -74754,13 +74887,13 @@
     ],
     "at": "new_civic_347",
     "spot": [
-      54,
-      97
+      56,
+      99
     ],
     "mood": {
-      "energy": 31,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 23,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 24,
       "fear": 10
     },
@@ -74999,15 +75132,15 @@
     "belief": "Simone’s conviction means the city is becoming stricter.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 709,
     "last_thought_beat": 3110,
     "activity": "on the phone",
     "action": "on the phone",
     "vehicle": null,
     "volatility": 45,
-    "money": 2160,
-    "skill": 58.0,
+    "money": 2230,
+    "skill": 59.0,
     "job": {
       "at": "new_civic_347",
       "title": "preaches to whoever turns up",
@@ -75024,8 +75157,24 @@
     "driving": null,
     "path": [
       [
-        54,
+        58,
         97
+      ],
+      [
+        57,
+        97
+      ],
+      [
+        56,
+        97
+      ],
+      [
+        56,
+        98
+      ],
+      [
+        56,
+        99
       ]
     ],
     "thought": "",
@@ -75034,7 +75183,7 @@
   "rufus3": {
     "id": "rufus3",
     "name": "Rufus Bello",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -75054,8 +75203,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      52
     ],
     "dest": [
       8,
@@ -75063,13 +75212,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      52
     ],
     "mood": {
-      "energy": 47,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 39,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -75238,42 +75387,22 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
         9,
         52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
       ]
     ],
-    "action": "doing the washing up",
+    "action": "napping on the sofa",
     "thought": "",
     "speech": null
   },
   "june2": {
     "id": "june2",
     "name": "June Lindqvist",
-    "age": 31,
+    "age": 32,
     "role": "keeps books for people who cannot",
     "faction": "civilian",
     "home": "civic_housing_377",
@@ -75293,8 +75422,8 @@
       "night": "civic_housing_377"
     },
     "pos": [
-      59,
-      112
+      55,
+      111
     ],
     "dest": [
       85,
@@ -75302,13 +75431,13 @@
     ],
     "at": "new_business_423",
     "spot": [
-      59,
-      112
+      55,
+      111
     ],
     "mood": {
-      "energy": 32,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 24,
+      "happiness": 42,
+      "stress": 32,
       "social_need": 0,
       "fear": 10
     },
@@ -75473,15 +75602,15 @@
     "belief": "Cass’s conviction shows we must stay low",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 726,
-    "last_thought_beat": 3088,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "last_thought_beat": 3120,
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 1432,
-    "skill": 52.0,
+    "money": 1488,
+    "skill": 53.0,
     "job": {
       "at": "new_business_423",
       "title": "keeps books for people who cannot",
@@ -75500,26 +75629,6 @@
       [
         55,
         111
-      ],
-      [
-        56,
-        111
-      ],
-      [
-        57,
-        111
-      ],
-      [
-        58,
-        111
-      ],
-      [
-        59,
-        111
-      ],
-      [
-        59,
-        112
       ]
     ],
     "thought": "",
@@ -75528,7 +75637,7 @@
   "rufus4": {
     "id": "rufus4",
     "name": "Rufus Bello",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_b",
@@ -75548,8 +75657,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -75557,13 +75666,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 33,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 25,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -75726,11 +75835,11 @@
     "partner": null,
     "birth_day": 729,
     "arrived_day": 729,
-    "last_thought_beat": 3100,
+    "last_thought_beat": 3122,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
@@ -75738,22 +75847,30 @@
         53
       ],
       [
-        9,
+        7,
         53
       ],
       [
-        9,
+        7,
         52
+      ],
+      [
+        7,
+        51
+      ],
+      [
+        7,
+        50
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "folding laundry",
     "thought": "",
     "speech": null
   },
   "cassius2": {
     "id": "cassius2",
     "name": "Cassius Adeyemi",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -75773,7 +75890,7 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
+      2,
       48
     ],
     "dest": [
@@ -75782,13 +75899,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
+      2,
       48
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 57,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -75999,27 +76116,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "watering a plant",
     "driving": null,
     "path": [
       [
+        4,
+        48
+      ],
+      [
         3,
-        50
+        48
       ],
       [
-        4,
-        50
-      ],
-      [
-        4,
-        49
-      ],
-      [
-        4,
+        2,
         48
       ]
     ],
-    "action": "watching television",
+    "action": "watering a plant",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -76027,7 +76140,7 @@
   "tomas": {
     "id": "tomas",
     "name": "Tomas Mbeki",
-    "age": 40,
+    "age": 41,
     "role": "keeps books for people who cannot",
     "faction": "civilian",
     "home": "civic_housing_346",
@@ -76047,7 +76160,7 @@
       "night": "civic_housing_346"
     },
     "pos": [
-      9,
+      6,
       32
     ],
     "dest": [
@@ -76056,13 +76169,13 @@
     ],
     "at": "cornerstore",
     "spot": [
-      9,
+      6,
       32
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 50,
-      "stress": 49,
+      "energy": 40,
+      "happiness": 42,
+      "stress": 31,
       "social_need": 0,
       "fear": 10
     },
@@ -76186,15 +76299,15 @@
     "belief": "Simone’s conviction shows the city is tightening its grip.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 739,
     "last_thought_beat": 3113,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "activity": "behind the till, listening to the rain",
+    "action": "behind the till, listening to the rain",
     "vehicle": null,
     "volatility": 45,
-    "money": 1124,
-    "skill": 46.5,
+    "money": 1180,
+    "skill": 47.5,
     "job": {
       "at": "cornerstore",
       "title": "keeps books for people who cannot",
@@ -76212,22 +76325,6 @@
     "path": [
       [
         6,
-        33
-      ],
-      [
-        7,
-        33
-      ],
-      [
-        8,
-        33
-      ],
-      [
-        9,
-        33
-      ],
-      [
-        9,
         32
       ]
     ],
@@ -76237,7 +76334,7 @@
   "isaac": {
     "id": "isaac",
     "name": "Isaac Adeyemi",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -76258,7 +76355,7 @@
     },
     "pos": [
       2,
-      49
+      48
     ],
     "dest": [
       3,
@@ -76267,12 +76364,12 @@
     "at": "terrace_a",
     "spot": [
       2,
-      49
+      48
     ],
     "mood": {
-      "energy": 39,
-      "happiness": 50,
-      "stress": 56,
+      "energy": 31,
+      "happiness": 42,
+      "stress": 40,
       "social_need": 0,
       "fear": 10
     },
@@ -76451,31 +76548,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "watering a plant",
     "driving": null,
     "path": [
       [
         4,
-        51
+        48
       ],
       [
         3,
-        51
+        48
       ],
       [
         2,
-        51
-      ],
-      [
-        2,
-        50
-      ],
-      [
-        2,
-        49
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "watering a plant",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -76483,7 +76572,7 @@
   "jonah5": {
     "id": "jonah5",
     "name": "Jonah Adeyemi",
-    "age": 1,
+    "age": 2,
     "role": "a child of the block",
     "faction": "block",
     "home": "terrace_a",
@@ -76516,9 +76605,9 @@
       48
     ],
     "mood": {
-      "energy": 49,
-      "happiness": 50,
-      "stress": 57,
+      "energy": 41,
+      "happiness": 42,
+      "stress": 41,
       "social_need": 0,
       "fear": 10
     },
@@ -76681,28 +76770,16 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
+        2,
+        49
+      ],
+      [
         3,
-        53
-      ],
-      [
-        4,
-        53
-      ],
-      [
-        4,
-        52
-      ],
-      [
-        4,
-        51
-      ],
-      [
-        4,
-        50
+        49
       ],
       [
         4,
@@ -76713,14 +76790,14 @@
         48
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null
   },
   "sami2": {
     "id": "sami2",
     "name": "Sami Serrano",
-    "age": 25,
+    "age": 26,
     "role": "fixes what other people throw out",
     "faction": "civilian",
     "home": "new_home_386",
@@ -76740,8 +76817,8 @@
       "night": "new_home_386"
     },
     "pos": [
-      62,
-      133
+      60,
+      132
     ],
     "dest": [
       106,
@@ -76749,13 +76826,13 @@
     ],
     "at": "new_business_637",
     "spot": [
-      62,
-      133
+      60,
+      132
     ],
     "mood": {
-      "energy": 54,
-      "happiness": 50,
-      "stress": 52,
+      "energy": 46,
+      "happiness": 42,
+      "stress": 34,
       "social_need": 24,
       "fear": 10
     },
@@ -76873,15 +76950,15 @@
     "belief": "Simone’s conviction proves the city is enforcing stricter rules.",
     "alive": true,
     "health": 82,
-    "grief": 9,
+    "grief": 3,
     "arrived_day": 758,
-    "last_thought_beat": 3089,
+    "last_thought_beat": 3119,
     "activity": "restocking shelves",
     "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 704,
-    "skill": 39.0,
+    "money": 760,
+    "skill": 40.0,
     "job": {
       "at": "new_business_637",
       "title": "fixes what other people throw out",
@@ -76902,8 +76979,12 @@
         132
       ],
       [
-        62,
-        133
+        61,
+        132
+      ],
+      [
+        60,
+        132
       ]
     ],
     "thought": "",
@@ -76912,7 +76993,7 @@
   "june3": {
     "id": "june3",
     "name": "June Amadi",
-    "age": 34,
+    "age": 35,
     "role": "drives nights for a car service",
     "faction": "civilian",
     "home": "new_home_726",
@@ -76932,8 +77013,8 @@
       "night": "new_home_726"
     },
     "pos": [
-      54,
-      83
+      48,
+      85
     ],
     "dest": [
       60,
@@ -76941,15 +77022,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
-      83
+      48,
+      85
     ],
     "mood": {
-      "energy": 48,
-      "happiness": 50,
-      "stress": 28,
-      "social_need": 30,
-      "fear": 15
+      "energy": 40,
+      "happiness": 42,
+      "stress": 18,
+      "social_need": 0,
+      "fear": 10
     },
     "relationships": {},
     "memories": [
@@ -76972,12 +77053,12 @@
     "grief": 0,
     "arrived_day": 778,
     "last_thought_beat": 3113,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 228,
-    "skill": 30.5,
+    "money": 284,
+    "skill": 31.5,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -76994,8 +77075,28 @@
     "driving": null,
     "path": [
       [
-        54,
-        83
+        53,
+        85
+      ],
+      [
+        52,
+        85
+      ],
+      [
+        51,
+        85
+      ],
+      [
+        50,
+        85
+      ],
+      [
+        49,
+        85
+      ],
+      [
+        48,
+        85
       ]
     ],
     "thought": "",
