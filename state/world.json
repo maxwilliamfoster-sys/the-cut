@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3201,
-  "last_beat_at": "2026-09-13T17:57:12Z",
+  "beat": 3212,
+  "last_beat_at": "2026-09-13T20:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "cold snap",
   "heat": {
-    "riverside": 47,
-    "delmar": 17,
+    "riverside": 36,
+    "delmar": 30,
     "terraces": 5,
     "civic": 5
   },
@@ -3063,9 +3063,114 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine230",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 805,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "marta",
+        "kwame3"
+      ],
+      "text": "Kwame Bright does Marta Doyle a favour that costs them something real.",
+      "beat": 3210
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 3209
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "errol",
+        "june"
+      ],
+      "text": "Somebody tells Errol Brannon that June Kowal has been seen talking to police.",
+      "beat": 3208
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "cass",
+        "jonah5"
+      ],
+      "text": "Somebody tells Cass Deveaux that Jonah Adeyemi has been seen talking to police.",
+      "beat": 3207
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "rufus"
+      ],
+      "text": "Rufus Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 3206
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 3205
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 3203
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -3232,92 +3337,6 @@
       ],
       "text": "Somebody tells Det. Yolanda Ruiz that Jonah Bello has been seen talking to police.",
       "beat": 3188
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "ivy",
-        "cassius2"
-      ],
-      "text": "Cassius Adeyemi does Ms. Ivy Calloway a favour that costs them something real.",
-      "beat": 3187
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 3186
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 3184
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 3182
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 3181
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "kwame4",
-        "kwame2"
-      ],
-      "text": "Somebody tells Kwame Nakamura that Kwame Doyle has been seen talking to police.",
-      "beat": 3179
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 3173
     }
   ],
   "player_queue": [
@@ -3340,12 +3359,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 799,
+  "last_gazette_day": 802,
   "llm_budget": {
     "day": "2026-09-13",
     "spent": {
       "fast": 163476,
-      "deep": 75436
+      "deep": 111997
     }
   },
   "silent_runs": 0,
@@ -4547,7 +4566,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 99
+      "convictions": 100
     },
     {
       "id": "law07",
@@ -4570,19 +4589,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "cassius",
-      "name": "Cassius Reyes",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "eats cereal standing, glances at Elias",
-      "day": 723,
-      "trial_day": 725,
-      "status": "convicted",
-      "witnesses": 12,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "dot",
@@ -5349,6 +5355,19 @@
       "status": "acquitted",
       "witnesses": 2,
       "verdict": "not guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "flips through a ledger slowly",
+      "day": 800,
+      "trial_day": 802,
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 0,
@@ -5374,14 +5393,14 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 28
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 20
+      "heat": 34
     },
     {
       "a": "cass",
@@ -5395,7 +5414,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 96
+      "heat": 90
     },
     {
       "a": "hector",
@@ -5409,21 +5428,21 @@
       "b": "odette",
       "since_day": 776,
       "cause": "would not let it go",
-      "heat": 17
+      "heat": 11
     },
     {
       "a": "cass",
       "b": "hector",
       "since_day": 780,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 39
     },
     {
       "a": "hector",
       "b": "nia",
       "since_day": 786,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 47
     }
   ],
   "quota_exhausted_on": {
@@ -5434,6 +5453,13 @@
     ]
   },
   "dead": [
+    {
+      "id": "boateng",
+      "name": "Fr. Emmanuel Boateng",
+      "day": 802,
+      "cause": "heart",
+      "where": "St. Brendan's"
+    },
     {
       "id": "nia2",
       "name": "Nia Mbeki",
@@ -5541,15 +5567,44 @@
     }
   ],
   "funeral": {
-    "day": 774,
-    "for": "Nia Mbeki",
-    "id": "nia2",
-    "marked": 774
+    "day": 804,
+    "for": "Fr. Emmanuel Boateng",
+    "id": "boateng"
   },
   "incidents": [],
-  "treasury": 308609,
+  "treasury": 311945,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 802,
+      "wages": 2136,
+      "takings": 3495,
+      "tax": 1832,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1112,
+      "treasury": 311945
+    },
+    {
+      "day": 801,
+      "wages": 2136,
+      "takings": 3495,
+      "tax": 1832,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1112,
+      "treasury": 310833
+    },
+    {
+      "day": 800,
+      "wages": 2136,
+      "takings": 3495,
+      "tax": 1832,
+      "welfare": 0,
+      "civic": 720,
+      "net": 1112,
+      "treasury": 309721
+    },
     {
       "day": 799,
       "wages": 2183,
@@ -5819,36 +5874,6 @@
       "civic": 720,
       "net": 1128,
       "treasury": 279776
-    },
-    {
-      "day": 766,
-      "wages": 2086,
-      "takings": 3400,
-      "tax": 1786,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1066,
-      "treasury": 278648
-    },
-    {
-      "day": 765,
-      "wages": 2086,
-      "takings": 3400,
-      "tax": 1786,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1066,
-      "treasury": 277582
-    },
-    {
-      "day": 764,
-      "wages": 2086,
-      "takings": 3400,
-      "tax": 1786,
-      "welfare": 0,
-      "civic": 720,
-      "net": 1066,
-      "treasury": 276516
     }
   ],
   "births": [
@@ -6379,45 +6404,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 742,
-      "overall": 69,
-      "economy": 95,
-      "wellbeing": 66,
-      "society": 31,
-      "infrastructure": 83,
-      "growth": 73,
-      "population": 70,
-      "buildings": 53,
-      "treasury": 257315,
-      "employment": 100
-    },
-    {
-      "day": 743,
-      "overall": 69,
-      "economy": 95,
-      "wellbeing": 64,
-      "society": 35,
-      "infrastructure": 83,
-      "growth": 73,
-      "population": 70,
-      "buildings": 53,
-      "treasury": 258381,
-      "employment": 100
-    },
-    {
-      "day": 745,
-      "overall": 68,
-      "economy": 95,
-      "wellbeing": 59,
-      "society": 35,
-      "infrastructure": 83,
-      "growth": 73,
-      "population": 70,
-      "buildings": 53,
-      "treasury": 259447,
-      "employment": 100
-    },
     {
       "day": 746,
       "overall": 72,
@@ -7002,19 +6988,58 @@
       "buildings": 55,
       "treasury": 308609,
       "employment": 100
+    },
+    {
+      "day": 800,
+      "overall": 66,
+      "economy": 94,
+      "wellbeing": 58,
+      "society": 32,
+      "infrastructure": 80,
+      "growth": 68,
+      "population": 76,
+      "buildings": 55,
+      "treasury": 309721,
+      "employment": 100
+    },
+    {
+      "day": 801,
+      "overall": 67,
+      "economy": 94,
+      "wellbeing": 60,
+      "society": 32,
+      "infrastructure": 80,
+      "growth": 74,
+      "population": 76,
+      "buildings": 55,
+      "treasury": 310833,
+      "employment": 100
+    },
+    {
+      "day": 802,
+      "overall": 65,
+      "economy": 94,
+      "wellbeing": 51,
+      "society": 35,
+      "infrastructure": 81,
+      "growth": 68,
+      "population": 75,
+      "buildings": 55,
+      "treasury": 311945,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 799,
+    "day": 802,
     "overall": 65,
     "economy": 94,
-    "wellbeing": 57,
-    "society": 32,
-    "infrastructure": 80,
+    "wellbeing": 51,
+    "society": 35,
+    "infrastructure": 81,
     "growth": 68,
-    "population": 76,
+    "population": 75,
     "buildings": 55,
-    "treasury": 308609,
+    "treasury": 311945,
     "employment": 100
   },
   "buildable": {
