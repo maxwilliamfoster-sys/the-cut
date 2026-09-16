@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "3e657393c3bd",
+  "version": "343634d00fa1",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -29,11 +29,11 @@
     ".##########.,,,,...........##########...,,,,.ggggggggggggg.########.,,,,.#############.ggggggg..,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#######..,:,,.gg#######g.,:,,.gg#######ggggggggggggggggg.,:,,.ggggggggggg",
     ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggggggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggggggggggggg.,:,,.ggggggggggg",
-    ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggggggggggggg.,:,,.ggggggggggg",
-    ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#########g.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.ggggggggggg",
+    ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggg#fffffff#g.,:,,.ggggggggggg",
+    ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.ggggggggggg",
     ".#ffff#.....,,,,.#fffffff#.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffff#.....,:,,.####D####.#ffffffff#...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     ".##D###.....====...........####D#####...====...............###D####.====.##D#.....####..........====............====............................====............",
@@ -4533,6 +4533,71 @@
           "type": "plant",
           "x": 26,
           "y": 113
+        }
+      ]
+    },
+    "new_business_863": {
+      "id": "new_business_863",
+      "name": "Brendan Market",
+      "district": "riverside",
+      "rect": [
+        133,
+        18,
+        9,
+        5
+      ],
+      "rects": [
+        [
+          133,
+          18,
+          9,
+          5
+        ]
+      ],
+      "kind": "business",
+      "style": "shopfront",
+      "floors": 1,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        137,
+        21
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 138,
+          "y": 20
+        },
+        {
+          "type": "till",
+          "x": 140,
+          "y": 20
+        },
+        {
+          "type": "shelf",
+          "x": 140,
+          "y": 21
+        },
+        {
+          "type": "shelf",
+          "x": 135,
+          "y": 20
+        },
+        {
+          "type": "shelf",
+          "x": 134,
+          "y": 20
+        },
+        {
+          "type": "crate",
+          "x": 134,
+          "y": 19
+        },
+        {
+          "type": "plant",
+          "x": 134,
+          "y": 21
         }
       ]
     }
