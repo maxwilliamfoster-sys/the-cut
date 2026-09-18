@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "0e501d71f724",
+  "version": "6b14019e03ca",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -43,11 +43,11 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====.gggggggggggg...........====............====...gggggggg.................====............",
     ".##########.,,,,.#####################..,,,,.....###.......#######..,,,,.############...........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gggggggggg.,:,,.gg########gggggggggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.ggggggggggg",
-    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gggggggggg.,:,,.gg########gggg#########ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gggggggggg.,:,,.gg#ffffff#gggg#fffffff#ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gggggggggg.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
     "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gggggggggg.,:,,.gg###D####gggggggggggggggg.,:,,.ggggggggggg",
     ".########...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffffff#...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
@@ -4668,6 +4668,71 @@
           "type": "plant",
           "x": 135,
           "y": 70
+        }
+      ]
+    },
+    "new_business_905": {
+      "id": "new_business_905",
+      "name": "Kessler Market",
+      "district": "delmar",
+      "rect": [
+        131,
+        32,
+        9,
+        5
+      ],
+      "rects": [
+        [
+          131,
+          32,
+          9,
+          5
+        ]
+      ],
+      "kind": "business",
+      "style": "shopfront",
+      "floors": 1,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        135,
+        35
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 138,
+          "y": 35
+        },
+        {
+          "type": "till",
+          "x": 132,
+          "y": 34
+        },
+        {
+          "type": "shelf",
+          "x": 136,
+          "y": 33
+        },
+        {
+          "type": "shelf",
+          "x": 133,
+          "y": 33
+        },
+        {
+          "type": "shelf",
+          "x": 138,
+          "y": 34
+        },
+        {
+          "type": "crate",
+          "x": 135,
+          "y": 33
+        },
+        {
+          "type": "plant",
+          "x": 137,
+          "y": 35
         }
       ]
     }
