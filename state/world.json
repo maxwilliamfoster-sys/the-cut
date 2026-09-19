@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3781,
-  "last_beat_at": "2026-09-19T18:57:12Z",
+  "beat": 3790,
+  "last_beat_at": "2026-09-19T21:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 23,
+    "delmar": 14,
     "terraces": 5,
     "civic": 5
   },
@@ -4549,6 +4549,58 @@
   ],
   "events": [
     {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 3789
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 3788
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "cassius2",
+        "gil"
+      ],
+      "text": "Gil Lindqvist does Cassius Adeyemi a favour that costs them something real.",
+      "beat": 3786
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 3785
+    },
+    {
       "id": "good_night",
       "heat": {},
       "mood": {
@@ -4752,54 +4804,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 3754
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 3752
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 3749
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "kwame4",
-        "booker"
-      ],
-      "text": "Somebody tells Kwame Nakamura that Booker Lyle has been seen talking to police.",
-      "beat": 3742
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 3741
     }
   ],
   "player_queue": [
@@ -4822,12 +4826,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 944,
+  "last_gazette_day": 946,
   "llm_budget": {
     "day": "2026-09-19",
     "spent": {
       "fast": 165059,
-      "deep": 99699
+      "deep": 120705
     }
   },
   "silent_runs": 0,
@@ -5442,8 +5446,8 @@
       "open": false,
       "wings": [],
       "floors": 3,
-      "condition": "ruin",
-      "since_day": 941
+      "condition": "rebuilding",
+      "since_day": 947
     },
     {
       "id": "civic_housing_346",
@@ -6192,19 +6196,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c065",
-      "who": "etta3",
-      "name": "Etta Bello",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays asleep",
-      "day": 866,
-      "trial_day": 868,
-      "status": "convicted",
-      "witnesses": 21,
-      "verdict": "guilty"
-    },
     {
       "id": "c066",
       "who": "jonah3",
@@ -6971,6 +6962,18 @@
       "status": "convicted",
       "witnesses": 7,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "theo2",
+      "name": "Theo Bello",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "eats cereal quickly while standing",
+      "day": 946,
+      "trial_day": 948,
+      "status": "awaiting_trial",
+      "witnesses": 17
     }
   ],
   "law_pressure": 3,
@@ -7003,7 +7006,7 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 10
     },
     {
       "a": "cass",
@@ -7017,7 +7020,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 98
+      "heat": 94
     },
     {
       "a": "hector",
@@ -7031,7 +7034,7 @@
       "b": "odette",
       "since_day": 776,
       "cause": "would not let it go",
-      "heat": 10
+      "heat": 26
     },
     {
       "a": "cass",
@@ -7052,12 +7055,12 @@
       "b": "cass",
       "since_day": 934,
       "cause": "would not let it go",
-      "heat": 35
+      "heat": 31
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-19",
-    "beat": 3778,
+    "beat": 3789,
     "providers": [
       "gemini"
     ]
@@ -7211,9 +7214,29 @@
     "marked": 931
   },
   "incidents": [],
-  "treasury": 425062,
+  "treasury": 427402,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 946,
+      "wages": 2516,
+      "takings": 3845,
+      "tax": 2070,
+      "welfare": 0,
+      "civic": 900,
+      "net": 1170,
+      "treasury": 427402
+    },
+    {
+      "day": 945,
+      "wages": 2516,
+      "takings": 3845,
+      "tax": 2070,
+      "welfare": 0,
+      "civic": 900,
+      "net": 1170,
+      "treasury": 426232
+    },
     {
       "day": 944,
       "wages": 2516,
@@ -7493,26 +7516,6 @@
       "civic": 900,
       "net": 1091,
       "treasury": 394263
-    },
-    {
-      "day": 910,
-      "wages": 2423,
-      "takings": 3695,
-      "tax": 1991,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1091,
-      "treasury": 393172
-    },
-    {
-      "day": 909,
-      "wages": 2423,
-      "takings": 3695,
-      "tax": 1991,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1091,
-      "treasury": 392081
     }
   ],
   "births": [
@@ -8079,32 +8082,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 882,
-      "overall": 65,
-      "economy": 94,
-      "wellbeing": 70,
-      "society": 30,
-      "infrastructure": 77,
-      "growth": 44,
-      "population": 78,
-      "buildings": 57,
-      "treasury": 373981,
-      "employment": 100
-    },
-    {
-      "day": 885,
-      "overall": 64,
-      "economy": 94,
-      "wellbeing": 66,
-      "society": 23,
-      "infrastructure": 81,
-      "growth": 54,
-      "population": 78,
-      "buildings": 59,
-      "treasury": 374944,
-      "employment": 100
-    },
     {
       "day": 886,
       "overall": 64,
@@ -8702,19 +8679,45 @@
       "buildings": 62,
       "treasury": 425062,
       "employment": 100
+    },
+    {
+      "day": 945,
+      "overall": 74,
+      "economy": 95,
+      "wellbeing": 80,
+      "society": 38,
+      "infrastructure": 82,
+      "growth": 72,
+      "population": 81,
+      "buildings": 62,
+      "treasury": 426232,
+      "employment": 100
+    },
+    {
+      "day": 946,
+      "overall": 72,
+      "economy": 95,
+      "wellbeing": 75,
+      "society": 34,
+      "infrastructure": 82,
+      "growth": 72,
+      "population": 81,
+      "buildings": 62,
+      "treasury": 427402,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 944,
-    "overall": 71,
+    "day": 946,
+    "overall": 72,
     "economy": 95,
-    "wellbeing": 69,
-    "society": 38,
+    "wellbeing": 75,
+    "society": 34,
     "infrastructure": 82,
     "growth": 72,
     "population": 81,
     "buildings": 62,
-    "treasury": 425062,
+    "treasury": 427402,
     "employment": 100
   },
   "buildable": {
