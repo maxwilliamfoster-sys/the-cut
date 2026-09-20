@@ -3491,7 +3491,7 @@
       "night": "terrace_a"
     },
     "pos": [
-      5,
+      9,
       64
     ],
     "dest": [
@@ -3499,11 +3499,14 @@
       63
     ],
     "at": "precinct",
-    "spot": null,
+    "spot": [
+      9,
+      64
+    ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 50,
+      "happiness": 63,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -4935,12 +4938,6 @@
         "importance": 6
       },
       {
-        "beat": 3748,
-        "day": 937,
-        "what": "Odette pushed the fine reminder again",
-        "importance": 4
-      },
-      {
         "beat": 3753,
         "day": 938,
         "what": "I filed paperwork on Lyle's illegal loans",
@@ -4977,12 +4974,6 @@
         "importance": 6
       },
       {
-        "beat": 3848,
-        "day": 962,
-        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
-        "importance": 6
-      },
-      {
         "beat": 3817,
         "day": 954,
         "what": "Dot Feeney was convicted over Fountain Ledge Nightstand Ban.",
@@ -4995,8 +4986,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -5065,43 +5056,31 @@
         "day": 959,
         "what": "Tariq 'Tee' Bello was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3848,
+        "day": 962,
+        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 3854,
+        "day": 963,
+        "what": "Ruiz replayed the last confrontation with Booker in his mind",
+        "importance": 4
       }
     ],
-    "action": "stirs bad coffee",
-    "activity": "making bad coffee",
-    "thought": "Need to stay awake for the case",
+    "action": "on the phone",
+    "activity": "on the phone",
+    "thought": "",
     "speech": null,
     "path": [
       [
-        6,
-        69
-      ],
-      [
-        5,
-        69
-      ],
-      [
-        5,
-        68
-      ],
-      [
-        5,
-        67
-      ],
-      [
-        5,
-        66
-      ],
-      [
-        5,
-        65
-      ],
-      [
-        5,
+        9,
         64
       ]
     ],
-    "last_thought_beat": 3849,
+    "last_thought_beat": 3854,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
@@ -5110,7 +5089,7 @@
     "chasing": null,
     "driving": null,
     "vehicle": "cruiser",
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "church",
@@ -7558,22 +7537,22 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      49
+      21,
+      33
     ],
     "dest": [
       21,
       37
     ],
-    "at": "terrace_b",
+    "at": "barbershop",
     "spot": [
-      9,
-      49
+      21,
+      33
     ],
     "mood": {
-      "energy": 0,
-      "happiness": 35,
-      "stress": 58,
+      "energy": 6,
+      "happiness": 63,
+      "stress": 38,
       "social_need": 0,
       "fear": 10
     },
@@ -9101,8 +9080,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -9185,105 +9164,21 @@
         "importance": 8
       }
     ],
-    "action": "sitting down for a minute",
-    "activity": "sitting down for a minute",
+    "action": "pouring for somebody",
+    "activity": "pouring for somebody",
     "thought": "",
     "speech": null,
     "path": [
       [
-        6,
-        65
-      ],
-      [
-        5,
-        65
-      ],
-      [
-        5,
-        64
-      ],
-      [
-        5,
-        63
-      ],
-      [
-        5,
-        62
-      ],
-      [
-        6,
-        62
-      ],
-      [
-        7,
-        62
-      ],
-      [
-        8,
-        62
-      ],
-      [
-        8,
-        61
-      ],
-      [
-        8,
-        60
-      ],
-      [
-        8,
-        59
-      ],
-      [
-        8,
-        58
-      ],
-      [
-        8,
-        57
-      ],
-      [
-        8,
-        56
-      ],
-      [
-        8,
-        55
-      ],
-      [
-        8,
-        54
-      ],
-      [
-        8,
-        53
-      ],
-      [
-        9,
-        53
-      ],
-      [
-        9,
-        52
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        49
+        21,
+        33
       ]
     ],
     "last_thought_beat": 3848,
     "belief": "The haircut ban is unjust and targets me.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 18,
     "chasing": null,
     "leads": [
@@ -9305,7 +9200,7 @@
     "checking": null,
     "driving": null,
     "vehicle": null,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -9379,9 +9274,9 @@
       68
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -10863,8 +10758,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -10935,6 +10830,10 @@
     "speech": null,
     "path": [
       [
+        23,
+        67
+      ],
+      [
         24,
         67
       ],
@@ -10947,12 +10846,12 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 22,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -11003,8 +10902,8 @@
       "night": "vasquez"
     },
     "pos": [
-      52,
-      65
+      49,
+      66
     ],
     "dest": [
       50,
@@ -11012,14 +10911,14 @@
     ],
     "at": "autoshop",
     "spot": [
-      52,
-      65
+      49,
+      66
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 48,
-      "social_need": 24,
+      "happiness": 63,
+      "stress": 30,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -12502,8 +12401,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -12574,49 +12473,17 @@
         "importance": 6
       }
     ],
-    "action": "restocking shelves",
-    "activity": "restocking shelves",
+    "action": "behind the till",
+    "activity": "behind the till",
     "thought": "",
     "speech": null,
     "path": [
       [
-        47,
-        68
-      ],
-      [
-        48,
-        68
-      ],
-      [
         49,
-        68
-      ],
-      [
-        50,
-        68
-      ],
-      [
-        51,
-        68
-      ],
-      [
-        52,
-        68
-      ],
-      [
-        52,
-        67
-      ],
-      [
-        52,
         66
-      ],
-      [
-        52,
-        65
       ]
     ],
-    "last_thought_beat": 3847,
+    "last_thought_beat": 3854,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 64,
@@ -12626,7 +12493,7 @@
     "last_instigated_day": 959,
     "driving": null,
     "vehicle": "van",
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -12667,8 +12534,8 @@
       "night": "vasquez"
     },
     "pos": [
-      35,
-      65
+      33,
+      67
     ],
     "dest": [
       33,
@@ -12676,13 +12543,13 @@
     ],
     "at": "school",
     "spot": [
-      35,
-      65
+      33,
+      67
     ],
     "mood": {
-      "energy": 28,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 18,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -14144,8 +14011,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -14210,46 +14077,46 @@
         "importance": 6
       }
     ],
-    "action": "at the desk",
-    "activity": "at the desk",
+    "action": "on the phone",
+    "activity": "on the phone",
     "thought": "",
     "speech": null,
     "path": [
       [
-        37,
+        29,
         68
       ],
       [
-        36,
+        30,
         68
       ],
       [
-        35,
+        31,
         68
       ],
       [
-        35,
+        32,
+        68
+      ],
+      [
+        33,
+        68
+      ],
+      [
+        33,
         67
-      ],
-      [
-        35,
-        66
-      ],
-      [
-        35,
-        65
       ]
     ],
-    "last_thought_beat": 3847,
+    "last_thought_beat": 3864,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 40,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -14290,8 +14157,8 @@
       "night": "pawnshop"
     },
     "pos": [
-      36,
-      34
+      34,
+      32
     ],
     "dest": [
       50,
@@ -14299,13 +14166,13 @@
     ],
     "at": "pawnshop",
     "spot": [
-      36,
-      34
+      34,
+      32
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 26,
+      "energy": 20,
+      "happiness": 63,
+      "stress": 19,
       "social_need": 0,
       "fear": 10
     },
@@ -15775,8 +15642,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -15841,17 +15708,21 @@
         "importance": 6
       }
     ],
-    "action": "signing for a delivery",
-    "activity": "signing for a delivery",
+    "action": "watching the door",
+    "activity": "watching the door",
     "thought": "",
     "speech": null,
     "path": [
       [
-        36,
-        34
+        35,
+        32
+      ],
+      [
+        34,
+        32
       ]
     ],
-    "last_thought_beat": 3848,
+    "last_thought_beat": 3864,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 56,
@@ -16773,9 +16644,9 @@
       32
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 53,
+      "energy": 54,
+      "happiness": 63,
+      "stress": 48,
       "social_need": 0,
       "fear": 10
     },
@@ -16869,7 +16740,7 @@
         "opinion": "underestimated but friendly"
       },
       "hector": {
-        "affinity": -91,
+        "affinity": -100,
         "opinion": "neutral"
       },
       "gil": {
@@ -18143,18 +18014,6 @@
         "importance": 6
       },
       {
-        "beat": 3848,
-        "day": 962,
-        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
-        "importance": 6
-      },
-      {
-        "beat": 3717,
-        "day": 929,
-        "what": "Isaac Adeyemi died. I barely knew them.",
-        "importance": 5
-      },
-      {
         "beat": 3719,
         "day": 929,
         "what": "I’ll strengthen my position before the rivals take advantage.",
@@ -18230,12 +18089,6 @@
         "beat": 3817,
         "day": 954,
         "what": "Farrah Mbeki was convicted over Fountain Ledge Nightstand Ban.",
-        "importance": 6
-      },
-      {
-        "beat": 3817,
-        "day": 954,
-        "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
       {
@@ -18321,11 +18174,29 @@
         "day": 959,
         "what": "Det. Yolanda Ruiz was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3848,
+        "day": 962,
+        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 3860,
+        "day": 965,
+        "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
+        "importance": 6
+      },
+      {
+        "beat": 3862,
+        "day": 965,
+        "what": "Hector Delgado started on me in front of people.",
+        "importance": 7
       }
     ],
-    "action": "waits in line",
+    "action": "queueing",
     "activity": "queueing",
-    "thought": "Patience is a price I can afford",
+    "thought": "",
     "speech": null,
     "path": [
       [
@@ -18597,7 +18468,7 @@
         32
       ]
     ],
-    "last_thought_beat": 3849,
+    "last_thought_beat": 3854,
     "belief": "Booker Lyle is undermining me publicly to weaken my standing",
     "alive": true,
     "health": 80,
@@ -18607,7 +18478,7 @@
     "last_instigated_day": 874,
     "driving": "car",
     "vehicle": "car",
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -19938,8 +19809,8 @@
     "spot": null,
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 23,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -21385,8 +21256,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -21439,30 +21310,18 @@
         "importance": 8
       }
     ],
-    "action": "watching the street",
-    "activity": "watching the street",
+    "action": "smoking",
+    "activity": "smoking",
     "thought": "",
     "speech": null,
     "path": [
       [
-        36,
-        67
-      ],
-      [
         35,
-        67
+        65
       ],
       [
         34,
-        67
-      ],
-      [
-        33,
-        67
-      ],
-      [
-        33,
-        66
+        65
       ],
       [
         33,
@@ -21717,12 +21576,12 @@
     "belief": "I can earn genuine trust",
     "alive": true,
     "health": 80,
-    "grief": 62,
+    "grief": 53,
     "volatility": 52,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -22448,8 +22307,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      74,
-      48
+      75,
+      54
     ],
     "dest": [
       34,
@@ -22457,13 +22316,13 @@
     ],
     "at": "green",
     "spot": [
-      74,
-      48
+      75,
+      54
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 23,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -23831,8 +23690,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -23885,16 +23744,24 @@
     "speech": null,
     "path": [
       [
+        37,
+        68
+      ],
+      [
         36,
-        67
+        68
       ],
       [
         35,
-        67
+        68
       ],
       [
         34,
-        67
+        68
+      ],
+      [
+        33,
+        68
       ],
       [
         33,
@@ -24085,72 +23952,52 @@
         62
       ],
       [
-        74,
+        75,
+        62
+      ],
+      [
+        75,
         61
       ],
       [
-        74,
+        75,
         60
       ],
       [
-        74,
+        75,
         59
       ],
       [
-        74,
+        75,
         58
       ],
       [
-        74,
+        75,
         57
       ],
       [
-        74,
+        75,
         56
       ],
       [
-        74,
+        75,
         55
       ],
       [
-        74,
+        75,
         54
-      ],
-      [
-        74,
-        53
-      ],
-      [
-        74,
-        52
-      ],
-      [
-        74,
-        51
-      ],
-      [
-        74,
-        50
-      ],
-      [
-        74,
-        49
-      ],
-      [
-        74,
-        48
       ]
     ],
-    "last_thought_beat": 3838,
+    "last_thought_beat": 3854,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 14,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 9895,
+    "money": 10000,
     "skill": 100,
     "job": {
       "at": "precinct",
@@ -24191,7 +24038,7 @@
       "night": "vasquez"
     },
     "pos": [
-      60,
+      64,
       33
     ],
     "dest": [
@@ -24200,13 +24047,13 @@
     ],
     "at": "bodega",
     "spot": [
-      60,
+      64,
       33
     ],
     "mood": {
       "energy": 80,
-      "happiness": 50,
-      "stress": 24,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -25568,8 +25415,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -25610,31 +25457,11 @@
         "importance": 6
       }
     ],
-    "action": "queueing",
-    "activity": "queueing",
+    "action": "counting out change",
+    "activity": "counting out change",
     "thought": "",
     "speech": null,
     "path": [
-      [
-        35,
-        49
-      ],
-      [
-        34,
-        49
-      ],
-      [
-        33,
-        49
-      ],
-      [
-        33,
-        50
-      ],
-      [
-        33,
-        51
-      ],
       [
         33,
         52
@@ -25844,22 +25671,22 @@
         34
       ],
       [
-        61,
+        63,
         34
       ],
       [
-        60,
+        64,
         34
       ],
       [
-        60,
+        64,
         33
       ]
     ],
     "last_thought_beat": 3846,
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 28,
     "chasing": null,
     "driving": null,
@@ -26424,9 +26251,9 @@
       33
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -27916,8 +27743,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -27996,12 +27823,12 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 38,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "clinic",
@@ -28061,7 +27888,7 @@
       "night": "delmarflats"
     },
     "pos": [
-      60,
+      64,
       33
     ],
     "dest": [
@@ -28070,13 +27897,13 @@
     ],
     "at": "bodega",
     "spot": [
-      60,
+      64,
       33
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 32,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -29534,8 +29361,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -29612,21 +29439,37 @@
         "importance": 7
       }
     ],
-    "action": "counting the float",
-    "activity": "counting the float",
+    "action": "behind the till",
+    "activity": "behind the till",
     "thought": "",
     "speech": null,
     "path": [
       [
         60,
         33
+      ],
+      [
+        61,
+        33
+      ],
+      [
+        62,
+        33
+      ],
+      [
+        63,
+        33
+      ],
+      [
+        64,
+        33
       ]
     ],
-    "last_thought_beat": 3843,
+    "last_thought_beat": 3855,
     "belief": "I’m being publicly undermined.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 44,
     "chasing": null,
     "leads": [
@@ -29677,8 +29520,8 @@
       "night": "harborbar"
     },
     "pos": [
-      74,
-      20
+      75,
+      23
     ],
     "dest": [
       75,
@@ -29686,14 +29529,14 @@
     ],
     "at": "riverflats",
     "spot": [
-      74,
-      20
+      75,
+      23
     ],
     "mood": {
       "energy": 0,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -30047,12 +29890,6 @@
         "beat": 2108,
         "day": 527,
         "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
-        "importance": 6
-      },
-      {
-        "beat": 2108,
-        "day": 527,
-        "what": "Elias Reyes was convicted over No Linger on Porch After Dusk.",
         "importance": 6
       },
       {
@@ -31166,20 +31003,14 @@
         "importance": 9
       },
       {
-        "beat": 3848,
-        "day": 962,
-        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
-        "importance": 6
-      },
-      {
         "beat": 3817,
         "day": 954,
         "what": "Farrah Mbeki was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -31242,6 +31073,18 @@
         "day": 959,
         "what": "Det. Yolanda Ruiz was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3848,
+        "day": 962,
+        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 3854,
+        "day": 963,
+        "what": "Dot recorded the short count in her hidden ledger",
+        "importance": 3
       }
     ],
     "action": "sitting down for a minute",
@@ -31250,21 +31093,49 @@
     "speech": null,
     "path": [
       [
-        74,
+        75,
+        16
+      ],
+      [
+        75,
+        17
+      ],
+      [
+        75,
+        18
+      ],
+      [
+        75,
+        19
+      ],
+      [
+        75,
         20
+      ],
+      [
+        75,
+        21
+      ],
+      [
+        75,
+        22
+      ],
+      [
+        75,
+        23
       ]
     ],
-    "last_thought_beat": 3842,
+    "last_thought_beat": 3854,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 1,
+    "grief": 0,
     "volatility": 84,
     "chasing": null,
     "driving": null,
     "vehicle": null,
     "last_instigated_day": 946,
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "school",
@@ -31305,7 +31176,7 @@
     },
     "pos": [
       36,
-      34
+      35
     ],
     "dest": [
       50,
@@ -31314,12 +31185,12 @@
     "at": "pawnshop",
     "spot": [
       36,
-      34
+      35
     ],
     "mood": {
-      "energy": 63,
-      "happiness": 50,
-      "stress": 43,
+      "energy": 55,
+      "happiness": 63,
+      "stress": 23,
       "social_need": 0,
       "fear": 10
     },
@@ -32753,8 +32624,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -32819,8 +32690,8 @@
         "importance": 6
       }
     ],
-    "action": "signing for a delivery",
-    "activity": "signing for a delivery",
+    "action": "behind the till",
+    "activity": "behind the till",
     "thought": "",
     "speech": null,
     "path": [
@@ -32843,6 +32714,10 @@
       [
         36,
         34
+      ],
+      [
+        36,
+        35
       ]
     ],
     "last_thought_beat": 3847,
@@ -32855,7 +32730,7 @@
     "last_instigated_day": 960,
     "driving": null,
     "vehicle": "van",
-    "money": 16140,
+    "money": 16245,
     "skill": 100,
     "job": {
       "at": "school",
@@ -33840,8 +33715,8 @@
       "night": "riverflats"
     },
     "pos": [
-      9,
-      64
+      6,
+      69
     ],
     "dest": [
       6,
@@ -33849,13 +33724,13 @@
     ],
     "at": "precinct",
     "spot": [
-      9,
-      64
+      6,
+      69
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -35309,8 +35184,8 @@
         "importance": 8
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -35357,8 +35232,32 @@
     "speech": null,
     "path": [
       [
-        9,
+        5,
         64
+      ],
+      [
+        6,
+        64
+      ],
+      [
+        6,
+        65
+      ],
+      [
+        6,
+        66
+      ],
+      [
+        6,
+        67
+      ],
+      [
+        6,
+        68
+      ],
+      [
+        6,
+        69
       ]
     ],
     "last_thought_beat": 3844,
@@ -35406,22 +35305,19 @@
       "night": "riverflats"
     },
     "pos": [
-      23,
-      67
+      21,
+      64
     ],
     "dest": [
       75,
       24
     ],
     "at": "clinic",
-    "spot": [
-      23,
-      67
-    ],
+    "spot": null,
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 30,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -36745,8 +36641,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -36787,30 +36683,46 @@
         "importance": 6
       }
     ],
-    "action": "reading a file",
-    "activity": "reading a file",
+    "action": "making bad coffee",
+    "activity": "making bad coffee",
     "thought": "",
     "speech": null,
     "path": [
       [
-        24,
+        23,
         67
       ],
       [
-        23,
+        22,
         67
+      ],
+      [
+        21,
+        67
+      ],
+      [
+        21,
+        66
+      ],
+      [
+        21,
+        65
+      ],
+      [
+        21,
+        64
       ]
     ],
     "last_thought_beat": 3848,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 20,
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 14327,
+    "money": 14420,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -36862,9 +36774,9 @@
       65
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 28,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -38176,8 +38088,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -38218,20 +38130,40 @@
     "speech": null,
     "path": [
       [
+        37,
+        68
+      ],
+      [
+        36,
+        68
+      ],
+      [
+        35,
+        68
+      ],
+      [
+        35,
+        67
+      ],
+      [
+        35,
+        66
+      ],
+      [
         35,
         65
       ]
     ],
-    "last_thought_beat": 3839,
+    "last_thought_beat": 3855,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 21,
+    "grief": 12,
     "volatility": 26,
     "chasing": null,
     "driving": null,
     "vehicle": null,
-    "money": 14327,
+    "money": 14420,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -39361,8 +39293,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      79,
-      65
+      77,
+      67
     ],
     "dest": [
       78,
@@ -39370,15 +39302,15 @@
     ],
     "at": "depot",
     "spot": [
-      79,
-      65
+      77,
+      67
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 27,
       "social_need": 0,
-      "fear": 10
+      "fear": 18
     },
     "relationships": {
       "simone": {
@@ -40826,8 +40758,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -40898,20 +40830,32 @@
     "speech": null,
     "path": [
       [
-        79,
-        65
+        75,
+        68
+      ],
+      [
+        76,
+        68
+      ],
+      [
+        77,
+        68
+      ],
+      [
+        77,
+        67
       ]
     ],
     "last_thought_beat": 3846,
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 80,
-    "grief": 5,
+    "grief": 0,
     "volatility": 46,
     "chasing": null,
     "driving": null,
     "vehicle": "car",
-    "money": 14327,
+    "money": 14420,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -40961,22 +40905,19 @@
       "night": "riverflats"
     },
     "pos": [
-      65,
-      18
+      62,
+      24
     ],
     "dest": [
       63,
       21
     ],
     "at": "cannery",
-    "spot": [
-      65,
-      18
-    ],
+    "spot": null,
     "mood": {
-      "energy": 29,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 21,
+      "happiness": 63,
+      "stress": 21,
       "social_need": 0,
       "fear": 10
     },
@@ -40990,7 +40931,7 @@
         "opinion": "just a businessman"
       },
       "cass": {
-        "affinity": -62,
+        "affinity": -70,
         "opinion": "polished guy"
       },
       "dot": {
@@ -42414,8 +42355,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -42480,14 +42421,50 @@
         "importance": 6
       }
     ],
-    "action": "running the machine",
-    "activity": "running the machine",
+    "action": "having a smoke by the door",
+    "activity": "having a smoke by the door",
     "thought": "",
     "speech": null,
     "path": [
       [
         65,
         18
+      ],
+      [
+        64,
+        18
+      ],
+      [
+        63,
+        18
+      ],
+      [
+        62,
+        18
+      ],
+      [
+        62,
+        19
+      ],
+      [
+        62,
+        20
+      ],
+      [
+        62,
+        21
+      ],
+      [
+        62,
+        22
+      ],
+      [
+        62,
+        23
+      ],
+      [
+        62,
+        24
       ]
     ],
     "last_thought_beat": 3848,
@@ -42497,7 +42474,7 @@
     "grief": 0,
     "volatility": 66,
     "chasing": null,
-    "last_instigated_day": 950,
+    "last_instigated_day": 965,
     "driving": null,
     "vehicle": "van",
     "money": 14265,
@@ -43959,9 +43936,9 @@
       32
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -45369,8 +45346,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -45444,27 +45421,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 82,
-    "grief": 1,
+    "grief": 0,
     "arrived_day": 236,
     "last_thought_beat": 3844,
     "activity": "watching the door",
     "path": [
-      [
-        36,
-        34
-      ],
-      [
-        35,
-        34
-      ],
-      [
-        34,
-        34
-      ],
-      [
-        34,
-        33
-      ],
       [
         34,
         32
@@ -45511,8 +45472,8 @@
       "night": "riverflats"
     },
     "pos": [
-      9,
-      68
+      6,
+      69
     ],
     "dest": [
       75,
@@ -45520,13 +45481,13 @@
     ],
     "at": "precinct",
     "spot": [
-      9,
-      68
+      6,
+      69
     ],
     "mood": {
-      "energy": 39,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 31,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -46878,8 +46839,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -46928,19 +46889,43 @@
     "last_thought_beat": 3842,
     "volatility": 33,
     "chasing": null,
-    "activity": "filing paperwork",
+    "activity": "on the phone",
     "path": [
       [
-        9,
+        2,
+        67
+      ],
+      [
+        3,
+        67
+      ],
+      [
+        4,
+        67
+      ],
+      [
+        5,
+        67
+      ],
+      [
+        6,
+        67
+      ],
+      [
+        6,
         68
+      ],
+      [
+        6,
+        69
       ]
     ],
-    "action": "filing paperwork",
+    "action": "on the phone",
     "thought": "",
     "speech": null,
     "driving": null,
     "vehicle": null,
-    "money": 14327,
+    "money": 14420,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -49085,8 +49070,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      51
+      7,
+      50
     ],
     "dest": [
       8,
@@ -49094,13 +49079,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      51
+      7,
+      50
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 26,
       "social_need": 0,
       "fear": 10
     },
@@ -49135,7 +49120,7 @@
       },
       "cassius": {
         "affinity": -100,
-        "opinion": "jerk"
+        "opinion": "still a rival"
       },
       "rufus": {
         "affinity": -1,
@@ -49344,12 +49329,6 @@
         "day": 503,
         "what": "The block passed a rule: Pawnshop Window Contact Limit.",
         "importance": 6
-      },
-      {
-        "beat": 2078,
-        "day": 519,
-        "what": "Ms. Ivy Calloway died. I barely knew them.",
-        "importance": 5
       },
       {
         "beat": 2087,
@@ -50420,12 +50399,6 @@
         "importance": 6
       },
       {
-        "beat": 3848,
-        "day": 962,
-        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
-        "importance": 6
-      },
-      {
         "beat": 3717,
         "day": 929,
         "what": "Isaac Adeyemi died. I barely knew them.",
@@ -50516,8 +50489,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -50586,6 +50559,18 @@
         "day": 959,
         "what": "Det. Yolanda Ruiz was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3848,
+        "day": 962,
+        "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
+        "importance": 6
+      },
+      {
+        "beat": 3854,
+        "day": 963,
+        "what": "Elias noticed the cash drawer was a few dollars short again",
+        "importance": 3
       }
     ],
     "belief": "They fear the city’s authority is tightening.",
@@ -50594,8 +50579,8 @@
     "grief": 0,
     "volatility": 69,
     "vehicle": null,
-    "money": 1248,
-    "skill": 24.0,
+    "money": 1326,
+    "skill": 25.5,
     "job": {
       "at": "precinct",
       "title": "on the ward",
@@ -50610,29 +50595,33 @@
     "partner": null,
     "birth_day": 345,
     "arrived_day": 345,
-    "last_thought_beat": 3848,
+    "last_thought_beat": 3854,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
-        7,
-        50
+        9,
+        52
       ],
       [
         8,
-        50
+        52
       ],
       [
-        9,
-        50
+        7,
+        52
       ],
       [
-        9,
+        7,
         51
+      ],
+      [
+        7,
+        50
       ]
     ],
-    "action": "watching television",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "standing": 45,
@@ -50664,7 +50653,7 @@
     },
     "pos": [
       4,
-      50
+      51
     ],
     "dest": [
       3,
@@ -50673,12 +50662,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      50
+      51
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -52036,8 +52025,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -52081,11 +52070,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 41,
     "vehicle": null,
-    "money": 1248,
-    "skill": 24.0,
+    "money": 1326,
+    "skill": 25.5,
     "job": {
       "at": "clinic",
       "title": "in the office",
@@ -52104,19 +52093,19 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         4,
-        51
+        50
       ],
       [
         4,
-        50
+        51
       ]
     ],
-    "action": "folding laundry",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -52157,9 +52146,9 @@
       22
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 26,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -53589,8 +53578,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -53641,7 +53630,7 @@
     "action": "running the machine",
     "vehicle": null,
     "volatility": 45,
-    "money": 13993,
+    "money": 14086,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -53658,6 +53647,30 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        65,
+        21
+      ],
+      [
+        64,
+        21
+      ],
+      [
+        63,
+        21
+      ],
+      [
+        62,
+        21
+      ],
+      [
+        61,
+        21
+      ],
+      [
+        60,
+        21
+      ],
       [
         60,
         22
@@ -53690,8 +53703,8 @@
       "night": "new_home_270"
     },
     "pos": [
-      25,
-      32
+      30,
+      33
     ],
     "dest": [
       88,
@@ -53699,13 +53712,13 @@
     ],
     "at": "diner",
     "spot": [
-      25,
-      32
+      30,
+      33
     ],
     "mood": {
-      "energy": 37,
-      "happiness": 50,
-      "stress": 29,
+      "energy": 29,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -55053,8 +55066,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -55101,11 +55114,11 @@
     "grief": 0,
     "arrived_day": 352,
     "last_thought_beat": 3841,
-    "activity": "leaning on the counter",
-    "action": "leaning on the counter",
+    "activity": "clearing tables",
+    "action": "clearing tables",
     "vehicle": null,
     "volatility": 45,
-    "money": 9968,
+    "money": 10034,
     "skill": 100,
     "job": {
       "at": "diner",
@@ -55125,6 +55138,30 @@
       [
         25,
         32
+      ],
+      [
+        26,
+        32
+      ],
+      [
+        27,
+        32
+      ],
+      [
+        28,
+        32
+      ],
+      [
+        29,
+        32
+      ],
+      [
+        30,
+        32
+      ],
+      [
+        30,
+        33
       ]
     ],
     "thought": "",
@@ -55154,8 +55191,8 @@
       "night": "riverflats"
     },
     "pos": [
-      54,
-      84
+      53,
+      85
     ],
     "dest": [
       75,
@@ -55163,13 +55200,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
-      84
+      53,
+      85
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 42,
+      "happiness": 63,
+      "stress": 25,
       "social_need": 0,
       "fear": 10
     },
@@ -56607,8 +56644,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -56656,7 +56693,7 @@
     "arrived_day": 356,
     "last_thought_beat": 3849,
     "activity": "restocking shelves",
-    "action": "restocks shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
     "money": 8208,
@@ -56672,35 +56709,11 @@
     "driving": null,
     "path": [
       [
-        49,
-        83
-      ],
-      [
-        50,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        52,
-        83
-      ],
-      [
         53,
-        83
-      ],
-      [
-        54,
-        83
-      ],
-      [
-        54,
-        84
+        85
       ]
     ],
-    "thought": "These aisles need a steady hand",
+    "thought": "",
     "speech": null,
     "detained_until": 0
   },
@@ -56740,9 +56753,9 @@
       51
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -58064,8 +58077,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -58109,11 +58122,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 25,
     "vehicle": null,
-    "money": 1248,
-    "skill": 24.0,
+    "money": 1326,
+    "skill": 25.5,
     "job": {
       "at": "school",
       "title": "on the desk",
@@ -58135,6 +58148,18 @@
     "activity": "doing the washing up",
     "driving": null,
     "path": [
+      [
+        4,
+        48
+      ],
+      [
+        4,
+        49
+      ],
+      [
+        4,
+        50
+      ],
       [
         4,
         51
@@ -58168,8 +58193,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      7,
+      50
     ],
     "dest": [
       8,
@@ -58177,13 +58202,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      7,
+      50
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -59589,8 +59614,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -59661,8 +59686,8 @@
     "grief": 0,
     "volatility": 74,
     "vehicle": null,
-    "money": 1248,
-    "skill": 24.0,
+    "money": 1326,
+    "skill": 25.5,
     "job": {
       "at": "school",
       "title": "on the ward",
@@ -59681,15 +59706,27 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
         8,
         48
+      ],
+      [
+        7,
+        48
+      ],
+      [
+        7,
+        49
+      ],
+      [
+        7,
+        50
       ]
     ],
-    "action": "doing the washing up",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "last_instigated_day": 956,
@@ -59718,8 +59755,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      8,
+      48
     ],
     "dest": [
       8,
@@ -59727,13 +59764,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      8,
+      48
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 34,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -61085,8 +61122,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -61142,11 +61179,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 34,
     "vehicle": null,
-    "money": 1248,
-    "skill": 24.0,
+    "money": 1326,
+    "skill": 25.5,
     "job": {
       "at": "new_civic_347",
       "title": "on the ward",
@@ -61165,15 +61202,27 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         7,
         50
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        8,
+        49
+      ],
+      [
+        8,
+        48
       ]
     ],
-    "action": "folding laundry",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -61202,7 +61251,7 @@
     },
     "pos": [
       9,
-      51
+      52
     ],
     "dest": [
       8,
@@ -61211,12 +61260,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      51
+      52
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -62598,8 +62647,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -62649,11 +62698,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 20,
     "vehicle": null,
-    "money": 884,
-    "skill": 17.0,
+    "money": 962,
+    "skill": 18.5,
     "job": {
       "at": "new_civic_347",
       "title": "on the desk",
@@ -62672,27 +62721,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
         8,
-        50
+        53
       ],
       [
         9,
-        50
+        53
       ],
       [
         9,
-        51
+        52
       ]
     ],
-    "action": "watching television",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -63676,9 +63721,9 @@
       67
     ],
     "mood": {
-      "energy": 44,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 36,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -64866,8 +64911,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -64908,11 +64953,11 @@
     "grief": 0,
     "arrived_day": 371,
     "last_thought_beat": 3845,
-    "activity": "on the phone",
-    "action": "on the phone",
+    "activity": "at the desk",
+    "action": "at the desk",
     "vehicle": null,
     "volatility": 45,
-    "money": 15005,
+    "money": 15110,
     "skill": 100,
     "job": {
       "at": "courthouse",
@@ -64930,8 +64975,8 @@
     "driving": null,
     "path": [
       [
-        24,
-        68
+        23,
+        67
       ],
       [
         24,
@@ -65536,7 +65581,7 @@
       "night": "new_home_368"
     },
     "pos": [
-      92,
+      88,
       34
     ],
     "dest": [
@@ -65545,13 +65590,13 @@
     ],
     "at": "new_business_236",
     "spot": [
-      92,
+      88,
       34
     ],
     "mood": {
-      "energy": 47,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 39,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -66813,8 +66858,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -66855,11 +66900,11 @@
     "grief": 0,
     "arrived_day": 382,
     "last_thought_beat": 3845,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 11876,
+    "money": 11960,
     "skill": 100,
     "job": {
       "at": "new_business_236",
@@ -66877,11 +66922,23 @@
     "driving": null,
     "path": [
       [
+        92,
+        34
+      ],
+      [
         91,
         34
       ],
       [
-        92,
+        90,
+        34
+      ],
+      [
+        89,
+        34
+      ],
+      [
+        88,
         34
       ]
     ],
@@ -67545,8 +67602,8 @@
       "night": "vasquez"
     },
     "pos": [
-      54,
-      83
+      53,
+      85
     ],
     "dest": [
       33,
@@ -67554,13 +67611,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
-      83
+      53,
+      85
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 28,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -68852,8 +68909,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -68900,11 +68957,11 @@
     "grief": 0,
     "arrived_day": 388,
     "last_thought_beat": 3841,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 11792,
+    "money": 11876,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -68922,23 +68979,7 @@
     "driving": null,
     "path": [
       [
-        48,
-        83
-      ],
-      [
-        49,
-        83
-      ],
-      [
-        50,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        52,
+        54,
         83
       ],
       [
@@ -68946,8 +68987,12 @@
         83
       ],
       [
-        54,
-        83
+        53,
+        84
+      ],
+      [
+        53,
+        85
       ]
     ],
     "thought": "",
@@ -68977,8 +69022,8 @@
       "night": "delmarflats"
     },
     "pos": [
-      54,
-      83
+      48,
+      85
     ],
     "dest": [
       76,
@@ -68986,15 +69031,15 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      54,
-      83
+      48,
+      85
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 27,
       "social_need": 0,
-      "fear": 10
+      "fear": 18
     },
     "relationships": {
       "kohl": {
@@ -70274,8 +70319,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -70321,12 +70366,12 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 397,
-    "last_thought_beat": 3839,
-    "activity": "watching the door",
-    "action": "watching the door",
+    "last_thought_beat": 3855,
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 11708,
+    "money": 11792,
     "skill": 100,
     "job": {
       "at": "civic_shop_347b",
@@ -70344,19 +70389,7 @@
     "driving": null,
     "path": [
       [
-        49,
-        83
-      ],
-      [
-        50,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        52,
+        54,
         83
       ],
       [
@@ -70364,8 +70397,32 @@
         83
       ],
       [
-        54,
+        52,
         83
+      ],
+      [
+        51,
+        83
+      ],
+      [
+        50,
+        83
+      ],
+      [
+        49,
+        83
+      ],
+      [
+        48,
+        83
+      ],
+      [
+        48,
+        84
+      ],
+      [
+        48,
+        85
       ]
     ],
     "thought": "",
@@ -70603,8 +70660,8 @@
       "night": "vasquez"
     },
     "pos": [
-      21,
-      33
+      18,
+      35
     ],
     "dest": [
       33,
@@ -70612,13 +70669,13 @@
     ],
     "at": "barbershop",
     "spot": [
-      21,
-      33
+      18,
+      35
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -71918,8 +71975,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -71966,11 +72023,11 @@
     "grief": 0,
     "arrived_day": 425,
     "last_thought_beat": 3843,
-    "activity": "pouring for somebody",
-    "action": "pouring for somebody",
+    "activity": "clearing tables",
+    "action": "clearing tables",
     "vehicle": null,
     "volatility": 45,
-    "money": 9022,
+    "money": 9088,
     "skill": 100,
     "job": {
       "at": "barbershop",
@@ -71988,16 +72045,24 @@
     "driving": null,
     "path": [
       [
-        22,
-        34
-      ],
-      [
-        21,
-        34
-      ],
-      [
-        21,
+        20,
         33
+      ],
+      [
+        19,
+        33
+      ],
+      [
+        18,
+        33
+      ],
+      [
+        18,
+        34
+      ],
+      [
+        18,
+        35
       ]
     ],
     "thought": "",
@@ -72028,7 +72093,7 @@
     },
     "pos": [
       9,
-      51
+      52
     ],
     "dest": [
       8,
@@ -72037,12 +72102,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      51
+      52
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -73196,8 +73261,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -73247,11 +73312,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 28,
     "vehicle": null,
-    "money": 52,
-    "skill": 1.0,
+    "money": 130,
+    "skill": 2.5,
     "job": {
       "at": "new_civic_509",
       "title": "in the office",
@@ -73270,27 +73335,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
         8,
-        50
+        53
       ],
       [
         9,
-        50
+        53
       ],
       [
         9,
-        51
+        52
       ]
     ],
-    "action": "watching television",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -73318,7 +73379,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
+      7,
       51
     ],
     "dest": [
@@ -73327,13 +73388,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
+      7,
       51
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 34,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -74447,8 +74508,8 @@
         "importance": 9
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -74504,11 +74565,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 15,
     "vehicle": null,
-    "money": 52,
-    "skill": 1.0,
+    "money": 130,
+    "skill": 2.5,
     "job": {
       "at": "new_civic_509",
       "title": "on the desk",
@@ -74527,27 +74588,31 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "watering a plant",
     "driving": null,
     "path": [
+      [
+        8,
+        48
+      ],
+      [
+        7,
+        48
+      ],
+      [
+        7,
+        49
+      ],
       [
         7,
         50
       ],
       [
-        8,
-        50
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
+        7,
         51
       ]
     ],
-    "action": "watching television",
+    "action": "watering a plant",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -74576,7 +74641,7 @@
     },
     "pos": [
       9,
-      52
+      51
     ],
     "dest": [
       8,
@@ -74585,12 +74650,12 @@
     "at": "terrace_b",
     "spot": [
       9,
-      52
+      51
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -75680,8 +75745,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -75725,11 +75790,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 31,
     "vehicle": null,
-    "money": 52,
-    "skill": 1.0,
+    "money": 130,
+    "skill": 2.5,
     "job": {
       "at": "new_civic_531",
       "title": "on the desk",
@@ -75744,35 +75809,19 @@
     "partner": null,
     "birth_day": 474,
     "arrived_day": 474,
-    "last_thought_beat": 3839,
+    "last_thought_beat": 3855,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
-        7,
-        50
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        9,
-        50
-      ],
-      [
         9,
         51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -75800,7 +75849,7 @@
       "night": "new_home_270"
     },
     "pos": [
-      48,
+      49,
       83
     ],
     "dest": [
@@ -75809,13 +75858,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      48,
+      49,
       83
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -77041,8 +77090,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -77089,11 +77138,11 @@
     "grief": 0,
     "arrived_day": 475,
     "last_thought_beat": 3845,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "behind the till",
+    "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 13080,
+    "money": 13185,
     "skill": 100,
     "job": {
       "at": "church",
@@ -77111,31 +77160,11 @@
     "driving": null,
     "path": [
       [
-        54,
-        83
-      ],
-      [
-        53,
-        83
-      ],
-      [
-        52,
-        83
-      ],
-      [
-        51,
-        83
-      ],
-      [
-        50,
+        48,
         83
       ],
       [
         49,
-        83
-      ],
-      [
-        48,
         83
       ]
     ],
@@ -77166,7 +77195,7 @@
       "night": "terrace_c"
     },
     "pos": [
-      48,
+      54,
       83
     ],
     "dest": [
@@ -77175,13 +77204,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      48,
+      54,
       83
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -78259,8 +78288,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -78301,11 +78330,11 @@
     "grief": 0,
     "arrived_day": 489,
     "last_thought_beat": 3844,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 12870,
+    "money": 12975,
     "skill": 100,
     "job": {
       "at": "church",
@@ -78323,7 +78352,27 @@
     "driving": null,
     "path": [
       [
-        48,
+        49,
+        83
+      ],
+      [
+        50,
+        83
+      ],
+      [
+        51,
+        83
+      ],
+      [
+        52,
+        83
+      ],
+      [
+        53,
+        83
+      ],
+      [
+        54,
         83
       ]
     ],
@@ -78354,8 +78403,8 @@
       "night": "tenement"
     },
     "pos": [
-      55,
-      111
+      59,
+      112
     ],
     "dest": [
       31,
@@ -78363,13 +78412,13 @@
     ],
     "at": "new_business_423",
     "spot": [
-      55,
-      111
+      59,
+      112
     ],
     "mood": {
-      "energy": 41,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 33,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -79447,8 +79496,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -79495,11 +79544,11 @@
     "grief": 0,
     "arrived_day": 497,
     "last_thought_beat": 3847,
-    "activity": "counting the float",
-    "action": "counting the float",
+    "activity": "behind the till",
+    "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 10196,
+    "money": 10280,
     "skill": 100,
     "job": {
       "at": "new_business_423",
@@ -79517,19 +79566,7 @@
     "driving": null,
     "path": [
       [
-        60,
-        111
-      ],
-      [
-        59,
-        111
-      ],
-      [
-        58,
-        111
-      ],
-      [
-        57,
+        55,
         111
       ],
       [
@@ -79537,8 +79574,20 @@
         111
       ],
       [
-        55,
+        57,
         111
+      ],
+      [
+        58,
+        111
+      ],
+      [
+        59,
+        111
+      ],
+      [
+        59,
+        112
       ]
     ],
     "thought": "",
@@ -79907,9 +79956,9 @@
       51
     ],
     "mood": {
-      "energy": 27,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 19,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -81065,8 +81114,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -81110,11 +81159,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 20,
     "vehicle": null,
-    "money": 52,
-    "skill": 1.0,
+    "money": 130,
+    "skill": 2.5,
     "job": {
       "at": "new_civic_531",
       "title": "on the desk",
@@ -81136,22 +81185,6 @@
     "activity": "watching television",
     "driving": null,
     "path": [
-      [
-        8,
-        48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
-        49
-      ],
-      [
-        9,
-        50
-      ],
       [
         9,
         51
@@ -81186,7 +81219,7 @@
     },
     "pos": [
       4,
-      48
+      51
     ],
     "dest": [
       3,
@@ -81195,12 +81228,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      48
+      51
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -82242,8 +82275,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -82287,11 +82320,11 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 22,
     "vehicle": null,
-    "money": 52,
-    "skill": 1.0,
+    "money": 130,
+    "skill": 2.5,
     "job": {
       "at": "new_civic_844",
       "title": "on the ward",
@@ -82310,15 +82343,15 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         4,
-        48
+        51
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -82359,9 +82392,9 @@
       50
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -83381,8 +83414,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -83420,7 +83453,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 26,
     "vehicle": null,
     "money": 0,
@@ -83442,16 +83475,20 @@
     "driving": null,
     "path": [
       [
+        9,
+        52
+      ],
+      [
         8,
-        48
+        52
       ],
       [
         7,
-        48
+        52
       ],
       [
         7,
-        49
+        51
       ],
       [
         7,
@@ -83487,18 +83524,21 @@
     },
     "pos": [
       62,
-      24
+      17
     ],
     "dest": [
       90,
       67
     ],
     "at": "cannery",
-    "spot": null,
+    "spot": [
+      62,
+      17
+    ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 26,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -84536,8 +84576,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -84583,12 +84623,12 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 571,
-    "last_thought_beat": 3840,
-    "activity": "having a smoke by the door",
-    "action": "having a smoke by the door",
+    "last_thought_beat": 3864,
+    "activity": "checking a manifest",
+    "action": "checking a manifest",
     "vehicle": null,
     "volatility": 45,
-    "money": 9500,
+    "money": 9593,
     "skill": 100,
     "job": {
       "at": "cannery",
@@ -84606,20 +84646,8 @@
     "driving": null,
     "path": [
       [
-        63,
-        18
-      ],
-      [
-        62,
-        18
-      ],
-      [
-        62,
-        19
-      ],
-      [
-        62,
-        20
+        61,
+        21
       ],
       [
         62,
@@ -84627,15 +84655,19 @@
       ],
       [
         62,
-        22
+        20
       ],
       [
         62,
-        23
+        19
       ],
       [
         62,
-        24
+        18
+      ],
+      [
+        62,
+        17
       ]
     ],
     "thought": "",
@@ -84678,8 +84710,8 @@
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 37,
+      "happiness": 63,
+      "stress": 20,
       "social_need": 0,
       "fear": 10
     },
@@ -85675,8 +85707,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -85732,7 +85764,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 38,
     "vehicle": null,
     "money": 0,
@@ -85750,17 +85782,9 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
-      [
-        3,
-        52
-      ],
-      [
-        4,
-        52
-      ],
       [
         4,
         51
@@ -85778,7 +85802,7 @@
         48
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "on hold with somebody",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -85806,8 +85830,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      18,
-      19
+      23,
+      20
     ],
     "dest": [
       122,
@@ -85815,13 +85839,13 @@
     ],
     "at": "laundromat",
     "spot": [
-      18,
-      19
+      23,
+      20
     ],
     "mood": {
-      "energy": 36,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 28,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -86817,8 +86841,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -86865,11 +86889,11 @@
     "grief": 0,
     "arrived_day": 594,
     "last_thought_beat": 3845,
-    "activity": "counting the float",
-    "action": "counting the float",
+    "activity": "signing for a delivery",
+    "action": "signing for a delivery",
     "vehicle": null,
     "volatility": 45,
-    "money": 8068,
+    "money": 8152,
     "skill": 100,
     "job": {
       "at": "laundromat",
@@ -86887,40 +86911,32 @@
     "driving": null,
     "path": [
       [
-        24,
-        21
-      ],
-      [
-        23,
-        21
-      ],
-      [
-        22,
-        21
-      ],
-      [
-        21,
-        21
-      ],
-      [
-        20,
-        21
+        18,
+        19
       ],
       [
         19,
-        21
-      ],
-      [
-        18,
-        21
-      ],
-      [
-        18,
-        20
-      ],
-      [
-        18,
         19
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        21,
+        19
+      ],
+      [
+        22,
+        19
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        23,
+        20
       ]
     ],
     "thought": "",
@@ -86949,8 +86965,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      64,
-      22
+      63,
+      18
     ],
     "dest": [
       8,
@@ -86958,13 +86974,13 @@
     ],
     "at": "cannery",
     "spot": [
-      64,
-      22
+      63,
+      18
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -88034,8 +88050,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -88083,10 +88099,10 @@
     "arrived_day": 595,
     "last_thought_beat": 3849,
     "activity": "shifting crates",
-    "action": "shifts crates methodically",
+    "action": "shifting crates",
     "vehicle": null,
     "volatility": 45,
-    "money": 10000,
+    "money": 10105,
     "skill": 100,
     "job": {
       "at": "new_civic_347",
@@ -88106,9 +88122,29 @@
       [
         64,
         22
+      ],
+      [
+        63,
+        22
+      ],
+      [
+        63,
+        21
+      ],
+      [
+        63,
+        20
+      ],
+      [
+        63,
+        19
+      ],
+      [
+        63,
+        18
       ]
     ],
-    "thought": "One crate at a time keeps the mind clear",
+    "thought": "",
     "speech": null,
     "detained_until": 0
   },
@@ -88136,7 +88172,7 @@
     },
     "pos": [
       4,
-      48
+      51
     ],
     "dest": [
       3,
@@ -88145,12 +88181,12 @@
     "at": "terrace_a",
     "spot": [
       4,
-      48
+      51
     ],
     "mood": {
       "energy": 6,
-      "happiness": 50,
-      "stress": 37,
+      "happiness": 63,
+      "stress": 20,
       "social_need": 0,
       "fear": 10
     },
@@ -89126,8 +89162,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -89177,7 +89213,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 38,
     "vehicle": null,
     "money": 0,
@@ -89195,23 +89231,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
-        4,
-        50
+        3,
+        52
       ],
       [
         4,
-        49
+        52
       ],
       [
         4,
-        48
+        51
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -89239,8 +89275,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -89248,13 +89284,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -90248,8 +90284,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -90293,7 +90329,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 32,
     "vehicle": null,
     "money": 0,
@@ -90311,15 +90347,15 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
-        9,
-        52
+        8,
+        48
       ]
     ],
-    "action": "watching television",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -90347,8 +90383,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      7,
+      50
     ],
     "dest": [
       8,
@@ -90356,13 +90392,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      7,
+      50
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 39,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 22,
       "social_need": 0,
       "fear": 10
     },
@@ -91354,8 +91390,8 @@
         "importance": 8
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -91405,7 +91441,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 15,
     "vehicle": null,
     "money": 0,
@@ -91419,27 +91455,27 @@
     "partner": null,
     "birth_day": 607,
     "arrived_day": 607,
-    "last_thought_beat": 3840,
+    "last_thought_beat": 3855,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "folding laundry",
     "driving": null,
     "path": [
       [
         8,
-        53
+        49
       ],
       [
-        9,
-        53
+        7,
+        49
       ],
       [
-        9,
-        52
+        7,
+        50
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "folding laundry",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -91467,8 +91503,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
-      48
+      2,
+      49
     ],
     "dest": [
       3,
@@ -91476,13 +91512,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
-      48
+      2,
+      49
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 30,
+      "energy": 21,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -92472,8 +92508,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -92517,7 +92553,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 23,
     "vehicle": null,
     "money": 0,
@@ -92531,7 +92567,7 @@
     "partner": null,
     "birth_day": 610,
     "arrived_day": 610,
-    "last_thought_beat": 3841,
+    "last_thought_beat": 3864,
     "standing": 45,
     "directive": null,
     "chasing": null,
@@ -92540,7 +92576,23 @@
     "path": [
       [
         4,
-        48
+        51
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        2,
+        51
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        2,
+        49
       ]
     ],
     "action": "watching television",
@@ -92571,8 +92623,8 @@
       "night": "new_home_386"
     },
     "pos": [
-      3,
-      99
+      7,
+      98
     ],
     "dest": [
       106,
@@ -92580,14 +92632,14 @@
     ],
     "at": "civic_shop_347",
     "spot": [
-      3,
-      99
+      7,
+      98
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -93526,8 +93578,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -93568,11 +93620,11 @@
     "grief": 0,
     "arrived_day": 617,
     "last_thought_beat": 3846,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 7508,
+    "money": 7592,
     "skill": 100,
     "job": {
       "at": "civic_shop_347",
@@ -93594,12 +93646,24 @@
         97
       ],
       [
-        3,
-        98
+        4,
+        97
       ],
       [
-        3,
-        99
+        5,
+        97
+      ],
+      [
+        6,
+        97
+      ],
+      [
+        7,
+        97
+      ],
+      [
+        7,
+        98
       ]
     ],
     "thought": "",
@@ -93641,9 +93705,9 @@
       32
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 25,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -94519,8 +94583,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -94577,7 +94641,7 @@
     "action": "wiping down the counter",
     "vehicle": null,
     "volatility": 45,
-    "money": 5832,
+    "money": 5898,
     "skill": 100,
     "job": {
       "at": "diner",
@@ -94594,6 +94658,14 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        27,
+        32
+      ],
+      [
+        26,
+        32
+      ],
       [
         25,
         32
@@ -94626,8 +94698,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
-      50
+      9,
+      52
     ],
     "dest": [
       8,
@@ -94635,13 +94707,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
-      50
+      9,
+      52
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 22,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -95521,8 +95593,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -95566,7 +95638,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 39,
     "vehicle": null,
     "money": 0,
@@ -95584,31 +95656,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "folding laundry",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
+        8,
+        53
+      ],
+      [
+        9,
+        53
+      ],
+      [
         9,
         52
-      ],
-      [
-        8,
-        52
-      ],
-      [
-        7,
-        52
-      ],
-      [
-        7,
-        51
-      ],
-      [
-        7,
-        50
       ]
     ],
-    "action": "folding laundry",
+    "action": "napping on the sofa",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -95636,8 +95700,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      29,
-      104
+      31,
+      105
     ],
     "dest": [
       8,
@@ -95645,14 +95709,14 @@
     ],
     "at": "new_civic_531",
     "spot": [
-      29,
-      104
+      31,
+      105
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "energy": 28,
+      "happiness": 66,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -96451,8 +96515,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -96499,11 +96563,11 @@
     "grief": 0,
     "arrived_day": 682,
     "last_thought_beat": 3842,
-    "activity": "reading a file",
-    "action": "reading a file",
+    "activity": "filing paperwork",
+    "action": "filing paperwork",
     "vehicle": null,
     "volatility": 45,
-    "money": 7655,
+    "money": 7760,
     "skill": 100,
     "job": {
       "at": "new_civic_531",
@@ -96521,24 +96585,20 @@
     "driving": null,
     "path": [
       [
+        33,
+        106
+      ],
+      [
+        32,
+        106
+      ],
+      [
         31,
         106
       ],
       [
-        30,
-        106
-      ],
-      [
-        29,
-        106
-      ],
-      [
-        29,
+        31,
         105
-      ],
-      [
-        29,
-        104
       ]
     ],
     "thought": "",
@@ -96568,8 +96628,8 @@
       "night": "tenement"
     },
     "pos": [
-      3,
-      21
+      7,
+      20
     ],
     "dest": [
       31,
@@ -96577,13 +96637,13 @@
     ],
     "at": "warehouse",
     "spot": [
-      3,
-      21
+      7,
+      20
     ],
     "mood": {
-      "energy": 37,
-      "happiness": 50,
-      "stress": 35,
+      "energy": 29,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -97333,8 +97393,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -97381,11 +97441,11 @@
     "grief": 0,
     "arrived_day": 684,
     "last_thought_beat": 3841,
-    "activity": "shifting crates",
-    "action": "shifting crates",
+    "activity": "running the machine",
+    "action": "running the machine",
     "vehicle": null,
     "volatility": 45,
-    "money": 6741,
+    "money": 6834,
     "skill": 100,
     "job": {
       "at": "warehouse",
@@ -97403,20 +97463,36 @@
     "driving": null,
     "path": [
       [
-        3,
-        24
+        2,
+        18
       ],
       [
         3,
-        23
+        18
       ],
       [
-        3,
-        22
+        4,
+        18
       ],
       [
-        3,
-        21
+        5,
+        18
+      ],
+      [
+        6,
+        18
+      ],
+      [
+        7,
+        18
+      ],
+      [
+        7,
+        19
+      ],
+      [
+        7,
+        20
       ]
     ],
     "thought": "",
@@ -97445,7 +97521,7 @@
       "night": "vasquez"
     },
     "pos": [
-      31,
+      34,
       129
     ],
     "dest": [
@@ -97454,14 +97530,14 @@
     ],
     "at": "new_civic_509",
     "spot": [
-      31,
+      34,
       129
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -98164,8 +98240,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -98212,11 +98288,11 @@
     "grief": 0,
     "arrived_day": 706,
     "last_thought_beat": 3843,
-    "activity": "on the phone",
-    "action": "on the phone",
+    "activity": "at the desk",
+    "action": "at the desk",
     "vehicle": null,
     "volatility": 45,
-    "money": 7025,
+    "money": 7130,
     "skill": 100,
     "job": {
       "at": "new_civic_509",
@@ -98234,11 +98310,15 @@
     "driving": null,
     "path": [
       [
-        31,
-        130
+        33,
+        128
       ],
       [
-        31,
+        34,
+        128
+      ],
+      [
+        34,
         129
       ]
     ],
@@ -98268,8 +98348,8 @@
       "night": "new_home_368"
     },
     "pos": [
-      23,
-      20
+      24,
+      21
     ],
     "dest": [
       122,
@@ -98277,13 +98357,13 @@
     ],
     "at": "laundromat",
     "spot": [
-      23,
-      20
+      24,
+      21
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -98981,8 +99061,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -99029,11 +99109,11 @@
     "grief": 0,
     "arrived_day": 707,
     "last_thought_beat": 3843,
-    "activity": "signing for a delivery",
-    "action": "signing for a delivery",
+    "activity": "restocking shelves",
+    "action": "restocking shelves",
     "vehicle": null,
     "volatility": 45,
-    "money": 5632,
+    "money": 5716,
     "skill": 100,
     "job": {
       "at": "laundromat",
@@ -99053,6 +99133,14 @@
       [
         23,
         20
+      ],
+      [
+        24,
+        20
+      ],
+      [
+        24,
+        21
       ]
     ],
     "thought": "",
@@ -99095,9 +99183,9 @@
       50
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -99799,8 +99887,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -99844,7 +99932,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 23,
     "vehicle": null,
     "money": 0,
@@ -99866,24 +99954,12 @@
     "driving": null,
     "path": [
       [
-        8,
-        48
-      ],
-      [
-        7,
-        48
-      ],
-      [
-        7,
-        49
-      ],
-      [
         7,
         50
       ]
     ],
-    "action": "folds laundry slowly",
-    "thought": "Counting socks feels like math",
+    "action": "folding laundry",
+    "thought": "",
     "speech": null,
     "detained_until": 0
   },
@@ -99910,8 +99986,8 @@
       "night": "riverflats"
     },
     "pos": [
-      54,
-      97
+      56,
+      99
     ],
     "dest": [
       75,
@@ -99919,14 +99995,14 @@
     ],
     "at": "new_civic_347",
     "spot": [
-      54,
-      97
+      56,
+      99
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 24,
-      "social_need": 24,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -100551,8 +100627,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -100598,12 +100674,12 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 709,
-    "last_thought_beat": 3838,
-    "activity": "on the phone",
-    "action": "on the phone",
+    "last_thought_beat": 3854,
+    "activity": "reading a file",
+    "action": "reading a file",
     "vehicle": null,
     "volatility": 45,
-    "money": 6920,
+    "money": 7025,
     "skill": 100,
     "job": {
       "at": "new_civic_347",
@@ -100622,23 +100698,15 @@
     "path": [
       [
         56,
-        99
+        97
       ],
       [
-        55,
-        99
-      ],
-      [
-        54,
-        99
-      ],
-      [
-        54,
+        56,
         98
       ],
       [
-        54,
-        97
+        56,
+        99
       ]
     ],
     "thought": "",
@@ -101140,7 +101208,7 @@
       "night": "civic_housing_377"
     },
     "pos": [
-      60,
+      55,
       111
     ],
     "dest": [
@@ -101149,13 +101217,13 @@
     ],
     "at": "new_business_423",
     "spot": [
-      60,
+      55,
       111
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -101759,8 +101827,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -101813,11 +101881,11 @@
     "grief": 0,
     "arrived_day": 726,
     "last_thought_beat": 3843,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 5240,
+    "money": 5324,
     "skill": 100,
     "job": {
       "at": "new_business_423",
@@ -101839,23 +101907,11 @@
         112
       ],
       [
-        57,
+        55,
         112
       ],
       [
-        58,
-        112
-      ],
-      [
-        59,
-        112
-      ],
-      [
-        60,
-        112
-      ],
-      [
-        60,
+        55,
         111
       ]
     ],
@@ -101886,7 +101942,7 @@
       "night": "terrace_b"
     },
     "pos": [
-      7,
+      9,
       51
     ],
     "dest": [
@@ -101895,13 +101951,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      7,
+      9,
       51
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -102475,8 +102531,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -102520,7 +102576,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 22,
     "vehicle": null,
     "money": 0,
@@ -102538,19 +102594,19 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watering a plant",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
-        7,
-        50
+        9,
+        52
       ],
       [
-        7,
+        9,
         51
       ]
     ],
-    "action": "watering a plant",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -102578,8 +102634,8 @@
       "night": "terrace_a"
     },
     "pos": [
-      2,
-      49
+      4,
+      48
     ],
     "dest": [
       3,
@@ -102587,13 +102643,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      2,
-      49
+      4,
+      48
     ],
     "mood": {
-      "energy": 18,
-      "happiness": 44,
-      "stress": 24,
+      "energy": 10,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -103221,8 +103277,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -103266,7 +103322,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 47,
     "vehicle": null,
     "money": 0,
@@ -103284,32 +103340,28 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "watching television",
+    "activity": "on hold with somebody",
     "driving": null,
     "path": [
       [
-        4,
-        51
-      ],
-      [
         3,
-        51
-      ],
-      [
-        2,
-        51
-      ],
-      [
-        2,
         50
       ],
       [
-        2,
+        4,
+        50
+      ],
+      [
+        4,
         49
+      ],
+      [
+        4,
+        48
       ]
     ],
-    "action": "watches TV quietly",
-    "thought": "The cartoon is louder than my worries",
+    "action": "on hold with somebody",
+    "thought": "",
     "speech": null,
     "detained_until": 0
   },
@@ -103349,9 +103401,9 @@
       34
     ],
     "mood": {
-      "energy": 38,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 30,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -103873,8 +103925,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -103919,7 +103971,7 @@
     "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 4932,
+    "money": 5016,
     "skill": 100,
     "job": {
       "at": "cornerstore",
@@ -103936,22 +103988,6 @@
     "chasing": null,
     "driving": null,
     "path": [
-      [
-        2,
-        33
-      ],
-      [
-        3,
-        33
-      ],
-      [
-        4,
-        33
-      ],
-      [
-        5,
-        33
-      ],
       [
         6,
         33
@@ -104592,7 +104628,7 @@
       "night": "terrace_a"
     },
     "pos": [
-      4,
+      2,
       48
     ],
     "dest": [
@@ -104601,13 +104637,13 @@
     ],
     "at": "terrace_a",
     "spot": [
-      4,
+      2,
       48
     ],
     "mood": {
-      "energy": 36,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 28,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -105203,8 +105239,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -105248,7 +105284,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 48,
     "vehicle": null,
     "money": 0,
@@ -105266,7 +105302,7 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "on hold with somebody",
+    "activity": "watering a plant",
     "driving": null,
     "path": [
       [
@@ -105274,19 +105310,27 @@
         51
       ],
       [
-        4,
+        3,
+        51
+      ],
+      [
+        2,
+        51
+      ],
+      [
+        2,
         50
       ],
       [
-        4,
+        2,
         49
       ],
       [
-        4,
+        2,
         48
       ]
     ],
-    "action": "on hold with somebody",
+    "action": "watering a plant",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -105314,8 +105358,8 @@
       "night": "new_home_386"
     },
     "pos": [
-      57,
-      133
+      62,
+      132
     ],
     "dest": [
       106,
@@ -105323,15 +105367,15 @@
     ],
     "at": "new_business_637",
     "spot": [
-      57,
-      133
+      62,
+      132
     ],
     "mood": {
-      "energy": 19,
-      "happiness": 38,
-      "stress": 23,
-      "social_need": 24,
-      "fear": 16
+      "energy": 11,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
+      "fear": 10
     },
     "relationships": {
       "marta": {
@@ -105839,8 +105883,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -105887,11 +105931,11 @@
     "grief": 0,
     "arrived_day": 758,
     "last_thought_beat": 3846,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 4512,
+    "money": 4596,
     "skill": 100,
     "job": {
       "at": "new_business_637",
@@ -105911,30 +105955,6 @@
       [
         62,
         132
-      ],
-      [
-        61,
-        132
-      ],
-      [
-        60,
-        132
-      ],
-      [
-        59,
-        132
-      ],
-      [
-        58,
-        132
-      ],
-      [
-        57,
-        132
-      ],
-      [
-        57,
-        133
       ]
     ],
     "thought": "",
@@ -105964,8 +105984,8 @@
       "night": "new_home_726"
     },
     "pos": [
-      48,
-      85
+      54,
+      83
     ],
     "dest": [
       60,
@@ -105973,13 +105993,13 @@
     ],
     "at": "civic_shop_347b",
     "spot": [
-      48,
-      85
+      54,
+      83
     ],
     "mood": {
-      "energy": 45,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 36,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -106465,8 +106485,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -106512,13 +106532,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 778,
-    "last_thought_beat": 3840,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "last_thought_beat": 3864,
+    "activity": "behind the till",
+    "action": "behind the till",
     "vehicle": null,
     "volatility": 45,
-    "money": 4036,
-    "skill": 98.5,
+    "money": 4120,
+    "skill": 100,
     "job": {
       "at": "civic_shop_347b",
       "title": "drives nights for a car service",
@@ -106535,20 +106555,12 @@
     "driving": null,
     "path": [
       [
-        49,
-        83
-      ],
-      [
-        48,
-        83
-      ],
-      [
-        48,
+        54,
         84
       ],
       [
-        48,
-        85
+        54,
+        83
       ]
     ],
     "thought": "",
@@ -106590,9 +106602,9 @@
       20
     ],
     "mood": {
-      "energy": 72,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 64,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -107044,8 +107056,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -107102,8 +107114,8 @@
     "action": "running the machine",
     "vehicle": null,
     "volatility": 45,
-    "money": 4044,
-    "skill": 92.0,
+    "money": 4137,
+    "skill": 93.5,
     "job": {
       "at": "warehouse",
       "title": "works the line at the cannery",
@@ -107119,6 +107131,30 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        4,
+        23
+      ],
+      [
+        5,
+        23
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        6,
+        21
+      ],
+      [
+        6,
+        20
+      ],
       [
         7,
         20
@@ -107150,7 +107186,7 @@
       "night": "new_home_791"
     },
     "pos": [
-      92,
+      91,
       34
     ],
     "dest": [
@@ -107159,13 +107195,13 @@
     ],
     "at": "new_business_236",
     "spot": [
-      92,
+      91,
       34
     ],
     "mood": {
-      "energy": 64,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 56,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -107562,8 +107598,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -107622,12 +107658,12 @@
     "grief": 0,
     "arrived_day": 797,
     "last_thought_beat": 3844,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "activity": "watching the door",
+    "action": "watching the door",
     "vehicle": null,
     "volatility": 45,
-    "money": 3644,
-    "skill": 91.5,
+    "money": 3728,
+    "skill": 93.0,
     "job": {
       "at": "new_business_236",
       "title": "keeps books for people who cannot",
@@ -107644,11 +107680,11 @@
     "driving": null,
     "path": [
       [
-        91,
+        92,
         34
       ],
       [
-        92,
+        91,
         34
       ]
     ],
@@ -107692,9 +107728,9 @@
       83
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 11,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -108146,8 +108182,8 @@
         "importance": 8
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -108193,13 +108229,13 @@
     "health": 82,
     "grief": 0,
     "arrived_day": 798,
-    "last_thought_beat": 3840,
-    "activity": "behind the till",
-    "action": "behind the till",
+    "last_thought_beat": 3864,
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 4470,
-    "skill": 91.0,
+    "money": 4575,
+    "skill": 92.5,
     "job": {
       "at": "church",
       "title": "in the office",
@@ -108247,8 +108283,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      51
     ],
     "dest": [
       8,
@@ -108256,13 +108292,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      51
     ],
     "mood": {
-      "energy": 32,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 8,
+      "happiness": 60,
+      "stress": 35,
       "social_need": 0,
       "fear": 10
     },
@@ -108756,12 +108792,24 @@
         "day": 959,
         "what": "Det. Yolanda Ruiz was convicted over Fountain Ledge Nightstand Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3855,
+        "day": 963,
+        "what": "I was taken in over Bench Snow Gaze Regulation.",
+        "importance": 8
+      },
+      {
+        "beat": 3860,
+        "day": 965,
+        "what": "I was convicted over Bench Snow Gaze Regulation: a $50 fine.",
+        "importance": 9
       }
     ],
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 17,
     "vehicle": null,
     "money": 0,
@@ -108775,11 +108823,11 @@
     "partner": null,
     "birth_day": 803,
     "arrived_day": 803,
-    "last_thought_beat": 3840,
+    "last_thought_beat": 3855,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
@@ -108791,15 +108839,15 @@
         50
       ],
       [
-        8,
-        49
+        9,
+        50
       ],
       [
-        8,
-        48
+        9,
+        51
       ]
     ],
-    "action": "doing the washing up",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -108827,8 +108875,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      51
     ],
     "dest": [
       8,
@@ -108836,13 +108884,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      51
     ],
     "mood": {
-      "energy": 30,
-      "happiness": 50,
-      "stress": 22,
+      "energy": 22,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -109238,8 +109286,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -109295,7 +109343,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 35,
     "vehicle": null,
     "money": 0,
@@ -109313,19 +109361,23 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "watching television",
     "driving": null,
     "path": [
       [
-        8,
+        9,
         49
       ],
       [
-        8,
-        48
+        9,
+        50
+      ],
+      [
+        9,
+        51
       ]
     ],
-    "action": "doing the washing up",
+    "action": "watching television",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -109354,7 +109406,7 @@
     },
     "pos": [
       54,
-      84
+      83
     ],
     "dest": [
       32,
@@ -109363,12 +109415,12 @@
     "at": "civic_shop_347b",
     "spot": [
       54,
-      84
+      83
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 31,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -109784,8 +109836,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -109832,12 +109884,12 @@
     "grief": 0,
     "arrived_day": 822,
     "last_thought_beat": 3841,
-    "activity": "restocking shelves",
-    "action": "restocking shelves",
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 3945,
-    "skill": 83.5,
+    "money": 4050,
+    "skill": 85.0,
     "job": {
       "at": "clinic",
       "title": "on the ward",
@@ -109855,11 +109907,11 @@
     "path": [
       [
         54,
-        83
+        84
       ],
       [
         54,
-        84
+        83
       ]
     ],
     "thought": "",
@@ -109902,10 +109954,10 @@
       111
     ],
     "mood": {
-      "energy": 39,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "energy": 31,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {
@@ -110290,8 +110342,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -110344,12 +110396,12 @@
     "grief": 0,
     "arrived_day": 823,
     "last_thought_beat": 3846,
-    "activity": "pouring for somebody",
-    "action": "pouring for somebody",
+    "activity": "leaning on the counter",
+    "action": "leaning on the counter",
     "vehicle": null,
     "volatility": 45,
-    "money": 2532,
-    "skill": 83.0,
+    "money": 2598,
+    "skill": 84.5,
     "job": {
       "at": "new_social_657",
       "title": "cuts and sets hair out of a back room",
@@ -110365,6 +110417,22 @@
     "chasing": null,
     "driving": null,
     "path": [
+      [
+        125,
+        113
+      ],
+      [
+        124,
+        113
+      ],
+      [
+        123,
+        113
+      ],
+      [
+        123,
+        112
+      ],
       [
         123,
         111
@@ -110885,8 +110953,8 @@
       "night": "new_home_386"
     },
     "pos": [
-      79,
-      68
+      77,
+      66
     ],
     "dest": [
       106,
@@ -110894,13 +110962,13 @@
     ],
     "at": "depot",
     "spot": [
-      79,
-      68
+      77,
+      66
     ],
     "mood": {
-      "energy": 72,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 64,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -111171,8 +111239,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -111225,12 +111293,12 @@
     "grief": 0,
     "arrived_day": 858,
     "last_thought_beat": 3846,
-    "activity": "running the machine",
-    "action": "running the machine",
+    "activity": "checking a manifest",
+    "action": "checking a manifest",
     "vehicle": null,
     "volatility": 45,
-    "money": 2618,
-    "skill": 69.0,
+    "money": 2711,
+    "skill": 70.5,
     "job": {
       "at": "depot",
       "title": "works the line at the cannery",
@@ -111247,28 +111315,20 @@
     "driving": null,
     "path": [
       [
-        78,
-        64
-      ],
-      [
-        79,
-        64
-      ],
-      [
         79,
         65
       ],
       [
-        79,
+        78,
+        65
+      ],
+      [
+        77,
+        65
+      ],
+      [
+        77,
         66
-      ],
-      [
-        79,
-        67
-      ],
-      [
-        79,
-        68
       ]
     ],
     "thought": "",
@@ -111297,8 +111357,8 @@
       "night": "new_home_726"
     },
     "pos": [
-      27,
-      114
+      24,
+      115
     ],
     "dest": [
       60,
@@ -111306,14 +111366,14 @@
     ],
     "at": "new_civic_844",
     "spot": [
-      27,
-      114
+      24,
+      115
     ],
     "mood": {
-      "energy": 64,
-      "happiness": 50,
-      "stress": 23,
-      "social_need": 24,
+      "energy": 56,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 12,
       "fear": 10
     },
     "relationships": {},
@@ -111511,8 +111571,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -111559,12 +111619,12 @@
     "grief": 0,
     "arrived_day": 886,
     "last_thought_beat": 3847,
-    "activity": "filing paperwork",
-    "action": "filing paperwork",
+    "activity": "on the phone",
+    "action": "on the phone",
     "vehicle": null,
     "volatility": 45,
-    "money": 2265,
-    "skill": 59.5,
+    "money": 2370,
+    "skill": 61.0,
     "job": {
       "at": "new_civic_844",
       "title": "does agency shifts at the clinic",
@@ -111581,7 +111641,7 @@
     "driving": null,
     "path": [
       [
-        24,
+        26,
         115
       ],
       [
@@ -111589,16 +111649,8 @@
         115
       ],
       [
-        26,
+        24,
         115
-      ],
-      [
-        27,
-        115
-      ],
-      [
-        27,
-        114
       ]
     ],
     "thought": "",
@@ -111627,7 +111679,7 @@
       "night": "new_home_386"
     },
     "pos": [
-      9,
+      5,
       64
     ],
     "dest": [
@@ -111635,14 +111687,11 @@
       65
     ],
     "at": "precinct",
-    "spot": [
-      9,
-      64
-    ],
+    "spot": null,
     "mood": {
-      "energy": 63,
-      "happiness": 50,
-      "stress": 23,
+      "energy": 55,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -111720,8 +111769,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -111780,12 +111829,12 @@
     "grief": 0,
     "arrived_day": 933,
     "last_thought_beat": 3841,
-    "activity": "reading a file",
-    "action": "reading a file",
+    "activity": "making bad coffee",
+    "action": "making bad coffee",
     "vehicle": null,
     "volatility": 45,
-    "money": 1040,
-    "skill": 42.0,
+    "money": 1145,
+    "skill": 43.5,
     "job": {
       "at": "new_civic_509",
       "title": "on the ward",
@@ -111806,35 +111855,27 @@
         69
       ],
       [
-        7,
+        5,
         69
       ],
       [
-        8,
-        69
-      ],
-      [
-        9,
-        69
-      ],
-      [
-        9,
+        5,
         68
       ],
       [
-        9,
+        5,
         67
       ],
       [
-        9,
+        5,
         66
       ],
       [
-        9,
+        5,
         65
       ],
       [
-        9,
+        5,
         64
       ]
     ],
@@ -111877,9 +111918,9 @@
       52
     ],
     "mood": {
-      "energy": 26,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 18,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -111947,8 +111988,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -112016,7 +112057,7 @@
     "belief": "",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 40,
     "vehicle": null,
     "money": 0,
@@ -112039,11 +112080,23 @@
     "path": [
       [
         8,
-        53
+        48
       ],
       [
         9,
-        53
+        48
+      ],
+      [
+        9,
+        49
+      ],
+      [
+        9,
+        50
+      ],
+      [
+        9,
+        51
       ],
       [
         9,
@@ -112078,8 +112131,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      8,
-      48
+      9,
+      52
     ],
     "dest": [
       8,
@@ -112087,13 +112140,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      8,
-      48
+      9,
+      52
     ],
     "mood": {
-      "energy": 63,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 55,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -112155,8 +112208,8 @@
         "importance": 6
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -112224,7 +112277,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 26,
     "vehicle": null,
     "money": 0,
@@ -112242,7 +112295,7 @@
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "doing the washing up",
+    "activity": "napping on the sofa",
     "driving": null,
     "path": [
       [
@@ -112250,23 +112303,11 @@
         51
       ],
       [
-        8,
-        51
-      ],
-      [
-        8,
-        50
-      ],
-      [
-        8,
-        49
-      ],
-      [
-        8,
-        48
+        9,
+        52
       ]
     ],
-    "action": "doing the washing up",
+    "action": "napping on the sofa",
     "thought": "",
     "speech": null
   },
@@ -112293,8 +112334,8 @@
       "night": "terrace_b"
     },
     "pos": [
-      9,
-      52
+      8,
+      48
     ],
     "dest": [
       8,
@@ -112302,13 +112343,13 @@
     ],
     "at": "terrace_b",
     "spot": [
-      9,
-      52
+      8,
+      48
     ],
     "mood": {
-      "energy": 22,
-      "happiness": 50,
-      "stress": 24,
+      "energy": 14,
+      "happiness": 63,
+      "stress": 18,
       "social_need": 0,
       "fear": 10
     },
@@ -112372,8 +112413,8 @@
         "importance": 9
       },
       {
-        "beat": 3817,
-        "day": 954,
+        "beat": 3860,
+        "day": 965,
         "what": "Etta Bello was convicted over Bench Snow Gaze Regulation.",
         "importance": 6
       },
@@ -112441,7 +112482,7 @@
     "belief": "They fear the city’s authority is tightening.",
     "alive": true,
     "health": 90,
-    "grief": 21,
+    "grief": 12,
     "volatility": 41,
     "vehicle": null,
     "money": 0,
@@ -112455,39 +112496,19 @@
     "partner": null,
     "birth_day": 947,
     "arrived_day": 947,
-    "last_thought_beat": 3840,
+    "last_thought_beat": 3855,
     "standing": 45,
     "directive": null,
     "chasing": null,
-    "activity": "napping on the sofa",
+    "activity": "doing the washing up",
     "driving": null,
     "path": [
       [
         8,
         48
-      ],
-      [
-        9,
-        48
-      ],
-      [
-        9,
-        49
-      ],
-      [
-        9,
-        50
-      ],
-      [
-        9,
-        51
-      ],
-      [
-        9,
-        52
       ]
     ],
-    "action": "napping on the sofa",
+    "action": "doing the washing up",
     "thought": "",
     "speech": null,
     "detained_until": 0
@@ -112515,8 +112536,8 @@
       "night": "new_home_682"
     },
     "pos": [
-      63,
-      32
+      60,
+      33
     ],
     "dest": [
       122,
@@ -112524,15 +112545,15 @@
     ],
     "at": "bodega",
     "spot": [
-      63,
-      32
+      60,
+      33
     ],
     "mood": {
-      "energy": 56,
-      "happiness": 50,
-      "stress": 33,
-      "social_need": 42,
-      "fear": 23
+      "energy": 48,
+      "happiness": 63,
+      "stress": 18,
+      "social_need": 0,
+      "fear": 10
     },
     "relationships": {},
     "memories": [
@@ -112547,6 +112568,12 @@
         "day": 962,
         "what": "Tariq 'Tee' Bello was convicted over Public Haircut Ban.",
         "importance": 6
+      },
+      {
+        "beat": 3860,
+        "day": 965,
+        "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
+        "importance": 6
       }
     ],
     "belief": "",
@@ -112555,13 +112582,18 @@
     "grief": 0,
     "arrived_day": 962,
     "last_thought_beat": 3849,
-    "activity": "signing for a delivery",
-    "action": "signs for delivery",
+    "activity": "counting the float",
+    "action": "counting the float",
     "vehicle": null,
     "volatility": 45,
-    "money": 200,
-    "skill": 30,
-    "job": null,
+    "money": 284,
+    "skill": 31.5,
+    "job": {
+      "at": "bodega",
+      "title": "keeps books for people who cannot",
+      "wage": 42,
+      "since_day": 963
+    },
     "partner": null,
     "parents": [],
     "children": [],
@@ -112572,671 +112604,123 @@
     "driving": null,
     "path": [
       [
-        122,
-        132
-      ],
-      [
-        122,
-        133
-      ],
-      [
-        122,
-        134
-      ],
-      [
-        121,
-        134
-      ],
-      [
-        120,
-        134
-      ],
-      [
-        119,
-        134
-      ],
-      [
-        118,
-        134
-      ],
-      [
-        117,
-        134
-      ],
-      [
-        116,
-        134
-      ],
-      [
-        115,
-        134
-      ],
-      [
-        114,
-        134
-      ],
-      [
-        113,
-        134
-      ],
-      [
-        112,
-        134
-      ],
-      [
-        111,
-        134
-      ],
-      [
-        110,
-        134
-      ],
-      [
-        109,
-        134
-      ],
-      [
-        108,
-        134
-      ],
-      [
-        107,
-        134
-      ],
-      [
-        106,
-        134
-      ],
-      [
-        105,
-        134
-      ],
-      [
-        104,
-        134
-      ],
-      [
-        103,
-        134
-      ],
-      [
-        102,
-        134
-      ],
-      [
-        101,
-        134
-      ],
-      [
-        100,
-        134
-      ],
-      [
-        99,
-        134
-      ],
-      [
-        98,
-        134
-      ],
-      [
-        97,
-        134
-      ],
-      [
-        96,
-        134
-      ],
-      [
-        95,
-        134
-      ],
-      [
-        94,
-        134
-      ],
-      [
-        93,
-        134
-      ],
-      [
-        92,
-        134
-      ],
-      [
-        91,
-        134
-      ],
-      [
-        90,
-        134
-      ],
-      [
-        89,
-        134
-      ],
-      [
-        88,
-        134
-      ],
-      [
-        87,
-        134
-      ],
-      [
-        86,
-        134
-      ],
-      [
-        85,
-        134
-      ],
-      [
-        84,
-        134
-      ],
-      [
-        83,
-        134
-      ],
-      [
-        82,
-        134
-      ],
-      [
-        81,
-        134
-      ],
-      [
-        80,
-        134
-      ],
-      [
-        79,
-        134
-      ],
-      [
-        78,
-        134
-      ],
-      [
-        77,
-        134
-      ],
-      [
-        76,
-        134
-      ],
-      [
-        75,
-        134
-      ],
-      [
-        74,
-        134
-      ],
-      [
-        73,
-        134
-      ],
-      [
-        72,
-        134
-      ],
-      [
-        71,
-        134
-      ],
-      [
-        70,
-        134
-      ],
-      [
-        69,
-        134
-      ],
-      [
-        68,
-        134
-      ],
-      [
-        67,
-        134
-      ],
-      [
-        67,
-        133
-      ],
-      [
-        67,
-        132
-      ],
-      [
-        67,
-        131
-      ],
-      [
-        67,
-        130
-      ],
-      [
-        67,
-        129
-      ],
-      [
-        67,
-        128
-      ],
-      [
-        67,
-        127
-      ],
-      [
-        67,
-        126
-      ],
-      [
-        67,
-        125
-      ],
-      [
-        67,
-        124
-      ],
-      [
-        67,
-        123
-      ],
-      [
-        67,
-        122
-      ],
-      [
-        67,
-        121
-      ],
-      [
-        67,
-        120
-      ],
-      [
-        67,
-        119
-      ],
-      [
-        67,
-        118
-      ],
-      [
-        67,
-        117
-      ],
-      [
-        67,
-        116
-      ],
-      [
-        67,
-        115
-      ],
-      [
-        67,
-        114
-      ],
-      [
-        67,
-        113
-      ],
-      [
-        67,
-        112
-      ],
-      [
-        67,
-        111
-      ],
-      [
-        67,
-        110
-      ],
-      [
-        67,
-        109
-      ],
-      [
-        67,
-        108
-      ],
-      [
-        67,
-        107
-      ],
-      [
-        67,
-        106
-      ],
-      [
-        67,
-        105
-      ],
-      [
-        67,
-        104
-      ],
-      [
-        67,
-        103
-      ],
-      [
-        67,
-        102
-      ],
-      [
-        67,
-        101
-      ],
-      [
-        67,
-        100
-      ],
-      [
-        67,
-        99
-      ],
-      [
-        67,
-        98
-      ],
-      [
-        67,
-        97
-      ],
-      [
-        67,
-        96
-      ],
-      [
-        67,
-        95
-      ],
-      [
-        67,
-        94
-      ],
-      [
-        67,
-        93
-      ],
-      [
-        67,
-        92
-      ],
-      [
-        67,
-        91
-      ],
-      [
-        67,
-        90
-      ],
-      [
-        67,
-        89
-      ],
-      [
-        67,
-        88
-      ],
-      [
-        67,
-        87
-      ],
-      [
-        67,
-        86
-      ],
-      [
-        67,
-        85
-      ],
-      [
-        67,
-        84
-      ],
-      [
-        67,
-        83
-      ],
-      [
-        67,
-        82
-      ],
-      [
-        67,
-        81
-      ],
-      [
-        67,
-        80
-      ],
-      [
-        67,
-        79
-      ],
-      [
-        67,
-        78
-      ],
-      [
-        67,
-        77
-      ],
-      [
-        67,
-        76
-      ],
-      [
-        67,
-        75
-      ],
-      [
-        67,
-        74
-      ],
-      [
-        67,
-        73
-      ],
-      [
-        67,
-        72
-      ],
-      [
-        67,
-        71
-      ],
-      [
-        67,
-        70
-      ],
-      [
-        67,
-        69
-      ],
-      [
-        67,
-        68
-      ],
-      [
-        67,
+        60,
+        33
+      ]
+    ],
+    "thought": "",
+    "speech": null
+  },
+  "marta2": {
+    "id": "marta2",
+    "name": "Marta Ferreira",
+    "age": 58,
+    "role": "does agency shifts at the clinic",
+    "faction": "civilian",
+    "home": "new_home_270",
+    "work": "new_civic_883",
+    "principal": false,
+    "traits": [
+      "kind",
+      "unsentimental about bodies"
+    ],
+    "ambition": "own the room I work in",
+    "private_fear": "that people can tell what I did before I came here",
+    "voice": "still working out how people here talk",
+    "routine": {
+      "morning": "new_civic_883",
+      "afternoon": "new_civic_883",
+      "evening": "new_home_270",
+      "night": "new_home_270"
+    },
+    "pos": [
+      133,
+      70
+    ],
+    "dest": [
+      88,
+      84
+    ],
+    "at": "new_civic_883",
+    "spot": [
+      133,
+      70
+    ],
+    "mood": {
+      "energy": 58,
+      "happiness": 63,
+      "stress": 20,
+      "social_need": 35,
+      "fear": 15
+    },
+    "relationships": {},
+    "memories": [
+      {
+        "beat": 3860,
+        "day": 965,
+        "what": "I moved onto this block today.",
+        "importance": 7
+      },
+      {
+        "beat": 3860,
+        "day": 965,
+        "what": "Cassius Bello was convicted over Bench Snow Gaze Regulation.",
+        "importance": 6
+      }
+    ],
+    "belief": "",
+    "alive": true,
+    "health": 82,
+    "grief": 0,
+    "arrived_day": 965,
+    "last_thought_beat": 3864,
+    "activity": "at the desk",
+    "action": "at the desk",
+    "vehicle": null,
+    "volatility": 45,
+    "money": 235,
+    "skill": 30.5,
+    "job": {
+      "at": "new_civic_883",
+      "title": "does agency shifts at the clinic",
+      "wage": 53,
+      "since_day": 965
+    },
+    "partner": null,
+    "parents": [],
+    "children": [],
+    "birth_day": null,
+    "standing": 45,
+    "directive": null,
+    "chasing": null,
+    "driving": null,
+    "path": [
+      [
+        135,
         67
       ],
       [
-        67,
-        66
+        134,
+        67
       ],
       [
-        67,
-        65
+        133,
+        67
       ],
       [
-        67,
-        64
+        133,
+        68
       ],
       [
-        67,
-        63
+        133,
+        69
       ],
       [
-        67,
-        62
-      ],
-      [
-        67,
-        61
-      ],
-      [
-        67,
-        60
-      ],
-      [
-        67,
-        59
-      ],
-      [
-        67,
-        58
-      ],
-      [
-        67,
-        57
-      ],
-      [
-        67,
-        56
-      ],
-      [
-        67,
-        55
-      ],
-      [
-        67,
-        54
-      ],
-      [
-        67,
-        53
-      ],
-      [
-        67,
-        52
-      ],
-      [
-        67,
-        51
-      ],
-      [
-        67,
-        50
-      ],
-      [
-        67,
-        49
-      ],
-      [
-        67,
-        48
-      ],
-      [
-        67,
-        47
-      ],
-      [
-        67,
-        46
-      ],
-      [
-        67,
-        45
-      ],
-      [
-        67,
-        44
-      ],
-      [
-        67,
-        43
-      ],
-      [
-        67,
-        42
-      ],
-      [
-        67,
-        41
-      ],
-      [
-        67,
-        40
-      ],
-      [
-        67,
-        39
-      ],
-      [
-        67,
-        38
-      ],
-      [
-        67,
-        37
-      ],
-      [
-        67,
-        36
-      ],
-      [
-        66,
-        36
-      ],
-      [
-        65,
-        36
-      ],
-      [
-        64,
-        36
-      ],
-      [
-        63,
-        36
-      ],
-      [
-        62,
-        36
-      ],
-      [
-        62,
-        35
-      ],
-      [
-        62,
-        34
-      ],
-      [
-        63,
-        34
-      ],
-      [
-        63,
-        33
-      ],
-      [
-        63,
-        32
+        133,
+        70
       ]
     ],
-    "thought": "Just another package, nothing special",
+    "thought": "",
     "speech": null
   }
 }

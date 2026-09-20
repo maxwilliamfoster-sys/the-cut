@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "219e33c0d446",
+  "version": "dd2f4e51a6a6",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -57,14 +57,14 @@
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    ".gggggggggg.====.gggggggggggg.gggggggg..====...............gggggggg.====........................====...ggggggg..====............................====............",
+    ".gggggggggg.====.gggggggggggg.gggggggg..====...............gggggggg.====........................====...ggggggg..====............................====...gggggggg.",
     ".##########.,,,,.############.########..,,,,.gggggggggggg..gggggggg.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..########.,:,,.gggggggggggggg.........,:,,.gg#######g.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg#fffff#g.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gg#fffff#g.,,,,.gg########gggggg########gg.,,,,.ggggggggggg",
-    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gg#fffff#g.,,,,.gg#ffffff#gggggg#ffffff#gg.,,,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg#fffff#g.,:,,.gg#ffffff#gggggg#ffffff#gg.,:,,.ggggggggggg",
-    ".#fff##fff#.,:,,.#ff##ff##ff#.###D####..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg###D###g.,:,,.gg#ffffff#gggggg#ffffff#gg.,:,,.ggggggggggg",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..########.,:,,.gggggggggggggg.........,:,,.gg#######g.,:,,.gggggggggggggggggggggggggg.,:,,.gg########g",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg#fffff#g.,:,,.gggggggggggggggggggggggggg.,:,,.gg#ffffff#g",
+    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gg#fffff#g.,,,,.gg########gggggg########gg.,,,,.gg#ffffff#g",
+    ".#fff##fff#.,,,,.#ff##ff##ff#.#ffffff#..,,,,.gggggggggggg..#ffffff#.,,,,.gggggggggggggg.........,,,,.gg#fffff#g.,,,,.gg#ffffff#gggggg#ffffff#gg.,,,,.gg#ffffff#g",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.#ffffff#..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg#fffff#g.,:,,.gg#ffffff#gggggg#ffffff#gg.,:,,.gg#ffffff#g",
+    ".#fff##fff#.,:,,.#ff##ff##ff#.###D####..,:,,.gggggggggggg..#ffffff#.,:,,.gggggggggggggg.........,:,,.gg###D###g.,:,,.gg#ffffff#gggggg#ffffff#gg.,:,,.gg###D####g",
     ".##D####D##.,,,,.#ff##ff##ff#...........,,,,.gggggggggggg..###D####.,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gg###D####gggggg###D####gg.,,,,.ggggggggggg",
     "............,,,,.#D###D###D##...........,,,,........................,,,,.gggggggggggggg.........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "............,:,,........................,:,,........................,:,,........................,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
@@ -4883,6 +4883,81 @@
           "type": "rug",
           "x": 153,
           "y": 69
+        }
+      ]
+    },
+    "new_home_964": {
+      "id": "new_home_964",
+      "name": "Calloway Tenement",
+      "district": "terraces",
+      "rect": [
+        151,
+        48,
+        8,
+        6
+      ],
+      "rects": [
+        [
+          151,
+          48,
+          8,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "brownstone",
+      "floors": 3,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        154,
+        52
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 153,
+          "y": 51
+        },
+        {
+          "type": "bed",
+          "x": 152,
+          "y": 51
+        },
+        {
+          "type": "sofa",
+          "x": 154,
+          "y": 51
+        },
+        {
+          "type": "tv",
+          "x": 157,
+          "y": 52
+        },
+        {
+          "type": "table",
+          "x": 156,
+          "y": 49
+        },
+        {
+          "type": "sink",
+          "x": 153,
+          "y": 50
+        },
+        {
+          "type": "shelf",
+          "x": 156,
+          "y": 51
+        },
+        {
+          "type": "plant",
+          "x": 155,
+          "y": 49
+        },
+        {
+          "type": "rug",
+          "x": 157,
+          "y": 49
         }
       ]
     }
