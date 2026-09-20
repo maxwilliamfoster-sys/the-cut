@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "e0d99e1135d3",
+  "version": "219e33c0d446",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -91,12 +91,12 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====.............gggggggg...====.............gggggggg...====.............gggggggg...====............====............................====............",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.ggggggggggggssssssssgg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.ggggggggggggssssssssgg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "g#########g.,,,,.gg########ggssssssssgg.,,,,.gg#########g#ffffff#gg.,,,,.gg########gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "g#fffffff#g.,,,,.gg#ffffff#ggssssssssgg.,,,,.gg#fffffff#g#ffffff#gg.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "g#fffffff#g.,:,,.gg#ffffff#ggssssssssgg.,:,,.gg#fffffff#g#ffffff#gg.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "g#fffffff#g.,:,,.gg#ffffff#ggssssssssgg.,:,,.gg#fffffff#g###D####gg.,:,,.gg#ffffff#gg###D####gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "g#########g.,,,,.gg########gg#ffffff#gg.,,,,.gg#########g#ffffff#gg.,,,,.gg########gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "g#fffffff#g.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gg#fffffff#g#ffffff#gg.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "g#fffffff#g.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gg#fffffff#g#ffffff#gg.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "g#fffffff#g.,:,,.gg#ffffff#gg###D####gg.,:,,.gg#fffffff#g###D####gg.,:,,.gg#ffffff#gg###D####gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     "g####D####g.,,,,.gg###D####gggggggggggg.,,,,.gg####D####ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gg###D####gggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
@@ -2508,7 +2508,7 @@
     },
     "new_home_291": {
       "id": "new_home_291",
-      "name": "Brendan Tenement",
+      "name": "Kessler House",
       "district": "flats",
       "rect": [
         29,
@@ -2528,12 +2528,58 @@
       "style": "brownstone",
       "floors": 3,
       "open": false,
-      "condition": "rebuilding",
+      "condition": "standing",
       "anchor": [
-        33,
-        83
+        32,
+        84
       ],
-      "furniture": []
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 32,
+          "y": 81
+        },
+        {
+          "type": "bed",
+          "x": 33,
+          "y": 81
+        },
+        {
+          "type": "sofa",
+          "x": 31,
+          "y": 83
+        },
+        {
+          "type": "tv",
+          "x": 34,
+          "y": 83
+        },
+        {
+          "type": "table",
+          "x": 31,
+          "y": 81
+        },
+        {
+          "type": "sink",
+          "x": 30,
+          "y": 81
+        },
+        {
+          "type": "shelf",
+          "x": 32,
+          "y": 82
+        },
+        {
+          "type": "plant",
+          "x": 34,
+          "y": 81
+        },
+        {
+          "type": "rug",
+          "x": 35,
+          "y": 82
+        }
+      ]
     },
     "civic_housing_346": {
       "id": "civic_housing_346",
