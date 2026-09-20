@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3865,
-  "last_beat_at": "2026-09-20T15:57:12Z",
+  "beat": 3876,
+  "last_beat_at": "2026-09-20T18:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
-    "riverside": 22,
-    "delmar": 7,
+    "riverside": 36,
+    "delmar": 19,
     "terraces": 5,
-    "civic": 10
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -4831,9 +4831,111 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine366",
+      "from": "amara",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 971,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 3876
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 3874
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 3872
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 3870
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "dez",
+        "hector"
+      ],
+      "text": "Hector Delgado does Dez Okonkwo a favour that costs them something real.",
+      "beat": 3869
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 3868
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "rosa"
+      ],
+      "text": "Something pays out for Rosa Reyes. More than expected, which is its own problem.",
+      "beat": 3866
+    },
     {
       "id": "hospital",
       "heat": {
@@ -5008,94 +5110,6 @@
       ],
       "text": "Somebody tells Dr. Yusuf Amin that Kwame Nakamura has been seen talking to police.",
       "beat": 3842
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "priya",
-        "junie"
-      ],
-      "text": "Somebody tells Ms. Priya Raman that Junie Marsh has been seen talking to police.",
-      "beat": 3841
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "etta3"
-      ],
-      "text": "Etta Bello gets word that what they owe is wanted sooner than agreed.",
-      "beat": 3840
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "wes"
-      ],
-      "text": "Wes Doyle gets word that what they owe is wanted sooner than agreed.",
-      "beat": 3839
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 3838
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 3828
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 3826
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 3824
     }
   ],
   "player_queue": [
@@ -5118,12 +5132,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 965,
+  "last_gazette_day": 968,
   "llm_budget": {
     "day": "2026-09-20",
     "spent": {
       "fast": 163125,
-      "deep": 48238
+      "deep": 61944
     }
   },
   "silent_runs": 0,
@@ -6403,7 +6417,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 65
+      "convictions": 66
     },
     {
       "id": "law04",
@@ -6525,19 +6539,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "milo3",
-      "name": "Milo Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "fidgets with a stray hair",
-      "day": 898,
-      "trial_day": 900,
-      "status": "convicted",
-      "witnesses": 19,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "june4",
@@ -7304,6 +7305,19 @@
       "status": "convicted",
       "witnesses": 23,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "amara",
+      "name": "Amara Bello",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "mutters a plan about cutting ties",
+      "day": 966,
+      "trial_day": 968,
+      "status": "convicted",
+      "witnesses": 23,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 0,
@@ -7322,7 +7336,7 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 10
+      "heat": 4
     },
     {
       "a": "nia",
@@ -7350,7 +7364,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 86
+      "heat": 80
     },
     {
       "a": "hector",
@@ -7371,7 +7385,7 @@
       "b": "hector",
       "since_day": 780,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     },
     {
       "a": "hector",
@@ -7385,19 +7399,19 @@
       "b": "cass",
       "since_day": 934,
       "cause": "would not let it go",
-      "heat": 23
+      "heat": 17
     },
     {
       "a": "cass",
       "b": "rey",
       "since_day": 959,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 37
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-09-20",
-    "beat": 3865,
+    "beat": 3868,
     "providers": [
       "gemini"
     ]
@@ -7558,9 +7572,39 @@
     "marked": 959
   },
   "incidents": [],
-  "treasury": 444088,
+  "treasury": 447838,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 968,
+      "wages": 2764,
+      "takings": 3845,
+      "tax": 2150,
+      "welfare": 0,
+      "civic": 900,
+      "net": 1250,
+      "treasury": 447838
+    },
+    {
+      "day": 967,
+      "wages": 2764,
+      "takings": 3845,
+      "tax": 2150,
+      "welfare": 0,
+      "civic": 900,
+      "net": 1250,
+      "treasury": 446588
+    },
+    {
+      "day": 966,
+      "wages": 2764,
+      "takings": 3845,
+      "tax": 2150,
+      "welfare": 0,
+      "civic": 900,
+      "net": 1250,
+      "treasury": 445338
+    },
     {
       "day": 965,
       "wages": 2764,
@@ -7830,36 +7874,6 @@
       "civic": 900,
       "net": 1170,
       "treasury": 413362
-    },
-    {
-      "day": 930,
-      "wages": 2463,
-      "takings": 3845,
-      "tax": 2053,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1153,
-      "treasury": 412192
-    },
-    {
-      "day": 929,
-      "wages": 2463,
-      "takings": 3845,
-      "tax": 2053,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1153,
-      "treasury": 411039
-    },
-    {
-      "day": 928,
-      "wages": 2463,
-      "takings": 3845,
-      "tax": 2053,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1153,
-      "treasury": 409886
     }
   ],
   "births": [
@@ -8435,45 +8449,6 @@
     }
   ],
   "score_history": [
-    {
-      "day": 905,
-      "overall": 69,
-      "economy": 95,
-      "wellbeing": 71,
-      "society": 29,
-      "infrastructure": 81,
-      "growth": 71,
-      "population": 79,
-      "buildings": 60,
-      "treasury": 389899,
-      "employment": 100
-    },
-    {
-      "day": 906,
-      "overall": 68,
-      "economy": 95,
-      "wellbeing": 70,
-      "society": 25,
-      "infrastructure": 81,
-      "growth": 71,
-      "population": 79,
-      "buildings": 60,
-      "treasury": 390990,
-      "employment": 100
-    },
-    {
-      "day": 909,
-      "overall": 70,
-      "economy": 95,
-      "wellbeing": 76,
-      "society": 25,
-      "infrastructure": 81,
-      "growth": 71,
-      "population": 79,
-      "buildings": 60,
-      "treasury": 392081,
-      "employment": 100
-    },
     {
       "day": 910,
       "overall": 65,
@@ -9058,19 +9033,58 @@
       "buildings": 64,
       "treasury": 444088,
       "employment": 100
+    },
+    {
+      "day": 966,
+      "overall": 73,
+      "economy": 94,
+      "wellbeing": 73,
+      "society": 33,
+      "infrastructure": 86,
+      "growth": 83,
+      "population": 83,
+      "buildings": 64,
+      "treasury": 445338,
+      "employment": 100
+    },
+    {
+      "day": 967,
+      "overall": 72,
+      "economy": 94,
+      "wellbeing": 70,
+      "society": 32,
+      "infrastructure": 86,
+      "growth": 83,
+      "population": 83,
+      "buildings": 64,
+      "treasury": 446588,
+      "employment": 100
+    },
+    {
+      "day": 968,
+      "overall": 73,
+      "economy": 94,
+      "wellbeing": 74,
+      "society": 35,
+      "infrastructure": 86,
+      "growth": 83,
+      "population": 83,
+      "buildings": 64,
+      "treasury": 447838,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 965,
-    "overall": 71,
+    "day": 968,
+    "overall": 73,
     "economy": 94,
-    "wellbeing": 62,
-    "society": 37,
+    "wellbeing": 74,
+    "society": 35,
     "infrastructure": 86,
-    "growth": 89,
+    "growth": 83,
     "population": 83,
     "buildings": 64,
-    "treasury": 444088,
+    "treasury": 447838,
     "employment": 100
   },
   "buildable": {
