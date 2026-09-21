@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 3973,
-  "last_beat_at": "2026-09-21T18:57:12Z",
+  "beat": 3987,
+  "last_beat_at": "2026-09-21T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "fog off the water",
   "heat": {
-    "riverside": 24,
-    "delmar": 25,
+    "riverside": 10,
+    "delmar": 11,
     "terraces": 5,
     "civic": 5
   },
@@ -5273,9 +5273,126 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine400",
+      "from": "farrah3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 997,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine401",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 999,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "cassius5",
+        "elias"
+      ],
+      "text": "Somebody tells Cassius Bello that Elias Reyes has been seen talking to police.",
+      "beat": 3987
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 3986
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "farrah4"
+      ],
+      "text": "Farrah Lindqvist gets word that what they owe is wanted sooner than agreed.",
+      "beat": 3984
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 3980
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 3978
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 3977
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "kwame2"
+      ],
+      "text": "Kwame Doyle gets word that what they owe is wanted sooner than agreed.",
+      "beat": 3976
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -5433,97 +5550,6 @@
       ],
       "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
       "beat": 3943
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "isaac"
-      ],
-      "text": "Isaac Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 3942
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 3941
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "cassius4",
-        "errol2"
-      ],
-      "text": "Errol Osei does Cassius Bello a favour that costs them something real.",
-      "beat": 3925
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "cal3"
-      ],
-      "text": "Cal Doyle gets word that what they owe is wanted sooner than agreed.",
-      "beat": 3924
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 3921
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 3920
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "milo2"
-      ],
-      "text": "Milo Adeyemi gets word that what they owe is wanted sooner than agreed.",
-      "beat": 3919
     }
   ],
   "player_queue": [
@@ -5546,12 +5572,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 992,
+  "last_gazette_day": 996,
   "llm_budget": {
     "day": "2026-09-21",
     "spent": {
       "fast": 162099,
-      "deep": 68522
+      "deep": 109172
     }
   },
   "silent_runs": 0,
@@ -6908,7 +6934,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 191
+      "convictions": 193
     },
     {
       "id": "law07",
@@ -6970,58 +6996,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "ada",
-      "name": "Ada Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "continues eating breakfast standing, eyes on rain",
-      "day": 938,
-      "trial_day": 940,
-      "status": "convicted",
-      "witnesses": 16,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "errol3",
-      "name": "Errol Brannon",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "tallying float, rubs forehead over wet ledger",
-      "day": 938,
-      "trial_day": 940,
-      "status": "convicted",
-      "witnesses": 7,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "errol4",
-      "name": "Errol Lindqvist",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "counts float, eyes ledger",
-      "day": 941,
-      "trial_day": 943,
-      "status": "convicted",
-      "witnesses": 7,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "theo2",
-      "name": "Theo Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "eats cereal quickly while standing",
-      "day": 946,
-      "trial_day": 948,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "farrah3",
@@ -7746,8 +7720,58 @@
       "evidence": "counts change, taps ledger",
       "day": 992,
       "trial_day": 994,
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "flips ledger page, eyes Brennan",
+      "day": 994,
+      "trial_day": 996,
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "booker",
+      "name": "Booker Lyle",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "taps pen on float ledger",
+      "day": 995,
+      "trial_day": 997,
+      "status": "awaiting_trial",
+      "witnesses": 2
+    },
+    {
+      "id": "c061",
+      "who": "farrah3",
+      "name": "Farrah Mbeki",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "stares at ledger, sighs quietly",
+      "day": 996,
+      "trial_day": 998,
       "status": "awaiting_trial",
       "witnesses": 6
+    },
+    {
+      "id": "c061",
+      "who": "jonah3",
+      "name": "Jonah Bello",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "fidgets, avoiding eye contact",
+      "day": 996,
+      "trial_day": 998,
+      "status": "awaiting_trial",
+      "witnesses": 20
     }
   ],
   "law_pressure": 1,
@@ -7766,7 +7790,7 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "nia",
@@ -7787,14 +7811,14 @@
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 50
+      "heat": 44
     },
     {
       "a": "hector",
@@ -7829,7 +7853,7 @@
       "b": "rey",
       "since_day": 959,
       "cause": "would not let it go",
-      "heat": 7
+      "heat": 1
     }
   ],
   "quota_exhausted_on": {
@@ -7840,6 +7864,13 @@
     ]
   },
   "dead": [
+    {
+      "id": "dev2",
+      "name": "Dev Nakamura",
+      "day": 995,
+      "cause": "illness",
+      "where": "Terrace Block B"
+    },
     {
       "id": "odette",
       "name": "Odette Ferreira",
@@ -7996,28 +8027,44 @@
     }
   ],
   "funeral": {
-    "day": 993,
-    "for": "Odette Ferreira",
-    "id": "odette",
-    "marked": 993
+    "day": 997,
+    "for": "Dev Nakamura",
+    "id": "dev2"
   },
-  "incidents": [
-    {
-      "id": "inc3972-vigil-0",
-      "kind": "vigil",
-      "effect": "crowd",
-      "at": "church",
-      "x": 50,
-      "y": 40,
-      "who": [],
-      "text": "The block turns out for Odette Ferreira.",
-      "started": 3972,
-      "until": 3974
-    }
-  ],
-  "treasury": 466205,
+  "incidents": [],
+  "treasury": 469636,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 996,
+      "wages": 2785,
+      "takings": 3755,
+      "tax": 2128,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1138,
+      "treasury": 469636
+    },
+    {
+      "day": 995,
+      "wages": 2785,
+      "takings": 3755,
+      "tax": 2128,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1138,
+      "treasury": 468498
+    },
+    {
+      "day": 994,
+      "wages": 2838,
+      "takings": 3755,
+      "tax": 2145,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1155,
+      "treasury": 467360
+    },
     {
       "day": 992,
       "wages": 2838,
@@ -8287,36 +8334,6 @@
       "civic": 900,
       "net": 1170,
       "treasury": 434422
-    },
-    {
-      "day": 951,
-      "wages": 2516,
-      "takings": 3845,
-      "tax": 2070,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1170,
-      "treasury": 433252
-    },
-    {
-      "day": 950,
-      "wages": 2516,
-      "takings": 3845,
-      "tax": 2070,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1170,
-      "treasury": 432082
-    },
-    {
-      "day": 949,
-      "wages": 2516,
-      "takings": 3845,
-      "tax": 2070,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1170,
-      "treasury": 430912
     }
   ],
   "births": [
@@ -8911,45 +8928,6 @@
   ],
   "score_history": [
     {
-      "day": 928,
-      "overall": 69,
-      "economy": 95,
-      "wellbeing": 71,
-      "society": 33,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 79,
-      "buildings": 61,
-      "treasury": 409886,
-      "employment": 100
-    },
-    {
-      "day": 929,
-      "overall": 66,
-      "economy": 95,
-      "wellbeing": 62,
-      "society": 33,
-      "infrastructure": 81,
-      "growth": 54,
-      "population": 78,
-      "buildings": 61,
-      "treasury": 411039,
-      "employment": 100
-    },
-    {
-      "day": 930,
-      "overall": 62,
-      "economy": 95,
-      "wellbeing": 56,
-      "society": 25,
-      "infrastructure": 81,
-      "growth": 54,
-      "population": 78,
-      "buildings": 61,
-      "treasury": 412192,
-      "employment": 100
-    },
-    {
       "day": 933,
       "overall": 65,
       "economy": 95,
@@ -9533,19 +9511,58 @@
       "buildings": 65,
       "treasury": 466205,
       "employment": 100
+    },
+    {
+      "day": 994,
+      "overall": 71,
+      "economy": 94,
+      "wellbeing": 65,
+      "society": 34,
+      "infrastructure": 85,
+      "growth": 84,
+      "population": 85,
+      "buildings": 65,
+      "treasury": 467360,
+      "employment": 100
+    },
+    {
+      "day": 995,
+      "overall": 68,
+      "economy": 94,
+      "wellbeing": 62,
+      "society": 30,
+      "infrastructure": 86,
+      "growth": 78,
+      "population": 84,
+      "buildings": 65,
+      "treasury": 468498,
+      "employment": 100
+    },
+    {
+      "day": 996,
+      "overall": 70,
+      "economy": 94,
+      "wellbeing": 70,
+      "society": 27,
+      "infrastructure": 86,
+      "growth": 78,
+      "population": 84,
+      "buildings": 65,
+      "treasury": 469636,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 992,
-    "overall": 69,
+    "day": 996,
+    "overall": 70,
     "economy": 94,
-    "wellbeing": 64,
-    "society": 29,
-    "infrastructure": 85,
+    "wellbeing": 70,
+    "society": 27,
+    "infrastructure": 86,
     "growth": 78,
-    "population": 85,
+    "population": 84,
     "buildings": 65,
-    "treasury": 466205,
+    "treasury": 469636,
     "employment": 100
   },
   "buildable": {
@@ -9592,7 +9609,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 160,
