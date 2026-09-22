@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "392a15bfaefd",
+  "version": "3d839b3dbd24",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -43,11 +43,11 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====.gggggggggggg...........====............====...gggggggg.................====............",
     ".##########.,,,,.#####################..,,,,.....###.......#######..,,,,.############...........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gggggggggg.,:,,.gg########gggg#########ggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gggggggggg.,:,,.gg#ffffff#gggg#fffffff#ggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
-    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gggggggggg.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.xxxxxxxxx.,:,,.gggggggggg.,:,,.gg########gggg#########ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.xxxxxxxxx.,:,,.gggggggggg.,:,,.gg#ffffff#gggg#fffffff#ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.xxxxxxxxx.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.xxxxxxxxx.,,,,.gggggggggg.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.xxxxxxxxx.,:,,.gggggggggg.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
     "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gggggggggg.,:,,.gg###D####gggggggggggggggg.,:,,.ggggggggggg",
     ".########...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffffff#...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
@@ -2388,48 +2388,12 @@
       "style": "shopfront",
       "floors": 1,
       "open": false,
-      "condition": "damaged",
+      "condition": "ruin",
       "anchor": [
         90,
-        35
+        34
       ],
-      "furniture": [
-        {
-          "type": "counter",
-          "x": 91,
-          "y": 34
-        },
-        {
-          "type": "till",
-          "x": 92,
-          "y": 34
-        },
-        {
-          "type": "shelf",
-          "x": 89,
-          "y": 34
-        },
-        {
-          "type": "shelf",
-          "x": 91,
-          "y": 33
-        },
-        {
-          "type": "shelf",
-          "x": 88,
-          "y": 34
-        },
-        {
-          "type": "crate",
-          "x": 93,
-          "y": 34
-        },
-        {
-          "type": "plant",
-          "x": 90,
-          "y": 33
-        }
-      ]
+      "furniture": []
     },
     "new_home_270": {
       "id": "new_home_270",
