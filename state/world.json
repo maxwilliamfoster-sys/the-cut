@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 4041,
-  "last_beat_at": "2026-09-22T11:57:12Z",
+  "beat": 4060,
+  "last_beat_at": "2026-09-22T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "first snow",
   "heat": {
-    "riverside": 28,
-    "delmar": 11,
-    "terraces": 5,
+    "riverside": 34,
+    "delmar": 8,
+    "terraces": 9,
     "civic": 5
   },
   "turf": {
@@ -5715,9 +5715,147 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine434",
+      "from": "cassius3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1015,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine435",
+      "from": "rufus2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — Pocketknife Fidget Ban",
+      "settled": false,
+      "due_day": 1015,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 4060
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 4059
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 4057
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 4056
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "jonah4"
+      ],
+      "text": "Jonah Bello gets word that what they owe is wanted sooner than agreed.",
+      "beat": 4055
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 4054
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 4053
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 4052
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 4049
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -5855,117 +5993,6 @@
       "targets": [],
       "text": "Two extra cruisers have been sitting on Delmar since this morning.",
       "beat": 4016
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "gil2",
-        "cassius3"
-      ],
-      "text": "Gil Osei and Cassius Bello are seen arguing in the street loud enough that people stop.",
-      "beat": 4015
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 4013
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 4012
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 4011
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 4007
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Something pays out for Sgt. Hal Brennan. More than expected, which is its own problem.",
-      "beat": 3996
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 3995
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 3994
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan gets word that what they owe is wanted sooner than agreed.",
-      "beat": 3993
     }
   ],
   "player_queue": [
@@ -5988,12 +6015,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1009,
+  "last_gazette_day": 1014,
   "llm_budget": {
     "day": "2026-09-22",
     "spent": {
       "fast": 163407,
-      "deep": 35492
+      "deep": 80069
     }
   },
   "silent_runs": 0,
@@ -6562,7 +6589,7 @@
     },
     {
       "id": "new_business_236",
-      "name": "Calloway Market",
+      "name": "Marrow Market",
       "district": "delmar",
       "x": 86,
       "y": 32,
@@ -6574,8 +6601,9 @@
       "open": false,
       "wings": [],
       "floors": 1,
-      "condition": "rebuilding",
-      "since_day": 1007
+      "condition": "standing",
+      "since_day": 1012,
+      "generation": 1
     },
     {
       "id": "new_home_270",
@@ -7230,6 +7258,23 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 986
+    },
+    {
+      "id": "new_business_1013",
+      "name": "Vasquez Market",
+      "district": "flats",
+      "x": 129,
+      "y": 110,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 1013
     }
   ],
   "laws": [
@@ -7350,7 +7395,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 200
+      "convictions": 201
     },
     {
       "id": "law07",
@@ -7408,7 +7453,7 @@
       "because": "He fidgets with a pocketknife",
       "day_enacted": 949,
       "status": "enacted",
-      "convictions": 3
+      "convictions": 4
     },
     {
       "id": "law10",
@@ -7431,45 +7476,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "leans on barber chair, listening",
-      "day": 974,
-      "trial_day": 976,
-      "status": "convicted",
-      "witnesses": 22,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "tiny",
-      "name": "Tiny Reyes",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "She scrolls her phone, ignoring the snowflakes",
-      "day": 975,
-      "trial_day": 977,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "cassius5",
-      "name": "Cassius Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "He watches the snow, searching for missing keys",
-      "day": 975,
-      "trial_day": 977,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "elias",
@@ -8194,8 +8200,9 @@
       "evidence": "crunches cereal loudly while standing",
       "day": 1009,
       "trial_day": 1011,
-      "status": "awaiting_trial",
-      "witnesses": 17
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -8206,13 +8213,62 @@
       "evidence": "fidgets with TV remote",
       "day": 1009,
       "trial_day": 1011,
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "milo3",
+      "name": "Milo Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "spills a bit of coffee, wipes it",
+      "day": 1014,
+      "trial_day": 1016,
       "status": "awaiting_trial",
-      "witnesses": 8
+      "witnesses": 20
+    },
+    {
+      "id": "c061",
+      "who": "kwame3",
+      "name": "Kwame Bright",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "arranges hair clippers on the shelf",
+      "day": 1014,
+      "trial_day": 1016,
+      "status": "awaiting_trial",
+      "witnesses": 2
+    },
+    {
+      "id": "c061",
+      "who": "dev",
+      "name": "Dev Lindqvist",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "turns over, hair clutched in dream",
+      "day": 1014,
+      "trial_day": 1016,
+      "status": "awaiting_trial",
+      "witnesses": 2
+    },
+    {
+      "id": "c061",
+      "who": "june",
+      "name": "June Kowal",
+      "law": "law08",
+      "law_title": "Bench Snow Gaze Regulation",
+      "evidence": "leans against door, watches snow fall",
+      "day": 1015,
+      "trial_day": 1017,
+      "status": "awaiting_trial",
+      "witnesses": 2
     }
   ],
   "law_pressure": 0,
   "last_law_day": 1001,
-  "last_expansion_day": 986,
+  "last_expansion_day": 1013,
   "feuds": [
     {
       "a": "booker",
@@ -8240,21 +8296,21 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "cass",
       "b": "dot",
       "since_day": 474,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 48
+      "heat": 62
     },
     {
       "a": "hector",
@@ -8468,10 +8524,55 @@
     "id": "dev2",
     "marked": 997
   },
-  "incidents": [],
-  "treasury": 478728,
+  "incidents": [
+    {
+      "id": "inc4060-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "june"
+      ],
+      "text": "June Kowal is taken to the 9th over Bench Snow Gaze Regulation.",
+      "started": 4060,
+      "until": 4061
+    }
+  ],
+  "treasury": 482451,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1014,
+      "wages": 2874,
+      "takings": 4040,
+      "tax": 2252,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1262,
+      "treasury": 482451
+    },
+    {
+      "day": 1013,
+      "wages": 2874,
+      "takings": 4040,
+      "tax": 2252,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1262,
+      "treasury": 481189
+    },
+    {
+      "day": 1012,
+      "wages": 2874,
+      "takings": 3850,
+      "tax": 2189,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1199,
+      "treasury": 479927
+    },
     {
       "day": 1009,
       "wages": 2874,
@@ -8741,36 +8842,6 @@
       "civic": 900,
       "net": 1250,
       "treasury": 447838
-    },
-    {
-      "day": 967,
-      "wages": 2764,
-      "takings": 3845,
-      "tax": 2150,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1250,
-      "treasury": 446588
-    },
-    {
-      "day": 966,
-      "wages": 2764,
-      "takings": 3845,
-      "tax": 2150,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1250,
-      "treasury": 445338
-    },
-    {
-      "day": 965,
-      "wages": 2764,
-      "takings": 3845,
-      "tax": 2150,
-      "welfare": 0,
-      "civic": 900,
-      "net": 1250,
-      "treasury": 444088
     }
   ],
   "births": [
@@ -9365,45 +9436,6 @@
   ],
   "score_history": [
     {
-      "day": 942,
-      "overall": 70,
-      "economy": 95,
-      "wellbeing": 70,
-      "society": 33,
-      "infrastructure": 82,
-      "growth": 72,
-      "population": 81,
-      "buildings": 62,
-      "treasury": 422722,
-      "employment": 100
-    },
-    {
-      "day": 943,
-      "overall": 71,
-      "economy": 95,
-      "wellbeing": 68,
-      "society": 38,
-      "infrastructure": 82,
-      "growth": 72,
-      "population": 81,
-      "buildings": 62,
-      "treasury": 423892,
-      "employment": 100
-    },
-    {
-      "day": 944,
-      "overall": 71,
-      "economy": 95,
-      "wellbeing": 69,
-      "society": 38,
-      "infrastructure": 82,
-      "growth": 72,
-      "population": 81,
-      "buildings": 62,
-      "treasury": 425062,
-      "employment": 100
-    },
-    {
       "day": 945,
       "overall": 74,
       "economy": 95,
@@ -9987,19 +10019,58 @@
       "buildings": 65,
       "treasury": 478728,
       "employment": 100
+    },
+    {
+      "day": 1012,
+      "overall": 73,
+      "economy": 94,
+      "wellbeing": 72,
+      "society": 39,
+      "infrastructure": 88,
+      "growth": 72,
+      "population": 85,
+      "buildings": 66,
+      "treasury": 479927,
+      "employment": 100
+    },
+    {
+      "day": 1013,
+      "overall": 73,
+      "economy": 95,
+      "wellbeing": 70,
+      "society": 39,
+      "infrastructure": 88,
+      "growth": 77,
+      "population": 85,
+      "buildings": 67,
+      "treasury": 481189,
+      "employment": 100
+    },
+    {
+      "day": 1014,
+      "overall": 67,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 25,
+      "infrastructure": 88,
+      "growth": 65,
+      "population": 85,
+      "buildings": 67,
+      "treasury": 482451,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1009,
-    "overall": 63,
-    "economy": 94,
-    "wellbeing": 65,
-    "society": 10,
-    "infrastructure": 85,
-    "growth": 67,
+    "day": 1014,
+    "overall": 67,
+    "economy": 95,
+    "wellbeing": 64,
+    "society": 25,
+    "infrastructure": 88,
+    "growth": 65,
     "population": 85,
-    "buildings": 65,
-    "treasury": 478728,
+    "buildings": 67,
+    "treasury": 482451,
     "employment": 100
   },
   "buildable": {
