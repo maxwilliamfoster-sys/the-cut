@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 4234,
-  "last_beat_at": "2026-09-24T12:12:12Z",
+  "beat": 4255,
+  "last_beat_at": "2026-09-24T17:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "clear",
   "heat": {
-    "riverside": 5,
-    "delmar": 15,
+    "riverside": 47,
+    "delmar": 18,
     "terraces": 5,
     "civic": 5
   },
@@ -6911,9 +6911,153 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine526",
+      "from": "rufus",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1064,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine527",
+      "from": "cassius3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1064,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine528",
+      "from": "tomas",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1064,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine529",
+      "from": "iris",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1064,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine530",
+      "from": "cass",
+      "to": "the block",
+      "kind": "money",
+      "amount": 15,
+      "note": "fine — Counter Glass Prohibition",
+      "settled": false,
+      "due_day": 1066,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 4255
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 4253
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 4251
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kwame6",
+        "tomas2"
+      ],
+      "text": "Somebody tells Kwame Nakamura that Tomas Amadi has been seen talking to police.",
+      "beat": 4250
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 4247
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 4246
+    },
     {
       "id": "money_found",
       "heat": {},
@@ -7099,84 +7243,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 4204
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 4202
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "kwame6",
-        "milo"
-      ],
-      "text": "Kwame Nakamura and Milo Adeyemi are seen arguing in the street loud enough that people stop.",
-      "beat": 4201
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 4200
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 4190
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 4189
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "cassius2",
-        "lena2"
-      ],
-      "text": "Somebody tells Cassius Adeyemi that Lena Doyle has been seen talking to police.",
-      "beat": 4188
     }
   ],
   "player_queue": [
@@ -7199,12 +7265,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1057,
+  "last_gazette_day": 1063,
   "llm_budget": {
     "day": "2026-09-24",
     "spent": {
       "fast": 164165,
-      "deep": 33751
+      "deep": 76541
     }
   },
   "silent_runs": 0,
@@ -8535,7 +8601,7 @@
       "because": "Unattended glasses left on the counter in the cold.",
       "day_enacted": 269,
       "status": "enacted",
-      "convictions": 3
+      "convictions": 4
     },
     {
       "id": "law03",
@@ -8614,7 +8680,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 220
+      "convictions": 221
     },
     {
       "id": "law07",
@@ -8691,7 +8757,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 29
+      "convictions": 32
     },
     {
       "id": "law11",
@@ -8715,84 +8781,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "rey",
-      "name": "Rey Vasquez",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "sits, staring at a faded photo",
-      "day": 1028,
-      "trial_day": 1030,
-      "status": "convicted",
-      "witnesses": 5,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "rey",
-      "name": "Rey Vasquez",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "leans back, eyes the coffee stain",
-      "day": 1031,
-      "trial_day": 1033,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "snips a lock of hair, watches the clock",
-      "day": 1031,
-      "trial_day": 1033,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c063",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "checks ledger, flips a page",
-      "day": 1031,
-      "trial_day": 1033,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c064",
-      "who": "jonah4",
-      "name": "Jonah Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "stares at the snow, fingers a toy",
-      "day": 1031,
-      "trial_day": 1033,
-      "status": "convicted",
-      "witnesses": 20,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "milo3",
-      "name": "Milo Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirs coffee quietly",
-      "day": 1032,
-      "trial_day": 1034,
-      "status": "convicted",
-      "witnesses": 19,
-      "verdict": "guilty"
-    },
     {
       "id": "c062",
       "who": "etta3",
@@ -9452,8 +9440,9 @@
       "evidence": "stirs coffee, glances at rain",
       "day": 1057,
       "trial_day": 1059,
-      "status": "awaiting_trial",
-      "witnesses": 17
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
     },
     {
       "id": "c062",
@@ -9464,8 +9453,9 @@
       "evidence": "pours coffee, watches kids play",
       "day": 1057,
       "trial_day": 1059,
-      "status": "awaiting_trial",
-      "witnesses": 17
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -9476,8 +9466,9 @@
       "evidence": "counts float, glances at ledger",
       "day": 1057,
       "trial_day": 1059,
-      "status": "awaiting_trial",
-      "witnesses": 1
+      "status": "convicted",
+      "witnesses": 1,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -9488,8 +9479,82 @@
       "evidence": "stirs coffee, watches steam rise",
       "day": 1058,
       "trial_day": 1060,
+      "status": "convicted",
+      "witnesses": 10,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "cass",
+      "name": "Cass Deveaux",
+      "law": "law02",
+      "law_title": "Counter Glass Prohibition",
+      "evidence": "stares at the empty glass, polishing the bar top",
+      "day": 1061,
+      "trial_day": 1063,
+      "status": "convicted",
+      "witnesses": 1,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "jonah4",
+      "name": "Jonah Bello",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "talks on phone, fidgets",
+      "day": 1062,
+      "trial_day": 1064,
       "status": "awaiting_trial",
-      "witnesses": 10
+      "witnesses": 20
+    },
+    {
+      "id": "c061",
+      "who": "cassius5",
+      "name": "Cassius Bello",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "standing still, waiting for someone to speak",
+      "day": 1062,
+      "trial_day": 1064,
+      "status": "awaiting_trial",
+      "witnesses": 19
+    },
+    {
+      "id": "c061",
+      "who": "rufus",
+      "name": "Rufus Bello",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "fidgets with a worn toy",
+      "day": 1062,
+      "trial_day": 1064,
+      "status": "awaiting_trial",
+      "witnesses": 22
+    },
+    {
+      "id": "c062",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "writes ledger, glances at Hector",
+      "day": 1062,
+      "trial_day": 1064,
+      "status": "awaiting_trial",
+      "witnesses": 5
+    },
+    {
+      "id": "c061",
+      "who": "otis",
+      "name": "Otis Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "spills coffee",
+      "day": 1063,
+      "trial_day": 1065,
+      "status": "awaiting_trial",
+      "witnesses": 17
     }
   ],
   "law_pressure": 1,
@@ -9515,7 +9580,7 @@
       "b": "rey",
       "since_day": 425,
       "cause": "would not let it go",
-      "heat": 4
+      "heat": 0
     },
     {
       "a": "booker",
@@ -9536,7 +9601,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 20
+      "heat": 34
     },
     {
       "a": "hector",
@@ -9578,14 +9643,14 @@
       "b": "tee",
       "since_day": 1020,
       "cause": "would not let it go",
-      "heat": 3
+      "heat": 0
     },
     {
       "a": "cass",
       "b": "tomas",
       "since_day": 1051,
       "cause": "would not let it go",
-      "heat": 45
+      "heat": 39
     }
   ],
   "quota_exhausted_on": {
@@ -9778,9 +9843,39 @@
     "id": "cal3"
   },
   "incidents": [],
-  "treasury": 522282,
+  "treasury": 526362,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1063,
+      "wages": 3026,
+      "takings": 4190,
+      "tax": 2350,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1360,
+      "treasury": 526362
+    },
+    {
+      "day": 1062,
+      "wages": 3026,
+      "takings": 4190,
+      "tax": 2350,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1360,
+      "treasury": 525002
+    },
+    {
+      "day": 1061,
+      "wages": 3026,
+      "takings": 4190,
+      "tax": 2350,
+      "welfare": 0,
+      "civic": 990,
+      "net": 1360,
+      "treasury": 523642
+    },
     {
       "day": 1057,
       "wages": 3026,
@@ -10050,36 +10145,6 @@
       "civic": 990,
       "net": 1277,
       "treasury": 488776
-    },
-    {
-      "day": 1018,
-      "wages": 2874,
-      "takings": 4040,
-      "tax": 2252,
-      "welfare": 0,
-      "civic": 990,
-      "net": 1262,
-      "treasury": 487499
-    },
-    {
-      "day": 1017,
-      "wages": 2874,
-      "takings": 4040,
-      "tax": 2252,
-      "welfare": 0,
-      "civic": 990,
-      "net": 1262,
-      "treasury": 486237
-    },
-    {
-      "day": 1016,
-      "wages": 2874,
-      "takings": 4040,
-      "tax": 2252,
-      "welfare": 0,
-      "civic": 990,
-      "net": 1262,
-      "treasury": 484975
     }
   ],
   "births": [
@@ -10683,45 +10748,6 @@
   ],
   "score_history": [
     {
-      "day": 990,
-      "overall": 71,
-      "economy": 94,
-      "wellbeing": 70,
-      "society": 35,
-      "infrastructure": 85,
-      "growth": 78,
-      "population": 85,
-      "buildings": 65,
-      "treasury": 463895,
-      "employment": 100
-    },
-    {
-      "day": 991,
-      "overall": 67,
-      "economy": 94,
-      "wellbeing": 57,
-      "society": 29,
-      "infrastructure": 85,
-      "growth": 78,
-      "population": 85,
-      "buildings": 65,
-      "treasury": 465050,
-      "employment": 100
-    },
-    {
-      "day": 992,
-      "overall": 69,
-      "economy": 94,
-      "wellbeing": 64,
-      "society": 29,
-      "infrastructure": 85,
-      "growth": 78,
-      "population": 85,
-      "buildings": 65,
-      "treasury": 466205,
-      "employment": 100
-    },
-    {
       "day": 994,
       "overall": 71,
       "economy": 94,
@@ -11305,19 +11331,58 @@
       "buildings": 68,
       "treasury": 522282,
       "employment": 100
+    },
+    {
+      "day": 1061,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 63,
+      "society": 32,
+      "infrastructure": 84,
+      "growth": 73,
+      "population": 88,
+      "buildings": 68,
+      "treasury": 523642,
+      "employment": 100
+    },
+    {
+      "day": 1062,
+      "overall": 66,
+      "economy": 95,
+      "wellbeing": 67,
+      "society": 16,
+      "infrastructure": 84,
+      "growth": 73,
+      "population": 88,
+      "buildings": 68,
+      "treasury": 525002,
+      "employment": 100
+    },
+    {
+      "day": 1063,
+      "overall": 67,
+      "economy": 95,
+      "wellbeing": 71,
+      "society": 15,
+      "infrastructure": 84,
+      "growth": 79,
+      "population": 88,
+      "buildings": 68,
+      "treasury": 526362,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1057,
-    "overall": 65,
+    "day": 1063,
+    "overall": 67,
     "economy": 95,
-    "wellbeing": 70,
-    "society": 9,
+    "wellbeing": 71,
+    "society": 15,
     "infrastructure": 84,
-    "growth": 73,
+    "growth": 79,
     "population": 88,
     "buildings": 68,
-    "treasury": 522282,
+    "treasury": 526362,
     "employment": 100
   },
   "buildable": {
