@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 136,
-  "version": "71a03efc948a",
+  "version": "1f62cd39a565",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -42,12 +42,12 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====.gggggggggggg...........====...ggggggg..====...gggggggg.................====............",
-    ".##########.,,,,.sssssss##############..,,,,.....###.......#######..,,,,.############...........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,:,,.sssssss#ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gg#######g.,:,,.gg########gggg#########ggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,:,,.sssssss#ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gg#fffff#g.,:,,.gg#ffffff#gggg#fffffff#ggg.,:,,.ggggggggggg",
-    ".#ffffffff#.,,,,.sssssss#ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
-    ".#ffffffff#.,,,,.sssssss#ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
-    ".####D#####.,:,,.sssssss###D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gg#fffff#g.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
+    ".##########.,,,,.#####################..,,,,.....###.......#######..,,,,.############...........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.....#f#.......#fffff#..,:,,.#ffffffffff#.#########.,:,,.gg#######g.,:,,.gg########gggg#########ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,:,,.#fffff##ffffff##ffff#..,:,,.####fff####...#fffff#..,:,,.#ffffffffff#.#fffffff#.,:,,.gg#fffff#g.,:,,.gg#ffffff#gggg#fffffff#ggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...#fffff#..,,,,.#ffffffffff#.#fffffff#.,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
+    ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gg#fffff#g.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
     "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gg###D###g.,:,,.gg###D####gggggggggggggggg.,:,,.ggggggggggg",
     ".########...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffffff#...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
@@ -816,7 +816,7 @@
     },
     "barbershop": {
       "id": "barbershop",
-      "name": "Tee's Barbershop",
+      "name": "Okonkwo Social Club",
       "district": "delmar",
       "rect": [
         17,
@@ -833,15 +833,61 @@
         ]
       ],
       "kind": "social",
-      "style": "shopfront",
+      "style": "brick",
       "floors": 2,
       "open": false,
-      "condition": "rebuilding",
+      "condition": "standing",
       "anchor": [
         20,
-        34
+        35
       ],
-      "furniture": []
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 21,
+          "y": 33
+        },
+        {
+          "type": "table",
+          "x": 21,
+          "y": 32
+        },
+        {
+          "type": "table",
+          "x": 22,
+          "y": 33
+        },
+        {
+          "type": "table",
+          "x": 18,
+          "y": 32
+        },
+        {
+          "type": "chair",
+          "x": 22,
+          "y": 35
+        },
+        {
+          "type": "chair",
+          "x": 20,
+          "y": 34
+        },
+        {
+          "type": "chair",
+          "x": 18,
+          "y": 33
+        },
+        {
+          "type": "shelf",
+          "x": 19,
+          "y": 33
+        },
+        {
+          "type": "plant",
+          "x": 20,
+          "y": 33
+        }
+      ]
     },
     "diner": {
       "id": "diner",
