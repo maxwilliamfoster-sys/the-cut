@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 168,
-  "version": "71caf965d9c8",
+  "version": "c450ad252697",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -49,10 +49,10 @@
     ".#ffffffff#.,,,,.#fffff##ffffff##ffff#..,,,,.#fffffffff#...###D###..,,,,.#ffffffffff#.#fffffff#.,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#fffffff#ggg.,,,,.ggggggggggg",
     ".####D#####.,:,,.###D######D######D###..,:,,.#fffffffff#............,:,,.#ffffffffff#.####D####.,:,,.gg#fffff#g.,:,,.gg#ffffff#gggg####D####ggg.,:,,.ggggggggggg",
     "............,:,,........................,:,,.#fffffffff#...########.,:,,.#ffffff#####...........,:,,.gg###D###g.,:,,.gg###D####gggggggggggggggg.,:,,.ggggggggggg",
-    ".########...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffff#...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffffff#...,:,,........................,:,,.#fffffffff#...#ffffff#.,:,,.#fffff#................,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    ".###D####...====........................====.#####D#####...###D####.====.###D###................====............====............................====............",
+    ".xxxxxxxx...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    ".xxxxxxxx...,,,,........................,,,,.#fffffffff#...#ffffff#.,,,,.#fffff#................,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    ".xxxxxxxx...,:,,........................,:,,.#fffffffff#...#ffffff#.,:,,.#fffff#................,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    ".xxxxxxxx...====........................====.#####D#####...###D####.====.###D###................====............====............................====............",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
@@ -803,48 +803,12 @@
       "style": "brick",
       "floors": 1,
       "open": false,
-      "condition": "damaged",
+      "condition": "ruin",
       "anchor": [
-        4,
+        5,
         40
       ],
-      "furniture": [
-        {
-          "type": "counter",
-          "x": 7,
-          "y": 39
-        },
-        {
-          "type": "till",
-          "x": 3,
-          "y": 39
-        },
-        {
-          "type": "shelf",
-          "x": 2,
-          "y": 39
-        },
-        {
-          "type": "shelf",
-          "x": 7,
-          "y": 40
-        },
-        {
-          "type": "shelf",
-          "x": 5,
-          "y": 39
-        },
-        {
-          "type": "crate",
-          "x": 6,
-          "y": 40
-        },
-        {
-          "type": "plant",
-          "x": 6,
-          "y": 39
-        }
-      ]
+      "furniture": []
     },
     "barbershop": {
       "id": "barbershop",
