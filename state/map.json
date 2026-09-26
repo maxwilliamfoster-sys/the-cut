@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 168,
-  "version": "5d46e96acde9",
+  "version": "5165edecbb6c",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -29,13 +29,13 @@
     ".##########.,,,,...........##########...,,,,.ggggggggggggg.########.,,,,.#############.ggggggg..,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#######..,:,,.gg#######g.,:,,.gg#######ggggggggggggggggg.,:,,.gg########g",
     ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggggggggggggg.,:,,.gg#ffffff#g",
-    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#########g.,,,,.gg#ffffff#g",
-    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.gg#ffffff#g",
-    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.gg###D####g",
-    ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggg#fffffff#g.,:,,.ggggggggggg",
-    ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.ggggggggggg",
-    ".#ffff#.....,,,,.#fffffff#.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    ".#ffff#.....,:,,.####D####.#ffffffff#...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    ".#ffffffff#.,,,,.xxxxxxxxx.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#########g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,,,,.xxxxxxxxx.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.gg#ffffff#g",
+    ".#ffffffff#.,:,,.xxxxxxxxx.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.gg###D####g",
+    ".#fffff####.,:,,.xxxxxxxxx.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggg#fffffff#g.,:,,.ggggggggggg",
+    ".#ffff#.....,,,,.xxxxxxxxx.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.ggggggggggg",
+    ".#ffff#.....,,,,.xxxxxxxxx.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    ".#ffff#.....,:,,.xxxxxxxxx.#ffffffff#...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     ".##D###.....====...........####D#####...====...............###D####.====.##D#.....####..........====............====............................====............",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,",
@@ -311,48 +311,12 @@
       "style": "shopfront",
       "floors": 1,
       "open": false,
-      "condition": "standing",
+      "condition": "ruin",
       "anchor": [
         21,
-        23
+        21
       ],
-      "furniture": [
-        {
-          "type": "counter",
-          "x": 18,
-          "y": 19
-        },
-        {
-          "type": "till",
-          "x": 24,
-          "y": 20
-        },
-        {
-          "type": "shelf",
-          "x": 22,
-          "y": 22
-        },
-        {
-          "type": "shelf",
-          "x": 21,
-          "y": 22
-        },
-        {
-          "type": "shelf",
-          "x": 24,
-          "y": 21
-        },
-        {
-          "type": "crate",
-          "x": 23,
-          "y": 20
-        },
-        {
-          "type": "plant",
-          "x": 20,
-          "y": 21
-        }
-      ]
+      "furniture": []
     },
     "harborbar": {
       "id": "harborbar",
