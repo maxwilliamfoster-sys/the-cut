@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 4614,
-  "last_beat_at": "2026-09-28T11:12:12Z",
+  "beat": 4643,
+  "last_beat_at": "2026-09-28T18:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 25,
-    "delmar": 5,
-    "terraces": 9,
+    "riverside": 5,
+    "delmar": 14,
+    "terraces": 11,
     "civic": 5
   },
   "turf": {
@@ -9433,9 +9433,218 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine720",
+      "from": "milo",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine721",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine722",
+      "from": "marta",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine723",
+      "from": "nyla",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine724",
+      "from": "jonah4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine725",
+      "from": "tee",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1161,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine726",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1163,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine727",
+      "from": "clemmie",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — Pocketknife Fidget Ban",
+      "settled": false,
+      "due_day": 1163,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "etta2",
+        "simone"
+      ],
+      "text": "Etta Bello and Simone Adeyemi are seen arguing in the street loud enough that people stop.",
+      "beat": 4642
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 4641
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "femi",
+        "errol3"
+      ],
+      "text": "Errol Brannon does Femi Adeyemi a favour that costs them something real.",
+      "beat": 4640
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "isaac",
+        "rey"
+      ],
+      "text": "Somebody tells Isaac Adeyemi that Rey Vasquez has been seen talking to police.",
+      "beat": 4639
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 4636
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 4635
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 4634
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "dot"
+      ],
+      "text": "Dot Feeney gets word that what they owe is wanted sooner than agreed.",
+      "beat": 4632
+    },
     {
       "id": "fight",
       "heat": {},
@@ -9589,111 +9798,6 @@
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
       "beat": 4585
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 4584
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 4582
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "farrah"
-      ],
-      "text": "Something pays out for Farrah Osei. More than expected, which is its own problem.",
-      "beat": 4581
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "farrah4"
-      ],
-      "text": "Farrah Lindqvist gets word that what they owe is wanted sooner than agreed.",
-      "beat": 4580
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "dot"
-      ],
-      "text": "Dot Feeney ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 4579
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "femi"
-      ],
-      "text": "Something pays out for Femi Adeyemi. More than expected, which is its own problem.",
-      "beat": 4577
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nadia"
-      ],
-      "text": "Nadia Vasquez gets word that what they owe is wanted sooner than agreed.",
-      "beat": 4576
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 4568
     }
   ],
   "player_queue": [
@@ -9716,12 +9820,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1152,
+  "last_gazette_day": 1160,
   "llm_budget": {
     "day": "2026-09-28",
     "spent": {
-      "fast": 143393,
-      "deep": 5134
+      "fast": 163432,
+      "deep": 35143
     }
   },
   "silent_runs": 0,
@@ -11178,7 +11282,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 99
+      "convictions": 102
     },
     {
       "id": "law05",
@@ -11218,7 +11322,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 267
+      "convictions": 269
     },
     {
       "id": "law07",
@@ -11276,7 +11380,7 @@
       "because": "He fidgets with a pocketknife",
       "day_enacted": 949,
       "status": "enacted",
-      "convictions": 19
+      "convictions": 20
     },
     {
       "id": "law10",
@@ -11295,7 +11399,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 82
+      "convictions": 84
     },
     {
       "id": "law11",
@@ -11356,149 +11460,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "checks a ledger, eyes flicking",
-      "day": 1128,
-      "trial_day": 1130,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "farrah3",
-      "name": "Farrah Mbeki",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "watching the door, flipping a ledger",
-      "day": 1129,
-      "trial_day": 1131,
-      "status": "convicted",
-      "witnesses": 6,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "cassius5",
-      "name": "Cassius Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "eating breakfast standing up",
-      "day": 1129,
-      "trial_day": 1131,
-      "status": "convicted",
-      "witnesses": 19,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "june",
-      "name": "June Kowal",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "standing behind till",
-      "day": 1129,
-      "trial_day": 1131,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "gil3",
-      "name": "Gil Serrano",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "fiddles a hairpin, eyes on Gil",
-      "day": 1129,
-      "trial_day": 1131,
-      "status": "convicted",
-      "witnesses": 6,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "dev",
-      "name": "Dev Lindqvist",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "taps hair in silence",
-      "day": 1129,
-      "trial_day": 1131,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "theo3",
-      "name": "Theo Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "brew coffee, watch kids run",
-      "day": 1130,
-      "trial_day": 1132,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "iris2",
-      "name": "Iris Lindqvist",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "eats, staring at table",
-      "day": 1130,
-      "trial_day": 1132,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "ruiz",
-      "name": "Det. Yolanda Ruiz",
-      "law": "law07",
-      "law_title": "Block Bedtime Ban",
-      "evidence": "sleeping in Terrace Block A",
-      "day": 1130,
-      "trial_day": 1132,
-      "status": "convicted",
-      "witnesses": 10,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law07",
-      "law_title": "Block Bedtime Ban",
-      "evidence": "sleeping in Terrace Block B",
-      "day": 1130,
-      "trial_day": 1132,
-      "status": "convicted",
-      "witnesses": 21,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c063",
-      "who": "simone",
-      "name": "Simone Adeyemi",
-      "law": "law07",
-      "law_title": "Block Bedtime Ban",
-      "evidence": "sleeping in Terrace Block A",
-      "day": 1130,
-      "trial_day": 1132,
-      "status": "convicted",
-      "witnesses": 10,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "maren3",
@@ -12080,8 +12041,9 @@
       "evidence": "brews coffee, glances at Etta, stays alert",
       "day": 1152,
       "trial_day": 1154,
-      "status": "awaiting_trial",
-      "witnesses": 6
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -12092,8 +12054,9 @@
       "evidence": "sits, checking ledger",
       "day": 1152,
       "trial_day": 1154,
-      "status": "awaiting_trial",
-      "witnesses": 3
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
     },
     {
       "id": "c062",
@@ -12104,8 +12067,9 @@
       "evidence": "stays warm, talks",
       "day": 1152,
       "trial_day": 1154,
-      "status": "awaiting_trial",
-      "witnesses": 6
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -12116,8 +12080,9 @@
       "evidence": "stays asleep, dreams of the street",
       "day": 1152,
       "trial_day": 1154,
-      "status": "awaiting_trial",
-      "witnesses": 19
+      "status": "convicted",
+      "witnesses": 19,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -12128,8 +12093,9 @@
       "evidence": "making coffee",
       "day": 1153,
       "trial_day": 1155,
-      "status": "awaiting_trial",
-      "witnesses": 14
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -12140,8 +12106,131 @@
       "evidence": "serves coffee, nods to Elias",
       "day": 1153,
       "trial_day": 1155,
+      "status": "convicted",
+      "witnesses": 21,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "sits, scrolling ledger",
+      "day": 1158,
+      "trial_day": 1160,
+      "status": "convicted",
+      "witnesses": 9,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c062",
+      "who": "clemmie",
+      "name": "Clemmie Bello",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "listens to news, fidgets",
+      "day": 1158,
+      "trial_day": 1160,
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "chidi",
+      "name": "Chidi Okonkwo",
+      "law": "law11",
+      "law_title": "Public Inquiry About Lyle Ban",
+      "evidence": "writing note asking for trust",
+      "day": 1159,
+      "trial_day": 1161,
       "status": "awaiting_trial",
-      "witnesses": 21
+      "witnesses": 3
+    },
+    {
+      "id": "c062",
+      "who": "theo",
+      "name": "Theo Bello",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "staying in bed, listening to rain",
+      "day": 1159,
+      "trial_day": 1161,
+      "status": "awaiting_trial",
+      "witnesses": 18
+    },
+    {
+      "id": "c063",
+      "who": "etta3",
+      "name": "Etta Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "picking up coffee at breakfast stand",
+      "day": 1159,
+      "trial_day": 1161,
+      "status": "awaiting_trial",
+      "witnesses": 18
+    },
+    {
+      "id": "c061",
+      "who": "maren3",
+      "name": "Maren Adeyemi",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "stares at her hands, fidgets",
+      "day": 1159,
+      "trial_day": 1161,
+      "status": "awaiting_trial",
+      "witnesses": 10
+    },
+    {
+      "id": "c061",
+      "who": "errol4",
+      "name": "Errol Lindqvist",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "checks ledger twice",
+      "day": 1160,
+      "trial_day": 1162,
+      "status": "awaiting_trial",
+      "witnesses": 7
+    },
+    {
+      "id": "c062",
+      "who": "etta2",
+      "name": "Etta Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "pours coffee carefully",
+      "day": 1160,
+      "trial_day": 1162,
+      "status": "awaiting_trial",
+      "witnesses": 16
+    },
+    {
+      "id": "c061",
+      "who": "tee",
+      "name": "Tariq 'Tee' Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "stirs coffee slowly",
+      "day": 1160,
+      "trial_day": 1162,
+      "status": "awaiting_trial",
+      "witnesses": 20
+    },
+    {
+      "id": "c062",
+      "who": "elias",
+      "name": "Elias Reyes",
+      "law": "law09",
+      "law_title": "Pocketknife Fidget Ban",
+      "evidence": "fidgets with a pen",
+      "day": 1160,
+      "trial_day": 1162,
+      "status": "awaiting_trial",
+      "witnesses": 20
     }
   ],
   "law_pressure": 0,
@@ -12167,14 +12256,14 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 34
+      "heat": 28
     },
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 66
+      "heat": 98
     },
     {
       "a": "elias",
@@ -12409,25 +12498,40 @@
     "id": "nia",
     "marked": 1137
   },
-  "incidents": [
-    {
-      "id": "inc4614-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "tee"
-      ],
-      "text": "Tariq 'Tee' Bello is taken to the 9th over Coffee on Bench Ban.",
-      "started": 4614,
-      "until": 4615
-    }
-  ],
-  "treasury": 615744,
+  "incidents": [],
+  "treasury": 619747,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1160,
+      "wages": 3149,
+      "takings": 4560,
+      "tax": 2513,
+      "welfare": 0,
+      "civic": 1170,
+      "net": 1343,
+      "treasury": 619747
+    },
+    {
+      "day": 1159,
+      "wages": 3109,
+      "takings": 4560,
+      "tax": 2500,
+      "welfare": 0,
+      "civic": 1170,
+      "net": 1330,
+      "treasury": 618404
+    },
+    {
+      "day": 1158,
+      "wages": 3109,
+      "takings": 4560,
+      "tax": 2500,
+      "welfare": 0,
+      "civic": 1170,
+      "net": 1330,
+      "treasury": 617074
+    },
     {
       "day": 1152,
       "wages": 3109,
@@ -12697,36 +12801,6 @@
       "civic": 1080,
       "net": 1428,
       "treasury": 578297
-    },
-    {
-      "day": 1113,
-      "wages": 3122,
-      "takings": 4575,
-      "tax": 2508,
-      "welfare": 0,
-      "civic": 1080,
-      "net": 1428,
-      "treasury": 576869
-    },
-    {
-      "day": 1112,
-      "wages": 3122,
-      "takings": 4575,
-      "tax": 2508,
-      "welfare": 0,
-      "civic": 1080,
-      "net": 1428,
-      "treasury": 575441
-    },
-    {
-      "day": 1111,
-      "wages": 3122,
-      "takings": 4575,
-      "tax": 2508,
-      "welfare": 0,
-      "civic": 1080,
-      "net": 1428,
-      "treasury": 574013
     }
   ],
   "births": [
@@ -13330,45 +13404,6 @@
   ],
   "score_history": [
     {
-      "day": 1087,
-      "overall": 65,
-      "economy": 95,
-      "wellbeing": 65,
-      "society": 19,
-      "infrastructure": 84,
-      "growth": 60,
-      "population": 88,
-      "buildings": 69,
-      "treasury": 550294,
-      "employment": 100
-    },
-    {
-      "day": 1088,
-      "overall": 64,
-      "economy": 95,
-      "wellbeing": 69,
-      "society": 11,
-      "infrastructure": 84,
-      "growth": 65,
-      "population": 88,
-      "buildings": 70,
-      "treasury": 551615,
-      "employment": 100
-    },
-    {
-      "day": 1089,
-      "overall": 62,
-      "economy": 95,
-      "wellbeing": 67,
-      "society": 3,
-      "infrastructure": 84,
-      "growth": 65,
-      "population": 88,
-      "buildings": 70,
-      "treasury": 552936,
-      "employment": 100
-    },
-    {
       "day": 1090,
       "overall": 65,
       "economy": 95,
@@ -13952,19 +13987,58 @@
       "buildings": 73,
       "treasury": 615744,
       "employment": 100
+    },
+    {
+      "day": 1158,
+      "overall": 70,
+      "economy": 96,
+      "wellbeing": 69,
+      "society": 37,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 88,
+      "buildings": 73,
+      "treasury": 617074,
+      "employment": 100
+    },
+    {
+      "day": 1159,
+      "overall": 66,
+      "economy": 96,
+      "wellbeing": 69,
+      "society": 21,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 88,
+      "buildings": 73,
+      "treasury": 618404,
+      "employment": 100
+    },
+    {
+      "day": 1160,
+      "overall": 64,
+      "economy": 96,
+      "wellbeing": 67,
+      "society": 13,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 88,
+      "buildings": 73,
+      "treasury": 619747,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1152,
-    "overall": 62,
+    "day": 1160,
+    "overall": 64,
     "economy": 96,
-    "wellbeing": 65,
-    "society": 8,
+    "wellbeing": 67,
+    "society": 13,
     "infrastructure": 84,
-    "growth": 55,
+    "growth": 60,
     "population": 88,
     "buildings": 73,
-    "treasury": 615744,
+    "treasury": 619747,
     "employment": 100
   },
   "buildable": {
