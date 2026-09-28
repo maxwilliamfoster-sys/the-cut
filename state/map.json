@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 168,
-  "version": "112fed3f7d22",
+  "version": "cddace23e5f0",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -165,12 +165,12 @@
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg##########gggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg#ffffffff#gggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggg#ffffffff#gggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggg#ffffffff#gggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg#ffffffff#gggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg####D#####gggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
@@ -376,7 +376,7 @@
       "style": "brick",
       "floors": 2,
       "open": false,
-      "condition": "standing",
+      "condition": "damaged",
       "anchor": [
         31,
         19
@@ -5550,6 +5550,76 @@
           "type": "plant",
           "x": 155,
           "y": 36
+        }
+      ]
+    },
+    "new_civic_1151": {
+      "id": "new_civic_1151",
+      "name": "Marrow Library",
+      "district": "flats",
+      "rect": [
+        77,
+        154,
+        10,
+        6
+      ],
+      "rects": [
+        [
+          77,
+          154,
+          10,
+          6
+        ]
+      ],
+      "kind": "civic",
+      "style": "concrete",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        81,
+        158
+      ],
+      "furniture": [
+        {
+          "type": "desk",
+          "x": 84,
+          "y": 156
+        },
+        {
+          "type": "desk",
+          "x": 85,
+          "y": 157
+        },
+        {
+          "type": "desk",
+          "x": 83,
+          "y": 155
+        },
+        {
+          "type": "chair",
+          "x": 82,
+          "y": 155
+        },
+        {
+          "type": "chair",
+          "x": 79,
+          "y": 158
+        },
+        {
+          "type": "shelf",
+          "x": 84,
+          "y": 158
+        },
+        {
+          "type": "shelf",
+          "x": 81,
+          "y": 157
+        },
+        {
+          "type": "plant",
+          "x": 85,
+          "y": 156
         }
       ]
     }
