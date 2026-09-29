@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 168,
-  "version": "d95957eb4ac5",
+  "version": "8f12d673e5a9",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -119,12 +119,12 @@
     "ggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#fffffff#ggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggg#ffffffff#gg.,,,,.gggg#fffffff#ggggggggg.,,,,.ggggggggg###D####ggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggg####D#####gg.,,,,.gggg#fffffff#ggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gg###D####gggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggg####D####ggggggggg.,:,,.ggggggggssssssssgggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.ggggggggssssssssgggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggg#########ggggg.,,,,.ggggggggssssssssgggggg.,,,,.gggggggggg.,,,,.gg########gg#########ggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggg#fffffff#ggggg.,,,,.ggggggggssssssssgggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gg#fffffff#ggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.gg##########gggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.ggggggggssssssssgggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gg#fffffff#ggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gg#ffffffff#gggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.ggggggggssssssssgggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gg#fffffff#ggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggg####D####ggggggggg.,:,,.gggggggg########gggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggg#ffffff#gggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggg#########ggggg.,,,,.gggggggg#ffffff#gggggg.,,,,.gggggggggg.,,,,.gg########gg#########ggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggg#fffffff#ggggg.,,,,.gggggggg#ffffff#gggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gg#fffffff#ggggg.,,,,.ggggggggggg",
+    "ggggggggggg.,:,,.gg##########gggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.gggggggg#ffffff#gggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gg#fffffff#ggggg.,:,,.ggggggggggg",
+    "ggggggggggg.,:,,.gg#ffffffff#gggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.gggggggg###D####gggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gg#fffffff#ggggg.,:,,.ggggggggggg",
     "ggggggggggg.,,,,.gg#ffffffff#gggggggggg.,,,,.gggggggg####D####ggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gg###D####gg####D####ggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gg#ffffffff#gggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gg#ffffffff#gggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
@@ -4425,7 +4425,7 @@
     },
     "new_home_819": {
       "id": "new_home_819",
-      "name": "Delmar Tenement",
+      "name": "New Halloway",
       "district": "flats",
       "rect": [
         81,
@@ -4442,15 +4442,61 @@
         ]
       ],
       "kind": "home",
-      "style": "brownstone",
+      "style": "clapboard",
       "floors": 3,
       "open": false,
-      "condition": "rebuilding",
+      "condition": "standing",
       "anchor": [
-        85,
-        111
+        84,
+        112
       ],
-      "furniture": []
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 82,
+          "y": 111
+        },
+        {
+          "type": "bed",
+          "x": 86,
+          "y": 111
+        },
+        {
+          "type": "sofa",
+          "x": 87,
+          "y": 110
+        },
+        {
+          "type": "tv",
+          "x": 85,
+          "y": 110
+        },
+        {
+          "type": "table",
+          "x": 87,
+          "y": 111
+        },
+        {
+          "type": "sink",
+          "x": 82,
+          "y": 110
+        },
+        {
+          "type": "shelf",
+          "x": 87,
+          "y": 109
+        },
+        {
+          "type": "plant",
+          "x": 86,
+          "y": 112
+        },
+        {
+          "type": "rug",
+          "x": 85,
+          "y": 111
+        }
+      ]
     },
     "new_civic_844": {
       "id": "new_civic_844",
