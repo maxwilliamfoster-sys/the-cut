@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 160,
   "h": 168,
-  "version": "5c5db2693df0",
+  "version": "e0702cc50c18",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -111,12 +111,12 @@
     "g#fffffff#g.,:,,.gg#fffffff#ggggggggggg.,:,,.gggggggg#ffffffff#gggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
     "g#fffffff#g.,,,,.gg#fffffff#ggggggggggg.,,,,.gggggggg#ffffffff#gggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggg#########ggggg.,,,,.ggggggggggg",
     "g#fffffff#g.,,,,.gg#fffffff#ggggggggggg.,,,,.gggggggg#ffffffff#gggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggg#fffffff#ggggg.,,,,.ggggggggggg",
-    "g####D####g.,:,,.gg####D####ggggggggggg.,:,,.gggggggg#ffffffff#gggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggg#fffffff#ggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggg####D#####gggg.,:,,.ggggggggg########ggggg.,:,,.gggggggggg.,:,,.gggggggggggg#fffffff#ggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggg##########gg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.gg########gg####D####ggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,,,,.gggggggggg#ffffffff#gg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#########ggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.ggggggggggg",
-    "ggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#fffffff#ggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.ggggggggggg",
+    "g####D####g.,:,,.gg####D####ggggggggggg.,:,,.gggggggg#ffffffff#gggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggg#fffffff#ggggg.,:,,.gg#######gg",
+    "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggg####D#####gggg.,:,,.ggggggggg########ggggg.,:,,.gggggggggg.,:,,.gggggggggggg#fffffff#ggggg.,:,,.gg#fffff#gg",
+    "ggggggggggg.,,,,.gggggggggg##########gg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.gg########gg####D####ggggg.,,,,.gg#fffff#gg",
+    "ggggggggggg.,,,,.gggggggggg#ffffffff#gg.,,,,.gggggggggggggggggggggg.,,,,.ggggggggg#ffffff#ggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.gg#fffff#gg",
+    "ggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#########ggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.gg#fffff#gg",
+    "ggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#fffffff#ggggggggg.,:,,.ggggggggg#ffffff#ggggg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.gg###D###gg",
     "ggggggggggg.,,,,.gggggggggg#ffffffff#gg.,,,,.gggg#fffffff#ggggggggg.,,,,.ggggggggg###D####ggggg.,,,,.gggggggggg.,,,,.gg#ffffff#gggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,,,,.gggggggggg####D#####gg.,,,,.gggg#fffffff#ggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gg###D####gggggggggggggggg.,,,,.ggggggggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggg####D####ggggggggg.,:,,.gggggggg########gggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.ggggggggggg",
@@ -5765,6 +5765,81 @@
           "type": "rug",
           "x": 60,
           "y": 137
+        }
+      ]
+    },
+    "new_home_1213": {
+      "id": "new_home_1213",
+      "name": "Halloway Cottages",
+      "district": "flats",
+      "rect": [
+        151,
+        100,
+        7,
+        6
+      ],
+      "rects": [
+        [
+          151,
+          100,
+          7,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "clapboard",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        154,
+        104
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 156,
+          "y": 103
+        },
+        {
+          "type": "bed",
+          "x": 153,
+          "y": 101
+        },
+        {
+          "type": "sofa",
+          "x": 152,
+          "y": 101
+        },
+        {
+          "type": "tv",
+          "x": 152,
+          "y": 104
+        },
+        {
+          "type": "table",
+          "x": 153,
+          "y": 103
+        },
+        {
+          "type": "sink",
+          "x": 154,
+          "y": 102
+        },
+        {
+          "type": "shelf",
+          "x": 156,
+          "y": 102
+        },
+        {
+          "type": "plant",
+          "x": 155,
+          "y": 103
+        },
+        {
+          "type": "rug",
+          "x": 154,
+          "y": 101
         }
       ]
     }
