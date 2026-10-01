@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 4934,
-  "last_beat_at": "2026-10-01T19:12:12Z",
+  "beat": 4950,
+  "last_beat_at": "2026-10-01T23:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
-    "riverside": 5,
-    "delmar": 14,
+    "riverside": 19,
+    "delmar": 12,
     "terraces": 5,
     "civic": 5
   },
@@ -11084,9 +11084,199 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine847",
+      "from": "milo2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1237,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine848",
+      "from": "farrah3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1238,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine849",
+      "from": "gil2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1238,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine850",
+      "from": "booker",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Public Inquiry About Lyle Ban",
+      "settled": false,
+      "due_day": 1240,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine851",
+      "from": "ruiz",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1240,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 4950
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 4949
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 4948
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kwame5",
+        "kwame2"
+      ],
+      "text": "Somebody tells Kwame Lindqvist that Kwame Doyle has been seen talking to police.",
+      "beat": 4946
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 4945
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "otis",
+        "dev2"
+      ],
+      "text": "Dev Nakamura does Otis Bello a favour that costs them something real.",
+      "beat": 4944
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 4943
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 4942
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "rufus3"
+      ],
+      "text": "Rufus Bello gets word that what they owe is wanted sooner than agreed.",
+      "beat": 4940
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 4939
+    },
     {
       "id": "shipment_light",
       "heat": {},
@@ -11214,138 +11404,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 4907
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "rufus2"
-      ],
-      "text": "Rufus Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 4905
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 4903
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 4902
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "jonah4",
-        "marta4"
-      ],
-      "text": "Somebody tells Jonah Bello that Marta Petrakis has been seen talking to police.",
-      "beat": 4883
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "hector"
-      ],
-      "text": "Hector Delgado ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 4880
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "cassius",
-        "dev2"
-      ],
-      "text": "Somebody tells Cassius Reyes that Dev Nakamura has been seen talking to police.",
-      "beat": 4877
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "lena"
-      ],
-      "text": "Something pays out for Lena Ferreira. More than expected, which is its own problem.",
-      "beat": 4873
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 4860
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 4858
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 4857
     }
   ],
   "player_queue": [
@@ -11368,12 +11426,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1232,
+  "last_gazette_day": 1236,
   "llm_budget": {
     "day": "2026-10-01",
     "spent": {
       "fast": 163405,
-      "deep": 79938
+      "deep": 116951
     }
   },
   "silent_runs": 0,
@@ -12802,6 +12860,23 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 1213
+    },
+    {
+      "id": "new_home_1235",
+      "name": "Riverside Cottages",
+      "district": "flats",
+      "x": 29,
+      "y": 136,
+      "w": 7,
+      "h": 6,
+      "door": "S",
+      "kind": "home",
+      "style": "clapboard",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 1235
     }
   ],
   "laws": [
@@ -12862,7 +12937,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 102
+      "convictions": 103
     },
     {
       "id": "law04",
@@ -12922,7 +12997,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 299
+      "convictions": 301
     },
     {
       "id": "law07",
@@ -12999,7 +13074,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 120
+      "convictions": 121
     },
     {
       "id": "law11",
@@ -13019,7 +13094,7 @@
       "because": "Multiple residents asking about Lyle's affairs",
       "day_enacted": 1046,
       "status": "enacted",
-      "convictions": 31
+      "convictions": 32
     },
     {
       "id": "law12",
@@ -13078,71 +13153,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "pours a drink, eyes on the ledger",
-      "day": 1195,
-      "trial_day": 1197,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "elias",
-      "name": "Elias Reyes",
-      "law": "law09",
-      "law_title": "Pocketknife Fidget Ban",
-      "evidence": "sitting very still, fidgeting with a pen",
-      "day": 1198,
-      "trial_day": 1200,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "ada",
-      "name": "Ada Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "standing, eating breakfast",
-      "day": 1199,
-      "trial_day": 1201,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "clemmie",
-      "name": "Clemmie Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "making coffee",
-      "day": 1199,
-      "trial_day": 1201,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c063",
-      "who": "jonah3",
-      "name": "Jonah Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "sitting, staring at floor",
-      "day": 1199,
-      "trial_day": 1201,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "milo",
@@ -13841,8 +13851,9 @@
       "evidence": "hands coffee to Milo, smiles faintly",
       "day": 1232,
       "trial_day": 1234,
-      "status": "awaiting_trial",
-      "witnesses": 7
+      "status": "convicted",
+      "witnesses": 7,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -13853,8 +13864,9 @@
       "evidence": "files a new ledger",
       "day": 1233,
       "trial_day": 1235,
-      "status": "awaiting_trial",
-      "witnesses": 8
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -13865,13 +13877,76 @@
       "evidence": "snips a stray hair on his wrist",
       "day": 1233,
       "trial_day": 1235,
+      "status": "convicted",
+      "witnesses": 1,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "booker",
+      "name": "Booker Lyle",
+      "law": "law11",
+      "law_title": "Public Inquiry About Lyle Ban",
+      "evidence": "Booker Lyle takes a side in something that was not their argument.",
+      "day": 1235,
+      "trial_day": 1237,
+      "status": "convicted",
+      "witnesses": 2,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "ruiz",
+      "name": "Det. Yolanda Ruiz",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "glances at the ledger on the table",
+      "day": 1235,
+      "trial_day": 1237,
+      "status": "convicted",
+      "witnesses": 10,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "kwame2",
+      "name": "Kwame Doyle",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "glances at ledger, sighs",
+      "day": 1236,
+      "trial_day": 1238,
       "status": "awaiting_trial",
-      "witnesses": 1
+      "witnesses": 3
+    },
+    {
+      "id": "c061",
+      "who": "jonah4",
+      "name": "Jonah Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "wipes the counter, eyes the coffee pot",
+      "day": 1237,
+      "trial_day": 1239,
+      "status": "awaiting_trial",
+      "witnesses": 19
+    },
+    {
+      "id": "c061",
+      "who": "gil3",
+      "name": "Gil Serrano",
+      "law": "law11",
+      "law_title": "Public Inquiry About Lyle Ban",
+      "evidence": "asks Marta about his brother",
+      "day": 1237,
+      "trial_day": 1239,
+      "status": "awaiting_trial",
+      "witnesses": 7
     }
   ],
   "law_pressure": 0,
   "last_law_day": 1212,
-  "last_expansion_day": 1213,
+  "last_expansion_day": 1235,
   "feuds": [
     {
       "a": "booker",
@@ -13892,14 +13967,14 @@
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 16
     },
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 78
+      "heat": 72
     },
     {
       "a": "elias",
@@ -14150,23 +14225,53 @@
   },
   "incidents": [
     {
-      "id": "inc4934-arrest-0",
+      "id": "inc4950-arrest-0",
       "kind": "arrest",
       "effect": "lights",
       "at": "precinct",
       "x": 5,
       "y": 64,
       "who": [
-        "gil2"
+        "gil3"
       ],
-      "text": "Gil Osei is taken to the 9th over Public Haircut Ban.",
-      "started": 4934,
-      "until": 4935
+      "text": "Gil Serrano is taken to the 9th over Public Inquiry About Lyle Ban.",
+      "started": 4950,
+      "until": 4951
     }
   ],
-  "treasury": 672745,
+  "treasury": 676767,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1236,
+      "wages": 3560,
+      "takings": 4470,
+      "tax": 2615,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1355,
+      "treasury": 676767
+    },
+    {
+      "day": 1235,
+      "wages": 3518,
+      "takings": 4470,
+      "tax": 2602,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1342,
+      "treasury": 675412
+    },
+    {
+      "day": 1234,
+      "wages": 3465,
+      "takings": 4470,
+      "tax": 2585,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1325,
+      "treasury": 674070
+    },
     {
       "day": 1232,
       "wages": 3465,
@@ -14436,36 +14541,6 @@
       "civic": 1260,
       "net": 1192,
       "treasury": 639836
-    },
-    {
-      "day": 1186,
-      "wages": 3049,
-      "takings": 4470,
-      "tax": 2452,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1192,
-      "treasury": 638644
-    },
-    {
-      "day": 1185,
-      "wages": 3049,
-      "takings": 4470,
-      "tax": 2452,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1192,
-      "treasury": 637452
-    },
-    {
-      "day": 1184,
-      "wages": 3049,
-      "takings": 4470,
-      "tax": 2452,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1192,
-      "treasury": 636260
     }
   ],
   "births": [
@@ -15069,45 +15144,6 @@
   ],
   "score_history": [
     {
-      "day": 1150,
-      "overall": 68,
-      "economy": 96,
-      "wellbeing": 59,
-      "society": 40,
-      "infrastructure": 87,
-      "growth": 55,
-      "population": 88,
-      "buildings": 73,
-      "treasury": 613059,
-      "employment": 100
-    },
-    {
-      "day": 1151,
-      "overall": 64,
-      "economy": 96,
-      "wellbeing": 61,
-      "society": 20,
-      "infrastructure": 87,
-      "growth": 60,
-      "population": 88,
-      "buildings": 74,
-      "treasury": 614414,
-      "employment": 100
-    },
-    {
-      "day": 1152,
-      "overall": 62,
-      "economy": 96,
-      "wellbeing": 65,
-      "society": 8,
-      "infrastructure": 84,
-      "growth": 55,
-      "population": 88,
-      "buildings": 73,
-      "treasury": 615744,
-      "employment": 100
-    },
-    {
       "day": 1158,
       "overall": 70,
       "economy": 96,
@@ -15691,19 +15727,58 @@
       "buildings": 75,
       "treasury": 672745,
       "employment": 100
+    },
+    {
+      "day": 1234,
+      "overall": 72,
+      "economy": 95,
+      "wellbeing": 65,
+      "society": 36,
+      "infrastructure": 81,
+      "growth": 91,
+      "population": 94,
+      "buildings": 75,
+      "treasury": 674070,
+      "employment": 100
+    },
+    {
+      "day": 1235,
+      "overall": 72,
+      "economy": 95,
+      "wellbeing": 61,
+      "society": 36,
+      "infrastructure": 82,
+      "growth": 100,
+      "population": 95,
+      "buildings": 76,
+      "treasury": 675412,
+      "employment": 100
+    },
+    {
+      "day": 1236,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 32,
+      "infrastructure": 81,
+      "growth": 100,
+      "population": 96,
+      "buildings": 76,
+      "treasury": 676767,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1232,
-    "overall": 74,
+    "day": 1236,
+    "overall": 71,
     "economy": 95,
-    "wellbeing": 70,
-    "society": 41,
+    "wellbeing": 64,
+    "society": 32,
     "infrastructure": 81,
-    "growth": 91,
-    "population": 94,
-    "buildings": 75,
-    "treasury": 672745,
+    "growth": 100,
+    "population": 96,
+    "buildings": 76,
+    "treasury": 676767,
     "employment": 100
   },
   "buildable": {
