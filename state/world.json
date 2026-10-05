@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 5310,
-  "last_beat_at": "2026-10-05T17:12:12Z",
+  "beat": 5334,
+  "last_beat_at": "2026-10-05T23:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 37,
-    "terraces": 5,
+    "delmar": 11,
+    "terraces": 7,
     "civic": 5
   },
   "turf": {
@@ -13294,9 +13294,152 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1017",
+      "from": "etta3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1333,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1018",
+      "from": "lena4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1333,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1019",
+      "from": "amara",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Unattended Scissors Ban",
+      "settled": false,
+      "due_day": 1335,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 5334
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "jonah4",
+        "cal3"
+      ],
+      "text": "Somebody tells Jonah Bello that Cal Doyle has been seen talking to police.",
+      "beat": 5331
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "june4"
+      ],
+      "text": "Something pays out for June Petrakis. More than expected, which is its own problem.",
+      "beat": 5330
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "lena5",
+        "dev"
+      ],
+      "text": "Dev Lindqvist does Lena Petrakis a favour that costs them something real.",
+      "beat": 5329
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 5328
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 5327
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 5326
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "otis",
+        "marta3"
+      ],
+      "text": "Somebody tells Otis Bello that Marta Brannon has been seen talking to police.",
+      "beat": 5324
+    },
     {
       "id": "patrol_surge",
       "heat": {
@@ -13447,114 +13590,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 5269
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "lena3",
-        "farrah4"
-      ],
-      "text": "Lena Brannon and Farrah Lindqvist are seen arguing in the street loud enough that people stop.",
-      "beat": 5266
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 5265
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "iris2",
-        "kwame"
-      ],
-      "text": "Kwame Osei does Iris Lindqvist a favour that costs them something real.",
-      "beat": 5264
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 5248
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "rufus2"
-      ],
-      "text": "Rufus Adeyemi gets word that what they owe is wanted sooner than agreed.",
-      "beat": 5247
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "theo"
-      ],
-      "text": "Something pays out for Theo Bello. More than expected, which is its own problem.",
-      "beat": 5244
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "clemmie",
-        "isaac"
-      ],
-      "text": "Isaac Adeyemi does Clemmie Bello a favour that costs them something real.",
-      "beat": 5243
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "rosa",
-        "wes"
-      ],
-      "text": "Rosa Reyes and Wes Doyle are seen arguing in the street loud enough that people stop.",
-      "beat": 5241
     }
   ],
   "player_queue": [
@@ -13577,12 +13612,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1325,
+  "last_gazette_day": 1332,
   "llm_budget": {
     "day": "2026-10-05",
     "spent": {
       "fast": 163546,
-      "deep": 33973
+      "deep": 39358
     }
   },
   "silent_runs": 0,
@@ -15293,7 +15328,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 162
+      "convictions": 164
     },
     {
       "id": "law11",
@@ -15350,7 +15385,7 @@
       "because": "hair scissors left on table while sleeping",
       "day_enacted": 1151,
       "status": "enacted",
-      "convictions": 7
+      "convictions": 8
     },
     {
       "id": "law14",
@@ -15372,19 +15407,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "theo2",
-      "name": "Theo Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "rinses plates, watches snow",
-      "day": 1301,
-      "trial_day": 1303,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
     {
       "id": "c062",
       "who": "cassius5",
@@ -16135,8 +16157,9 @@
       "evidence": "stirs coffee impatiently",
       "day": 1326,
       "trial_day": 1328,
-      "status": "awaiting_trial",
-      "witnesses": 14
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -16147,8 +16170,22 @@
       "evidence": "spills coffee, sighs",
       "day": 1326,
       "trial_day": 1328,
-      "status": "awaiting_trial",
-      "witnesses": 9
+      "status": "convicted",
+      "witnesses": 9,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "amara",
+      "name": "Amara Bello",
+      "law": "law13",
+      "law_title": "Unattended Scissors Ban",
+      "evidence": "dozes, hand on scissors",
+      "day": 1330,
+      "trial_day": 1332,
+      "status": "convicted",
+      "witnesses": 22,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 1,
@@ -16167,21 +16204,21 @@
       "b": "wes",
       "since_day": 418,
       "cause": "would not let it go",
-      "heat": 10
+      "heat": 4
     },
     {
       "a": "booker",
       "b": "wes",
       "since_day": 457,
       "cause": "would not let it go",
-      "heat": 12
+      "heat": 6
     },
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 82
+      "heat": 76
     },
     {
       "a": "elias",
@@ -16195,20 +16232,22 @@
       "b": "dot",
       "since_day": 1305,
       "cause": "would not let it go",
-      "heat": 29
+      "heat": 23
     },
     {
       "a": "cal2",
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 43
+      "heat": 37
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-10-05",
-    "beat": 5310,
-    "providers": []
+    "beat": 5332,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -16449,9 +16488,39 @@
     "id": "gil3"
   },
   "incidents": [],
-  "treasury": 753848,
+  "treasury": 758102,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1332,
+      "wages": 3582,
+      "takings": 4640,
+      "tax": 2678,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1418,
+      "treasury": 758102
+    },
+    {
+      "day": 1331,
+      "wages": 3582,
+      "takings": 4640,
+      "tax": 2678,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1418,
+      "treasury": 756684
+    },
+    {
+      "day": 1330,
+      "wages": 3582,
+      "takings": 4640,
+      "tax": 2678,
+      "welfare": 0,
+      "civic": 1260,
+      "net": 1418,
+      "treasury": 755266
+    },
     {
       "day": 1326,
       "wages": 3529,
@@ -16721,36 +16790,6 @@
       "civic": 1260,
       "net": 1401,
       "treasury": 717477
-    },
-    {
-      "day": 1282,
-      "wages": 3510,
-      "takings": 4660,
-      "tax": 2661,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1401,
-      "treasury": 716076
-    },
-    {
-      "day": 1281,
-      "wages": 3510,
-      "takings": 4660,
-      "tax": 2661,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1401,
-      "treasury": 714675
-    },
-    {
-      "day": 1279,
-      "wages": 3510,
-      "takings": 4660,
-      "tax": 2661,
-      "welfare": 0,
-      "civic": 1260,
-      "net": 1401,
-      "treasury": 713274
     }
   ],
   "births": [
@@ -17354,45 +17393,6 @@
   ],
   "score_history": [
     {
-      "day": 1253,
-      "overall": 68,
-      "economy": 95,
-      "wellbeing": 63,
-      "society": 21,
-      "infrastructure": 81,
-      "growth": 97,
-      "population": 97,
-      "buildings": 76,
-      "treasury": 688873,
-      "employment": 100
-    },
-    {
-      "day": 1255,
-      "overall": 74,
-      "economy": 95,
-      "wellbeing": 71,
-      "society": 42,
-      "infrastructure": 81,
-      "growth": 91,
-      "population": 97,
-      "buildings": 76,
-      "treasury": 690211,
-      "employment": 100
-    },
-    {
-      "day": 1256,
-      "overall": 74,
-      "economy": 95,
-      "wellbeing": 65,
-      "society": 42,
-      "infrastructure": 82,
-      "growth": 97,
-      "population": 98,
-      "buildings": 77,
-      "treasury": 691566,
-      "employment": 100
-    },
-    {
       "day": 1257,
       "overall": 73,
       "economy": 94,
@@ -17976,19 +17976,58 @@
       "buildings": 78,
       "treasury": 753848,
       "employment": 100
+    },
+    {
+      "day": 1330,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 40,
+      "infrastructure": 77,
+      "growth": 61,
+      "population": 101,
+      "buildings": 78,
+      "treasury": 755266,
+      "employment": 100
+    },
+    {
+      "day": 1331,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 64,
+      "society": 41,
+      "infrastructure": 77,
+      "growth": 61,
+      "population": 101,
+      "buildings": 78,
+      "treasury": 756684,
+      "employment": 100
+    },
+    {
+      "day": 1332,
+      "overall": 70,
+      "economy": 95,
+      "wellbeing": 70,
+      "society": 44,
+      "infrastructure": 77,
+      "growth": 61,
+      "population": 101,
+      "buildings": 78,
+      "treasury": 758102,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1326,
-    "overall": 62,
+    "day": 1332,
+    "overall": 70,
     "economy": 95,
-    "wellbeing": 61,
-    "society": 19,
+    "wellbeing": 70,
+    "society": 44,
     "infrastructure": 77,
-    "growth": 55,
-    "population": 100,
+    "growth": 61,
+    "population": 101,
     "buildings": 78,
-    "treasury": 753848,
+    "treasury": 758102,
     "employment": 100
   },
   "buildable": {
@@ -18035,7 +18074,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 160,
