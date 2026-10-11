@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 192,
   "h": 168,
-  "version": "aaab03803a84",
+  "version": "1d91511b64a7",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -33,10 +33,10 @@
     ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.gg#ffffff#gggggggg.,,,,.gggg#ffffff#ggggggg",
     ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.gg###D####gggggggg.,:,,.gggg#ffffff#ggggggg",
     ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggg#fffffff#g.,:,,.gggggggggggggggggg.,:,,.gggg#ffffff#ggggggg",
-    ".#ffff#.....,,,,.#fffffff#.ssssssssss...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.gggggggggggggggggg.,,,,.gggg#ffffff#ggggggg",
-    ".#ffff#.....,,,,.#fffffff#.ssssssssss...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.gggg###D####ggggggg",
-    ".#ffff#.....,:,,.####D####.ssssssssss...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.ggggggggggggggggggg",
-    ".##D###.....====...........ssssssssss...====...............###D####.====.##D#.....####..........====............====............................====....................====....................",
+    ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.gggggggggggggggggg.,,,,.gggg#ffffff#ggggggg",
+    ".#ffff#.....,,,,.#fffffff#.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.gggg###D####ggggggg",
+    ".#ffff#.....,:,,.####D####.#ffffffff#...,:,,...............#ffffff#.,:,,.#ff#.....#ff#..........,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.ggggggggggggggggggg",
+    ".##D###.....====...........####D#####...====...............###D####.====.##D#.....####..........====............====............................====....................====....................",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,,,,,::,,::,,::,,::,,::,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
@@ -451,12 +451,58 @@
       "style": "brownstone",
       "floors": 3,
       "open": false,
-      "condition": "rebuilding",
+      "condition": "standing",
       "anchor": [
-        32,
+        31,
         24
       ],
-      "furniture": []
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 31,
+          "y": 23
+        },
+        {
+          "type": "bed",
+          "x": 34,
+          "y": 24
+        },
+        {
+          "type": "sofa",
+          "x": 29,
+          "y": 24
+        },
+        {
+          "type": "tv",
+          "x": 33,
+          "y": 23
+        },
+        {
+          "type": "table",
+          "x": 35,
+          "y": 23
+        },
+        {
+          "type": "sink",
+          "x": 35,
+          "y": 24
+        },
+        {
+          "type": "shelf",
+          "x": 30,
+          "y": 23
+        },
+        {
+          "type": "plant",
+          "x": 34,
+          "y": 23
+        },
+        {
+          "type": "rug",
+          "x": 33,
+          "y": 24
+        }
+      ]
     },
     "docks": {
       "id": "docks",
