@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 192,
   "h": 168,
-  "version": "1d91511b64a7",
+  "version": "a12c521669ee",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -77,12 +77,12 @@
     ".####D#####.,,,,.####D####..#####D#####.,,,,.####D#####....gggggggg.,,,,.#####D######..ggggggg..,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.ggggggggggggggggggg",
     ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..ggggggg..,:,,.gg###D###g.,:,,.gg###D####gggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.gggggggggg###D###gg",
     ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..ggggggg..,:,,.gg#fffff#g.,:,,.gg#ffffff#gggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.gggggggggg#fffff#gg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..###D###..,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg####D#####gg.,,,,.gg###D####gggggggg.,,,,.gggggggggg#fffff#gg",
-    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#ffffffff#gg.,,,,.gg#ffffff#gggggggg.,,,,.gggggggggg#fffff#gg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#fffff#g.,:,,.gg########gggg#ffffffff#gg.,:,,.gg#ffffff#gggggggg.,:,,.gggggggggg#fffff#gg",
-    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#######g.,:,,.gggggggggggggg#ffffffff#gg.,:,,.gg#ffffff#gggggggg.,:,,.gggggggggg#######gg",
-    ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gggggggggg.,,,,.gggggggggggggg#ffffffff#gg.,,,,.gg#ffffff#gggggggg.,,,,.ggggggggggggggggggg",
-    "............,,,,............###########.,,,,........................,,,,.############..#######..,,,,.gggggggggg.,,,,.gggggggggggggg##########gg.,,,,.gg########gggggggg.,,,,.ggggggggggggggggggg",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..###D###..,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg####D#####gg.,,,,.gg###D####gggggggg.,,,,.gg###D###g#fffff#gg",
+    ".#ffffffff#.,,,,.#fffffff#..#fffffffff#.,,,,.#ffffffff#....gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gg#fffff#g.,,,,.gg#ffffff#gggg#ffffffff#gg.,,,,.gg#ffffff#gggggggg.,,,,.gg#fffff#g#fffff#gg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.#ffffffff#....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#fffff#g.,:,,.gg########gggg#ffffffff#gg.,:,,.gg#ffffff#gggggggg.,:,,.gg#fffff#g#fffff#gg",
+    ".#ffffffff#.,:,,.#fffffff#..#fffffffff#.,:,,.##########....gggggggg.,:,,.#ffffffffff#..#fffff#..,:,,.gg#######g.,:,,.gggggggggggggg#ffffffff#gg.,:,,.gg#ffffff#gggggggg.,:,,.gg#fffff#g#######gg",
+    ".##########.,,,,.#########..#fffffffff#.,,,,...............gggggggg.,,,,.#ffffffffff#..#fffff#..,,,,.gggggggggg.,,,,.gggggggggggggg#ffffffff#gg.,,,,.gg#ffffff#gggggggg.,,,,.gg#fffff#gggggggggg",
+    "............,,,,............###########.,,,,........................,,,,.############..#######..,,,,.gggggggggg.,,,,.gggggggggggggg##########gg.,,,,.gg########gggggggg.,,,,.gg#######gggggggggg",
     "............,:,,........................,:,,........................,:,,........................,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.ggggggggggggggggggg",
     "............====........................====........................====........................====............====............................====....................====....................",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
@@ -6650,6 +6650,81 @@
           "type": "rug",
           "x": 152,
           "y": 131
+        }
+      ]
+    },
+    "new_home_1471": {
+      "id": "new_home_1471",
+      "name": "Okonkwo Cottages",
+      "district": "civic",
+      "rect": [
+        175,
+        66,
+        7,
+        6
+      ],
+      "rects": [
+        [
+          175,
+          66,
+          7,
+          6
+        ]
+      ],
+      "kind": "home",
+      "style": "clapboard",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        178,
+        67
+      ],
+      "furniture": [
+        {
+          "type": "bed",
+          "x": 177,
+          "y": 70
+        },
+        {
+          "type": "bed",
+          "x": 178,
+          "y": 70
+        },
+        {
+          "type": "sofa",
+          "x": 180,
+          "y": 67
+        },
+        {
+          "type": "tv",
+          "x": 180,
+          "y": 69
+        },
+        {
+          "type": "table",
+          "x": 177,
+          "y": 69
+        },
+        {
+          "type": "sink",
+          "x": 176,
+          "y": 67
+        },
+        {
+          "type": "shelf",
+          "x": 178,
+          "y": 68
+        },
+        {
+          "type": "plant",
+          "x": 179,
+          "y": 69
+        },
+        {
+          "type": "rug",
+          "x": 177,
+          "y": 68
         }
       ]
     }
