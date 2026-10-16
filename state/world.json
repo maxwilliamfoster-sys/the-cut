@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6356,
-  "last_beat_at": "2026-10-16T14:42:12Z",
+  "beat": 6371,
+  "last_beat_at": "2026-10-16T18:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "fog off the water",
+  "weather": "heavy rain",
   "heat": {
-    "riverside": 21,
-    "delmar": 5,
-    "terraces": 5,
+    "riverside": 31,
+    "delmar": 16,
+    "terraces": 13,
     "civic": 5
   },
   "turf": {
@@ -17705,6 +17705,85 @@
   ],
   "events": [
     {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 6371
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "clemmie",
+        "malik"
+      ],
+      "text": "Malik Reyes does Clemmie Bello a favour that costs them something real.",
+      "beat": 6370
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 6369
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "sami4"
+      ],
+      "text": "Something pays out for Sami Doyle. More than expected, which is its own problem.",
+      "beat": 6367
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6366
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 6362
+    },
+    {
       "id": "kindness",
       "heat": {},
       "mood": {
@@ -17883,89 +17962,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 6327
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "lena3",
-        "dot"
-      ],
-      "text": "Dot Feeney does Lena Brannon a favour that costs them something real.",
-      "beat": 6319
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 6318
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "kwame3",
-        "maren2"
-      ],
-      "text": "Kwame Bright and Maren Bello are seen arguing in the street loud enough that people stop.",
-      "beat": 6317
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "farrah3"
-      ],
-      "text": "Farrah Mbeki ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 6316
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "gil2",
-        "dev2"
-      ],
-      "text": "Dev Nakamura does Gil Osei a favour that costs them something real.",
-      "beat": 6314
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "june5",
-        "marta"
-      ],
-      "text": "Marta Doyle does June Mbeki a favour that costs them something real.",
-      "beat": 6313
     }
   ],
   "player_queue": [
@@ -17988,12 +17984,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1588,
+  "last_gazette_day": 1590,
   "llm_budget": {
     "day": "2026-10-16",
     "spent": {
       "fast": 162518,
-      "deep": 47156
+      "deep": 79722
     }
   },
   "silent_runs": 0,
@@ -19989,32 +19985,6 @@
   ],
   "charges": [
     {
-      "id": "c061",
-      "who": "june4",
-      "name": "June Petrakis",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "June runs the machine, eyes flicking to ledger",
-      "day": 1549,
-      "trial_day": 1551,
-      "status": "convicted",
-      "witnesses": 5,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "june5",
-      "name": "June Mbeki",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "June watches snow from the desk, smiles at Lena",
-      "day": 1549,
-      "trial_day": 1551,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
       "id": "c063",
       "who": "amara",
       "name": "Amara Bello",
@@ -20767,6 +20737,30 @@
       "status": "convicted",
       "witnesses": 3,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "kwame2",
+      "name": "Kwame Doyle",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "taps the ledger page with a blunt pencil",
+      "day": 1591,
+      "trial_day": 1593,
+      "status": "awaiting_trial",
+      "witnesses": 13
+    },
+    {
+      "id": "c061",
+      "who": "femi",
+      "name": "Femi Adeyemi",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "cuts his pork chop into small, even pieces",
+      "day": 1591,
+      "trial_day": 1593,
+      "status": "awaiting_trial",
+      "witnesses": 11
     }
   ],
   "law_pressure": 6,
@@ -20778,7 +20772,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 72
+      "heat": 66
     },
     {
       "a": "elias",
@@ -20811,10 +20805,17 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-10-16",
-    "beat": 6356,
+    "beat": 6371,
     "providers": []
   },
   "dead": [
+    {
+      "id": "kwame5",
+      "name": "Kwame Lindqvist",
+      "day": 1590,
+      "cause": "heart",
+      "where": "Pier Tenement"
+    },
     {
       "id": "marta",
       "name": "Marta Doyle",
@@ -21125,15 +21126,45 @@
     }
   ],
   "funeral": {
-    "day": 1572,
-    "for": "Marta Doyle",
-    "id": "marta",
-    "marked": 1572
+    "day": 1592,
+    "for": "Kwame Lindqvist",
+    "id": "kwame5",
+    "marked": 1592
   },
   "incidents": [],
-  "treasury": 975155,
+  "treasury": 979120,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1592,
+      "wages": 4506,
+      "takings": 4580,
+      "tax": 2953,
+      "welfare": 0,
+      "civic": 1620,
+      "net": 1333,
+      "treasury": 979120
+    },
+    {
+      "day": 1591,
+      "wages": 4453,
+      "takings": 4580,
+      "tax": 2936,
+      "welfare": 0,
+      "civic": 1620,
+      "net": 1316,
+      "treasury": 977787
+    },
+    {
+      "day": 1590,
+      "wages": 4453,
+      "takings": 4580,
+      "tax": 2936,
+      "welfare": 0,
+      "civic": 1620,
+      "net": 1316,
+      "treasury": 976471
+    },
     {
       "day": 1588,
       "wages": 4453,
@@ -21403,36 +21434,6 @@
       "civic": 1440,
       "net": 1527,
       "treasury": 937658
-    },
-    {
-      "day": 1549,
-      "wages": 4366,
-      "takings": 4760,
-      "tax": 2967,
-      "welfare": 0,
-      "civic": 1440,
-      "net": 1527,
-      "treasury": 936131
-    },
-    {
-      "day": 1548,
-      "wages": 4313,
-      "takings": 4760,
-      "tax": 2950,
-      "welfare": 0,
-      "civic": 1440,
-      "net": 1510,
-      "treasury": 934604
-    },
-    {
-      "day": 1547,
-      "wages": 4313,
-      "takings": 4760,
-      "tax": 2950,
-      "welfare": 0,
-      "civic": 1440,
-      "net": 1510,
-      "treasury": 933094
     }
   ],
   "births": [
@@ -22036,45 +22037,6 @@
   ],
   "score_history": [
     {
-      "day": 1521,
-      "overall": 67,
-      "economy": 94,
-      "wellbeing": 63,
-      "society": 38,
-      "infrastructure": 78,
-      "growth": 61,
-      "population": 117,
-      "buildings": 86,
-      "treasury": 905794,
-      "employment": 100
-    },
-    {
-      "day": 1522,
-      "overall": 68,
-      "economy": 94,
-      "wellbeing": 61,
-      "society": 42,
-      "infrastructure": 77,
-      "growth": 67,
-      "population": 118,
-      "buildings": 86,
-      "treasury": 907424,
-      "employment": 100
-    },
-    {
-      "day": 1524,
-      "overall": 66,
-      "economy": 94,
-      "wellbeing": 62,
-      "society": 30,
-      "infrastructure": 77,
-      "growth": 72,
-      "population": 118,
-      "buildings": 87,
-      "treasury": 908934,
-      "employment": 100
-    },
-    {
       "day": 1525,
       "overall": 63,
       "economy": 94,
@@ -22658,19 +22620,58 @@
       "buildings": 90,
       "treasury": 975155,
       "employment": 100
+    },
+    {
+      "day": 1590,
+      "overall": 66,
+      "economy": 93,
+      "wellbeing": 50,
+      "society": 45,
+      "infrastructure": 78,
+      "growth": 66,
+      "population": 120,
+      "buildings": 90,
+      "treasury": 976471,
+      "employment": 100
+    },
+    {
+      "day": 1591,
+      "overall": 65,
+      "economy": 93,
+      "wellbeing": 54,
+      "society": 36,
+      "infrastructure": 78,
+      "growth": 66,
+      "population": 120,
+      "buildings": 90,
+      "treasury": 977787,
+      "employment": 100
+    },
+    {
+      "day": 1592,
+      "overall": 65,
+      "economy": 93,
+      "wellbeing": 52,
+      "society": 37,
+      "infrastructure": 77,
+      "growth": 72,
+      "population": 121,
+      "buildings": 90,
+      "treasury": 979120,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1588,
-    "overall": 71,
+    "day": 1592,
+    "overall": 65,
     "economy": 93,
-    "wellbeing": 69,
-    "society": 46,
+    "wellbeing": 52,
+    "society": 37,
     "infrastructure": 77,
     "growth": 72,
     "population": 121,
     "buildings": 90,
-    "treasury": 975155,
+    "treasury": 979120,
     "employment": 100
   },
   "buildable": {
@@ -22717,7 +22718,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 192,
