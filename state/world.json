@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6466,
-  "last_beat_at": "2026-10-17T18:12:12Z",
+  "beat": 6476,
+  "last_beat_at": "2026-10-17T20:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "cold snap",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 7,
+    "delmar": 3,
     "terraces": 5,
     "civic": 5
   },
@@ -18156,9 +18156,99 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1391",
+      "from": "gil2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1621,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "marta",
+        "kwame6"
+      ],
+      "text": "Somebody tells Marta Doyle that Kwame Nakamura has been seen talking to police.",
+      "beat": 6475
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 6473
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "etta3",
+        "kwame"
+      ],
+      "text": "Etta Bello and Kwame Osei are seen arguing in the street loud enough that people stop.",
+      "beat": 6472
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ade",
+        "errol6"
+      ],
+      "text": "Errol Amadi does Ade Osei a favour that costs them something real.",
+      "beat": 6471
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 6468
+    },
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 6467
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -18344,89 +18434,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 6436
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "chidi"
-      ],
-      "text": "Chidi Okonkwo gets word that what they owe is wanted sooner than agreed.",
-      "beat": 6435
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "dez",
-        "booker"
-      ],
-      "text": "Somebody tells Dez Okonkwo that Booker Lyle has been seen talking to police.",
-      "beat": 6432
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "milo3",
-        "june4"
-      ],
-      "text": "Somebody tells Milo Bello that June Petrakis has been seen talking to police.",
-      "beat": 6431
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "simone",
-        "cal2"
-      ],
-      "text": "Simone Adeyemi and Cal Serrano are seen arguing in the street loud enough that people stop.",
-      "beat": 6427
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "lena",
-        "june7"
-      ],
-      "text": "June Amadi does Lena Ferreira a favour that costs them something real.",
-      "beat": 6424
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "ivy",
-        "maren"
-      ],
-      "text": "Ms. Ivy Calloway and Maren Adeyemi are seen arguing in the street loud enough that people stop.",
-      "beat": 6421
     }
   ],
   "player_queue": [
@@ -18449,12 +18456,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1613,
+  "last_gazette_day": 1618,
   "llm_budget": {
     "day": "2026-10-17",
     "spent": {
       "fast": 164394,
-      "deep": 115105
+      "deep": 147229
     }
   },
   "silent_runs": 0,
@@ -20250,7 +20257,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 142
+      "convictions": 143
     },
     {
       "id": "law04",
@@ -20466,58 +20473,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "cassius5",
-      "name": "Cassius Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirs coffee, glances at the line",
-      "day": 1565,
-      "trial_day": 1567,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "blaise3",
-      "name": "Blaise Mbeki",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "pours bitter coffee, watches rain",
-      "day": 1565,
-      "trial_day": 1567,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "jonah3",
-      "name": "Jonah Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirs coffee, spills a drop",
-      "day": 1570,
-      "trial_day": 1572,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "wipes ledger pages",
-      "day": 1570,
-      "trial_day": 1572,
-      "status": "convicted",
-      "witnesses": 7,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "dev",
@@ -21245,6 +21200,55 @@
       "status": "convicted",
       "witnesses": 3,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "gil2",
+      "name": "Gil Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "shifts in his sleep, mutters hair",
+      "day": 1616,
+      "trial_day": 1618,
+      "status": "convicted",
+      "witnesses": 4,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "milo",
+      "name": "Milo Adeyemi",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays under covers, scrolls phone",
+      "day": 1618,
+      "trial_day": 1620,
+      "status": "awaiting_trial",
+      "witnesses": 7
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "slides ledger across the table",
+      "day": 1618,
+      "trial_day": 1620,
+      "status": "awaiting_trial",
+      "witnesses": 8
+    },
+    {
+      "id": "c062",
+      "who": "otis",
+      "name": "Otis Bello",
+      "law": "law08",
+      "law_title": "Bench Snow Gaze Regulation",
+      "evidence": "scratches the dog's ear, watches snow fall",
+      "day": 1618,
+      "trial_day": 1620,
+      "status": "awaiting_trial",
+      "witnesses": 22
     }
   ],
   "law_pressure": 6,
@@ -21256,7 +21260,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 80
+      "heat": 74
     },
     {
       "a": "elias",
@@ -21270,7 +21274,7 @@
       "b": "dot",
       "since_day": 1305,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 2
     },
     {
       "a": "cal2",
@@ -21284,7 +21288,7 @@
       "b": "wes",
       "since_day": 1476,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     }
   ],
   "quota_exhausted_on": {
@@ -21616,9 +21620,39 @@
     "marked": 1592
   },
   "incidents": [],
-  "treasury": 1003464,
+  "treasury": 1007070,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1618,
+      "wages": 4472,
+      "takings": 4490,
+      "tax": 2912,
+      "welfare": 0,
+      "civic": 1710,
+      "net": 1202,
+      "treasury": 1007070
+    },
+    {
+      "day": 1617,
+      "wages": 4472,
+      "takings": 4490,
+      "tax": 2912,
+      "welfare": 0,
+      "civic": 1710,
+      "net": 1202,
+      "treasury": 1005868
+    },
+    {
+      "day": 1616,
+      "wages": 4472,
+      "takings": 4490,
+      "tax": 2912,
+      "welfare": 0,
+      "civic": 1710,
+      "net": 1202,
+      "treasury": 1004666
+    },
     {
       "day": 1615,
       "wages": 4472,
@@ -21888,36 +21922,6 @@
       "civic": 1530,
       "net": 1436,
       "treasury": 969771
-    },
-    {
-      "day": 1581,
-      "wages": 4453,
-      "takings": 4670,
-      "tax": 2966,
-      "welfare": 0,
-      "civic": 1530,
-      "net": 1436,
-      "treasury": 968335
-    },
-    {
-      "day": 1579,
-      "wages": 4453,
-      "takings": 4670,
-      "tax": 2966,
-      "welfare": 0,
-      "civic": 1530,
-      "net": 1436,
-      "treasury": 966899
-    },
-    {
-      "day": 1578,
-      "wages": 4453,
-      "takings": 4670,
-      "tax": 2966,
-      "welfare": 0,
-      "civic": 1530,
-      "net": 1436,
-      "treasury": 965463
     }
   ],
   "births": [
@@ -22521,45 +22525,6 @@
   ],
   "score_history": [
     {
-      "day": 1553,
-      "overall": 68,
-      "economy": 94,
-      "wellbeing": 74,
-      "society": 31,
-      "infrastructure": 78,
-      "growth": 60,
-      "population": 118,
-      "buildings": 88,
-      "treasury": 939185,
-      "employment": 100
-    },
-    {
-      "day": 1554,
-      "overall": 66,
-      "economy": 93,
-      "wellbeing": 71,
-      "society": 23,
-      "infrastructure": 78,
-      "growth": 66,
-      "population": 119,
-      "buildings": 88,
-      "treasury": 940727,
-      "employment": 100
-    },
-    {
-      "day": 1555,
-      "overall": 66,
-      "economy": 93,
-      "wellbeing": 73,
-      "society": 15,
-      "infrastructure": 78,
-      "growth": 72,
-      "population": 119,
-      "buildings": 88,
-      "treasury": 942269,
-      "employment": 100
-    },
-    {
       "day": 1558,
       "overall": 70,
       "economy": 93,
@@ -23143,19 +23108,58 @@
       "buildings": 91,
       "treasury": 1003464,
       "employment": 100
+    },
+    {
+      "day": 1616,
+      "overall": 68,
+      "economy": 93,
+      "wellbeing": 66,
+      "society": 43,
+      "infrastructure": 77,
+      "growth": 55,
+      "population": 121,
+      "buildings": 91,
+      "treasury": 1004666,
+      "employment": 100
+    },
+    {
+      "day": 1617,
+      "overall": 69,
+      "economy": 93,
+      "wellbeing": 71,
+      "society": 43,
+      "infrastructure": 77,
+      "growth": 55,
+      "population": 121,
+      "buildings": 91,
+      "treasury": 1005868,
+      "employment": 100
+    },
+    {
+      "day": 1618,
+      "overall": 68,
+      "economy": 93,
+      "wellbeing": 71,
+      "society": 35,
+      "infrastructure": 77,
+      "growth": 61,
+      "population": 121,
+      "buildings": 91,
+      "treasury": 1007070,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1615,
-    "overall": 70,
+    "day": 1618,
+    "overall": 68,
     "economy": 93,
     "wellbeing": 71,
-    "society": 47,
+    "society": 35,
     "infrastructure": 77,
-    "growth": 55,
+    "growth": 61,
     "population": 121,
     "buildings": 91,
-    "treasury": 1003464,
+    "treasury": 1007070,
     "employment": 100
   },
   "buildable": {
@@ -23202,7 +23206,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 192,
