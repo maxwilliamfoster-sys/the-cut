@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6653,
-  "last_beat_at": "2026-10-19T16:57:12Z",
+  "beat": 6671,
+  "last_beat_at": "2026-10-19T21:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "clear",
   "heat": {
-    "riverside": 26,
-    "delmar": 13,
+    "riverside": 8,
+    "delmar": 4,
     "terraces": 5,
-    "civic": 7
+    "civic": 5
   },
   "turf": {
     "riverside": "crew",
@@ -19131,9 +19131,154 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1466",
+      "from": "otis",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1668,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1467",
+      "from": "maren",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — Pocketknife Fidget Ban",
+      "settled": false,
+      "due_day": 1668,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1468",
+      "from": "blaise4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Bench Snow Gaze Regulation",
+      "settled": false,
+      "due_day": 1670,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "tomas",
+        "kwame3"
+      ],
+      "text": "Somebody tells Tomas Mbeki that Kwame Bright has been seen talking to police.",
+      "beat": 6670
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 6669
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 6668
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 6667
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 6665
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "lena6"
+      ],
+      "text": "Lena Ferreira ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 6664
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "tomas3",
+        "blaise4"
+      ],
+      "text": "Blaise Brannon does Tomas Lindqvist a favour that costs them something real.",
+      "beat": 6663
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "dev4"
+      ],
+      "text": "Something pays out for Dev Brannon. More than expected, which is its own problem.",
+      "beat": 6660
+    },
     {
       "id": "inspection",
       "heat": {
@@ -19294,107 +19439,6 @@
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark.",
       "beat": 6618
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 6617
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 6615
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 6604
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "tiny"
-      ],
-      "text": "Tiny Reyes ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 6603
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "cal5",
-        "dez"
-      ],
-      "text": "Somebody tells Cal Doyle that Dez Okonkwo has been seen talking to police.",
-      "beat": 6602
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "cal3",
-        "farrah5"
-      ],
-      "text": "Cal Doyle and Farrah Serrano are seen arguing in the street loud enough that people stop.",
-      "beat": 6601
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 6600
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 6596
     }
   ],
   "player_queue": [
@@ -19422,7 +19466,7 @@
     "day": "2026-10-19",
     "spent": {
       "fast": 164216,
-      "deep": 63386
+      "deep": 74305
     }
   },
   "silent_runs": 0,
@@ -19465,8 +19509,8 @@
       "open": false,
       "wings": [],
       "floors": 1,
-      "condition": "damaged",
-      "since_day": 1284,
+      "condition": "ruin",
+      "since_day": 1667,
       "generation": 1
     },
     {
@@ -21351,7 +21395,7 @@
       "because": "Dot Feeney taken to the 9th over Fountain Ledge Nightstand Ban",
       "day_enacted": 930,
       "status": "enacted",
-      "convictions": 157
+      "convictions": 158
     },
     {
       "id": "law09",
@@ -21370,7 +21414,7 @@
       "because": "He fidgets with a pocketknife",
       "day_enacted": 949,
       "status": "enacted",
-      "convictions": 59
+      "convictions": 60
     },
     {
       "id": "law10",
@@ -21389,7 +21433,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 274
+      "convictions": 275
     },
     {
       "id": "law11",
@@ -21468,32 +21512,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "dot",
-      "name": "Dot Feeney",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "Sits, wipes counter, glances at ledger",
-      "day": 1626,
-      "trial_day": 1628,
-      "status": "convicted",
-      "witnesses": 8,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "cassius5",
-      "name": "Cassius Bello",
-      "law": "law09",
-      "law_title": "Pocketknife Fidget Ban",
-      "evidence": "watches the news, fidgets with a pen",
-      "day": 1627,
-      "trial_day": 1629,
-      "status": "convicted",
-      "witnesses": 16,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "iris5",
@@ -22244,8 +22262,9 @@
       "evidence": "pours coffee, glances at Nyla",
       "day": 1662,
       "trial_day": 1664,
-      "status": "awaiting_trial",
-      "witnesses": 15
+      "status": "convicted",
+      "witnesses": 15,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -22256,11 +22275,25 @@
       "evidence": "fidgets, watches family settle on sofa",
       "day": 1663,
       "trial_day": 1665,
-      "status": "awaiting_trial",
-      "witnesses": 8
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "blaise4",
+      "name": "Blaise Brannon",
+      "law": "law08",
+      "law_title": "Bench Snow Gaze Regulation",
+      "evidence": "signing for a delivery, watching the snow",
+      "day": 1665,
+      "trial_day": 1667,
+      "status": "convicted",
+      "witnesses": 13,
+      "verdict": "guilty"
     }
   ],
-  "law_pressure": 8,
+  "law_pressure": 10,
   "last_law_day": 1212,
   "last_expansion_day": 1650,
   "feuds": [
@@ -22269,7 +22302,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 84
+      "heat": 78
     },
     {
       "a": "elias",
@@ -22297,12 +22330,12 @@
       "b": "wes",
       "since_day": 1476,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-10-17",
-    "beat": 6466,
+    "day": "2026-10-19",
+    "beat": 6671,
     "providers": []
   },
   "dead": [
@@ -22644,23 +22677,51 @@
   },
   "incidents": [
     {
-      "id": "inc6653-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "maren"
-      ],
-      "text": "Maren Adeyemi is taken to the 9th over Pocketknife Fidget Ban.",
-      "started": 6653,
-      "until": 6654
+      "id": "inc6670-fire-0",
+      "kind": "fire",
+      "effect": "flames",
+      "at": "laundromat",
+      "x": 21,
+      "y": 21,
+      "who": [],
+      "text": "A gas leak tears through Delmar Supply.",
+      "started": 6670,
+      "until": 6673
     }
   ],
-  "treasury": 1045122,
+  "treasury": 1048295,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1667,
+      "wages": 4269,
+      "takings": 4455,
+      "tax": 2837,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1037,
+      "treasury": 1048295
+    },
+    {
+      "day": 1666,
+      "wages": 4269,
+      "takings": 4550,
+      "tax": 2868,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1068,
+      "treasury": 1047258
+    },
+    {
+      "day": 1665,
+      "wages": 4269,
+      "takings": 4550,
+      "tax": 2868,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1068,
+      "treasury": 1046190
+    },
     {
       "day": 1662,
       "wages": 4269,
@@ -22930,36 +22991,6 @@
       "civic": 1710,
       "net": 1252,
       "treasury": 1014332
-    },
-    {
-      "day": 1625,
-      "wages": 4472,
-      "takings": 4490,
-      "tax": 2912,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1202,
-      "treasury": 1013080
-    },
-    {
-      "day": 1622,
-      "wages": 4472,
-      "takings": 4490,
-      "tax": 2912,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1202,
-      "treasury": 1011878
-    },
-    {
-      "day": 1621,
-      "wages": 4472,
-      "takings": 4490,
-      "tax": 2912,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1202,
-      "treasury": 1010676
     }
   ],
   "births": [
@@ -23563,45 +23594,6 @@
   ],
   "score_history": [
     {
-      "day": 1600,
-      "overall": 66,
-      "economy": 93,
-      "wellbeing": 69,
-      "society": 30,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 90,
-      "treasury": 988440,
-      "employment": 100
-    },
-    {
-      "day": 1601,
-      "overall": 65,
-      "economy": 93,
-      "wellbeing": 68,
-      "society": 26,
-      "infrastructure": 77,
-      "growth": 61,
-      "population": 121,
-      "buildings": 90,
-      "treasury": 989762,
-      "employment": 100
-    },
-    {
-      "day": 1604,
-      "overall": 66,
-      "economy": 93,
-      "wellbeing": 63,
-      "society": 37,
-      "infrastructure": 77,
-      "growth": 61,
-      "population": 121,
-      "buildings": 90,
-      "treasury": 991084,
-      "employment": 100
-    },
-    {
       "day": 1605,
       "overall": 62,
       "economy": 93,
@@ -24185,19 +24177,58 @@
       "buildings": 93,
       "treasury": 1045122,
       "employment": 100
+    },
+    {
+      "day": 1665,
+      "overall": 70,
+      "economy": 94,
+      "wellbeing": 71,
+      "society": 43,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 121,
+      "buildings": 93,
+      "treasury": 1046190,
+      "employment": 100
+    },
+    {
+      "day": 1666,
+      "overall": 69,
+      "economy": 94,
+      "wellbeing": 69,
+      "society": 43,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 121,
+      "buildings": 93,
+      "treasury": 1047258,
+      "employment": 100
+    },
+    {
+      "day": 1667,
+      "overall": 70,
+      "economy": 93,
+      "wellbeing": 71,
+      "society": 47,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 121,
+      "buildings": 93,
+      "treasury": 1048295,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1662,
-    "overall": 64,
-    "economy": 94,
-    "wellbeing": 68,
-    "society": 21,
+    "day": 1667,
+    "overall": 70,
+    "economy": 93,
+    "wellbeing": 71,
+    "society": 47,
     "infrastructure": 78,
     "growth": 55,
     "population": 121,
     "buildings": 93,
-    "treasury": 1045122,
+    "treasury": 1048295,
     "employment": 100
   },
   "buildable": {
@@ -24244,7 +24275,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 192,
