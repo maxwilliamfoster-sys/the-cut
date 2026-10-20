@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6742,
-  "last_beat_at": "2026-10-20T15:12:12Z",
+  "beat": 6759,
+  "last_beat_at": "2026-10-20T19:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "overcast",
   "heat": {
     "riverside": 5,
-    "delmar": 24,
+    "delmar": 19,
     "terraces": 5,
     "civic": 5
   },
@@ -19430,9 +19430,75 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1489",
+      "from": "theo3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Bench Snow Gaze Regulation",
+      "settled": false,
+      "due_day": 1692,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "lena3",
+        "lena"
+      ],
+      "text": "Lena Brannon and Lena Ferreira are seen arguing in the street loud enough that people stop.",
+      "beat": 6758
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ivy",
+        "nia3"
+      ],
+      "text": "Nia Osei does Ms. Ivy Calloway a favour that costs them something real.",
+      "beat": 6756
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6753
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "sami7"
+      ],
+      "text": "Sami Lindqvist gets word that what they owe is wanted sooner than agreed.",
+      "beat": 6752
+    },
     {
       "id": "fight",
       "heat": {},
@@ -19631,57 +19697,6 @@
       ],
       "text": "Dr. Yusuf Amin gets word that what they owe is wanted sooner than agreed.",
       "beat": 6702
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "amara"
-      ],
-      "text": "Something pays out for Amara Bello. More than expected, which is its own problem.",
-      "beat": 6701
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 6700
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 6699
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 6697
     }
   ],
   "player_queue": [
@@ -19709,7 +19724,7 @@
     "day": "2026-10-20",
     "spent": {
       "fast": 163475,
-      "deep": 74289
+      "deep": 82529
     }
   },
   "silent_runs": 0,
@@ -21655,7 +21670,7 @@
       "because": "Dot Feeney taken to the 9th over Fountain Ledge Nightstand Ban",
       "day_enacted": 930,
       "status": "enacted",
-      "convictions": 160
+      "convictions": 161
     },
     {
       "id": "law09",
@@ -21772,19 +21787,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "blaise4",
-      "name": "Blaise Brannon",
-      "law": "law09",
-      "law_title": "Pocketknife Fidget Ban",
-      "evidence": "Pries open the register drawer with a bent butter knife.",
-      "day": 1638,
-      "trial_day": 1640,
-      "status": "convicted",
-      "witnesses": 12,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "tee",
@@ -22551,6 +22553,19 @@
       "status": "convicted",
       "witnesses": 4,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "theo3",
+      "name": "Theo Bello",
+      "law": "law08",
+      "law_title": "Bench Snow Gaze Regulation",
+      "evidence": "pulls the wool blanket up, staring at the floorboards",
+      "day": 1687,
+      "trial_day": 1689,
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 13,
@@ -22562,7 +22577,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 54
+      "heat": 48
     },
     {
       "a": "elias",
@@ -22576,7 +22591,7 @@
       "b": "dot",
       "since_day": 1305,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "cal2",
@@ -22590,26 +22605,26 @@
       "b": "wes",
       "since_day": 1476,
       "cause": "would not let it go",
-      "heat": 8
+      "heat": 2
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 41
+      "heat": 55
     },
     {
       "a": "june",
       "b": "wes",
       "since_day": 1678,
       "cause": "would not let it go",
-      "heat": 65
+      "heat": 59
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-10-20",
-    "beat": 6742,
+    "beat": 6759,
     "providers": []
   },
   "dead": [
@@ -22963,23 +22978,40 @@
     "id": "amara",
     "marked": 1680
   },
-  "incidents": [
-    {
-      "id": "inc6741-fire-0",
-      "kind": "fire",
-      "effect": "flames",
-      "at": "civic_housing_377",
-      "x": 86,
-      "y": 104,
-      "who": [],
-      "text": "The back wall of Kessler Housing comes down. The rest follows.",
-      "started": 6741,
-      "until": 6744
-    }
-  ],
-  "treasury": 1061363,
+  "incidents": [],
+  "treasury": 1064783,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1689,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1064783
+    },
+    {
+      "day": 1688,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1063643
+    },
+    {
+      "day": 1687,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1062503
+    },
     {
       "day": 1684,
       "wages": 4397,
@@ -23249,36 +23281,6 @@
       "civic": 1710,
       "net": 1181,
       "treasury": 1032873
-    },
-    {
-      "day": 1642,
-      "wages": 4248,
-      "takings": 4640,
-      "tax": 2891,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1181,
-      "treasury": 1031692
-    },
-    {
-      "day": 1641,
-      "wages": 4301,
-      "takings": 4640,
-      "tax": 2908,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1198,
-      "treasury": 1030511
-    },
-    {
-      "day": 1640,
-      "wages": 4335,
-      "takings": 4640,
-      "tax": 2919,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1209,
-      "treasury": 1029313
     }
   ],
   "births": [
@@ -23882,45 +23884,6 @@
   ],
   "score_history": [
     {
-      "day": 1618,
-      "overall": 68,
-      "economy": 93,
-      "wellbeing": 71,
-      "society": 35,
-      "infrastructure": 77,
-      "growth": 61,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1007070,
-      "employment": 100
-    },
-    {
-      "day": 1619,
-      "overall": 67,
-      "economy": 93,
-      "wellbeing": 70,
-      "society": 30,
-      "infrastructure": 77,
-      "growth": 61,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1008272,
-      "employment": 100
-    },
-    {
-      "day": 1620,
-      "overall": 68,
-      "economy": 93,
-      "wellbeing": 70,
-      "society": 39,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1009474,
-      "employment": 100
-    },
-    {
       "day": 1621,
       "overall": 68,
       "economy": 93,
@@ -24504,19 +24467,58 @@
       "buildings": 95,
       "treasury": 1061363,
       "employment": 100
+    },
+    {
+      "day": 1687,
+      "overall": 72,
+      "economy": 93,
+      "wellbeing": 68,
+      "society": 41,
+      "infrastructure": 80,
+      "growth": 89,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1062503,
+      "employment": 100
+    },
+    {
+      "day": 1688,
+      "overall": 72,
+      "economy": 93,
+      "wellbeing": 69,
+      "society": 40,
+      "infrastructure": 80,
+      "growth": 83,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1063643,
+      "employment": 100
+    },
+    {
+      "day": 1689,
+      "overall": 72,
+      "economy": 93,
+      "wellbeing": 69,
+      "society": 44,
+      "infrastructure": 80,
+      "growth": 78,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1064783,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1684,
+    "day": 1689,
     "overall": 72,
     "economy": 93,
-    "wellbeing": 71,
-    "society": 36,
+    "wellbeing": 69,
+    "society": 44,
     "infrastructure": 80,
-    "growth": 89,
+    "growth": 78,
     "population": 123,
     "buildings": 95,
-    "treasury": 1061363,
+    "treasury": 1064783,
     "employment": 100
   },
   "buildable": {
