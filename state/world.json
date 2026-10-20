@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6759,
-  "last_beat_at": "2026-10-20T19:27:12Z",
+  "beat": 6771,
+  "last_beat_at": "2026-10-20T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "fog off the water",
   "heat": {
     "riverside": 5,
-    "delmar": 19,
+    "delmar": 37,
     "terraces": 5,
     "civic": 5
   },
@@ -19443,9 +19443,123 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1490",
+      "from": "blaise",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1695,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1491",
+      "from": "farrah6",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1695,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ade4",
+        "errol3"
+      ],
+      "text": "Errol Brannon does Ade Brannon a favour that costs them something real.",
+      "beat": 6771
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6769
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "errol"
+      ],
+      "text": "Errol Brannon gets word that what they owe is wanted sooner than agreed.",
+      "beat": 6766
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "simone"
+      ],
+      "text": "Something pays out for Simone Adeyemi. More than expected, which is its own problem.",
+      "beat": 6765
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 6764
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6762
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6760
+    },
     {
       "id": "fight",
       "heat": {},
@@ -19609,94 +19723,6 @@
       ],
       "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
       "beat": 6719
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 6718
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "iris",
-        "sami6"
-      ],
-      "text": "Sami Osei does Iris Amadi a favour that costs them something real.",
-      "beat": 6717
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 6715
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "rosa"
-      ],
-      "text": "Something pays out for Rosa Reyes. More than expected, which is its own problem.",
-      "beat": 6714
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 6713
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 6712
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "yusuf"
-      ],
-      "text": "Dr. Yusuf Amin gets word that what they owe is wanted sooner than agreed.",
-      "beat": 6702
     }
   ],
   "player_queue": [
@@ -19719,12 +19745,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1682,
+  "last_gazette_day": 1691,
   "llm_budget": {
     "day": "2026-10-20",
     "spent": {
       "fast": 163475,
-      "deep": 82529
+      "deep": 126564
     }
   },
   "silent_runs": 0,
@@ -20486,8 +20512,8 @@
       "open": false,
       "wings": [],
       "floors": 3,
-      "condition": "ruin",
-      "since_day": 1685,
+      "condition": "rebuilding",
+      "since_day": 1691,
       "built_by": "the city"
     },
     {
@@ -21571,7 +21597,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 153
+      "convictions": 154
     },
     {
       "id": "law04",
@@ -21708,7 +21734,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 279
+      "convictions": 280
     },
     {
       "id": "law11",
@@ -21787,45 +21813,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "keeps his back turned toward Elias at the bench",
-      "day": 1638,
-      "trial_day": 1640,
-      "status": "convicted",
-      "witnesses": 21,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "etta3",
-      "name": "Etta Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "kicks Elias's discarded boot away from the bench leg",
-      "day": 1638,
-      "trial_day": 1640,
-      "status": "convicted",
-      "witnesses": 21,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "maren",
-      "name": "Maren Adeyemi",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "measures coffee grounds carefully into the tin pot",
-      "day": 1639,
-      "trial_day": 1641,
-      "status": "convicted",
-      "witnesses": 7,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "ade4",
@@ -22566,6 +22553,56 @@
       "status": "convicted",
       "witnesses": 17,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "blaise",
+      "name": "Blaise Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "clips hair, watches Cal over shoulder",
+      "day": 1690,
+      "trial_day": 1692,
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "farrah6",
+      "name": "Farrah Lindqvist",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "stirs coffee, glances at sleeping Vic",
+      "day": 1690,
+      "trial_day": 1692,
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "maren3",
+      "name": "Maren Adeyemi",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "Dries a chipped coffee mug with a worn dishtowel.",
+      "day": 1692,
+      "trial_day": 1694,
+      "status": "awaiting_trial",
+      "witnesses": 12
+    },
+    {
+      "id": "c061",
+      "who": "milo3",
+      "name": "Milo Bello",
+      "law": "law02",
+      "law_title": "Counter Glass Prohibition",
+      "evidence": "knocks an empty glass against the tin sink edge.",
+      "day": 1692,
+      "trial_day": 1694,
+      "status": "awaiting_trial",
+      "witnesses": 21
     }
   ],
   "law_pressure": 13,
@@ -22577,7 +22614,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 48
+      "heat": 42
     },
     {
       "a": "elias",
@@ -22591,7 +22628,7 @@
       "b": "dot",
       "since_day": 1305,
       "cause": "would not let it go",
-      "heat": 10
+      "heat": 4
     },
     {
       "a": "cal2",
@@ -22605,21 +22642,21 @@
       "b": "wes",
       "since_day": 1476,
       "cause": "would not let it go",
-      "heat": 2
+      "heat": 0
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 55
+      "heat": 49
     },
     {
       "a": "june",
       "b": "wes",
       "since_day": 1678,
       "cause": "would not let it go",
-      "heat": 59
+      "heat": 53
     }
   ],
   "quota_exhausted_on": {
@@ -22978,10 +23015,55 @@
     "id": "amara",
     "marked": 1680
   },
-  "incidents": [],
-  "treasury": 1064783,
+  "incidents": [
+    {
+      "id": "inc6771-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "milo3"
+      ],
+      "text": "Milo Bello is taken to the 9th over Counter Glass Prohibition.",
+      "started": 6771,
+      "until": 6772
+    }
+  ],
+  "treasury": 1068203,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1692,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1068203
+    },
+    {
+      "day": 1691,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1067063
+    },
+    {
+      "day": 1690,
+      "wages": 4397,
+      "takings": 4645,
+      "tax": 2940,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1140,
+      "treasury": 1065923
+    },
     {
       "day": 1689,
       "wages": 4397,
@@ -23251,36 +23333,6 @@
       "civic": 1710,
       "net": 1181,
       "treasury": 1036416
-    },
-    {
-      "day": 1645,
-      "wages": 4248,
-      "takings": 4640,
-      "tax": 2891,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1181,
-      "treasury": 1035235
-    },
-    {
-      "day": 1644,
-      "wages": 4248,
-      "takings": 4640,
-      "tax": 2891,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1181,
-      "treasury": 1034054
-    },
-    {
-      "day": 1643,
-      "wages": 4248,
-      "takings": 4640,
-      "tax": 2891,
-      "welfare": 0,
-      "civic": 1710,
-      "net": 1181,
-      "treasury": 1032873
     }
   ],
   "births": [
@@ -23884,45 +23936,6 @@
   ],
   "score_history": [
     {
-      "day": 1621,
-      "overall": 68,
-      "economy": 93,
-      "wellbeing": 72,
-      "society": 38,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1010676,
-      "employment": 100
-    },
-    {
-      "day": 1622,
-      "overall": 66,
-      "economy": 93,
-      "wellbeing": 69,
-      "society": 33,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1011878,
-      "employment": 100
-    },
-    {
-      "day": 1625,
-      "overall": 64,
-      "economy": 93,
-      "wellbeing": 70,
-      "society": 22,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 91,
-      "treasury": 1013080,
-      "employment": 100
-    },
-    {
       "day": 1626,
       "overall": 64,
       "economy": 94,
@@ -24506,19 +24519,58 @@
       "buildings": 95,
       "treasury": 1064783,
       "employment": 100
+    },
+    {
+      "day": 1690,
+      "overall": 70,
+      "economy": 93,
+      "wellbeing": 68,
+      "society": 35,
+      "infrastructure": 80,
+      "growth": 78,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1065923,
+      "employment": 100
+    },
+    {
+      "day": 1691,
+      "overall": 70,
+      "economy": 93,
+      "wellbeing": 69,
+      "society": 36,
+      "infrastructure": 80,
+      "growth": 72,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1067063,
+      "employment": 100
+    },
+    {
+      "day": 1692,
+      "overall": 69,
+      "economy": 93,
+      "wellbeing": 69,
+      "society": 35,
+      "infrastructure": 80,
+      "growth": 72,
+      "population": 123,
+      "buildings": 95,
+      "treasury": 1068203,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1689,
-    "overall": 72,
+    "day": 1692,
+    "overall": 69,
     "economy": 93,
     "wellbeing": 69,
-    "society": 44,
+    "society": 35,
     "infrastructure": 80,
-    "growth": 78,
+    "growth": 72,
     "population": 123,
     "buildings": 95,
-    "treasury": 1064783,
+    "treasury": 1068203,
     "employment": 100
   },
   "buildable": {
@@ -24565,7 +24617,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "doing well",
+  "grade": "getting by",
   "standing": 45,
   "forces": {},
   "map_w": 192,
