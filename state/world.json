@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 6824,
-  "last_beat_at": "2026-10-21T11:42:12Z",
+  "beat": 6844,
+  "last_beat_at": "2026-10-21T16:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "overcast",
+  "weather": "clear",
   "heat": {
-    "riverside": 26,
-    "delmar": 48,
-    "terraces": 9,
+    "riverside": 6,
+    "delmar": 46,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -19742,9 +19742,222 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1513",
+      "from": "femi",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1711,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1514",
+      "from": "blaise",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1711,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1515",
+      "from": "lena3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1711,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1516",
+      "from": "gil5",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Unattended Scissors Ban",
+      "settled": false,
+      "due_day": 1713,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1517",
+      "from": "wes",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Public Inquiry About Lyle Ban",
+      "settled": false,
+      "due_day": 1713,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1518",
+      "from": "dev4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Unattended Scissors Ban",
+      "settled": false,
+      "due_day": 1714,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 6844
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "cassius2"
+      ],
+      "text": "Cassius Adeyemi gets word that what they owe is wanted sooner than agreed.",
+      "beat": 6843
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "jonah2",
+        "june"
+      ],
+      "text": "June Kowal does Jonah Bello a favour that costs them something real.",
+      "beat": 6841
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 6840
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 6839
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 6838
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "dez"
+      ],
+      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
+      "beat": 6837
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "ade4"
+      ],
+      "text": "Ade Brannon gets word that what they owe is wanted sooner than agreed.",
+      "beat": 6836
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "nia2"
+      ],
+      "text": "Nia Mbeki gets word that what they owe is wanted sooner than agreed.",
+      "beat": 6835
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 6834
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 6833
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -19859,153 +20072,6 @@
       ],
       "text": "Errol Brannon gets word that what they owe is wanted sooner than agreed.",
       "beat": 6814
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 6801
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "elias",
-        "gil5"
-      ],
-      "text": "Gil Brannon does Elias Reyes a favour that costs them something real.",
-      "beat": 6799
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 6798
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "femi",
-        "marta"
-      ],
-      "text": "Somebody tells Femi Adeyemi that Marta Doyle has been seen talking to police.",
-      "beat": 6797
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 6795
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 6793
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "etta"
-      ],
-      "text": "Etta Adeyemi ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 6791
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 6780
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 6776
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "dot",
-        "june3"
-      ],
-      "text": "Dot Feeney and June Amadi are seen arguing in the street loud enough that people stop.",
-      "beat": 6775
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "nadia",
-        "marta5"
-      ],
-      "text": "Marta Amadi does Nadia Vasquez a favour that costs them something real.",
-      "beat": 6773
     }
   ],
   "player_queue": [
@@ -20028,12 +20094,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1705,
+  "last_gazette_day": 1708,
   "llm_budget": {
     "day": "2026-10-21",
     "spent": {
       "fast": 163544,
-      "deep": 20936
+      "deep": 42833
     }
   },
   "silent_runs": 0,
@@ -21898,7 +21964,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 155
+      "convictions": 156
     },
     {
       "id": "law04",
@@ -21958,7 +22024,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 490
+      "convictions": 491
     },
     {
       "id": "law07",
@@ -22035,7 +22101,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 288
+      "convictions": 289
     },
     {
       "id": "law11",
@@ -22055,7 +22121,7 @@
       "because": "Multiple residents asking about Lyle's affairs",
       "day_enacted": 1046,
       "status": "enacted",
-      "convictions": 70
+      "convictions": 71
     },
     {
       "id": "law12",
@@ -22092,7 +22158,7 @@
       "because": "hair scissors left on table while sleeping",
       "day_enacted": 1151,
       "status": "enacted",
-      "convictions": 18
+      "convictions": 20
     },
     {
       "id": "law14",
@@ -22114,58 +22180,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c062",
-      "who": "elias",
-      "name": "Elias Reyes",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "staring at a coffee mug, avoiding the group",
-      "day": 1655,
-      "trial_day": 1657,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "maren2",
-      "name": "Maren Bello",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "listens to the quiet hum of the block, staying still",
-      "day": 1655,
-      "trial_day": 1657,
-      "status": "convicted",
-      "witnesses": 20,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "tomas6",
-      "name": "Tomas Amadi",
-      "law": "law11",
-      "law_title": "Public Inquiry About Lyle Ban",
-      "evidence": "leans toward Sami, asks about his brother",
-      "day": 1656,
-      "trial_day": 1658,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "tee",
-      "name": "Tariq 'Tee' Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "sips coffee, watches TV silently",
-      "day": 1660,
-      "trial_day": 1662,
-      "status": "convicted",
-      "witnesses": 19,
-      "verdict": "guilty"
-    },
     {
       "id": "c062",
       "who": "farrah3",
@@ -22877,8 +22891,9 @@
       "evidence": "sips coffee, smiles at Simone",
       "day": 1705,
       "trial_day": 1707,
-      "status": "awaiting_trial",
-      "witnesses": 11
+      "status": "convicted",
+      "witnesses": 11,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -22889,8 +22904,9 @@
       "evidence": "shifts his weight, hair clippers silent",
       "day": 1705,
       "trial_day": 1707,
-      "status": "awaiting_trial",
-      "witnesses": 6
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -22901,8 +22917,48 @@
       "evidence": "reconciles ledgers, sighs at errors",
       "day": 1706,
       "trial_day": 1708,
-      "status": "awaiting_trial",
-      "witnesses": 14
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "gil5",
+      "name": "Gil Brannon",
+      "law": "law13",
+      "law_title": "Unattended Scissors Ban",
+      "evidence": "rinses scissors, watches Marta wash dishes",
+      "day": 1708,
+      "trial_day": 1710,
+      "status": "convicted",
+      "witnesses": 1,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "wes",
+      "name": "Wes Doyle",
+      "law": "law11",
+      "law_title": "Public Inquiry About Lyle Ban",
+      "evidence": "whispers to Kwame about Lyle",
+      "day": 1708,
+      "trial_day": 1710,
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dev4",
+      "name": "Dev Brannon",
+      "law": "law13",
+      "law_title": "Unattended Scissors Ban",
+      "evidence": "rinses scissors carefully",
+      "day": 1709,
+      "trial_day": 1711,
+      "status": "convicted",
+      "witnesses": 12,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 13,
@@ -22914,7 +22970,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 66
+      "heat": 60
     },
     {
       "a": "elias",
@@ -22942,27 +22998,29 @@
       "b": "wes",
       "since_day": 1476,
       "cause": "would not let it go",
-      "heat": 14
+      "heat": 8
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 33
+      "heat": 27
     },
     {
       "a": "june",
       "b": "wes",
       "since_day": 1678,
       "cause": "would not let it go",
-      "heat": 57
+      "heat": 51
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-10-21",
-    "beat": 6801,
-    "providers": []
+    "beat": 6839,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -23315,25 +23373,40 @@
     "id": "amara",
     "marked": 1680
   },
-  "incidents": [
-    {
-      "id": "inc6824-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "lena3"
-      ],
-      "text": "Lena Brannon is taken to the 9th over Fountain Ledge Nightstand Ban.",
-      "started": 6824,
-      "until": 6825
-    }
-  ],
-  "treasury": 1077887,
+  "incidents": [],
+  "treasury": 1081541,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1710,
+      "wages": 4444,
+      "takings": 4835,
+      "tax": 3018,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1218,
+      "treasury": 1081541
+    },
+    {
+      "day": 1709,
+      "wages": 4444,
+      "takings": 4835,
+      "tax": 3018,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1218,
+      "treasury": 1080323
+    },
+    {
+      "day": 1708,
+      "wages": 4444,
+      "takings": 4835,
+      "tax": 3018,
+      "welfare": 0,
+      "civic": 1800,
+      "net": 1218,
+      "treasury": 1079105
+    },
     {
       "day": 1705,
       "wages": 4444,
@@ -23603,36 +23676,6 @@
       "civic": 1800,
       "net": 1037,
       "treasury": 1048295
-    },
-    {
-      "day": 1666,
-      "wages": 4269,
-      "takings": 4550,
-      "tax": 2868,
-      "welfare": 0,
-      "civic": 1800,
-      "net": 1068,
-      "treasury": 1047258
-    },
-    {
-      "day": 1665,
-      "wages": 4269,
-      "takings": 4550,
-      "tax": 2868,
-      "welfare": 0,
-      "civic": 1800,
-      "net": 1068,
-      "treasury": 1046190
-    },
-    {
-      "day": 1662,
-      "wages": 4269,
-      "takings": 4550,
-      "tax": 2868,
-      "welfare": 0,
-      "civic": 1800,
-      "net": 1068,
-      "treasury": 1045122
     }
   ],
   "births": [
@@ -24236,45 +24279,6 @@
   ],
   "score_history": [
     {
-      "day": 1636,
-      "overall": 68,
-      "economy": 94,
-      "wellbeing": 72,
-      "society": 35,
-      "infrastructure": 77,
-      "growth": 60,
-      "population": 121,
-      "buildings": 92,
-      "treasury": 1024348,
-      "employment": 100
-    },
-    {
-      "day": 1637,
-      "overall": 66,
-      "economy": 94,
-      "wellbeing": 72,
-      "society": 27,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 92,
-      "treasury": 1025600,
-      "employment": 100
-    },
-    {
-      "day": 1638,
-      "overall": 66,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 27,
-      "infrastructure": 77,
-      "growth": 55,
-      "population": 121,
-      "buildings": 92,
-      "treasury": 1026852,
-      "employment": 100
-    },
-    {
       "day": 1639,
       "overall": 63,
       "economy": 94,
@@ -24858,19 +24862,58 @@
       "buildings": 97,
       "treasury": 1077887,
       "employment": 100
+    },
+    {
+      "day": 1708,
+      "overall": 71,
+      "economy": 94,
+      "wellbeing": 66,
+      "society": 34,
+      "infrastructure": 83,
+      "growth": 88,
+      "population": 124,
+      "buildings": 97,
+      "treasury": 1079105,
+      "employment": 100
+    },
+    {
+      "day": 1709,
+      "overall": 70,
+      "economy": 94,
+      "wellbeing": 66,
+      "society": 30,
+      "infrastructure": 83,
+      "growth": 88,
+      "population": 124,
+      "buildings": 97,
+      "treasury": 1080323,
+      "employment": 100
+    },
+    {
+      "day": 1710,
+      "overall": 72,
+      "economy": 94,
+      "wellbeing": 68,
+      "society": 39,
+      "infrastructure": 83,
+      "growth": 83,
+      "population": 124,
+      "buildings": 97,
+      "treasury": 1081541,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1705,
-    "overall": 71,
+    "day": 1710,
+    "overall": 72,
     "economy": 94,
-    "wellbeing": 76,
-    "society": 21,
+    "wellbeing": 68,
+    "society": 39,
     "infrastructure": 83,
-    "growth": 88,
+    "growth": 83,
     "population": 124,
     "buildings": 97,
-    "treasury": 1077887,
+    "treasury": 1081541,
     "employment": 100
   },
   "buildable": {
