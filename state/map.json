@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 192,
   "h": 168,
-  "version": "75d4d289ef06",
+  "version": "9db80af127b1",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -161,11 +161,11 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====...gggggggg.............====........................====........................====............====............................====....................====....................",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggggggggggggggggg.,:,,.ggggggggggggggggggg",
-    "ggggggggggg.,,,,.gg########gggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggg##########gg.,,,,.ggggggggggggggggggg",
-    "ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggg#ffffffff#gg.,,,,.ggggggggggggggggggg",
-    "ggggggggggg.,:,,.gg#ffffff#gggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggg##########gggggggggggg.,:,,.gggggg#ffffffff#gg.,:,,.gggg##########ggggg",
-    "ggggggggggg.,:,,.gg#ffffff#gggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggg#ffffffff#gggggggggggg.,:,,.gggggg#ffffffff#gg.,:,,.gggg#ffffffff#ggggg",
-    "ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg##########gggggggg.,,,,.gg#######g.,,,,.gggg#ffffffff#gggggggggggg.,,,,.gggggg#ffffffff#gg.,,,,.gggg#ffffffff#ggggg",
+    "ggggggggggg.,,,,.gg########gggggggggggg.,,,,.gggggggg#########ggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggg##########gg.,,,,.ggggggggggggggggggg",
+    "ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggg#fffffff#ggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggg#ffffffff#gg.,,,,.ggggggggggggggggggg",
+    "ggggggggggg.,:,,.gg#ffffff#gggggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggg##########gggggggggggg.,:,,.gggggg#ffffffff#gg.,:,,.gggg##########ggggg",
+    "ggggggggggg.,:,,.gg#ffffff#gggggggggggg.,:,,.gggggggg#fffffff#ggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg.,:,,.gggg#ffffffff#gggggggggggg.,:,,.gggggg#ffffffff#gg.,:,,.gggg#ffffffff#ggggg",
+    "ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggg####D####ggggg.,,,,.gggg##########gggggggg.,,,,.gg#######g.,,,,.gggg#ffffffff#gggggggggggg.,,,,.gggggg#ffffffff#gg.,,,,.gggg#ffffffff#ggggg",
     "ggggggggggg.,,,,.gg###D####gggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggg#ffffffff#gggggggg.,,,,.gg#fffff#g.,,,,.gggg#ffffffff#gggggggggggg.,,,,.gggggg####D#####gg.,,,,.gggg#ffffffff#ggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg##########gg.,:,,.gggg#ffffffff#gggggggg.,:,,.gg#fffff#g.,:,,.gggg#ffffffff#gggggggggggg.,:,,.gggggggggggggggggg.,:,,.gggg#ffffffff#ggggg",
     "ggggggggggg.,:,,.gggggggggggggggggggggg.,:,,.gggggggggg#ffffffff#gg.,:,,.gggg#ffffffff#gggggggg.,:,,.gg#fffff#g.,:,,.gggg####D#####gggggggggggg.,:,,.gggggggggggggggggg.,:,,.gggg####D#####ggggg",
@@ -7575,6 +7575,71 @@
           "type": "plant",
           "x": 183,
           "y": 84
+        }
+      ]
+    },
+    "new_business_1752": {
+      "id": "new_business_1752",
+      "name": "Delmar Market",
+      "district": "flats",
+      "rect": [
+        53,
+        150,
+        9,
+        5
+      ],
+      "rects": [
+        [
+          53,
+          150,
+          9,
+          5
+        ]
+      ],
+      "kind": "business",
+      "style": "shopfront",
+      "floors": 1,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        57,
+        153
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 59,
+          "y": 153
+        },
+        {
+          "type": "till",
+          "x": 59,
+          "y": 151
+        },
+        {
+          "type": "shelf",
+          "x": 60,
+          "y": 152
+        },
+        {
+          "type": "shelf",
+          "x": 55,
+          "y": 152
+        },
+        {
+          "type": "shelf",
+          "x": 55,
+          "y": 151
+        },
+        {
+          "type": "crate",
+          "x": 54,
+          "y": 152
+        },
+        {
+          "type": "plant",
+          "x": 58,
+          "y": 151
         }
       ]
     }
