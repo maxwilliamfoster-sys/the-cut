@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7119,
-  "last_beat_at": "2026-10-24T13:27:12Z",
+  "beat": 7133,
+  "last_beat_at": "2026-10-24T16:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 9,
-    "terraces": 5,
+    "delmar": 8,
+    "terraces": 9,
     "civic": 5
   },
   "turf": {
@@ -21367,9 +21367,138 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1638",
+      "from": "dev",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1785,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "errol8",
+        "milo2"
+      ],
+      "text": "Milo Adeyemi does Errol Doyle a favour that costs them something real.",
+      "beat": 7131
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 7130
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 7129
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "kwame",
+        "kwame6"
+      ],
+      "text": "Kwame Nakamura does Kwame Osei a favour that costs them something real.",
+      "beat": 7127
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "lena6"
+      ],
+      "text": "Lena Ferreira gets word that what they owe is wanted sooner than agreed.",
+      "beat": 7126
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "jonah2"
+      ],
+      "text": "Something pays out for Jonah Bello. More than expected, which is its own problem.",
+      "beat": 7125
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 7124
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "lena4"
+      ],
+      "text": "Something pays out for Lena Bright. More than expected, which is its own problem.",
+      "beat": 7123
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "kwame3",
+        "junie"
+      ],
+      "text": "Kwame Bright and Junie Marsh are seen arguing in the street loud enough that people stop.",
+      "beat": 7122
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -21514,121 +21643,6 @@
       ],
       "text": "Something pays out for Dev Nakamura. More than expected, which is its own problem.",
       "beat": 7098
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 7095
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "clemmie",
-        "iris2"
-      ],
-      "text": "Clemmie Bello and Iris Lindqvist are seen arguing in the street loud enough that people stop.",
-      "beat": 7094
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7093
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "gil4",
-        "marta2"
-      ],
-      "text": "Gil Bright and Marta Ferreira are seen arguing in the street loud enough that people stop.",
-      "beat": 7092
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "jonah4"
-      ],
-      "text": "Jonah Bello gets word that what they owe is wanted sooner than agreed.",
-      "beat": 7085
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7084
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7083
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "ade4",
-        "sami5"
-      ],
-      "text": "Sami Mbeki does Ade Brannon a favour that costs them something real.",
-      "beat": 7082
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "odette2",
-        "odette3"
-      ],
-      "text": "Odette Osei and Odette Amadi are seen arguing in the street loud enough that people stop.",
-      "beat": 7081
     }
   ],
   "player_queue": [
@@ -21651,12 +21665,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1775,
+  "last_gazette_day": 1782,
   "llm_budget": {
     "day": "2026-10-24",
     "spent": {
       "fast": 164556,
-      "deep": 44163
+      "deep": 60155
     }
   },
   "silent_runs": 0,
@@ -23572,7 +23586,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 169
+      "convictions": 170
     },
     {
       "id": "law04",
@@ -23788,19 +23802,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "sami2",
-      "name": "Sami Serrano",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "staring at sleeping faces",
-      "day": 1740,
-      "trial_day": 1742,
-      "status": "convicted",
-      "witnesses": 6,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "brennan",
@@ -24567,6 +24568,19 @@
       "status": "convicted",
       "witnesses": 6,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dev",
+      "name": "Dev Lindqvist",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "snips hair, hums low",
+      "day": 1780,
+      "trial_day": 1782,
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 14,
@@ -24578,7 +24592,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 82
+      "heat": 76
     },
     {
       "a": "elias",
@@ -24625,8 +24639,11 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-10-24",
-    "beat": 7119,
-    "providers": []
+    "beat": 7124,
+    "providers": [
+      "gemini",
+      "groq"
+    ]
   },
   "dead": [
     {
@@ -25004,12 +25021,43 @@
   "funeral": {
     "day": 1781,
     "for": "Sami Amadi",
-    "id": "sami"
+    "id": "sami",
+    "marked": 1781
   },
   "incidents": [],
-  "treasury": 1140797,
+  "treasury": 1144277,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1782,
+      "wages": 4245,
+      "takings": 5125,
+      "tax": 3050,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1160,
+      "treasury": 1144277
+    },
+    {
+      "day": 1781,
+      "wages": 4245,
+      "takings": 5125,
+      "tax": 3050,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1160,
+      "treasury": 1143117
+    },
+    {
+      "day": 1780,
+      "wages": 4245,
+      "takings": 5125,
+      "tax": 3050,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1160,
+      "treasury": 1141957
+    },
     {
       "day": 1779,
       "wages": 4345,
@@ -25279,36 +25327,6 @@
       "civic": 1890,
       "net": 1161,
       "treasury": 1109804
-    },
-    {
-      "day": 1741,
-      "wages": 4444,
-      "takings": 4935,
-      "tax": 3051,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1161,
-      "treasury": 1108643
-    },
-    {
-      "day": 1740,
-      "wages": 4444,
-      "takings": 4935,
-      "tax": 3051,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1161,
-      "treasury": 1107482
-    },
-    {
-      "day": 1739,
-      "wages": 4444,
-      "takings": 4935,
-      "tax": 3051,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1161,
-      "treasury": 1106321
     }
   ],
   "births": [
@@ -25912,45 +25930,6 @@
   ],
   "score_history": [
     {
-      "day": 1713,
-      "overall": 68,
-      "economy": 94,
-      "wellbeing": 69,
-      "society": 20,
-      "infrastructure": 83,
-      "growth": 82,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1084103,
-      "employment": 100
-    },
-    {
-      "day": 1714,
-      "overall": 71,
-      "economy": 94,
-      "wellbeing": 72,
-      "society": 31,
-      "infrastructure": 83,
-      "growth": 77,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1085384,
-      "employment": 100
-    },
-    {
-      "day": 1715,
-      "overall": 71,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 35,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1086665,
-      "employment": 100
-    },
-    {
       "day": 1716,
       "overall": 68,
       "economy": 94,
@@ -26534,19 +26513,58 @@
       "buildings": 100,
       "treasury": 1140797,
       "employment": 100
+    },
+    {
+      "day": 1780,
+      "overall": 66,
+      "economy": 94,
+      "wellbeing": 59,
+      "society": 41,
+      "infrastructure": 84,
+      "growth": 49,
+      "population": 123,
+      "buildings": 100,
+      "treasury": 1141957,
+      "employment": 100
+    },
+    {
+      "day": 1781,
+      "overall": 66,
+      "economy": 94,
+      "wellbeing": 59,
+      "society": 41,
+      "infrastructure": 84,
+      "growth": 49,
+      "population": 123,
+      "buildings": 100,
+      "treasury": 1143117,
+      "employment": 100
+    },
+    {
+      "day": 1782,
+      "overall": 66,
+      "economy": 94,
+      "wellbeing": 55,
+      "society": 44,
+      "infrastructure": 84,
+      "growth": 49,
+      "population": 123,
+      "buildings": 100,
+      "treasury": 1144277,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1779,
+    "day": 1782,
     "overall": 66,
     "economy": 94,
     "wellbeing": 55,
-    "society": 45,
+    "society": 44,
     "infrastructure": 84,
     "growth": 49,
     "population": 123,
     "buildings": 100,
-    "treasury": 1140797,
+    "treasury": 1144277,
     "employment": 100
   },
   "buildable": {
