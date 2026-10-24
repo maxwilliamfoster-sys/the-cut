@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7133,
-  "last_beat_at": "2026-10-24T16:57:12Z",
+  "beat": 7142,
+  "last_beat_at": "2026-10-24T19:12:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 8,
-    "terraces": 9,
+    "delmar": 25,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -21380,9 +21380,100 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1639",
+      "from": "rosa4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1788,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1640",
+      "from": "dev4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Unattended Scissors Ban",
+      "settled": false,
+      "due_day": 1788,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1641",
+      "from": "gil2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1788,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 7141
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "theo",
+        "nia3"
+      ],
+      "text": "Somebody tells Theo Bello that Nia Osei has been seen talking to police.",
+      "beat": 7140
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "lena6",
+        "rosa2"
+      ],
+      "text": "Somebody tells Lena Ferreira that Rosa Serrano has been seen talking to police.",
+      "beat": 7139
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 7138
+    },
     {
       "id": "kindness",
       "heat": {},
@@ -21592,57 +21683,6 @@
       ],
       "text": "Kwame Nakamura ends up at the clinic. The paperwork says one thing; the injury says another.",
       "beat": 7108
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7103
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7102
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 7101
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "dev2"
-      ],
-      "text": "Something pays out for Dev Nakamura. More than expected, which is its own problem.",
-      "beat": 7098
     }
   ],
   "player_queue": [
@@ -21665,12 +21705,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1782,
+  "last_gazette_day": 1784,
   "llm_budget": {
     "day": "2026-10-24",
     "spent": {
       "fast": 164556,
-      "deep": 60155
+      "deep": 89817
     }
   },
   "silent_runs": 0,
@@ -23526,6 +23566,23 @@
       "floors": 1,
       "condition": "standing",
       "since_day": 1752
+    },
+    {
+      "id": "new_business_1784",
+      "name": "Kessler Market",
+      "district": "flats",
+      "x": 133,
+      "y": 152,
+      "w": 9,
+      "h": 5,
+      "door": "S",
+      "kind": "business",
+      "style": "shopfront",
+      "open": false,
+      "wings": [],
+      "floors": 1,
+      "condition": "standing",
+      "since_day": 1784
     }
   ],
   "laws": [
@@ -23586,7 +23643,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 170
+      "convictions": 172
     },
     {
       "id": "law04",
@@ -23780,7 +23837,7 @@
       "because": "hair scissors left on table while sleeping",
       "day_enacted": 1151,
       "status": "enacted",
-      "convictions": 25
+      "convictions": 26
     },
     {
       "id": "law14",
@@ -23802,97 +23859,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "brennan",
-      "name": "Sgt. Hal Brennan",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "sips bad coffee, grimaces",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 9,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "marta6",
-      "name": "Marta Kowal",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "tills, eyes on ledger",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "dev",
-      "name": "Dev Lindqvist",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "sits, staring at the back room door",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 4,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "kwame2",
-      "name": "Kwame Doyle",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "sits, turning the page of an old ledger",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "errol8",
-      "name": "Errol Doyle",
-      "law": "law07",
-      "law_title": "Block Bedtime Ban",
-      "evidence": "sleeps in Terrace Block B",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 19,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "etta",
-      "name": "Etta Adeyemi",
-      "law": "law07",
-      "law_title": "Block Bedtime Ban",
-      "evidence": "drinks water at Terrace Block A",
-      "day": 1741,
-      "trial_day": 1743,
-      "status": "convicted",
-      "witnesses": 10,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "farrah3",
-      "name": "Farrah Mbeki",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "wakes, checks ledger, ignores rain",
-      "day": 1744,
-      "trial_day": 1746,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "etta2",
@@ -24581,18 +24547,129 @@
       "status": "convicted",
       "witnesses": 5,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "rosa4",
+      "name": "Rosa Amadi",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "adjusts hair clipper, humming quietly",
+      "day": 1783,
+      "trial_day": 1785,
+      "status": "convicted",
+      "witnesses": 11,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c062",
+      "who": "dev4",
+      "name": "Dev Brannon",
+      "law": "law13",
+      "law_title": "Unattended Scissors Ban",
+      "evidence": "rinses scissors, glances at Rosa",
+      "day": 1783,
+      "trial_day": 1785,
+      "status": "convicted",
+      "witnesses": 11,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "cal4",
+      "name": "Cal Mbeki",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep, breathing shallowly",
+      "day": 1783,
+      "trial_day": 1785,
+      "status": "dropped",
+      "witnesses": 7
+    },
+    {
+      "id": "c062",
+      "who": "gil2",
+      "name": "Gil Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "asleep, hair clippers silent beside him",
+      "day": 1783,
+      "trial_day": 1785,
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "iris5",
+      "name": "Iris Nakamura",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "stirs coffee slowly",
+      "day": 1784,
+      "trial_day": 1786,
+      "status": "awaiting_trial",
+      "witnesses": 8
+    },
+    {
+      "id": "c061",
+      "who": "sami5",
+      "name": "Sami Mbeki",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "dozes, hair clippers silent on the shelf",
+      "day": 1784,
+      "trial_day": 1786,
+      "status": "awaiting_trial",
+      "witnesses": 3
+    },
+    {
+      "id": "c061",
+      "who": "lena3",
+      "name": "Lena Brannon",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "checks ledger for missing receipts",
+      "day": 1785,
+      "trial_day": 1787,
+      "status": "awaiting_trial",
+      "witnesses": 13
+    },
+    {
+      "id": "c061",
+      "who": "sami6",
+      "name": "Sami Osei",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "writes numbers in ledger, sighs",
+      "day": 1785,
+      "trial_day": 1787,
+      "status": "awaiting_trial",
+      "witnesses": 3
+    },
+    {
+      "id": "c062",
+      "who": "tomas6",
+      "name": "Tomas Amadi",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "cuts hair, glances at Vic",
+      "day": 1785,
+      "trial_day": 1787,
+      "status": "awaiting_trial",
+      "witnesses": 7
     }
   ],
   "law_pressure": 14,
   "last_law_day": 1212,
-  "last_expansion_day": 1752,
+  "last_expansion_day": 1784,
   "feuds": [
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 76
+      "heat": 72
     },
     {
       "a": "elias",
@@ -24646,6 +24723,13 @@
     ]
   },
   "dead": [
+    {
+      "id": "cal4",
+      "name": "Cal Mbeki",
+      "day": 1784,
+      "cause": "heart",
+      "where": "9th Precinct"
+    },
     {
       "id": "sami",
       "name": "Sami Amadi",
@@ -25019,15 +25103,63 @@
     }
   ],
   "funeral": {
-    "day": 1781,
-    "for": "Sami Amadi",
-    "id": "sami",
-    "marked": 1781
+    "day": 1786,
+    "for": "Cal Mbeki",
+    "id": "cal4"
   },
-  "incidents": [],
-  "treasury": 1144277,
+  "incidents": [
+    {
+      "id": "inc7142-arrest-1",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "tomas6"
+      ],
+      "text": "Tomas Amadi is taken to the 9th over Public Haircut Ban.",
+      "started": 7142,
+      "until": 7143
+    },
+    {
+      "id": "inc7142-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "sami6"
+      ],
+      "text": "Sami Osei is taken to the 9th over Fountain Ledge Nightstand Ban.",
+      "started": 7142,
+      "until": 7143
+    }
+  ],
+  "treasury": 1146659,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1784,
+      "wages": 4245,
+      "takings": 5315,
+      "tax": 3112,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1222,
+      "treasury": 1146659
+    },
+    {
+      "day": 1783,
+      "wages": 4245,
+      "takings": 5125,
+      "tax": 3050,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1160,
+      "treasury": 1145437
+    },
     {
       "day": 1782,
       "wages": 4245,
@@ -25307,26 +25439,6 @@
       "civic": 1890,
       "net": 1161,
       "treasury": 1112126
-    },
-    {
-      "day": 1745,
-      "wages": 4444,
-      "takings": 4935,
-      "tax": 3051,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1161,
-      "treasury": 1110965
-    },
-    {
-      "day": 1744,
-      "wages": 4444,
-      "takings": 4935,
-      "tax": 3051,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1161,
-      "treasury": 1109804
     }
   ],
   "births": [
@@ -25930,32 +26042,6 @@
   ],
   "score_history": [
     {
-      "day": 1716,
-      "overall": 68,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 23,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1087946,
-      "employment": 100
-    },
-    {
-      "day": 1717,
-      "overall": 66,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 15,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1089227,
-      "employment": 100
-    },
-    {
       "day": 1718,
       "overall": 63,
       "economy": 94,
@@ -26552,19 +26638,45 @@
       "buildings": 100,
       "treasury": 1144277,
       "employment": 100
+    },
+    {
+      "day": 1783,
+      "overall": 63,
+      "economy": 94,
+      "wellbeing": 59,
+      "society": 29,
+      "infrastructure": 84,
+      "growth": 44,
+      "population": 123,
+      "buildings": 100,
+      "treasury": 1145437,
+      "employment": 100
+    },
+    {
+      "day": 1784,
+      "overall": 60,
+      "economy": 95,
+      "wellbeing": 56,
+      "society": 20,
+      "infrastructure": 84,
+      "growth": 43,
+      "population": 122,
+      "buildings": 101,
+      "treasury": 1146659,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1782,
-    "overall": 66,
-    "economy": 94,
-    "wellbeing": 55,
-    "society": 44,
+    "day": 1784,
+    "overall": 60,
+    "economy": 95,
+    "wellbeing": 56,
+    "society": 20,
     "infrastructure": 84,
-    "growth": 49,
-    "population": 123,
-    "buildings": 100,
-    "treasury": 1144277,
+    "growth": 43,
+    "population": 122,
+    "buildings": 101,
+    "treasury": 1146659,
     "employment": 100
   },
   "buildable": {
