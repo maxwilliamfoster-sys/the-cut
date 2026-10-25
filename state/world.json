@@ -1,15 +1,15 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7161,
-  "last_beat_at": "2026-10-24T23:57:12Z",
+  "beat": 7180,
+  "last_beat_at": "2026-10-25T04:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "rain",
   "heat": {
     "riverside": 5,
-    "delmar": 14,
+    "delmar": 5,
     "terraces": 5,
-    "civic": 5
+    "civic": 8
   },
   "turf": {
     "riverside": "crew",
@@ -21523,9 +21523,195 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1650",
+      "from": "kwame2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1795,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1651",
+      "from": "maren2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1798,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1652",
+      "from": "maren3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1798,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1653",
+      "from": "milo3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1798,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1654",
+      "from": "kwame3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1798,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "clemmie",
+        "lena5"
+      ],
+      "text": "Lena Petrakis does Clemmie Bello a favour that costs them something real.",
+      "beat": 7179
+    },
+    {
+      "id": "hospital",
+      "heat": {
+        "civic": 5
+      },
+      "mood": {
+        "energy": -20,
+        "happiness": -12,
+        "fear": 10
+      },
+      "targets": [
+        "rufus4"
+      ],
+      "text": "Rufus Bello ends up at the clinic. The paperwork says one thing; the injury says another.",
+      "beat": 7178
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 7177
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "rufus3"
+      ],
+      "text": "Something pays out for Rufus Bello. More than expected, which is its own problem.",
+      "beat": 7176
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "cassius"
+      ],
+      "text": "Cassius Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 7175
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "kwame6",
+        "cass"
+      ],
+      "text": "Somebody tells Kwame Nakamura that Cass Deveaux has been seen talking to police.",
+      "beat": 7174
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "cal5",
+        "nia"
+      ],
+      "text": "Somebody tells Cal Doyle that Nia Nakamura has been seen talking to police.",
+      "beat": 7171
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "kohl"
+      ],
+      "text": "Ofc. Brady Kohl pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 7170
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "cal6",
+        "amara"
+      ],
+      "text": "Cal Ferreira and Amara Bello are seen arguing in the street loud enough that people stop.",
+      "beat": 7169
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -21663,124 +21849,6 @@
       "targets": [],
       "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
       "beat": 7148
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7143
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7141
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "theo",
-        "nia3"
-      ],
-      "text": "Somebody tells Theo Bello that Nia Osei has been seen talking to police.",
-      "beat": 7140
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "lena6",
-        "rosa2"
-      ],
-      "text": "Somebody tells Lena Ferreira that Rosa Serrano has been seen talking to police.",
-      "beat": 7139
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7138
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "errol8",
-        "milo2"
-      ],
-      "text": "Milo Adeyemi does Errol Doyle a favour that costs them something real.",
-      "beat": 7131
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7130
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7129
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "kwame",
-        "kwame6"
-      ],
-      "text": "Kwame Nakamura does Kwame Osei a favour that costs them something real.",
-      "beat": 7127
     }
   ],
   "player_queue": [
@@ -21803,12 +21871,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1789,
+  "last_gazette_day": 1794,
   "llm_budget": {
     "day": "2026-10-25",
     "spent": {
-      "fast": 47749,
-      "deep": 1754
+      "fast": 108801,
+      "deep": 4332
     }
   },
   "silent_runs": 0,
@@ -23741,7 +23809,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 176
+      "convictions": 177
     },
     {
       "id": "law04",
@@ -23801,7 +23869,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 526
+      "convictions": 527
     },
     {
       "id": "law07",
@@ -23878,7 +23946,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 306
+      "convictions": 309
     },
     {
       "id": "law11",
@@ -23957,71 +24025,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "kwame2",
-      "name": "Kwame Doyle",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "writes ledger, ignoring rain",
-      "day": 1749,
-      "trial_day": 1751,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "milo3",
-      "name": "Milo Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirs coffee, looks around",
-      "day": 1750,
-      "trial_day": 1752,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "nyla",
-      "name": "Nyla Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "mashes coffee, eyes on others",
-      "day": 1750,
-      "trial_day": 1752,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c063",
-      "who": "rufus",
-      "name": "Rufus Bello",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirred coffee, calm smile",
-      "day": 1750,
-      "trial_day": 1752,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "cal6",
-      "name": "Cal Ferreira",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "stands behind till",
-      "day": 1750,
-      "trial_day": 1752,
-      "status": "convicted",
-      "witnesses": 13,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "iris5",
@@ -24732,8 +24735,73 @@
       "evidence": "stands at the door, watching the crowd",
       "day": 1789,
       "trial_day": 1791,
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "maren2",
+      "name": "Maren Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "makes coffee, looks around",
+      "day": 1793,
+      "trial_day": 1795,
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c062",
+      "who": "maren3",
+      "name": "Maren Adeyemi",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "makes coffee, watches the door",
+      "day": 1793,
+      "trial_day": 1795,
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c063",
+      "who": "milo3",
+      "name": "Milo Bello",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "makes coffee, watches the door",
+      "day": 1793,
+      "trial_day": 1795,
+      "status": "convicted",
+      "witnesses": 17,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "kwame3",
+      "name": "Kwame Bright",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "snaps a haircut, listening to rain outside",
+      "day": 1793,
+      "trial_day": 1795,
+      "status": "convicted",
+      "witnesses": 2,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "farrah6",
+      "name": "Farrah Lindqvist",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "finishes a client’s cut, wipes the chair",
+      "day": 1794,
+      "trial_day": 1796,
       "status": "awaiting_trial",
-      "witnesses": 14
+      "witnesses": 8
     }
   ],
   "law_pressure": 14,
@@ -24745,7 +24813,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 82
+      "heat": 94
     },
     {
       "a": "elias",
@@ -25184,9 +25252,39 @@
     "marked": 1786
   },
   "incidents": [],
-  "treasury": 1152836,
+  "treasury": 1156586,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1794,
+      "wages": 4332,
+      "takings": 5315,
+      "tax": 3140,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1250,
+      "treasury": 1156586
+    },
+    {
+      "day": 1793,
+      "wages": 4332,
+      "takings": 5315,
+      "tax": 3140,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1250,
+      "treasury": 1155336
+    },
+    {
+      "day": 1792,
+      "wages": 4332,
+      "takings": 5315,
+      "tax": 3140,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1250,
+      "treasury": 1154086
+    },
     {
       "day": 1789,
       "wages": 4332,
@@ -25456,36 +25554,6 @@
       "civic": 1890,
       "net": 1224,
       "treasury": 1121729
-    },
-    {
-      "day": 1758,
-      "wages": 4444,
-      "takings": 5125,
-      "tax": 3114,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1224,
-      "treasury": 1120505
-    },
-    {
-      "day": 1756,
-      "wages": 4444,
-      "takings": 5125,
-      "tax": 3114,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1224,
-      "treasury": 1119281
-    },
-    {
-      "day": 1755,
-      "wages": 4444,
-      "takings": 5125,
-      "tax": 3114,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1224,
-      "treasury": 1118057
     }
   ],
   "births": [
@@ -26089,45 +26157,6 @@
   ],
   "score_history": [
     {
-      "day": 1728,
-      "overall": 71,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 37,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1096913,
-      "employment": 100
-    },
-    {
-      "day": 1729,
-      "overall": 65,
-      "economy": 94,
-      "wellbeing": 79,
-      "society": 0,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 98,
-      "treasury": 1098194,
-      "employment": 100
-    },
-    {
-      "day": 1730,
-      "overall": 62,
-      "economy": 94,
-      "wellbeing": 68,
-      "society": 0,
-      "infrastructure": 83,
-      "growth": 71,
-      "population": 124,
-      "buildings": 99,
-      "treasury": 1099355,
-      "employment": 100
-    },
-    {
       "day": 1733,
       "overall": 71,
       "economy": 94,
@@ -26711,19 +26740,58 @@
       "buildings": 101,
       "treasury": 1152836,
       "employment": 100
+    },
+    {
+      "day": 1792,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 71,
+      "society": 45,
+      "infrastructure": 83,
+      "growth": 55,
+      "population": 124,
+      "buildings": 101,
+      "treasury": 1154086,
+      "employment": 100
+    },
+    {
+      "day": 1793,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 71,
+      "society": 29,
+      "infrastructure": 83,
+      "growth": 55,
+      "population": 124,
+      "buildings": 101,
+      "treasury": 1155336,
+      "employment": 100
+    },
+    {
+      "day": 1794,
+      "overall": 68,
+      "economy": 95,
+      "wellbeing": 71,
+      "society": 25,
+      "infrastructure": 83,
+      "growth": 67,
+      "population": 124,
+      "buildings": 101,
+      "treasury": 1156586,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1789,
-    "overall": 67,
+    "day": 1794,
+    "overall": 68,
     "economy": 95,
-    "wellbeing": 65,
-    "society": 33,
+    "wellbeing": 71,
+    "society": 25,
     "infrastructure": 83,
-    "growth": 55,
+    "growth": 67,
     "population": 124,
     "buildings": 101,
-    "treasury": 1152836,
+    "treasury": 1156586,
     "employment": 100
   },
   "buildable": {
