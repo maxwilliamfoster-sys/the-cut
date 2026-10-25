@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7241,
-  "last_beat_at": "2026-10-25T19:57:12Z",
+  "beat": 7251,
+  "last_beat_at": "2026-10-25T22:27:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "overcast",
   "heat": {
-    "riverside": 20,
-    "delmar": 30,
+    "riverside": 10,
+    "delmar": 26,
     "terraces": 5,
     "civic": 5
   },
@@ -21913,9 +21913,98 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1680",
+      "from": "iris7",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Public Inquiry About Lyle Ban",
+      "settled": false,
+      "due_day": 1815,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1681",
+      "from": "jonah5",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1815,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "eviction",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "happiness": -8
+      },
+      "targets": [],
+      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
+      "beat": 7250
+    },
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 7249
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "priya",
+        "nadia"
+      ],
+      "text": "Somebody tells Ms. Priya Raman that Nadia Vasquez has been seen talking to police.",
+      "beat": 7248
+    },
+    {
+      "id": "snitch_rumour",
+      "heat": {},
+      "mood": {
+        "stress": 12,
+        "fear": 10
+      },
+      "targets": [
+        "cassius",
+        "kwame4"
+      ],
+      "text": "Somebody tells Cassius Reyes that Kwame Nakamura has been seen talking to police.",
+      "beat": 7247
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 7246
+    },
     {
       "id": "inspection",
       "heat": {
@@ -22102,72 +22191,6 @@
       "targets": [],
       "text": "A car nobody recognises has been parked on the same corner for three days.",
       "beat": 7211
-    },
-    {
-      "id": "money_found",
-      "heat": {},
-      "mood": {
-        "happiness": 15,
-        "energy": 6
-      },
-      "targets": [
-        "ade6"
-      ],
-      "text": "Something pays out for Ade Bright. More than expected, which is its own problem.",
-      "beat": 7210
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "cal"
-      ],
-      "text": "Cal Osei gets word that what they owe is wanted sooner than agreed.",
-      "beat": 7209
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7208
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 7207
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 7206
     }
   ],
   "player_queue": [
@@ -22190,12 +22213,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1809,
+  "last_gazette_day": 1810,
   "llm_budget": {
     "day": "2026-10-25",
     "spent": {
       "fast": 164171,
-      "deep": 84758
+      "deep": 94588
     }
   },
   "silent_runs": 0,
@@ -24282,7 +24305,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 311
+      "convictions": 312
     },
     {
       "id": "law11",
@@ -24302,7 +24325,7 @@
       "because": "Multiple residents asking about Lyle's affairs",
       "day_enacted": 1046,
       "status": "enacted",
-      "convictions": 76
+      "convictions": 77
     },
     {
       "id": "law12",
@@ -25123,8 +25146,9 @@
       "evidence": "tallies float, asks Gil",
       "day": 1810,
       "trial_day": 1812,
-      "status": "awaiting_trial",
-      "witnesses": 14
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
     },
     {
       "id": "c062",
@@ -25135,8 +25159,9 @@
       "evidence": "pours coffee, talks to Etta",
       "day": 1810,
       "trial_day": 1812,
-      "status": "awaiting_trial",
-      "witnesses": 6
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 14,
@@ -25148,7 +25173,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 90
+      "heat": 84
     },
     {
       "a": "elias",
@@ -25176,7 +25201,7 @@
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 22
+      "heat": 16
     },
     {
       "a": "june",
@@ -25188,7 +25213,7 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-10-25",
-    "beat": 7241,
+    "beat": 7245,
     "providers": [
       "gemini"
     ]
@@ -25594,9 +25619,39 @@
     "marked": 1808
   },
   "incidents": [],
-  "treasury": 1170761,
+  "treasury": 1174706,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1812,
+      "wages": 4379,
+      "takings": 5465,
+      "tax": 3205,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1315,
+      "treasury": 1174706
+    },
+    {
+      "day": 1811,
+      "wages": 4379,
+      "takings": 5465,
+      "tax": 3205,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1315,
+      "treasury": 1173391
+    },
+    {
+      "day": 1810,
+      "wages": 4379,
+      "takings": 5465,
+      "tax": 3205,
+      "welfare": 0,
+      "civic": 1890,
+      "net": 1315,
+      "treasury": 1172076
+    },
     {
       "day": 1809,
       "wages": 4379,
@@ -25866,36 +25921,6 @@
       "civic": 1890,
       "net": 1192,
       "treasury": 1138396
-    },
-    {
-      "day": 1775,
-      "wages": 4345,
-      "takings": 5125,
-      "tax": 3082,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1192,
-      "treasury": 1137204
-    },
-    {
-      "day": 1774,
-      "wages": 4345,
-      "takings": 5125,
-      "tax": 3082,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1192,
-      "treasury": 1136012
-    },
-    {
-      "day": 1773,
-      "wages": 4345,
-      "takings": 5125,
-      "tax": 3082,
-      "welfare": 0,
-      "civic": 1890,
-      "net": 1192,
-      "treasury": 1134820
     }
   ],
   "births": [
@@ -26499,45 +26524,6 @@
   ],
   "score_history": [
     {
-      "day": 1749,
-      "overall": 70,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 40,
-      "infrastructure": 83,
-      "growth": 55,
-      "population": 124,
-      "buildings": 99,
-      "treasury": 1113287,
-      "employment": 100
-    },
-    {
-      "day": 1750,
-      "overall": 63,
-      "economy": 94,
-      "wellbeing": 71,
-      "society": 9,
-      "infrastructure": 83,
-      "growth": 55,
-      "population": 124,
-      "buildings": 99,
-      "treasury": 1114448,
-      "employment": 100
-    },
-    {
-      "day": 1751,
-      "overall": 60,
-      "economy": 94,
-      "wellbeing": 67,
-      "society": 0,
-      "infrastructure": 83,
-      "growth": 55,
-      "population": 124,
-      "buildings": 99,
-      "treasury": 1115609,
-      "employment": 100
-    },
-    {
       "day": 1754,
       "overall": 71,
       "economy": 94,
@@ -27121,19 +27107,58 @@
       "buildings": 102,
       "treasury": 1170761,
       "employment": 100
+    },
+    {
+      "day": 1810,
+      "overall": 66,
+      "economy": 95,
+      "wellbeing": 57,
+      "society": 36,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 123,
+      "buildings": 102,
+      "treasury": 1172076,
+      "employment": 100
+    },
+    {
+      "day": 1811,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 75,
+      "society": 36,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 123,
+      "buildings": 102,
+      "treasury": 1173391,
+      "employment": 100
+    },
+    {
+      "day": 1812,
+      "overall": 71,
+      "economy": 95,
+      "wellbeing": 67,
+      "society": 44,
+      "infrastructure": 84,
+      "growth": 60,
+      "population": 123,
+      "buildings": 102,
+      "treasury": 1174706,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1809,
-    "overall": 67,
+    "day": 1812,
+    "overall": 71,
     "economy": 95,
-    "wellbeing": 55,
-    "society": 43,
+    "wellbeing": 67,
+    "society": 44,
     "infrastructure": 84,
     "growth": 60,
     "population": 123,
     "buildings": 102,
-    "treasury": 1170761,
+    "treasury": 1174706,
     "employment": 100
   },
   "buildable": {
@@ -27180,7 +27205,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 192,
