@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7702,
-  "last_beat_at": "2026-10-30T15:12:12Z",
+  "beat": 7721,
+  "last_beat_at": "2026-10-30T19:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heavy rain",
+  "weather": "overcast",
   "heat": {
-    "riverside": 44,
-    "delmar": 34,
-    "terraces": 5,
+    "riverside": 50,
+    "delmar": 35,
+    "terraces": 10,
     "civic": 5
   },
   "turf": {
@@ -24214,9 +24214,154 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1857",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1930,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1858",
+      "from": "vic3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Public Haircut Ban",
+      "settled": false,
+      "due_day": 1932,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "lena2"
+      ],
+      "text": "Lena Doyle gets word that what they owe is wanted sooner than agreed.",
+      "beat": 7719
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 7718
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "iris6",
+        "hector"
+      ],
+      "text": "Iris Petrakis and Hector Delgado are seen arguing in the street loud enough that people stop.",
+      "beat": 7717
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "gil",
+        "marta"
+      ],
+      "text": "Marta Doyle does Gil Lindqvist a favour that costs them something real.",
+      "beat": 7716
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "yusuf",
+        "farrah5"
+      ],
+      "text": "Farrah Serrano does Dr. Yusuf Amin a favour that costs them something real.",
+      "beat": 7715
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 7714
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 7712
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "brennan"
+      ],
+      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 7711
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 7710
+    },
     {
       "id": "good_night",
       "heat": {},
@@ -24357,123 +24502,6 @@
       "targets": [],
       "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
       "beat": 7673
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "blaise3",
-        "june5"
-      ],
-      "text": "June Mbeki does Blaise Mbeki a favour that costs them something real.",
-      "beat": 7672
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7671
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 7670
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "ade",
-        "priya"
-      ],
-      "text": "Somebody tells Ade Osei that Ms. Priya Raman has been seen talking to police.",
-      "beat": 7668
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7667
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "marta6",
-        "odette6"
-      ],
-      "text": "Odette Mbeki does Marta Kowal a favour that costs them something real.",
-      "beat": 7666
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "ada",
-        "sami4"
-      ],
-      "text": "Ada Bello and Sami Doyle are seen arguing in the street loud enough that people stop.",
-      "beat": 7665
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7649
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7647
     }
   ],
   "player_queue": [
@@ -24496,12 +24524,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1924,
+  "last_gazette_day": 1927,
   "llm_budget": {
     "day": "2026-10-30",
     "spent": {
       "fast": 162396,
-      "deep": 43789
+      "deep": 53445
     }
   },
   "silent_runs": 0,
@@ -26538,7 +26566,7 @@
       "because": "snips hair, smiles",
       "day_enacted": 374,
       "status": "enacted",
-      "convictions": 198
+      "convictions": 199
     },
     {
       "id": "law04",
@@ -26598,7 +26626,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 587
+      "convictions": 588
     },
     {
       "id": "law07",
@@ -26754,32 +26782,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "cassius2",
-      "name": "Cassius Adeyemi",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "lies awake, staring at ceiling",
-      "day": 1889,
-      "trial_day": 1891,
-      "status": "convicted",
-      "witnesses": 11,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "sami6",
-      "name": "Sami Osei",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "sleeps, scrolling through ledgers",
-      "day": 1889,
-      "trial_day": 1891,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "cal7",
@@ -27543,8 +27545,22 @@
       "evidence": "checks ledger for missing tabs",
       "day": 1925,
       "trial_day": 1927,
-      "status": "awaiting_trial",
-      "witnesses": 7
+      "status": "convicted",
+      "witnesses": 7,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "vic3",
+      "name": "Vic Osei",
+      "law": "law03",
+      "law_title": "Public Haircut Ban",
+      "evidence": "dozes, hair clippers silent beside him",
+      "day": 1927,
+      "trial_day": 1929,
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 20,
@@ -27556,7 +27572,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 80
+      "heat": 94
     },
     {
       "a": "elias",
@@ -27570,26 +27586,26 @@
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 20
+      "heat": 14
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 0
+      "heat": 16
     },
     {
       "a": "cassius",
       "b": "tee",
       "since_day": 1895,
       "cause": "would not let it go",
-      "heat": 19
+      "heat": 13
     }
   ],
   "quota_exhausted_on": {
-    "day": "2026-10-29",
-    "beat": 7633,
+    "day": "2026-10-30",
+    "beat": 7721,
     "providers": []
   },
   "dead": [
@@ -28019,25 +28035,40 @@
     "for": "Farrah Nakamura",
     "id": "farrah7"
   },
-  "incidents": [
-    {
-      "id": "inc7702-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "dot"
-      ],
-      "text": "Dot Feeney is taken to the 9th over Fountain Ledge Nightstand Ban.",
-      "started": 7702,
-      "until": 7703
-    }
-  ],
-  "treasury": 1260613,
+  "incidents": [],
+  "treasury": 1264651,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1929,
+      "wages": 4181,
+      "takings": 6020,
+      "tax": 3326,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1346,
+      "treasury": 1264651
+    },
+    {
+      "day": 1928,
+      "wages": 4181,
+      "takings": 6020,
+      "tax": 3326,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1346,
+      "treasury": 1263305
+    },
+    {
+      "day": 1927,
+      "wages": 4181,
+      "takings": 6020,
+      "tax": 3326,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1346,
+      "treasury": 1261959
+    },
     {
       "day": 1924,
       "wages": 4181,
@@ -28307,36 +28338,6 @@
       "civic": 1980,
       "net": 1241,
       "treasury": 1227628
-    },
-    {
-      "day": 1876,
-      "wages": 4245,
-      "takings": 5640,
-      "tax": 3221,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1241,
-      "treasury": 1226387
-    },
-    {
-      "day": 1875,
-      "wages": 4245,
-      "takings": 5640,
-      "tax": 3221,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1241,
-      "treasury": 1225146
-    },
-    {
-      "day": 1874,
-      "wages": 4203,
-      "takings": 5640,
-      "tax": 3208,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1228,
-      "treasury": 1223905
     }
   ],
   "births": [
@@ -28940,45 +28941,6 @@
   ],
   "score_history": [
     {
-      "day": 1842,
-      "overall": 67,
-      "economy": 95,
-      "wellbeing": 71,
-      "society": 28,
-      "infrastructure": 81,
-      "growth": 56,
-      "population": 124,
-      "buildings": 102,
-      "treasury": 1199202,
-      "employment": 100
-    },
-    {
-      "day": 1843,
-      "overall": 61,
-      "economy": 95,
-      "wellbeing": 69,
-      "society": 3,
-      "infrastructure": 81,
-      "growth": 56,
-      "population": 124,
-      "buildings": 102,
-      "treasury": 1200577,
-      "employment": 100
-    },
-    {
-      "day": 1844,
-      "overall": 61,
-      "economy": 95,
-      "wellbeing": 64,
-      "society": 10,
-      "infrastructure": 81,
-      "growth": 56,
-      "population": 124,
-      "buildings": 102,
-      "treasury": 1201952,
-      "employment": 100
-    },
-    {
       "day": 1848,
       "overall": 68,
       "economy": 95,
@@ -29562,19 +29524,58 @@
       "buildings": 106,
       "treasury": 1260613,
       "employment": 100
+    },
+    {
+      "day": 1927,
+      "overall": 67,
+      "economy": 96,
+      "wellbeing": 61,
+      "society": 37,
+      "infrastructure": 81,
+      "growth": 60,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1261959,
+      "employment": 100
+    },
+    {
+      "day": 1928,
+      "overall": 70,
+      "economy": 96,
+      "wellbeing": 70,
+      "society": 37,
+      "infrastructure": 81,
+      "growth": 60,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1263305,
+      "employment": 100
+    },
+    {
+      "day": 1929,
+      "overall": 69,
+      "economy": 96,
+      "wellbeing": 65,
+      "society": 41,
+      "infrastructure": 81,
+      "growth": 60,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1264651,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1924,
-    "overall": 64,
+    "day": 1929,
+    "overall": 69,
     "economy": 96,
-    "wellbeing": 58,
-    "society": 26,
+    "wellbeing": 65,
+    "society": 41,
     "infrastructure": 81,
     "growth": 60,
     "population": 124,
     "buildings": 106,
-    "treasury": 1260613,
+    "treasury": 1264651,
     "employment": 100
   },
   "buildable": {
