@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 192,
   "h": 200,
-  "version": "d0e40fc1341e",
+  "version": "3f789eb06a8e",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -91,11 +91,11 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====.............gggggggg...====.............gggggggg...====.............gggggggg...====............====............................====....................====....................",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.ggggggggggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggg#########ggggg.,:,,.ggggggggggggggggggg",
-    "ggggggggggg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggggggggggggggggg.,:,,.gggg#fffffff#ggggg.,:,,.ggggggggggggggggggg",
-    "g#########g.,,,,.gg########gg#ffffff#gg.,,,,.gg#########g#ffffff#gg.,,,,.gg########gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggg##########gggg.,,,,.gggg#fffffff#ggggg.,,,,.gggg##########ggggg",
-    "g#fffffff#g.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gg#fffffff#g#ffffff#gg.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gggggggggg.,,,,.gggggggggggg#ffffffff#gggg.,,,,.gggg#fffffff#ggggg.,,,,.gggg#ffffffff#ggggg",
-    "g#fffffff#g.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gg#fffffff#g#ffffff#gg.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gggggggggg.,:,,.gggggggggggg#ffffffff#gggg.,:,,.gggg####D####ggggg.,:,,.gggg#ffffffff#ggggg",
+    "ggggggggggg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggggg########gg.,:,,.gggggggggg.,:,,.gg########gggggggggggggggg.,:,,.gggg#########ggggg.,:,,.ggggggggggggggggggg",
+    "ggggggggggg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggggg#ffffff#gg.,:,,.gggggggggg.,:,,.gg#ffffff#gggggggggggggggg.,:,,.gggg#fffffff#ggggg.,:,,.ggggggggggggggggggg",
+    "g#########g.,,,,.gg########gg#ffffff#gg.,,,,.gg#########g#ffffff#gg.,,,,.gg########gg#ffffff#gg.,,,,.gggggggggg.,,,,.gg#ffffff#gg##########gggg.,,,,.gggg#fffffff#ggggg.,,,,.gggg##########ggggg",
+    "g#fffffff#g.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gg#fffffff#g#ffffff#gg.,,,,.gg#ffffff#gg#ffffff#gg.,,,,.gggggggggg.,,,,.gg#ffffff#gg#ffffffff#gggg.,,,,.gggg#fffffff#ggggg.,,,,.gggg#ffffffff#ggggg",
+    "g#fffffff#g.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gg#fffffff#g#ffffff#gg.,:,,.gg#ffffff#gg#ffffff#gg.,:,,.gggggggggg.,:,,.gg###D####gg#ffffffff#gggg.,:,,.gggg####D####ggggg.,:,,.gggg#ffffffff#ggggg",
     "g#fffffff#g.,:,,.gg#ffffff#gg###D####gg.,:,,.gg#fffffff#g###D####gg.,:,,.gg#ffffff#gg###D####gg.,:,,.gggggggggg.,:,,.gggggggggggg#ffffffff#gggg.,:,,.gggggggggggggggggg.,:,,.gggg#ffffffff#ggggg",
     "g####D####g.,,,,.gg###D####gggggggggggg.,,,,.gg####D####ggggggggggg.,,,,.gg#ffffff#gggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggg#ffffffff#gggg.,,,,.gggggggggggggggggg.,,,,.gggg#ffffffff#ggggg",
     "ggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gggggggggggggggggggggg.,,,,.gg###D####gggggggggggg.,,,,.gggggggggg.,,,,.gggggggggggg####D#####gggg.,,,,.gggggggggggggggggg.,,,,.gggg####D#####ggggg",
@@ -8152,6 +8152,81 @@
           "type": "plant",
           "x": 81,
           "y": 187
+        }
+      ]
+    },
+    "new_social_1932": {
+      "id": "new_social_1932",
+      "name": "The Marrow Rooms",
+      "district": "flats",
+      "rect": [
+        119,
+        80,
+        8,
+        5
+      ],
+      "rects": [
+        [
+          119,
+          80,
+          8,
+          5
+        ]
+      ],
+      "kind": "social",
+      "style": "brick",
+      "floors": 2,
+      "open": false,
+      "condition": "standing",
+      "anchor": [
+        122,
+        83
+      ],
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 125,
+          "y": 83
+        },
+        {
+          "type": "table",
+          "x": 123,
+          "y": 82
+        },
+        {
+          "type": "table",
+          "x": 124,
+          "y": 83
+        },
+        {
+          "type": "table",
+          "x": 120,
+          "y": 83
+        },
+        {
+          "type": "chair",
+          "x": 125,
+          "y": 81
+        },
+        {
+          "type": "chair",
+          "x": 122,
+          "y": 81
+        },
+        {
+          "type": "chair",
+          "x": 121,
+          "y": 82
+        },
+        {
+          "type": "shelf",
+          "x": 120,
+          "y": 82
+        },
+        {
+          "type": "plant",
+          "x": 125,
+          "y": 82
         }
       ]
     }
