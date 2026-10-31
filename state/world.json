@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7780,
-  "last_beat_at": "2026-10-31T10:42:12Z",
+  "beat": 7801,
+  "last_beat_at": "2026-10-31T15:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "heat",
   "heat": {
-    "riverside": 16,
-    "delmar": 4,
+    "riverside": 5,
+    "delmar": 11,
     "terraces": 5,
     "civic": 5
   },
@@ -24539,9 +24539,155 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1882",
+      "from": "cal8",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1950,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1883",
+      "from": "milo",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Bench Snow Gaze Regulation",
+      "settled": false,
+      "due_day": 1950,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1884",
+      "from": "nyla",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1950,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 7801
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "farrah2",
+        "errol8"
+      ],
+      "text": "Farrah Mbeki and Errol Doyle are seen arguing in the street loud enough that people stop.",
+      "beat": 7800
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "errol2",
+        "booker"
+      ],
+      "text": "Errol Osei and Booker Lyle are seen arguing in the street loud enough that people stop.",
+      "beat": 7799
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "cal2"
+      ],
+      "text": "Cal Serrano gets word that what they owe is wanted sooner than agreed.",
+      "beat": 7796
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 7795
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "ade5",
+        "errol2"
+      ],
+      "text": "Errol Osei does Ade Lindqvist a favour that costs them something real.",
+      "beat": 7793
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "marta7",
+        "june8"
+      ],
+      "text": "Marta Osei and June Ferreira are seen arguing in the street loud enough that people stop.",
+      "beat": 7792
+    },
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "cass",
+        "nyla"
+      ],
+      "text": "Nyla Bello does Cass Deveaux a favour that costs them something real.",
+      "beat": 7791
+    },
     {
       "id": "funeral",
       "heat": {},
@@ -24693,105 +24839,6 @@
       "targets": [],
       "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
       "beat": 7749
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 7747
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 7745
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 7736
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 7734
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 7731
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7726
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "lena2"
-      ],
-      "text": "Lena Doyle gets word that what they owe is wanted sooner than agreed.",
-      "beat": 7719
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7718
     }
   ],
   "player_queue": [
@@ -26933,7 +26980,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 599
+      "convictions": 600
     },
     {
       "id": "law07",
@@ -26972,7 +27019,7 @@
       "because": "Dot Feeney taken to the 9th over Fountain Ledge Nightstand Ban",
       "day_enacted": 930,
       "status": "enacted",
-      "convictions": 218
+      "convictions": 219
     },
     {
       "id": "law09",
@@ -27010,7 +27057,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 361
+      "convictions": 362
     },
     {
       "id": "law11",
@@ -27089,19 +27136,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "dev5",
-      "name": "Dev Petrakis",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "stirs coffee slowly",
-      "day": 1906,
-      "trial_day": 1908,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "rey",
@@ -27852,8 +27886,9 @@
       "evidence": "tosses a stack of ledgers toward Gil",
       "day": 1944,
       "trial_day": 1946,
-      "status": "awaiting_trial",
-      "witnesses": 3
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -27864,8 +27899,9 @@
       "evidence": "lying awake, staring at the ceiling",
       "day": 1944,
       "trial_day": 1946,
-      "status": "awaiting_trial",
-      "witnesses": 12
+      "status": "convicted",
+      "witnesses": 12,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -27876,8 +27912,9 @@
       "evidence": "stirs coffee too fast",
       "day": 1945,
       "trial_day": 1947,
-      "status": "awaiting_trial",
-      "witnesses": 15
+      "status": "convicted",
+      "witnesses": 15,
+      "verdict": "guilty"
     }
   ],
   "law_pressure": 21,
@@ -27889,7 +27926,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 76
+      "heat": 70
     },
     {
       "a": "elias",
@@ -27903,22 +27940,29 @@
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 16
+      "heat": 10
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 18
+      "heat": 12
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-10-31",
-    "beat": 7736,
+    "beat": 7801,
     "providers": []
   },
   "dead": [
+    {
+      "id": "femi",
+      "name": "Femi Adeyemi",
+      "day": 1949,
+      "cause": "heart",
+      "where": "Terrace Block A"
+    },
     {
       "id": "farrah7",
       "name": "Farrah Nakamura",
@@ -28341,29 +28385,44 @@
     }
   ],
   "funeral": {
-    "day": 1871,
-    "for": "Farrah Nakamura",
-    "id": "farrah7"
+    "day": 1951,
+    "for": "Femi Adeyemi",
+    "id": "femi"
   },
-  "incidents": [
-    {
-      "id": "inc7780-arrest-0",
-      "kind": "arrest",
-      "effect": "lights",
-      "at": "precinct",
-      "x": 5,
-      "y": 64,
-      "who": [
-        "nyla"
-      ],
-      "text": "Nyla Bello is taken to the 9th over Coffee on Bench Ban.",
-      "started": 7780,
-      "until": 7781
-    }
-  ],
-  "treasury": 1277165,
+  "incidents": [],
+  "treasury": 1281353,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1949,
+      "wages": 4181,
+      "takings": 6170,
+      "tax": 3376,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1396,
+      "treasury": 1281353
+    },
+    {
+      "day": 1948,
+      "wages": 4181,
+      "takings": 6170,
+      "tax": 3376,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1396,
+      "treasury": 1279957
+    },
+    {
+      "day": 1947,
+      "wages": 4181,
+      "takings": 6170,
+      "tax": 3376,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1396,
+      "treasury": 1278561
+    },
     {
       "day": 1944,
       "wages": 4181,
@@ -28633,36 +28692,6 @@
       "civic": 1980,
       "net": 1234,
       "treasury": 1242392
-    },
-    {
-      "day": 1897,
-      "wages": 4181,
-      "takings": 5680,
-      "tax": 3214,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1234,
-      "treasury": 1241158
-    },
-    {
-      "day": 1896,
-      "wages": 4150,
-      "takings": 5830,
-      "tax": 3253,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1273,
-      "treasury": 1239924
-    },
-    {
-      "day": 1895,
-      "wages": 4150,
-      "takings": 5830,
-      "tax": 3253,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1273,
-      "treasury": 1238651
     }
   ],
   "births": [
@@ -29266,45 +29295,6 @@
   ],
   "score_history": [
     {
-      "day": 1861,
-      "overall": 64,
-      "economy": 96,
-      "wellbeing": 55,
-      "society": 30,
-      "infrastructure": 81,
-      "growth": 55,
-      "population": 124,
-      "buildings": 103,
-      "treasury": 1215993,
-      "employment": 100
-    },
-    {
-      "day": 1862,
-      "overall": 61,
-      "economy": 96,
-      "wellbeing": 48,
-      "society": 29,
-      "infrastructure": 81,
-      "growth": 55,
-      "population": 124,
-      "buildings": 103,
-      "treasury": 1217357,
-      "employment": 100
-    },
-    {
-      "day": 1863,
-      "overall": 58,
-      "economy": 96,
-      "wellbeing": 49,
-      "society": 17,
-      "infrastructure": 81,
-      "growth": 50,
-      "population": 124,
-      "buildings": 103,
-      "treasury": 1218721,
-      "employment": 100
-    },
-    {
       "day": 1867,
       "overall": 62,
       "economy": 96,
@@ -29888,19 +29878,58 @@
       "buildings": 106,
       "treasury": 1277165,
       "employment": 100
+    },
+    {
+      "day": 1947,
+      "overall": 71,
+      "economy": 97,
+      "wellbeing": 71,
+      "society": 47,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1278561,
+      "employment": 100
+    },
+    {
+      "day": 1948,
+      "overall": 71,
+      "economy": 97,
+      "wellbeing": 71,
+      "society": 48,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1279957,
+      "employment": 100
+    },
+    {
+      "day": 1949,
+      "overall": 69,
+      "economy": 97,
+      "wellbeing": 63,
+      "society": 47,
+      "infrastructure": 78,
+      "growth": 54,
+      "population": 123,
+      "buildings": 106,
+      "treasury": 1281353,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1944,
-    "overall": 65,
+    "day": 1949,
+    "overall": 69,
     "economy": 97,
-    "wellbeing": 66,
-    "society": 27,
+    "wellbeing": 63,
+    "society": 47,
     "infrastructure": 78,
-    "growth": 55,
-    "population": 124,
+    "growth": 54,
+    "population": 123,
     "buildings": 106,
-    "treasury": 1277165,
+    "treasury": 1281353,
     "employment": 100
   },
   "buildable": {
