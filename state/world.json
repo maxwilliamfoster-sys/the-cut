@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7816,
-  "last_beat_at": "2026-10-31T19:42:12Z",
+  "beat": 7829,
+  "last_beat_at": "2026-10-31T22:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "heat",
+  "weather": "rain",
   "heat": {
-    "riverside": 30,
-    "delmar": 13,
-    "terraces": 7,
+    "riverside": 42,
+    "delmar": 18,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -24656,9 +24656,162 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1891",
+      "from": "errol3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1958,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1892",
+      "from": "tomas3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1960,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1893",
+      "from": "tomas5",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1960,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1894",
+      "from": "tomas6",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1960,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1895",
+      "from": "tomas7",
+      "to": "the block",
+      "kind": "money",
+      "amount": 75,
+      "note": "fine — No Linger on Porch After Dusk",
+      "settled": false,
+      "due_day": 1960,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "inspection",
+      "heat": {
+        "delmar": 6
+      },
+      "mood": {
+        "stress": 9
+      },
+      "targets": [],
+      "text": "City inspectors are working their way down Delmar with clipboards.",
+      "beat": 7829
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 7828
+    },
+    {
+      "id": "cold_case",
+      "heat": {},
+      "mood": {
+        "stress": 10,
+        "energy": -6
+      },
+      "targets": [
+        "ruiz"
+      ],
+      "text": "Det. Yolanda Ruiz pulls a file that should have been closed years ago and cannot put it back.",
+      "beat": 7825
+    },
+    {
+      "id": "debt_called",
+      "heat": {},
+      "mood": {
+        "stress": 20,
+        "fear": 12
+      },
+      "targets": [
+        "tomas5"
+      ],
+      "text": "Tomas Lindqvist gets word that what they owe is wanted sooner than agreed.",
+      "beat": 7824
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 7823
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 7820
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 7818
+    },
     {
       "id": "raid",
       "heat": {
@@ -24825,97 +24978,6 @@
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark.",
       "beat": 7795
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "ade5",
-        "errol2"
-      ],
-      "text": "Errol Osei does Ade Lindqvist a favour that costs them something real.",
-      "beat": 7793
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "marta7",
-        "june8"
-      ],
-      "text": "Marta Osei and June Ferreira are seen arguing in the street loud enough that people stop.",
-      "beat": 7792
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "cass",
-        "nyla"
-      ],
-      "text": "Nyla Bello does Cass Deveaux a favour that costs them something real.",
-      "beat": 7791
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 7779
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "elias"
-      ],
-      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 7778
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "malik"
-      ],
-      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
-      "beat": 7777
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 7776
     }
   ],
   "player_queue": [
@@ -24938,12 +25000,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1952,
+  "last_gazette_day": 1955,
   "llm_budget": {
     "day": "2026-10-31",
     "spent": {
       "fast": 163667,
-      "deep": 53884
+      "deep": 89019
     }
   },
   "silent_runs": 0,
@@ -26937,6 +26999,23 @@
       "floors": 2,
       "condition": "standing",
       "since_day": 1932
+    },
+    {
+      "id": "new_social_1955",
+      "name": "The Brendan Rooms",
+      "district": "flats",
+      "x": 47,
+      "y": 136,
+      "w": 8,
+      "h": 5,
+      "door": "S",
+      "kind": "social",
+      "style": "brick",
+      "open": false,
+      "wings": [],
+      "floors": 2,
+      "condition": "standing",
+      "since_day": 1955
     }
   ],
   "laws": [
@@ -27017,7 +27096,7 @@
       "because": "Tariq \"Tee\" Bello convicted over Public Haircut Ban",
       "day_enacted": 380,
       "status": "enacted",
-      "convictions": 189
+      "convictions": 193
     },
     {
       "id": "law05",
@@ -27057,7 +27136,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 601
+      "convictions": 602
     },
     {
       "id": "law07",
@@ -27213,71 +27292,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c061",
-      "who": "june4",
-      "name": "June Petrakis",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "tosses ledger, eyes closed",
-      "day": 1910,
-      "trial_day": 1912,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "lena6",
-      "name": "Lena Ferreira",
-      "law": "law10",
-      "law_title": "Coffee on Bench Ban",
-      "evidence": "making bad coffee, sighing",
-      "day": 1911,
-      "trial_day": 1913,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c062",
-      "who": "maren2",
-      "name": "Maren Bello",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "standing up, eating breakfast, listening",
-      "day": 1911,
-      "trial_day": 1913,
-      "status": "convicted",
-      "witnesses": 15,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "nyla",
-      "name": "Nyla Bello",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "sits, staring at street",
-      "day": 1911,
-      "trial_day": 1913,
-      "status": "convicted",
-      "witnesses": 18,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "errol8",
-      "name": "Errol Doyle",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "lying awake, staring",
-      "day": 1911,
-      "trial_day": 1913,
-      "status": "convicted",
-      "witnesses": 17,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "etta3",
@@ -27989,20 +28003,85 @@
       "evidence": "taps his finger on the float ledger",
       "day": 1953,
       "trial_day": 1955,
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "tomas3",
+      "name": "Tomas Lindqvist",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep in the dark",
+      "day": 1955,
+      "trial_day": 1957,
+      "status": "convicted",
+      "witnesses": 4,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c062",
+      "who": "tomas5",
+      "name": "Tomas Lindqvist",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep in the dark",
+      "day": 1955,
+      "trial_day": 1957,
+      "status": "convicted",
+      "witnesses": 5,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c063",
+      "who": "tomas6",
+      "name": "Tomas Amadi",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep in the dark",
+      "day": 1955,
+      "trial_day": 1957,
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c064",
+      "who": "tomas7",
+      "name": "Tomas Ferreira",
+      "law": "law04",
+      "law_title": "No Linger on Porch After Dusk",
+      "evidence": "stays asleep in the dark",
+      "day": 1955,
+      "trial_day": 1957,
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "blaise8",
+      "name": "Blaise Serrano",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "Stares at the ceiling plaster, calculating ledgers in silence.",
+      "day": 1956,
+      "trial_day": 1958,
       "status": "awaiting_trial",
-      "witnesses": 14
+      "witnesses": 7
     }
   ],
   "law_pressure": 21,
   "last_law_day": 1212,
-  "last_expansion_day": 1932,
+  "last_expansion_day": 1955,
   "feuds": [
     {
       "a": "cassius",
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 84
+      "heat": 78
     },
     {
       "a": "elias",
@@ -28016,19 +28095,19 @@
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 4
+      "heat": 0
     },
     {
       "a": "nia5",
       "b": "rey",
       "since_day": 1674,
       "cause": "would not let it go",
-      "heat": 26
+      "heat": 20
     }
   ],
   "quota_exhausted_on": {
     "day": "2026-10-31",
-    "beat": 7816,
+    "beat": 7829,
     "providers": []
   },
   "dead": [
@@ -28467,9 +28546,39 @@
     "marked": 1951
   },
   "incidents": [],
-  "treasury": 1285580,
+  "treasury": 1289905,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1956,
+      "wages": 4223,
+      "takings": 6320,
+      "tax": 3438,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1458,
+      "treasury": 1289905
+    },
+    {
+      "day": 1955,
+      "wages": 4223,
+      "takings": 6320,
+      "tax": 3438,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1458,
+      "treasury": 1288447
+    },
+    {
+      "day": 1954,
+      "wages": 4223,
+      "takings": 6170,
+      "tax": 3389,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1409,
+      "treasury": 1286989
+    },
     {
       "day": 1953,
       "wages": 4223,
@@ -28739,36 +28848,6 @@
       "civic": 1980,
       "net": 1283,
       "treasury": 1249845
-    },
-    {
-      "day": 1907,
-      "wages": 4181,
-      "takings": 5680,
-      "tax": 3214,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1234,
-      "treasury": 1248562
-    },
-    {
-      "day": 1906,
-      "wages": 4181,
-      "takings": 5680,
-      "tax": 3214,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1234,
-      "treasury": 1247328
-    },
-    {
-      "day": 1905,
-      "wages": 4181,
-      "takings": 5680,
-      "tax": 3214,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1234,
-      "treasury": 1246094
     }
   ],
   "births": [
@@ -29372,45 +29451,6 @@
   ],
   "score_history": [
     {
-      "day": 1874,
-      "overall": 62,
-      "economy": 96,
-      "wellbeing": 49,
-      "society": 30,
-      "infrastructure": 82,
-      "growth": 54,
-      "population": 123,
-      "buildings": 104,
-      "treasury": 1223905,
-      "employment": 100
-    },
-    {
-      "day": 1875,
-      "overall": 64,
-      "economy": 96,
-      "wellbeing": 53,
-      "society": 31,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 124,
-      "buildings": 104,
-      "treasury": 1225146,
-      "employment": 100
-    },
-    {
-      "day": 1876,
-      "overall": 67,
-      "economy": 96,
-      "wellbeing": 55,
-      "society": 43,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 124,
-      "buildings": 104,
-      "treasury": 1226387,
-      "employment": 100
-    },
-    {
       "day": 1879,
       "overall": 69,
       "economy": 96,
@@ -29994,19 +30034,58 @@
       "buildings": 106,
       "treasury": 1285580,
       "employment": 100
+    },
+    {
+      "day": 1954,
+      "overall": 68,
+      "economy": 97,
+      "wellbeing": 67,
+      "society": 41,
+      "infrastructure": 78,
+      "growth": 50,
+      "population": 124,
+      "buildings": 106,
+      "treasury": 1286989,
+      "employment": 100
+    },
+    {
+      "day": 1955,
+      "overall": 68,
+      "economy": 97,
+      "wellbeing": 72,
+      "society": 30,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 124,
+      "buildings": 107,
+      "treasury": 1288447,
+      "employment": 100
+    },
+    {
+      "day": 1956,
+      "overall": 67,
+      "economy": 97,
+      "wellbeing": 72,
+      "society": 26,
+      "infrastructure": 78,
+      "growth": 55,
+      "population": 124,
+      "buildings": 107,
+      "treasury": 1289905,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1953,
-    "overall": 64,
+    "day": 1956,
+    "overall": 67,
     "economy": 97,
-    "wellbeing": 62,
-    "society": 27,
+    "wellbeing": 72,
+    "society": 26,
     "infrastructure": 78,
-    "growth": 50,
+    "growth": 55,
     "population": 124,
-    "buildings": 106,
-    "treasury": 1285580,
+    "buildings": 107,
+    "treasury": 1289905,
     "employment": 100
   },
   "buildable": {
