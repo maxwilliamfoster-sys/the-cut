@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7990,
-  "last_beat_at": "2026-11-02T15:12:12Z",
+  "beat": 8021,
+  "last_beat_at": "2026-11-02T22:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "heavy rain",
   "heat": {
     "riverside": 5,
-    "delmar": 16,
+    "delmar": 15,
     "terraces": 13,
     "civic": 5
   },
@@ -25228,9 +25228,144 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1935",
+      "from": "errol3",
+      "to": "the block",
+      "kind": "money",
+      "amount": 50,
+      "note": "fine — Public Inquiry About Lyle Ban",
+      "settled": false,
+      "due_day": 2008,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1936",
+      "from": "gil4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 2008,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 8021
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 8019
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 8018
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 8016
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "milo",
+        "rufus"
+      ],
+      "text": "Milo Adeyemi and Rufus Bello are seen arguing in the street loud enough that people stop.",
+      "beat": 8015
+    },
+    {
+      "id": "funeral",
+      "heat": {},
+      "mood": {
+        "happiness": -14,
+        "social_need": -20
+      },
+      "targets": [],
+      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
+      "beat": 8013
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 8012
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 8011
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 8010
+    },
     {
       "id": "inspection",
       "heat": {
@@ -25367,120 +25502,6 @@
       "targets": [],
       "text": "The block loses power for six hours. Everything happens in the dark.",
       "beat": 7948
-    },
-    {
-      "id": "patrol_surge",
-      "heat": {
-        "delmar": 12
-      },
-      "mood": {
-        "stress": 6
-      },
-      "targets": [],
-      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
-      "beat": 7946
-    },
-    {
-      "id": "fight",
-      "heat": {},
-      "mood": {
-        "stress": 15,
-        "happiness": -10
-      },
-      "targets": [
-        "theo3",
-        "odette"
-      ],
-      "text": "Theo Bello and Odette Ferreira are seen arguing in the street loud enough that people stop.",
-      "beat": 7944
-    },
-    {
-      "id": "new_face",
-      "heat": {},
-      "mood": {
-        "stress": 7
-      },
-      "targets": [],
-      "text": "A car nobody recognises has been parked on the same corner for three days.",
-      "beat": 7943
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "tee",
-        "ade6"
-      ],
-      "text": "Somebody tells Tariq 'Tee' Bello that Ade Bright has been seen talking to police.",
-      "beat": 7928
-    },
-    {
-      "id": "inspection",
-      "heat": {
-        "delmar": 6
-      },
-      "mood": {
-        "stress": 9
-      },
-      "targets": [],
-      "text": "City inspectors are working their way down Delmar with clipboards.",
-      "beat": 7925
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 7924
-    },
-    {
-      "id": "kindness",
-      "heat": {},
-      "mood": {
-        "happiness": 14,
-        "social_need": -15
-      },
-      "targets": [
-        "wes",
-        "tomas4"
-      ],
-      "text": "Tomas Ferreira does Wes Doyle a favour that costs them something real.",
-      "beat": 7922
-    },
-    {
-      "id": "snitch_rumour",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "fear": 10
-      },
-      "targets": [
-        "chidi",
-        "tomas4"
-      ],
-      "text": "Somebody tells Chidi Okonkwo that Tomas Ferreira has been seen talking to police.",
-      "beat": 7921
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "nyla"
-      ],
-      "text": "Nyla Bello gets word that what they owe is wanted sooner than agreed.",
-      "beat": 7920
     }
   ],
   "player_queue": [
@@ -25503,12 +25524,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1987,
+  "last_gazette_day": 2003,
   "llm_budget": {
     "day": "2026-11-02",
     "spent": {
-      "fast": 119296,
-      "deep": 4248
+      "fast": 163777,
+      "deep": 5728
     }
   },
   "silent_runs": 0,
@@ -25569,8 +25590,8 @@
       "open": false,
       "wings": [],
       "floors": 2,
-      "condition": "ruin",
-      "since_day": 1996
+      "condition": "rebuilding",
+      "since_day": 2002
     },
     {
       "id": "tenement",
@@ -27673,7 +27694,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 618
+      "convictions": 619
     },
     {
       "id": "law07",
@@ -27770,7 +27791,7 @@
       "because": "Multiple residents asking about Lyle's affairs",
       "day_enacted": 1046,
       "status": "enacted",
-      "convictions": 79
+      "convictions": 80
     },
     {
       "id": "law12",
@@ -27829,58 +27850,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c062",
-      "who": "dev4",
-      "name": "Dev Brannon",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "checks hair clippers, counting blades",
-      "day": 1942,
-      "trial_day": 1944,
-      "status": "convicted",
-      "witnesses": 12,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c063",
-      "who": "errol8",
-      "name": "Errol Doyle",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "mulls over ledger, fingers tapping table",
-      "day": 1942,
-      "trial_day": 1944,
-      "status": "convicted",
-      "witnesses": 21,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c064",
-      "who": "sami6",
-      "name": "Sami Osei",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "taps keys on ledger, eyes steady",
-      "day": 1942,
-      "trial_day": 1944,
-      "status": "convicted",
-      "witnesses": 3,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "cassius2",
-      "name": "Cassius Adeyemi",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "stays silent, eyes on door",
-      "day": 1942,
-      "trial_day": 1944,
-      "status": "convicted",
-      "witnesses": 11,
-      "verdict": "guilty"
-    },
     {
       "id": "c061",
       "who": "cal5",
@@ -28608,9 +28577,59 @@
       "status": "convicted",
       "witnesses": 20,
       "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "errol3",
+      "name": "Errol Brannon",
+      "law": "law11",
+      "law_title": "Public Inquiry About Lyle Ban",
+      "evidence": "asks Cal about his brother",
+      "day": 2003,
+      "trial_day": 2005,
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "gil4",
+      "name": "Gil Bright",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "scrolls ledger, eyes narrowed",
+      "day": 2003,
+      "trial_day": 2005,
+      "status": "convicted",
+      "witnesses": 8,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "jonah5",
+      "name": "Jonah Adeyemi",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "Stares into the grey coffee grounds at the bottom of the tin.",
+      "day": 2004,
+      "trial_day": 2006,
+      "status": "awaiting_trial",
+      "witnesses": 6
+    },
+    {
+      "id": "c061",
+      "who": "theo3",
+      "name": "Theo Bello",
+      "law": "law01",
+      "law_title": "Quiet Hours in the Empty Lot",
+      "evidence": "Twitches in sleep, dreaming of the empty lot.",
+      "day": 2004,
+      "trial_day": 2006,
+      "status": "awaiting_trial",
+      "witnesses": 20
     }
   ],
-  "law_pressure": 23,
+  "law_pressure": 24,
   "last_law_day": 1212,
   "last_expansion_day": 1996,
   "feuds": [
@@ -28619,7 +28638,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 76
+      "heat": 90
     },
     {
       "a": "elias",
@@ -28633,7 +28652,7 @@
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 22
+      "heat": 16
     },
     {
       "a": "nia5",
@@ -28645,8 +28664,10 @@
   ],
   "quota_exhausted_on": {
     "day": "2026-11-02",
-    "beat": 7990,
-    "providers": []
+    "beat": 8021,
+    "providers": [
+      "gemini"
+    ]
   },
   "dead": [
     {
@@ -29104,9 +29125,39 @@
     "id": "tiny"
   },
   "incidents": [],
-  "treasury": 1320811,
+  "treasury": 1325422,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 2004,
+      "wages": 4354,
+      "takings": 6435,
+      "tax": 3517,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1537,
+      "treasury": 1325422
+    },
+    {
+      "day": 2003,
+      "wages": 4354,
+      "takings": 6435,
+      "tax": 3517,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1537,
+      "treasury": 1323885
+    },
+    {
+      "day": 2002,
+      "wages": 4354,
+      "takings": 6435,
+      "tax": 3517,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1537,
+      "treasury": 1322348
+    },
     {
       "day": 1996,
       "wages": 4354,
@@ -29376,36 +29427,6 @@
       "civic": 1980,
       "net": 1409,
       "treasury": 1282762
-    },
-    {
-      "day": 1949,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1281353
-    },
-    {
-      "day": 1948,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1279957
-    },
-    {
-      "day": 1947,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1278561
     }
   ],
   "births": [
@@ -30009,45 +30030,6 @@
   ],
   "score_history": [
     {
-      "day": 1916,
-      "overall": 69,
-      "economy": 96,
-      "wellbeing": 69,
-      "society": 33,
-      "infrastructure": 81,
-      "growth": 66,
-      "population": 124,
-      "buildings": 106,
-      "treasury": 1253883,
-      "employment": 100
-    },
-    {
-      "day": 1917,
-      "overall": 61,
-      "economy": 96,
-      "wellbeing": 66,
-      "society": 5,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 124,
-      "buildings": 106,
-      "treasury": 1255229,
-      "employment": 100
-    },
-    {
-      "day": 1918,
-      "overall": 60,
-      "economy": 96,
-      "wellbeing": 65,
-      "society": 0,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 124,
-      "buildings": 106,
-      "treasury": 1256575,
-      "employment": 100
-    },
-    {
       "day": 1922,
       "overall": 69,
       "economy": 96,
@@ -30631,19 +30613,58 @@
       "buildings": 109,
       "treasury": 1320811,
       "employment": 100
+    },
+    {
+      "day": 2002,
+      "overall": 74,
+      "economy": 97,
+      "wellbeing": 70,
+      "society": 46,
+      "infrastructure": 78,
+      "growth": 83,
+      "population": 127,
+      "buildings": 109,
+      "treasury": 1322348,
+      "employment": 100
+    },
+    {
+      "day": 2003,
+      "overall": 71,
+      "economy": 97,
+      "wellbeing": 68,
+      "society": 38,
+      "infrastructure": 78,
+      "growth": 78,
+      "population": 127,
+      "buildings": 109,
+      "treasury": 1323885,
+      "employment": 100
+    },
+    {
+      "day": 2004,
+      "overall": 70,
+      "economy": 97,
+      "wellbeing": 71,
+      "society": 30,
+      "infrastructure": 78,
+      "growth": 78,
+      "population": 127,
+      "buildings": 109,
+      "treasury": 1325422,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1996,
-    "overall": 72,
+    "day": 2004,
+    "overall": 70,
     "economy": 97,
-    "wellbeing": 64,
-    "society": 46,
+    "wellbeing": 71,
+    "society": 30,
     "infrastructure": 78,
-    "growth": 83,
+    "growth": 78,
     "population": 127,
     "buildings": 109,
-    "treasury": 1320811,
+    "treasury": 1325422,
     "employment": 100
   },
   "buildable": {
