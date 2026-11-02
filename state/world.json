@@ -1,14 +1,14 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 7928,
-  "last_beat_at": "2026-11-01T23:42:12Z",
+  "beat": 7952,
+  "last_beat_at": "2026-11-02T05:42:12Z",
   "started_at": "2026-08-11T14:15:31Z",
   "weather": "clear",
   "heat": {
     "riverside": 5,
-    "delmar": 14,
-    "terraces": 7,
+    "delmar": 3,
+    "terraces": 5,
     "civic": 5
   },
   "turf": {
@@ -25137,9 +25137,131 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1928",
+      "from": "maren2",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1988,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1929",
+      "from": "marta4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1988,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1930",
+      "from": "blaise4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 1988,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1931",
+      "from": "sami4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 1988,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 7950
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 7949
+    },
+    {
+      "id": "power_cut",
+      "heat": {
+        "delmar": -6
+      },
+      "mood": {
+        "energy": -8
+      },
+      "targets": [],
+      "text": "The block loses power for six hours. Everything happens in the dark.",
+      "beat": 7948
+    },
+    {
+      "id": "patrol_surge",
+      "heat": {
+        "delmar": 12
+      },
+      "mood": {
+        "stress": 6
+      },
+      "targets": [],
+      "text": "Two extra cruisers have been sitting on Delmar since this morning.",
+      "beat": 7946
+    },
+    {
+      "id": "fight",
+      "heat": {},
+      "mood": {
+        "stress": 15,
+        "happiness": -10
+      },
+      "targets": [
+        "theo3",
+        "odette"
+      ],
+      "text": "Theo Bello and Odette Ferreira are seen arguing in the street loud enough that people stop.",
+      "beat": 7944
+    },
+    {
+      "id": "new_face",
+      "heat": {},
+      "mood": {
+        "stress": 7
+      },
+      "targets": [],
+      "text": "A car nobody recognises has been parked on the same corner for three days.",
+      "beat": 7943
+    },
     {
       "id": "snitch_rumour",
       "heat": {},
@@ -25313,82 +25435,6 @@
       "targets": [],
       "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
       "beat": 7908
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7907
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7906
-    },
-    {
-      "id": "cold_case",
-      "heat": {},
-      "mood": {
-        "stress": 10,
-        "energy": -6
-      },
-      "targets": [
-        "brennan"
-      ],
-      "text": "Sgt. Hal Brennan pulls a file that should have been closed years ago and cannot put it back.",
-      "beat": 7898
-    },
-    {
-      "id": "shipment_light",
-      "heat": {},
-      "mood": {
-        "stress": 14,
-        "happiness": -8
-      },
-      "targets": [
-        "dez"
-      ],
-      "text": "Dez Okonkwo finds the count is short again. Not by much. Enough.",
-      "beat": 7897
-    },
-    {
-      "id": "funeral",
-      "heat": {},
-      "mood": {
-        "happiness": -14,
-        "social_need": -20
-      },
-      "targets": [],
-      "text": "There is a funeral on Delmar. Most of the block goes. Some people who should be there are not.",
-      "beat": 7896
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 7895
     }
   ],
   "player_queue": [
@@ -25411,12 +25457,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 1981,
+  "last_gazette_day": 1987,
   "llm_budget": {
     "day": "2026-11-02",
     "spent": {
-      "fast": 40260,
-      "deep": 1827
+      "fast": 105235,
+      "deep": 4248
     }
   },
   "silent_runs": 0,
@@ -27564,7 +27610,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 616
+      "convictions": 618
     },
     {
       "id": "law07",
@@ -27641,7 +27687,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 368
+      "convictions": 370
     },
     {
       "id": "law11",
@@ -28457,8 +28503,9 @@
       "evidence": "pours coffee, sighs",
       "day": 1981,
       "trial_day": 1983,
-      "status": "awaiting_trial",
-      "witnesses": 16
+      "status": "convicted",
+      "witnesses": 16,
+      "verdict": "guilty"
     },
     {
       "id": "c062",
@@ -28469,8 +28516,9 @@
       "evidence": "keeps a ledger, watches",
       "day": 1981,
       "trial_day": 1983,
-      "status": "awaiting_trial",
-      "witnesses": 3
+      "status": "convicted",
+      "witnesses": 3,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -28481,8 +28529,9 @@
       "evidence": "counts float, eyes on ledger",
       "day": 1981,
       "trial_day": 1983,
-      "status": "awaiting_trial",
-      "witnesses": 14
+      "status": "convicted",
+      "witnesses": 14,
+      "verdict": "guilty"
     },
     {
       "id": "c061",
@@ -28493,8 +28542,21 @@
       "evidence": "orders coffee, eyes at Dot",
       "day": 1981,
       "trial_day": 1983,
+      "status": "convicted",
+      "witnesses": 6,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "nadia",
+      "name": "Nadia Vasquez",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "stirring coffee, eyes on the board",
+      "day": 1988,
+      "trial_day": 1990,
       "status": "awaiting_trial",
-      "witnesses": 6
+      "witnesses": 2
     }
   ],
   "law_pressure": 21,
@@ -28506,7 +28568,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 88
+      "heat": 82
     },
     {
       "a": "elias",
@@ -28520,7 +28582,7 @@
       "b": "rey",
       "since_day": 1316,
       "cause": "would not let it go",
-      "heat": 34
+      "heat": 28
     },
     {
       "a": "nia5",
@@ -28990,10 +29052,55 @@
     "for": "Tiny Reyes",
     "id": "tiny"
   },
-  "incidents": [],
-  "treasury": 1311818,
+  "incidents": [
+    {
+      "id": "inc7952-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "nadia"
+      ],
+      "text": "Nadia Vasquez is taken to the 9th over Coffee on Bench Ban.",
+      "started": 7952,
+      "until": 7953
+    }
+  ],
+  "treasury": 1316276,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 1987,
+      "wages": 4312,
+      "takings": 6320,
+      "tax": 3466,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1486,
+      "treasury": 1316276
+    },
+    {
+      "day": 1986,
+      "wages": 4312,
+      "takings": 6320,
+      "tax": 3466,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1486,
+      "treasury": 1314790
+    },
+    {
+      "day": 1985,
+      "wages": 4312,
+      "takings": 6320,
+      "tax": 3466,
+      "welfare": 0,
+      "civic": 1980,
+      "net": 1486,
+      "treasury": 1313304
+    },
     {
       "day": 1981,
       "wages": 4259,
@@ -29263,36 +29370,6 @@
       "civic": 1980,
       "net": 1396,
       "treasury": 1274373
-    },
-    {
-      "day": 1938,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1272977
-    },
-    {
-      "day": 1937,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1271581
-    },
-    {
-      "day": 1936,
-      "wages": 4181,
-      "takings": 6170,
-      "tax": 3376,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1396,
-      "treasury": 1270185
     }
   ],
   "births": [
@@ -29896,45 +29973,6 @@
   ],
   "score_history": [
     {
-      "day": 1905,
-      "overall": 71,
-      "economy": 96,
-      "wellbeing": 71,
-      "society": 43,
-      "infrastructure": 82,
-      "growth": 60,
-      "population": 124,
-      "buildings": 105,
-      "treasury": 1246094,
-      "employment": 100
-    },
-    {
-      "day": 1906,
-      "overall": 69,
-      "economy": 96,
-      "wellbeing": 76,
-      "society": 27,
-      "infrastructure": 82,
-      "growth": 60,
-      "population": 124,
-      "buildings": 105,
-      "treasury": 1247328,
-      "employment": 100
-    },
-    {
-      "day": 1907,
-      "overall": 61,
-      "economy": 96,
-      "wellbeing": 59,
-      "society": 14,
-      "infrastructure": 79,
-      "growth": 55,
-      "population": 124,
-      "buildings": 104,
-      "treasury": 1248562,
-      "employment": 100
-    },
-    {
       "day": 1909,
       "overall": 69,
       "economy": 96,
@@ -30518,19 +30556,58 @@
       "buildings": 108,
       "treasury": 1311818,
       "employment": 100
+    },
+    {
+      "day": 1985,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 68,
+      "society": 47,
+      "infrastructure": 78,
+      "growth": 72,
+      "population": 126,
+      "buildings": 108,
+      "treasury": 1313304,
+      "employment": 100
+    },
+    {
+      "day": 1986,
+      "overall": 73,
+      "economy": 97,
+      "wellbeing": 70,
+      "society": 46,
+      "infrastructure": 78,
+      "growth": 72,
+      "population": 126,
+      "buildings": 108,
+      "treasury": 1314790,
+      "employment": 100
+    },
+    {
+      "day": 1987,
+      "overall": 74,
+      "economy": 97,
+      "wellbeing": 70,
+      "society": 47,
+      "infrastructure": 78,
+      "growth": 78,
+      "population": 126,
+      "buildings": 108,
+      "treasury": 1316276,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 1981,
-    "overall": 63,
+    "day": 1987,
+    "overall": 74,
     "economy": 97,
-    "wellbeing": 59,
-    "society": 18,
-    "infrastructure": 79,
-    "growth": 66,
-    "population": 125,
+    "wellbeing": 70,
+    "society": 47,
+    "infrastructure": 78,
+    "growth": 78,
+    "population": 126,
     "buildings": 108,
-    "treasury": 1311818,
+    "treasury": 1316276,
     "employment": 100
   },
   "buildable": {
@@ -30577,7 +30654,7 @@
     "festival": 1100
   },
   "orders_pending": 0,
-  "grade": "getting by",
+  "grade": "doing well",
   "standing": 45,
   "forces": {},
   "map_w": 192,
