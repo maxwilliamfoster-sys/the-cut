@@ -2,7 +2,7 @@
   "tile": 16,
   "w": 192,
   "h": 200,
-  "version": "39df7977cbd5",
+  "version": "38b8a50026ca",
   "road_pitch": 24,
   "road_width": 4,
   "verge": 2,
@@ -26,12 +26,12 @@
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "............====........................====........................====.ggggggggggggg.ggggggg..====...ggggggg..====...ggggggg..................====....................====....................",
-    ".##########.,,,,...........ssssssssss...,,,,.ggggggggggggg.########.,,,,.#############.ggggggg..,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.ggggggggggggggggggg",
-    ".#ffffffff#.,:,,...........ssssssssss...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#######..,:,,.gg#######g.,:,,.gg#######ggggggggggggggggg.,:,,.gg########gggggggg.,:,,.ggggggggggggggggggg",
-    ".#ffffffff#.,:,,...........ssssssssss...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggggggggggggg.,:,,.gg#ffffff#gggggggg.,:,,.ggggggggggggggggggg",
-    ".#ffffffff#.,,,,.#########.ssssssssss...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#########g.,,,,.gg#ffffff#gggggggg.,,,,.gggg########ggggggg",
-    ".#ffffffff#.,,,,.#fffffff#.ssssssssss...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.gg#ffffff#gggggggg.,,,,.gggg#ffffff#ggggggg",
-    ".#ffffffff#.,:,,.#fffffff#.ssssssssss...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.gg###D####gggggggg.,:,,.gggg#ffffff#ggggggg",
+    ".##########.,,,,...........##########...,,,,.ggggggggggggg.########.,,,,.#############.ggggggg..,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.ggggggggggggggggggg",
+    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#######..,:,,.gg#######g.,:,,.gg#######ggggggggggggggggg.,:,,.gg########gggggggg.,:,,.ggggggggggggggggggg",
+    ".#ffffffff#.,:,,...........#ffffffff#...,:,,.ggggggggggggg.#ffffff#.,:,,.#fffffffffff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggggggggggggg.,:,,.gg#ffffff#gggggggg.,:,,.ggggggggggggggggggg",
+    ".#ffffffff#.,,,,.#########.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#fff#####fff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#########g.,,,,.gg#ffffff#gggggggg.,,,,.gggg########ggggggg",
+    ".#ffffffff#.,,,,.#fffffff#.#ffffffff#...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#.#fffff#..,,,,.gg#fffff#g.,,,,.gg#fffff#ggggggg#fffffff#g.,,,,.gg#ffffff#gggggggg.,,,,.gggg#ffffff#ggggggg",
+    ".#ffffffff#.,:,,.#fffffff#.####D#####...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.#fffff#..,:,,.gg#fffff#g.,:,,.gg#fffff#ggggggg#fffffff#g.,:,,.gg###D####gggggggg.,:,,.gggg#ffffff#ggggggg",
     ".#fffff####.,:,,.#fffffff#.gggggggggg...,:,,.ggggggggggggg.#ffffff#.,:,,.#ff#.....#ff#.###D###..,:,,.gg###D###g.,:,,.gg###D###ggggggg#fffffff#g.,:,,.gggggggggggggggggg.,:,,.gggg#ffffff#ggggggg",
     ".#ffff#.....,,,,.#fffffff#.##########...,,,,.ggggggggggggg.#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggg####D####g.,,,,.gggggggggggggggggg.,,,,.gggg#ffffff#ggggggg",
     ".#ffff#.....,,,,.#fffffff#.#ffffffff#...,,,,...............#ffffff#.,,,,.#ff#.....#ff#..........,,,,.gggggggggg.,,,,.gggggggggggggggggggggggggg.,,,,.gggggggggggggggggg.,,,,.gggg###D####ggggggg",
@@ -408,12 +408,58 @@
       "style": "brick",
       "floors": 2,
       "open": false,
-      "condition": "rebuilding",
+      "condition": "standing",
       "anchor": [
-        32,
-        18
+        31,
+        19
       ],
-      "furniture": []
+      "furniture": [
+        {
+          "type": "counter",
+          "x": 28,
+          "y": 16
+        },
+        {
+          "type": "table",
+          "x": 31,
+          "y": 16
+        },
+        {
+          "type": "table",
+          "x": 29,
+          "y": 16
+        },
+        {
+          "type": "table",
+          "x": 28,
+          "y": 18
+        },
+        {
+          "type": "chair",
+          "x": 29,
+          "y": 18
+        },
+        {
+          "type": "chair",
+          "x": 34,
+          "y": 17
+        },
+        {
+          "type": "chair",
+          "x": 30,
+          "y": 16
+        },
+        {
+          "type": "shelf",
+          "x": 32,
+          "y": 16
+        },
+        {
+          "type": "plant",
+          "x": 29,
+          "y": 17
+        }
+      ]
     },
     "tenement": {
       "id": "tenement",
