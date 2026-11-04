@@ -1,13 +1,13 @@
 {
   "version": 1,
   "seed": "the-cut-001",
-  "beat": 8102,
-  "last_beat_at": "2026-11-03T19:12:12Z",
+  "beat": 8121,
+  "last_beat_at": "2026-11-03T23:57:12Z",
   "started_at": "2026-08-11T14:15:31Z",
-  "weather": "clear",
+  "weather": "first snow",
   "heat": {
-    "riverside": 5,
-    "delmar": 1,
+    "riverside": 24,
+    "delmar": 7,
     "terraces": 5,
     "civic": 5
   },
@@ -25592,9 +25592,127 @@
       "patience": 4,
       "asked": 0,
       "last_confront_day": -99
+    },
+    {
+      "id": "fine1963",
+      "from": "ade4",
+      "to": "the block",
+      "kind": "money",
+      "amount": 30,
+      "note": "fine — Coffee on Bench Ban",
+      "settled": false,
+      "due_day": 2030,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
+    },
+    {
+      "id": "fine1964",
+      "from": "dot",
+      "to": "the block",
+      "kind": "money",
+      "amount": 100,
+      "note": "fine — Fountain Ledge Nightstand Ban",
+      "settled": false,
+      "due_day": 2033,
+      "patience": 4,
+      "asked": 0,
+      "last_confront_day": -99
     }
   ],
   "events": [
+    {
+      "id": "kindness",
+      "heat": {},
+      "mood": {
+        "happiness": 14,
+        "social_need": -15
+      },
+      "targets": [
+        "sami3",
+        "rufus2"
+      ],
+      "text": "Rufus Adeyemi does Sami Nakamura a favour that costs them something real.",
+      "beat": 8121
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "malik"
+      ],
+      "text": "Malik Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 8120
+    },
+    {
+      "id": "good_night",
+      "heat": {},
+      "mood": {
+        "happiness": 16,
+        "social_need": -25,
+        "stress": -10
+      },
+      "targets": [],
+      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
+      "beat": 8118
+    },
+    {
+      "id": "money_found",
+      "heat": {},
+      "mood": {
+        "happiness": 15,
+        "energy": 6
+      },
+      "targets": [
+        "iris6"
+      ],
+      "text": "Something pays out for Iris Petrakis. More than expected, which is its own problem.",
+      "beat": 8116
+    },
+    {
+      "id": "raid",
+      "heat": {
+        "riverside": 25,
+        "delmar": 8
+      },
+      "mood": {
+        "stress": 18,
+        "fear": 14
+      },
+      "targets": [],
+      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
+      "beat": 8115
+    },
+    {
+      "id": "shipment_light",
+      "heat": {},
+      "mood": {
+        "stress": 14,
+        "happiness": -8
+      },
+      "targets": [
+        "elias"
+      ],
+      "text": "Elias Reyes finds the count is short again. Not by much. Enough.",
+      "beat": 8113
+    },
+    {
+      "id": "overdose",
+      "heat": {
+        "terraces": 8
+      },
+      "mood": {
+        "happiness": -12,
+        "stress": 8
+      },
+      "targets": [],
+      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
+      "beat": 8112
+    },
     {
       "id": "power_cut",
       "heat": {
@@ -25757,97 +25875,6 @@
       ],
       "text": "Somebody tells Marta Kowal that Tomas Mbeki has been seen talking to police.",
       "beat": 8069
-    },
-    {
-      "id": "debt_called",
-      "heat": {},
-      "mood": {
-        "stress": 20,
-        "fear": 12
-      },
-      "targets": [
-        "jonah5"
-      ],
-      "text": "Jonah Adeyemi gets word that what they owe is wanted sooner than agreed.",
-      "beat": 8068
-    },
-    {
-      "id": "hospital",
-      "heat": {
-        "civic": 5
-      },
-      "mood": {
-        "energy": -20,
-        "happiness": -12,
-        "fear": 10
-      },
-      "targets": [
-        "marcus"
-      ],
-      "text": "Marcus Calloway ends up at the clinic. The paperwork says one thing; the injury says another.",
-      "beat": 8066
-    },
-    {
-      "id": "good_night",
-      "heat": {},
-      "mood": {
-        "happiness": 16,
-        "social_need": -25,
-        "stress": -10
-      },
-      "targets": [],
-      "text": "The Harbor Bar is full and loud and for a few hours nothing is wrong.",
-      "beat": 8064
-    },
-    {
-      "id": "raid",
-      "heat": {
-        "riverside": 25,
-        "delmar": 8
-      },
-      "mood": {
-        "stress": 18,
-        "fear": 14
-      },
-      "targets": [],
-      "text": "The 9th kicks a door on Riverside. Wrong door, as it turns out.",
-      "beat": 8062
-    },
-    {
-      "id": "overdose",
-      "heat": {
-        "terraces": 8
-      },
-      "mood": {
-        "happiness": -12,
-        "stress": 8
-      },
-      "targets": [],
-      "text": "An ambulance takes someone out of the Terraces before dawn. Nobody says a name.",
-      "beat": 8040
-    },
-    {
-      "id": "eviction",
-      "heat": {},
-      "mood": {
-        "stress": 12,
-        "happiness": -8
-      },
-      "targets": [],
-      "text": "Notices go up on two doors in the Terraces. The letterhead is a company nobody has heard of.",
-      "beat": 8039
-    },
-    {
-      "id": "power_cut",
-      "heat": {
-        "delmar": -6
-      },
-      "mood": {
-        "energy": -8
-      },
-      "targets": [],
-      "text": "The block loses power for six hours. Everything happens in the dark.",
-      "beat": 8035
     }
   ],
   "player_queue": [
@@ -25870,12 +25897,12 @@
       "reply": "That's not how it works around here, Mayor. You want me gone, you'll have to do better than just wanting it. What's the real reason you're after me?"
     }
   ],
-  "last_gazette_day": 2024,
+  "last_gazette_day": 2029,
   "llm_budget": {
-    "day": "2026-11-03",
+    "day": "2026-11-04",
     "spent": {
-      "fast": 163012,
-      "deep": 42624
+      "fast": 61043,
+      "deep": 1599
     }
   },
   "silent_runs": 0,
@@ -28058,7 +28085,7 @@
       "because": "waits for water, nods to Ruiz",
       "day_enacted": 613,
       "status": "enacted",
-      "convictions": 626
+      "convictions": 627
     },
     {
       "id": "law07",
@@ -28135,7 +28162,7 @@
       "because": "lies awake, sipping coffee",
       "day_enacted": 1001,
       "status": "enacted",
-      "convictions": 375
+      "convictions": 376
     },
     {
       "id": "law11",
@@ -28214,58 +28241,6 @@
     }
   ],
   "charges": [
-    {
-      "id": "c063",
-      "who": "tomas3",
-      "name": "Tomas Lindqvist",
-      "law": "law08",
-      "law_title": "Bench Snow Gaze Regulation",
-      "evidence": "lies awake, staring at ceiling",
-      "day": 1959,
-      "trial_day": 1961,
-      "status": "convicted",
-      "witnesses": 4,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "marta7",
-      "name": "Marta Osei",
-      "law": "law06",
-      "law_title": "Fountain Ledge Nightstand Ban",
-      "evidence": "Marta counts the float, eyes the ledger",
-      "day": 1960,
-      "trial_day": 1962,
-      "status": "convicted",
-      "witnesses": 12,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "blaise7",
-      "name": "Blaise Petrakis",
-      "law": "law03",
-      "law_title": "Public Haircut Ban",
-      "evidence": "wipes down the counter after a haircut",
-      "day": 1960,
-      "trial_day": 1962,
-      "status": "convicted",
-      "witnesses": 1,
-      "verdict": "guilty"
-    },
-    {
-      "id": "c061",
-      "who": "kwame7",
-      "name": "Kwame Brannon",
-      "law": "law04",
-      "law_title": "No Linger on Porch After Dusk",
-      "evidence": "strokes a stray cat on porch",
-      "day": 1960,
-      "trial_day": 1962,
-      "status": "convicted",
-      "witnesses": 2,
-      "verdict": "guilty"
-    },
     {
       "id": "c062",
       "who": "dot",
@@ -28990,8 +28965,70 @@
       "evidence": "pours coffee, watches steam rise",
       "day": 2024,
       "trial_day": 2026,
+      "status": "convicted",
+      "witnesses": 2,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "dot",
+      "name": "Dot Feeney",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "counts crates, eyes flicker at ledger",
+      "day": 2028,
+      "trial_day": 2030,
+      "status": "convicted",
+      "witnesses": 7,
+      "verdict": "guilty"
+    },
+    {
+      "id": "c061",
+      "who": "jonah2",
+      "name": "Jonah Bello",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "eating breakfast standing",
+      "day": 2029,
+      "trial_day": 2031,
       "status": "awaiting_trial",
-      "witnesses": 2
+      "witnesses": 17
+    },
+    {
+      "id": "c061",
+      "who": "blaise8",
+      "name": "Blaise Serrano",
+      "law": "law06",
+      "law_title": "Fountain Ledge Nightstand Ban",
+      "evidence": "holds a ledger at the table",
+      "day": 2029,
+      "trial_day": 2031,
+      "status": "awaiting_trial",
+      "witnesses": 8
+    },
+    {
+      "id": "c062",
+      "who": "dev4",
+      "name": "Dev Brannon",
+      "law": "law10",
+      "law_title": "Coffee on Bench Ban",
+      "evidence": "serves a cup of coffee to the table",
+      "day": 2029,
+      "trial_day": 2031,
+      "status": "awaiting_trial",
+      "witnesses": 12
+    },
+    {
+      "id": "c061",
+      "who": "dev5",
+      "name": "Dev Petrakis",
+      "law": "law08",
+      "law_title": "Bench Snow Gaze Regulation",
+      "evidence": "stays at the desk, staring at the screen",
+      "day": 2030,
+      "trial_day": 2032,
+      "status": "awaiting_trial",
+      "witnesses": 0
     }
   ],
   "law_pressure": 24,
@@ -29003,7 +29040,7 @@
       "b": "elias",
       "since_day": 685,
       "cause": "would not let it go",
-      "heat": 84
+      "heat": 98
     },
     {
       "a": "elias",
@@ -29494,10 +29531,55 @@
     "for": "Tomas Amadi",
     "id": "tomas6"
   },
-  "incidents": [],
-  "treasury": 1339249,
+  "incidents": [
+    {
+      "id": "inc8121-arrest-0",
+      "kind": "arrest",
+      "effect": "lights",
+      "at": "precinct",
+      "x": 5,
+      "y": 64,
+      "who": [
+        "dev5"
+      ],
+      "text": "Dev Petrakis is taken to the 9th over Bench Snow Gaze Regulation.",
+      "started": 8121,
+      "until": 8122
+    }
+  ],
+  "treasury": 1343668,
   "tax_rate": 0.33,
   "ledger": [
+    {
+      "day": 2029,
+      "wages": 4373,
+      "takings": 6495,
+      "tax": 3543,
+      "welfare": 0,
+      "civic": 2070,
+      "net": 1473,
+      "treasury": 1343668
+    },
+    {
+      "day": 2028,
+      "wages": 4373,
+      "takings": 6495,
+      "tax": 3543,
+      "welfare": 0,
+      "civic": 2070,
+      "net": 1473,
+      "treasury": 1342195
+    },
+    {
+      "day": 2027,
+      "wages": 4373,
+      "takings": 6495,
+      "tax": 3543,
+      "welfare": 0,
+      "civic": 2070,
+      "net": 1473,
+      "treasury": 1340722
+    },
     {
       "day": 2024,
       "wages": 4373,
@@ -29767,36 +29849,6 @@
       "civic": 1980,
       "net": 1458,
       "treasury": 1300089
-    },
-    {
-      "day": 1967,
-      "wages": 4223,
-      "takings": 6320,
-      "tax": 3438,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1458,
-      "treasury": 1298631
-    },
-    {
-      "day": 1966,
-      "wages": 4189,
-      "takings": 6320,
-      "tax": 3427,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1447,
-      "treasury": 1297173
-    },
-    {
-      "day": 1965,
-      "wages": 4189,
-      "takings": 6320,
-      "tax": 3427,
-      "welfare": 0,
-      "civic": 1980,
-      "net": 1447,
-      "treasury": 1295726
     }
   ],
   "births": [
@@ -30400,45 +30452,6 @@
   ],
   "score_history": [
     {
-      "day": 1936,
-      "overall": 67,
-      "economy": 97,
-      "wellbeing": 66,
-      "society": 31,
-      "infrastructure": 81,
-      "growth": 60,
-      "population": 124,
-      "buildings": 107,
-      "treasury": 1270185,
-      "employment": 100
-    },
-    {
-      "day": 1937,
-      "overall": 64,
-      "economy": 97,
-      "wellbeing": 74,
-      "society": 11,
-      "infrastructure": 78,
-      "growth": 55,
-      "population": 124,
-      "buildings": 106,
-      "treasury": 1271581,
-      "employment": 100
-    },
-    {
-      "day": 1938,
-      "overall": 64,
-      "economy": 97,
-      "wellbeing": 71,
-      "society": 12,
-      "infrastructure": 78,
-      "growth": 60,
-      "population": 124,
-      "buildings": 106,
-      "treasury": 1272977,
-      "employment": 100
-    },
-    {
       "day": 1942,
       "overall": 64,
       "economy": 97,
@@ -31022,19 +31035,58 @@
       "buildings": 111,
       "treasury": 1339249,
       "employment": 100
+    },
+    {
+      "day": 2027,
+      "overall": 73,
+      "economy": 97,
+      "wellbeing": 61,
+      "society": 47,
+      "infrastructure": 80,
+      "growth": 89,
+      "population": 127,
+      "buildings": 111,
+      "treasury": 1340722,
+      "employment": 100
+    },
+    {
+      "day": 2028,
+      "overall": 70,
+      "economy": 97,
+      "wellbeing": 53,
+      "society": 41,
+      "infrastructure": 80,
+      "growth": 89,
+      "population": 127,
+      "buildings": 111,
+      "treasury": 1342195,
+      "employment": 100
+    },
+    {
+      "day": 2029,
+      "overall": 72,
+      "economy": 97,
+      "wellbeing": 74,
+      "society": 29,
+      "infrastructure": 80,
+      "growth": 83,
+      "population": 127,
+      "buildings": 111,
+      "treasury": 1343668,
+      "employment": 100
     }
   ],
   "scores": {
-    "day": 2024,
-    "overall": 70,
+    "day": 2029,
+    "overall": 72,
     "economy": 97,
-    "wellbeing": 61,
-    "society": 35,
+    "wellbeing": 74,
+    "society": 29,
     "infrastructure": 80,
-    "growth": 89,
+    "growth": 83,
     "population": 127,
     "buildings": 111,
-    "treasury": 1339249,
+    "treasury": 1343668,
     "employment": 100
   },
   "buildable": {
