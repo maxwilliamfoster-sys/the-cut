@@ -1,6 +1,9 @@
 name = "the-cut-talk"
 main = "src/index.js"
 compatibility_date = "2026-08-01"
+# PAUSED 2026-11-17 (Max: take it offline). false = no public workers.dev address, so nothing can
+# reach it or spend the account's Workers AI allowance; code and KV stay. Set true and deploy to resume.
+workers_dev = false
 
 # Secrets (set with `npx wrangler secret put <NAME>`, never committed):
 #   GROQ_API_KEY  the brain
